@@ -31,13 +31,13 @@ class Authenticator:
 
         :return: str: access token
         """
-        body = {'refresh_token': self.oauth_token_response['refresh_token'],
+        data = {'refresh_token': self.oauth_token_response['refresh_token'],
                 'grant_type': 'refresh_token', 'scope': Authenticator.URLS['SCOPE'], 'token_format': 'jwt'}
         auth_header = {'Authorization': 'Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY='
                        }
         response = requests.post(url='{}/authz/v3/oauth/token'.format(Authenticator.URLS['BASE_URI']),
                                  headers=auth_header,
-                                 data=body)
+                                 data=data)
         self.oauth_token_response = response.json()
         self.access_token_expiration = time() + self.oauth_token_response['expires_in']
         self.refresh_token_expiration = time() + self.oauth_token_response['refresh_token_expires_in']
@@ -96,7 +96,7 @@ class Authenticator:
         :param code: Code obtained using npsso code
         """
 
-        body = {'code': code,
+        data = {'code': code,
                 'grant_type': 'authorization_code',
                 'redirect_uri': Authenticator.URLS['REDIRECT_URI'],
                 'scope': Authenticator.URLS['SCOPE'],
@@ -107,7 +107,7 @@ class Authenticator:
 
         response = requests.post(url='{}/authz/v3/oauth/token'.format(Authenticator.URLS['BASE_URI']),
                                  headers=auth_header,
-                                 data=body)
+                                 data=data)
         self.oauth_token_response = response.json()
         self.access_token_expiration = time() + self.oauth_token_response['expires_in']
         self.refresh_token_expiration = time() + self.oauth_token_response['refresh_token_expires_in']
