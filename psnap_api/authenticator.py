@@ -3,11 +3,6 @@ from urllib.parse import urlparse, parse_qs
 from time import time
 
 
-# PlayStation Network API Python (PSNAP)
-# original: https://github.com/games-directory/api-psn
-# Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
-# Author: isFakeAccount
-
 class Authenticator:
     URLS = {
         'BASE_URI': 'https://ca.account.sony.com/api',
