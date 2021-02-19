@@ -1,4 +1,5 @@
 import platform
+
 import requests
 
 
@@ -30,4 +31,3 @@ class Client:
         }
         response = requests.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri), headers=headers).json()
         return response['accountDevices']
-

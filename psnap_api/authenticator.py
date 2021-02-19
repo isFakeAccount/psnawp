@@ -1,6 +1,7 @@
-import requests
-from urllib.parse import urlparse, parse_qs
 from time import time
+from urllib.parse import urlparse, parse_qs
+
+import requests
 
 
 class Authenticator:

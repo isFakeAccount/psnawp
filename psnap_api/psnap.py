@@ -1,6 +1,7 @@
 from psnap_api import authenticator
 from psnap_api import client
 
+
 # PlayStation Network API Python (PSNAP)
 # original: https://github.com/games-directory/api-psn
 # Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
