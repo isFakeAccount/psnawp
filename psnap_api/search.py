@@ -1,7 +1,5 @@
 import platform
 
-import requests
-
 
 class Search:
     def __init__(self, authenticator):

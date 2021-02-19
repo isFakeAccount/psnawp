@@ -1,7 +1,7 @@
 from psnap_api import authenticator
 from psnap_api import client
-from psnap_api import user
 from psnap_api import search
+from psnap_api import user
 
 
 # PlayStation Network API Python (PSNAP)

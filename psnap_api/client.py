@@ -2,8 +2,6 @@ import platform
 
 import requests
 
-from psnap_api import psnap
-
 
 class Client:
     base_uri = 'https://dms.api.playstation.com/api'
@@ -45,6 +43,12 @@ class Client:
         return response['accountDevices']
 
     def get_friends(self, limit=None):
+        """
+        Gets the friends list and return their account ids
+
+        :param limit: The number of items from input max is 1000
+        :return: dict: account ids of all friends in your friends list
+        """
         if limit is None:
             limit = 1000
         else:

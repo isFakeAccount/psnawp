@@ -2,8 +2,6 @@ import platform
 
 import requests
 
-from psnap_api import psnap
-
 
 class User:
     base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
@@ -17,17 +15,18 @@ class User:
                                 'User-Agent': platform.platform()}
 
     def get_presence(self, account_id=None):
-        if account_id is None:
-            if self.account_id is None:
-                raise AttributeError('account_id is of NoneType')
-            else:
-                account_id = self.account_id
         """
         Gets the presences of a user
 
         :param account_id: account ID of user
         :return: dict availability, lastAvailableDate, and primaryPlatformInfo
         """
+        # If account ID is not passed as a parameter check the instance variables
+        if account_id is None:
+            if self.account_id is None:
+                raise AttributeError('account_id is of NoneType')
+            else:
+                account_id = self.account_id
         access_token = self.authenticator.obtain_fresh_access_token()
         headers = {
             **self.default_headers,
