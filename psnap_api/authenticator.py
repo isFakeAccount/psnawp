@@ -3,7 +3,12 @@ from urllib.parse import urlparse, parse_qs
 
 import requests
 
+from psnap_api import psnap_exceptions
 
+
+# Class Authenticator
+# Responsible for authetication using npsso code
+# Also used later to get access token from refresh token
 class Authenticator:
     URLS = {
         'BASE_URI': 'https://ca.account.sony.com/api',
@@ -18,7 +23,10 @@ class Authenticator:
         To get 64 character npsso code refer to the README.md
 
         :param npsso_token:
+        :raises PSNAPIllegalArgumentError: If npsso code len is not 64 characters
         """
+        if len(npsso_token) != 64:
+            raise psnap_exceptions.PSNAPIllegalArgumentError('Your npsso code is incorrect!')
         self.npsso_token = npsso_token
         self.oauth_token_response = None
         self.access_token_expiration = None
@@ -31,10 +39,15 @@ class Authenticator:
 
         :return: str: access token
         """
-        data = {'refresh_token': self.oauth_token_response['refresh_token'],
-                'grant_type': 'refresh_token', 'scope': Authenticator.URLS['SCOPE'], 'token_format': 'jwt'}
-        auth_header = {'Authorization': 'Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY='
-                       }
+        data = {
+            'refresh_token': self.oauth_token_response['refresh_token'],
+            'grant_type': 'refresh_token',
+            'scope': Authenticator.URLS['SCOPE'],
+            'token_format': 'jwt'
+        }
+        auth_header = {
+            'Authorization': 'Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY='
+        }
         response = requests.post(url='{}/authz/v3/oauth/token'.format(Authenticator.URLS['BASE_URI']),
                                  headers=auth_header,
                                  data=data)
@@ -96,14 +109,17 @@ class Authenticator:
         :param code: Code obtained using npsso code
         """
 
-        data = {'code': code,
-                'grant_type': 'authorization_code',
-                'redirect_uri': Authenticator.URLS['REDIRECT_URI'],
-                'scope': Authenticator.URLS['SCOPE'],
-                'token_format': 'jwt'}
+        data = {
+            'code': code,
+            'grant_type': 'authorization_code',
+            'redirect_uri': Authenticator.URLS['REDIRECT_URI'],
+            'scope': Authenticator.URLS['SCOPE'],
+            'token_format': 'jwt'
+        }
 
-        auth_header = {'Authorization': 'Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY='
-                       }
+        auth_header = {
+            'Authorization': 'Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY='
+        }
 
         response = requests.post(url='{}/authz/v3/oauth/token'.format(Authenticator.URLS['BASE_URI']),
                                  headers=auth_header,
@@ -120,18 +136,26 @@ class Authenticator:
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts
         about 2 months. After 2 months a new npsso code is needed.
 
-        :raises ValueError:
+        :raises PSNAPAuthenticationException: If authentication is unsuccessful
         """
         cookies = {'Cookie': 'npsso=' + self.npsso_token}
-        params = {'access_type': 'offline',
-                  'client_id': Authenticator.URLS['CLIENT_ID'],
-                  'scope': Authenticator.URLS['SCOPE'],
-                  'redirect_uri': Authenticator.URLS['REDIRECT_URI'],
-                  'response_type': 'code'}
+        params = {
+            'access_type': 'offline',
+            'client_id': Authenticator.URLS['CLIENT_ID'],
+            'scope': Authenticator.URLS['SCOPE'],
+            'redirect_uri': Authenticator.URLS['REDIRECT_URI'],
+            'response_type': 'code'
+        }
         response = requests.get(url='{}/authz/v3/oauth/authorize'.format(Authenticator.URLS['BASE_URI']),
                                 headers=cookies,
                                 params=params, allow_redirects=False)
         location_url = response.headers['location']
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
+        if 'error' in parsed_query.keys():
+            if '4165' in parsed_query['error_code']:
+                raise psnap_exceptions.PSNAPAuthenticationError("Your npsso code has expired or is incorrect. "
+                                                                "Please generate a new code!")
+            else:
+                raise psnap_exceptions.PSNAPAuthenticationError("Something went wrong while authenticating")
         self.oauth_token(parsed_query['code'][0])

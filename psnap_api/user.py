@@ -1,38 +1,63 @@
-import platform
-
-import requests
+from psnap_api import search
 
 
+# Class User
+# This class will contain the information about the PSN ID you passed in when creating object
 class User:
     base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
 
-    def __init__(self, authenticator, account_id):
-        self.authenticator = authenticator
-        self.account_id = account_id
-        self.country = 'US'
-        self.language = 'en'
-        self.default_headers = {'Accept-Language': 'en-US',
-                                'User-Agent': platform.platform()}
+    def __init__(self, request_builder, online_id):
+        self.request_builder = request_builder
+        self.online_id = online_id
+        search_obj = search.Search(request_builder)
+        profile = search_obj.search_user(online_id)
+        self.account_id = profile['profile']['accountId']
 
-    def get_presence(self, account_id=None):
+    def profile(self):
+        """
+        Gets the profile of the user
+
+        :return: Information about profile such as about me, avatars, languages etc...
+        """
+        response = self.request_builder.get(url='{}/{}/profiles'.format(User.base_uri, self.account_id))
+        return response
+
+    def get_presence(self):
         """
         Gets the presences of a user
 
-        :param account_id: account ID of user
         :return: dict availability, lastAvailableDate, and primaryPlatformInfo
         """
-        # If account ID is not passed as a parameter check the instance variables
-        if account_id is None:
-            if self.account_id is None:
-                raise AttributeError('account_id is of NoneType')
-            else:
-                account_id = self.account_id
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {
-            **self.default_headers,
-            'Authorization': 'Bearer {}'.format(access_token)
-        }
-        param = {'type': 'primary'}
-        response = requests.get(url='{}/{}/basicPresences'.format(User.base_uri, account_id), headers=headers,
-                                params=param).json()
+        params = {'type': 'primary'}
+        response = self.request_builder.get(url='{}/{}/basicPresences'.format(User.base_uri, self.account_id),
+                                            params=params)
         return response['basicPresence']
+
+    def friendship(self):
+        """
+        Gets the friendship status and stats of the user
+
+        :return: dict: friendship stats
+        """
+        response = self.request_builder.get(url='{}/me/friends/{}/summary'.format(User.base_uri, self.account_id))
+        return response
+
+    def is_available_to_play(self):
+        """
+        TODO I am not sure what this endpoint returns I'll update the documentation later
+        :return:
+        """
+        response = self.request_builder.get(url='{}/me/friends/subscribing/availableToPlay'.format(User.base_uri))
+        return response
+
+    def is_blocked(self):
+        """
+        Checks if the user is blocked by you
+
+        :return: boolean: True if the user is blocked otherwise False
+        """
+        response = self.request_builder.get(url='{}/me/blocks'.format(User.base_uri))
+        if self.account_id in response['blockList']:
+            return True
+        else:
+            return False

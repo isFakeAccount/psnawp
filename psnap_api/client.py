@@ -1,18 +1,11 @@
-import platform
-
-import requests
-
-
+# Class Client
+# This class will contain the information about the logged in user
 class Client:
     base_uri = 'https://dms.api.playstation.com/api'
 
-    def __init__(self, authenticator):
-        self.authenticator = authenticator
+    def __init__(self, request_builder):
+        self.request_builder = request_builder
         self.account_id = 'me'
-        self.country = 'US'
-        self.language = 'en'
-        self.default_headers = {'Accept-Language': 'en-US',
-                                'User-Agent': platform.platform()}
 
     def get_account_id(self):
         """
@@ -20,12 +13,7 @@ class Client:
 
         :return: str: accountID
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {
-            **self.default_headers,
-            'Authorization': 'Bearer {}'.format(access_token)
-        }
-        response = requests.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri), headers=headers).json()
+        response = self.request_builder.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri))
         return response['accountId']
 
     def get_account_devices(self):
@@ -34,12 +22,7 @@ class Client:
 
         :return: dict: accountDevices
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {
-            **self.default_headers,
-            'Authorization': 'Bearer {}'.format(access_token),
-        }
-        response = requests.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri), headers=headers).json()
+        response = self.request_builder.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri))
         return response['accountDevices']
 
     def get_friends(self, limit=None):
@@ -53,12 +36,7 @@ class Client:
             limit = 1000
         else:
             limit = min(1000, limit)
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {
-            **self.default_headers,
-            'Authorization': 'Bearer {}'.format(access_token)
-        }
-        param = {'limit': limit}
+        params = {'limit': limit}
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
-        response = requests.get(url='{}/me/friends'.format(base_uri), headers=headers, params=param)
-        return response.json()
+        response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
+        return response

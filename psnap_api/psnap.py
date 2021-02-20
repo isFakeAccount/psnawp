@@ -1,5 +1,6 @@
 from psnap_api import authenticator
 from psnap_api import client
+from psnap_api import request_builder
 from psnap_api import search
 from psnap_api import user
 
@@ -12,22 +13,24 @@ from psnap_api import user
 class PSNAP:
     def __init__(self, npsso):
         self.authenticator = authenticator.Authenticator(npsso_token=npsso)
+        self.request_builder = request_builder.RequestBuilder(self.authenticator)
 
     def client(self):
         """
-        Creates a new client object
+        Creates a new client object (your account)
 
         :return: Client Object
         """
-        return client.Client(self.authenticator)
+        return client.Client(self.request_builder)
 
-    def user(self, account_id=None):
+    def user(self, online_id):
         """
         Creates a new user object
 
+        :param online_id: PSN ID of the user
         :return: User Object
         """
-        return user.User(self.authenticator, account_id)
+        return user.User(self.request_builder, online_id)
 
     def search(self):
         """
@@ -35,4 +38,4 @@ class PSNAP:
 
         :return: Search Object
         """
-        return search.Search(self.authenticator)
+        return search.Search(self.request_builder)
