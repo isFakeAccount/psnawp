@@ -8,10 +8,10 @@ classifiers = [
 ]
 
 setup(
-    name='PSNAP',
+    name='PSNAWP',
     version='2021.20.2',
     packages=find_packages(),
-    url='https://github.com/isFakeAccount/psnap',
+    url='https://github.com/isFakeAccount/psnawp',
     license='MIT',
     author='isFakeAccount',
     author_email='trevorphillips@gmx.us',

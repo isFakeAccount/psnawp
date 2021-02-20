@@ -2,7 +2,7 @@ import platform
 
 import requests
 
-from psnap_api import psnap_exceptions
+from psnawp_api import psnawp_exceptions
 
 
 # Class RequestBuilder
@@ -35,7 +35,7 @@ class RequestBuilder:
 
         response = requests.get(url=kwargs['url'], headers=headers, params=params, data=data)
         if 500 <= response.status_code <= 599:
-            raise psnap_exceptions.PSNAPServerError(response.reason)
+            raise psnawp_exceptions.PSNAWPServerError(response.reason)
         return response.json()
 
     def post(self, **kwargs):

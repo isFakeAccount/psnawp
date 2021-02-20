@@ -1,4 +1,4 @@
-from psnap_api import search
+from psnawp_api import search
 
 
 # Class User

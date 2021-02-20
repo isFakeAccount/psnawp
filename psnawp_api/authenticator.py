@@ -3,7 +3,7 @@ from urllib.parse import urlparse, parse_qs
 
 import requests
 
-from psnap_api import psnap_exceptions
+from psnawp_api import psnawp_exceptions
 
 
 # Class Authenticator
@@ -23,10 +23,10 @@ class Authenticator:
         To get 64 character npsso code refer to the README.md
 
         :param npsso_token:
-        :raises PSNAPIllegalArgumentError: If npsso code len is not 64 characters
+        :raises PSNAWPIllegalArgumentError: If npsso code len is not 64 characters
         """
         if len(npsso_token) != 64:
-            raise psnap_exceptions.PSNAPIllegalArgumentError('Your npsso code is incorrect!')
+            raise psnawp_exceptions.PSNAWPIllegalArgumentError('Your npsso code is incorrect!')
         self.npsso_token = npsso_token
         self.oauth_token_response = None
         self.access_token_expiration = None
@@ -136,7 +136,7 @@ class Authenticator:
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts
         about 2 months. After 2 months a new npsso code is needed.
 
-        :raises PSNAPAuthenticationException: If authentication is unsuccessful
+        :raises PSNAWPAuthenticationException: If authentication is unsuccessful
         """
         cookies = {'Cookie': 'npsso=' + self.npsso_token}
         params = {
@@ -154,8 +154,8 @@ class Authenticator:
         parsed_query = parse_qs(parsed_url.query)
         if 'error' in parsed_query.keys():
             if '4165' in parsed_query['error_code']:
-                raise psnap_exceptions.PSNAPAuthenticationError("Your npsso code has expired or is incorrect. "
+                raise psnawp_exceptions.PSNAWPAuthenticationError("Your npsso code has expired or is incorrect. "
                                                                 "Please generate a new code!")
             else:
-                raise psnap_exceptions.PSNAPAuthenticationError("Something went wrong while authenticating")
+                raise psnawp_exceptions.PSNAWPAuthenticationError("Something went wrong while authenticating")
         self.oauth_token(parsed_query['code'][0])

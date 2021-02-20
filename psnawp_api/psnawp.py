@@ -1,16 +1,16 @@
-from psnap_api import authenticator
-from psnap_api import client
-from psnap_api import request_builder
-from psnap_api import search
-from psnap_api import user
+from psnawp_api import authenticator
+from psnawp_api import client
+from psnawp_api import request_builder
+from psnawp_api import search
+from psnawp_api import user
 
 
-# PlayStation Network API Python (PSNAP)
+# PlayStation Network API Wrapper Python (PSNAWP)
 # original: https://github.com/games-directory/api-psn
 # Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 # Author: isFakeAccount
 
-class PSNAP:
+class PSNAWP:
     def __init__(self, npsso):
         self.authenticator = authenticator.Authenticator(npsso_token=npsso)
         self.request_builder = request_builder.RequestBuilder(self.authenticator)

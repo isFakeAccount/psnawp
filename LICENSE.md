@@ -4,7 +4,7 @@ This project depends on open source components from other related PSN libraries.
 to their repo all down below. Credit goes to all developers who helped me with the project from their work. And of
 course the **Stack Overflow** ;)
 
-## Play Station API Python (PSNAP)
+## Play Station API Python (PSNAWP)
 
 The MIT License (MIT)
 

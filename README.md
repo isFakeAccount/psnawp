@@ -1,4 +1,4 @@
-# Play Station Network API Python (PSNAP)
+# Play Station Network API Wrapper Python (PSNAWP)
 
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
@@ -18,15 +18,15 @@ This npsso code will be used in the api for authentication purposes. Following i
 library
 
 ```  
-from psnap_api import *  
+from psnawp_api import *  
   
-psnap = psnap.PSNAP('<64 character npsso code>')    
+psnawp = psnawp.PSNAWP('<64 character npsso code>')    
 client = client.Client()  
 print(client.get_account_id())  
 print(client.get_account_devices())  
 ```  
 
-**Note: If you want to create multiplace instances of psnap you need to get npsso code from separate PSN accounts. If
+**Note: If you want to create multiplace instances of psnawp you need to get npsso code from separate PSN accounts. If
 you generate a new npsso with same account your previous npsso will expire immidiately.**
 
 ## Contribution

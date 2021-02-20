@@ -1,8 +1,8 @@
-# Class PSNAPException
+# Class PSNAWPException
 # Used to generate custom exceptions for the API
 
 
-class PSNAPException(Exception):
+class PSNAWPException(Exception):
     """
     Generic Exception
     """
@@ -11,7 +11,7 @@ class PSNAPException(Exception):
         super().__init__(message)
 
 
-class PSNAPIllegalArgumentError(Exception):
+class PSNAWPIllegalArgumentError(Exception):
     """
     Exception raised if user gave wrong input to a function
     """
@@ -20,7 +20,7 @@ class PSNAPIllegalArgumentError(Exception):
         super().__init__(message)
 
 
-class PSNAPInvalidRequestError(Exception):
+class PSNAWPInvalidRequestError(Exception):
     """
     Exception raised if user request was invalid
     """
@@ -29,7 +29,7 @@ class PSNAPInvalidRequestError(Exception):
         super().__init__(message)
 
 
-class PSNAPAuthenticationError(Exception):
+class PSNAWPAuthenticationError(Exception):
     """
     Exception for authentication related errors
     """
@@ -38,7 +38,7 @@ class PSNAPAuthenticationError(Exception):
         super().__init__(message)
 
 
-class PSNAPServerError(Exception):
+class PSNAWPServerError(Exception):
     """
     Exception if the PSN server starts giving server errors
     """
