@@ -10,7 +10,7 @@ class User:
         self.request_builder = request_builder
         self.online_id = online_id
         search_obj = search.Search(request_builder)
-        profile = search_obj.search_user(online_id)
+        profile = search_obj.online_id_to_account_id(online_id)
         self.account_id = profile['profile']['accountId']
 
     def profile(self):

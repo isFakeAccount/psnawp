@@ -7,21 +7,21 @@ class Search:
     def __init__(self, request_builder):
         self.request_builder = request_builder
 
-    def search_user(self, search_query=""):
+    def online_id_to_account_id(self, online_id=""):
         """
-        Searches a user online ID and returns their account id
+        Converts user online ID and returns their account id
 
-        :param search_query: online id of user you want to search
+        :param online_id: online id of user you want to search
         :return: dict: PSN ID and Account ID of the user in search query
         :raises PSNAWPIllegalArgumentError: If the search query is empty
         :raises PSNAWPInvalidRequestError: If the user is invalid
         """
         # If user tries to do empty search
-        if len(search_query) <= 0:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError('Search_query must contain a value.')
+        if len(online_id) <= 0:
+            raise psnawp_exceptions.PSNAWPIllegalArgumentError('online_id must contain a value.')
         base_uri = "https://us-prof.np.community.playstation.net/userProfile/v1/users"
-        param = {'fields': 'accountId,onlineId'}
-        response = self.request_builder.get(url="{}/{}/profile2".format(base_uri, search_query), params=param)
+        param = {'fields': 'accountId,onlineId,currentOnlineId'}
+        response = self.request_builder.get(url="{}/{}/profile2".format(base_uri, online_id), params=param)
         if 'error' in response.keys():
-            raise psnawp_exceptions.PSNAWPInvalidRequestError("Invalid user {}".format(search_query))
+            raise psnawp_exceptions.PSNAWPInvalidRequestError("Invalid user {}".format(online_id))
         return response

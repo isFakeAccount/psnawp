@@ -35,7 +35,10 @@ To get started you need to obtain npsso <64 character code>. You need to follow 
 This npsso code will be used in the api for authentication purposes. Following is the quick example on how to use this library  
   
 ```  
-from psnawp_api import * psnawp = psnawp.PSNAWP('<64 character npsso code>')   
+from psnawp_api import psnawp
+
+psnawp = psnawp.PSNAWP('<64 character npsso code>')   
+
 # Client that is you  
 client = psnawp.client() 
 print(client.get_account_id()) 
