@@ -16,5 +16,7 @@ setup(
     author='isFakeAccount',
     author_email='trevorphillips@gmx.us',
     description='Retrieve User Information, Trophies, Game and Store data from the PlayStation Network',
-    keywords='PSN API'
+    long_description=open('README.md').read(),
+    keywords='PSN API',
+    classifiers=classifiers
 )
