@@ -37,9 +37,18 @@ This npsso code will be used in the api for authentication purposes. Following i
 ```  
 from psnawp_api import * psnawp = psnawp.PSNAWP('<64 character npsso code>')   
 # Client that is you  
-client = psnawp.client() print(client.get_account_id()) print(client.get_account_devices()) print(client.get_friends())   
+client = psnawp.client() 
+print(client.get_account_id()) 
+print(client.get_account_devices()) 
+print(client.get_friends())
+
 # User: Another user  
-user = psnawp.user("VaultTec_Trading") print(user.profile()) print(user.get_presence()) print(user.friendship()) print(user.is_available_to_play()) print(user.is_blocked())  
+user = psnawp.user("VaultTec_Trading") 
+print(user.profile()) 
+print(user.get_presence()) 
+print(user.friendship()) 
+print(user.is_available_to_play()) 
+print(user.is_blocked())  
  ```   
 **Note: If you want to create multiplace instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immidiately.**  
   
