@@ -14,7 +14,7 @@ class Search:
         :param online_id: online id of user you want to search
         :return: dict: PSN ID and Account ID of the user in search query
         :raises PSNAWPIllegalArgumentError: If the search query is empty
-        :raises PSNAWPInvalidRequestError: If the user is invalid
+        :raises PSNAWPUserNotFound: If the user is invalid
         """
         # If user tries to do empty search
         if len(online_id) <= 0:
@@ -23,5 +23,5 @@ class Search:
         param = {'fields': 'accountId,onlineId,currentOnlineId'}
         response = self.request_builder.get(url="{}/{}/profile2".format(base_uri, online_id), params=param)
         if 'error' in response.keys():
-            raise psnawp_exceptions.PSNAWPInvalidRequestError("Invalid user {}".format(online_id))
+            raise psnawp_exceptions.PSNAWPUserNotFound("Invalid user {}".format(online_id))
         return response

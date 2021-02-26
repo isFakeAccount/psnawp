@@ -23,14 +23,17 @@ class PSNAWP:
         """
         return client.Client(self.request_builder)
 
-    def user(self, online_id):
+    def user(self, online_id=None, account_id=None):
         """
         Creates a new user object
 
         :param online_id: PSN ID of the user
+        :param account_id: Account ID of the user
         :return: User Object
+        :raises PSNAWPIllegalArgumentError: If the argument is empty
+        :raises PSNAWPUserNotFound: If the user is invalid
         """
-        return user.User(self.request_builder, online_id)
+        return user.User(self.request_builder, online_id, account_id)
 
     def search(self):
         """

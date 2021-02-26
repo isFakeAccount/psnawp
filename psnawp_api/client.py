@@ -1,3 +1,6 @@
+from psnawp_api import user
+
+
 # Class Client
 # This class will contain the information about the logged in user
 class Client:
@@ -30,7 +33,7 @@ class Client:
         Gets the friends list and return their account ids
 
         :param limit: The number of items from input max is 1000
-        :return: dict: account ids of all friends in your friends list
+        :return: List: Users list of all friends in your friends list
         """
         if limit is None:
             limit = 1000
@@ -39,4 +42,7 @@ class Client:
         params = {'limit': limit}
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
         response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
-        return response
+        friends_list = []
+        for account_id in response['friends']:
+            friends_list.append(user.User(self.request_builder, account_id=account_id))
+        return friends_list

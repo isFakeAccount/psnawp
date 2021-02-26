@@ -6,12 +6,18 @@ from psnawp_api import search
 class User:
     base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
 
-    def __init__(self, request_builder, online_id):
+    def __init__(self, request_builder, online_id=None, account_id=None):
         self.request_builder = request_builder
         self.online_id = online_id
+        self.account_id = account_id
         search_obj = search.Search(request_builder)
-        profile = search_obj.online_id_to_account_id(online_id)
-        self.account_id = profile['profile']['accountId']
+        # If online ID is given search by online ID otherwise by account ID
+        if self.online_id is not None:
+            profile = search_obj.online_id_to_account_id(online_id)
+            self.account_id = profile['profile']['accountId']
+        elif self.account_id is not None:
+            profile = self.profile()
+            self.online_id = profile['onlineId']
 
     def profile(self):
         """
@@ -61,3 +67,9 @@ class User:
             return True
         else:
             return False
+
+    def __repr__(self):
+        return "<User online_id:{} account_id:{}>".format(self.online_id, self.account_id)
+
+    def __str__(self):
+        return "Online ID: {} Account ID: {}".format(self.online_id, self.account_id)

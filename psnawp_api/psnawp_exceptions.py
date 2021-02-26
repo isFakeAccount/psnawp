@@ -20,7 +20,7 @@ class PSNAWPIllegalArgumentError(Exception):
         super().__init__(message)
 
 
-class PSNAWPInvalidRequestError(Exception):
+class PSNAWPUserNotFound(Exception):
     """
     Exception raised if user request was invalid
     """
