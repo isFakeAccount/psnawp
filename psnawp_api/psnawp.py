@@ -6,10 +6,8 @@ from psnawp_api import user
 
 
 # PlayStation Network API Wrapper Python (PSNAWP)
-# original: https://github.com/games-directory/api-psn
 # Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 # Author: isFakeAccount
-
 class PSNAWP:
     def __init__(self, npsso):
         self.authenticator = authenticator.Authenticator(npsso_token=npsso)

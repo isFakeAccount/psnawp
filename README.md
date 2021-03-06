@@ -55,6 +55,8 @@ print(user.is_blocked())
 user.send_private_message("Hello World!")
 messages = user.get_messages_in_conversation(message_count=1)  
  ```   
+Sending private message only works if the message group between you and user already exists otherwise it will throw HTTP Status Code 429. Basically you would have to create the group yourself through the APP or ask the user to send you message first.
+
 **Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**  
   
 ## Contribution  
@@ -64,3 +66,7 @@ All bug reposts and features requests are welcomed although I am new at making p
 ## Disclaimer  
   
 This project was not intended to be used for spam, abuse, or anything of the sort. Any use of this project for those purposes is not endorsed. Please keep this in mind when creating applications using this API wrapper.
+
+## Credit
+
+This project contains code from PlayStationNetwork::API and PSN-PHP Wrapper that was translated to Python. See more in [LICENSE](LICENSE.md)

@@ -1,7 +1,5 @@
 # Class PSNAWPException
 # Used to generate custom exceptions for the API
-# For internal use only do not call directly
-
 class PSNAWPException(Exception):
     """
     Generic Exception

@@ -9,6 +9,7 @@ class Search:
     def universal_search(self, search_query):
         """
         Searches the Playstation Website. Note: It does not work as of now and the endpoints returns whole html page
+
         :param search_query: search query
         :return: search result
         """
