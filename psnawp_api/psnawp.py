@@ -14,14 +14,15 @@ class PSNAWP:
     def __init__(self, npsso):
         self.authenticator = authenticator.Authenticator(npsso_token=npsso)
         self.request_builder = request_builder.RequestBuilder(self.authenticator)
+        self.client = client.Client(self.request_builder)
 
-    def client(self):
+    def me(self):
         """
         Creates a new client object (your account)
 
         :return: Client Object
         """
-        return client.Client(self.request_builder)
+        return self.client
 
     def user(self, online_id=None, account_id=None):
         """
@@ -33,7 +34,7 @@ class PSNAWP:
         :raises PSNAWPIllegalArgumentError: If the argument is empty
         :raises PSNAWPUserNotFound: If the user is invalid
         """
-        return user.User(self.request_builder, online_id, account_id)
+        return user.User(self.request_builder, self.client, online_id, account_id)
 
     def search(self):
         """

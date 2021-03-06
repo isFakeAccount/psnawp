@@ -9,6 +9,7 @@ from psnawp_api import psnawp_exceptions
 # Class Authenticator
 # Responsible for authetication using npsso code
 # Also used later to get access token from refresh token
+# For internal use only do not call directly
 class Authenticator:
     URLS = {
         'BASE_URI': 'https://ca.account.sony.com/api',
@@ -54,6 +55,8 @@ class Authenticator:
         self.oauth_token_response = response.json()
         self.access_token_expiration = time() + self.oauth_token_response['expires_in']
         self.refresh_token_expiration = time() + self.oauth_token_response['refresh_token_expires_in']
+        if self.oauth_token_response['refresh_token_expires_in'] <= 259200:
+            print("Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!")
         return self.oauth_token_response['access_token']
 
     # returns the access code
@@ -127,6 +130,8 @@ class Authenticator:
         self.oauth_token_response = response.json()
         self.access_token_expiration = time() + self.oauth_token_response['expires_in']
         self.refresh_token_expiration = time() + self.oauth_token_response['refresh_token_expires_in']
+        if self.oauth_token_response['refresh_token_expires_in'] <= 259200:
+            print("Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!")
 
     # Authenticate using npsso
     def authenticate(self):

@@ -1,9 +1,7 @@
-
-  
 # Licenses    
-This project depends on open source components from other related PSN libraries. You can find the licenses and the link to their repo all down below. Credit goes to all developers who helped me with the project from their work. And of course the **Stack Overflow** ;)    
+This project depends on open source components from other related PSN libraries. You can find the licenses, and the link to their repo all down below. Credit goes to all developers who helped me with the project from their work and of course the **Stack Overflow** ;)    
     
-## Play Station API Python (PSNAWP)    
+## PlayStation API Python (PSNAWP)    
 The MIT License (MIT)    
     
 Copyright (c) 2021 isFakeAccount    

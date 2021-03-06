@@ -1,6 +1,6 @@
 # Class PSNAWPException
 # Used to generate custom exceptions for the API
-
+# For internal use only do not call directly
 
 class PSNAWPException(Exception):
     """
@@ -32,15 +32,6 @@ class PSNAWPUserNotFound(Exception):
 class PSNAWPAuthenticationError(Exception):
     """
     Exception for authentication related errors
-    """
-
-    def __init__(self, message):
-        super().__init__(message)
-
-
-class PSNAWPServerError(Exception):
-    """
-    Exception if the PSN server starts giving server errors
     """
 
     def __init__(self, message):

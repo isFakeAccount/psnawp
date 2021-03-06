@@ -8,7 +8,17 @@ class Client:
 
     def __init__(self, request_builder):
         self.request_builder = request_builder
-        self.account_id = 'me'
+        self.online_id = self.get_online_id()
+        self.account_id = self.get_account_id()
+
+    def get_online_id(self):
+        """
+        Gets the online ID of the client logged in the api
+
+        :return: str: onlineID
+        """
+        response = self.request_builder.get(url='{}/{}/profiles'.format(user.User.base_uri, self.get_account_id()))
+        return response['onlineId']
 
     def get_account_id(self):
         """
@@ -33,7 +43,7 @@ class Client:
         Gets the friends list and return their account ids
 
         :param limit: The number of items from input max is 1000
-        :return: List: Users list of all friends in your friends list
+        :return: List: Account ID of all friends in your friends list
         """
         if limit is None:
             limit = 1000
@@ -42,7 +52,20 @@ class Client:
         params = {'limit': limit}
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
         response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
-        friends_list = []
-        for account_id in response['friends']:
-            friends_list.append(user.User(self.request_builder, account_id=account_id))
-        return friends_list
+        return response['friends']
+
+    def blocked_list(self):
+        """
+        Gets the blocked list and return their account ids
+
+        :return: List: Account ID of all blocked users on your block list
+        """
+        base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
+        response = self.request_builder.get(url='{}/me/blocks'.format(base_uri))
+        return response['blockList']
+
+    def __repr__(self):
+        return "<User online_id:{} account_id:{}>".format('me', self.account_id)
+
+    def __str__(self):
+        return "Online ID: {} Account ID: {}".format('me', self.account_id)

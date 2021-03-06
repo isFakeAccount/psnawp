@@ -1,17 +1,17 @@
 
-# Play Station Network API Wrapper Python (PSNAWP)  
+# PlayStation Network API Wrapper Python (PSNAWP)  
   
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network  
   
 ## How to install  
   
-To install the library into python. First you need to clone the repo at your local machine. And run the following command from the root directory of the repo  
+To install the library into python. First you need to clone the repo at your local machine and run the following command from the root directory of the repo  
   
 ```  
 python setup.py install  
 ```  
   
-This libary was made using python 3.9. I don't expect a lot of issues in previous python 3 versions but you might run into issues with python 2.  
+This library was made using python 3.9. I don't expect a lot of issues in previous python 3 versions, but you might run into issues with python 2.  
   
 **Bonus Installing Library on PyCharm IDE:**  
   
@@ -40,7 +40,7 @@ from psnawp_api import psnawp
 psnawp = psnawp.PSNAWP('<64 character npsso code>')   
 
 # Client that is you  
-client = psnawp.client() 
+client = psnawp.me() 
 print(client.get_account_id()) 
 print(client.get_account_devices()) 
 print(client.get_friends())
@@ -51,13 +51,15 @@ print(user.profile())
 print(user.get_presence()) 
 print(user.friendship()) 
 print(user.is_available_to_play()) 
-print(user.is_blocked())  
+print(user.is_blocked())
+user.send_private_message("Hello World!")
+messages = user.get_messages_in_conversation(message_count=1)  
  ```   
-**Note: If you want to create multiplace instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immidiately.**  
+**Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**  
   
 ## Contribution  
   
-All bug reposts and features requests are welcomed although I am new at making python libraries so it may take me a while to implement some features. Suggestions are welcomes if I am doing something that is unconventional way of doing it.  
+All bug reposts and features requests are welcomed although I am new at making python libraries, so it may take me a while to implement some features. Suggestions are welcomes if I am doing something that is an unconventional way of doing it.  
   
 ## Disclaimer  
   

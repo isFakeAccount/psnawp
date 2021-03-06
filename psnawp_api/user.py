@@ -1,4 +1,5 @@
-from psnawp_api import search
+from psnawp_api import message_thread
+from psnawp_api import psnawp_exceptions
 
 
 # Class User
@@ -6,18 +7,38 @@ from psnawp_api import search
 class User:
     base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
 
-    def __init__(self, request_builder, online_id=None, account_id=None):
+    def __init__(self, request_builder, client, online_id=None, account_id=None):
         self.request_builder = request_builder
+        self.client = client
         self.online_id = online_id
         self.account_id = account_id
-        search_obj = search.Search(request_builder)
         # If online ID is given search by online ID otherwise by account ID
         if self.online_id is not None:
-            profile = search_obj.online_id_to_account_id(online_id)
+            profile = self.online_id_to_account_id(online_id)
             self.account_id = profile['profile']['accountId']
         elif self.account_id is not None:
             profile = self.profile()
             self.online_id = profile['onlineId']
+        self.msg_thread = None
+
+    def online_id_to_account_id(self, online_id):
+        """
+        Converts user online ID and returns their account id
+
+        :param online_id: online id of user you want to search
+        :return: dict: PSN ID and Account ID of the user in search query
+        :raises PSNAWPIllegalArgumentError: If the search query is empty
+        :raises PSNAWPUserNotFound: If the user is invalid
+        """
+        # If user tries to do empty search
+        if len(online_id) <= 0:
+            raise psnawp_exceptions.PSNAWPIllegalArgumentError('online_id must contain a value.')
+        base_uri = "https://us-prof.np.community.playstation.net/userProfile/v1/users"
+        param = {'fields': 'accountId,onlineId,currentOnlineId'}
+        response = self.request_builder.get(url="{}/{}/profile2".format(base_uri, online_id), params=param)
+        if 'error' in response.keys():
+            raise psnawp_exceptions.PSNAWPUserNotFound("Invalid user {}".format(online_id))
+        return response
 
     def profile(self):
         """
@@ -30,14 +51,17 @@ class User:
 
     def get_presence(self):
         """
-        Gets the presences of a user
+        Gets the presences of a user. If the profile is private
 
         :return: dict availability, lastAvailableDate, and primaryPlatformInfo
         """
         params = {'type': 'primary'}
         response = self.request_builder.get(url='{}/{}/basicPresences'.format(User.base_uri, self.account_id),
                                             params=params)
-        return response['basicPresence']
+        if 'basicPresence' in response.keys():
+            return response['basicPresence']
+        else:
+            return response
 
     def friendship(self):
         """
@@ -67,6 +91,37 @@ class User:
             return True
         else:
             return False
+
+    def send_private_message(self, message):
+        """
+        Send a private message to the user. Due to endpoint limitation. This will only work if the message group
+        already exists.
+
+        :param message: body of message
+        """
+        if self.msg_thread is None:
+            self.msg_thread = message_thread.MessageThread(self.request_builder, self.client, self.online_id)
+        self.msg_thread.send_message(message)
+
+    def get_messages_in_conversation(self, message_count=1):
+        """
+        Gets all the messages in send and received in the message group (Max limit is 200)
+        The most recent message will be and the start of list
+
+        :return: message events list containing all messages
+        """
+        if self.msg_thread is None:
+            self.msg_thread = message_thread.MessageThread(self.request_builder, self.client, self.online_id)
+
+        msg_history = self.msg_thread.get_messages(min(message_count, 200))
+        return msg_history
+
+    def leave_private_message_group(self):
+        """
+        If you want to leave the message group
+        """
+        if self.msg_thread is not None:
+            self.msg_thread.leave()
 
     def __repr__(self):
         return "<User online_id:{} account_id:{}>".format(self.online_id, self.account_id)
