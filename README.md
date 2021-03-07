@@ -3,24 +3,20 @@
   
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network  
   
-## How to install  
-  
+## How to install
+
+### From PyPI
+
+```
+pip install PSNAWP
+```
+### Using setup.py
 To install the library into python. First you need to clone the repo at your local machine and run the following command from the root directory of the repo  
   
 ```  
 python setup.py install  
-```  
-  
-This library was made using python 3.9. I don't expect a lot of issues in previous python 3 versions, but you might run into issues with python 2.  
-  
-**Bonus Installing Library on PyCharm IDE:**  
-  
-I was having issues with installing this library on pycharm because python was installing this library as `.egg` file and PyCharm is really finicky about .egg files. So to install this library on pycharm you need to use this command instead of one stated above.  
-```  
-pip install .  
-```   
-Source: [stopping setup.py from installing as egg](https://stackoverflow.com/questions/6301003/stopping-setup-py-from-installing-as-egg)  
-  
+```
+
 ## Getting Started  
   
 To get started you need to obtain npsso <64 character code>. You need to follow the following steps  
