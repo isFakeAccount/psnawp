@@ -9,7 +9,7 @@ classifiers = [
 
 setup(
     name='PSNAWP',
-    version='2021.5.3',
+    version='2021.7.3',
     packages=find_packages(),
     project_urls={
         "Change Log": "https://github.com/isFakeAccount/psnawp/commits/",
