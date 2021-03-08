@@ -7,10 +7,19 @@ classifiers = [
     'Programming Language :: Python :: 3.9'
 ]
 
+requires = [
+    'certifi',
+    'chardet',
+    'idna',
+    'requests',
+    'urllib3'
+]
+
 setup(
     name='PSNAWP',
-    version='2021.7.3',
+    version='2021.8.3',
     packages=find_packages(),
+    install_requires=requires,
     project_urls={
         "Change Log": "https://github.com/isFakeAccount/psnawp/commits/",
         "Documentation": "https://psnawp.readthedocs.io/en/latest/",
