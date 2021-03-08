@@ -5,6 +5,13 @@ class MessageThread:
     base_uri = 'https://us-gmsg.np.community.playstation.net/groupMessaging/v1'
 
     def __init__(self, request_builder, client, online_ids):
+        """
+        Constructor of MessageThread. Responsible for managing messages groups and sending messages
+
+        :param request_builder: Used to call http requests
+        :param client: The user who is logged in. Used to create message threads
+        :param online_ids: The user we want to chat with
+        """
         self.request_builder = request_builder
         self.client = client
         self.online_ids = online_ids
@@ -17,7 +24,7 @@ class MessageThread:
         Creates new thread if the thread does not exits. Note: This endpoint does not work I added in because
         sony might fix it in future
 
-        :return: thread id
+        :returns: thread id
         """
         thread_members = [{'onlineId': self.client.online_id}]
         online_ids_split = self.online_ids.split(',')
@@ -34,7 +41,7 @@ class MessageThread:
         Get thread with online ids as members
 
         :param online_ids: online ids of users, can input muliple csv values
-        :return: thread_id of the thread
+        :returns: thread_id of the thread
         """
         response = self.request_builder.get(url='{}/users/me/threadIds'.format(MessageThread.base_uri),
                                             params={'withOnlineIds': online_ids})
@@ -49,7 +56,7 @@ class MessageThread:
         Gets the thread information
 
         :param thread_id: ID of thread
-        :return: Message thread info such as members, name, last activity etc...
+        :returns: Message thread info such as members, name, last activity etc...
         """
         if thread_id is None:
             thread_id = self.thread_id
@@ -63,7 +70,7 @@ class MessageThread:
         """
         Gets all the messages in the message thread. Note: 200 is the max limit
 
-        :return: message events list containing all messages
+        :returns: message events list containing all messages
         """
         return self.get_thread_information(count=message_count)['threadEvents']
 
@@ -78,7 +85,7 @@ class MessageThread:
         Sends message to the thread id in the instance variable
 
         :param message: body of message
-        :return: thread information if message was successfully sent
+        :returns: thread information if message was successfully sent
         """
         data = {'messageEventDetail': {'eventCategoryCode': 1, 'messageDetail': {'body': message}}}
         self.request_builder.multipart_post(url='{}/threads/{}/messages'.format(MessageThread.base_uri, self.thread_id),

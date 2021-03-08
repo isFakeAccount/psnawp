@@ -1,4 +1,4 @@
-from psnawp_api import authenticator
+from psnawp_api import authenticator, psnawp_exceptions
 from psnawp_api import client
 from psnawp_api import request_builder
 from psnawp_api import search
@@ -18,26 +18,36 @@ class PSNAWP:
         """
         Creates a new client object (your account)
 
-        :return: Client Object
+        :returns: Client Object
         """
         return self.client
 
-    def user(self, online_id=None, account_id=None):
+    def user(self, **kwargs):
         """
         Creates a new user object
 
-        :param online_id: PSN ID of the user
-        :param account_id: Account ID of the user
-        :return: User Object
-        :raises PSNAWPIllegalArgumentError: If the argument is empty
-        :raises PSNAWPUserNotFound: If the user is invalid
+        :param kwargs: online_id: PSN ID of the user or account_id: Account ID of the user
+        :type kwargs: str
+        :returns: User Object
+        :raises requests.exception.HTTPError: If the user is not valid/found
         """
+        online_id = None
+        if 'online_id' in kwargs.keys():
+            online_id = kwargs['online_id']
+
+        account_id = None
+        if 'account_id' in kwargs.keys():
+            online_id = kwargs['account_id']
+
+        if online_id is None and account_id is None:
+            raise psnawp_exceptions.PSNAWPIllegalArgumentError('You must provide either online ID or account ID')
+
         return user.User(self.request_builder, self.client, online_id, account_id)
 
     def search(self):
         """
         Creates a new search object
 
-        :return: Search Object
+        :returns: Search Object
         """
         return search.Search(self.request_builder)

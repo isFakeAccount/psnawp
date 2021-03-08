@@ -15,7 +15,7 @@ class Client:
         """
         Gets the online ID of the client logged in the api
 
-        :return: str: onlineID
+        :returns: str: onlineID
         """
         response = self.request_builder.get(url='{}/{}/profiles'.format(user.User.base_uri, self.get_account_id()))
         return response['onlineId']
@@ -24,7 +24,7 @@ class Client:
         """
         Gets the account ID of the client logged in the api
 
-        :return: str: accountID
+        :returns: str: accountID
         """
         response = self.request_builder.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri))
         return response['accountId']
@@ -33,22 +33,21 @@ class Client:
         """
         Gets the devices the client is logged into
 
-        :return: dict: accountDevices
+        :returns: dict: accountDevices
         """
         response = self.request_builder.get(url='{}/v1/devices/accounts/me'.format(Client.base_uri))
         return response['accountDevices']
 
-    def get_friends(self, limit=None):
+    def get_friends(self, limit=1000):
         """
         Gets the friends list and return their account ids
 
         :param limit: The number of items from input max is 1000
-        :return: List: Account ID of all friends in your friends list
+        :type limit: int
+        :returns: List: Account ID of all friends in your friends list
         """
-        if limit is None:
-            limit = 1000
-        else:
-            limit = min(1000, limit)
+        limit = min(1000, limit)
+
         params = {'limit': limit}
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
         response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
@@ -58,7 +57,7 @@ class Client:
         """
         Gets the blocked list and return their account ids
 
-        :return: List: Account ID of all blocked users on your block list
+        :returns: List: Account ID of all blocked users on your block list
         """
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
         response = self.request_builder.get(url='{}/me/blocks'.format(base_uri))

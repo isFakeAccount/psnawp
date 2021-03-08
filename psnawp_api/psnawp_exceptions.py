@@ -18,15 +18,6 @@ class PSNAWPIllegalArgumentError(Exception):
         super().__init__(message)
 
 
-class PSNAWPUserNotFound(Exception):
-    """
-    Exception raised if user request was invalid
-    """
-
-    def __init__(self, message):
-        super().__init__(message)
-
-
 class PSNAWPAuthenticationError(Exception):
     """
     Exception for authentication related errors

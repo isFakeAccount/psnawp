@@ -26,7 +26,7 @@ To get started you need to obtain npsso <64 character code>. You need to follow 
 3. If you are logged in you should see a text similar to this  
   
 ```  
-{"npsso":"'<64 character npsso code>"}  
+{"npsso":"<64 character npsso code>"}  
 ```   
 This npsso code will be used in the api for authentication purposes. Following is the quick example on how to use this library  
   

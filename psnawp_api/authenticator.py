@@ -24,6 +24,7 @@ class Authenticator:
         To get 64 character npsso code refer to the README.md
 
         :param npsso_token:
+        :type npsso_token: str
         :raises PSNAWPIllegalArgumentError: If npsso code len is not 64 characters
         """
         if len(npsso_token) != 64:
@@ -38,7 +39,7 @@ class Authenticator:
         """
         Gets a new access token from refresh token
 
-        :return: str: access token
+        :returns: str: access token
         """
         data = {
             'refresh_token': self.oauth_token_response['refresh_token'],
@@ -64,7 +65,7 @@ class Authenticator:
         """
         Gets the access token value
 
-        :return: str: access token value
+        :returns: str: access token value
         """
         return self.oauth_token_response['access_token']
 
