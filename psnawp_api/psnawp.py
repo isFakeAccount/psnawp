@@ -37,7 +37,7 @@ class PSNAWP:
 
         account_id = None
         if 'account_id' in kwargs.keys():
-            online_id = kwargs['account_id']
+            account_id = kwargs['account_id']
 
         if online_id is None and account_id is None:
             raise psnawp_exceptions.PSNAWPIllegalArgumentError('You must provide either online ID or account ID')
