@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 classifiers = [
-    'Development Status :: 3 - Alpha',
+    'DEVELOPMENT STATUS :: 4 - BETA',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.9'
@@ -17,7 +17,7 @@ requires = [
 
 setup(
     name='PSNAWP',
-    version='2021.8.3',
+    version='2021.9.3',
     packages=find_packages(),
     install_requires=requires,
     project_urls={
