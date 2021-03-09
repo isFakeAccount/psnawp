@@ -45,6 +45,8 @@ print(client.blocked_list())
 
 # Getting user from online
 user_online_id = psnawp.user(online_id="VaultTec_Trading")
+print(user_online_id.online_id)
+print(user_online_id.account_id)
 print(user_online_id.profile())
 print(user_online_id.get_presence())
 print(user_online_id.friendship())
