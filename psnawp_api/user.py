@@ -30,7 +30,8 @@ class User:
 
     def online_id_to_account_id(self, online_id):
         """
-        Converts user online ID and returns their account id
+        Converts user online ID and returns their account id. This is an internal function and not meant to be called
+        directly.
 
         :param online_id: online id of user you want to search
         :type online_id: str

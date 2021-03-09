@@ -36,20 +36,30 @@ from psnawp_api import psnawp
 psnawp = psnawp.PSNAWP('<64 character npsso code>')   
 
 # Client that is you  
-client = psnawp.me() 
-print(client.get_account_id()) 
-print(client.get_account_devices()) 
+client = psnawp.me()
+print(client.get_online_id())
+print(client.get_account_id())
+print(client.get_account_devices())
 print(client.get_friends())
+print(client.blocked_list())
 
-# User: Another user  
-user = psnawp.user("VaultTec_Trading") 
-print(user.profile()) 
-print(user.get_presence()) 
-print(user.friendship()) 
-print(user.is_available_to_play()) 
-print(user.is_blocked())
-user.send_private_message("Hello World!")
-messages = user.get_messages_in_conversation(message_count=1)  
+# Getting user from online
+user_online_id = psnawp.user(online_id="VaultTec_Trading")
+print(user_online_id.profile())
+print(user_online_id.get_presence())
+print(user_online_id.friendship())
+print(user_online_id.is_available_to_play())
+print(user_online_id.is_blocked())
+
+# Sending Message
+user_online_id.send_private_message("Hello World!")
+messages = user_online_id.get_messages_in_conversation(message_count=1)
+# If you want to leave the conversation
+user_online_id.leave_private_message_group()
+
+# Getting user from Account ID
+user_account_id = psnawp.user(account_id='1802043923080044300')
+# Same functions as shown above
  ```   
 Sending private message only works if the message group between you and user already exists otherwise it will throw HTTP Status Code 429. Basically you would have to create the group yourself through the APP or ask the user to send you message first.
 
