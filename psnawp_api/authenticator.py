@@ -7,7 +7,7 @@ from psnawp_api import psnawp_exceptions
 
 
 # Class Authenticator
-# Responsible for authetication using npsso code
+# Responsible for authentication using npsso code
 # Also used later to get access token from refresh token
 # For internal use only do not call directly
 class Authenticator:
@@ -155,6 +155,7 @@ class Authenticator:
         response = requests.get(url='{}/authz/v3/oauth/authorize'.format(Authenticator.URLS['BASE_URI']),
                                 headers=cookies,
                                 params=params, allow_redirects=False)
+        response.raise_for_status()
         location_url = response.headers['location']
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)

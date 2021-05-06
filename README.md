@@ -28,7 +28,9 @@ To get started you need to obtain npsso <64 character code>. You need to follow 
 ```  
 {"npsso":"<64 character npsso code>"}  
 ```   
-This npsso code will be used in the api for authentication purposes. Following is the quick example on how to use this library  
+This npsso code will be used in the api for authentication purposes. The refresh token that is generated from npsso lasts about 2 months. After that you have to get a new npsso token. The bot will print a warning if there are less than 3 days left in refresh token expiration. 
+
+Following is the quick example on how to use this library  
   
 ```  
 from psnawp_api import psnawp
