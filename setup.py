@@ -17,7 +17,7 @@ requires = [
 
 setup(
     name='PSNAWP',
-    version='2021.9.3',
+    version='2021.16.5',
     packages=find_packages(),
     install_requires=requires,
     project_urls={
