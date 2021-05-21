@@ -1,5 +1,4 @@
 import json
-import platform
 
 import requests
 
@@ -13,7 +12,8 @@ class RequestBuilder:
         self.authenticator = authenticator
         self.country = 'US'
         self.language = 'en'
-        self.default_headers = {'User-Agent': platform.platform()}
+        self.default_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, '
+                                              'like Gecko) Chrome/90.0.4430.212 Safari/537.36'}
 
     def get(self, **kwargs):
         access_token = self.authenticator.obtain_fresh_access_token()
