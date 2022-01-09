@@ -52,6 +52,23 @@ class Client:
         base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
         response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
         return response['friends']
+    
+    def get_gamelist(self, limit=1000, offset=0):	
+        """ 
+        Get the game list and return their progress and trophies
+
+        :param limit: The number of items from input max is 1000
+        :type limit: int
+        :param offset: Index where start the listing
+        :type offset: int
+        :returns: List: Game list and respective progress
+        """
+
+        limit = min(1000,limit)
+        offset = min(1000,offset)
+        response = self.request_builder.get(url='https://m.np.playstation.net/api/trophy/v1/users/me/trophyTitles?limit={}&offset={}'.format(limit, offset))
+
+        return response
 
     def blocked_list(self):
         """
