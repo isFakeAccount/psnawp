@@ -134,6 +134,23 @@ class User:
         """
         if self.msg_thread is not None:
             self.msg_thread.leave()
+    
+    def get_gamelist(self, limit=1000, offset=0):	
+        """ 
+        Get the game list and return their progress and trophies
+
+        :param limit: The number of items from input max is 1000
+        :type limit: int
+        :param offset: Index where start the listing
+        :type offset: int
+        :returns: List: Game list and respective progress
+        """
+
+        limit = min(1000,limit)
+        offset = min(1000,offset)
+        response = self.request_builder.get(url='https://m.np.playstation.net/api/trophy/v1/users/{}/trophyTitles?limit={}&offset={}'.format(self.account_id,limit, offset))
+
+        return response
 
     def __repr__(self):
         return "<User online_id:{} account_id:{}>".format(self.online_id, self.account_id)
