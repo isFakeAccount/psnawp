@@ -53,7 +53,7 @@ class Client:
         response = self.request_builder.get(url='{}/me/friends'.format(base_uri), params=params)
         return response['friends']
     
-    def get_gamelist(self, limit=1000, offset=0):	
+    def get_gamelist(self, limit=500, offset=0):	
         """ 
         Get the game list and return their progress and trophies
 
@@ -64,7 +64,7 @@ class Client:
         :returns: List: Game list and respective progress
         """
 
-        limit = min(1000,limit)
+        limit = min(500,limit)
         offset = min(1000,offset)
         response = self.request_builder.get(url='https://m.np.playstation.net/api/trophy/v1/users/me/trophyTitles?limit={}&offset={}'.format(limit, offset))
 
