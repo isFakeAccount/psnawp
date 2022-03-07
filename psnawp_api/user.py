@@ -57,6 +57,22 @@ class User:
         response = self.request_builder.get(url='{}/{}/profiles'.format(User.base_uri, self.account_id))
         return response
 
+    def get_profile_legacy(self):
+        """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
+
+        Returns:
+            dict: profile dictionary
+        """
+        url = f"https://us-prof.np.community.playstation.net/userProfile/v1/users/{self.online_id}/profile2"
+
+        params = { 
+            "fields": "npId,onlineId,accountId,avatarUrls,plus,aboutMe,languagesUsed,trophySummary(@default,level,progress,earnedTrophies),isOfficiallyVerified,personalDetail(@default,profilePictureUrls),personalDetailSharing,personalDetailSharingRequestMessageFlag,primaryOnlineStatus,presences(@default,@titleInfo,platform,lastOnlineDate,hasBroadcastData),requestMessageFlag,blocking,friendRelation,following,consoleAvailability"
+            }
+
+        response = self.request_builder.get(url=url, params=params)
+
+        return response
+
     def get_presence(self):
         """
         Gets the presences of a user. If the profile is private
