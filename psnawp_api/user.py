@@ -1,4 +1,4 @@
-from psnawp_api import message_thread
+from psnawp_api import group
 from psnawp_api import psnawp_exceptions
 
 
@@ -6,6 +6,7 @@ from psnawp_api import psnawp_exceptions
 # This class will contain the information about the PSN ID you passed in when creating object
 class User:
     base_uri = 'https://m.np.playstation.net/api/userProfile/v1/internal/users'
+    trophy_base_uri = 'https://m.np.playstation.net/api/trophy'
 
     def __init__(self, request_builder, client, online_id, account_id):
         """
@@ -26,7 +27,7 @@ class User:
         elif self.account_id is not None:
             profile = self.profile()
             self.online_id = profile['onlineId']
-        self.msg_thread = None
+        self.group = None
 
     def online_id_to_account_id(self, online_id):
         """
@@ -41,10 +42,12 @@ class User:
         """
         # If user tries to do empty search
         if len(online_id) <= 0:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError('online_id must contain a value.')
+            raise psnawp_exceptions.PSNAWPIllegalArgumentError(
+                'online_id must contain a value.')
         base_uri = "https://us-prof.np.community.playstation.net/userProfile/v1/users"
         param = {'fields': 'accountId,onlineId,currentOnlineId'}
-        response = self.request_builder.get(url="{}/{}/profile2".format(base_uri, online_id), params=param)
+        response = self.request_builder.get(
+            url="{}/{}/profile2".format(base_uri, online_id), params=param)
         return response
 
     def profile(self):
@@ -54,7 +57,21 @@ class User:
         :returns: Information about profile such as about me, avatars, languages etc...
         :raises requests.exception.HTTPError: If the user is not valid/found
         """
-        response = self.request_builder.get(url='{}/{}/profiles'.format(User.base_uri, self.account_id))
+        response = self.request_builder.get(
+            url='{}/{}/profiles'.format(User.base_uri, self.account_id))
+        return response
+
+    def get_presence(self):
+        """
+        Gets the presences of a user. If the profile is private
+
+        :returns: dict availability, lastAvailableDate, and primaryPlatformInfo
+        """
+        params = {'type': 'primary'}
+
+        response = self.request_builder.get(url='{}/{}/basicPresences'.format(User.base_uri, self.account_id),
+                                            params=params)
+
         return response
 
     def get_profile_legacy(self):
@@ -65,27 +82,13 @@ class User:
         """
         url = f"https://us-prof.np.community.playstation.net/userProfile/v1/users/{self.online_id}/profile2"
 
-        params = { 
+        params = {
             "fields": "npId,onlineId,accountId,avatarUrls,plus,aboutMe,languagesUsed,trophySummary(@default,level,progress,earnedTrophies),isOfficiallyVerified,personalDetail(@default,profilePictureUrls),personalDetailSharing,personalDetailSharingRequestMessageFlag,primaryOnlineStatus,presences(@default,@titleInfo,platform,lastOnlineDate,hasBroadcastData),requestMessageFlag,blocking,friendRelation,following,consoleAvailability"
-            }
+        }
 
         response = self.request_builder.get(url=url, params=params)
 
         return response
-
-    def get_presence(self):
-        """
-        Gets the presences of a user. If the profile is private
-
-        :returns: dict availability, lastAvailableDate, and primaryPlatformInfo
-        """
-        params = {'type': 'primary'}
-        response = self.request_builder.get(url='{}/{}/basicPresences'.format(User.base_uri, self.account_id),
-                                            params=params)
-        if 'basicPresence' in response.keys():
-            return response['basicPresence']
-        else:
-            return response
 
     def friendship(self):
         """
@@ -93,7 +96,8 @@ class User:
 
         :returns: dict: friendship stats
         """
-        response = self.request_builder.get(url='{}/me/friends/{}/summary'.format(User.base_uri, self.account_id))
+        response = self.request_builder.get(
+            url='{}/me/friends/{}/summary'.format(User.base_uri, self.account_id))
         return response
 
     def is_available_to_play(self):
@@ -101,7 +105,8 @@ class User:
         TODO I am not sure what this endpoint returns I'll update the documentation later
         :returns:
         """
-        response = self.request_builder.get(url='{}/me/friends/subscribing/availableToPlay'.format(User.base_uri))
+        response = self.request_builder.get(
+            url='{}/me/friends/subscribing/availableToPlay'.format(User.base_uri))
         return response
 
     def is_blocked(self):
@@ -110,7 +115,8 @@ class User:
 
         :returns: boolean: True if the user is blocked otherwise False
         """
-        response = self.request_builder.get(url='{}/me/blocks'.format(User.base_uri))
+        response = self.request_builder.get(
+            url='{}/me/blocks'.format(User.base_uri))
         if self.account_id in response['blockList']:
             return True
         else:
@@ -124,9 +130,10 @@ class User:
         :param message: body of message
         :type message: str
         """
-        if self.msg_thread is None:
-            self.msg_thread = message_thread.MessageThread(self.request_builder, self.client, self.online_id)
-        self.msg_thread.send_message(message)
+        if self.group is None:
+            self.group = group.Group(
+                self.request_builder, self.client, account_ids=[self.account_id])
+        self.group.send_message(message)
 
     def get_messages_in_conversation(self, message_count=1):
         """
@@ -138,18 +145,37 @@ class User:
         :type message_count: int
         :returns: message events list containing all messages
         """
-        if self.msg_thread is None:
-            self.msg_thread = message_thread.MessageThread(self.request_builder, self.client, self.online_id)
+        if self.group is None:
+            self.group = group.Group(
+                self.request_builder, self.client, account_ids=[self.account_id])
 
-        msg_history = self.msg_thread.get_messages(min(message_count, 200))
+        msg_history = self.group.get_conversation(min(message_count, 200))
         return msg_history
 
-    def leave_private_message_group(self):
+    def leave_group(self):
         """
         If you want to leave the message group
         """
-        if self.msg_thread is not None:
-            self.msg_thread.leave()
+        if self.group is not None:
+            self.group.leave_group()
+
+    def get_all_trophies(self, limit=100):
+        """get all the trophies info for the user's game
+
+        Args:
+            limit (int, optional): limit of trophies to query. Max is 800. Defaults to 100.
+
+        Returns:
+            dict
+        """
+
+        param = {
+            "limit": min(limit, 800)
+        }
+
+        response = self.request_builder.get(
+            url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/trophyTitles", params=param)
+        return response
 
     def __repr__(self):
         return "<User online_id:{} account_id:{}>".format(self.online_id, self.account_id)
