@@ -13,7 +13,8 @@ class RequestBuilder:
         self.country = 'US'
         self.language = 'en'
         self.default_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, '
-                                              'like Gecko) Chrome/90.0.4430.212 Safari/537.36'}
+                                              'like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+                                'Accept-Language': 'en-US'}
 
     def get(self, **kwargs):
         access_token = self.authenticator.obtain_fresh_access_token()
@@ -32,7 +33,26 @@ class RequestBuilder:
         if 'data' in kwargs.keys():
             data = kwargs['data']
 
-        response = requests.get(url=kwargs['url'], headers=headers, params=params, data=data)
+        response = requests.get(
+            url=kwargs['url'], headers=headers, params=params, data=data)
+
+        response.raise_for_status()
+        return response.json()
+
+    def post(self, **kwargs):
+        access_token = self.authenticator.obtain_fresh_access_token()
+        headers = {
+            **self.default_headers,
+            'Authorization': 'Bearer {}'.format(access_token)
+        }
+        if 'headers' in kwargs.keys():
+            headers = {**headers, **kwargs['headers']}
+
+        data = None
+        if 'data' in kwargs.keys():
+            data = kwargs['data']
+
+        response = requests.post(url=kwargs['url'], headers=headers, data=data)
         response.raise_for_status()
         return response.json()
 
@@ -75,6 +95,13 @@ class RequestBuilder:
         if 'data' in kwargs.keys():
             data = kwargs['data']
 
-        response = requests.delete(url=kwargs['url'], headers=headers, params=params, data=data)
+        response = requests.delete(
+            url=kwargs['url'], headers=headers, params=params, data=data)
         response.raise_for_status()
-        return response.json()
+
+        # delete operation might not include a body
+        # causing response.json() to raise an error
+        if response.request.body:
+            return response.json()
+        else:
+            return response.status_code
