@@ -1,14 +1,20 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.10.4, pytest-7.1.2, pluggy-1.0.0
-rootdir: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python, configfile: pyproject.toml, testpaths: tests
+platform linux -- Python 3.10.5, pytest-7.1.2, pluggy-1.0.0
+rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
 plugins: cov-3.0.0
 collected 6 items
 
 tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
 
-- generated xml file: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python/pytest.xml -
+=============================== warnings summary ===============================
+../../../../../opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/requests/__init__.py:109
+  /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/requests/__init__.py:109: RequestsDependencyWarning: urllib3 (1.26.9) or chardet (5.0.0)/charset_normalizer (2.0.12) doesn't match a supported version!
+    warnings.warn(
 
----------- coverage: platform linux, python 3.10.4-final-0 -----------
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
+
+---------- coverage: platform linux, python 3.10.5-final-0 -----------
 Coverage HTML written to dir htmlcov
 
-========================= 5 passed, 1 skipped in 1.20s =========================
+=================== 5 passed, 1 skipped, 1 warning in 1.07s ====================
