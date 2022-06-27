@@ -19,6 +19,7 @@ repos:
       - id: check-added-large-files
       - id: debug-statements
         language_version: python3
+        exclude: "pytest.xml|pytest-coverage.txt"
 
   - repo: https://github.com/pycqa/flake8
     hooks:
