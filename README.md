@@ -5,7 +5,10 @@
 [![pre-commit](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 <!-- Pytest Coverage Comment:Begin -->
-\n
+\n"| Tests | Skipped | Failures | Errors | Time |
+| ----- | ------- | -------- | -------- | ------------------ |
+| 6 | 1 :zzz: | 0 :x: | 0 :fire: | 1.281s :stopwatch: |
+"
 <!-- Pytest Coverage Comment:End -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

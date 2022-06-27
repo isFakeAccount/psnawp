@@ -17,4 +17,4 @@ tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
 ---------- coverage: platform linux, python 3.10.5-final-0 -----------
 Coverage HTML written to dir htmlcov
 
-=================== 5 passed, 1 skipped, 1 warning in 1.07s ====================
+=================== 5 passed, 1 skipped, 1 warning in 1.27s ====================
