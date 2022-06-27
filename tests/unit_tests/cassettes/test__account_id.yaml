@@ -1,0 +1,205 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.0
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 27 Jun 2022 07:32:51 GMT
+      Expires:
+      - '0'
+      Location:
+      - com.playstation.PlayStationApp://redirect/?code=v3.ehHwNV&cid=7a4d6b22-d30b-4666-be08-71e2e9499244
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=86A1108E9166A426C5034A269673DB05~-1~YAAQKDovF2HwHZiBAQAATtQTpAi2XE3I83R0UYOBYDrVeaJLIBy/FMRAucgKxrsGAdLeLj7rOWy+HajKD5fPz6Dm//FVEjl7JhGsG+0dUPucWcIIGdUI976wji7e4Ilk3nLH3HQnoS/m4fbkEpXdLgvzpXBlC8byGrXLVHdoyjVcs9SY7vLXWBqE609By2zd51bQ5UmCKgmzS7kJeeSWzjh8u9f11Kib50wL4YhMhjKbpEWsmofVVEfBU7xW9tLlJKiukkVXZDcp2CUOFMaU9YHxoqI9xQQ0a0LoPjFoPg3GLR+RuRKzTbnSpwq9+dDDD0fiiooIB75sRpj7uGbCW4YceJqIO81CfQDIHg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 07:32:51 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=0557C1989DC7F90106030D88EB51F705~YAAQKDovF2LwHZiBAQAATtQTpBATa+VRzl81mIE+9vr35ljVkmDn0luDDpYz58/AX/BELR7v5Pv+MiE7mJRzHB3Dy5uN5at9t/1STDk+LpiX5/r6PsbR8DGVHJpnsGt4VtgIbrhkrzOpHcQNEubzuUs+K3duY6fY8IYIC9b+COj6rJdqwRgk2BO5VNNnhDnGzG4y37dLEn3qC6WqDPLrdv4+u8eizFf7SMrb3Ek6VvscKbO0NrNBJ3BQGdF8tSJLjDVo1HemvkLv0TUejZVAnvz50vRNRnky/PatDWiwV8/0Q8Il8AZ58NCmv6S2d1mfmwdL5mKHjQH8qhLYCPZDWGeeSFtpGxYFNVHnotzs710hHYmZQeXY/Tj+7pg=~4339254~4407603;
+        Domain=.sony.com; Path=/; Expires=Mon, 27 Jun 2022 11:32:51 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 7a4d6b22-d30b-4666-be08-71e2e9499244
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 7a4d6b22-d30b-4666-be08-71e2e9499244
+      X-Psn-Request-Id:
+      - 1faa255c6d75e74dbd5e4a04b55435e9
+      X-RequestId:
+      - 1faa255c6d75e74dbd5e4a04b55435e9
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
+- request:
+    body: grant_type=authorization_code&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&scope=psn%3Aclientapp+psn%3Amobile.v1&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '160'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.28.0
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v1 psn:clientapp", "id_token": "REDACTED", "refresh_token":
+        "REDACTED", "refresh_token_expires_in": 5183999}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3616'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Jun 2022 07:32:52 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=647C4E2C179F5B8CA401E250C91A3062~-1~YAAQKDovF57wHZiBAQAAhtYTpAgC4mI/chdQhiRC8XADEUBDv3hRKdMuXf20xLrpNEKNFfwtlWqzF1puU18VkzZBA4vkyGTs3wTmR5vD9u0YuNb0GxKV0Bp9duK2uZogEeochRV/ZTajU7vBDzYo6QNoTZ8Ir5wAsgj5gnhbol7/d/aqzCahxvxNr2WAwQBiBqysVggsptDwg2jCYOywVmnc3blBYb9wdDZM+DsGxE/WIWWlShCESxBTxxZbHGNVuttGakSdNMqWJo2VbT67PPdXRXhnzPrBRAOu6mcAWlo9shDPw52Hsui1B/sEUm2Sib6JjZpLmfTdLofRwXty55p+v/oldJteJ7GvuQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 07:32:52 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=7D51A740EBBC195271A01AB107A8CFB2~YAAQKDovF5/wHZiBAQAAhtYTpBBGb1fq+KJy/ihwP4vwuwqsXdSZAsQqd1ksCiM8THdryzKvaRWmmJyjOrWXh8GtbO8fG8q9swmWk6198TZEL8fHr3S/u1gQTbMMwhXD2ZrhGJLqZBNUPfykUMOUPJFJ6JXEUIBSZYTXA6jM3yfsAB/6CjByCGoyH+djVGZv0AU673E9zFJYV5FF2wJYSk6eKH2//OhxJoB4ZhRq5L4Lyd5RS50f9aDkjX3q5E9kRN6zfv9pxPNGd9IijiipJPFWKqlgSks/Fo1gIME5SIztt2KBYIyAUmlYgkLwvXkEEToKfzaNZmprQvW849CcahAvNFR8JKLzEVVutcJ4Rs2R4lOKgy/blEva0bU=~4535874~4405574;
+        Domain=.sony.com; Path=/; Expires=Mon, 27 Jun 2022 11:32:52 GMT; Max-Age=14400
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 76be9d76-1ee0-4835-b351-5445c8d12690
+      X-Psn-Correlation-Id:
+      - 76be9d76-1ee0-4835-b351-5445c8d12690
+      X-Psn-Request-Id:
+      - 99d7c64b0e6d4680fd30da9d574f94d7
+      X-RequestId:
+      - 99d7c64b0e6d4680fd30da9d574f94d7
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=refresh_token&scope=psn%3Aclientapp+psn%3Amobile.v1&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '130'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.28.0
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v1 psn:clientapp", "id_token": "REDACTED", "refresh_token":
+        "REDACTED", "refresh_token_expires_in": 5183999}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3616'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Jun 2022 07:32:52 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=6198C6F0DCC2DEDEC81217A970A72493~-1~YAAQKDovF8nwHZiBAQAAC9gTpAjwu0EtCSDXo0qYhOVrl9PJPn5PnhUC5+Nuxb8HSKH/9xEcOIlaDOUqEygk2VgigxEScbrELumVo6D4zizNkFpDfleSV5cpj/pwxfl86CyVm+uvJ0fzqukeiw2fjxj/T8b3vXWEJ/syvNP6/vAMuWjlJD3JQVG1Ctx7ietNsZ3A01Yoirt9N68ufZuJejOXN+3x+RD8jQFCuwxl11ySWvk/itqY2fUD84+1MGbmO7Imz3XCYNi31yLrkp2cDSowfDxqAohwf3nIIj21c97EfrKq4EoFav5IiUUB5fIWjobnWQ4BiJCPPhHHv5dOkunAbIlgbJoUFA63Pg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 07:32:52 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=F82F09FDEAE28866922782F683924604~YAAQKDovF8rwHZiBAQAAC9gTpBD7ucBoEYjKGuUlWgysOhBbPa6CAaatnaaav0BL1HgWc5EAita4TqCk9PAiaY/9MLpwNCN6hOCrxdSMoCcdDrH5rbi6Yhxr9GieDf6HhLBwmdnBqr4K6pVqkAh5TPcsZT5uWVehrEKyTBNBfduXrIYDCe90PRxli2P7ic9sKIjFWmkuNUm27LLNslr7cvEgWYCwEecv2idAY0TOcUeVLESxfU90JoFZmoWTAmyN5JUagiCXe2g2OceaGKZQFCVsynSuYtLeUDh3jloNOfQrbiwDRgB0lwP5sZHtrVTavgAIyQqK6soLVOCRvoYlEVUzJbnAO2GXWf1qe4+zAOgapLvi7klfgxPOAQ8=~4535874~4405574;
+        Domain=.sony.com; Path=/; Expires=Mon, 27 Jun 2022 11:32:52 GMT; Max-Age=14400
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - cd176dbb-7fea-4754-a9c5-ea97d89cd042
+      X-Psn-Correlation-Id:
+      - cd176dbb-7fea-4754-a9c5-ea97d89cd042
+      X-Psn-Request-Id:
+      - 56623d39a5bdb3a16a8cffe4b6460dda
+      X-RequestId:
+      - 56623d39a5bdb3a16a8cffe4b6460dda
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Jun 2022 07:32:53 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - 0179090a-b868-47bd-9c02-338b0b3bf173
+      X-Psn-Correlation-Id:
+      - 0179090a-b868-47bd-9c02-338b0b3bf173
+      X-Psn-Request-Id:
+      - 0179090a-b868-47bd-9c02-338b0b3bf173
+      X-RequestId:
+      - 0179090a-b868-47bd-9c02-338b0b3bf173
+    status:
+      code: 200
+      message: OK
+version: 1
