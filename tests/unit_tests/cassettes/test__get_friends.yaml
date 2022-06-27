@@ -1,0 +1,102 @@
+interactions:
+- request:
+    body: grant_type=refresh_token&scope=psn%3Aclientapp+psn%3Amobile.v1&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '130'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.28.0
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v1 psn:clientapp", "id_token": "REDACTED", "refresh_token":
+        "REDACTED", "refresh_token_expires_in": 5183997}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3616'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Jun 2022 05:55:50 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=584C93F7B102D5F097E484780FAC34D6~-1~YAAQKDovF8M4+5eBAQAA2v66owg2W+9nETdxQB5t/ABiSsd1UdmbfvbVXrMQLB2mrdeMXGP/Rph9rrUXqAmNjBkog6Vi7M1soeOsUZqjePhGs39FI2G6Vw8PIXbNdNiNFsWl+LhzQ/oCW14pr774l68YvvB95qwSZWgs1NTSS312YfQoym+rs308gJ2MtdgZT7icn001klzT2etKg0nrHhCeanUjmnMK+L4SbqnUtePpYlXbR7r+sginLMbpPmawROayCCoG3vZERXtrE2isaH/ajROK2vXEn1YI/JZQXb+Dfu6ZjCfMOfIoWF4SH8V49qIzwaRz0xw4MgN2bDbvws3t2w6JW/9VXAdmJQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 05:55:50 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=A754475D88B36A1E37F31B8D1A9185F3~YAAQKDovF8Q4+5eBAQAA2v66oxA+ujaiaGg98Fck8P3FJtoxpRtuhj8KDe4Op3jh0/tPG63EYxo72mUFp6g6mLwZv/kq/8SFmY5zCQrGYYUzZDFC8QHFa5+Fm+tnvopUynx2GlMdmqTqmQvcIFW/RcZ/kYEqjJy/YAmwby9Orp48HqVTV03crz7+67ABse2Fgh7G7R3H68fcs7VzW61+q4GbzqzwJ2E/6qnPPWjIiE9VIcdUBe/Ph35XdCNOQXkzExR8p4IBo7gaf+ujBc8jM5/oDDbqhadndQw21kA6hskVRHfr++tZ8vKwqwUtzeFz4VUSOGO9dYL28++sXmwkfvfR2Dgqatt3LSTe9mzWwl4ia0sZCH5BKOmKvZU=~3553090~4535861;
+        Domain=.sony.com; Path=/; Expires=Mon, 27 Jun 2022 09:55:50 GMT; Max-Age=14400
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 8b62d6b3-82e1-4b74-9366-161ba8bf9e14
+      X-Psn-Correlation-Id:
+      - 8b62d6b3-82e1-4b74-9366-161ba8bf9e14
+      X-Psn-Request-Id:
+      - c020ad9a6509cb6a58807ef8f030280f
+      X-RequestId:
+      - c020ad9a6509cb6a58807ef8f030280f
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/me/friends?limit=1000
+  response:
+    body:
+      string: '{"friends": ["8520698476712646544"], "totalItemCount": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Jun 2022 05:55:50 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0250680507070297921
+    status:
+      code: 200
+      message: OK
+version: 1
