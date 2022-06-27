@@ -16,7 +16,7 @@ jobs:
           pip install .
       - name: Build coverage file
         run: |
-          pytest --junitxml=pytest.xml --cov src/psnawp_api > pytest-coverage.txt
+          pytest --junitxml=pytest.xml --cov=app src/ | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ secrets.USER_NAME }}
@@ -25,8 +25,8 @@ jobs:
         uses: MishaKav/pytest-coverage-comment@main
         with:
           badge-title: Coverage
-          pytest-coverage-path: pytest-coverage.txt
-          junitxml-path: pytest.xml
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
 
       - name: Check the output coverage
         run: |
