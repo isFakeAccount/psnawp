@@ -8,46 +8,46 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements_dev.txt
-        pip install .
-    - name: Build coverage file
-      run: |
-        pytest --cache-clear --cov > pytest-coverage.txt
-      env:
-        NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
-        USER_NAME: ${{ secrets.USER_NAME }}
-    - name: Pytest coverage comment
-      uses: MishaKav/pytest-coverage-comment@main
-      with:
-        pytest-coverage-path: ./pytest-coverage.txt
+      - uses: actions/setup-python@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements_dev.txt
+          pip install .
+      - name: Build coverage file
+        run: |
+          pytest --cache-clear --cov > pytest-coverage.txt
+        env:
+          NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+      - name: Pytest coverage comment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          pytest-coverage-path: ./pytest-coverage.txt
 
-    - name: Check the output coverage
-      run: |
-        echo "Coverage Percentage - ${{ steps.coverageComment.outputs.coverage }}"
-        echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
-        echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
-        echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
+      - name: Check the output coverage
+        run: |
+          echo "Coverage Percentage - ${{ steps.coverageComment.outputs.coverage }}"
+          echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
+          echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+          echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
 
-        echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
+          echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
 
-        echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
-        echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
-        echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
-        echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
-        echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
-        echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
+          echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
+          echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
+          echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
+          echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
+          echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
+          echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
 
-    - name: Create the Badge
-      uses: schneegans/dynamic-badges-action@v1.0.0
-      with:
-        auth: ${{ secrets.PYTEST_COVERAGE_COMMENT }}
-        gistID: 5e90d640f8c212ab7bbac38f72323f80
-        filename: pytest-coverage-comment__main.json
-        label: Coverage Report
-        message: ${{ steps.coverageComment.outputs.coverage }}
-        color: ${{ steps.coverageComment.outputs.color }}
-        namedLogo: python
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.PYTEST_COVERAGE_COMMENT }}
+          gistID: 5e90d640f8c212ab7bbac38f72323f80
+          filename: pytest-coverage-comment__main.json
+          label: Coverage Report
+          message: ${{ steps.coverageComment.outputs.coverage }}
+          color: ${{ steps.coverageComment.outputs.color }}
+          namedLogo: python
