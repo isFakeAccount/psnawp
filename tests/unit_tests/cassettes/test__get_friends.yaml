@@ -20,7 +20,7 @@ interactions:
     body:
       string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
         3599, "scope": "psn:mobile.v1 psn:clientapp", "id_token": "REDACTED", "refresh_token":
-        "REDACTED", "refresh_token_expires_in": 5183997}'
+        "REDACTED", "refresh_token_expires_in": 5183996}'
     headers:
       Cache-Control:
       - no-store
@@ -31,25 +31,25 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Jun 2022 08:02:17 GMT
+      - Mon, 27 Jun 2022 23:03:53 GMT
       Server:
       - nginx
       Set-Cookie:
-      - _abck=70557C78D0BFBBC1BFA41522ACD7694F~-1~YAAQKDovFx4CKpiBAQAAEMYupAjAxfS9ZAEmrmpVHV73gfFzD/yzWFaGCJpoayoLioiZZXVm98pEByzMZ+vtJG0JMyJMz2omAC/NcfuK8Zunrci0OVDeC3rCJmS1oxNDqmauw/oq/vYwN5tKE13gxxBqnw2/KrDx/xumJbJRKPupFwuBKxgsxvpdznfjJdXGSty9r+vfRRyJ/xmeBb+/DZdcwuYup5i0KLM0Fqw35OOwR+n8Lk+FeCD/Twly8ViAEPr51CQ62ZvunuKIt3YPr97bEGt8wAgM2vhhlDiJu6WZuo6uV5WPnQistobdLP9JKoC0KEJxyP3RJ9qymtM0Lbr5hSgW3wvvLOjEIA==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 08:02:17 GMT; Max-Age=604800;
+      - _abck=7C12A924FFE55BAA4BBDB68ECC2CC61A~-1~YAAQVjsvFzSGyzmBAQAAgDZopwh1LHHqFAvqbVv93B53wkjgFgMU7BWzb12wKUigvYKe3dznuJEpe2/lj2tbZgiHu+Q7XarfkQdSNf5Mbl3FRbhN9GUdfOtSnW2REn9JmC8h0/bDFsRLZUFxWXYYsU35UbasqCApAwT+6HC1D1bS3dNs15GAAgQMEBUsA5MewPUmqwxLVrRrgdMDnrgENROZRLvmHgWakVu35tS7EIvQQofiiP+GcDCONDE5lvU99f9ebqmKIcnj5efKbMiAhcusifYYXJGVVffa33/FT8bBv2CMYnnwhYO3d4IkRGI2N6jLdMi775m0obwpqUQbAy8CmHGTBD6m0IR3nA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 23:03:53 GMT; Max-Age=604800;
         Secure
-      - bm_sz=0A147D20D3F4059AB50ADFEFD13D74A3~YAAQKDovFx8CKpiBAQAAEMYupBBkhUV2gmUK5bEcwOGRxotOQDhEx3Ap4VCtA2QPNvP49ey4VP/MDH/urVgOj5+vRJ2oW//U6ErK4wj7WZ/v9MhCgVQuq/k8cuCouMsaVCRxwvsuDzQN/g1qtqX71n/7yYfu4LWDvlbuOuqIvzX8bOyRItF8NBUQEHajhMzAfUJyWvCYUW4cN5REk0wVQNWMKsIZAtMx8Jw+kUw7hEZh84DHYhqBI/UFaP0zQZFVXrACw7Fe289sY2lj128HgFm9FqSFlbKmQG/PSf0RY7mUo+AhWFQ2wOgNYMwbYg3uigO8TDWgFbgNp4p12WjjOCu//Yo+EDP1snwXWalhcniDpGHVw8PnS+Ud+qM=~3223858~4274226;
-        Domain=.sony.com; Path=/; Expires=Mon, 27 Jun 2022 12:02:17 GMT; Max-Age=14400
+      - bm_sz=1BA4E9E5CF59AEE0773ED7887DBCA1F2~YAAQVjsvFzWGyzmBAQAAgDZopxC3fZ9ZFB6x2UyiajNGuPVG2c03WSak1iDoKX0fW5E70FWjm8oL/yGxrdFOhKvfvSFZ4QJL7rpeOPPK2M2CNtREQIBx7vTCZVh3cPBIc8Y9GXGTql8hBh419le63O2bStYSmXGD9KYdabvwMvWvUQSzNlqKs+YPZEDpNuP8lQE4OBpbjPi7eKxCE8VdWQ0rX7N7IP5v3N/BpoZHBtyMnysNMQ6pbRSdjd4d5yC6RqY2mXh6QHVB94SSmHDQE3ZCjVmKg6NXGQbW9yvHBWuv0LgRCOyAIt+wOfSTMc+hjnLsL6cLp1SSU0v0jUXKKy89megdfPDvjUXwWlPmezID7a63HKhAHE9pYKI=~3552307~3753282;
+        Domain=.sony.com; Path=/; Expires=Tue, 28 Jun 2022 03:03:53 GMT; Max-Age=14400
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 274ffe6f-aff1-46e0-a194-aa14629edc86
+      - 05fb8df7-be1c-4cee-a629-8d5205b62695
       X-Psn-Correlation-Id:
-      - 274ffe6f-aff1-46e0-a194-aa14629edc86
+      - 05fb8df7-be1c-4cee-a629-8d5205b62695
       X-Psn-Request-Id:
-      - 03f8149ac919cd1754ccc5a58d68ddff
+      - 1b8a3d16cf9c8745dd76bd00685060ac
       X-RequestId:
-      - 03f8149ac919cd1754ccc5a58d68ddff
+      - 1b8a3d16cf9c8745dd76bd00685060ac
     status:
       code: 200
       message: OK
@@ -87,7 +87,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Jun 2022 08:02:18 GMT
+      - Mon, 27 Jun 2022 23:03:54 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -95,7 +95,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0365592448000585943
+      - 0430596197493259112
     status:
       code: 200
       message: OK
