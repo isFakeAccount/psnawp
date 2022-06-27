@@ -1,12 +1,32 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.10.5, pytest-7.1.2, pluggy-1.0.0
-rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml
+platform linux -- Python 3.10.4, pytest-7.1.2, pluggy-1.0.0
+rootdir: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python, configfile: pyproject.toml, testpaths: tests
 plugins: cov-3.0.0
-collected 0 items
+collected 6 items
 
--------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
+tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
 
----------- coverage: platform linux, python 3.10.5-final-0 -----------
-Coverage HTML written to dir htmlcov
+- generated xml file: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python/pytest.xml -
 
-============================ no tests ran in 0.11s =============================
+---------- coverage: platform linux, python 3.10.4-final-0 -----------
+Name                                     Stmts   Miss  Cover
+------------------------------------------------------------
+src/psnawp_api/__init__.py                   1      0   100%
+src/psnawp_api/authenticator.py             40      6    85%
+src/psnawp_api/base.py                       3      0   100%
+src/psnawp_api/client.py                    32      5    84%
+src/psnawp_api/endpoints.py                  2      0   100%
+src/psnawp_api/message_thread.py            37     28    24%
+src/psnawp_api/psnawp.py                    22     10    55%
+src/psnawp_api/psnawp_exceptions.py          9      3    67%
+src/psnawp_api/request_builder.py           51     28    45%
+src/psnawp_api/search.py                    11      6    45%
+src/psnawp_api/user.py                      58     43    26%
+tests/__init__.py                            0      0   100%
+tests/conftest.py                            6      0   100%
+tests/unit_tests/__init__.py                19      3    84%
+tests/unit_tests/psnawp_client_test.py      30      3    90%
+------------------------------------------------------------
+TOTAL                                      321    135    58%
+
+========================= 5 passed, 1 skipped in 1.00s =========================
