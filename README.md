@@ -7,7 +7,7 @@
 <!-- Pytest Coverage Comment:Begin -->
 \n"| Tests | Skipped | Failures | Errors | Time |
 | ----- | ------- | -------- | -------- | ------------------ |
-| 6 | 1 :zzz: | 0 :x: | 0 :fire: | 1.281s :stopwatch: |
+| 6 | 1 :zzz: | 0 :x: | 0 :fire: | 1.068s :stopwatch: |
 "
 <!-- Pytest Coverage Comment:End -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
