@@ -20,8 +20,9 @@ jobs:
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ secrets.USER_NAME }}
-      - name: Coverage comment
-        uses: MishaKav/pytest-coverage-comment@v1.1.28
+      - name: PyTest Coverage comment
+        id: coverageComment
+        uses: MishaKav/pytest-coverage-comment@main
         with:
           badge-title: Coverage
           pytest-coverage-path: ./pytest-coverage.txt
