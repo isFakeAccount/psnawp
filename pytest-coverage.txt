@@ -4,7 +4,7 @@ rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths:
 plugins: cov-3.0.0, vcr-1.0.2
 collected 6 items
 
-tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
+tests/unit_tests/test_psnawp_client.py ...s..                            [100%]
 
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
@@ -25,4 +25,4 @@ src/psnawp_api/user.py                   58     58     0%   1-149
 -------------------------------------------------------------------
 TOTAL                                   266    266     0%
 
-========================= 5 passed, 1 skipped in 1.27s =========================
+========================= 5 passed, 1 skipped in 0.69s =========================
