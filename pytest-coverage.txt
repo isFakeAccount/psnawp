@@ -1,14 +1,12 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.10.4, pytest-7.1.2, pluggy-1.0.0
-rootdir: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python, configfile: pyproject.toml, testpaths: tests
+platform linux -- Python 3.10.5, pytest-7.1.2, pluggy-1.0.0
+rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml
 plugins: cov-3.0.0
-collected 6 items
+collected 0 items
 
-tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
+-------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
-- generated xml file: /home/kira/drives/samsung-ssd/Programming/Pycharm/psn-python/pytest.xml -
-
----------- coverage: platform linux, python 3.10.4-final-0 -----------
+---------- coverage: platform linux, python 3.10.5-final-0 -----------
 Coverage HTML written to dir htmlcov
 
-========================= 5 passed, 1 skipped in 1.20s =========================
+============================ no tests ran in 0.11s =============================
