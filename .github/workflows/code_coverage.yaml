@@ -20,11 +20,19 @@ jobs:
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ secrets.USER_NAME }}
-      - name: Pytest coverage comment
-        uses: MishaKav/pytest-coverage-comment@main
+      - name: Pytest Coverage Comment
+        uses: MishaKav/pytest-coverage-comment@v1.1.28
         with:
+          title: My Coverage Report Title
+          badge-title: My Badge Coverage Title
+          hide-badge: false
+          hide-report: false
+          create-new-comment: false
+          hide-comment: false
+          report-only-changed-files: false
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
+          junitxml-title: My JUnit Xml Summary Title
 
       - name: Check the output coverage
         run: |
@@ -45,7 +53,7 @@ jobs:
       - name: Create the Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
-          auth: ${{ secrets.PYTEST_COVERAGE_COMMENT }}
+          auth: ${{ secrets.GITHUB_TOKEN }}
           gistID: 5e90d640f8c212ab7bbac38f72323f80
           filename: pytest-coverage-comment__main.json
           label: Coverage Report
