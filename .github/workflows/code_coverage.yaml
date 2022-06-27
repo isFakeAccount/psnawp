@@ -17,5 +17,8 @@ jobs:
     - name: Build coverage file
       run: |
         pytest --cache-clear --cov > pytest-coverage.txt
+      env:
+        NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
+        USER_NAME: ${{ secrets.USER_NAME }}
     - name: Comment coverage
       uses: coroo/pytest-coverage-commentator@v1.0.2

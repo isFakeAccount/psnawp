@@ -1,7 +1,6 @@
 # My files
 .idea
 test.py
-pytest-coverage.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
