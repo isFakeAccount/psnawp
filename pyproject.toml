@@ -3,7 +3,7 @@ requires = ["setuptools>=62.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-addopts = ["--cov=src/psnawp_api", "--cov=tests"]
+addopts = ["--cov-report=html", "--cov=src/psnawp_api"]
 testpaths = "tests"
 
 [tool.mypy]
