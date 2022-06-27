@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.10.5, pytest-7.1.2, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
-plugins: cov-3.0.0
+plugins: cov-3.0.0, vcr-1.0.2
 collected 6 items
 
 tests/unit_tests/psnawp_client_test.py ...s..                            [100%]
@@ -31,4 +31,4 @@ src/psnawp_api/user.py                   58     58     0%   1-149
 -------------------------------------------------------------------
 TOTAL                                   266    266     0%
 
-=================== 5 passed, 1 skipped, 1 warning in 1.04s ====================
+=================== 5 passed, 1 skipped, 1 warning in 0.61s ====================
