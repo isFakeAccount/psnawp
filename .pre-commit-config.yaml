@@ -16,10 +16,10 @@ repos:
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
+        exclude: "pytest.xml|pytest-coverage.txt"
       - id: check-added-large-files
       - id: debug-statements
         language_version: python3
-        exclude: "pytest.xml|pytest-coverage.txt"
 
   - repo: https://github.com/pycqa/flake8
     hooks:
