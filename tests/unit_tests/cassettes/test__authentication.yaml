@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 27 Jun 2022 23:03:49 GMT
+      - Mon, 27 Jun 2022 23:45:24 GMT
       Expires:
       - '0'
       Location:
-      - com.playstation.PlayStationApp://redirect/?code=v3.VF87aL&cid=03a9b6f9-869b-48dd-b0c7-fcd3e0afda2b
+      - com.playstation.PlayStationApp://redirect/?code=v3.pehZDi&cid=95606c7d-212a-4c0b-8c64-fa46986286cd
       Server:
       - nginx
       Set-Cookie:
-      - _abck=0C847C8ECF435B7E438DF8B9A79BB85D~-1~YAAQVjsvF1GDyzmBAQAAJyVopwgu+t3Y/qPNgnacdIdmAsZxGFx0AV6tDi8gZayAK3HwRjYGIPF0zvM2eymgoSKP/wYMLmvDZcKhUq1bxrjRxxbjvNPsojL6j17Jk8eyEQfs9l7SoU7FtLtegnNIHqFFPKjEGM5e6lEvBociv5DryBH8EUtXox90FWL8QtSfVvnWYoR/b2wLEv9pgh+l7ZzeTl2H34eM45cVOeh0qqwFD5mJXi2qTYRnkLJi0cbvj/J1ELSc6k1Wi9UuL0UViwde1kCS8WTWwJ73sACZX/f5kxlEJiqk9W/WtpExKtLULEgpTeBuacfOEmKWvfZSNr/QLTlddkPEfcRAPw==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 23:03:49 GMT; Max-Age=604800;
+      - _abck=C191DFB8CAE234937E0AF83D773BF410~-1~YAAQUjsvF8Zp95aBAQAAAjqOpwiJEV7TCy1x93rcSmz35a4V8yOiJ43qovkc74+doCkNcTYsviU/UVZohFZA1rUIwMtqWG5HjxQOO0h/kQWSVqn47uaPmtX6JYdIhOA95wE4vGXcs2WG2bd1QdtCU4qvB8bgYbdQAgJ7/mj+0o2z1Q+h665lLxs6/dl2RYXDXu3g7M9FOQL63PJg89T8eQVXN+mR0fD4L7+qVZqPQnU90PbByhh8cf0vq6HoqDwvUFsmyi30HKmjbz3N/xG69Y9Z6+jNtIbDdkVwD6/W+ynY892mhHRUNfBiAOMADnslW2ITZ8fgsKeIuMPRmdV2GIOur5qegCB2ayYOnQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 23:45:24 GMT; Max-Age=604800;
         Secure
-      - bm_sz=83FED2A294FD7E2F0145600929B56065~YAAQVjsvF1KDyzmBAQAAJyVopxDPEjwYCZ0HXn2SF7t4jw+b/ulZw+kmjeEZfyKlUw2BLTYero58jJZFopg7fnldoHMVznNbk7oBKwdhsL72pR6tG8pV9IXpWN62tZlyyCM14D4rJzOsHglQnPHVz3td7OYLOVbyNledf1Pf19FAIft/DOs865OT4/Cjw6RNNh6WFYIitLaMNM8Z4Uso+OAmLAIBIoSNqy2X0IPhmcKL3ts+8Zh4xkXxmD5frlDEOXieeitwZlhPKSOV2/+mACiW72Z1Nxe32UZpV1xKIrxRrrsNocq4UtDKCR+HHaplQ64wKnShUfQXzYoXGqZ7mVpMW/FIdKd6qMWzdVRmZmEUslHnAlUH/hHnrgw=~4277572~3687490;
-        Domain=.sony.com; Path=/; Expires=Tue, 28 Jun 2022 03:03:49 GMT; Max-Age=14400
+      - bm_sz=A471016AD4B77E8C2DC249AD100068FE~YAAQUjsvF8dp95aBAQAAAjqOpxCjwql8PaB7vP3Zg9eDoAab87s+RR7Oz8YYR05BQ+xjzzo8jaE3E93rLRE37rYWsE+oU/PLVx17+55VcsymEsOzzZm0YOnZOmBkgxoeDX1ndA3KR4nM2Yh+uD5yelCyu/CKN3WOpaQYPKR6w+t1ZYuY+E/MuVLPHouJFoDhYKBOPP5hu5B1h6fHuuqzB2Zi0HEhgbJ9TxWpWsI5XCWQeErFCJNcSY6uNBHPMBoQyWLO1jnO5qNrShufvYMZAzbbGe6dZmvzOh0dIwvu7FmYIiVRskZzI7ffOjSQxVz0lryLONOYVjsZnjd773eJks8/OJ4EMCmp709F/jKL33H3CdH098VN7gThIIs=~3294273~3753269;
+        Domain=.sony.com; Path=/; Expires=Tue, 28 Jun 2022 03:45:24 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 03a9b6f9-869b-48dd-b0c7-fcd3e0afda2b
+      - 95606c7d-212a-4c0b-8c64-fa46986286cd
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - 03a9b6f9-869b-48dd-b0c7-fcd3e0afda2b
+      - 95606c7d-212a-4c0b-8c64-fa46986286cd
       X-Psn-Request-Id:
-      - 4d31472be198e394d85661c98eeab767
+      - 9845bb56e9808fe27db491ab5fe62d0f
       X-RequestId:
-      - 4d31472be198e394d85661c98eeab767
+      - 9845bb56e9808fe27db491ab5fe62d0f
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -87,25 +87,25 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Jun 2022 23:03:50 GMT
+      - Mon, 27 Jun 2022 23:45:25 GMT
       Server:
       - nginx
       Set-Cookie:
-      - _abck=759EF42D4AB4D246162FB0DB675645AC~-1~YAAQVjsvF9qDyzmBAQAA/Sdopwig+i19WT8jjbpgR4y9DEa9fuzoGQ9uEIg9U8yykefJyg1cxByp3SRkspxoFlbuDmFqNeoAH/EkOv+1pgf0KQ+Ytb2TXnqUPk0qCIeUXhr7KSg3ossKPZMmfKXZCEkt4o6QHhFSQq53ZGI2ObB2K0jTIfhj48Wq4PVS+qXDmyX7WpL2VE0SQQWVRU+v4inDccefqfdH+Hpev8uHSXaxS8ath86IDQ2itJhPw4+tx+FRuEwq5hc/s0FIl2ITtT+iGlAsaE4od5aLFLzMe9Yu9LLgid9j3e5Ip1QYWWajFQ0601uUSGHcO0HPlW/D2Hc/V+pExQqYG/FaOg==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 23:03:50 GMT; Max-Age=604800;
+      - _abck=F702445499FF882BFACFD420BBB298E8~-1~YAAQUjsvF9pp95aBAQAAgzuOpwj1C4HqE3KwgVogWasYpuqfiF9YtICioQPgG2jdDP5enB3tlRI/319yndAmeiiRJ4PpZlFq/CzxyvIRqg/lkEigLYm+MWj6IXyrNv4cENuNVWv7e8S8yqUoAf/8ZUMIjIUsj016MwHvsDS3IQlPBf26QZ1k9BjItezqcxuz3ipS8yEPBquaOQ+1cvXlp+MGPtv2f2lr34EYCbEi032HMfiRZiOQ5OoCb0qcKA+75sMgeXOVkaclSYvaE2/4ljmM9gx7fBSXckxo/u94fTMnS68n2BRkhTD988FRO+vqnE0hqc0d/ejcATtqZxQlV86/Av79n7uAfBWLVA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 04 Jul 2022 23:45:25 GMT; Max-Age=604800;
         Secure
-      - bm_sz=211081F4F2779A3360A6C2DC2D71C27E~YAAQVjsvF9uDyzmBAQAA/SdopxAym2fUlqj3UKNQT35AjYxS/MQGPN4ovP/6VhdhLn7OqgTZzYSKCQ3sIAU/L5kih/DR+FFL46n8ky3t6GeNiPXf2olwikDSBHdCQyb9M0kmOTS5yv4bLYepVFDWwDzMRxvKMmHmy7Z511h//QPvjDWcKmI4R9JTO9Y3G7kp8QWYrTU11xZXPrjWCTjPE8Ep5Mj3fiev0S5J1vA8o6sX/jIcgEAPlv3n7zxWJZYeH2q6uWLFna2s8MkuNs2TPqNxeFpJsPLHz/BmyOeoP3h7ySG4RacJ/uIhsD2rb2c8znobMlc11hPFx6FMMRi6twnEc3UQuMkOFJ8tSk3IAGUdtVagFlfBEMJ6ryU=~4277572~3687490;
-        Domain=.sony.com; Path=/; Expires=Tue, 28 Jun 2022 03:03:49 GMT; Max-Age=14399
+      - bm_sz=89CC367B6FD3020E8150804298524870~YAAQUjsvF9tp95aBAQAAgzuOpxCldQkxuIN2fn6XTchx/emnyCwm64Un7S+CNX44q5OGS3YeLmRlJ9BuYqVyr19c7I1ySTgwEjOeKIFjAkyK4/KuK9wBuk6TGtYAq2RFw4ejEcLlOMGMJDKOlm+wLdV8cvi3Bnz9/clEZuKKuoqSGiAw/y14OefXHiTqwL18SIgOBg+VKbq2lkJFOPCyGLaYNnm5Z6emgh3D+9c/5awEEq7JYXJVrCkMDiZOqyBoW5rsUjp478sxXzvUBmv7mrtyKnRe22ltep8AzzkQqbjfBMS2WHt+9LvpjURaouaAaa/73qLLL1xB/nexOHEHv6GZDRHD5WRKEE9sSmo5FCnaIO59B53yzo1eMGY=~3293505~4473653;
+        Domain=.sony.com; Path=/; Expires=Tue, 28 Jun 2022 03:45:25 GMT; Max-Age=14400
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 8c4deff7-e64d-486d-8963-99c3cc1f87c5
+      - 2cb38290-a1d2-4bc6-b07a-b56926a11a35
       X-Psn-Correlation-Id:
-      - 8c4deff7-e64d-486d-8963-99c3cc1f87c5
+      - 2cb38290-a1d2-4bc6-b07a-b56926a11a35
       X-Psn-Request-Id:
-      - c2e6f9aef409997a6415229410437969
+      - c5e01d06cf13041359ee71c421bcfb02
       X-RequestId:
-      - c2e6f9aef409997a6415229410437969
+      - c5e01d06cf13041359ee71c421bcfb02
     status:
       code: 200
       message: OK
