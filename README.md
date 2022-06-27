@@ -1,6 +1,12 @@
 
 # PlayStation Network API Wrapper Python (PSNAWP)
 
+[![pytest](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml)
+[![pre-commit](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![codecov](https://codecov.io/gh/isFakeAccount/psnawp/branch/master/graph/badge.svg)](https://codecov.io/gh/isFakeAccount/psnawp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
 ## How to install
