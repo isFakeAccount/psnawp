@@ -9,6 +9,20 @@ tests/unit_tests/test_psnawp_client.py ...s..                            [100%]
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.10.5-final-0 -----------
-Coverage HTML written to dir htmlcov
+Name                                                                                                  Stmts   Miss  Cover
+-------------------------------------------------------------------------------------------------------------------------
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/__init__.py                1      0   100%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/authenticator.py          40      6    85%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/base.py                    3      0   100%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/client.py                 32      5    84%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/endpoints.py               2      0   100%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/message_thread.py         37     28    24%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                 22     10    55%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/psnawp_exceptions.py       9      3    67%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/request_builder.py        51     28    45%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/search.py                 11      6    45%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/user.py                   58     43    26%
+-------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                   266    129    52%
 
-========================= 5 passed, 1 skipped in 0.78s =========================
+========================= 5 passed, 1 skipped in 0.59s =========================
