@@ -33,4 +33,4 @@ repos:
         args: []
         exclude: "tests"
         additional_dependencies:
-          - types-requests==2.27.20
+          - types-requests==2.28.0

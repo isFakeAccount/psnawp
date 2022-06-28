@@ -62,10 +62,6 @@ class RequestBuilder:
         if "headers" in kwargs.keys():
             headers = {**headers, **kwargs["headers"]}
 
-        name = None
-        if "name" in kwargs.keys():
-            name = kwargs["name"]
-
         data = None
         if "data" in kwargs.keys():
             data = kwargs["data"]
@@ -73,7 +69,13 @@ class RequestBuilder:
         response = requests.post(
             url=kwargs["url"],
             headers=headers,
-            files={name: (None, json.dumps(data), "application/json; charset=utf-8")},
+            files={
+                kwargs["name"]: (
+                    None,
+                    json.dumps(data),
+                    "application/json; charset=utf-8",
+                )
+            },
         )
         response.raise_for_status()
         return response.json()
