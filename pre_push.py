@@ -27,6 +27,16 @@ def do_process(args, shell=False):
     return True
 
 
+def run_git_pull():
+    """Runs the git pull command.
+
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
+    statuscode 1
+
+    """
+    return do_process(["git", "pull"])
+
+
 def run_static():
     """Runs the static tests.
 
@@ -50,7 +60,7 @@ def run_unit():
     to fail.
 
     """
-    return do_process(["pytest"])
+    return do_process(["pytest", "--cov-report=html"])
 
 
 def main():
@@ -87,10 +97,12 @@ def main():
     args = parser.parse_args()
     success = True
     try:
-        if not args.unstatic or args.all:
-            success &= run_static()
-        if args.all or args.unit_tests:
-            success &= run_unit()
+        success &= run_git_pull()
+        if success:
+            if not args.unstatic or args.all:
+                success &= run_static()
+            if args.all or args.unit_tests:
+                success &= run_unit()
     except KeyboardInterrupt:
         return int(not False)
     return int(not success)
