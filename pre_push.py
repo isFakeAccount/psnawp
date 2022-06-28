@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Run static analysis on the project."""
 
 import argparse
