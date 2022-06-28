@@ -19,10 +19,10 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/message_thread.py         37     28    24%
 /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                 22     10    55%
 /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/psnawp_exceptions.py       9      3    67%
-/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/request_builder.py        51     28    45%
+/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/request_builder.py        48     25    48%
 /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/search.py                 11      6    45%
 /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/psnawp_api/user.py                   58     43    26%
 -------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                   266    129    52%
+TOTAL                                                                                                   263    126    52%
 
-========================= 5 passed, 1 skipped in 0.93s =========================
+========================= 5 passed, 1 skipped in 0.73s =========================
