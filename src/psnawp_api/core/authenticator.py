@@ -1,21 +1,23 @@
+import time
 from typing import Any
 from urllib.parse import urlparse, parse_qs
 
 import requests
 
-from psnawp_api import psnawp_exceptions
-from psnawp_api.endpoints import BASE_PATH, API_PATH
+from psnawp_api.core import psnawp_exceptions
+from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.misc import create_logger
 
 
 class Authenticator:
     """Provides an interface for PSN Authentication."""
 
-    PARAMS = {
+    __PARAMS = {
         "CLIENT_ID": "ac8d161a-d966-4728-b0ea-ffec22f69edc",
         "SCOPE": "psn:clientapp psn:mobile.v1",
         "REDIRECT_URI": "com.playstation.PlayStationApp://redirect",
     }
-    AUTH_HEADER = {
+    __AUTH_HEADER = {
         "Authorization": "Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY="
     }
 
@@ -34,6 +36,7 @@ class Authenticator:
         self.npsso_token = npsso_cookie
         self.auth_properties: dict[str, Any] = {}
         self.authenticate()
+        self.authenticator_logger = create_logger(__file__)
 
     def obtain_fresh_access_token(self) -> Any:
         """Gets a new access token from refresh token.
@@ -41,21 +44,25 @@ class Authenticator:
         :returns: access token
 
         """
+
+        if self.auth_properties["access_token_expires_at"] > time.time():
+            return self.auth_properties["access_token"]
+
         data = {
             "refresh_token": self.auth_properties["refresh_token"],
             "grant_type": "refresh_token",
-            "scope": Authenticator.PARAMS["SCOPE"],
+            "scope": Authenticator.__PARAMS["SCOPE"],
             "token_format": "jwt",
         }
         response = requests.post(
             f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
-            headers=Authenticator.AUTH_HEADER,
+            headers=Authenticator.__AUTH_HEADER,
             data=data,
         )
         self.auth_properties = response.json()
         if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            print(
-                "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
+            self.authenticator_logger.warning(
+                "Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
             )
         return self.auth_properties["access_token"]
 
@@ -69,17 +76,20 @@ class Authenticator:
         data = {
             "code": code,
             "grant_type": "authorization_code",
-            "redirect_uri": Authenticator.PARAMS["REDIRECT_URI"],
-            "scope": Authenticator.PARAMS["SCOPE"],
+            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
+            "scope": Authenticator.__PARAMS["SCOPE"],
             "token_format": "jwt",
         }
 
         response = requests.post(
             f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
-            headers=Authenticator.AUTH_HEADER,
+            headers=Authenticator.__AUTH_HEADER,
             data=data,
         )
         self.auth_properties = response.json()
+        self.auth_properties["access_token_expires_at"] = (
+            self.auth_properties["expires_in"] + time.time()
+        )
         if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
             print(
                 "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
@@ -98,9 +108,9 @@ class Authenticator:
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
             "access_type": "offline",
-            "client_id": Authenticator.PARAMS["CLIENT_ID"],
-            "scope": Authenticator.PARAMS["SCOPE"],
-            "redirect_uri": Authenticator.PARAMS["REDIRECT_URI"],
+            "client_id": Authenticator.__PARAMS["CLIENT_ID"],
+            "scope": Authenticator.__PARAMS["SCOPE"],
+            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
             "response_type": "code",
         }
         response = requests.get(

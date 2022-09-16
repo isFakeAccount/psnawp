@@ -1,4 +1,4 @@
-from psnawp_api import psnawp_exceptions
+from psnawp_api.core import psnawp_exceptions
 
 
 # Class Search

@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=62.0", "wheel"]
+requires = ["setuptools>=65.3.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 addopts = ["--cov=psnawp_api"]
-testpaths = ["tests",]
+testpaths = ["tests"]
 
 [tool.mypy]
 exclude = ["tests/"]

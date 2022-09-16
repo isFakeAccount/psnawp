@@ -2,7 +2,7 @@ import json
 
 import requests
 
-from psnawp_api.authenticator import Authenticator
+from psnawp_api.core.authenticator import Authenticator
 
 
 class RequestBuilder:
@@ -19,7 +19,8 @@ class RequestBuilder:
         self.country = "US"
         self.language = "en"
         self.default_headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+            "Content-Type": "application/json",
         }
 
     def get(self, **kwargs):

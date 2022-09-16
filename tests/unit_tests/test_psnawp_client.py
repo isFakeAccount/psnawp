@@ -18,18 +18,24 @@ def test__authentication():
 def test__online_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
-        assert client.get_online_id() == os.getenv("USER_NAME")
+        assert client.online_id == os.getenv("USER_NAME")
 
 
 @pytest.mark.vcr()
 def test__account_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
-        assert re.match(r"\d{19}", client.get_account_id())
+        assert re.match(r"\d{19}", client.account_id)
 
 
 @pytest.mark.vcr()
-@pytest.mark.skip(reason="Not implemented yet")
+def test__get_profile_legacy(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        client = psnawp_fixture.me()
+        client.get_profile_legacy()
+
+
+@pytest.mark.vcr()
 def test__account_devices(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
@@ -48,3 +54,11 @@ def test__blocked_list(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
         client.blocked_list()
+
+
+@pytest.mark.vcr()
+def test__repr_and_str(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        client = psnawp_fixture.me()
+        repr(client)
+        str(client)

@@ -1,4 +1,6 @@
-from psnawp_api import message_thread, psnawp_exceptions
+from typing import Optional
+
+from psnawp_api.core import psnawp_exceptions
 
 
 # Class User
@@ -6,20 +8,34 @@ from psnawp_api import message_thread, psnawp_exceptions
 class User:
     base_uri = "https://m.np.playstation.net/api/userProfile/v1/internal/users"
 
-    def __init__(self, request_builder, client, online_id, account_id):
-        """Constructor of Class User. Creates user object using online id or account id :param request_builder: Used to call http requests :param client: The user who is logged in. Used to create message threads :param online_id: :param account_id:"""
+    def __init__(
+        self, request_builder, online_id: Optional[str], account_id: Optional[str]
+    ):
+        """Constructor of Class User. Creates user object using online id or account id.
+
+        :param request_builder: Used to call http requests.
+        :param online_id: Online ID (GamerTag) of the user.
+        :param account_id: Account ID of the user.
+
+        """
         self.request_builder = request_builder
-        self.client = client
         self.online_id = online_id
         self.account_id = account_id
+        self.prev_online_id = None
+
         # If online ID is given search by online ID otherwise by account ID
         if self.online_id is not None:
-            profile = self.online_id_to_account_id(online_id)
-            self.account_id = profile["profile"]["accountId"]
+            profile = self.online_id_to_account_id(online_id)["profile"]
+            if profile["currentOnlineId"] == profile["accountId"]:
+                self.account_id = profile["accountId"]
+                self.prev_online_id = profile["onlineId"]
+            else:
+                self.account_id = profile["accountId"]
+                self.online_id = profile["currentOnlineId"]
+                self.prev_online_id = profile["onlineId"]
         elif self.account_id is not None:
             profile = self.profile()
             self.online_id = profile["onlineId"]
-        self.msg_thread = None
 
     def online_id_to_account_id(self, online_id):
         """Converts user online ID and returns their account id. This is an internal function and not meant to be called directly.
@@ -40,9 +56,9 @@ class User:
                 "online_id must contain a value."
             )
         base_uri = "https://us-prof.np.community.playstation.net/userProfile/v1/users"
-        param = {"fields": "accountId,onlineId,currentOnlineId"}
+        query = {"fields": "accountId,onlineId,currentOnlineId"}
         response = self.request_builder.get(
-            url="{}/{}/profile2".format(base_uri, online_id), params=param
+            url="{}/{}/profile2".format(base_uri, online_id), params=query
         )
         return response
 
@@ -54,8 +70,9 @@ class User:
         :raises: If the user is not valid/found
 
         """
+        query = {"fields": "accountId,onlineId,currentOnlineId"}
         response = self.request_builder.get(
-            url="{}/{}/profiles".format(User.base_uri, self.account_id)
+            url="{}/{}/profiles".format(User.base_uri, self.account_id), param=query
         )
         return response
 
@@ -104,41 +121,6 @@ class User:
             return True
         else:
             return False
-
-    def send_private_message(self, message):
-        """Send a private message to the user. Due to endpoint limitation. This will only work if the message group already exists.
-
-        :param message: body of message
-        :type message: str
-
-        """
-        if self.msg_thread is None:
-            self.msg_thread = message_thread.MessageThread(
-                self.request_builder, self.client, self.online_id
-            )
-        self.msg_thread.send_message(message)
-
-    def get_messages_in_conversation(self, message_count=1):
-        """Gets all the messages in send and received in the message group (Max limit is 200) The most recent message will be and the start of list
-
-        :param message_count: The number of messages you want to get
-        :type message_count: int
-
-        :returns: message events list containing all messages
-
-        """
-        if self.msg_thread is None:
-            self.msg_thread = message_thread.MessageThread(
-                self.request_builder, self.client, self.online_id
-            )
-
-        msg_history = self.msg_thread.get_messages(min(message_count, 200))
-        return msg_history
-
-    def leave_private_message_group(self):
-        """If you want to leave the message group"""
-        if self.msg_thread is not None:
-            self.msg_thread.leave()
 
     def __repr__(self):
         return "<User online_id:{} account_id:{}>".format(

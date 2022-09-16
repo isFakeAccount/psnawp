@@ -2,9 +2,9 @@ import os
 
 import pytest
 
-import psnawp_api
+from psnawp_api import PSNAWP
 
 
 @pytest.fixture(scope="session")
 def psnawp_fixture():
-    return psnawp_api.psnawp.PSNAWP(os.getenv("NPSSO_CODE"))
+    return PSNAWP(os.getenv("NPSSO_CODE"))

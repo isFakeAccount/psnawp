@@ -1,7 +1,12 @@
-from psnawp_api import request_builder
-from psnawp_api import search, psnawp_exceptions, client
-from psnawp_api import user
-from psnawp_api import authenticator
+import logging
+from typing import overload
+
+from psnawp_api.core import authenticator
+from psnawp_api.utils import request_builder
+from psnawp_api.models import client, search, user
+from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
+
+logging_level = logging.INFO
 
 
 class PSNAWP:
@@ -12,43 +17,51 @@ class PSNAWP:
     """
 
     def __init__(self, npsso_cookie):
-        self.authenticator = authenticator.Authenticator(npsso_cookie)
-        self.request_builder = request_builder.RequestBuilder(self.authenticator)
+        self.request_builder = request_builder.RequestBuilder(
+            authenticator.Authenticator(npsso_cookie)
+        )
 
     def me(self):
         """Creates a new client object (your account). Reuses the
 
         :returns: Client Object
+        :rtype: client.Client
 
         """
-        return client.Client(self)
+        return client.Client(self.request_builder)
+
+    @overload
+    def user(self, online_id: str):
+        ...
+
+    @overload
+    def user(self, account_id: str):
+        ...
 
     def user(self, **kwargs):
-        """Creates a new user object
+        """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
 
-        :param kwargs: online_id: PSN ID of the user or account_id: Account ID of the
-            user
-        :type kwargs: str
+        Note: You may only provide Online ID or Account ID. But not both at once.
+
+        :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id
+            (str): Account ID of the user.
+        :type kwargs: dict
 
         :returns: User Object
+        :rtype: user.User
 
-        :raises: If the user is not valid/found
+        :raises: If None or Both kwargs are passed.
 
         """
-        online_id = None
-        if "online_id" in kwargs.keys():
-            online_id = kwargs["online_id"]
+        online_id = kwargs.get("online_id")
+        account_id = kwargs.get("account_id")
 
-        account_id = None
-        if "account_id" in kwargs.keys():
-            account_id = kwargs["account_id"]
-
-        if online_id is None and account_id is None:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError(
-                "You must provide either online ID or account ID"
+        if (online_id and account_id) or not (online_id or account_id):
+            raise PSNAWPIllegalArgumentError(
+                "You provide at least online ID or account ID, and not both."
             )
 
-        return user.User(self.request_builder, self.me(), online_id, account_id)
+        return user.User(self.request_builder, online_id, account_id)
 
     def search(self):
         """Creates a new search object

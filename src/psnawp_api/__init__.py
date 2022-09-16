@@ -1,1 +1,1 @@
-from psnawp_api import psnawp
+from psnawp_api.psnawp import PSNAWP

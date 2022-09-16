@@ -2,6 +2,7 @@ import json
 
 import vcr
 from dotenv import load_dotenv
+from contextlib import suppress
 
 
 def filter_response_information(response):
@@ -13,13 +14,16 @@ def filter_response_information(response):
 
     """
     hide_params = ["access_token", "id_token", "refresh_token"]
-    if isinstance(response, dict):
-        if response.get("body").get("string"):
-            response_body = json.loads(response["body"]["string"])
-            for param in hide_params:
-                if response_body.get(param, None):
-                    response_body[param] = "REDACTED"
-            response["body"]["string"] = json.dumps(response_body).encode("utf-8")
+    # vcr throws error if multipart form data is received as binary https://github.com/kevin1024/vcrpy/issues/521
+    with suppress(UnicodeDecodeError):
+        if isinstance(response, dict):
+            response_body = response.get("body").get("string")
+            if response_body:
+                response_body = json.loads(response_body)
+                for param in hide_params:
+                    if response_body.get(param, None):
+                        response_body[param] = "REDACTED"
+                response["body"]["string"] = json.dumps(response_body).encode("utf-8")
     return response
 
 

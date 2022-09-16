@@ -6,7 +6,7 @@ import sys
 from subprocess import CalledProcessError, check_call
 
 
-def do_process(args, shell=False):
+def do_process(args, shell=False, cwd="."):
     """Run program provided by args.
 
     Return ``True`` on success.
@@ -18,7 +18,7 @@ def do_process(args, shell=False):
     """
     print(f"Running: {' '.join(args)}")
     try:
-        check_call(args, shell=shell)
+        check_call(args, shell=shell, cwd=cwd)
     except CalledProcessError:
         print(f"\nFailed: {' '.join(args)}")
         return False
@@ -48,8 +48,8 @@ def run_static():
     success = True
     success &= do_process(["pre-commit", "run", "--all-files"])
 
-    # with TemporaryDirectory() as tmp_dir:
-    #     success &= do_process(["sphinx-build", "-W", "--keep-going", "docs", tmp_dir])
+    success &= do_process(["sphinx-apidoc", "-o docs/", "src/psnawp_api/"])
+    success &= do_process(["make", "html"], cwd="docs/")
 
     return success
 
