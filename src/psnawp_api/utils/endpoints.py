@@ -10,5 +10,8 @@ API_PATH = {
     "my_account": "/v1/devices/accounts/me",
     "profiles": "/profiles",
     "friends_list": "/me/friends",
+    "friends_summary": "/me/friends/{account_id}/summary",
+    "available_to_play": "/me/friends/subscribing/availableToPlay",
     "blocked_users": "/me/blocks",
+    "basic_presences": "/basicPresences",
 }

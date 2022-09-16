@@ -17,12 +17,20 @@ class PSNAWP:
     """
 
     def __init__(self, npsso_cookie):
+        """Constructor Method. Takes the npsso_cookie and creates instance of `request_builder.RequestBuilder` which is used later in code for HTTPS requests.
+
+        :param npsso_cookie: npsso cookie obtained from PSN website.
+        :type npsso_cookie: str
+
+        :raises: `PSNAWPIllegalArgumentError` If npsso code len is not 64 characters.
+
+        """
         self.request_builder = request_builder.RequestBuilder(
             authenticator.Authenticator(npsso_cookie)
         )
 
     def me(self):
-        """Creates a new client object (your account). Reuses the
+        """Creates a new client object (your account).
 
         :returns: Client Object
         :rtype: client.Client
@@ -50,7 +58,7 @@ class PSNAWP:
         :returns: User Object
         :rtype: user.User
 
-        :raises: If None or Both kwargs are passed.
+        :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
 
         """
         online_id = kwargs.get("online_id")

@@ -4,11 +4,13 @@ repos:
     hooks:
       - id: black
         args: [--safe]
+        exclude: "docs"
 
   - repo: https://github.com/LilSpazJoekp/docstrfmt
     hooks:
       - id: docstrfmt
         require_serial: true
+        exclude: "docs"
     rev: v1.5.1
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
