@@ -20,12 +20,12 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/message_thread.py       37     37     0%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               11      6    45%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 50     33    34%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      26      8    69%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      20      6    70%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/__init__.py               0      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/endpoints.py              2      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       48     25    48%
 ------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                        282    123    56%
+TOTAL                                                                                                        276    121    56%
 
-============================== 8 passed in 0.79s ===============================
+============================== 8 passed in 0.74s ===============================
