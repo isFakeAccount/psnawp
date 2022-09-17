@@ -27,6 +27,11 @@ class Client:
         :returns: onlineID
         :rtype: str
 
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.online_id)
+
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['profiles']}"
@@ -41,6 +46,11 @@ class Client:
         :returns: accountID
         :rtype: str
 
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.account_id)
+
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}"
@@ -53,6 +63,11 @@ class Client:
 
         :returns: Dict of Profile
         :rtype: dict
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.get_profile_legacy())
 
         """
         url = f"https://us-prof.np.community.playstation.net/userProfile/v1/users/{self.online_id}/profile2"
@@ -74,6 +89,11 @@ class Client:
             information.
         :rtype: list[dict[str, Any]]
 
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.get_account_devices())
+
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}"
@@ -91,6 +111,14 @@ class Client:
 
         :returns: Account ID of all friends in your friends list.
         :rtype: Iterable[User]
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            friends_list = client.friends_list()
+
+            for friend in friends_list:
+                ...
 
         """
         limit = min(1000, limit)
@@ -113,6 +141,14 @@ class Client:
 
         :returns: Account ID of all blocked users on your block list.
         :rtype: Iterable[User]
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            blocked_list = client.blocked_list()
+
+            for blocked_users in blocked_list:
+                ...
 
         """
         response = self.request_builder.get(

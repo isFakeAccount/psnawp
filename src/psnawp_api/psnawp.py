@@ -10,19 +10,24 @@ logging_level = logging.INFO
 
 
 class PSNAWP:
-    """PlayStation Network API Wrapper Python (PSNAWP) Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
+    """PlayStation Network API Wrapper Python (PSNAWP) Retrieve User Information, Trophies, Game and Store data from the PlayStation Network.
 
     Instances of this class are the gateway to interacting with PSN API through PSNAWP.
+
+    .. code-block:: Python
+
+        from psnawp_api import psnawp
+        psnawp = psnawp.PSNAWP('<64 character npsso code>')
 
     """
 
     def __init__(self, npsso_cookie):
-        """Constructor Method. Takes the npsso_cookie and creates instance of `request_builder.RequestBuilder` which is used later in code for HTTPS requests.
+        """Constructor Method. Takes the npsso_cookie and creates instance of ``request_builder.RequestBuilder`` which is used later in code for HTTPS requests.
 
         :param npsso_cookie: npsso cookie obtained from PSN website.
         :type npsso_cookie: str
 
-        :raises: `PSNAWPIllegalArgumentError` If npsso code len is not 64 characters.
+        :raises: ``PSNAWPIllegalArgumentError`` If npsso code len is not 64 characters.
 
         """
         self.request_builder = request_builder.RequestBuilder(
@@ -49,7 +54,9 @@ class PSNAWP:
     def user(self, **kwargs):
         """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
 
-        Note: You may only provide Online ID or Account ID. But not both at once.
+        .. note::
+
+            You may only provide Online ID or Account ID. But not both at once.
 
         :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id
             (str): Account ID of the user.
@@ -59,6 +66,11 @@ class PSNAWP:
         :rtype: user.User
 
         :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
+
+        .. code-block:: Python
+
+            user1 = psnawp.user(online_id="VaultTec_Trading")
+            user2 = psnawp.user(account_id='1802043923080044300')
 
         """
         online_id = kwargs.get("online_id")

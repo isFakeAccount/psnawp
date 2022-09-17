@@ -5,6 +5,7 @@
 
 import os
 import sys
+from datetime import datetime
 
 sys.path.insert(0, os.path.abspath("../src"))
 
@@ -12,7 +13,7 @@ sys.path.insert(0, os.path.abspath("../src"))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "PSNAWP"
-copyright = "2022, Yoshikage Kira (@isFakeAccount)"
+copyright = datetime.today().strftime("%Y, Yoshikage Kira")
 author = "Yoshikage Kira (@isFakeAccount)"
 release = "2022.06.26"
 
@@ -27,7 +28,9 @@ autodoc_default_options = {
     "undoc-members": True,
     "exclude-members": "__weakref__",
 }
+html_static_path = ["_static"]
 templates_path = ["_templates"]
+pygments_style = "sphinx"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
@@ -41,4 +44,3 @@ nitpicky = True
 nitpick_ignore = [
     ("py:class", "IO", "type"),
 ]
-html_static_path = ["_static"]
