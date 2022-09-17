@@ -40,7 +40,3 @@ html_theme = "sphinx_rtd_theme"
 html_theme_options = {"collapse_navigation": True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None)}
 htmlhelp_basename = "PRAW"
-nitpicky = True
-nitpick_ignore = [
-    ("py:class", "IO", "type"),
-]

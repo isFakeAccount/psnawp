@@ -22,4 +22,4 @@ python:
       extra_requirements:
         - readthedocs
       path: .
-    - requirements: requirements.txt
+    - requirements: requirements_dev.txt
