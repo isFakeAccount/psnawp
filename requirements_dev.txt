@@ -25,7 +25,6 @@ packaging==21.3
 platformdirs==2.5.2
 pluggy==1.0.0
 pre-commit==2.20.0
--e git+https://github.com/isFakeAccount/psnawp@32750ffc37e0dd393433fec4b664cfb2e81dc68c#egg=PSNAWP
 py==1.11.0
 pycodestyle==2.9.1
 pyflakes==2.5.0
