@@ -62,7 +62,7 @@ def run_unit():
     to fail.
 
     """
-    return do_process(["pytest", "--cov-report=html"])
+    return do_process(["pytest", "--cov-config=.coveragerc", "--cov-report=html"])
 
 
 def main():
