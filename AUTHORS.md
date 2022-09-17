@@ -4,4 +4,6 @@
 
 # Source Contributors
 
+- kerdion @kerdion
+
 # Documentation Contributors

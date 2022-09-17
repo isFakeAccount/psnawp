@@ -15,7 +15,7 @@ sys.path.insert(1, os.path.abspath("../src"))
 project = "PSNAWP"
 copyright = datetime.today().strftime("%Y, Yoshikage Kira")
 author = "Yoshikage Kira (@isFakeAccount)"
-release = "2022.06.26"
+release = "1.0.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
