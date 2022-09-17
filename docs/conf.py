@@ -21,7 +21,7 @@ release = "2022.06.26"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-exclude_patterns = ["_build"]
+
 extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc"]
 autodoc_default_options = {
     "members": True,
@@ -36,8 +36,6 @@ pygments_style = "sphinx"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
-    ("py:class", "prawcore.requestor.Requestor"),
-    ("py:class", "praw.models.redditors.PartialRedditor"),
 ]
 
 # -- Options for HTML output -------------------------------------------------
