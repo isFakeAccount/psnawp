@@ -44,3 +44,7 @@ html_theme = "sphinx_rtd_theme"
 html_theme_options = {"collapse_navigation": True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None)}
 htmlhelp_basename = "PRAW"
+
+
+def setup(app):
+    app.add_css_file("theme_override.css")
