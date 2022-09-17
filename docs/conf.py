@@ -8,8 +8,7 @@ import sys
 from datetime import datetime
 
 sys.path.insert(0, os.path.abspath("."))
-sys.path.insert(0, os.path.abspath("../src"))
-sys.path.insert(0, os.path.abspath("../src/psnawp_api"))
+sys.path.insert(1, os.path.abspath("../src"))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -22,6 +21,7 @@ release = "2022.06.26"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+exclude_patterns = ["_build"]
 extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc"]
 autodoc_default_options = {
     "members": True,
@@ -34,6 +34,11 @@ html_static_path = ["_static"]
 templates_path = ["_templates"]
 pygments_style = "sphinx"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+nitpick_ignore = [
+    ("py:class", "Logging"),
+    ("py:class", "prawcore.requestor.Requestor"),
+    ("py:class", "praw.models.redditors.PartialRedditor"),
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
