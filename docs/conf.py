@@ -29,9 +29,8 @@ autodoc_default_options = {
     "undoc-members": True,
     "exclude-members": "__weakref__",
 }
-html_static_path = ["_static"]
-templates_path = ["_templates"]
-pygments_style = "sphinx"
+# html_static_path = ["_static"]
+# templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
@@ -41,10 +40,9 @@ nitpick_ignore = [
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
-html_theme_options = {"collapse_navigation": True}
+pygments_style = "sphinx"
+html_theme_options = {"collapse_navigation": True, 'sidebar_hide_name': True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None)}
 htmlhelp_basename = "PRAW"
 
-
-def setup(app):
-    app.add_css_file("theme_override.css")
+source_suffix = ".rst"
