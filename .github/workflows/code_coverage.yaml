@@ -24,7 +24,7 @@ jobs:
           USER_NAME: ${{ secrets.USER_NAME }}
       - name: PyTest Coverage comment
         id: coverageComment
-        uses: MishaKav/pytest-coverage-comment@main
+        uses: MishaKav/pytest-coverage-comment@test-branch
         with:
           hide-comment: true
           badge-title: Coverage
