@@ -40,7 +40,7 @@ nitpick_ignore = [
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
-pygments_style = "sphinx"
+pygments_style = "perldoc"
 html_theme_options = {"collapse_navigation": True, 'sidebar_hide_name': True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None)}
 htmlhelp_basename = "PRAW"
