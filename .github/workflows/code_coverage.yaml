@@ -18,7 +18,7 @@ jobs:
           pip install .
       - name: Build coverage file
         run: |
-          pytest --junitxml=pytest.xml --cov=psnawp_api | tee pytest-coverage.txt
+          pytest --cov-config=.coveragerc --junitxml=pytest.xml --cov=psnawp_api | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ secrets.USER_NAME }}
@@ -28,8 +28,8 @@ jobs:
         with:
           hide-comment: true
           badge-title: Coverage
-          pytest-coverage-path: ./data/pytest-coverage_4.txt
-          junitxml-path: ./data/pytest_1.xml
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
 
       - name: Create Variable of Summary Report
         id: summary_report
