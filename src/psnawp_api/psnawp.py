@@ -16,8 +16,8 @@ class PSNAWP:
 
     .. code-block:: Python
 
-        from psnawp_api import psnawp
-        psnawp = psnawp.PSNAWP('<64 character npsso code>')
+        from psnawp_api import PSNAWP
+        psnawp = PSNAWP('<64 character npsso code>')
 
     """
 
@@ -39,6 +39,12 @@ class PSNAWP:
 
         :returns: Client Object
         :rtype: client.Client
+
+        .. code-block:: Python
+
+            from psnawp_api import PSNAWP
+            psnawp = PSNAWP('<64 character npsso code>')
+            client = psnawp.me()
 
         """
         return client.Client(self.request_builder)

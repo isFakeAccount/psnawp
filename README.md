@@ -34,6 +34,11 @@ To install the library into python. First you need to clone the repo at your loc
 python setup.py install
 ```
 
+## Important Links
+> PyPI: https://pypi.org/project/PSNAWP/
+>
+> Read the docs: https://psnawp.readthedocs.io/en/latest/
+
 ## Getting Started
 
 To get started you need to obtain npsso <64 character code>. You need to follow the following steps
@@ -42,24 +47,24 @@ To get started you need to obtain npsso <64 character code>. You need to follow 
 2. In another tab, go to https://ca.account.sony.com/api/v1/ssocookie
 3. If you are logged in you should see a text similar to this
 
-```
+```json
 {"npsso":"<64 character npsso code>"}
 ```
 This npsso code will be used in the api for authentication purposes. The refresh token that is generated from npsso lasts about 2 months. After that you have to get a new npsso token. The bot will print a warning if there are less than 3 days left in refresh token expiration.
 
 Following is the quick example on how to use this library
 
-```
-from psnawp_api import psnawp
+```py
+from psnawp_api import PSNAWP
 
-psnawp = psnawp.PSNAWP('<64 character npsso code>')
+psnawp = PSNAWP('<64 character npsso code>')
 
 # Client that is you
 client = psnawp.me()
-print(client.get_online_id())
-print(client.get_account_id())
+print(client.online_id)
+print(client.account_id)
 print(client.get_account_devices())
-print(client.get_friends())
+print(client.friends_list())
 print(client.blocked_list())
 
 # Getting user from online
@@ -69,14 +74,7 @@ print(user_online_id.account_id)
 print(user_online_id.profile())
 print(user_online_id.get_presence())
 print(user_online_id.friendship())
-print(user_online_id.is_available_to_play())
 print(user_online_id.is_blocked())
-
-# Sending Message
-user_online_id.send_private_message("Hello World!")
-messages = user_online_id.get_messages_in_conversation(message_count=1)
-# If you want to leave the conversation
-user_online_id.leave_private_message_group()
 
 # Getting user from Account ID
 user_account_id = psnawp.user(account_id='1802043923080044300')
@@ -88,7 +86,7 @@ Sending private message only works if the message group between you and user alr
 
 ## Contribution
 
-All bug reposts and features requests are welcomed although I am new at making python libraries, so it may take me a while to implement some features. Suggestions are welcomes if I am doing something that is an unconventional way of doing it.
+All bug reposts and features requests are welcomed, although I am new at making python libraries, so it may take me a while to implement some features. Suggestions are welcomes if I am doing something that is an unconventional way of doing it.
 
 ## Disclaimer
 
