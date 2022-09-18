@@ -1,6 +1,8 @@
 
 # PlayStation Network API Wrapper Python (PSNAWP)
 
+Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
+
 [![PyPI version](https://badge.fury.io/py/PSNAWP.svg)](https://badge.fury.io/py/PSNAWP)
 [![Downloads](https://pepy.tech/badge/psnawp)](https://pepy.tech/project/psnawp)
 [![python-logo](https://img.shields.io/badge/python-3.9_|_3.10-blue.svg)](https://www.python.org/)
@@ -17,8 +19,6 @@
 | 8 | 0 :zzz: | 0 :x: | 0 :fire: | 0.773s :stopwatch: |
 
 <!-- Pytest Coverage Comment:End -->
-
-Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
 ## How to install
 

@@ -34,7 +34,7 @@ class Client:
 
         """
         response = self.request_builder.get(
-            url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['profiles']}"
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
         )
         online_id: str = response["onlineId"]
         return online_id
@@ -70,8 +70,6 @@ class Client:
             print(client.get_profile_legacy())
 
         """
-        url = f"https://us-prof.np.community.playstation.net/userProfile/v1/users/{self.online_id}/profile2"
-
         params = {
             "fields": "npId,onlineId,accountId,avatarUrls,plus,aboutMe,languagesUsed,trophySummary(@default,level,progress,earnedTrophies),"
             "isOfficiallyVerified,personalDetail(@default,profilePictureUrls),personalDetailSharing,personalDetailSharingRequestMessageFlag,"
@@ -79,7 +77,10 @@ class Client:
             "following,consoleAvailability"
         }
 
-        response = self.request_builder.get(url=url, params=params)
+        response = self.request_builder.get(
+            url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
+            params=params,
+        )
         return response
 
     def get_account_devices(self) -> list[dict[str, Any]]:
@@ -109,7 +110,7 @@ class Client:
         :param limit: The number of items from input max is 1000.
         :type limit: int
 
-        :returns: Account ID of all friends in your friends list.
+        :returns: All friends in your friends list.
         :rtype: Iterable[User]
 
         .. code-block:: Python
@@ -136,10 +137,35 @@ class Client:
             for account_id in response["friends"]
         )
 
+    def available_to_play(self):
+        """Gets the list of onlie friends on your "Notify when available" subscription list.
+
+        :returns: Subscribed Friends available at the moment.
+        :rtype: Iterable[User]
+
+        .. warning::
+
+            This method currently does not work and possibly get removed in the future.
+            Unless I find working endpoint.
+
+        """
+        response = self.request_builder.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}"
+        )
+        print(response)
+        return (
+            User(
+                request_builder=self.request_builder,
+                account_id=account_id,
+                online_id=None,
+            )
+            for account_id in response["friends"]
+        )
+
     def blocked_list(self) -> Iterable[User]:
         """Gets the blocked list and return their account ids.
 
-        :returns: Account ID of all blocked users on your block list.
+        :returns: Al blocked users on your block list.
         :rtype: Iterable[User]
 
         .. code-block:: Python

@@ -18,6 +18,7 @@ def test__authentication():
 def test__online_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
+        print(client.online_id)
         assert client.online_id == os.getenv("USER_NAME")
 
 

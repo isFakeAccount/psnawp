@@ -41,7 +41,7 @@ nitpick_ignore = [
 
 html_theme = "sphinx_rtd_theme"
 pygments_style = "perldoc"
-html_theme_options = {"collapse_navigation": True, 'sidebar_hide_name': True}
+html_theme_options = {"collapse_navigation": True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None)}
 htmlhelp_basename = "PRAW"
 

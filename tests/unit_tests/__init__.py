@@ -1,7 +1,6 @@
 import json
 
 import vcr
-from dotenv import load_dotenv
 from contextlib import suppress
 
 
@@ -40,7 +39,6 @@ def filter_request_information(request):
     return request
 
 
-load_dotenv()
 my_vcr = vcr.VCR(
     serializer="yaml",
     cassette_library_dir="tests/unit_tests/cassettes",

@@ -1,6 +1,12 @@
 from typing import Optional, Any
 
-from psnawp_api.core import psnawp_exceptions
+from requests import HTTPError
+
+from psnawp_api.core.psnawp_exceptions import (
+    PSNAWPNotFound,
+    PSNAWPIllegalArgumentError,
+    PSNAWPForbidden,
+)
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
@@ -23,68 +29,89 @@ class User:
         :param account_id: Account ID of the user.
         :type account_id: str
 
+        :raises: ``PSNAWPIllegalArgumentError`` If both online_id and account_id are not
+            provided.
+
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+
         """
         self.request_builder = request_builder
-        self._online_id = online_id
-        self._account_id = account_id
+        self.online_id = online_id
+        self.account_id = account_id
         self._prev_online_id = online_id
 
-    @property
-    def online_id(self) -> str:
-        """Gets the current online ID of the client logged in the api.
+        if self.online_id is not None:
+            profile = self._online_id_to_account_id()
+            self.account_id = profile["profile"]["accountId"]
+            self.online_id = profile["profile"].get(
+                "currentOnlineId", profile["profile"]["onlineId"]
+            )
+        elif self.account_id is not None:
+            profile = self.profile()
+            self.online_id = profile["onlineId"]
+        else:
+            raise PSNAWPIllegalArgumentError(
+                "You provide at least online ID or account ID."
+            )
 
-        Note: This might be different from the online id because playstation allows you
-        to look up a user using old online id as long as it is not taken by another
-        player.
+    @property
+    def prev_online_id(self) -> str:
+        """Gets the previous online ID of the user.
+
+        Note: Playstation allows you to look up a user using old online id as long as it
+        is not taken by another player. This might be same as ``online_id`` depending on
+        user.
+
+        .. note::
+
+            If you are initializing User Object using Account ID then the previous
+            online id will be same as online id. This is just the limitation of API.
 
         :returns: onlineID
         :rtype: str
 
-        """
-        current_online_id: str = self.profile()["currentOnlineId"]
-        return current_online_id
+        .. code-block:: Python
 
-    @property
-    def account_id(self) -> str:
-        """Gets the account ID of the client logged in the api.
-
-        :returns: accountID
-        :rtype: str
+            user_example = psnawp.user(online_id='VaultTec_Trading')
+            print(user_example.prev_online_id)
 
         """
-        if self._account_id is not None:
-            return self._account_id
-        else:
-            profile = self._online_id_to_account_id(self._online_id)["profile"]
-            account_id: str = profile["accountId"]
-            self._online_id = profile["currentOnlineId"]
-            self._prev_online_id = profile["onlineId"]
-            return account_id
+        profile = self._online_id_to_account_id(prev_online_id=self._prev_online_id)[
+            "profile"
+        ]
+        prev_online_id: str = profile.get("onlineId")
+        return prev_online_id
 
-    def _online_id_to_account_id(self, online_id):
+    def _online_id_to_account_id(self, prev_online_id: Optional[str] = None):
         """Converts user online ID and returns their account id. This is an internal function and not meant to be called directly.
-
-        :param online_id: online id of user you want to search
-        :type online_id: str
 
         :returns: dict: PSN ID and Account ID of the user in search query
 
-        :raises: If the search query is empty
+        :raises: ``PSNAWPIllegalArgumentError`` If ``self.online_id`` is None.
 
-        :raises: If the user is not valid/found
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
         """
-        # If user tries to do empty search
-        if len(online_id) <= 0:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError(
-                "online_id must contain a value."
+
+        online_id = self.online_id
+        if prev_online_id is not None:
+            online_id = prev_online_id
+
+        if online_id is None:
+            raise PSNAWPIllegalArgumentError("online_id must contain a value.")
+
+        try:
+            query = {"fields": "accountId,onlineId,currentOnlineId"}
+            response = self.request_builder.get(
+                url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=online_id)}",
+                params=query,
             )
-        base_uri = "https://us-prof.np.community.playstation.net/userProfile/v1/users"
-        query = {"fields": "accountId,onlineId,currentOnlineId"}
-        response = self.request_builder.get(
-            url="{}/{}/profile2".format(base_uri, online_id), params=query
-        )
-        return response
+            return response
+        except HTTPError as http_error:
+            if http_error.response.status_code == 404:
+                raise PSNAWPNotFound(f"Online ID {self.online_id} does not exist.")
+            else:
+                raise http_error
 
     def profile(self):
         """Gets the profile of the user such as about me, avatars, languages etc...
@@ -92,15 +119,29 @@ class User:
         :returns: dict of user profile
         :rtype: dict
 
-        :raises: If the user is not valid/found
+        :raises: ``PSNAWPIllegalArgumentError`` If ``self.account_id`` is None.
+
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id='VaultTec_Trading')
+            print(user_example.profile())
 
         """
-        query = {"fields": "accountId,onlineId,currentOnlineId"}
-        response = self.request_builder.get(
-            url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['profiles']}",
-            param=query,
-        )
-        return response
+        if self.account_id is None:
+            raise PSNAWPIllegalArgumentError("account_id must contain a value.")
+
+        try:
+            response = self.request_builder.get(
+                url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
+            )
+            return response
+        except HTTPError as http_error:
+            if http_error.response.status_code == 404:
+                raise PSNAWPNotFound(f"Account ID {self.account_id} does not exist.")
+            else:
+                raise http_error
 
     def get_presence(self) -> dict[Any, Any]:
         """Gets the presences of a user. If the profile is private
@@ -109,14 +150,30 @@ class User:
             lastAvailableDate, and primaryPlatformInfo
         :rtype: dict
 
+        :raises: ``PSNAWPForbidden`` When the user's profile is private and you don't
+            have permission to view their profile.
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id='VaultTec_Trading')
+            print(user_example.get_presence())
+
         """
-        params = {"type": "primary"}
-        response = self.request_builder.get(
-            url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['basic_presences']}",
-            params=params,
-        )
-        presence: dict[Any, Any] = response.get("basicPresence", response)
-        return presence
+        try:
+            params = {"type": "primary"}
+            response = self.request_builder.get(
+                url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['basic_presences']}",
+                params=params,
+            )
+            presence: dict[Any, Any] = response.get("basicPresence", response)
+            return presence
+        except HTTPError as http_error:
+            if http_error.response.status_code == 403:
+                raise PSNAWPForbidden(
+                    f"You are not allowed to check the presence of user {self.online_id}"
+                )
+            else:
+                raise http_error
 
     def friendship(self) -> dict[Any, Any]:
         """Gets the friendship status and stats of the user
@@ -124,9 +181,14 @@ class User:
         :returns: Friendship stats in dictionary
         :rtype: dict
 
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id='VaultTec_Trading')
+            print(user_example.friendship())
+
         """
         response = self.request_builder.get(
-            url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_summary'].replace('{account_id}', self.account_id)}"
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_summary'].format(account_id=self.account_id)}"
         )
         friendship_stats: dict[Any, Any] = response
         return friendship_stats
@@ -136,6 +198,11 @@ class User:
 
         :returns: True if the user is blocked otherwise False
         :rtype: bool
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id='VaultTec_Trading')
+            print(user_example.is_blocked())
 
         """
         response = self.request_builder.get(
