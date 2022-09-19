@@ -76,10 +76,13 @@ class User:
         prev_online_id: str = profile.get("onlineId")
         return prev_online_id
 
-    def _online_id_to_account_id(self, prev_online_id: Optional[str] = None):
+    def _online_id_to_account_id(
+        self, prev_online_id: Optional[str] = None
+    ) -> dict[str, Any]:
         """Converts user online ID and returns their account id. This is an internal function and not meant to be called directly.
 
         :returns: dict: PSN ID and Account ID of the user in search query
+        :rtype: dict[str, Any]
 
         :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
@@ -101,11 +104,11 @@ class User:
                 f"Online ID {self.online_id} does not exist."
             ) from not_found
 
-    def profile(self):
+    def profile(self) -> dict[str, Any]:
         """Gets the profile of the user such as about me, avatars, languages etc...
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict
+        :rtype: dict[str, Any]
 
             .. code-block:: json
 
@@ -158,11 +161,11 @@ class User:
                 f"Account ID {self.account_id} does not exist."
             ) from bad_request
 
-    def get_presence(self) -> dict[Any, Any]:
+    def get_presence(self) -> dict[str, Any]:
         """Gets the presences of a user. If the profile is private
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict
+        :rtype: dict[str, Any]
 
             .. code-block:: json
 
@@ -198,11 +201,11 @@ class User:
                 f"You are not allowed to check the presence of user {self.online_id}"
             ) from forbidden
 
-    def friendship(self) -> dict[Any, Any]:
+    def friendship(self) -> dict[str, Any]:
         """Gets the friendship status and stats of the user
 
         :returns: A dict containing info similar to what is shown below
-        :rtype: Dict
+        :rtype: dict[str, Any]
 
             .. code-block:: json
 

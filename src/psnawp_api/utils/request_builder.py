@@ -1,4 +1,5 @@
 import json
+from typing import Any
 
 import requests
 
@@ -51,7 +52,7 @@ class RequestBuilder:
             "Content-Type": "application/json",
         }
 
-    def get(self, **kwargs):
+    def get(self, **kwargs) -> dict[str, Any]:
         """Handles the GET requests and returns the parsed objects.
 
         :param kwargs: The query parameters to add to the request.
@@ -76,9 +77,10 @@ class RequestBuilder:
             url=kwargs["url"], headers=headers, params=params, data=data
         )
         response_checker(response)
-        return response.json()
+        response_dict: dict[str, Any] = response.json()
+        return response_dict
 
-    def multipart_post(self, **kwargs):
+    def multipart_post(self, **kwargs) -> dict[str, Any]:
         """Handles the Multipart POST requests and returns the parsed objects.
 
         :param kwargs: The query parameters to add to the request.
@@ -107,9 +109,10 @@ class RequestBuilder:
             },
         )
         response_checker(response)
-        return response.json()
+        response_dict: dict[str, Any] = response.json()
+        return response_dict
 
-    def delete(self, **kwargs):
+    def delete(self, **kwargs) -> dict[str, Any]:
         """Handles the DELETE requests and returns the parsed objects.
 
         :param kwargs: The query parameters to add to the request.
@@ -134,4 +137,5 @@ class RequestBuilder:
             url=kwargs["url"], headers=headers, params=params, data=data
         )
         response_checker(response)
-        return response.json()
+        response_dict: dict[str, Any] = response.json()
+        return response_dict

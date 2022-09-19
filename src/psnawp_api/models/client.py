@@ -58,11 +58,11 @@ class Client:
         account_id: str = response["accountId"]
         return account_id
 
-    def get_profile_legacy(self):
+    def get_profile_legacy(self) -> dict[str, Any]:
         """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict
+        :rtype: dict[str, Any]
 
             .. code-block:: json
 
@@ -141,6 +141,7 @@ class Client:
             url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
             params=params,
         )
+
         return response
 
     def get_account_devices(self) -> list[dict[str, Any]]:
@@ -209,7 +210,7 @@ class Client:
             for account_id in response["friends"]
         )
 
-    def available_to_play(self):
+    def available_to_play(self) -> Iterable[User]:
         """Gets the list of users on your "Notify when available" subscription list.
 
         :returns: Iterable of user objects.
