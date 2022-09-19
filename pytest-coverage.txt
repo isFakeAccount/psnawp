@@ -25,8 +25,8 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/__init__.py               0      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/endpoints.py              2      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       61     27    56%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       65     29    55%
 ------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                        300     82    73%
+TOTAL                                                                                                        304     84    72%
 
-============================== 21 passed in 1.42s ==============================
+============================== 21 passed in 1.71s ==============================
