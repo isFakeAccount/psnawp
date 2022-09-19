@@ -27,7 +27,7 @@ Retrieve User Information, Trophies, Game and Store data from the PlayStation Ne
 ```
 pip install PSNAWP
 ```
-### Using setup.py
+### Using `setup.py`
 To install the library into python. First you need to clone the repo at your local machine and run the following command from the root directory of the repo
 
 ```
@@ -37,7 +37,7 @@ python setup.py install
 ## Important Links
 > PyPI: https://pypi.org/project/PSNAWP/
 >
-> Read the docs: https://psnawp.readthedocs.io/en/latest/
+> Read the Docs: https://psnawp.readthedocs.io/en/latest/
 
 ## Getting Started
 

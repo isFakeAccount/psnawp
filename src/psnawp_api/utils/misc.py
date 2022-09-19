@@ -5,7 +5,15 @@ from psnawp_api import psnawp
 
 
 def create_logger(module_name: str) -> logging.Logger:
-    """Creates logger and returns an instance of logging object. :param module_name: Logger name that will appear in text. :return: Logging Object. :rtype: logging.Logger"""
+    """Creates logger and returns an instance of logging object.
+
+    :param module_name: Logger name that will appear in text.
+    :type module_name: str
+
+    :returns: Logging Object.
+    :rtype: logging.Logger
+
+    """
     # Setting up the root logger
     logger = logging.getLogger(module_name)
     logger.setLevel(logging.DEBUG)

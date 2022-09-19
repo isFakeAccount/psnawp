@@ -51,7 +51,7 @@ def run_static():
     success &= do_process(["sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")
-
+    success &= do_process(["make", "linkcheck"], cwd="docs/")
     return success
 
 
@@ -93,7 +93,7 @@ def main():
         "-a",
         "--all",
         action="store_true",
-        default=True,
+        default=False,
         help="Run all the tests (static and unit). Overrides the unstatic argument.",
     )
     args = parser.parse_args()

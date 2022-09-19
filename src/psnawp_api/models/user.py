@@ -1,11 +1,9 @@
 from typing import Optional, Any
 
-from requests import HTTPError
-
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
-    PSNAWPIllegalArgumentError,
     PSNAWPForbidden,
+    PSNAWPBadRequest,
 )
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -49,10 +47,6 @@ class User:
         elif self.account_id is not None:
             profile = self.profile()
             self.online_id = profile["onlineId"]
-        else:
-            raise PSNAWPIllegalArgumentError(
-                "You provide at least online ID or account ID."
-            )
 
     @property
     def prev_online_id(self) -> str:
@@ -87,8 +81,6 @@ class User:
 
         :returns: dict: PSN ID and Account ID of the user in search query
 
-        :raises: ``PSNAWPIllegalArgumentError`` If ``self.online_id`` is None.
-
         :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
         """
@@ -97,9 +89,6 @@ class User:
         if prev_online_id is not None:
             online_id = prev_online_id
 
-        if online_id is None:
-            raise PSNAWPIllegalArgumentError("online_id must contain a value.")
-
         try:
             query = {"fields": "accountId,onlineId,currentOnlineId"}
             response = self.request_builder.get(
@@ -107,19 +96,48 @@ class User:
                 params=query,
             )
             return response
-        except HTTPError as http_error:
-            if http_error.response.status_code == 404:
-                raise PSNAWPNotFound(f"Online ID {self.online_id} does not exist.")
-            else:
-                raise http_error
+        except PSNAWPNotFound as not_found:
+            raise PSNAWPNotFound(
+                f"Online ID {self.online_id} does not exist."
+            ) from not_found
 
     def profile(self):
         """Gets the profile of the user such as about me, avatars, languages etc...
 
-        :returns: dict of user profile
+        :returns: A dict containing info similar to what is shown below:
         :rtype: dict
 
-        :raises: ``PSNAWPIllegalArgumentError`` If ``self.account_id`` is None.
+            .. code-block:: json
+
+                {
+                  "onlineId": "VaultTec-Co",
+                  "aboutMe": "r/Fallout76Marketplace Moderator",
+                  "avatars": [
+                    {
+                      "size": "s",
+                      "url": "[Redacted]"
+                    },
+                    {
+                      "size": "xl",
+                      "url": "[Redacted]"
+                    },
+                    {
+                      "size": "l",
+                      "url": "[Redacted]"
+                    },
+                    {
+                      "size": "m",
+                      "url": "[Redacted]"
+                    }
+                  ],
+                  "languages": [
+                    "en-US"
+                  ],
+                  "isPlus": false,
+                  "isOfficiallyVerified": false,
+                  "isMe": false
+                }
+
 
         :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
@@ -129,29 +147,37 @@ class User:
             print(user_example.profile())
 
         """
-        if self.account_id is None:
-            raise PSNAWPIllegalArgumentError("account_id must contain a value.")
 
         try:
             response = self.request_builder.get(
                 url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
             )
             return response
-        except HTTPError as http_error:
-            if http_error.response.status_code == 404:
-                raise PSNAWPNotFound(f"Account ID {self.account_id} does not exist.")
-            else:
-                raise http_error
+        except PSNAWPBadRequest as bad_request:
+            raise PSNAWPNotFound(
+                f"Account ID {self.account_id} does not exist."
+            ) from bad_request
 
     def get_presence(self) -> dict[Any, Any]:
         """Gets the presences of a user. If the profile is private
 
-        :returns: Presence stats about the user, such as availability,
-            lastAvailableDate, and primaryPlatformInfo
+        :returns: A dict containing info similar to what is shown below:
         :rtype: dict
 
-        :raises: ``PSNAWPForbidden`` When the user's profile is private and you don't
-            have permission to view their profile.
+            .. code-block:: json
+
+                {
+                    "availability": "availableToPlay",
+                    "primaryPlatformInfo": {
+                        "onlineStatus": "online",
+                        "platform": "ps4",
+                        "lastOnlineDate": "2022-09-15T22:50:28.012Z"
+                    }
+                }
+
+
+        :raises: ``PSNAWPForbidden`` When the user's profile is private, and you don't
+            have permission to view their online status.
 
         .. code-block:: Python
 
@@ -167,19 +193,26 @@ class User:
             )
             presence: dict[Any, Any] = response.get("basicPresence", response)
             return presence
-        except HTTPError as http_error:
-            if http_error.response.status_code == 403:
-                raise PSNAWPForbidden(
-                    f"You are not allowed to check the presence of user {self.online_id}"
-                )
-            else:
-                raise http_error
+        except PSNAWPForbidden as forbidden:
+            raise PSNAWPForbidden(
+                f"You are not allowed to check the presence of user {self.online_id}"
+            ) from forbidden
 
     def friendship(self) -> dict[Any, Any]:
         """Gets the friendship status and stats of the user
 
-        :returns: Friendship stats in dictionary
-        :rtype: dict
+        :returns: A dict containing info similar to what is shown below
+        :rtype: Dict
+
+            .. code-block:: json
+
+                {
+                    "friendRelation": "friend",
+                    "personalDetailSharing": "none",
+                    "friendsCount": 419,
+                    "mutualFriendsCount": 0
+                }
+
 
         .. code-block:: Python
 

@@ -3,6 +3,34 @@ import json
 import requests
 
 from psnawp_api.core.authenticator import Authenticator
+from psnawp_api.core.psnawp_exceptions import (
+    PSNAWPNotFound,
+    PSNAWPForbidden,
+    PSNAWPBadRequest,
+    PSNAWPServerError,
+    PSNAWPUnauthorized,
+)
+
+
+def response_checker(response):
+    """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
+
+    :param response: :class:`Response <Response>` object
+    :type response: requests.Response
+
+    """
+    if response.status_code == 400:
+        raise PSNAWPBadRequest(response.text)
+    elif response.status_code == 401:
+        raise PSNAWPUnauthorized(response.text)
+    elif response.status_code == 403:
+        raise PSNAWPForbidden(response.text)
+    elif response.status_code == 404:
+        raise PSNAWPNotFound(response.text)
+    elif response.status_code >= 500:
+        raise PSNAWPServerError(response.text)
+    else:
+        response.raise_for_status()
 
 
 class RequestBuilder:
@@ -47,7 +75,7 @@ class RequestBuilder:
         response = requests.get(
             url=kwargs["url"], headers=headers, params=params, data=data
         )
-        response.raise_for_status()
+        response_checker(response)
         return response.json()
 
     def multipart_post(self, **kwargs):
@@ -78,7 +106,7 @@ class RequestBuilder:
                 )
             },
         )
-        response.raise_for_status()
+        response_checker(response)
         return response.json()
 
     def delete(self, **kwargs):
@@ -105,5 +133,5 @@ class RequestBuilder:
         response = requests.delete(
             url=kwargs["url"], headers=headers, params=params, data=data
         )
-        response.raise_for_status()
+        response_checker(response)
         return response.json()

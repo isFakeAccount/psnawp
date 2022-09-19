@@ -61,8 +61,68 @@ class Client:
     def get_profile_legacy(self):
         """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
 
-        :returns: Dict of Profile
+        :returns: A dict containing info similar to what is shown below:
         :rtype: dict
+
+            .. code-block:: json
+
+                {
+                  "profile": {
+                    "onlineId": "VaultTec_Trading",
+                    "accountId": "8520698476712646544",
+                    "npId": "VmF1bHRUZWNfVHJhZGluZ0BiNi51cw==",
+                    "avatarUrls": [
+                      {
+                        "size": "l",
+                        "avatarUrl": "[Redacted]"
+                      }
+                    ],
+                    "plus": 0,
+                    "aboutMe": "r/Fallout76Marketplace Moderator",
+                    "languagesUsed": [
+                      "en"
+                    ],
+                    "trophySummary": {
+                      "level": 1,
+                      "progress": 0,
+                      "earnedTrophies": {
+                        "platinum": 0,
+                        "gold": 0,
+                        "silver": 0,
+                        "bronze": 0
+                      }
+                    },
+                    "isOfficiallyVerified": false,
+                    "personalDetail": {
+                      "firstName": "VaultTec",
+                      "lastName": "TradingCo",
+                      "profilePictureUrls": [
+                        {
+                          "size": "xl",
+                          "profilePictureUrl": "[Redacted]"
+                        }
+                      ]
+                    },
+                    "personalDetailSharing": "no",
+                    "personalDetailSharingRequestMessageFlag": false,
+                    "primaryOnlineStatus": "offline",
+                    "presences": [
+                      {
+                        "onlineStatus": "offline",
+                        "hasBroadcastData": false,
+                        "lastOnlineDate": "2021-02-05T20:14:45Z"
+                      }
+                    ],
+                    "friendRelation": "no",
+                    "requestMessageFlag": false,
+                    "blocking": false,
+                    "following": false,
+                    "consoleAvailability": {
+                      "availabilityStatus": "offline"
+                    }
+                  }
+                }
+
 
         .. code-block:: Python
 
@@ -138,28 +198,30 @@ class Client:
         )
 
     def available_to_play(self):
-        """Gets the list of onlie friends on your "Notify when available" subscription list.
+        """Gets the list of users on your "Notify when available" subscription list.
 
-        :returns: Subscribed Friends available at the moment.
+        :returns: Iterable of user objects.
         :rtype: Iterable[User]
 
-        .. warning::
+        .. code-block:: Python
 
-            This method currently does not work and possibly get removed in the future.
-            Unless I find working endpoint.
+            client = psnawp.me()
+            available_to_play = client.available_to_play()
+
+            for user in available_to_play:
+                ...
 
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}"
         )
-        print(response)
         return (
             User(
                 request_builder=self.request_builder,
-                account_id=account_id,
+                account_id=account_id_dict["accountId"],
                 online_id=None,
             )
-            for account_id in response["friends"]
+            for account_id_dict in response["settings"]
         )
 
     def blocked_list(self) -> Iterable[User]:

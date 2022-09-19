@@ -21,7 +21,7 @@ release = "1.0.0"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 
-extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc"]
+extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc", 'sphinx.ext.intersphinx']
 autodoc_default_options = {
     "members": True,
     "member-order": "bysource",
@@ -41,8 +41,9 @@ nitpick_ignore = [
 
 html_theme = "sphinx_rtd_theme"
 pygments_style = "perldoc"
-html_theme_options = {"collapse_navigation": True}
-intersphinx_mapping = {"python": ("https://docs.python.org", None)}
+html_theme_options = {'collapse_navigation': True, 'titles_only': True, 'analytics_id': 'G-DDW8HTV1D1'}
+intersphinx_mapping = {"python": ("https://docs.python.org", None),
+                       "requests": ("https://requests.readthedocs.io/en/latest/", None)}
 htmlhelp_basename = "PRAW"
 
 source_suffix = ".rst"

@@ -1,10 +1,11 @@
 import logging
-from typing import overload
+from typing import overload, Optional
 
 from psnawp_api.core import authenticator
 from psnawp_api.utils import request_builder
 from psnawp_api.models import client, search, user
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
+import re
 
 logging_level = logging.INFO
 
@@ -79,14 +80,18 @@ class PSNAWP:
             user2 = psnawp.user(account_id='1802043923080044300')
 
         """
-        online_id = kwargs.get("online_id")
-        account_id = kwargs.get("account_id")
+        online_id: Optional[str] = kwargs.get("online_id")
+        account_id: Optional[str] = kwargs.get("account_id")
 
         if (online_id and account_id) or not (online_id or account_id):
             raise PSNAWPIllegalArgumentError(
                 "You provide at least online ID or account ID, and not both."
             )
 
+        if account_id is not None and not re.match(r"\d{19}", account_id):
+            raise PSNAWPIllegalArgumentError(
+                "The account id is not correct. Perhaps you meant online_id?"
+            )
         return user.User(self.request_builder, online_id, account_id)
 
     def search(self):
