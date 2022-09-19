@@ -3,25 +3,25 @@
         with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
 &gt;           psnawp_api.psnawp.PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/unit_tests/test_client.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit_tests/test_client.py:14:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e3922410&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -52,25 +52,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -101,25 +101,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -150,25 +150,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -199,25 +199,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -248,25 +248,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -297,25 +297,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -346,25 +346,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -395,25 +395,25 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: You
     def psnawp_fixture():
 &gt;       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0&gt;
 
     def authenticate(self) -&gt; None:
         """Authenticate using the npsso code provided in the constructor.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-    
+
         :raises: If authentication is not successful.
-    
+
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {

@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Sep 2022 22:39:33 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - e2b54329-7e7a-4774-ae09-dcdda888eafb
+      X-Psn-Correlation-Id:
+      - e2b54329-7e7a-4774-ae09-dcdda888eafb
+      X-Psn-Request-Id:
+      - e2b54329-7e7a-4774-ae09-dcdda888eafb
+      X-RequestId:
+      - e2b54329-7e7a-4774-ae09-dcdda888eafb
+    status:
+      code: 200
+      message: OK
+version: 1

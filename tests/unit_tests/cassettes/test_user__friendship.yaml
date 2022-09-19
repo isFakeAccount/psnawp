@@ -1,0 +1,102 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
+        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        If-None-Match
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '93'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Sep 2022 03:19:59 GMT
+      Server:
+      - Apache
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/me/friends/1802043923080044300/summary
+  response:
+    body:
+      string: '{"friendRelation": "friend", "personalDetailSharing": "none", "friendsCount":
+        98, "mutualFriendsCount": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '99'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Sep 2022 03:20:00 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0946178854654207581
+    status:
+      code: 200
+      message: OK
+version: 1
