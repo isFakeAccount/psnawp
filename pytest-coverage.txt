@@ -2,36 +2,36 @@
 platform linux -- Python 3.10.6, pytest-7.1.3, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
 plugins: cov-3.0.0, vcr-1.0.2
-collected 8 items
+collected 9 items
 
-tests/unit_tests/test_psnawp_client.py .EEEEEEE                          [100%]
+tests/unit_tests/test_client.py FEEEEEEEE                                [100%]
 
 ==================================== ERRORS ====================================
-______________________ ERROR at setup of test__online_id _______________________
+___________________ ERROR at setup of test_client__online_id ___________________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -59,31 +59,31 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-______________________ ERROR at setup of test__account_id ______________________
+__________________ ERROR at setup of test_client__account_id ___________________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -111,31 +111,31 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-__________________ ERROR at setup of test__get_profile_legacy __________________
+______________ ERROR at setup of test_client__get_profile_legacy _______________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -163,31 +163,31 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-___________________ ERROR at setup of test__account_devices ____________________
+________________ ERROR at setup of test_client__account_devices ________________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -215,31 +215,31 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-_____________________ ERROR at setup of test__get_friends ______________________
+__________________ ERROR at setup of test_client__get_friends __________________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -267,31 +267,31 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-_____________________ ERROR at setup of test__blocked_list _____________________
+_______________ ERROR at setup of test_client__available_to_play _______________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
-
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -319,31 +319,137 @@ self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
-_____________________ ERROR at setup of test__repr_and_str _____________________
+_________________ ERROR at setup of test_client__blocked_list __________________
 
     @pytest.fixture(scope="session")
     def psnawp_fixture():
 >       return PSNAWP(os.getenv("NPSSO_CODE"))
 
-tests/conftest.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:34: in __init__
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
     authenticator.Authenticator(npsso_cookie)
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
     self.authenticate()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7f0f57c8e2f0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
 
     def authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
-
+    
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
-
+    
         :raises: If authentication is not successful.
+    
+        """
+        cookies = {"Cookie": f"npsso={self.npsso_token}"}
+        params = {
+            "access_type": "offline",
+            "client_id": Authenticator.__PARAMS["CLIENT_ID"],
+            "scope": Authenticator.__PARAMS["SCOPE"],
+            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
+            "response_type": "code",
+        }
+        response = requests.get(
+            f"{BASE_PATH['base_uri']}{API_PATH['oauth_code']}",
+            headers=cookies,
+            params=params,
+            allow_redirects=False,
+        )
+        response.raise_for_status()
+        location_url = response.headers["location"]
+        parsed_url = urlparse(location_url)
+        parsed_query = parse_qs(parsed_url.query)
+        if "error" in parsed_query.keys():
+            if "4165" in parsed_query["error_code"]:
+>               raise psnawp_exceptions.PSNAWPAuthenticationError(
+                    "Your npsso code has expired or is incorrect. Please generate a new code!"
+                )
+E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
+_________________ ERROR at setup of test_client__repr_and_str __________________
+
+    @pytest.fixture(scope="session")
+    def psnawp_fixture():
+>       return PSNAWP(os.getenv("NPSSO_CODE"))
+
+tests/conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
+    authenticator.Authenticator(npsso_cookie)
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
+    self.authenticate()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e39225c0>
+
+    def authenticate(self) -> None:
+        """Authenticate using the npsso code provided in the constructor.
+    
+        Obtains the access code and the refresh code. Access code lasts about 1 hour.
+        While the refresh code lasts about 2 months. After 2 months a new npsso code is
+        needed.
+    
+        :raises: If authentication is not successful.
+    
+        """
+        cookies = {"Cookie": f"npsso={self.npsso_token}"}
+        params = {
+            "access_type": "offline",
+            "client_id": Authenticator.__PARAMS["CLIENT_ID"],
+            "scope": Authenticator.__PARAMS["SCOPE"],
+            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
+            "response_type": "code",
+        }
+        response = requests.get(
+            f"{BASE_PATH['base_uri']}{API_PATH['oauth_code']}",
+            headers=cookies,
+            params=params,
+            allow_redirects=False,
+        )
+        response.raise_for_status()
+        location_url = response.headers["location"]
+        parsed_url = urlparse(location_url)
+        parsed_query = parse_qs(parsed_url.query)
+        if "error" in parsed_query.keys():
+            if "4165" in parsed_query["error_code"]:
+>               raise psnawp_exceptions.PSNAWPAuthenticationError(
+                    "Your npsso code has expired or is incorrect. Please generate a new code!"
+                )
+E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
+
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:128: PSNAWPAuthenticationError
+=================================== FAILURES ===================================
+_________________________ test_client__authentication __________________________
+
+    @pytest.mark.vcr()
+    def test_client__authentication():
+        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+>           psnawp_api.psnawp.PSNAWP(os.getenv("NPSSO_CODE"))
+
+tests/unit_tests/test_client.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py:35: in __init__
+    authenticator.Authenticator(npsso_cookie)
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py:38: in __init__
+    self.authenticate()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f61e3922410>
+
+    def authenticate(self) -> None:
+        """Authenticate using the npsso code provided in the constructor.
+    
+        Obtains the access code and the refresh code. Access code lasts about 1 hour.
+        While the refresh code lasts about 2 months. After 2 months a new npsso code is
+        needed.
+    
+        :raises: If authentication is not successful.
+    
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
@@ -378,27 +484,29 @@ Name                                                                            
 ------------------------------------------------------------------------------------------------------------------------------
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/__init__.py                     1      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/__init__.py                0      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py          46     11    76%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py      15      3    80%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py          46     18    61%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py       8      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/__init__.py              0      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               42     24    43%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               41     23    44%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/message_thread.py       37     37     0%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               11      6    45%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 69     53    23%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      20      7    65%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 57     42    26%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      23      9    61%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/__init__.py               0      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/endpoints.py              2      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       48     36    25%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      9    31%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       61     51    16%
 ------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                        304    177    42%
+TOTAL                                                                                                        300    195    35%
 
 =========================== short test summary info ============================
-ERROR tests/unit_tests/test_psnawp_client.py::test__online_id - psnawp_api.co...
-ERROR tests/unit_tests/test_psnawp_client.py::test__account_id - psnawp_api.c...
-ERROR tests/unit_tests/test_psnawp_client.py::test__get_profile_legacy - psna...
-ERROR tests/unit_tests/test_psnawp_client.py::test__account_devices - psnawp_...
-ERROR tests/unit_tests/test_psnawp_client.py::test__get_friends - psnawp_api....
-ERROR tests/unit_tests/test_psnawp_client.py::test__blocked_list - psnawp_api...
-ERROR tests/unit_tests/test_psnawp_client.py::test__repr_and_str - psnawp_api...
-========================= 1 passed, 7 errors in 0.47s ==========================
+FAILED tests/unit_tests/test_client.py::test_client__authentication - psnawp_...
+ERROR tests/unit_tests/test_client.py::test_client__online_id - psnawp_api.co...
+ERROR tests/unit_tests/test_client.py::test_client__account_id - psnawp_api.c...
+ERROR tests/unit_tests/test_client.py::test_client__get_profile_legacy - psna...
+ERROR tests/unit_tests/test_client.py::test_client__account_devices - psnawp_...
+ERROR tests/unit_tests/test_client.py::test_client__get_friends - psnawp_api....
+ERROR tests/unit_tests/test_client.py::test_client__available_to_play - psnaw...
+ERROR tests/unit_tests/test_client.py::test_client__blocked_list - psnawp_api...
+ERROR tests/unit_tests/test_client.py::test_client__repr_and_str - psnawp_api...
+========================= 1 failed, 8 errors in 0.77s ==========================
