@@ -146,9 +146,21 @@ class Client:
     def get_account_devices(self) -> list[dict[str, Any]]:
         """Gets the list of devices the client is logged into.
 
-        :returns: accountDevices: List of devices the user is logged in and their
-            information.
+        :returns: A dict containing info similar to what is shown below:
         :rtype: list[dict[str, Any]]
+
+            .. code-block:: json
+
+                [
+                  {
+                    "deviceId": "[Redacted]",
+                    "deviceType": "PS4",
+                    "activationType": "PSN_GAME_V3",
+                    "activationDate": "2021-02-05T20:11:27.815Z",
+                    "accountDeviceVector": "[Redacted]"
+                  }
+                ]
+
 
         .. code-block:: Python
 
