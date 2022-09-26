@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.10.7, pytest-7.1.3, pluggy-1.0.0
+platform linux -- Python 3.10.6, pytest-7.1.3, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
-plugins: vcr-1.0.2, cov-3.0.0
+plugins: cov-3.0.0, vcr-1.0.2
 collected 21 items
 
 tests/unit_tests/test_client.py .........                                [ 42%]
@@ -9,24 +9,24 @@ tests/unit_tests/test_user.py ............                               [100%]
 
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
----------- coverage: platform linux, python 3.10.7-final-0 -----------
+---------- coverage: platform linux, python 3.10.6-final-0 -----------
 Name                                                                                                       Stmts   Miss  Cover
 ------------------------------------------------------------------------------------------------------------------------------
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/__init__.py                     1      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/core/__init__.py                0      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py          46     11    76%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py       9      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/__init__.py              0      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               47      3    94%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/group.py                52     37    29%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               17      9    47%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 55      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      32      6    81%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/__init__.py               0      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/endpoints.py              2      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       71     39    45%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/__init__.py                     1      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/__init__.py                0      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py          46     11    76%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py       9      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/__init__.py              0      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               47      3    94%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/group.py                52     37    29%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               17      9    47%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 55      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      32      6    81%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/__init__.py               0      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/endpoints.py              2      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       71     39    45%
 ------------------------------------------------------------------------------------------------------------------------------
 TOTAL                                                                                                        345    105    70%
 
-============================== 21 passed in 1.40s ==============================
+============================== 21 passed in 1.54s ==============================
