@@ -59,26 +59,47 @@ from psnawp_api import PSNAWP
 
 psnawp = PSNAWP('<64 character npsso code>')
 
-# Client that is you
+# This is you
 client = psnawp.me()
 print(client.online_id)
 print(client.account_id)
 print(client.get_account_devices())
+print(client.get_profile_legacy())
 print(client.friends_list())
 print(client.blocked_list())
+print(client.available_to_play())
+groups = client.get_groups()
+print(groups)
 
 # Getting user from online
-user_online_id = psnawp.user(online_id="VaultTec_Trading")
-print(user_online_id.online_id)
-print(user_online_id.account_id)
-print(user_online_id.profile())
-print(user_online_id.get_presence())
-print(user_online_id.friendship())
-print(user_online_id.is_blocked())
+example_user_1 = psnawp.user(online_id="VaultTec-Co")
+example_user_2 = psnawp.user(online_id="test")
+print(example_user_1.online_id)
+print(example_user_1.account_id)
+print(example_user_1.profile())
+print(example_user_1.prev_online_id)
+print(example_user_1.get_presence())
+print(example_user_1.friendship())
+print(example_user_1.is_blocked())
 
 # Getting user from Account ID
-user_account_id = psnawp.user(account_id='1802043923080044300')
-# Same functions as shown above
+user_account_id = psnawp.user(account_id='9122947611907501295')
+print(user_account_id.online_id)
+
+# Sending Message
+group = psnawp.group(group_id='38335156987791a6750a33ae452ec8666177b65e-103')
+print(group.get_group_information())
+print(group.get_conversation(10))
+print(group.send_message("Hello World"))
+print(group.change_name("API Testing 3"))
+print(group.leave_group())
+
+# Creating new group
+new_group = psnawp.group(users_list=[example_user_1, example_user_2])
+
+search = psnawp.search()
+print(search.get_title_details(title_id="PPSA03420_00"))
+print(search.universal_search("GTA 5"))
  ```
 Sending private message only works if the message group between you and user already exists otherwise it will throw HTTP Status Code 429. Basically you would have to create the group yourself through the APP or ask the user to send you message first.
 
