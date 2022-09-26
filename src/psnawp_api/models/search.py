@@ -1,8 +1,7 @@
 import json
 
-from psnawp_api.core import psnawp_exceptions
-from psnawp_api.utils.request_builder import RequestBuilder
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.request_builder import RequestBuilder
 
 
 class Search:
@@ -20,7 +19,7 @@ class Search:
         """
         self._request_builder = request_builder
 
-    def universal_search(self, search_query):
+    def universal_search(self, search_query: str, limit: int = 20):
         """Searches the Playstation Website. Note: It does not work as of now and the endpoints returns whole html page.
 
         .. note::
@@ -29,6 +28,8 @@ class Search:
 
         :param search_query: search query
         :type search_query: str
+        :param limit: Limit of number of results
+        :type limit: int
 
         :returns: A dict containing info similar to what is shown below (Not all values
             are shown because of space limitations):
@@ -66,23 +67,14 @@ class Search:
                     "fallbackQueried": false
                 }
 
-
-        :raises: ``PSNAWPIllegalArgumentError`` If the search query is empty
-
         """
-
-        # If user tries to do empty search
-        if len(search_query) <= 0:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError(
-                "search_query must contain a value."
-            )
 
         data = {
             "searchTerm": search_query,
             "domainRequests": [
                 {
                     "domain": "ConceptGameMobileApp",
-                    "pagination": {"cursor": "", "pageSize": 20},
+                    "pagination": {"cursor": "", "pageSize": limit},
                     "featureFlags": {"isSpartacusEnabled": True},
                 }
             ],

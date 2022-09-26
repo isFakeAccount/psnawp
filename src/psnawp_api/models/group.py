@@ -47,7 +47,6 @@ class Group:
 
         if self.group_id is not None:
             self.get_group_information()
-            print()
         elif self.users is not None:
             self._create_group()
 

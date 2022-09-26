@@ -91,7 +91,7 @@ class Authenticator:
             self.auth_properties["expires_in"] + time.time()
         )
         if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            print(
+            self.authenticator_logger.warning(
                 "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
             )
 
