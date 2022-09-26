@@ -50,6 +50,13 @@ def test_client__get_friends(psnawp_fixture):
 
 
 @pytest.mark.vcr()
+def test_client__get_groups(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        client = psnawp_fixture.me()
+        list(client.get_groups(limit=10))
+
+
+@pytest.mark.vcr()
 def test_client__available_to_play(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
