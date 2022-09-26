@@ -4,69 +4,9 @@ rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths:
 plugins: cov-3.0.0, vcr-1.0.2
 collected 21 items
 
-tests/unit_tests/test_client.py ....F....                                [ 42%]
+tests/unit_tests/test_client.py .........                                [ 42%]
 tests/unit_tests/test_user.py ............                               [100%]
 
-=================================== FAILURES ===================================
-_________________________ test_client__account_devices _________________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fe1630dd6c0>
-
-    @pytest.mark.vcr()
-    def test_client__account_devices(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            client = psnawp_fixture.me()
->           client.get_account_devices()
-
-tests/unit_tests/test_client.py:42:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py:181: in get_account_devices
-    response = self.request_builder.get(
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py:74: in get
-    response = requests.get(
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/requests/api.py:73: in get
-    return request("get", url, params=params, **kwargs)
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/requests/api.py:59: in request
-    return session.request(method=method, url=url, **kwargs)
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/requests/sessions.py:587: in request
-    resp = self.send(prep, **send_kwargs)
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/requests/sessions.py:701: in send
-    r = adapter.send(request, **kwargs)
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/requests/adapters.py:489: in send
-    resp = conn.urlopen(
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
-    httplib_response = self._make_request(
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/urllib3/connectionpool.py:440: in _make_request
-    httplib_response = conn.getresponse(buffering=True)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-self = <vcr.patch.VCRRequestsHTTPSConnectiontests/unit_tests/cassettes/test_client__account_devices.yaml object at 0x7fe1630c9ab0>
-_ = False, kwargs = {'buffering': True}
-
-    def getresponse(self, _=False, **kwargs):
-        """Retrieve the response"""
-        # Check to see if the cassette has a response for this request. If so,
-        # then return it
-        if self.cassette.can_play_response_for(self._vcr_request):
-            log.info("Playing response for {} from cassette".format(self._vcr_request))
-            response = self.cassette.play_response(self._vcr_request)
-            return VCRHTTPResponse(response)
-        else:
-            if self.cassette.write_protected and self.cassette.filter_request(self._vcr_request):
->               raise CannotOverwriteExistingCassetteException(
-                    cassette=self.cassette, failed_request=self._vcr_request
-                )
-E               vcr.errors.CannotOverwriteExistingCassetteException: Can't overwrite existing cassette ('tests/unit_tests/cassettes/test_client__account_devices.yaml') in your current record mode ('once').
-E               No match for the request (<Request (GET) https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita>) was found.
-E               Found 1 similar requests with 1 different matcher(s) :
-E
-E               1 - (<Request (GET) https://dms.api.playstation.com/api/v1/devices/accounts/me>).
-E               Matchers succeeded : ['method']
-E               Matchers failed :
-E               uri - assertion failure :
-E               https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita != https://dms.api.playstation.com/api/v1/devices/accounts/me
-
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/vcr/stubs/__init__.py:231: CannotOverwriteExistingCassetteException
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.10.6-final-0 -----------
@@ -77,7 +17,7 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/authenticator.py          46     11    76%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py       9      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/__init__.py              0      0   100%
-/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               47      5    89%
+/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               47      3    94%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/group.py                52     37    29%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               17      9    47%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 55      0   100%
@@ -87,8 +27,6 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       71     39    45%
 ------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                        345    107    69%
+TOTAL                                                                                                        345    105    70%
 
-=========================== short test summary info ============================
-FAILED tests/unit_tests/test_client.py::test_client__account_devices - vcr.er...
-========================= 1 failed, 20 passed in 1.50s =========================
+============================== 21 passed in 1.46s ==============================
