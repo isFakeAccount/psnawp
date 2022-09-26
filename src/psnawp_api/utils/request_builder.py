@@ -1,5 +1,4 @@
 import json
-from typing import Any
 
 import requests
 
@@ -8,6 +7,7 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
     PSNAWPForbidden,
     PSNAWPBadRequest,
+    PSNAWPNotAllowed,
     PSNAWPServerError,
     PSNAWPUnauthorized,
 )
@@ -28,6 +28,8 @@ def response_checker(response):
         raise PSNAWPForbidden(response.text)
     elif response.status_code == 404:
         raise PSNAWPNotFound(response.text)
+    elif response.status_code == 405:
+        raise PSNAWPNotAllowed(response.text)
     elif response.status_code >= 500:
         raise PSNAWPServerError(response.text)
     else:
@@ -45,19 +47,20 @@ class RequestBuilder:
 
         """
         self.authenticator = authenticator
-        self.country = "US"
-        self.language = "en"
         self.default_headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
             "Content-Type": "application/json",
+            "Accept-Language": "en-US",
+            "Country": "US",
         }
 
-    def get(self, **kwargs) -> dict[str, Any]:
-        """Handles the GET requests and returns the parsed objects.
+    def get(self, **kwargs) -> requests.Response:
+        """Handles the GET requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
 
-        :returns: Formatted Objects from HTTP Response.
+        :returns: The Request Response Object.
+        :rtype: requests.Response
 
         """
         access_token = self.authenticator.obtain_fresh_access_token()
@@ -65,27 +68,22 @@ class RequestBuilder:
         if "headers" in kwargs.keys():
             headers = {**headers, **kwargs["headers"]}
 
-        params = None
-        if "params" in kwargs.keys():
-            params = kwargs["params"]
-
-        data = None
-        if "data" in kwargs.keys():
-            data = kwargs["data"]
+        params = kwargs.get("params")
+        data = kwargs.get("data")
 
         response = requests.get(
             url=kwargs["url"], headers=headers, params=params, data=data
         )
         response_checker(response)
-        response_dict: dict[str, Any] = response.json()
-        return response_dict
+        return response
 
-    def multipart_post(self, **kwargs) -> dict[str, Any]:
-        """Handles the Multipart POST requests and returns the parsed objects.
+    def patch(self, **kwargs) -> requests.Response:
+        """Handles the POST requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
 
-        :returns: Formatted Objects from HTTP Response.
+        :returns: The Request Response Object.
+        :rtype: requests.Response
 
         """
         access_token = self.authenticator.obtain_fresh_access_token()
@@ -93,9 +91,55 @@ class RequestBuilder:
         if "headers" in kwargs.keys():
             headers = {**headers, **kwargs["headers"]}
 
-        data = None
-        if "data" in kwargs.keys():
-            data = kwargs["data"]
+        params = kwargs.get("params")
+        data = kwargs.get("data")
+
+        response = requests.patch(
+            url=kwargs["url"], headers=headers, data=data, params=params
+        )
+
+        response_checker(response)
+        return response
+
+    def post(self, **kwargs) -> requests.Response:
+        """Handles the POST requests and returns the requests.Response object.
+
+        :param kwargs: The query parameters to add to the request.
+
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        """
+        access_token = self.authenticator.obtain_fresh_access_token()
+        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
+        if "headers" in kwargs.keys():
+            headers = {**headers, **kwargs["headers"]}
+
+        params = kwargs.get("params")
+        data = kwargs.get("data")
+
+        response = requests.post(
+            url=kwargs["url"], headers=headers, data=data, params=params
+        )
+
+        response_checker(response)
+        return response
+
+    def multipart_post(self, **kwargs) -> requests.Response:
+        """Handles the Multipart POST requests and returns the requests.Response object.
+
+        :param kwargs: The query parameters to add to the request.
+
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        """
+        access_token = self.authenticator.obtain_fresh_access_token()
+        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
+        if "headers" in kwargs.keys():
+            headers = {**headers, **kwargs["headers"]}
+
+        data = kwargs.get("data")
 
         response = requests.post(
             url=kwargs["url"],
@@ -109,15 +153,15 @@ class RequestBuilder:
             },
         )
         response_checker(response)
-        response_dict: dict[str, Any] = response.json()
-        return response_dict
+        return response
 
-    def delete(self, **kwargs) -> dict[str, Any]:
-        """Handles the DELETE requests and returns the parsed objects.
+    def delete(self, **kwargs) -> requests.Response:
+        """Handles the DELETE requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
 
-        :returns: Formatted Objects from HTTP Response.
+        :returns: The Request Response Object.
+        :rtype: requests.Response
 
         """
         access_token = self.authenticator.obtain_fresh_access_token()
@@ -125,17 +169,11 @@ class RequestBuilder:
         if "headers" in kwargs.keys():
             headers = {**headers, **kwargs["headers"]}
 
-        params = None
-        if "params" in kwargs.keys():
-            params = kwargs["params"]
-
-        data = None
-        if "data" in kwargs.keys():
-            data = kwargs["data"]
+        params = kwargs.get("params")
+        data = kwargs.get("data")
 
         response = requests.delete(
             url=kwargs["url"], headers=headers, params=params, data=data
         )
         response_checker(response)
-        response_dict: dict[str, Any] = response.json()
-        return response_dict
+        return response

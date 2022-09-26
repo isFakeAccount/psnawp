@@ -1,11 +1,14 @@
 import logging
-from typing import overload, Optional
+import re
+from typing import overload, Optional, Iterable
 
 from psnawp_api.core import authenticator
-from psnawp_api.utils import request_builder
-from psnawp_api.models import client, search, user
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
-import re
+from psnawp_api.models.client import Client
+from psnawp_api.models.user import User
+from psnawp_api.models.group import Group
+from psnawp_api.models.search import Search
+from psnawp_api.utils import request_builder
 
 logging_level = logging.INFO
 
@@ -39,7 +42,7 @@ class PSNAWP:
         """Creates a new client object (your account).
 
         :returns: Client Object
-        :rtype: client.Client
+        :rtype: Client
 
         .. code-block:: Python
 
@@ -48,14 +51,14 @@ class PSNAWP:
             client = psnawp.me()
 
         """
-        return client.Client(self.request_builder)
+        return Client(self.request_builder)
 
     @overload
-    def user(self, online_id: str):
+    def user(self, *, online_id: str):
         ...
 
     @overload
-    def user(self, account_id: str):
+    def user(self, *, account_id: str):
         ...
 
     def user(self, **kwargs):
@@ -70,7 +73,7 @@ class PSNAWP:
         :type kwargs: dict
 
         :returns: User Object
-        :rtype: user.User
+        :rtype: User
 
         :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
 
@@ -92,7 +95,38 @@ class PSNAWP:
             raise PSNAWPIllegalArgumentError(
                 "The account id is not correct. Perhaps you meant online_id?"
             )
-        return user.User(self.request_builder, online_id, account_id)
+        return User(self.request_builder, online_id, account_id)
+
+    @overload
+    def group(self, *, group_id: str) -> Group:
+        ...
+
+    @overload
+    def group(self, *, users_list: Iterable[User]) -> Group:
+        ...
+
+    def group(self, **kwargs) -> Group:
+        """Creates a group object from a Group ID or from list of users.
+
+        :param kwargs: group_id (str): The Group ID of a group usually retrieved with
+            the get_groups() method. users_list(Iterable[User]): A list of users of the
+            members in the group.
+
+        :returns: Group Object
+        :rtype: Group
+
+        :raises: ``PSNAWPIllegalArgumentError`` If None or Both kwargs are passed.
+
+        """
+
+        group_id: Optional[str] = kwargs.get("group_id")
+        users: Optional[Iterable[User]] = kwargs.get("users_list")
+
+        if (group_id and users) or not (group_id or users):
+            raise PSNAWPIllegalArgumentError(
+                "You provide at least Group Id or Users, and not both."
+            )
+        return Group(self.request_builder, self.me(), group_id=group_id, users=users)
 
     def search(self):
         """Creates a new search object
@@ -100,4 +134,4 @@ class PSNAWP:
         :returns: Search Object
 
         """
-        return search.Search(self.request_builder)
+        return Search(self.request_builder)

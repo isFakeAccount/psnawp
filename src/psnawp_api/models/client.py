@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Iterable
 
+from psnawp_api.models.group import Group
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -11,7 +12,11 @@ class Client:
     """The Client class provides the information and methods for the currently authenticated user."""
 
     def __init__(self, request_builder: RequestBuilder):
-        """Initialize a Client instance. This class is intended to be interfaced with through PSNAWP.
+        """Initialize a Client instance.
+
+        .. note::
+
+            This class is intended to be interfaced with through PSNAWP.
 
         :param request_builder: The instance of RequestBuilder. Used to make
             HTTPRequests.
@@ -35,7 +40,7 @@ class Client:
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
-        )
+        ).json()
         online_id: str = response["onlineId"]
         return online_id
 
@@ -54,7 +59,7 @@ class Client:
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}"
-        )
+        ).json()
         account_id: str = response["accountId"]
         return account_id
 
@@ -67,60 +72,60 @@ class Client:
             .. code-block:: json
 
                 {
-                  "profile": {
-                    "onlineId": "VaultTec_Trading",
-                    "accountId": "8520698476712646544",
-                    "npId": "VmF1bHRUZWNfVHJhZGluZ0BiNi51cw==",
-                    "avatarUrls": [
-                      {
-                        "size": "l",
-                        "avatarUrl": "[Redacted]"
-                      }
-                    ],
-                    "plus": 0,
-                    "aboutMe": "r/Fallout76Marketplace Moderator",
-                    "languagesUsed": [
-                      "en"
-                    ],
-                    "trophySummary": {
-                      "level": 1,
-                      "progress": 0,
-                      "earnedTrophies": {
-                        "platinum": 0,
-                        "gold": 0,
-                        "silver": 0,
-                        "bronze": 0
-                      }
-                    },
-                    "isOfficiallyVerified": false,
-                    "personalDetail": {
-                      "firstName": "VaultTec",
-                      "lastName": "TradingCo",
-                      "profilePictureUrls": [
-                        {
-                          "size": "xl",
-                          "profilePictureUrl": "[Redacted]"
+                    "profile": {
+                        "onlineId": "VaultTec_Trading",
+                        "accountId": "8520698476712646544",
+                        "npId": "VmF1bHRUZWNfVHJhZGluZ0BiNi51cw==",
+                        "avatarUrls": [
+                            {
+                                "size": "l",
+                                "avatarUrl": "[Redacted]"
+                            }
+                        ],
+                        "plus": 0,
+                        "aboutMe": "r/Fallout76Marketplace Moderator",
+                        "languagesUsed": [
+                            "en"
+                        ],
+                        "trophySummary": {
+                            "level": 1,
+                            "progress": 0,
+                            "earnedTrophies": {
+                                "platinum": 0,
+                                "gold": 0,
+                                "silver": 0,
+                                "bronze": 0
+                            }
+                        },
+                        "isOfficiallyVerified": false,
+                        "personalDetail": {
+                            "firstName": "VaultTec",
+                            "lastName": "TradingCo",
+                            "profilePictureUrls": [
+                                {
+                                    "size": "xl",
+                                    "profilePictureUrl": "[Redacted]"
+                                }
+                            ]
+                        },
+                        "personalDetailSharing": "no",
+                        "personalDetailSharingRequestMessageFlag": false,
+                        "primaryOnlineStatus": "offline",
+                        "presences": [
+                            {
+                                "onlineStatus": "offline",
+                                "hasBroadcastData": false,
+                                "lastOnlineDate": "2021-02-05T20:14:45Z"
+                            }
+                        ],
+                        "friendRelation": "no",
+                        "requestMessageFlag": false,
+                        "blocking": false,
+                        "following": false,
+                        "consoleAvailability": {
+                            "availabilityStatus": "offline"
                         }
-                      ]
-                    },
-                    "personalDetailSharing": "no",
-                    "personalDetailSharingRequestMessageFlag": false,
-                    "primaryOnlineStatus": "offline",
-                    "presences": [
-                      {
-                        "onlineStatus": "offline",
-                        "hasBroadcastData": false,
-                        "lastOnlineDate": "2021-02-05T20:14:45Z"
-                      }
-                    ],
-                    "friendRelation": "no",
-                    "requestMessageFlag": false,
-                    "blocking": false,
-                    "following": false,
-                    "consoleAvailability": {
-                      "availabilityStatus": "offline"
                     }
-                  }
                 }
 
 
@@ -137,10 +142,10 @@ class Client:
             "following,consoleAvailability"
         }
 
-        response = self.request_builder.get(
+        response: dict[str, Any] = self.request_builder.get(
             url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
             params=params,
-        )
+        ).json()
 
         return response
 
@@ -153,13 +158,13 @@ class Client:
             .. code-block:: json
 
                 [
-                  {
-                    "deviceId": "[Redacted]",
-                    "deviceType": "PS4",
-                    "activationType": "PSN_GAME_V3",
-                    "activationDate": "2021-02-05T20:11:27.815Z",
-                    "accountDeviceVector": "[Redacted]"
-                  }
+                    {
+                        "deviceId": "[Redacted]",
+                        "deviceType": "PS4",
+                        "activationType": "PSN_GAME_V3",
+                        "activationDate": "2021-02-05T20:11:27.815Z",
+                        "accountDeviceVector": "[Redacted]"
+                    }
                 ]
 
 
@@ -169,9 +174,13 @@ class Client:
             print(client.get_account_devices())
 
         """
+        params = {
+            "includeFields": "device,systemData",
+            "platform": "PS5,PS4,PS3,PSVita",
+        }
         response = self.request_builder.get(
-            url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}"
-        )
+            url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}", params=params
+        ).json()
 
         # Just so mypy doesn't complain
         account_devices: list[dict[str, Any]] = response.get("accountDevices", [])
@@ -200,7 +209,7 @@ class Client:
         params = {"limit": limit}
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list']}", params=params
-        )
+        ).json()
         return (
             User(
                 request_builder=self.request_builder,
@@ -227,7 +236,7 @@ class Client:
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}"
-        )
+        ).json()
         return (
             User(
                 request_builder=self.request_builder,
@@ -254,7 +263,7 @@ class Client:
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
-        )
+        ).json()
         return (
             User(
                 request_builder=self.request_builder,
@@ -262,6 +271,35 @@ class Client:
                 online_id=None,
             )
             for account_id in response["blockList"]
+        )
+
+    def get_groups(self, limit: int = 200, offset: int = 0) -> Iterable[Group]:
+        """Gets all the groups you have participated in.
+
+        :param limit: The number of groups to receive.
+        :type limit: int
+        :param offset: Lets you exclude first N items groups. Offset = 10 lets you skip
+            the first 10 groups.
+        :type offset: int
+
+        :returns: Iterable of Group Objects.
+        :rtype: Iterable[Group]
+
+        """
+        param = {"includeFields": "members", "limit": limit, "offset": offset}
+
+        response = self.request_builder.get(
+            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}", params=param
+        ).json()
+
+        return (
+            Group(
+                request_builder=self.request_builder,
+                client=self,
+                group_id=group_info["groupId"],
+                users=None,
+            )
+            for group_info in response["groups"]
         )
 
     def __repr__(self):

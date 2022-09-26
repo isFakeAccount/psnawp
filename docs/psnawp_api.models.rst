@@ -12,10 +12,10 @@ psnawp\_api.models.client module
    :undoc-members:
    :show-inheritance:
 
-psnawp\_api.models.message\_thread module
------------------------------------------
+psnawp\_api.models.group module
+-------------------------------
 
-.. automodule:: psnawp_api.models.message_thread
+.. automodule:: psnawp_api.models.group
    :members:
    :undoc-members:
    :show-inheritance:

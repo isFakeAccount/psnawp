@@ -26,5 +26,9 @@ class PSNAWPNotFound(PSNAWPException):
     """Exception raised if resource not found."""
 
 
+class PSNAWPNotAllowed(PSNAWPException):
+    """Exception raised if resource doesn't support this method."""
+
+
 class PSNAWPServerError(PSNAWPException):
     """Exception raised if there is a problem at the server."""

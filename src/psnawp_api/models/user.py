@@ -20,6 +20,10 @@ class User:
     ):
         """Constructor of Class User. Creates user object using online id or account id.
 
+        .. note::
+
+            This class is intended to be interfaced with through PSNAWP.
+
         :param request_builder: Used to call http requests.
         :type request_builder: RequestBuilder
         :param online_id: Online ID (GamerTag) of the user.
@@ -94,10 +98,10 @@ class User:
 
         try:
             query = {"fields": "accountId,onlineId,currentOnlineId"}
-            response = self.request_builder.get(
+            response: dict[str, Any] = self.request_builder.get(
                 url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=online_id)}",
                 params=query,
-            )
+            ).json()
             return response
         except PSNAWPNotFound as not_found:
             raise PSNAWPNotFound(
@@ -113,32 +117,32 @@ class User:
             .. code-block:: json
 
                 {
-                  "onlineId": "VaultTec-Co",
-                  "aboutMe": "r/Fallout76Marketplace Moderator",
-                  "avatars": [
-                    {
-                      "size": "s",
-                      "url": "[Redacted]"
-                    },
-                    {
-                      "size": "xl",
-                      "url": "[Redacted]"
-                    },
-                    {
-                      "size": "l",
-                      "url": "[Redacted]"
-                    },
-                    {
-                      "size": "m",
-                      "url": "[Redacted]"
-                    }
-                  ],
-                  "languages": [
-                    "en-US"
-                  ],
-                  "isPlus": false,
-                  "isOfficiallyVerified": false,
-                  "isMe": false
+                    "onlineId": "VaultTec-Co",
+                    "aboutMe": "r/Fallout76Marketplace Moderator",
+                    "avatars": [
+                        {
+                            "size": "s",
+                            "url": "[Redacted]"
+                        },
+                        {
+                            "size": "xl",
+                            "url": "[Redacted]"
+                        },
+                        {
+                            "size": "l",
+                            "url": "[Redacted]"
+                        },
+                        {
+                            "size": "m",
+                            "url": "[Redacted]"
+                        }
+                    ],
+                    "languages": [
+                        "en-US"
+                    ],
+                    "isPlus": false,
+                    "isOfficiallyVerified": false,
+                    "isMe": false
                 }
 
 
@@ -152,9 +156,9 @@ class User:
         """
 
         try:
-            response = self.request_builder.get(
+            response: dict[str, Any] = self.request_builder.get(
                 url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
-            )
+            ).json()
             return response
         except PSNAWPBadRequest as bad_request:
             raise PSNAWPNotFound(
@@ -190,12 +194,11 @@ class User:
         """
         try:
             params = {"type": "primary"}
-            response = self.request_builder.get(
+            response: dict[str, Any] = self.request_builder.get(
                 url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['basic_presences']}",
                 params=params,
-            )
-            presence: dict[Any, Any] = response.get("basicPresence", response)
-            return presence
+            ).json()
+            return response
         except PSNAWPForbidden as forbidden:
             raise PSNAWPForbidden(
                 f"You are not allowed to check the presence of user {self.online_id}"
@@ -223,11 +226,10 @@ class User:
             print(user_example.friendship())
 
         """
-        response = self.request_builder.get(
+        response: dict[Any, Any] = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_summary'].format(account_id=self.account_id)}"
-        )
-        friendship_stats: dict[Any, Any] = response
-        return friendship_stats
+        ).json()
+        return response
 
     def is_blocked(self) -> bool:
         """Checks if the user is blocked by you
@@ -243,7 +245,7 @@ class User:
         """
         response = self.request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
-        )
+        ).json()
         return self.account_id in response["blockList"]
 
     def __repr__(self):
