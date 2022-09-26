@@ -3,7 +3,7 @@
 
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
-[![PyPI version](https://badge.fury.io/py/PSNAWP.svg)](https://badge.fury.io/py/PSNAWP)
+[![PyPI version](https://badge.fury.io/py/psnawp.svg)](https://badge.fury.io/py/PSNAWP)
 [![Downloads](https://pepy.tech/badge/psnawp)](https://pepy.tech/project/psnawp)
 [![python-logo](https://img.shields.io/badge/python-3.9_|_3.10-blue.svg)](https://www.python.org/)
 [![pytest](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml)
