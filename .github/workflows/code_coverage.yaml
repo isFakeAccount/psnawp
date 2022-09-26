@@ -24,7 +24,7 @@ jobs:
           USER_NAME: ${{ secrets.USER_NAME }}
       - name: PyTest Coverage comment
         id: coverageComment
-        uses: MishaKav/pytest-coverage-comment@v1.1.29
+        uses: MishaKav/pytest-coverage-comment@main
         with:
           hide-comment: true
           badge-title: Coverage
@@ -39,7 +39,7 @@ jobs:
 
       - name: Update Readme with Coverage Html
         run: |
-          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n${{ steps.summary_report.outputs.content }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
+          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
 
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
