@@ -6,15 +6,19 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita
   response:
     body:
       string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
@@ -29,17 +33,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Sep 2022 22:39:35 GMT
+      - Mon, 26 Sep 2022 00:21:40 GMT
       Server:
       - nginx
       X-CorrelationId:
-      - 9d270243-d7c1-46d2-a2ce-837ab0a065e8
+      - 4de2cbe6-349b-418c-9b99-e479ef915450
       X-Psn-Correlation-Id:
-      - 9d270243-d7c1-46d2-a2ce-837ab0a065e8
+      - 4de2cbe6-349b-418c-9b99-e479ef915450
       X-Psn-Request-Id:
-      - 9d270243-d7c1-46d2-a2ce-837ab0a065e8
+      - 4de2cbe6-349b-418c-9b99-e479ef915450
       X-RequestId:
-      - 9d270243-d7c1-46d2-a2ce-837ab0a065e8
+      - 4de2cbe6-349b-418c-9b99-e479ef915450
     status:
       code: 200
       message: OK

@@ -18,8 +18,8 @@ psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fe1630dd6c0>
             client = psnawp_fixture.me()
 >           client.get_account_devices()
 
-tests/unit_tests/test_client.py:42: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit_tests/test_client.py:42:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/models/client.py:181: in get_account_devices
     response = self.request_builder.get(
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py:74: in get
@@ -38,7 +38,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     httplib_response = self._make_request(
 /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/urllib3/connectionpool.py:440: in _make_request
     httplib_response = conn.getresponse(buffering=True)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = <vcr.patch.VCRRequestsHTTPSConnectiontests/unit_tests/cassettes/test_client__account_devices.yaml object at 0x7fe1630c9ab0>
 _ = False, kwargs = {'buffering': True}
@@ -59,7 +59,7 @@ _ = False, kwargs = {'buffering': True}
 E               vcr.errors.CannotOverwriteExistingCassetteException: Can't overwrite existing cassette ('tests/unit_tests/cassettes/test_client__account_devices.yaml') in your current record mode ('once').
 E               No match for the request (<Request (GET) https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita>) was found.
 E               Found 1 similar requests with 1 different matcher(s) :
-E               
+E
 E               1 - (<Request (GET) https://dms.api.playstation.com/api/v1/devices/accounts/me>).
 E               Matchers succeeded : ['method']
 E               Matchers failed :
