@@ -1,6 +1,7 @@
 # My files
 .idea
 test.py
+src/psnawp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
