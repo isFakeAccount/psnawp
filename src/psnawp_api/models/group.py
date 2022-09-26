@@ -1,24 +1,21 @@
 import json
-from typing import TYPE_CHECKING, Optional, Iterable
+from typing import Optional, Iterable
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPIllegalArgumentError,
     PSNAWPNotFound,
     PSNAWPNotAllowed,
+    PSNAWPBadRequest,
 )
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
-
-if TYPE_CHECKING:
-    from psnawp_api.models.client import Client
 
 
 class Group:
     def __init__(
         self,
         request_builder: RequestBuilder,
-        client: "Client",
         group_id: Optional[str],
         users: Optional[Iterable[User]],
     ):
@@ -31,8 +28,6 @@ class Group:
         :param request_builder: The instance of RequestBuilder. Used to make
             HTTPRequests.
         :type request_builder: RequestBuilder
-        :param client: The user who is logged in. Used to create message threads.
-        :type client: Client
         :param group_id: The Group ID of a group.
         :type group_id: Optional[str]
         :param users: A list of users of the members in the group.
@@ -41,7 +36,6 @@ class Group:
         """
 
         self._request_builder = request_builder
-        self._client = client
         self.group_id = group_id
         self.users = users
 
@@ -87,10 +81,10 @@ class Group:
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['group_settings'].format(group_id=self.group_id)}",
                 data=json.dumps(data),
             )
-        except PSNAWPNotAllowed as not_allowed:
-            raise PSNAWPNotFound(
+        except PSNAWPBadRequest as bad_req:
+            raise PSNAWPNotAllowed(
                 f"The group name of Group ID {self.group_id} does cannot be changed. Most likely it is a DM and their names can't be changed."
-            ) from not_allowed
+            ) from bad_req
 
     def get_group_information(self):
         """Gets the group chat information such as about me, avatars, languages etc...
@@ -246,11 +240,6 @@ class Group:
 
         """
 
-        try:
-            self._request_builder.delete(
-                url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}"
-            )
-        except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound(
-                f"You are not part of Group ID {self.group_id}."
-            ) from not_found
+        self._request_builder.delete(
+            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}"
+        )

@@ -37,7 +37,7 @@ class User:
         :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
         """
-        self.request_builder = request_builder
+        self._request_builder = request_builder
         self.online_id = online_id
         self.account_id = account_id
         self._prev_online_id = online_id
@@ -98,7 +98,7 @@ class User:
 
         try:
             query = {"fields": "accountId,onlineId,currentOnlineId"}
-            response: dict[str, Any] = self.request_builder.get(
+            response: dict[str, Any] = self._request_builder.get(
                 url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=online_id)}",
                 params=query,
             ).json()
@@ -156,7 +156,7 @@ class User:
         """
 
         try:
-            response: dict[str, Any] = self.request_builder.get(
+            response: dict[str, Any] = self._request_builder.get(
                 url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
             ).json()
             return response
@@ -194,7 +194,7 @@ class User:
         """
         try:
             params = {"type": "primary"}
-            response: dict[str, Any] = self.request_builder.get(
+            response: dict[str, Any] = self._request_builder.get(
                 url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['basic_presences']}",
                 params=params,
             ).json()
@@ -226,7 +226,7 @@ class User:
             print(user_example.friendship())
 
         """
-        response: dict[Any, Any] = self.request_builder.get(
+        response: dict[Any, Any] = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_summary'].format(account_id=self.account_id)}"
         ).json()
         return response
@@ -243,7 +243,7 @@ class User:
             print(user_example.is_blocked())
 
         """
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
         ).json()
         return self.account_id in response["blockList"]

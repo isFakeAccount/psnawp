@@ -23,7 +23,7 @@ class Client:
         :type request_builder: RequestBuilder
 
         """
-        self.request_builder = request_builder
+        self._request_builder = request_builder
 
     @property
     def online_id(self) -> str:
@@ -38,7 +38,7 @@ class Client:
             print(client.online_id)
 
         """
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
         ).json()
         online_id: str = response["onlineId"]
@@ -57,7 +57,7 @@ class Client:
             print(client.account_id)
 
         """
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}"
         ).json()
         account_id: str = response["accountId"]
@@ -142,7 +142,7 @@ class Client:
             "following,consoleAvailability"
         }
 
-        response: dict[str, Any] = self.request_builder.get(
+        response: dict[str, Any] = self._request_builder.get(
             url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
             params=params,
         ).json()
@@ -178,7 +178,7 @@ class Client:
             "includeFields": "device,systemData",
             "platform": "PS5,PS4,PS3,PSVita",
         }
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}", params=params
         ).json()
 
@@ -207,12 +207,12 @@ class Client:
         limit = min(1000, limit)
 
         params = {"limit": limit}
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list']}", params=params
         ).json()
         return (
             User(
-                request_builder=self.request_builder,
+                request_builder=self._request_builder,
                 account_id=account_id,
                 online_id=None,
             )
@@ -234,12 +234,12 @@ class Client:
                 ...
 
         """
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}"
         ).json()
         return (
             User(
-                request_builder=self.request_builder,
+                request_builder=self._request_builder,
                 account_id=account_id_dict["accountId"],
                 online_id=None,
             )
@@ -261,12 +261,12 @@ class Client:
                 ...
 
         """
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
         ).json()
         return (
             User(
-                request_builder=self.request_builder,
+                request_builder=self._request_builder,
                 account_id=account_id,
                 online_id=None,
             )
@@ -288,14 +288,13 @@ class Client:
         """
         param = {"includeFields": "members", "limit": limit, "offset": offset}
 
-        response = self.request_builder.get(
+        response = self._request_builder.get(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}", params=param
         ).json()
 
         return (
             Group(
-                request_builder=self.request_builder,
-                client=self,
+                request_builder=self._request_builder,
                 group_id=group_info["groupId"],
                 users=None,
             )
