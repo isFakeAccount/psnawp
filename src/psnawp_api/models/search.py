@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
