@@ -38,7 +38,7 @@ class PSNAWP:
             authenticator.Authenticator(npsso_cookie)
         )
 
-    def me(self):
+    def me(self) -> Client:
         """Creates a new client object (your account).
 
         :returns: Client Object
@@ -54,14 +54,14 @@ class PSNAWP:
         return Client(self._request_builder)
 
     @overload
-    def user(self, *, online_id: str):
+    def user(self, *, online_id: str) -> User:
         ...
 
     @overload
-    def user(self, *, account_id: str):
+    def user(self, *, account_id: str) -> User:
         ...
 
-    def user(self, **kwargs):
+    def user(self, **kwargs) -> User:
         """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
 
         .. note::
@@ -134,7 +134,7 @@ class PSNAWP:
             )
         return Group(self._request_builder, group_id=group_id, users=users)
 
-    def search(self):
+    def search(self) -> Search:
         """Creates a new search object
 
         :returns: Search Object

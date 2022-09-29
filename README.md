@@ -97,7 +97,6 @@ search = psnawp.search()
 print(search.get_title_details(title_id="PPSA03420_00"))
 print(search.universal_search("GTA 5"))
  ```
-Sending private message only works if the message group between you and user already exists otherwise it will throw HTTP Status Code 429. Basically you would have to create the group yourself through the APP or ask the user to send you message first.
 
 **Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**
 
