@@ -70,6 +70,8 @@ class Group:
 
         :returns: None
 
+        :raises: ``PSNAWPBadRequest`` If you are not part of group or the group is a DM.
+
         """
 
         data = {"groupName": {"value": group_name}}
