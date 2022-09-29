@@ -5,7 +5,7 @@ import re
 import pytest
 
 import psnawp_api
-from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
+from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
 from tests.unit_tests import my_vcr
 
 
@@ -18,7 +18,7 @@ def test_client__authentication():
 @pytest.mark.vcr()
 def test_client__incorrect_npsso():
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        with pytest.raises(PSNAWPIllegalArgumentError):
+        with pytest.raises(PSNAWPAuthenticationError):
             psnawp_api.psnawp.PSNAWP("dsjfhsdkjfhskjdhlf")
 
 

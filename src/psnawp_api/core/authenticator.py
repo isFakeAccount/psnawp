@@ -26,13 +26,9 @@ class Authenticator:
 
         :param npsso_cookie: npsso cookie obtained from PSN website.
 
-        :raises: If npsso code len is not 64 characters.
+        :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        if len(npsso_cookie) != 64:
-            raise psnawp_exceptions.PSNAWPIllegalArgumentError(
-                "Your npsso code is incorrect!"
-            )
         self.npsso_token = npsso_cookie
         self.auth_properties: dict[str, Any] = {}
         self.authenticate()
@@ -60,9 +56,12 @@ class Authenticator:
             data=data,
         )
         self.auth_properties = response.json()
+        self.auth_properties["access_token_expires_at"] = (
+            self.auth_properties["expires_in"] + time.time()
+        )
         if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
             self.authenticator_logger.warning(
-                "Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
+                "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
             )
         return self.auth_properties["access_token"]
 
@@ -102,7 +101,7 @@ class Authenticator:
         While the refresh code lasts about 2 months. After 2 months a new npsso code is
         needed.
 
-        :raises: If authentication is not successful.
+        :raises: ``PSNAWPAuthenticationError`` If authentication is not successful.
 
         """
         cookies = {"Cookie": f"npsso={self.npsso_token}"}

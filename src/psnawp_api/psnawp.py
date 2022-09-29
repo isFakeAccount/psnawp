@@ -31,7 +31,7 @@ class PSNAWP:
         :param npsso_cookie: npsso cookie obtained from PSN website.
         :type npsso_cookie: str
 
-        :raises: ``PSNAWPIllegalArgumentError`` If npsso code len is not 64 characters.
+        :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
         self._request_builder = request_builder.RequestBuilder(
@@ -76,6 +76,8 @@ class PSNAWP:
         :rtype: User
 
         :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
+
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
 
         .. code-block:: Python
 

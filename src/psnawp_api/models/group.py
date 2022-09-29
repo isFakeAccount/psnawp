@@ -33,6 +33,8 @@ class Group:
         :param users: A list of users of the members in the group.
         :type users: Optional[Iterable[User]]
 
+        :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
+
         """
 
         self._request_builder = request_builder
