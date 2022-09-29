@@ -6,10 +6,14 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
@@ -39,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Sep 2022 03:16:01 GMT
+      - Thu, 29 Sep 2022 17:25:21 GMT
       Server:
       - Apache
       Vary:
@@ -56,10 +60,14 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
@@ -87,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Sep 2022 03:16:01 GMT
+      - Thu, 29 Sep 2022 17:25:21 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -95,7 +103,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0487073046672919551
+      - 0905445972267558706
     status:
       code: 200
       message: OK

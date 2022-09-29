@@ -18,39 +18,33 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec-Co/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5791?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlN1nXOV9JRSkxOzi/NKwHL
-        GJkbGZoamlmamhpbGJuaGhqZmCnV1gIAAAD//wMADQC2nUgAAAA=
+      string: '{"error": {"referenceId": "f2a1584c-401e-11ed-8e8a-a1b3c2b0acae", "code":
+        2285581, "message": "Resource not found (groupId=''~25C4C5406FD6D50E.763F9A1EB6AB5791'')"}}'
     headers:
       Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
+      - Authorization, Content-Type
       Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
       Access-Control-Allow-Origin:
       - '*'
-      Cache-Control:
-      - no-store
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Length:
-      - '95'
+      - '157'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:25:24 GMT
+      - Thu, 29 Sep 2022 17:48:38 GMT
       Server:
       - Apache
-      Vary:
-      - accept-encoding
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

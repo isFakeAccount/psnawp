@@ -1,58 +1,58 @@
 interactions:
-  - request:
-      body: null
-      headers:
-        Accept:
-          - '*/*'
-        Accept-Encoding:
-          - gzip, deflate
-        Connection:
-          - keep-alive
-        User-Agent:
-          - python-requests/2.28.1
-      method: GET
-      uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code
-    response:
-      body:
-        string: ''
-      headers:
-        Cache-Control:
-          - no-cache, no-store, max-age=0, must-revalidate
-        Connection:
-          - keep-alive
-        Content-Length:
-          - '0'
-        Date:
-          - Thu, 29 Sep 2022 16:44:14 GMT
-        Expires:
-          - '0'
-        Location:
-          - https://my.account.sony.com/central/signin/?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=8289dd3a-1ffe-47f3-92e0-d2eeddcd0c40
-        Server:
-          - nginx
-        Set-Cookie:
-          - _abck=245DB0A4AE67228846704C7F6BDAA976~-1~YAAQW2fNF1mi7FiDAQAAjWoiighufzzZqc4okgo1fzRErNRtsfMqMimlbs0ASK1vRm8IE55sTYHc4LI3JetZZ7bpiiqfb+bhiUeztG71gfra7OE7GcZ9fgbvDeMSBr+pa+UCrmP5iF8VxN7aWp91CC+qqn8+zWKilq9UtChF6vNWW/ujLN5VX8cmDSUrxmL8+XW8t7JZh73iMxy9EmPlVuICBKMAuGBj6KFDqt/+3HKwLEbEfSofvZa/Gt2k3zIjHmd3ON7DDmo8jgDjB6QbGqdhG1VNzz9juePvsH4exFny3vUxJJZN5t8+81TobIqynr/5Lgy5TLfGxkxpCNZI01AFSiO37M6Qa1Ra7A==~-1~-1~-1;
-            Domain=.sony.com; Path=/; Expires=Thu, 06 Oct 2022 16:44:14 GMT; Max-Age=604800;
-            Secure
-          - bm_sz=63CAB204DCFE26D0969506BBE23836E8~YAAQW2fNF1qi7FiDAQAAjWoiihF6WHUm83jj9QmVM2Ayg3lQSjl9NYuTp53Kz7H4134M0ZiSuqrd7A1l9DFmFZIC4gHAiRM+12dpgdxlPBsQK8RP2GEjcIkg++6v7KLa6Y95bh7mZOv3ieNTUrSodQpd83DDRzwhKCp9I5wz8QKhgwU3NXHnfaSeDDfBEWZtCjMabssu+2mrkAHCy2U+RLwpTh82MLU6a5ngJb1/8CXDk6xhUxEX1js+XGvDZZrzJ2rsAdGjJfVTuVvfYd9QNZrXYvc6bZTeiDCOLbwHRArPGO1BMBj3zELbCC937+BKexbkFqv9i9hUEuID7P9a40oKuWV7Jvbf0kcu/vETpsWJr9yUpv0uDjtkZWI=~3159097~3617345;
-            Domain=.sony.com; Path=/; Expires=Thu, 29 Sep 2022 20:44:14 GMT; Max-Age=14400
-        Strict-Transport-Security:
-          - max-age=31536000 ; includeSubDomains
-        X-Content-Type-Options:
-          - nosniff
-        X-CorrelationId:
-          - 8289dd3a-1ffe-47f3-92e0-d2eeddcd0c40
-        X-Frame-Options:
-          - DENY
-        X-Psn-Correlation-Id:
-          - 8289dd3a-1ffe-47f3-92e0-d2eeddcd0c40
-        X-Psn-Request-Id:
-          - 282a92ce8df3c170c939298c0b4a9e49
-        X-RequestId:
-          - 282a92ce8df3c170c939298c0b4a9e49
-        X-XSS-Protection:
-          - 1; mode=block
-      status:
-        code: 302
-        message: Moved Temporarily
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Thu, 29 Sep 2022 17:30:05 GMT
+      Expires:
+      - '0'
+      Location:
+      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=751b201a-52ec-4391-83e6-fb1ab40950f3
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=2673EED13A6CB10286D8D78B168621F6~-1~YAAQW2fNF5127ViDAQAA6GJMigiYGk1vtbyYb57Z4pjYhz+GGDU7JRm62vPd2iQSUGfRQ7B7mLs+UGC8potTwQl50MfIUZlFI4gARPB9MGnmLJKMr3kTSjeZy67YKA3cDyibwzpMMllJybHfgT/PONdvq0ccxh7DyHvsaXsY7DSonXZABpXGfibZWWLSE+xUkahAE4LFDBv2tdsewheWBdXl/3jF7EUT8A2TtQiNKxVdBbCZNO7kFl44Set/93GIPZfecmoerza0S0EtXdqGRT4/DjZS5+m5tNvfNqEUBuVjRqG+QonYJ7dMZyMK3Zs7tIqxgwzxKGM83yvCibqKJ0U6eqe6nmPRQi1DmA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Thu, 06 Oct 2022 17:30:05 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=4AFA0A6324A86900C1CBE2026AD4C09A~YAAQW2fNF5527ViDAQAA6GJMihF5AGW0nD4BXNXADGugqxaksqSnRVlPtJn0Zw2Vlw7QMf1Xhd/g8G/+zPCCim1jJRBWJAd0Jb7sok0BR4toXonxAdZdZznJyYXwcJjNKGfV/9uaAWXk8toz6M0xr+RGTK1a5fwOQMcNZGY3B3fkWAM0qC46cRzIDbZKREXIQ+64kHEMz95KlhmXJXhBhUhVKXn0g0CAj7ohf2LffcDEhWZ2sJ4Tv/H7oe8IeqlXU/LNQpLno1U0WfCKkNCsB6YNjUtWbdrY6Yw2NVKzmpis2rHavlxDeIDHKGWIqq6RQu+9dvbokTzJ61gtrVmy6Eautm0M7a6Efe+2Urt8xx8sj8gymJVDSHD7mWY=~4468787~4534580;
+        Domain=.sony.com; Path=/; Expires=Thu, 29 Sep 2022 21:30:05 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 751b201a-52ec-4391-83e6-fb1ab40950f3
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 751b201a-52ec-4391-83e6-fb1ab40950f3
+      X-Psn-Request-Id:
+      - 99d269ebdb3e2e40c67983af3ed8f021
+      X-RequestId:
+      - 99d269ebdb3e2e40c67983af3ed8f021
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
 version: 1

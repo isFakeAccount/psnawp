@@ -29,10 +29,10 @@ class Authenticator:
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        self.npsso_token = npsso_cookie
-        self.auth_properties: dict[str, Any] = {}
-        self.authenticate()
-        self.authenticator_logger = create_logger(__file__)
+        self._npsso_token = npsso_cookie
+        self._auth_properties: dict[str, Any] = {}
+        self._authenticate()
+        self._authenticator_logger = create_logger(__file__)
 
     def obtain_fresh_access_token(self) -> Any:
         """Gets a new access token from refresh token.
@@ -41,11 +41,11 @@ class Authenticator:
 
         """
 
-        if self.auth_properties["access_token_expires_at"] > time.time():
-            return self.auth_properties["access_token"]
+        if self._auth_properties["access_token_expires_at"] > time.time():
+            return self._auth_properties["access_token"]
 
         data = {
-            "refresh_token": self.auth_properties["refresh_token"],
+            "refresh_token": self._auth_properties["refresh_token"],
             "grant_type": "refresh_token",
             "scope": Authenticator.__PARAMS["SCOPE"],
             "token_format": "jwt",
@@ -55,15 +55,15 @@ class Authenticator:
             headers=Authenticator.__AUTH_HEADER,
             data=data,
         )
-        self.auth_properties = response.json()
-        self.auth_properties["access_token_expires_at"] = (
-            self.auth_properties["expires_in"] + time.time()
+        self._auth_properties = response.json()
+        self._auth_properties["access_token_expires_at"] = (
+            self._auth_properties["expires_in"] + time.time()
         )
-        if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            self.authenticator_logger.warning(
+        if self._auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
+            self._authenticator_logger.warning(
                 "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
             )
-        return self.auth_properties["access_token"]
+        return self._auth_properties["access_token"]
 
     def oauth_token(self, code: str) -> None:
         """Obtain the access token using oauth code for the first time, after this the access token is obtained via refresh token.
@@ -85,16 +85,16 @@ class Authenticator:
             headers=Authenticator.__AUTH_HEADER,
             data=data,
         )
-        self.auth_properties = response.json()
-        self.auth_properties["access_token_expires_at"] = (
-            self.auth_properties["expires_in"] + time.time()
+        self._auth_properties = response.json()
+        self._auth_properties["access_token_expires_at"] = (
+            self._auth_properties["expires_in"] + time.time()
         )
-        if self.auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            self.authenticator_logger.warning(
+        if self._auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
+            self._authenticator_logger.warning(
                 "Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!"
             )
 
-    def authenticate(self) -> None:
+    def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
 
         Obtains the access code and the refresh code. Access code lasts about 1 hour.
@@ -104,7 +104,7 @@ class Authenticator:
         :raises: ``PSNAWPAuthenticationError`` If authentication is not successful.
 
         """
-        cookies = {"Cookie": f"npsso={self.npsso_token}"}
+        cookies = {"Cookie": f"npsso={self._npsso_token}"}
         params = {
             "access_type": "offline",
             "client_id": Authenticator.__PARAMS["CLIENT_ID"],

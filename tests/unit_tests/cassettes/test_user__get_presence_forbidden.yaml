@@ -6,10 +6,14 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
@@ -39,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Sep 2022 03:17:20 GMT
+      - Thu, 29 Sep 2022 17:25:21 GMT
       Server:
       - Apache
       Vary:
@@ -56,10 +60,14 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
@@ -67,7 +75,7 @@ interactions:
     uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/6074310610488045645/basicPresences?type=primary
   response:
     body:
-      string: '{"error": {"referenceId": "92c15041-37c9-11ed-8bdc-5b0f1930ae53", "code":
+      string: '{"error": {"referenceId": "b2946ee2-401b-11ed-8142-4348e27eb3df", "code":
         2281486, "message": "Not permitted by access control"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -87,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Sep 2022 03:17:20 GMT
+      - Thu, 29 Sep 2022 17:25:22 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -95,7 +103,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0717095306378760203
+      - 0761598213865668648
     status:
       code: 403
       message: Forbidden

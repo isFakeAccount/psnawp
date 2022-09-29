@@ -6,10 +6,14 @@ interactions:
       - '*/*'
       Accept-Encoding:
       - gzip, deflate
+      Accept-Language:
+      - en-US
       Connection:
       - keep-alive
       Content-Type:
       - application/json
+      Country:
+      - US
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
@@ -17,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/0000000000000000000/profiles
   response:
     body:
-      string: '{"error": {"referenceId": "71919a58-37b1-11ed-b239-89285ecec912", "code":
+      string: '{"error": {"referenceId": "b1aea2a8-401b-11ed-823f-1daacb6adc8b", "code":
         2281473, "message": "Bad Request (path: accountId)"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -37,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Sep 2022 00:24:37 GMT
+      - Thu, 29 Sep 2022 17:25:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -45,7 +49,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0751552459275831154
+      - 0652808433914521915
     status:
       code: 400
       message: Bad Request

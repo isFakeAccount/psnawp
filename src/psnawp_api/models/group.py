@@ -2,9 +2,7 @@ import json
 from typing import Optional, Iterable
 
 from psnawp_api.core.psnawp_exceptions import (
-    PSNAWPIllegalArgumentError,
     PSNAWPNotFound,
-    PSNAWPNotAllowed,
     PSNAWPBadRequest,
 )
 from psnawp_api.models.user import User
@@ -48,19 +46,16 @@ class Group:
 
     def _create_group(self):
         """Creates a new group if it doesn't exist. Doesn't work if user's privacy settings block invites."""
-        if self.users is None:
-            # mypy complains if this check is not there.
-            raise PSNAWPIllegalArgumentError("Can't create users from empty user list.")
+        if self.users is not None:
+            invitees = [{"accountId": user.account_id} for user in self.users]
+            data = {"invitees": invitees}
 
-        invitees = [{"accountId": user.account_id} for user in self.users]
-        data = {"invitees": invitees}
+            response = self._request_builder.post(
+                url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
+                data=json.dumps(data),
+            ).json()
 
-        response = self._request_builder.post(
-            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
-            data=json.dumps(data),
-        ).json()
-
-        self.group_id = response["groupId"]
+            self.group_id = response["groupId"]
 
     def change_name(self, group_name: str) -> None:
         """Changes the group name to one specified in arguments.
@@ -84,8 +79,8 @@ class Group:
                 data=json.dumps(data),
             )
         except PSNAWPBadRequest as bad_req:
-            raise PSNAWPNotAllowed(
-                f"The group name of Group ID {self.group_id} does cannot be changed. Most likely it is a DM and their names can't be changed."
+            raise PSNAWPBadRequest(
+                f"The group name of Group ID {self.group_id} does cannot be changed. Group is either a dm or does not exist."
             ) from bad_req
 
     def get_group_information(self):
