@@ -2,12 +2,12 @@
 platform linux -- Python 3.10.7, pytest-7.1.3, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
 plugins: vcr-1.0.2, cov-4.0.0
-collected 33 items
+collected 34 items
 
-tests/unit_tests/test_authenticator.py .                                 [  3%]
-tests/unit_tests/test_client.py ...........                              [ 36%]
-tests/unit_tests/test_group.py .......                                   [ 57%]
-tests/unit_tests/test_search.py ..                                       [ 63%]
+tests/unit_tests/test_authenticator.py .                                 [  2%]
+tests/unit_tests/test_client.py ...........                              [ 35%]
+tests/unit_tests/test_group.py ........                                  [ 58%]
+tests/unit_tests/test_search.py ..                                       [ 64%]
 tests/unit_tests/test_user.py ............                               [100%]
 
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
@@ -21,7 +21,7 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/core/psnawp_exceptions.py       9      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/__init__.py              0      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/client.py               47      0   100%
-/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/group.py                45      0   100%
+/opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/group.py                48      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/search.py               15      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/models/user.py                 56      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/psnawp.py                      33      0   100%
@@ -30,6 +30,6 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/misc.py                  13      0   100%
 /opt/hostedtoolcache/Python/3.10.7/x64/lib/python3.10/site-packages/psnawp_api/utils/request_builder.py       71     15    79%
 ------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                        338     18    95%
+TOTAL                                                                                                        341     18    95%
 
-============================== 33 passed in 1.86s ==============================
+============================== 34 passed in 1.86s ==============================
