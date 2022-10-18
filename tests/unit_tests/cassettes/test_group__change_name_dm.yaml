@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:41 GMT
+      - Tue, 18 Oct 2022 23:31:21 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -74,13 +74,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1664473721488", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1666135880784", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1664473721488", "latestMessage": {"messageUid": "1#426105272701136", "messageType":
-        1, "alternativeMessageType": 1, "body": "Hello World 2", "createdTimestamp":
-        "1664473721488", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#426105272701136"}, "members": [{"accountId":
+        "1666135880784", "latestMessage": {"messageUid": "1#426530785480957", "messageType":
+        1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
+        "1666135880784", "sender": {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}}, "readMessageUid": "1#426530785480957"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -96,11 +96,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '797'
+      - '796'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:42 GMT
+      - Tue, 18 Oct 2022 23:31:21 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -133,13 +133,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1664473721488", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1666135880784", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1664473721488", "latestMessage": {"messageUid": "1#426105272701136", "messageType":
-        1, "alternativeMessageType": 1, "body": "Hello World 2", "createdTimestamp":
-        "1664473721488", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#426105272701136"}, "members": [{"accountId":
+        "1666135880784", "latestMessage": {"messageUid": "1#426530785480957", "messageType":
+        1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
+        "1666135880784", "sender": {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}}, "readMessageUid": "1#426530785480957"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -155,11 +155,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '797'
+      - '796'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:42 GMT
+      - Tue, 18 Oct 2022 23:31:22 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -193,7 +193,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790
   response:
     body:
-      string: '{"error": {"referenceId": "f57e394f-401e-11ed-b761-7f1bf3da3b26", "code":
+      string: '{"error": {"referenceId": "f9b08361-4f3c-11ed-8eec-ffe76f6f7998", "code":
         2285696, "message": "Bad Request"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -209,7 +209,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:43 GMT
+      - Tue, 18 Oct 2022 23:31:22 GMT
       Server:
       - Apache
       Strict-Transport-Security:

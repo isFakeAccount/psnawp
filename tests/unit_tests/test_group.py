@@ -6,6 +6,7 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPIllegalArgumentError,
     PSNAWPNotFound,
     PSNAWPBadRequest,
+    PSNAWPForbidden,
 )
 from tests.unit_tests import my_vcr
 
@@ -51,6 +52,15 @@ def test_group__change_name_dm(psnawp_fixture):
         with pytest.raises(PSNAWPBadRequest):
             last_group = next(psnawp_fixture.me().get_groups(limit=1))
             group = psnawp_fixture.group(group_id=last_group.group_id)
+            group.change_name("Testing API")
+
+
+@pytest.mark.vcr()
+def test_group__dming_blocked_user(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        with pytest.raises(PSNAWPForbidden):
+            is_fake_account = psnawp_fixture.user(online_id="isFakeAccount")
+            group = psnawp_fixture.group(users_list=[is_fake_account])
             group.change_name("Testing API")
 
 

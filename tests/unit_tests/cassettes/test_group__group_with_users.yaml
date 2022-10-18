@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 18:08:28 GMT
+      - Tue, 18 Oct 2022 23:31:18 GMT
       Server:
       - Apache
       Vary:
@@ -95,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 18:08:29 GMT
+      - Tue, 18 Oct 2022 23:31:18 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -129,7 +129,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages
   response:
     body:
-      string: '{"messageUid": "1#426105576852643", "createdTimestamp": "1664474909580"}'
+      string: '{"messageUid": "1#426530784957460", "createdTimestamp": "1666135878740"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -146,7 +146,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 18:08:29 GMT
+      - Tue, 18 Oct 2022 23:31:18 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -178,10 +178,10 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages?limit=1
   response:
     body:
-      string: '{"messages": [{"messageUid": "1#426105576852643", "messageType": 1,
-        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1664474909580",
+      string: '{"messages": [{"messageUid": "1#426530784957460", "messageType": 1,
+        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1666135878740",
         "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}}],
-        "previous": "1#426105576852643", "next": "1#426105576852643", "reachedEndOfPage":
+        "previous": "1#426530784957460", "next": "1#426530784957460", "reachedEndOfPage":
         false, "messageCount": 1}'
     headers:
       Access-Control-Allow-Headers:
@@ -199,7 +199,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 18:08:30 GMT
+      - Tue, 18 Oct 2022 23:31:19 GMT
       Server:
       - Apache
       Strict-Transport-Security:

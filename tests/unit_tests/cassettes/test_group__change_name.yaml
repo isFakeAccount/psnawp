@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:43 GMT
+      - Tue, 18 Oct 2022 23:31:23 GMT
       Server:
       - Apache
       Vary:
@@ -97,7 +97,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:43 GMT
+      - Tue, 18 Oct 2022 23:31:24 GMT
       Server:
       - Apache
       Vary:
@@ -131,9 +131,9 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"groupId": "20276f9f99fab14bbde433b222040cd37a001773-840", "mainThread":
-        {"threadId": "20276f9f99fab14bbde433b222040cd37a001773-840"}, "hasAllAccountInvited":
-        true}'
+      string: '{"groupId": "ac2554dbeec72a4be87b7632364ca77a536dddfe-161", "mainThread":
+        {"threadId": "ac2554dbeec72a4be87b7632364ca77a536dddfe-161"}, "hasAllAccountInvited":
+        false}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -146,11 +146,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '159'
+      - '160'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:44 GMT
+      - Tue, 18 Oct 2022 23:31:24 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -181,7 +181,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: PATCH
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/20276f9f99fab14bbde433b222040cd37a001773-840
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/ac2554dbeec72a4be87b7632364ca77a536dddfe-161
   response:
     body:
       string: ''
@@ -197,7 +197,7 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 29 Sep 2022 17:48:44 GMT
+      - Tue, 18 Oct 2022 23:31:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:

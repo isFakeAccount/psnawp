@@ -33,17 +33,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:06 GMT
+      - Tue, 18 Oct 2022 23:18:12 GMT
       Server:
       - nginx
       X-CorrelationId:
-      - 0c4000c1-1155-450e-8e77-ee81b1459444
+      - e07d77d5-93c7-498a-81af-c1a40cfe27ec
       X-Psn-Correlation-Id:
-      - 0c4000c1-1155-450e-8e77-ee81b1459444
+      - e07d77d5-93c7-498a-81af-c1a40cfe27ec
       X-Psn-Request-Id:
-      - 0c4000c1-1155-450e-8e77-ee81b1459444
+      - e07d77d5-93c7-498a-81af-c1a40cfe27ec
       X-RequestId:
-      - 0c4000c1-1155-450e-8e77-ee81b1459444
+      - e07d77d5-93c7-498a-81af-c1a40cfe27ec
     status:
       code: 200
       message: OK
@@ -66,7 +66,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/8520698476712646544/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/profiles
   response:
     body:
       string: '{"onlineId": "VaultTec_Trading", "personalDetail": {"firstName": "VaultTec",
@@ -99,7 +99,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:07 GMT
+      - Tue, 18 Oct 2022 23:18:12 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -107,7 +107,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0377619608261675857
+      - 0150708447340962007
     status:
       code: 200
       message: OK

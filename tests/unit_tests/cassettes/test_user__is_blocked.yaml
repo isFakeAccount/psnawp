@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:25:23 GMT
+      - Tue, 18 Oct 2022 23:18:59 GMT
       Server:
       - Apache
       Vary:
@@ -72,7 +72,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/me/blocks
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/blocks
   response:
     body:
       string: '{"blockList": []}'
@@ -94,7 +94,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:25:23 GMT
+      - Tue, 18 Oct 2022 23:19:00 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -102,7 +102,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0530649016227708821
+      - 0287134555300498294
     status:
       code: 200
       message: OK

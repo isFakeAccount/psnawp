@@ -18,12 +18,12 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec-Co/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlN1nXOV9JRSkxOzi/NKwHL
-        GJkbGZoamlmamhpbGJuaGhqZmCnV1gIAAAD//wMADQC2nUgAAAA=
+        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUsosdkvMTnVMTs4vzStR0lFKhLDAckYG
+        ZmZG5samBsbGluaGhkZmZuZKtbUAAAAA//8DABhg7r9KAAAA
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -39,11 +39,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '95'
+      - '93'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Oct 2022 23:18:57 GMT
+      - Tue, 18 Oct 2022 23:31:22 GMT
       Server:
       - Apache
       Vary:
@@ -54,7 +54,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: null
+    body: '{"invitees": [{"accountId": "2066273503397112667"}]}'
     headers:
       Accept:
       - '*/*'
@@ -64,6 +64,8 @@ interactions:
       - en-US
       Connection:
       - keep-alive
+      Content-Length:
+      - '52'
       Content-Type:
       - application/json
       Country:
@@ -71,41 +73,34 @@ interactions:
       User-Agent:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/basicPresences?type=primary
+    method: POST
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2022-10-01T22:28:37.421Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "PS5", "lastOnlineDate": "2022-10-01T22:28:37.421Z"}}}'
+      string: '{"error": {"referenceId": "fa3d32d7-4f3c-11ed-90a3-95c44cc33d5e", "code":
+        2286592, "message": "Request is rejected due to all targets'' settings"}}'
     headers:
       Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
-        X-Psn-Span-Id, X-Psn-Trace-Id
+      - Authorization, Content-Type
       Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, PATCH
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
       Access-Control-Allow-Origin:
       - '*'
-      Cache-Control:
-      - private
       Connection:
-      - keep-alive
+      - close
       Content-Length:
-      - '205'
+      - '140'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Oct 2022 23:18:57 GMT
+      - Tue, 18 Oct 2022 23:31:23 GMT
       Server:
       - Apache
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
-      X-Psn-Track-Id:
-      - 0575295484787267070
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

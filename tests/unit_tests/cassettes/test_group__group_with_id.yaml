@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:49:45 GMT
+      - Tue, 18 Oct 2022 23:31:19 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -74,13 +74,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1664473721488", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1666135878740", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1664473721488", "latestMessage": {"messageUid": "1#426105272701136", "messageType":
-        1, "alternativeMessageType": 1, "body": "Hello World 2", "createdTimestamp":
-        "1664473721488", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#426105272701136"}, "members": [{"accountId":
+        "1666135878740", "latestMessage": {"messageUid": "1#426530784957460", "messageType":
+        1, "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp":
+        "1666135878740", "sender": {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}}, "readMessageUid": "1#426530784957460"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -96,11 +96,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '797'
+      - '795'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:49:45 GMT
+      - Tue, 18 Oct 2022 23:31:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -133,13 +133,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1664473721488", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1666135878740", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1664473721488", "latestMessage": {"messageUid": "1#426105272701136", "messageType":
-        1, "alternativeMessageType": 1, "body": "Hello World 2", "createdTimestamp":
-        "1664473721488", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#426105272701136"}, "members": [{"accountId":
+        "1666135878740", "latestMessage": {"messageUid": "1#426530784957460", "messageType":
+        1, "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp":
+        "1666135878740", "sender": {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}}, "readMessageUid": "1#426530784957460"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -155,11 +155,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '797'
+      - '795'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:49:46 GMT
+      - Tue, 18 Oct 2022 23:31:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -193,7 +193,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages
   response:
     body:
-      string: '{"messageUid": "1#426105289362703", "createdTimestamp": "1664473786573"}'
+      string: '{"messageUid": "1#426530785480957", "createdTimestamp": "1666135880784"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -210,7 +210,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:49:46 GMT
+      - Tue, 18 Oct 2022 23:31:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:

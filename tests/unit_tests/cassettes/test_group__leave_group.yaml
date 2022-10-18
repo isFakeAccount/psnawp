@@ -21,11 +21,10 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
   response:
     body:
-      string: '{"groups": [{"groupId": "20276f9f99fab14bbde433b222040cd37a001773-840",
+      string: '{"groups": [{"groupId": "ac2554dbeec72a4be87b7632364ca77a536dddfe-161",
         "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"},
-        {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}], "previousOffset":
-        0, "nextOffset": 1}'
+        "VaultTec-Co"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]}],
+        "previousOffset": 0, "nextOffset": 1}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -38,11 +37,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '321'
+      - '258'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:45 GMT
+      - Tue, 18 Oct 2022 23:31:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -71,23 +70,22 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/20276f9f99fab14bbde433b222040cd37a001773-840?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/ac2554dbeec72a4be87b7632364ca77a536dddfe-161?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
   response:
     body:
-      string: '{"groupId": "20276f9f99fab14bbde433b222040cd37a001773-840", "groupType":
-        1, "modifiedTimestamp": "1664473724582", "groupName": {"value": "Testing API",
+      string: '{"groupId": "ac2554dbeec72a4be87b7632364ca77a536dddfe-161", "groupType":
+        1, "modifiedTimestamp": "1666135885068", "groupName": {"value": "Testing API",
         "status": 1, "modifier": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}, "modifiedTimestamp": "1664473724000"}, "groupIcon": {"status":
-        0}, "joinedTimestamp": "1664473724000", "isFavorite": false, "existsNewArrival":
-        false, "mainThread": {"threadId": "20276f9f99fab14bbde433b222040cd37a001773-840",
-        "modifiedTimestamp": "1664473724582", "latestMessage": {"messageUid": "1#426105273493134",
+        "VaultTec_Trading"}, "modifiedTimestamp": "1666135885000"}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1666135884000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "ac2554dbeec72a4be87b7632364ca77a536dddfe-161",
+        "modifiedTimestamp": "1666135885068", "latestMessage": {"messageUid": "1#426530786577455",
         "messageType": 2003, "alternativeMessageType": 2001, "body": "VaultTec TradingCo
-        changed the group name.", "createdTimestamp": "1664473724582", "sender": {"accountId":
+        changed the group name.", "createdTimestamp": "1666135885068", "sender": {"accountId":
         "8520698476712646544", "onlineId": "VaultTec_Trading"}}, "readMessageUid":
-        "1#426105273493134"}, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "1#426530786577455"}, "members": [{"accountId": "2721516955383551246", "onlineId":
         "VaultTec-Co", "role": "member"}, {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading", "role": "owner"}, {"accountId": "2066273503397112667",
-        "onlineId": "isFakeAccount", "role": "member"}], "partySessions": [], "notificationSetting":
+        "VaultTec_Trading", "role": "owner"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
@@ -101,11 +99,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1086'
+      - '1007'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:48:45 GMT
+      - Tue, 18 Oct 2022 23:31:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -136,7 +134,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: DELETE
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/20276f9f99fab14bbde433b222040cd37a001773-840/members/me
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/ac2554dbeec72a4be87b7632364ca77a536dddfe-161/members/me
   response:
     body:
       string: ''
@@ -152,7 +150,7 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 29 Sep 2022 17:48:45 GMT
+      - Tue, 18 Oct 2022 23:31:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:

@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Thu, 29 Sep 2022 17:30:05 GMT
+      - Tue, 18 Oct 2022 23:18:10 GMT
       Expires:
       - '0'
       Location:
-      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=751b201a-52ec-4391-83e6-fb1ab40950f3
+      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=791746cb-51c8-458c-b257-ba1d16302f60
       Server:
       - nginx
       Set-Cookie:
-      - _abck=2673EED13A6CB10286D8D78B168621F6~-1~YAAQW2fNF5127ViDAQAA6GJMigiYGk1vtbyYb57Z4pjYhz+GGDU7JRm62vPd2iQSUGfRQ7B7mLs+UGC8potTwQl50MfIUZlFI4gARPB9MGnmLJKMr3kTSjeZy67YKA3cDyibwzpMMllJybHfgT/PONdvq0ccxh7DyHvsaXsY7DSonXZABpXGfibZWWLSE+xUkahAE4LFDBv2tdsewheWBdXl/3jF7EUT8A2TtQiNKxVdBbCZNO7kFl44Set/93GIPZfecmoerza0S0EtXdqGRT4/DjZS5+m5tNvfNqEUBuVjRqG+QonYJ7dMZyMK3Zs7tIqxgwzxKGM83yvCibqKJ0U6eqe6nmPRQi1DmA==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Thu, 06 Oct 2022 17:30:05 GMT; Max-Age=604800;
+      - _abck=0BE89384206185FE66B44A4C8D50A26E~-1~YAAQRDsvF+T3vdGDAQAA3uZj7QhU+5D5dcLRfyC7ZEAdO/ouhifS85s7Alz5Aht4hDeSAKlxw8E15qRDhN6e5qWB+jDWDPGSEPRdUFgmYq14Xcflh5oXsDTnBLYnV43cS7B6fgZ3X6xcqnykbflks/uC9eMX+Ce20eaJMVyuUGTLQMovRgpAIeDuqmECYuZdrIhYbPX77vpJpetEJjrlPbFCpMJPIKcy3zEABEzXGoaeYmo3z9ex6pXScaEqZzZ7WNXkaDiOyaKp6Bh4uULYug3cK3kbKpu8IicxtBSlk3bWxWc4Ntnf7rUyNZUYsPZsLvd8HgmiXQZfYFD7ZWgSzJ4GPoXEvB1FX5woPg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Tue, 25 Oct 2022 23:18:10 GMT; Max-Age=604800;
         Secure
-      - bm_sz=4AFA0A6324A86900C1CBE2026AD4C09A~YAAQW2fNF5527ViDAQAA6GJMihF5AGW0nD4BXNXADGugqxaksqSnRVlPtJn0Zw2Vlw7QMf1Xhd/g8G/+zPCCim1jJRBWJAd0Jb7sok0BR4toXonxAdZdZznJyYXwcJjNKGfV/9uaAWXk8toz6M0xr+RGTK1a5fwOQMcNZGY3B3fkWAM0qC46cRzIDbZKREXIQ+64kHEMz95KlhmXJXhBhUhVKXn0g0CAj7ohf2LffcDEhWZ2sJ4Tv/H7oe8IeqlXU/LNQpLno1U0WfCKkNCsB6YNjUtWbdrY6Yw2NVKzmpis2rHavlxDeIDHKGWIqq6RQu+9dvbokTzJ61gtrVmy6Eautm0M7a6Efe+2Urt8xx8sj8gymJVDSHD7mWY=~4468787~4534580;
-        Domain=.sony.com; Path=/; Expires=Thu, 29 Sep 2022 21:30:05 GMT; Max-Age=14400
+      - bm_sz=07BB3BF10E6642D523F2D4EE680D5056~YAAQRDsvF+X3vdGDAQAA3uZj7RFIGhJ+z3FW6FtiKuCTGAcVvwTqSaC4LdYyKdy2TnAPKK9zuoRPFT5DrVNQG4fSv0lGrLrU3Zlc6nRXbVuKdquNEX8FYvtU5Ax+5Ly35d8m9tI8ww9/iyPvv+2DbdGDOnuemHKgHAkKSsWDyY+XDA3yy9QUSO8XYEol82wDQ3KpA/JLjUNw+qgkGjNGG/XpoI3EpuWfJPox5gamA8WJ0kl39aZqdL7nW7bJXuxAUP6T6FaUckvtk0/sM5lilk/tp5iSuWnrkwtXDUfZElOrRrGP+Qy2UYsQEjbkTHXQTbYJ3pdgweiSto7gxVEZn+NRgXAaE31XNrLuG7o0+3Kdrge+hH3YhxFI62Y=~3750213~3425093;
+        Domain=.sony.com; Path=/; Expires=Wed, 19 Oct 2022 03:18:10 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 751b201a-52ec-4391-83e6-fb1ab40950f3
+      - 791746cb-51c8-458c-b257-ba1d16302f60
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - 751b201a-52ec-4391-83e6-fb1ab40950f3
+      - 791746cb-51c8-458c-b257-ba1d16302f60
       X-Psn-Request-Id:
-      - 99d269ebdb3e2e40c67983af3ed8f021
+      - 0e1bf78884096986964861da18219eab
       X-RequestId:
-      - 99d269ebdb3e2e40c67983af3ed8f021
+      - 0e1bf78884096986964861da18219eab
       X-XSS-Protection:
       - 1; mode=block
     status:

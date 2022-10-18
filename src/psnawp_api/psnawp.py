@@ -63,7 +63,7 @@ class PSNAWP:
     def user(self, *, account_id: str) -> User:
         ...
 
-    def user(self, **kwargs) -> User:
+    def user(self, **kwargs):
         """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
 
         .. note::
@@ -109,7 +109,7 @@ class PSNAWP:
     def group(self, *, users_list: Iterable[User]) -> Group:
         ...
 
-    def group(self, **kwargs) -> Group:
+    def group(self, **kwargs):
         """Creates a group object from a Group ID or from list of users.
 
         .. warning::
@@ -126,6 +126,8 @@ class PSNAWP:
         :rtype: Group
 
         :raises: ``PSNAWPIllegalArgumentError`` If None or Both kwargs are passed.
+
+        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
 
         """
 

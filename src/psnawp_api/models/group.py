@@ -6,6 +6,7 @@ from typing import Optional, Iterable
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
     PSNAWPBadRequest,
+    PSNAWPForbidden,
 )
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
@@ -35,6 +36,9 @@ class Group:
 
         :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
 
+        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
+            blocked you.
+
         """
 
         self._request_builder = request_builder
@@ -47,17 +51,25 @@ class Group:
             self._create_group()
 
     def _create_group(self):
-        """Creates a new group if it doesn't exist. Doesn't work if user's privacy settings block invites."""
+        """Creates a new group if it doesn't exist. Doesn't work if user's privacy settings block invites.
+
+        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
+
+        """
         if self.users is not None:
             invitees = [{"accountId": user.account_id} for user in self.users]
             data = {"invitees": invitees}
 
-            response = self._request_builder.post(
-                url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
-                data=json.dumps(data),
-            ).json()
-
-            self.group_id = response["groupId"]
+            try:
+                response = self._request_builder.post(
+                    url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
+                    data=json.dumps(data),
+                ).json()
+                self.group_id = response["groupId"]
+            except PSNAWPForbidden as forbidden:
+                raise PSNAWPForbidden(
+                    "The group cannot be created because you have been blocked by other user."
+                ) from forbidden
 
     def change_name(self, group_name: str) -> None:
         """Changes the group name to one specified in arguments.

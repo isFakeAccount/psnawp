@@ -18,19 +18,19 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/me/friends?limit=1000
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000
   response:
     body:
-      string: '{"friends": ["258529421351944452", "1433466746267737212", "5991850572572051521",
-        "7222824374247471500", "4337647799935995704", "7108615122010912373", "846116067800322905",
-        "4257803862677544723", "8573673572348923758", "9021861119870663195", "4131443832945497518",
-        "9205769651418840784", "117627244710818722", "2174539459039328143", "7864156239834184535",
-        "8270071905163343033", "8078591355116286307", "4881162353155276397", "5608493910963319221",
-        "2845101365541465607", "7087732409622469912", "5433233870466023413", "4273405838384737823",
-        "8910003479695062706", "4895496131809901811", "4151397070963970862", "2721516955383551246",
-        "1723276347980666990", "7422146373650127843", "1943456703361936658", "1870113034603872922",
-        "6370876631718498141", "7538640474462320126", "1572780007594060283"], "totalItemCount":
-        34}'
+      string: '{"friends": ["8518662057912692550", "258529421351944452", "1433466746267737212",
+        "5991850572572051521", "7222824374247471500", "4337647799935995704", "7108615122010912373",
+        "846116067800322905", "4257803862677544723", "8573673572348923758", "9021861119870663195",
+        "4131443832945497518", "9205769651418840784", "117627244710818722", "2174539459039328143",
+        "7864156239834184535", "8270071905163343033", "8078591355116286307", "4881162353155276397",
+        "5608493910963319221", "2845101365541465607", "7087732409622469912", "5433233870466023413",
+        "4273405838384737823", "8910003479695062706", "4895496131809901811", "4151397070963970862",
+        "2721516955383551246", "1723276347980666990", "7422146373650127843", "1943456703361936658",
+        "1870113034603872922", "6370876631718498141", "7538640474462320126", "1572780007594060283"],
+        "totalItemCount": 35}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -45,11 +45,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '778'
+      - '800'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:09 GMT
+      - Tue, 18 Oct 2022 23:18:15 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -57,7 +57,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0910950154885556589
+      - 0847594076456081772
     status:
       code: 200
       message: OK
@@ -80,7 +80,66 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/258529421351944452/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8518662057912692550/profiles
+  response:
+    body:
+      string: '{"onlineId": "Evil_Meeseeks420", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A2119_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A2119_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2119_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A2119_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '535'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 18 Oct 2022 23:18:15 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0238662407701379320
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/258529421351944452/profiles
   response:
     body:
       string: '{"onlineId": "L1qu1dKrystaL", "aboutMe": "M76 courier. Father. Rad
@@ -108,7 +167,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:09 GMT
+      - Tue, 18 Oct 2022 23:18:16 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -116,7 +175,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0132141874220444444
+      - 0960100425532229354
     status:
       code: 200
       message: OK
@@ -139,7 +198,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/1433466746267737212/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1433466746267737212/profiles
   response:
     body:
       string: '{"onlineId": "apey1126", "aboutMe": "LETS GOOOOOOOOOO", "avatars":
@@ -147,7 +206,7 @@ interactions:
         {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_xl.png"},
         {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_l.png"},
         {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_m.png"}],
-        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
         false}'
     headers:
       Access-Control-Allow-Headers:
@@ -163,11 +222,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '701'
+      - '700'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:09 GMT
+      - Tue, 18 Oct 2022 23:18:16 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -175,7 +234,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0321869320762883112
+      - 0224986810847287172
     status:
       code: 200
       message: OK
@@ -198,7 +257,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/5991850572572051521/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5991850572572051521/profiles
   response:
     body:
       string: '{"onlineId": "JLBman101", "aboutMe": "", "avatars": [{"size": "s",
@@ -226,7 +285,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:10 GMT
+      - Tue, 18 Oct 2022 23:18:17 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -234,7 +293,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0610531301662367972
+      - 0873741712438300687
     status:
       code: 200
       message: OK
@@ -257,7 +316,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7222824374247471500/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7222824374247471500/profiles
   response:
     body:
       string: '{"onlineId": "Ghosted_Thunder", "aboutMe": "", "avatars": [{"size":
@@ -285,7 +344,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:10 GMT
+      - Tue, 18 Oct 2022 23:18:17 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -293,7 +352,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0171850238966249195
+      - 0918696059103863294
     status:
       code: 200
       message: OK
@@ -316,7 +375,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4337647799935995704/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4337647799935995704/profiles
   response:
     body:
       string: '{"onlineId": "Battlepants57", "aboutMe": "exo-48506993", "avatars":
@@ -344,7 +403,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:11 GMT
+      - Tue, 18 Oct 2022 23:18:18 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -352,7 +411,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0325197792486126703
+      - 0785954889036168534
     status:
       code: 200
       message: OK
@@ -375,7 +434,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7108615122010912373/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7108615122010912373/profiles
   response:
     body:
       string: '{"onlineId": "Selling76Account", "aboutMe": "F76 is currently the game
@@ -403,7 +462,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:11 GMT
+      - Tue, 18 Oct 2022 23:18:18 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -411,7 +470,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0113630880034488627
+      - 0240752820069172459
     status:
       code: 200
       message: OK
@@ -434,7 +493,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/846116067800322905/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/846116067800322905/profiles
   response:
     body:
       string: '{"onlineId": "mr_juice999", "aboutMe": "Even tho at times life seems
@@ -463,7 +522,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:11 GMT
+      - Tue, 18 Oct 2022 23:18:19 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -471,7 +530,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0218070050366132805
+      - 0301823665081752280
     status:
       code: 200
       message: OK
@@ -494,7 +553,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4257803862677544723/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4257803862677544723/profiles
   response:
     body:
       string: '{"onlineId": "TheKidsABeast", "aboutMe": "English \n\nMy youtube is
@@ -522,7 +581,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:12 GMT
+      - Tue, 18 Oct 2022 23:18:19 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -530,7 +589,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0550093568103348640
+      - 0256995489350244796
     status:
       code: 200
       message: OK
@@ -553,7 +612,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/8573673572348923758/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8573673572348923758/profiles
   response:
     body:
       string: '{"onlineId": "madt12", "aboutMe": "Homra red king", "avatars": [{"size":
@@ -581,7 +640,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:12 GMT
+      - Tue, 18 Oct 2022 23:18:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -589,7 +648,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0593424459379882480
+      - 0364239142060643929
     status:
       code: 200
       message: OK
@@ -612,7 +671,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/9021861119870663195/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/9021861119870663195/profiles
   response:
     body:
       string: '{"onlineId": "rafileons7", "aboutMe": "", "avatars": [{"size": "s",
@@ -640,7 +699,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:13 GMT
+      - Tue, 18 Oct 2022 23:18:20 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -648,7 +707,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0255021711284765993
+      - 0185709127305543103
     status:
       code: 200
       message: OK
@@ -671,7 +730,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4131443832945497518/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4131443832945497518/profiles
   response:
     body:
       string: '{"onlineId": "BunningsTrolley4", "aboutMe": "", "avatars": [{"size":
@@ -699,7 +758,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:13 GMT
+      - Tue, 18 Oct 2022 23:18:21 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -707,7 +766,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0600095721176294610
+      - 0645492037425227356
     status:
       code: 200
       message: OK
@@ -730,7 +789,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/9205769651418840784/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/9205769651418840784/profiles
   response:
     body:
       string: '{"onlineId": "ImmortalGlaz", "aboutMe": "Everyone wants to believe
@@ -760,7 +819,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:14 GMT
+      - Tue, 18 Oct 2022 23:18:21 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -768,7 +827,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0296567355865919758
+      - 0081758689713919346
     status:
       code: 200
       message: OK
@@ -791,7 +850,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/117627244710818722/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/117627244710818722/profiles
   response:
     body:
       string: '{"onlineId": "SynTOKYO", "aboutMe": "Stalking my account, i see", "avatars":
@@ -819,7 +878,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:14 GMT
+      - Tue, 18 Oct 2022 23:18:22 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -827,7 +886,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0689284654008355775
+      - 0715014765902767352
     status:
       code: 200
       message: OK
@@ -850,7 +909,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/2174539459039328143/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2174539459039328143/profiles
   response:
     body:
       string: '{"onlineId": "dam7005", "aboutMe": "I like good things", "avatars":
@@ -878,7 +937,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:14 GMT
+      - Tue, 18 Oct 2022 23:18:22 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -886,7 +945,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0896482708308452041
+      - 0937143578788780469
     status:
       code: 200
       message: OK
@@ -909,7 +968,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7864156239834184535/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7864156239834184535/profiles
   response:
     body:
       string: '{"onlineId": "temp-712302", "aboutMe": "", "avatars": [{"size": "s",
@@ -917,7 +976,7 @@ interactions:
         {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_xl.png"},
         {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_l.png"},
         {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_m.png"}],
-        "languages": ["en-US", "ja-JP", "ar-AE"], "isPlus": true, "isOfficiallyVerified":
+        "languages": ["en-US", "ja-JP", "ar-AE"], "isPlus": false, "isOfficiallyVerified":
         false, "isMe": false}'
     headers:
       Access-Control-Allow-Headers:
@@ -933,11 +992,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '703'
+      - '704'
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:15 GMT
+      - Tue, 18 Oct 2022 23:18:23 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -945,7 +1004,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0284809802853225837
+      - 0512970073081519957
     status:
       code: 200
       message: OK
@@ -968,7 +1027,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/8270071905163343033/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8270071905163343033/profiles
   response:
     body:
       string: '{"onlineId": "Diabolical_Sudz", "aboutMe": "", "avatars": [{"size":
@@ -996,7 +1055,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:15 GMT
+      - Tue, 18 Oct 2022 23:18:23 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1004,7 +1063,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0359527437292830159
+      - 0525364792145596124
     status:
       code: 200
       message: OK
@@ -1027,7 +1086,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/8078591355116286307/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8078591355116286307/profiles
   response:
     body:
       string: '{"onlineId": "llSchemell", "aboutMe": "Plotting...", "avatars": [{"size":
@@ -1055,7 +1114,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:15 GMT
+      - Tue, 18 Oct 2022 23:18:24 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1063,7 +1122,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0631539818973957048
+      - 0743661380540407780
     status:
       code: 200
       message: OK
@@ -1086,7 +1145,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4881162353155276397/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4881162353155276397/profiles
   response:
     body:
       string: '{"onlineId": "Dark-night19876", "aboutMe": "Find out", "avatars": [{"size":
@@ -1114,7 +1173,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:16 GMT
+      - Tue, 18 Oct 2022 23:18:24 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1122,7 +1181,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0856079955507530010
+      - 0625581838749808925
     status:
       code: 200
       message: OK
@@ -1145,7 +1204,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/5608493910963319221/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5608493910963319221/profiles
   response:
     body:
       string: '{"onlineId": "VBigBear1227", "aboutMe": "Im ok at the games i play",
@@ -1173,7 +1232,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:16 GMT
+      - Tue, 18 Oct 2022 23:18:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1181,7 +1240,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0971690153678519372
+      - 0042997129450435018
     status:
       code: 200
       message: OK
@@ -1204,7 +1263,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/2845101365541465607/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2845101365541465607/profiles
   response:
     body:
       string: '{"onlineId": "unknown0413", "aboutMe": "", "avatars": [{"size": "s",
@@ -1232,7 +1291,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:16 GMT
+      - Tue, 18 Oct 2022 23:18:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1240,7 +1299,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0750407108896324673
+      - 0255276174238317105
     status:
       code: 200
       message: OK
@@ -1263,7 +1322,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7087732409622469912/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7087732409622469912/profiles
   response:
     body:
       string: '{"onlineId": "Itz_HouseCat", "aboutMe": "Lucas sucks BBC", "avatars":
@@ -1291,7 +1350,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:17 GMT
+      - Tue, 18 Oct 2022 23:18:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1299,7 +1358,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0324325397976648837
+      - 0553345825677183185
     status:
       code: 200
       message: OK
@@ -1322,7 +1381,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/5433233870466023413/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5433233870466023413/profiles
   response:
     body:
       string: '{"onlineId": "ItzIIllIlIlllIII", "aboutMe": "", "avatars": [{"size":
@@ -1350,7 +1409,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:17 GMT
+      - Tue, 18 Oct 2022 23:18:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1358,7 +1417,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - '0050530047463155721'
+      - 0508457249255391920
     status:
       code: 200
       message: OK
@@ -1381,7 +1440,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4273405838384737823/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4273405838384737823/profiles
   response:
     body:
       string: '{"onlineId": "DaUglyDucklin", "aboutMe": "Go get bent.\nYa''ll are
@@ -1409,7 +1468,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:18 GMT
+      - Tue, 18 Oct 2022 23:18:27 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1417,7 +1476,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0371315263187735280
+      - 0397077009611344314
     status:
       code: 200
       message: OK
@@ -1440,7 +1499,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/8910003479695062706/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8910003479695062706/profiles
   response:
     body:
       string: '{"onlineId": "warson08_v3", "aboutMe": "", "avatars": [{"size": "s",
@@ -1468,7 +1527,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:18 GMT
+      - Tue, 18 Oct 2022 23:18:27 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1476,7 +1535,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0348238010318481991
+      - 0527933223029773204
     status:
       code: 200
       message: OK
@@ -1499,7 +1558,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4895496131809901811/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4895496131809901811/profiles
   response:
     body:
       string: '{"onlineId": "Tigerface_HD", "aboutMe": "", "avatars": [{"size": "s",
@@ -1527,7 +1586,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:18 GMT
+      - Tue, 18 Oct 2022 23:18:27 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1535,7 +1594,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0063803255473279657
+      - 0383701501215375781
     status:
       code: 200
       message: OK
@@ -1558,7 +1617,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/4151397070963970862/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4151397070963970862/profiles
   response:
     body:
       string: '{"onlineId": "tanniman78", "aboutMe": "", "avatars": [{"size": "s",
@@ -1586,7 +1645,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:19 GMT
+      - Tue, 18 Oct 2022 23:18:28 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1594,7 +1653,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0833270176251348152
+      - 0405640103499462603
     status:
       code: 200
       message: OK
@@ -1617,7 +1676,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/2721516955383551246/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles
   response:
     body:
       string: '{"onlineId": "VaultTec-Co", "aboutMe": "r/Fallout76Marketplace Moderator",
@@ -1645,7 +1704,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:19 GMT
+      - Tue, 18 Oct 2022 23:18:28 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1653,7 +1712,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0360358428494150853
+      - 0823728996217613212
     status:
       code: 200
       message: OK
@@ -1676,7 +1735,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/1723276347980666990/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1723276347980666990/profiles
   response:
     body:
       string: '{"onlineId": "sinbad1352", "aboutMe": "", "avatars": [{"size": "s",
@@ -1704,7 +1763,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:19 GMT
+      - Tue, 18 Oct 2022 23:18:29 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1712,7 +1771,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0748158582020714435
+      - 0561072306510440809
     status:
       code: 200
       message: OK
@@ -1735,7 +1794,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7422146373650127843/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7422146373650127843/profiles
   response:
     body:
       string: '{"onlineId": "desmond1310", "aboutMe": "", "avatars": [{"size": "s",
@@ -1763,7 +1822,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:20 GMT
+      - Tue, 18 Oct 2022 23:18:30 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1771,7 +1830,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0482218167094975048
+      - 0176174961413535403
     status:
       code: 200
       message: OK
@@ -1794,7 +1853,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/1943456703361936658/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1943456703361936658/profiles
   response:
     body:
       string: '{"onlineId": "thepillaging", "aboutMe": "", "avatars": [{"size": "s",
@@ -1822,7 +1881,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:20 GMT
+      - Tue, 18 Oct 2022 23:18:30 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1830,7 +1889,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0417428908914832127
+      - 0196385078530638148
     status:
       code: 200
       message: OK
@@ -1853,7 +1912,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/1870113034603872922/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1870113034603872922/profiles
   response:
     body:
       string: '{"onlineId": "CTHERIAQUE", "aboutMe": "", "avatars": [{"size": "s",
@@ -1881,7 +1940,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:21 GMT
+      - Tue, 18 Oct 2022 23:18:30 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1889,7 +1948,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0411162939173465626
+      - 0026189803091442738
     status:
       code: 200
       message: OK
@@ -1912,7 +1971,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/6370876631718498141/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/6370876631718498141/profiles
   response:
     body:
       string: '{"onlineId": "wiggly_Willy6909", "aboutMe": "", "avatars": [{"size":
@@ -1940,7 +1999,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:21 GMT
+      - Tue, 18 Oct 2022 23:18:31 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -1948,7 +2007,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0229266211727043905
+      - 0029930835814745721
     status:
       code: 200
       message: OK
@@ -1971,7 +2030,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/7538640474462320126/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7538640474462320126/profiles
   response:
     body:
       string: '{"onlineId": "trey123519", "aboutMe": "", "avatars": [{"size": "s",
@@ -1999,7 +2058,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:21 GMT
+      - Tue, 18 Oct 2022 23:18:31 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -2007,7 +2066,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0630001145969316161
+      - 0022438582562143816
     status:
       code: 200
       message: OK
@@ -2030,7 +2089,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.net/api/userProfile/v1/internal/users/1572780007594060283/profiles
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1572780007594060283/profiles
   response:
     body:
       string: '{"onlineId": "HolyVaultBoy", "aboutMe": "", "avatars": [{"size": "s",
@@ -2058,7 +2117,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Sep 2022 17:30:22 GMT
+      - Tue, 18 Oct 2022 23:18:32 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -2066,7 +2125,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0804371113402545978
+      - 0120634799553413185
     status:
       code: 200
       message: OK
