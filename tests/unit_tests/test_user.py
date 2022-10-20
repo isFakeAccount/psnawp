@@ -34,7 +34,7 @@ def test_user__user_no_argument(psnawp_fixture):
 @pytest.mark.vcr()
 def test_user__user_wrong_acc_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        with pytest.raises(PSNAWPIllegalArgumentError):
+        with pytest.raises(PSNAWPNotFound):
             psnawp_fixture.user(account_id="VaultTec-Co")
 
 

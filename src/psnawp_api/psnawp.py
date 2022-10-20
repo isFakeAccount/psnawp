@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-import re
 from typing import overload, Optional, Iterable
 
 from psnawp_api.core import authenticator
@@ -79,7 +78,7 @@ class PSNAWP:
 
         :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
 
-        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+        :raises: ``PSNAWPNotFound`` If the online_id or account_id is not valid/found.
 
         .. code-block:: Python
 
@@ -93,11 +92,6 @@ class PSNAWP:
         if (online_id and account_id) or not (online_id or account_id):
             raise PSNAWPIllegalArgumentError(
                 "You provide at least online ID or account ID, and not both."
-            )
-
-        if account_id is not None and not re.match(r"\d{19}", account_id):
-            raise PSNAWPIllegalArgumentError(
-                "The account id is not correct. Perhaps you meant online_id?"
             )
         return User(self._request_builder, online_id, account_id)
 

@@ -33,7 +33,7 @@ def test_client__online_id(psnawp_fixture):
 def test_client__account_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()
-        assert re.match(r"\d{19}", client.account_id)
+        assert re.match(r"\d+", client.account_id)
 
 
 @pytest.mark.vcr()

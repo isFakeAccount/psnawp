@@ -36,7 +36,7 @@ class User:
         :raises: ``PSNAWPIllegalArgumentError`` If both online_id and account_id are not
             provided.
 
-        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+        :raises: ``PSNAWPNotFound`` If the online id or account id is not valid/found.
 
         """
         self._request_builder = request_builder
