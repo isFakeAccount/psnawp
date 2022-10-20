@@ -256,3 +256,9 @@ class Group:
         self._request_builder.delete(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}"
         )
+
+    def __repr__(self):
+        return f"<Group group_id:{self.group_id}>"
+
+    def __str__(self):
+        return f"Group ID: {self.group_id}"

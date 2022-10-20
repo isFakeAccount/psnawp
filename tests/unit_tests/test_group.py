@@ -47,6 +47,14 @@ def test_group__group_with_id(psnawp_fixture):
 
 
 @pytest.mark.vcr()
+def test_group__repr_and_str(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        last_group = next(psnawp_fixture.me().get_groups(limit=1))
+        repr(last_group)
+        str(last_group)
+
+
+@pytest.mark.vcr()
 def test_group__change_name_dm(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPBadRequest):
