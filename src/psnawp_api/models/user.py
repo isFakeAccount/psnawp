@@ -250,6 +250,75 @@ class User:
         ).json()
         return self.account_id in response["blockList"]
 
+    def get_all_trophies(self, limit=799):
+        """get all the trophies info for the user's game
+
+        Args:
+            limit (int, optional): limit of trophies to query. Max is 800. Defaults to 100.
+
+        Returns:
+            dict
+        """
+
+        param = {"limit": min(limit, 800)}
+
+        response = self._request_builder.get(
+            url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/trophyTitles",
+            params=param,
+        )
+        return response.json()
+
+    def get_game_trophies(self, game_id, version, limit=799):
+        """get the trophies info for the user's specific game
+
+        Args:
+            game_id - "NPWR..." - like-id,
+            Version - either PS5 or any other
+            limit (int, optional): limit of trophies to query. Max is 800. Defaults to 100.
+
+        Returns:
+            dict
+        """
+
+        param = {"limit": min(limit, 800)}
+        if version == "PS5":
+            response = self._request_builder.get(
+                url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
+                params=param,
+            )
+        else:
+            response = self._request_builder.get(
+                url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
+                params=param,
+            )
+        return response.json()
+
+    def get_game_trophy_names(self, game_id, version, limit=799):
+
+        """get the trophy names for specific game
+
+        Args:
+            game_id - "NPWR..." - like-id,
+            Version - either PS5 or any other
+            limit (int, optional): limit of trophies to query. Max is 800. Defaults to 100.
+
+        Returns:
+            dict
+        """
+
+        param = {"limit": min(limit, 800), "encoding": "utf-8"}
+        if version == "PS5":
+            response = self._request_builder.get(
+                url=f"{User.trophy_base_uri}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
+                params=param,
+            )
+        else:
+            response = self._request_builder.get(
+                url=f"{User.trophy_base_uri}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
+                params=param,
+            )
+        return response.json()
+
     def __repr__(self):
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
 
