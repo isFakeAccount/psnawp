@@ -1,3 +1,4 @@
+attrs
 build
 certifi
 chardet
@@ -14,6 +15,7 @@ requests
 sphinx
 sphinx-rtd-theme
 twine
+types-attrs
 types-requests
 urllib3
 vcrpy

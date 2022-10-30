@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional, Any
+from typing import Optional, Any, Iterator
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
@@ -9,6 +9,8 @@ from psnawp_api.core.psnawp_exceptions import (
 )
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.models.trophies.trophy_summary import TrophySummary
+from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TitleTrophySummary
 
 
 class User:
@@ -249,6 +251,36 @@ class User:
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
         ).json()
         return self.account_id in response["blockList"]
+
+    def trophy_summary(self) -> TrophySummary:
+        """Retrieve an overall summary of the number of trophies earned for a user.
+
+        :returns: Trophy Summary Object containing all information
+        :rtype: TrophySummary
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        """
+        assert (
+            self.account_id is not None
+        )  # This is for mypy, self.account_id is always defined, but it cannot pick it up.
+        return TrophySummary(self._request_builder, self.account_id)
+
+    def trophy_titles(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
+        """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
+
+        :param limit: Limit of titles returned
+        :type limit: Optional[int]
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        """
+        assert (
+            self.account_id is not None
+        )  # This is for mypy, self.account_id is always defined, but it cannot pick it up.
+        return TrophyTitles(self._request_builder, self.account_id).get_title_trophies(
+            limit
+        )
 
     def __repr__(self):
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

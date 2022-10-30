@@ -68,7 +68,7 @@ class Group:
                 self.group_id = response["groupId"]
             except PSNAWPForbidden as forbidden:
                 raise PSNAWPForbidden(
-                    "The group cannot be created because you have been blocked by other user."
+                    "The group cannot be created because the user has either set messages to private or has blocked you."
                 ) from forbidden
 
     def change_name(self, group_name: str) -> None:

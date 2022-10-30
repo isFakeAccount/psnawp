@@ -1,8 +1,10 @@
 from __future__ import annotations
 
-from typing import Any, Iterable
+from typing import Any, Iterable, Optional
 
 from psnawp_api.models.group import Group
+from psnawp_api.models.trophies.trophy_summary import TrophySummary
+from psnawp_api.models.trophies.trophy_titles import TrophyTitles
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -300,6 +302,28 @@ class Client:
             )
             for group_info in response["groups"]
         )
+
+    def trophy_summary(self) -> TrophySummary:
+        """Retrieve an overall summary of the number of trophies earned for a user.
+
+        :returns: Trophy Summary Object containing all information
+        :rtype: TrophySummary
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        """
+        return TrophySummary(self._request_builder, "me")
+
+    def trophy_titles(self, limit: Optional[int]):
+        """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
+
+        :param limit: Limit of titles returned
+        :type limit: Optional[int]
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        """
+        return TrophyTitles(self._request_builder, "me").get_title_trophies(limit)
 
     def __repr__(self):
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

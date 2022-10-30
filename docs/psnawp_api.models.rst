@@ -1,6 +1,14 @@
 psnawp\_api.models package
 ==========================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   psnawp_api.models.trophies
+
 Submodules
 ----------
 

@@ -7,6 +7,7 @@ BASE_PATH = {
     "group_messaging": "https://us-gmsg.np.community.playstation.net/groupMessaging/v1",
     "universal_search": "https://m.np.playstation.com/api/search/v1/universalSearch",
     "game_titles": "https://m.np.playstation.com/api/catalog/v2/titles",
+    "trophies": "https://m.np.playstation.com/api/trophy/v1",
 }
 
 API_PATH = {
@@ -28,4 +29,6 @@ API_PATH = {
     "conversation": "/members/me/groups/{group_id}/threads/{group_id}/messages",
     "leave_group": "/groups/{group_id}/members/me",
     "title_concept": "/{title_id}/concepts",
+    "trophy_summary": "/users/{account_id}/trophySummary",
+    "trophy_titles": "/users/{account_id}/trophyTitles",
 }

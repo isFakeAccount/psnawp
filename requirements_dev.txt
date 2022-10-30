@@ -7,7 +7,9 @@
 alabaster==0.7.12
     # via sphinx
 attrs==22.1.0
-    # via pytest
+    # via
+    #   -r requirements_dev.in
+    #   pytest
 babel==2.10.3
     # via sphinx
 bleach==5.0.1
@@ -183,6 +185,8 @@ tomli==2.0.1
     #   pep517
     #   pytest
 twine==4.0.1
+    # via -r requirements_dev.in
+types-attrs==19.1.0
     # via -r requirements_dev.in
 types-requests==2.28.11.2
     # via -r requirements_dev.in

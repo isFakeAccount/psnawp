@@ -99,7 +99,7 @@ def main():
     args = parser.parse_args()
     success = True
     try:
-        success &= run_git_pull()
+        # success &= run_git_pull()
         if success:
             if not args.unstatic or args.all:
                 success &= run_static()
