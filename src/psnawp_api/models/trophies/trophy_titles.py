@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import NamedTuple, Optional, Iterator, Any
 
+from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_set import TrophySet
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -32,7 +33,7 @@ class TitleTrophySummary(NamedTuple):
     hidden_flag: bool
     "Title has been hidden on the accounts trophy list (Only for Client)"
     last_updated_date_time: datetime
-    "Date most recent trophy earned for the title"
+    "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
     earned_trophies: TrophySet
     "Number of trophies for the title which have been earned by type"
     defined_trophies: TrophySet
@@ -60,20 +61,27 @@ class TrophyTitles:
     def get_title_trophies(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
-        :param limit: Limit of titles returned
+        :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
-        :returns: None
+        :returns: Generator object with TitleTrophySummary objects
+        :rtype: Iterator[TitleTrophySummary]
 
         :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
         # The first request is get how many total trophy titles there are
         params = {"limit": 1, "offset": 0}
-        response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
-            params=params,
-        ).json()
+        try:
+            response = self._request_builder.get(
+                url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
+                params=params,
+            ).json()
+        except PSNAWPForbidden as forbidden:
+            raise PSNAWPForbidden(
+                "The target user has set their trophies visibility to private."
+            ) from forbidden
+
         total_titles = response.get("totalItemCount", 0)
         if limit is None:
             limit = total_titles

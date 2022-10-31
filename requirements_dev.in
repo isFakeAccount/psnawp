@@ -4,7 +4,7 @@ certifi
 chardet
 flake8
 idna
-mypy
+myst-parser
 pip-tools
 pre-commit
 pytest
@@ -15,7 +15,5 @@ requests
 sphinx
 sphinx-rtd-theme
 twine
-types-attrs
-types-requests
 urllib3
 vcrpy

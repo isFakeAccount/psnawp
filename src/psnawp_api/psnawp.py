@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import overload, Optional, Iterable
+from typing import overload, Optional, Iterator
 
 from psnawp_api.core import authenticator
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
@@ -100,7 +100,7 @@ class PSNAWP:
         ...
 
     @overload
-    def group(self, *, users_list: Iterable[User]) -> Group:
+    def group(self, *, users_list: Iterator[User]) -> Group:
         ...
 
     def group(self, **kwargs):
@@ -113,7 +113,7 @@ class PSNAWP:
             ``client.get_groups()``
 
         :param kwargs: group_id (str): The Group ID of a group usually retrieved with
-            the get_groups() method. users_list(Iterable[User]): A list of users of the
+            the get_groups() method. users_list(Iterator[User]): A list of users of the
             members in the group.
 
         :returns: Group Object
@@ -126,7 +126,7 @@ class PSNAWP:
         """
 
         group_id: Optional[str] = kwargs.get("group_id")
-        users: Optional[Iterable[User]] = kwargs.get("users_list")
+        users: Optional[Iterator[User]] = kwargs.get("users_list")
 
         if (group_id and users) or not (group_id or users):
             raise PSNAWPIllegalArgumentError(

@@ -4,18 +4,25 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to PlayStation Network API Wrapper Python (PSNAWP)'s documentation!
+PSNAWP: PlayStation Network API Wrapper Python
 ===========================================================================
 
 .. toctree::
-    :maxdepth: 3
-    :caption: Contents:
+    :maxdepth: 2
+    :caption: Code Overview:
+
+    psnawp_api
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Additional Resources:
+
+    additional_resources/README.rst
+    additional_resources/CHANGELOG.rst
+    additional_resources/AUTHORS.rst
+    additional_resources/LICENSE.rst
+
+.. toctree::
+    :hidden:
 
     modules
-
-Indices and tables
-==================
-
-- :ref:`genindex`
-- :ref:`modindex`
-- :ref:`search`

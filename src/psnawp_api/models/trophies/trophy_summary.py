@@ -1,14 +1,19 @@
 from __future__ import annotations
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
+from psnawp_api.models.trophies.trophy_set import TrophySet
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
-from psnawp_api.models.trophies.trophy_set import TrophySet
 
 
 class TrophySummary:
     def __init__(self, request_builder: RequestBuilder, account_id: str):
-        """Retrieve an overall summary of the number of trophies earned for a user broken down by type, as well as their current overall trophy level, progress towards the next level and which tier their current level falls in to.
+        """Retrieve an overall summary of the number of trophies earned for a user broken down by
+
+        - type
+        - overall trophy level
+        - progress towards the next level
+        - current tier
 
         .. note::
 
@@ -37,11 +42,16 @@ class TrophySummary:
             self.__get_trophy_summary()
         except PSNAWPForbidden as forbidden:
             raise PSNAWPForbidden(
-                "Cannot view trophies. User profile is private."
+                "The target user has set their trophies visibility to private."
             ) from forbidden
 
     def __get_trophy_summary(self):
-        """Retrieve an overall summary of the number of trophies earned for a user broken down by type, as well as their current overall trophy level, progress towards the next level and which tier their current level falls in to.
+        """Retrieve an overall summary of the number of trophies earned for a user broken down by
+
+        - type
+        - overall trophy level
+        - progress towards the next level
+        - current tier
 
         :raises: ``PSNAWPForbidden`` If the user's profile is private
 

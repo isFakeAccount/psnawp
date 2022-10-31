@@ -15,13 +15,13 @@ sys.path.insert(1, os.path.abspath("../src"))
 project = "PSNAWP"
 copyright = datetime.today().strftime("%Y, Yoshikage Kira")
 author = "Yoshikage Kira (@isFakeAccount)"
-release = "1.0.4"
+release = "1.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 
-extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc", 'sphinx.ext.intersphinx']
+extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc", 'sphinx.ext.intersphinx', 'myst_parser']
 autodoc_default_options = {
     "members": True,
     "member-order": "bysource",
@@ -41,9 +41,9 @@ nitpick_ignore = [
 
 html_theme = "sphinx_rtd_theme"
 pygments_style = "perldoc"
-html_theme_options = {'collapse_navigation': True}
+html_theme_options = {'collapse_navigation': True, "style_external_links": True}
 intersphinx_mapping = {"python": ("https://docs.python.org", None),
                        "requests": ("https://requests.readthedocs.io/en/latest/", None)}
 htmlhelp_basename = "PRAW"
-
-source_suffix = ".rst"
+source_suffix = ['.rst', '.md']
+suppress_warnings = ['ref.myst']

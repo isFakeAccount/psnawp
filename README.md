@@ -1,4 +1,3 @@
-
 # PlayStation Network API Wrapper Python (PSNAWP)
 
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network

@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from typing import Any, Iterable, Optional
+from typing import Any, Iterator, Optional
 
 from psnawp_api.models.group import Group
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
-from psnawp_api.models.trophies.trophy_titles import TrophyTitles
+from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TitleTrophySummary
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -188,14 +188,14 @@ class Client:
         account_devices: list[dict[str, Any]] = response.get("accountDevices", [])
         return account_devices
 
-    def friends_list(self, limit: int = 1000) -> Iterable[User]:
+    def friends_list(self, limit: int = 1000) -> Iterator[User]:
         """Gets the friends list and return their account ids.
 
         :param limit: The number of items from input max is 1000.
         :type limit: int
 
         :returns: All friends in your friends list.
-        :rtype: Iterable[User]
+        :rtype: Iterator[User]
 
         .. code-block:: Python
 
@@ -221,11 +221,11 @@ class Client:
             for account_id in response["friends"]
         )
 
-    def available_to_play(self) -> Iterable[User]:
+    def available_to_play(self) -> Iterator[User]:
         """Gets the list of users on your "Notify when available" subscription list.
 
-        :returns: Iterable of user objects.
-        :rtype: Iterable[User]
+        :returns: Iterator of user objects.
+        :rtype: Iterator[User]
 
         .. code-block:: Python
 
@@ -248,11 +248,11 @@ class Client:
             for account_id_dict in response["settings"]
         )
 
-    def blocked_list(self) -> Iterable[User]:
+    def blocked_list(self) -> Iterator[User]:
         """Gets the blocked list and return their account ids.
 
         :returns: Al blocked users on your block list.
-        :rtype: Iterable[User]
+        :rtype: Iterator[User]
 
         .. code-block:: Python
 
@@ -275,7 +275,7 @@ class Client:
             for account_id in response["blockList"]
         )
 
-    def get_groups(self, limit: int = 200, offset: int = 0) -> Iterable[Group]:
+    def get_groups(self, limit: int = 200, offset: int = 0) -> Iterator[Group]:
         """Gets all the groups you have participated in.
 
         :param limit: The number of groups to receive.
@@ -284,8 +284,8 @@ class Client:
             the first 10 groups.
         :type offset: int
 
-        :returns: Iterable of Group Objects.
-        :rtype: Iterable[Group]
+        :returns: Iterator of Group Objects.
+        :rtype: Iterator[Group]
 
         """
         param = {"includeFields": "members", "limit": limit, "offset": offset}
@@ -304,23 +304,38 @@ class Client:
         )
 
     def trophy_summary(self) -> TrophySummary:
-        """Retrieve an overall summary of the number of trophies earned for a user.
+        """Retrieve an overall summary of the number of trophies earned for a user broken down by
+
+        - type
+        - overall trophy level
+        - progress towards the next level
+        - current tier
 
         :returns: Trophy Summary Object containing all information
         :rtype: TrophySummary
 
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.trophy_summary())
 
         """
         return TrophySummary(self._request_builder, "me")
 
-    def trophy_titles(self, limit: Optional[int]):
+    def trophy_titles(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
-        :param limit: Limit of titles returned
+        :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
+        :returns: Generator object with TitleTrophySummary objects
+        :rtype: Iterator[TitleTrophySummary]
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            for trophy_title in client.trophy_titles(limit=None):
+                print(trophy_title)
 
         """
         return TrophyTitles(self._request_builder, "me").get_title_trophies(limit)

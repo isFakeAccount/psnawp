@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import Optional, Iterable
+from typing import Optional, Iterator
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
@@ -18,7 +18,7 @@ class Group:
         self,
         request_builder: RequestBuilder,
         group_id: Optional[str],
-        users: Optional[Iterable[User]],
+        users: Optional[Iterator[User]],
     ):
         """Constructor of Group. Responsible for managing messages groups and sending messages.
 
@@ -32,7 +32,7 @@ class Group:
         :param group_id: The Group ID of a group.
         :type group_id: Optional[str]
         :param users: A list of users of the members in the group.
-        :type users: Optional[Iterable[User]]
+        :type users: Optional[Iterator[User]]
 
         :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
 

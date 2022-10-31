@@ -7,10 +7,10 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPForbidden,
     PSNAWPBadRequest,
 )
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
 from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TitleTrophySummary
+from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.request_builder import RequestBuilder
 
 
 class User:
@@ -118,36 +118,8 @@ class User:
         :returns: A dict containing info similar to what is shown below:
         :rtype: dict[str, Any]
 
-            .. code-block:: json
-
-                {
-                    "onlineId": "VaultTec-Co",
-                    "aboutMe": "r/Fallout76Marketplace Moderator",
-                    "avatars": [
-                        {
-                            "size": "s",
-                            "url": "[Redacted]"
-                        },
-                        {
-                            "size": "xl",
-                            "url": "[Redacted]"
-                        },
-                        {
-                            "size": "l",
-                            "url": "[Redacted]"
-                        },
-                        {
-                            "size": "m",
-                            "url": "[Redacted]"
-                        }
-                    ],
-                    "languages": [
-                        "en-US"
-                    ],
-                    "isPlus": false,
-                    "isOfficiallyVerified": false,
-                    "isMe": false
-                }
+            .. literalinclude:: examples/user/profile.json
+                :language: json
 
 
         :raises: ``PSNAWPNotFound`` If the user is not valid/found.
@@ -175,16 +147,8 @@ class User:
         :returns: A dict containing info similar to what is shown below:
         :rtype: dict[str, Any]
 
-            .. code-block:: json
-
-                {
-                    "availability": "availableToPlay",
-                    "primaryPlatformInfo": {
-                        "onlineStatus": "online",
-                        "platform": "ps4",
-                        "lastOnlineDate": "2022-09-15T22:50:28.012Z"
-                    }
-                }
+            .. literalinclude:: examples/user/get_presence.json
+                :language: json
 
 
         :raises: ``PSNAWPForbidden`` When the user's profile is private, and you don't
@@ -214,14 +178,8 @@ class User:
         :returns: A dict containing info similar to what is shown below
         :rtype: dict[str, Any]
 
-            .. code-block:: json
-
-                {
-                    "friendRelation": "friend",
-                    "personalDetailSharing": "none",
-                    "friendsCount": 419,
-                    "mutualFriendsCount": 0
-                }
+            .. literalinclude:: examples/user/friendship.json
+                :language: json
 
 
         .. code-block:: Python
@@ -253,12 +211,22 @@ class User:
         return self.account_id in response["blockList"]
 
     def trophy_summary(self) -> TrophySummary:
-        """Retrieve an overall summary of the number of trophies earned for a user.
+        """Retrieve an overall summary of the number of trophies earned for a user broken down by
+
+        - type
+        - overall trophy level
+        - progress towards the next level
+        - current tier
 
         :returns: Trophy Summary Object containing all information
         :rtype: TrophySummary
 
         :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            print(user_example.trophy_summary())
 
         """
         assert (
@@ -269,10 +237,19 @@ class User:
     def trophy_titles(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
-        :param limit: Limit of titles returned
+        :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
+        :returns: Generator object with TitleTrophySummary objects
+        :rtype: Iterator[TitleTrophySummary]
+
         :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            for trophy_title in user_example.trophy_titles(limit=None):
+                print(trophy_title)
 
         """
         assert (
