@@ -91,6 +91,10 @@ more-itertools==9.0.0
     # via jaraco-classes
 multidict==6.0.2
     # via yarl
+mypy==0.982
+    # via -r requirements_dev.in
+mypy-extensions==0.4.3
+    # via mypy
 myst-parser==0.18.1
     # via -r requirements_dev.in
 nodeenv==1.7.0
@@ -192,12 +196,21 @@ tomli==2.0.1
     # via
     #   build
     #   coverage
+    #   mypy
     #   pep517
     #   pytest
 twine==4.0.1
     # via -r requirements_dev.in
+types-attrs==19.1.0
+    # via -r requirements_dev.in
+types-requests==2.28.11.2
+    # via -r requirements_dev.in
+types-urllib3==1.26.25.1
+    # via types-requests
 typing-extensions==4.4.0
-    # via myst-parser
+    # via
+    #   mypy
+    #   myst-parser
 urllib3==1.26.12
     # via
     #   -r requirements_dev.in
