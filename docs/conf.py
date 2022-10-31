@@ -22,6 +22,7 @@ release = "1.1.0"
 
 
 extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc", 'sphinx.ext.intersphinx', 'myst_parser']
+add_module_names = False
 autodoc_default_options = {
     "members": True,
     "member-order": "bysource",
@@ -29,8 +30,8 @@ autodoc_default_options = {
     "undoc-members": True,
     "exclude-members": "__weakref__",
 }
-# html_static_path = ["_static"]
-# templates_path = ["_templates"]
+html_static_path = ["_static"]
+templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
