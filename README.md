@@ -4,7 +4,7 @@ Retrieve User Information, Trophies, Game and Store data from the PlayStation Ne
 
 [![PyPI version](https://badge.fury.io/py/psnawp.svg)](https://badge.fury.io/py/psnawp)
 [![Downloads](https://pepy.tech/badge/psnawp)](https://pepy.tech/project/psnawp)
-[![python-logo](https://img.shields.io/badge/python-3.8_|_3.9_|_3.10-blue.svg)](https://www.python.org/)
+[![python-logo](https://img.shields.io/badge/python-3.8_|_3.9_|_3.10_|_3.11-blue.svg)](https://www.python.org/)
 [![pytest](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml)
 [![pre-commit](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)

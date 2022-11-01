@@ -5,17 +5,19 @@
 
 import os
 import sys
+from configparser import ConfigParser
 from datetime import datetime
 
 sys.path.insert(1, os.path.abspath("../src"))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
 project = "PSNAWP"
 copyright = datetime.today().strftime("%Y, Yoshikage Kira")
 author = "Yoshikage Kira (@isFakeAccount)"
-release = "1.1.0"
+config = ConfigParser()
+data = config.read('../setup.cfg')
+release = config['metadata']['version']
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
