@@ -36,6 +36,14 @@ psnawp\_api.models.search module
    :undoc-members:
    :show-inheritance:
 
+psnawp\_api.models.title module
+-------------------------------
+
+.. automodule:: psnawp_api.models.title
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 psnawp\_api.models.user module
 ------------------------------
 
