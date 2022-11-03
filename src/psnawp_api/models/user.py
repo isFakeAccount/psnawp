@@ -263,7 +263,7 @@ class User:
         param = {"limit": min(limit, 800)}
 
         response = self._request_builder.get(
-            url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/trophyTitles",
+            url=f"{BASE_PATH["trophies_uri"]}/v1/users/{self.account_id}/trophyTitles",
             params=param,
         )
         return response.json()
@@ -283,12 +283,12 @@ class User:
         param = {"limit": min(limit, 800)}
         if version == "PS5":
             response = self._request_builder.get(
-                url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
+                url=f"{BASE_PATH["trophies_uri"]}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
                 params=param,
             )
         else:
             response = self._request_builder.get(
-                url=f"{User.trophy_base_uri}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
+                url=f"{BASE_PATH["trophies_uri"]}/v1/users/{self.account_id}/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
                 params=param,
             )
         return response.json()
@@ -309,12 +309,12 @@ class User:
         param = {"limit": min(limit, 800), "encoding": "utf-8"}
         if version == "PS5":
             response = self._request_builder.get(
-                url=f"{User.trophy_base_uri}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
+                url=f"{BASE_PATH["trophies_uri"]}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies",
                 params=param,
             )
         else:
             response = self._request_builder.get(
-                url=f"{User.trophy_base_uri}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
+                url=f"{BASE_PATH["trophies_uri"]}/v1/npCommunicationIds/{game_id}/trophyGroups/all/trophies?npServiceName=trophy",
                 params=param,
             )
         return response.json()

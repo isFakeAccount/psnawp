@@ -7,6 +7,7 @@ BASE_PATH = {
     "group_messaging": "https://us-gmsg.np.community.playstation.net/groupMessaging/v1",
     "universal_search": "https://m.np.playstation.com/api/search/v1/universalSearch",
     "game_titles": "https://m.np.playstation.com/api/catalog/v2/titles",
+    "trophies_uri": "https://m.np.playstation.com/api/trophy",
 }
 
 API_PATH = {

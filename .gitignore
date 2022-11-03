@@ -141,3 +141,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+bot_dev.py
+psn_bot_dev.py
