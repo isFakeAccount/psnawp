@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import Optional, Iterator
+from typing import Optional, Iterator, Any
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
@@ -50,7 +50,7 @@ class Group:
         elif self.users is not None:
             self._create_group()
 
-    def _create_group(self):
+    def _create_group(self) -> None:
         """Creates a new group if it doesn't exist. Doesn't work if user's privacy settings block invites.
 
         :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
@@ -99,7 +99,7 @@ class Group:
                 f"The group name of Group ID {self.group_id} does cannot be changed. Group is either a dm or does not exist."
             ) from bad_req
 
-    def get_group_information(self):
+    def get_group_information(self) -> dict[str, Any]:
         """Gets the group chat information such as about me, avatars, languages etc...
 
         :returns: A dict containing info similar to what is shown below:
@@ -163,7 +163,7 @@ class Group:
         }
 
         try:
-            response = self._request_builder.get(
+            response: dict[str, Any] = self._request_builder.get(
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['group_members'].format(group_id=self.group_id)}",
                 params=param,
             ).json()
@@ -204,7 +204,7 @@ class Group:
 
         return response
 
-    def get_conversation(self, limit: int = 20):
+    def get_conversation(self, limit: int = 20) -> dict[str, Any]:
         """Gets the conversations in a group.
 
         :param limit: The number of conversations to receive.
@@ -239,7 +239,7 @@ class Group:
 
         param = {"limit": limit}
 
-        response = self._request_builder.get(
+        response: dict[str, Any] = self._request_builder.get(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['conversation'].format(group_id=self.group_id)}",
             params=param,
         ).json()
@@ -257,8 +257,8 @@ class Group:
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}"
         )
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<Group group_id:{self.group_id}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Group ID: {self.group_id}"

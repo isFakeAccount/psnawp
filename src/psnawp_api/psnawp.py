@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import overload, Optional, Iterator
+from typing import overload, Optional, Iterator, Any
 
 from psnawp_api.core import authenticator
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
@@ -26,7 +26,7 @@ class PSNAWP:
 
     """
 
-    def __init__(self, npsso_cookie):
+    def __init__(self, npsso_cookie: str):
         """Constructor Method. Takes the npsso_cookie and creates instance of ``request_builder.RequestBuilder`` which is used later in code for HTTPS requests.
 
         :param npsso_cookie: npsso cookie obtained from PSN website.
@@ -62,7 +62,7 @@ class PSNAWP:
     def user(self, *, account_id: str) -> User:
         ...
 
-    def user(self, **kwargs):
+    def user(self, **kwargs: Any) -> User:
         """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
 
         .. note::
@@ -103,7 +103,7 @@ class PSNAWP:
     def group(self, *, users_list: Iterator[User]) -> Group:
         ...
 
-    def group(self, **kwargs):
+    def group(self, **kwargs: Any) -> Group:
         """Creates a group object from a Group ID or from list of users.
 
         .. warning::

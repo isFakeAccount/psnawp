@@ -1,4 +1,5 @@
 import json
+from typing import Any
 
 import requests
 
@@ -13,11 +14,13 @@ from psnawp_api.core.psnawp_exceptions import (
 )
 
 
-def response_checker(response):
+def response_checker(response: requests.Response) -> None:
     """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
 
     :param response: :class:`Response <Response>` object
     :type response: requests.Response
+
+    :returns: None
 
     """
     if response.status_code == 400:
@@ -54,7 +57,7 @@ class RequestBuilder:
             "Country": "US",
         }
 
-    def get(self, **kwargs) -> requests.Response:
+    def get(self, **kwargs: Any) -> requests.Response:
         """Handles the GET requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
@@ -77,7 +80,7 @@ class RequestBuilder:
         response_checker(response)
         return response
 
-    def patch(self, **kwargs) -> requests.Response:
+    def patch(self, **kwargs: Any) -> requests.Response:
         """Handles the POST requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
@@ -101,7 +104,7 @@ class RequestBuilder:
         response_checker(response)
         return response
 
-    def post(self, **kwargs) -> requests.Response:
+    def post(self, **kwargs: Any) -> requests.Response:
         """Handles the POST requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
@@ -125,7 +128,7 @@ class RequestBuilder:
         response_checker(response)
         return response
 
-    def multipart_post(self, **kwargs) -> requests.Response:
+    def multipart_post(self, **kwargs: Any) -> requests.Response:
         """Handles the Multipart POST requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.
@@ -155,7 +158,7 @@ class RequestBuilder:
         response_checker(response)
         return response
 
-    def delete(self, **kwargs) -> requests.Response:
+    def delete(self, **kwargs: Any) -> requests.Response:
         """Handles the DELETE requests and returns the requests.Response object.
 
         :param kwargs: The query parameters to add to the request.

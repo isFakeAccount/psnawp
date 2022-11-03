@@ -71,64 +71,8 @@ class Client:
         :returns: A dict containing info similar to what is shown below:
         :rtype: dict[str, Any]
 
-            .. code-block:: json
-
-                {
-                    "profile": {
-                        "onlineId": "VaultTec_Trading",
-                        "accountId": "8520698476712646544",
-                        "npId": "VmF1bHRUZWNfVHJhZGluZ0BiNi51cw==",
-                        "avatarUrls": [
-                            {
-                                "size": "l",
-                                "avatarUrl": "[Redacted]"
-                            }
-                        ],
-                        "plus": 0,
-                        "aboutMe": "r/Fallout76Marketplace Moderator",
-                        "languagesUsed": [
-                            "en"
-                        ],
-                        "trophySummary": {
-                            "level": 1,
-                            "progress": 0,
-                            "earnedTrophies": {
-                                "platinum": 0,
-                                "gold": 0,
-                                "silver": 0,
-                                "bronze": 0
-                            }
-                        },
-                        "isOfficiallyVerified": false,
-                        "personalDetail": {
-                            "firstName": "VaultTec",
-                            "lastName": "TradingCo",
-                            "profilePictureUrls": [
-                                {
-                                    "size": "xl",
-                                    "profilePictureUrl": "[Redacted]"
-                                }
-                            ]
-                        },
-                        "personalDetailSharing": "no",
-                        "personalDetailSharingRequestMessageFlag": false,
-                        "primaryOnlineStatus": "offline",
-                        "presences": [
-                            {
-                                "onlineStatus": "offline",
-                                "hasBroadcastData": false,
-                                "lastOnlineDate": "2021-02-05T20:14:45Z"
-                            }
-                        ],
-                        "friendRelation": "no",
-                        "requestMessageFlag": false,
-                        "blocking": false,
-                        "following": false,
-                        "consoleAvailability": {
-                            "availabilityStatus": "offline"
-                        }
-                    }
-                }
+            .. literalinclude:: examples/client/get_profile_legacy.json
+                :language: json
 
 
         .. code-block:: Python
@@ -157,17 +101,8 @@ class Client:
         :returns: A dict containing info similar to what is shown below:
         :rtype: list[dict[str, Any]]
 
-            .. code-block:: json
-
-                [
-                    {
-                        "deviceId": "[Redacted]",
-                        "deviceType": "PS4",
-                        "activationType": "PSN_GAME_V3",
-                        "activationDate": "2021-02-05T20:11:27.815Z",
-                        "accountDeviceVector": "[Redacted]"
-                    }
-                ]
+            .. literalinclude:: examples/client/get_account_devices.json
+                :language: json
 
 
         .. code-block:: Python
@@ -340,8 +275,8 @@ class Client:
         """
         return TrophyTitles(self._request_builder, "me").get_title_trophies(limit)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Online ID: {self.online_id} Account ID: {self.account_id}"

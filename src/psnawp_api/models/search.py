@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from typing import Any
 
 from psnawp_api.utils.endpoints import BASE_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -21,7 +22,7 @@ class Search:
         """
         self._request_builder = request_builder
 
-    def universal_search(self, search_query: str, limit: int = 20):
+    def universal_search(self, search_query: str, limit: int = 20) -> dict[str, Any]:
         """Searches the Playstation Website. Note: It does not work as of now and the endpoints returns whole html page.
 
         .. note::
@@ -84,7 +85,7 @@ class Search:
             "languageCode": "en",
             "age": 99,
         }
-        response = self._request_builder.post(
+        response: dict[str, Any] = self._request_builder.post(
             url=f"{BASE_PATH['universal_search']}", data=json.dumps(data)
         ).json()
         return response

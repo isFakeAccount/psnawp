@@ -1,0 +1,56 @@
+{
+  "profile": {
+    "onlineId": "VaultTec_Trading",
+    "accountId": "8520698476712646544",
+    "npId": "VmF1bHRUZWNfVHJhZGluZ0BiNi51cw==",
+    "avatarUrls": [
+      {
+        "size": "l",
+        "avatarUrl": "[Redacted]"
+      }
+    ],
+    "plus": 0,
+    "aboutMe": "r/Fallout76Marketplace Moderator",
+    "languagesUsed": [
+      "en"
+    ],
+    "trophySummary": {
+      "level": 1,
+      "progress": 0,
+      "earnedTrophies": {
+        "platinum": 0,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      }
+    },
+    "isOfficiallyVerified": false,
+    "personalDetail": {
+      "firstName": "VaultTec",
+      "lastName": "TradingCo",
+      "profilePictureUrls": [
+        {
+          "size": "xl",
+          "profilePictureUrl": "[Redacted]"
+        }
+      ]
+    },
+    "personalDetailSharing": "no",
+    "personalDetailSharingRequestMessageFlag": false,
+    "primaryOnlineStatus": "offline",
+    "presences": [
+      {
+        "onlineStatus": "offline",
+        "hasBroadcastData": false,
+        "lastOnlineDate": "2021-02-05T20:14:45Z"
+      }
+    ],
+    "friendRelation": "no",
+    "requestMessageFlag": false,
+    "blocking": false,
+    "following": false,
+    "consoleAvailability": {
+      "availabilityStatus": "offline"
+    }
+  }
+}

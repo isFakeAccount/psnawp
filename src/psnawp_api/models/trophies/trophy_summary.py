@@ -45,7 +45,7 @@ class TrophySummary:
                 "The target user has set their trophies visibility to private."
             ) from forbidden
 
-    def __get_trophy_summary(self):
+    def __get_trophy_summary(self) -> None:
         """Retrieve an overall summary of the number of trophies earned for a user broken down by
 
         - type
@@ -64,10 +64,10 @@ class TrophySummary:
         self.tier = response.get("tier", -1)
         self.earned_trophies = TrophySet(**response.get("earnedTrophies"))
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<User account_id:{self._account_id}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"Trophy Level: {self.trophy_level} "
             f"Progress: {self.progress} "

@@ -30,7 +30,7 @@ class Title:
     def trophy_groups(self, trophy_group_id: str = "all"):
         ...
 
-    def details(self) -> dict[str, Any]:
+    def get_details(self) -> dict[str, Any]:
         """Get title details.
 
         :returns: A dict containing info similar to what is shown below (Not all values
@@ -44,7 +44,7 @@ class Title:
 
         param = {"age": 99, "country": "US", "language": "en-US"}
 
-        response = self._request_builder.get(
+        response: dict[str, Any] = self._request_builder.get(
             url=f"{BASE_PATH['game_titles']}{API_PATH['title_concept'].format(title_id=self.title_id)}",
             params=param,
         ).json()

@@ -259,8 +259,8 @@ class User:
             limit
         )
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Online ID: {self.online_id} Account ID: {self.account_id}"
