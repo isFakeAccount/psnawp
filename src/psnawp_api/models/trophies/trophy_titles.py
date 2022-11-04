@@ -70,14 +70,15 @@ class TrophyTitles:
 
         """
         offset = 0
-        limit = min(limit, 800) if limit is not None else 800
+        limit_per_request = min(limit, 800) if limit is not None else 800
         while True:
-            params = {"limit": limit, "offset": offset}
+            params = {"limit": limit_per_request, "offset": offset}
             response = self._request_builder.get(
                 url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
                 params=params,
             ).json()
 
+            per_page_items = 0
             trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
             for trophy_title in trophy_titles:
                 title_trophy_sum = TitleTrophySummary(
@@ -112,9 +113,17 @@ class TrophyTitles:
                     ),
                 )
                 yield title_trophy_sum
-                limit -= 1
-            offset = response.get('nextOffset', 0)
+                per_page_items += 1
 
-            # Reached the end
-            if offset <= 0 or limit <= 0:
+            if limit is not None:
+                limit -= per_page_items
+                limit_per_request = min(limit, 800)
+
+                # If limit is reached
+                if limit <= 0:
+                    break
+
+            offset = response.get('nextOffset', 0)
+            # If end is reached the end
+            if offset <= 0:
                 break
