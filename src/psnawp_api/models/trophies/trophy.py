@@ -1,12 +1,13 @@
-import attr
 from enum import Enum
+
+import attr
 
 
 class TrophyType(Enum):
-    BRONZE = 'bronze'
-    SILVER = 'silver'
-    GOLD = 'gold'
-    PLATINUM = 'platinum'
+    BRONZE = "bronze"
+    SILVER = "silver"
+    GOLD = "gold"
+    PLATINUM = "platinum"
 
 
 @attr.s(slots=True)

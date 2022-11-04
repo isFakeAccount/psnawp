@@ -3,7 +3,6 @@ from __future__ import annotations
 from datetime import datetime
 from typing import NamedTuple, Optional, Iterator, Any
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_set import TrophySet
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -70,34 +69,15 @@ class TrophyTitles:
         :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
-        # The first request is get how many total trophy titles there are
-        params = {"limit": 1, "offset": 0}
-        try:
-            response = self._request_builder.get(
-                url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
-                params=params,
-            ).json()
-        except PSNAWPForbidden as forbidden:
-            raise PSNAWPForbidden(
-                "The target user has set their trophies visibility to private."
-            ) from forbidden
-
-        total_titles = response.get("totalItemCount", 0)
-        if limit is None:
-            limit = total_titles
-        else:
-            limit = min(total_titles, limit)
-
-        assert limit is not None
         offset = 0
-        while limit > 0:
-            params = {"limit": min(800, limit), "offset": offset}
+        limit = min(limit, 800) if limit is not None else 800
+        while True:
+            params = {"limit": limit, "offset": offset}
             response = self._request_builder.get(
                 url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
                 params=params,
             ).json()
 
-            per_page_items = 0
             trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
             for trophy_title in trophy_titles:
                 title_trophy_sum = TitleTrophySummary(
@@ -132,6 +112,9 @@ class TrophyTitles:
                     ),
                 )
                 yield title_trophy_sum
-                per_page_items += 1
-            limit -= per_page_items
-            offset += per_page_items
+                limit -= 1
+            offset = response.get('nextOffset', 0)
+
+            # Reached the end
+            if offset <= 0 or limit <= 0:
+                break
