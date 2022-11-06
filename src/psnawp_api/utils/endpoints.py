@@ -31,6 +31,6 @@ API_PATH = {
     "title_concept": "/{title_id}/concepts",
     "trophy_summary": "/users/{account_id}/trophySummary",
     "trophy_titles": "/users/{account_id}/trophyTitles",
-    "title_trophy_group": "npCommunicationIds/{npCommunicationId}/trophyGroups",
-    "title_trophies": "/npCommunicationIds/{npCommunicationId}/trophyGroups/{trophyGroupId}/trophies",
+    "title_trophy_group": "/npCommunicationIds/{np_communication_id}/trophyGroups",
+    "title_trophies": "/npCommunicationIds/{np_communication_id}/trophyGroups/{trophy_group_id}/trophies",
 }

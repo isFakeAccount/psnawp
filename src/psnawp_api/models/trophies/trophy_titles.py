@@ -123,7 +123,7 @@ class TrophyTitles:
                 if limit <= 0:
                     break
 
-            offset = response.get('nextOffset', 0)
+            offset = response.get("nextOffset", 0)
             # If end is reached the end
             if offset <= 0:
                 break

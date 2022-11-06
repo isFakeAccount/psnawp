@@ -10,7 +10,7 @@ class TrophyType(Enum):
     PLATINUM = "platinum"
 
 
-@attr.s(slots=True)
+@attr.define(slots=True)
 class Trophy:
     trophy_id: int
     "Unique ID for this trophy"

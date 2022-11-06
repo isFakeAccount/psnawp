@@ -8,6 +8,7 @@ from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
 from psnawp_api.models.client import Client
 from psnawp_api.models.group import Group
 from psnawp_api.models.search import Search
+from psnawp_api.models.title import Title
 from psnawp_api.models.user import User
 from psnawp_api.utils import request_builder
 
@@ -133,6 +134,18 @@ class PSNAWP:
                 "You provide at least Group Id or Users, and not both."
             )
         return Group(self._request_builder, group_id=group_id, users=users)
+
+    def title(self, title_id: str) -> Title:
+        """Creates a title class object which represents a PlayStation video game title.
+
+        :param title_id: unique id of game.
+        :type title_id: str
+
+        :returns: Title Object
+        :rtype: Title
+
+        """
+        return Title(self._request_builder, title_id=title_id)
 
     def search(self) -> Search:
         """Creates a new search object
