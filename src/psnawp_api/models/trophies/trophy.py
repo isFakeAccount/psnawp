@@ -17,6 +17,8 @@ from psnawp_api.utils.request_builder import RequestBuilder
 
 @define(frozen=True)
 class Trophy:
+    """A class that represents a PlayStation Video Game Trophy."""
+
     # Trophy Meta
     trophy_id: Optional[int]
     "Unique ID for this trophy"
@@ -137,9 +139,19 @@ def _get_trophy_from_endpoint(
 
 
 class TrophyBuilder:
-    """Class for providing convenient method to Build Trophy from PlayStation Endpoints"""
+    """Class for providing convenient methods to Build Trophy from PlayStation Endpoints"""
 
     def __init__(self, request_builder: RequestBuilder, np_communication_id: str):
+        """Constructor for class TrophyBuilder.
+
+        :param request_builder: The instance of RequestBuilder. Used to make
+            HTTPRequests.
+        :type request_builder: RequestBuilder
+        :param np_communication_id: Unique ID of a game title used to request trophy
+            information. This can be obtained from ``GameTitle`` class.
+        :type np_communication_id: str
+
+        """
         self._request_builder = request_builder
         self.np_communication_id: str = np_communication_id
 

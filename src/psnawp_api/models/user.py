@@ -381,14 +381,12 @@ class User:
         """
         if not include_metadata:
             return TrophyGroupsSummaryBuilder(
-                self._request_builder
-            ).user_trophy_groups_summary(self.account_id, np_communication_id, platform)
+                self._request_builder, np_communication_id
+            ).user_trophy_groups_summary(self.account_id, platform)
         else:
             return TrophyGroupsSummaryBuilder(
-                self._request_builder
-            ).user_trophy_groups_summary_with_metadata(
-                self.account_id, np_communication_id, platform
-            )
+                self._request_builder, np_communication_id
+            ).user_trophy_groups_summary_with_metadata(self.account_id, platform)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

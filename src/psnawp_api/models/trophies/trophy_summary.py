@@ -10,6 +10,8 @@ from psnawp_api.utils.request_builder import RequestBuilder
 
 @define(frozen=True)
 class TrophySummary:
+    """Class representing the overall summary of the number of trophies earned by a user."""
+
     account_id: str
     "The ID of the account being accessed"
     trophy_level: int

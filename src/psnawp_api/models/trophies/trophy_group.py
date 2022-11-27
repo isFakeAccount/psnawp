@@ -119,12 +119,18 @@ def _trophy_groups_dict_to_obj(trophy_groups_dict: Any) -> TrophyGroupsSummary:
 class TrophyGroupsSummaryBuilder:
     """Class for providing convenient method to Build TrophyGroupsSummary from PlayStation Endpoints"""
 
-    def __init__(self, request_builder: RequestBuilder):
+    def __init__(self, request_builder: RequestBuilder, np_communication_id: str):
+        """:param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
+        :type request_builder: RequestBuilder
+        :param np_communication_id: Unique ID of a game title used to request trophy information. This can be obtained from ``GameTitle`` class.
+        :type np_communication_id: str
+
+        """
         self._request_builder = request_builder
+        self.np_communication_id: str = np_communication_id
 
     def game_title_trophy_groups_summary(
         self,
-        np_communication_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.
@@ -132,9 +138,6 @@ class TrophyGroupsSummaryBuilder:
         This is most commonly seen in games which have expansions where additional
         trophies are added.
 
-        :param np_communication_id: Unique ID of the title used to request trophy
-            information
-        :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
@@ -147,7 +150,7 @@ class TrophyGroupsSummaryBuilder:
         service_name = "trophy2" if platform == "PS5" else "trophy"
         params = {"npServiceName": service_name}
         response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=np_communication_id)}",
+            url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=self.np_communication_id)}",
             params=params,
         ).json()
         return _trophy_groups_dict_to_obj(response)
@@ -155,7 +158,6 @@ class TrophyGroupsSummaryBuilder:
     def user_trophy_groups_summary(
         self,
         account_id: str,
-        np_communication_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count.
@@ -165,9 +167,6 @@ class TrophyGroupsSummaryBuilder:
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
-        :param np_communication_id: Unique ID of the title used to request trophy
-            information
-        :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
@@ -180,7 +179,7 @@ class TrophyGroupsSummaryBuilder:
         service_name = "trophy2" if platform == "PS5" else "trophy"
         params = {"npServiceName": service_name}
         response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=np_communication_id)}",
+            url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
             params=params,
         ).json()
         return _trophy_groups_dict_to_obj(response)
@@ -188,7 +187,6 @@ class TrophyGroupsSummaryBuilder:
     def user_trophy_groups_summary_with_metadata(
         self,
         account_id: str,
-        np_communication_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count along with metadata.
@@ -198,9 +196,6 @@ class TrophyGroupsSummaryBuilder:
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
-        :param np_communication_id: Unique ID of the title used to request trophy
-            information
-        :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
@@ -214,12 +209,12 @@ class TrophyGroupsSummaryBuilder:
         params = {"npServiceName": service_name}
 
         trophy_groups_metadata = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=np_communication_id)}",
+            url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=self.np_communication_id)}",
             params=params,
         ).json()
 
         trophy_groups_user_data = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=np_communication_id)}",
+            url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
             params=params,
         ).json()
         merged_data = trophy_groups_metadata | trophy_groups_user_data

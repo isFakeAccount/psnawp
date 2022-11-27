@@ -112,5 +112,6 @@ class GameTitle:
 
         """
         return TrophyGroupsSummaryBuilder(
-            self._request_builder
-        ).game_title_trophy_groups_summary(self.np_communication_id, platform)
+            self._request_builder,
+            self.np_communication_id,
+        ).game_title_trophy_groups_summary(platform)
