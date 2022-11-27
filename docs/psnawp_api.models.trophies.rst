@@ -12,18 +12,18 @@ psnawp\_api.models.trophies.trophy module
    :undoc-members:
    :show-inheritance:
 
-psnawp\_api.models.trophies.trophy\_group module
-------------------------------------------------
+psnawp\_api.models.trophies.trophy\_constants module
+----------------------------------------------------
 
-.. automodule:: psnawp_api.models.trophies.trophy_group
+.. automodule:: psnawp_api.models.trophies.trophy_constants
    :members:
    :undoc-members:
    :show-inheritance:
 
-psnawp\_api.models.trophies.trophy\_set module
-----------------------------------------------
+psnawp\_api.models.trophies.trophy\_group module
+------------------------------------------------
 
-.. automodule:: psnawp_api.models.trophies.trophy_set
+.. automodule:: psnawp_api.models.trophies.trophy_group
    :members:
    :undoc-members:
    :show-inheritance:
@@ -40,6 +40,14 @@ psnawp\_api.models.trophies.trophy\_titles module
 -------------------------------------------------
 
 .. automodule:: psnawp_api.models.trophies.trophy_titles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+psnawp\_api.models.trophies.utility\_functions module
+-----------------------------------------------------
+
+.. automodule:: psnawp_api.models.trophies.utility_functions
    :members:
    :undoc-members:
    :show-inheritance:

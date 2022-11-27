@@ -1,10 +1,15 @@
 from __future__ import annotations
 
-from typing import Any, Iterator, Optional
+from typing import Any, Iterator, Optional, Literal
 
 from psnawp_api.models.group import Group
+from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
+from psnawp_api.models.trophies.trophy_group import (
+    TrophyGroupsSummary,
+    TrophyGroupsSummaryBuilder,
+)
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
-from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TitleTrophySummary
+from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TrophyTitle
 from psnawp_api.models.user import User
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -148,10 +153,9 @@ class Client:
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list']}", params=params
         ).json()
         return (
-            User(
+            User.from_account_id(
                 request_builder=self._request_builder,
                 account_id=account_id,
-                online_id=None,
             )
             for account_id in response["friends"]
         )
@@ -175,10 +179,9 @@ class Client:
             url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}"
         ).json()
         return (
-            User(
+            User.from_account_id(
                 request_builder=self._request_builder,
                 account_id=account_id_dict["accountId"],
-                online_id=None,
             )
             for account_id_dict in response["settings"]
         )
@@ -202,10 +205,9 @@ class Client:
             url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
         ).json()
         return (
-            User(
+            User.from_account_id(
                 request_builder=self._request_builder,
                 account_id=account_id,
-                online_id=None,
             )
             for account_id in response["blockList"]
         )
@@ -255,16 +257,16 @@ class Client:
             print(client.trophy_summary())
 
         """
-        return TrophySummary(self._request_builder, "me")
+        return TrophySummary.from_endpoint(self._request_builder, "me")
 
-    def trophy_titles(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
+    def trophy_titles(self, limit: Optional[int]) -> Iterator[TrophyTitle]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
         :returns: Generator object with TitleTrophySummary objects
-        :rtype: Iterator[TitleTrophySummary]
+        :rtype: Iterator[TrophyTitle]
 
         .. code-block:: Python
 
@@ -273,7 +275,114 @@ class Client:
                 print(trophy_title)
 
         """
-        return TrophyTitles(self._request_builder, "me").get_title_trophies(limit)
+        return TrophyTitles(self._request_builder, "me").get_trophy_titles(limit)
+
+    def trophy_titles_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
+        """Retrieve a summary of the trophies earned by a user for specific titles.
+
+        :param title_ids: Unique ID of the title
+        :type title_ids: list[str]
+
+        :returns: Generator object with TitleTrophySummary objects
+        :rtype: Iterator[TrophyTitle]
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            for trophy_title in client.trophy_titles_for_title(title_id='CUSA00265_00'):
+                print(trophy_title)
+
+        """
+        return TrophyTitles(self._request_builder, "me").get_trophy_summary_for_title(
+            title_ids
+        )
+
+    def trophies(
+        self,
+        np_communication_id: str,
+        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
+        trophy_group_id: str = "default",
+        limit: Optional[int] = None,
+        include_metadata: bool = False,
+    ) -> Iterator[Trophy]:
+        """Retrieves the earned status individual trophy detail of a single - or all - trophy groups for a title.
+
+        :param np_communication_id: Unique ID of a game title used to request trophy
+            information. This can be obtained from ``GameTitle`` class.
+        :type np_communication_id: str
+        :param platform: The platform this title belongs to.
+        :type platform: Literal
+        :param trophy_group_id: ID for the trophy group (all titles have default,
+            additional groups are 001 incrementing)
+        :type trophy_group_id: str
+        :param limit: Limit of trophies returned, None means to return all trophy
+            titles.
+        :type limit: Optional[int]
+        :param include_metadata: If True, will fetch metadata for trophy such as name
+            and detail
+        :type include_metadata: bool
+
+        .. warning::
+
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
+            limit since the API wrapper has to obtain metadata from a separate endpoint.
+
+        :returns: Returns the Trophy Generator object with all the information
+        :rtype: Iterator[Trophy]
+
+        """
+
+        if not include_metadata:
+            return TrophyBuilder(
+                self._request_builder, np_communication_id
+            ).earned_game_trophies("me", platform, trophy_group_id, limit)
+        else:
+            return TrophyBuilder(
+                self._request_builder, np_communication_id
+            ).earned_game_trophies_with_metadata("me", platform, trophy_group_id, limit)
+
+    def trophy_groups_summary(
+        self,
+        np_communication_id: str,
+        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
+        *,
+        include_metadata: bool = False,
+    ) -> TrophyGroupsSummary:
+        """Retrieves the trophy groups for a title and their respective trophy count.
+
+        This is most commonly seen in games which have expansions where additional
+        trophies are added.
+
+        :param np_communication_id: Unique ID of a game title used to request trophy
+            information. This can be obtained from ``GameTitle`` class.
+        :type np_communication_id: str
+        :param platform: The platform this title belongs to.
+        :param platform: The platform this title belongs to.
+        :type platform: Literal
+        :param include_metadata: If True, will fetch results from another endpoint and
+            include metadata for trophy group such as name and detail
+        :type include_metadata: bool
+
+        .. warning::
+
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
+            limit since the API wrapper has to obtain metadata from a separate endpoint.
+
+        :returns: TrophyGroupSummary object containing title and title groups trophy
+            information.
+        :rtype: TrophyGroupsSummary
+
+        """
+        if not include_metadata:
+            return TrophyGroupsSummaryBuilder(
+                self._request_builder
+            ).user_trophy_groups_summary("me", np_communication_id, platform)
+        else:
+            return TrophyGroupsSummaryBuilder(
+                self._request_builder
+            ).user_trophy_groups_summary_with_metadata(
+                "me", np_communication_id, platform
+            )
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

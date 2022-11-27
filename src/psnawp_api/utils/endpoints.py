@@ -11,8 +11,10 @@ BASE_PATH = {
 }
 
 API_PATH = {
+    # Auth Endpoints
     "oauth_code": "/authz/v3/oauth/authorize",
     "access_token": "/authz/v3/oauth/token",
+    # Client/User Endpoint
     "my_account": "/v1/devices/accounts/me",
     "profiles": "/{account_id}/profiles",
     "legacy_profile": "/{online_id}/profile2",
@@ -21,6 +23,7 @@ API_PATH = {
     "available_to_play": "/me/friends/subscribing/availableToPlay",
     "blocked_users": "/me/blocks",
     "basic_presences": "/basicPresences",
+    # Group Endpoints
     "my_groups": "/members/me/groups",
     "group_settings": "/groups/{group_id}",
     "create_group": "/groups",
@@ -28,9 +31,14 @@ API_PATH = {
     "send_group_message": "/groups/{group_id}/threads/{group_id}/messages",
     "conversation": "/members/me/groups/{group_id}/threads/{group_id}/messages",
     "leave_group": "/groups/{group_id}/members/me",
+    # Search Endpoint
     "title_concept": "/{title_id}/concepts",
-    "trophy_summary": "/users/{account_id}/trophySummary",
+    # Trophy Endpoints
     "trophy_titles": "/users/{account_id}/trophyTitles",
+    "trophies_for_title": "/npCommunicationIds/{np_communication_id}/trophyGroups/{trophy_group_id}/trophies",
+    "trophies_earned_for_title": "/users/{account_id}/npCommunicationIds/{np_communication_id}/trophyGroups/{trophy_group_id}/trophies",
+    "trophy_summary": "/users/{account_id}/trophySummary",
     "title_trophy_group": "/npCommunicationIds/{np_communication_id}/trophyGroups",
-    "title_trophies": "/npCommunicationIds/{np_communication_id}/trophyGroups/{trophy_group_id}/trophies",
+    "user_title_trophy_group": "/users/{account_id}/npCommunicationIds/{np_communication_id}/trophyGroups",
+    "trophy_titles_for_title": "/users/{account_id}/titles/trophyTitles",
 }

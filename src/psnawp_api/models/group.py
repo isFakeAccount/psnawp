@@ -14,13 +14,15 @@ from psnawp_api.utils.request_builder import RequestBuilder
 
 
 class Group:
+    """The Group class is responsible for providing convenient methods to interact with PSN group endpoints, responsible for managing messages groups and sending messages."""
+
     def __init__(
         self,
         request_builder: RequestBuilder,
         group_id: Optional[str],
         users: Optional[Iterator[User]],
     ):
-        """Constructor of Group. Responsible for managing messages groups and sending messages.
+        """Constructor of Group.
 
         .. note::
 

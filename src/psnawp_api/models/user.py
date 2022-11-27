@@ -1,14 +1,19 @@
 from __future__ import annotations
 
-from typing import Optional, Any, Iterator
+from typing import Optional, Any, Iterator, Literal
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPNotFound,
     PSNAWPForbidden,
     PSNAWPBadRequest,
 )
+from psnawp_api.models.trophies.trophy import TrophyBuilder, Trophy
+from psnawp_api.models.trophies.trophy_group import (
+    TrophyGroupsSummary,
+    TrophyGroupsSummaryBuilder,
+)
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
-from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TitleTrophySummary
+from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TrophyTitle
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
@@ -16,13 +21,69 @@ from psnawp_api.utils.request_builder import RequestBuilder
 class User:
     """This class will contain the information about the PSN ID you passed in when creating object"""
 
+    @classmethod
+    def from_online_id(cls, request_builder: RequestBuilder, online_id: str) -> User:
+        """Creates the User instance from online ID and returns the instance.
+
+        :param request_builder: Used to call http requests.
+        :type request_builder: RequestBuilder
+        :param online_id: Online ID (GamerTag) of the user.
+        :type online_id: str
+
+        :returns: User Class object which represents a PlayStation account
+        :rtype: User
+
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+
+        """
+        try:
+            query = {"fields": "accountId,onlineId,currentOnlineId"}
+            response: dict[str, Any] = request_builder.get(
+                url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=online_id)}",
+                params=query,
+            ).json()
+            account_id = response["profile"]["accountId"]
+            online_id = response["profile"].get(
+                "currentOnlineId", response["profile"]["onlineId"]
+            )
+            return cls(request_builder, online_id, account_id)
+        except PSNAWPNotFound as not_found:
+            raise PSNAWPNotFound(
+                f"Online ID {online_id} does not exist."
+            ) from not_found
+
+    @classmethod
+    def from_account_id(cls, request_builder: RequestBuilder, account_id: str) -> User:
+        """Creates the User instance from account ID and returns the instance.
+
+        :param request_builder: Used to call http requests.
+        :type request_builder: RequestBuilder
+        :param account_id: Account ID of the user.
+        :type account_id: str
+
+        :returns: User Class object which represents a PlayStation account
+        :rtype: User
+
+        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
+
+        """
+        try:
+            response: dict[str, Any] = request_builder.get(
+                url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=account_id)}"
+            ).json()
+            return cls(request_builder, response["onlineId"], account_id)
+        except PSNAWPBadRequest as bad_request:
+            raise PSNAWPNotFound(
+                f"Account ID {account_id} does not exist."
+            ) from bad_request
+
     def __init__(
         self,
         request_builder: RequestBuilder,
-        online_id: Optional[str],
-        account_id: Optional[str],
+        online_id: str,
+        account_id: str,
     ):
-        """Constructor of Class User. Creates user object using online id or account id.
+        """Constructor of Class User.
 
         .. note::
 
@@ -46,16 +107,6 @@ class User:
         self.account_id = account_id
         self._prev_online_id = online_id
 
-        if self.online_id is not None:
-            profile = self._online_id_to_account_id()
-            self.account_id = profile["profile"]["accountId"]
-            self.online_id = profile["profile"].get(
-                "currentOnlineId", profile["profile"]["onlineId"]
-            )
-        elif self.account_id is not None:
-            profile = self.profile()
-            self.online_id = profile["onlineId"]
-
     @property
     def prev_online_id(self) -> str:
         """Gets the previous online ID of the user.
@@ -78,39 +129,13 @@ class User:
             print(user_example.prev_online_id)
 
         """
-        profile = self._online_id_to_account_id(prev_online_id=self._prev_online_id)[
-            "profile"
-        ]
-        prev_online_id: str = profile.get("onlineId")
+        query = {"fields": "accountId,onlineId,currentOnlineId"}
+        response: dict[str, Any] = self._request_builder.get(
+            url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
+            params=query,
+        ).json()
+        prev_online_id: str = response.get("onlineId", self.online_id)
         return prev_online_id
-
-    def _online_id_to_account_id(
-        self, prev_online_id: Optional[str] = None
-    ) -> dict[str, Any]:
-        """Converts user online ID and returns their account id. This is an internal function and not meant to be called directly.
-
-        :returns: dict: PSN ID and Account ID of the user in search query
-        :rtype: dict[str, Any]
-
-        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
-
-        """
-
-        online_id = self.online_id
-        if prev_online_id is not None:
-            online_id = prev_online_id
-
-        try:
-            query = {"fields": "accountId,onlineId,currentOnlineId"}
-            response: dict[str, Any] = self._request_builder.get(
-                url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=online_id)}",
-                params=query,
-            ).json()
-            return response
-        except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound(
-                f"Online ID {self.online_id} does not exist."
-            ) from not_found
 
     def profile(self) -> dict[str, Any]:
         """Gets the profile of the user such as about me, avatars, languages etc...
@@ -229,19 +254,16 @@ class User:
             print(user_example.trophy_summary())
 
         """
-        assert (
-            self.account_id is not None
-        )  # This is for mypy, self.account_id is always defined, but it cannot pick it up.
-        return TrophySummary(self._request_builder, self.account_id)
+        return TrophySummary.from_endpoint(self._request_builder, self.account_id)
 
-    def trophy_titles(self, limit: Optional[int]) -> Iterator[TitleTrophySummary]:
+    def trophy_titles(self, limit: Optional[int]) -> Iterator[TrophyTitle]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
         :returns: Generator object with TitleTrophySummary objects
-        :rtype: Iterator[TitleTrophySummary]
+        :rtype: Iterator[TrophyTitle]
 
         :raises: ``PSNAWPForbidden`` If the user's profile is private
 
@@ -252,12 +274,121 @@ class User:
                 print(trophy_title)
 
         """
-        assert (
-            self.account_id is not None
-        )  # This is for mypy, self.account_id is always defined, but it cannot pick it up.
-        return TrophyTitles(self._request_builder, self.account_id).get_title_trophies(
+        return TrophyTitles(self._request_builder, self.account_id).get_trophy_titles(
             limit
         )
+
+    def trophy_titles_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
+        """Retrieve a summary of the trophies earned by a user for specific titles.
+
+        :param title_ids: Unique ID of the title
+        :type title_ids: list[str]
+
+        :returns: Generator object with TitleTrophySummary objects
+        :rtype: Iterator[TrophyTitle]
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            for trophy_title in user_example.trophy_titles_for_title(title_id='CUSA00265_00'):
+                print(trophy_title)
+
+        """
+        return TrophyTitles(
+            self._request_builder, self.account_id
+        ).get_trophy_summary_for_title(title_ids)
+
+    def trophies(
+        self,
+        np_communication_id: str,
+        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
+        trophy_group_id: str = "default",
+        *,
+        limit: Optional[int] = None,
+        include_metadata: bool = False,
+    ) -> Iterator[Trophy]:
+        """Retrieves the earned status individual trophy detail of a single - or all - trophy groups for a title.
+
+        :param np_communication_id: Unique ID of the title used to request trophy
+            information
+        :type np_communication_id: str
+        :param platform: The platform this title belongs to.
+        :type platform: Literal
+        :param trophy_group_id: ID for the trophy group (all titles have default,
+            additional groups are 001 incrementing)
+        :type trophy_group_id: str
+        :param limit: Limit of trophies returned, None means to return all trophy
+            titles.
+        :type limit: Optional[int]
+        :param include_metadata: If True, will fetch metadata for trophy such as name
+            and detail
+        :type include_metadata: bool
+
+        .. warning::
+
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
+            limit since the API wrapper has to obtain metadata from a separate endpoint.
+
+        :returns: Returns the Trophy Generator object with all the information
+        :rtype: Iterator[Trophy]
+
+        """
+
+        if not include_metadata:
+            return TrophyBuilder(
+                self._request_builder, np_communication_id
+            ).earned_game_trophies(self.account_id, platform, trophy_group_id, limit)
+        else:
+            return TrophyBuilder(
+                self._request_builder, np_communication_id
+            ).earned_game_trophies_with_metadata(
+                self.account_id, platform, trophy_group_id, limit
+            )
+
+    def trophy_groups_summary(
+        self,
+        np_communication_id: str,
+        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
+        *,
+        include_metadata: bool = False,
+    ) -> TrophyGroupsSummary:
+        """Retrieves the trophy groups for a title and their respective trophy count.
+
+        This is most commonly seen in games which have expansions where additional
+        trophies are added.
+
+        :param np_communication_id: Unique ID of the title used to request trophy
+            information
+        :type np_communication_id: str
+        :param platform: The platform this title belongs to.
+        :param platform: The platform this title belongs to.
+        :type platform: Literal
+        :param include_metadata: If True, will fetch results from another endpoint and
+            include metadata for trophy group such as name and detail
+        :type include_metadata: bool
+
+        .. warning::
+
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
+            limit since the API wrapper has to obtain metadata from a separate endpoint.
+
+        :returns: TrophyGroupSummary object containing title and title groups trophy
+            information.
+        :rtype: TrophyGroupsSummary
+
+        """
+        if not include_metadata:
+            return TrophyGroupsSummaryBuilder(
+                self._request_builder
+            ).user_trophy_groups_summary(self.account_id, np_communication_id, platform)
+        else:
+            return TrophyGroupsSummaryBuilder(
+                self._request_builder
+            ).user_trophy_groups_summary_with_metadata(
+                self.account_id, np_communication_id, platform
+            )
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

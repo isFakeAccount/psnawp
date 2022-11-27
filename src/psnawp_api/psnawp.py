@@ -6,9 +6,9 @@ from typing import overload, Optional, Iterator, Any
 from psnawp_api.core import authenticator
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
 from psnawp_api.models.client import Client
+from psnawp_api.models.game_title import GameTitle
 from psnawp_api.models.group import Group
 from psnawp_api.models.search import Search
-from psnawp_api.models.title import Title
 from psnawp_api.models.user import User
 from psnawp_api.utils import request_builder
 
@@ -68,7 +68,8 @@ class PSNAWP:
 
         .. note::
 
-            You may only provide Online ID or Account ID. But not both at once.
+            The account_id takes higher precedence than online_id. If both arguments are
+            passed, online_id will be ignored.
 
         :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id
             (str): Account ID of the user.
@@ -77,7 +78,7 @@ class PSNAWP:
         :returns: User Object
         :rtype: User
 
-        :raises: `PSNAWPIllegalArgumentError` If None or Both kwargs are passed.
+        :raises: `PSNAWPIllegalArgumentError` If None of the kwargs are passed.
 
         :raises: ``PSNAWPNotFound`` If the online_id or account_id is not valid/found.
 
@@ -90,11 +91,48 @@ class PSNAWP:
         online_id: Optional[str] = kwargs.get("online_id")
         account_id: Optional[str] = kwargs.get("account_id")
 
-        if (online_id and account_id) or not (online_id or account_id):
+        if account_id is not None:
+            return User.from_account_id(self._request_builder, account_id)
+        elif online_id is not None:
+            return User.from_online_id(self._request_builder, online_id)
+        else:
             raise PSNAWPIllegalArgumentError(
-                "You provide at least online ID or account ID, and not both."
+                "You must provide at least online ID or account ID."
             )
-        return User(self._request_builder, online_id, account_id)
+
+    def game_title(
+        self, title_id: str, account_id: str = "6515971742264256071"
+    ) -> GameTitle:
+        """Creates a GameTitle class object from title_id which represents a PlayStation video game title.
+
+        .. note::
+
+            The GameTitle class is only useful if the user has played that video game.
+            To allow users to retrieve information without having to play that video
+            game I picked a default user who has played the most number of games based
+            on this website
+            (https://www.truetrophies.com/leaderboard/gamer/gamesplayed). It is possible
+            that the there are games this user has not played and in that case it is
+            better to provide your own account id (``'me'``) or someone who has played
+            that game.
+
+        .. note::
+
+            title_id can be obtained from https://andshrew.github.io/PlayStation-Titles/
+            or from :py:meth:`psnawp_api.models.search.Search.universal_search`
+
+        :param title_id: unique ID of game title.
+        :type title_id: str
+        :param: account_id: The account whose trophy list is being accessed
+        :type account_id: str
+
+        :returns: Title Object
+        :rtype: GameTitle
+
+        """
+        return GameTitle(
+            self._request_builder, title_id=title_id, account_id=account_id
+        )
 
     @overload
     def group(self, *, group_id: str) -> Group:
@@ -134,18 +172,6 @@ class PSNAWP:
                 "You provide at least Group Id or Users, and not both."
             )
         return Group(self._request_builder, group_id=group_id, users=users)
-
-    def title(self, title_id: str) -> Title:
-        """Creates a title class object which represents a PlayStation video game title.
-
-        :param title_id: unique id of game.
-        :type title_id: str
-
-        :returns: Title Object
-        :rtype: Title
-
-        """
-        return Title(self._request_builder, title_id=title_id)
 
     def search(self) -> Search:
         """Creates a new search object

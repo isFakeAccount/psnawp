@@ -20,6 +20,14 @@ psnawp\_api.models.client module
    :undoc-members:
    :show-inheritance:
 
+psnawp\_api.models.game\_title module
+-------------------------------------
+
+.. automodule:: psnawp_api.models.game_title
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 psnawp\_api.models.group module
 -------------------------------
 
@@ -32,14 +40,6 @@ psnawp\_api.models.search module
 --------------------------------
 
 .. automodule:: psnawp_api.models.search
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-psnawp\_api.models.title module
--------------------------------
-
-.. automodule:: psnawp_api.models.title
    :members:
    :undoc-members:
    :show-inheritance:
