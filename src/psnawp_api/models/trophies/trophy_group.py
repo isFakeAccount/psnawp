@@ -18,7 +18,7 @@ class TrophyGroupSummary:
     trophy_group_name: Optional[str]
     "Trophy group name"
     trophy_group_detail: Optional[str]
-    "Trophy group description PS3, PS4 and PS Vita titles only"
+    "Trophy group description (PS3, PS4 and PS Vita titles only)"
     trophy_group_icon_url: Optional[str]
     "URL of the icon for the trophy group"
     defined_trophies: TrophySet
@@ -29,7 +29,7 @@ class TrophyGroupSummary:
     "Percentage of trophies earned for group"
     earned_trophies: TrophySet
     "Number of trophies for the group which have been earned by type"
-    last_updated_datetime: datetime = field(converter=iso_format_to_datetime)
+    last_updated_datetime: Optional[datetime] = field(converter=iso_format_to_datetime)
     "Date most recent trophy earned for the group"
 
 
@@ -42,7 +42,7 @@ class TrophyGroupsSummary:
     trophy_title_name: Optional[str]
     "Title name"
     trophy_title_detail: Optional[str]
-    "Title description"
+    "Title description (PS3, PS4 and PS Vita titles only)"
     trophy_title_icon_url: Optional[str]
     "URL of the icon for the trophy title"
     trophy_title_platform: PlatformType
@@ -59,7 +59,7 @@ class TrophyGroupsSummary:
     "Percentage of trophies earned for the title"
     earned_trophies: TrophySet
     "Number of trophies for the title which have been earned by type"
-    last_updated_date_time: datetime = field(converter=iso_format_to_datetime)
+    last_updated_date_time: Optional[datetime] = field(converter=iso_format_to_datetime)
     "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
 
 

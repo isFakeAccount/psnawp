@@ -56,7 +56,7 @@ class GameTitle:
             are shown because of space limitations):
         :rtype: dict[str, Any]
 
-            .. literalinclude:: examples/title/get_title_details.json
+            .. literalinclude:: examples/game_title/get_details.json
                 :language: json
 
         """
@@ -80,8 +80,10 @@ class GameTitle:
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group (all titles have default,
-            additional groups are 001 incrementing)
+        :param trophy_group_id: ID for the trophy group. Each game expansion is
+            represented by a separate ID. all to return all trophies for the title,
+            default for the game itself, and additional groups starting from 001 and so
+            on return expansions trophies.
         :type trophy_group_id: str
         :param limit: Limit of trophies returned, None means to return all trophy
             titles.

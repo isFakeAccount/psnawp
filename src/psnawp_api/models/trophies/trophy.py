@@ -19,6 +19,13 @@ from psnawp_api.utils.request_builder import RequestBuilder
 class Trophy:
     """A class that represents a PlayStation Video Game Trophy."""
 
+    # Trophy Group Metadata
+    trophy_set_version: Optional[str]
+    "The current version of the trophy set"
+    has_trophy_groups: Optional[bool]
+    "True if this title has additional trophy groups"
+    total_items_count: Optional[int]
+    "Total trophies in the group (or total trophies for the title if all specified)"
     # Trophy Meta
     trophy_id: Optional[int]
     "Unique ID for this trophy"
@@ -48,9 +55,9 @@ class Trophy:
     "If the trophy tracks progress towards unlock this is number of steps currently completed (ie. 73/300) (PS5 titles only)"
     progress_rate: Optional[int]
     "If the trophy tracks progress towards unlock this is the current percentage complete (PS5 titles only)"
-    progressed_date_time: datetime
+    progressed_date_time: Optional[datetime]
     "If the trophy tracks progress towards unlock, and some progress has been made, then this returns the date progress was last updated. (PS5 titles only)"
-    earned_date_time: datetime
+    earned_date_time: Optional[datetime]
     "Date trophy was earned"
     trophy_rarity: Optional[TrophyRarity]
     "Rarity of the trophy"
@@ -60,6 +67,9 @@ class Trophy:
     @classmethod
     def from_trophy_dict(cls, trophy_dict: dict[str, Any]) -> Trophy:
         trophy_instance = cls(
+            trophy_set_version=trophy_dict.get("trophySetVersion"),
+            has_trophy_groups=trophy_dict.get("hasTrophyGroups"),
+            total_items_count=trophy_dict.get("totalItemCount"),
             trophy_id=trophy_dict.get("trophyId"),
             trophy_hidden=trophy_dict.get("trophyHidden"),
             trophy_type=trophy_type_str_to_enum(trophy_dict.get("trophyType")),
@@ -120,7 +130,14 @@ def _get_trophy_from_endpoint(
         per_page_items = 0
         trophies: list[dict[str, Any]] = response.get("trophies")
         for trophy in trophies:
-            trophy_instance = Trophy.from_trophy_dict(trophy)
+            trophy_instance = Trophy.from_trophy_dict(
+                trophy
+                | {
+                    "trophySetVersion": response.get("trophySetVersion"),
+                    "hasTrophyGroups": response.get("hasTrophyGroups"),
+                    "totalItemCount": response.get("totalItemCount"),
+                }
+            )
             yield trophy_instance
             per_page_items += 1
 
@@ -165,8 +182,10 @@ class TrophyBuilder:
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group (all titles have default,
-            additional groups are 001 incrementing)
+        :param trophy_group_id: ID for the trophy group. Each game expansion is
+            represented by a separate ID. all to return all trophies for the title,
+            default for the game itself, and additional groups starting from 001 and so
+            on return expansions trophies.
         :type trophy_group_id: str
         :param limit: Limit of trophies returned, None means to return all trophy
             titles.
@@ -199,8 +218,10 @@ class TrophyBuilder:
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group (all titles have default,
-            additional groups are 001 incrementing)
+        :param trophy_group_id: ID for the trophy group. Each game expansion is
+            represented by a separate ID. all to return all trophies for the title,
+            default for the game itself, and additional groups starting from 001 and so
+            on return expansions trophies.
         :type trophy_group_id: str
         :param limit: Limit of trophies returned, None means to return all trophy
             titles.
@@ -234,8 +255,10 @@ class TrophyBuilder:
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group (all titles have default,
-            additional groups are 001 incrementing)
+        :param trophy_group_id: ID for the trophy group. Each game expansion is
+            represented by a separate ID. all to return all trophies for the title,
+            default for the game itself, and additional groups starting from 001 and so
+            on return expansions trophies.
         :type trophy_group_id: str
         :param limit: Limit of trophies returned, None means to return all trophy
             titles.
@@ -270,8 +293,6 @@ class TrophyBuilder:
             for key in dir(combined_data[0]):
                 if key.startswith("_") or key.startswith("from"):
                     continue
-                elif "time" in key:
-                    combined_data_dict[key] = getattr(combined_data[1], key)
                 else:
                     combined_data_dict[key] = getattr(combined_data[0], key) or getattr(
                         combined_data[1], key

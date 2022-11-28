@@ -43,9 +43,9 @@ class User:
                 params=query,
             ).json()
             account_id = response["profile"]["accountId"]
-            online_id = response["profile"].get(
-                "currentOnlineId", response["profile"]["onlineId"]
-            )
+            online_id = response["profile"].get("currentOnlineId") or response[
+                "profile"
+            ].get("onlineId")
             return cls(request_builder, online_id, account_id)
         except PSNAWPNotFound as not_found:
             raise PSNAWPNotFound(
@@ -105,37 +105,7 @@ class User:
         self._request_builder = request_builder
         self.online_id = online_id
         self.account_id = account_id
-        self._prev_online_id = online_id
-
-    @property
-    def prev_online_id(self) -> str:
-        """Gets the previous online ID of the user.
-
-        Note: Playstation allows you to look up a user using old online id as long as it
-        is not taken by another player. This might be same as ``online_id`` depending on
-        user.
-
-        .. note::
-
-            If you are initializing User Object using Account ID then the previous
-            online id will be same as online id. This is just the limitation of API.
-
-        :returns: onlineID
-        :rtype: str
-
-        .. code-block:: Python
-
-            user_example = psnawp.user(online_id='VaultTec_Trading')
-            print(user_example.prev_online_id)
-
-        """
-        query = {"fields": "accountId,onlineId,currentOnlineId"}
-        response: dict[str, Any] = self._request_builder.get(
-            url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
-            params=query,
-        ).json()
-        prev_online_id: str = response.get("onlineId", self.online_id)
-        return prev_online_id
+        self.prev_online_id = online_id
 
     def profile(self) -> dict[str, Any]:
         """Gets the profile of the user such as about me, avatars, languages etc...
@@ -305,7 +275,6 @@ class User:
         np_communication_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
         trophy_group_id: str = "default",
-        *,
         limit: Optional[int] = None,
         include_metadata: bool = False,
     ) -> Iterator[Trophy]:
@@ -316,8 +285,10 @@ class User:
         :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group (all titles have default,
-            additional groups are 001 incrementing)
+        :param trophy_group_id: ID for the trophy group. Each game expansion is
+            represented by a separate ID. all to return all trophies for the title,
+            default for the game itself, and additional groups starting from 001 and so
+            on return expansions trophies.
         :type trophy_group_id: str
         :param limit: Limit of trophies returned, None means to return all trophy
             titles.
@@ -351,7 +322,6 @@ class User:
         self,
         np_communication_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        *,
         include_metadata: bool = False,
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.

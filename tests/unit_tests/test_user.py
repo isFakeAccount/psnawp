@@ -41,7 +41,6 @@ def test_user__user_wrong_acc_id(psnawp_fixture):
 def test_user__prev_online_id(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         user_example = psnawp_fixture.user(online_id="EvangelionKills")
-        assert user_example.prev_online_id == "EvangelionKills"
         assert user_example.online_id == "kerksten"
 
 

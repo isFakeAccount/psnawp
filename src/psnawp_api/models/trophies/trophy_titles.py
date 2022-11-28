@@ -43,7 +43,7 @@ class TrophyTitle:
     "Number of trophies for the title which have been earned by type"
     defined_trophies: TrophySet
     "Number of trophies for the title by type"
-    last_updated_date_time: datetime = field(converter=iso_format_to_datetime)
+    last_updated_date_time: Optional[datetime] = field(converter=iso_format_to_datetime)
     "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
     # when title_id is passed
     rarest_trophies: list[Trophy] = field(factory=list)
@@ -107,9 +107,7 @@ class TrophyTitles:
                     has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                     progress=trophy_title.get("progress"),
                     hidden_flag=trophy_title.get("hiddenFlag"),
-                    last_updated_date_time=trophy_title.get(
-                        "lastUpdatedDateTime", "1969-12-31T19+00:00"
-                    ),
+                    last_updated_date_time=trophy_title.get("lastUpdatedDateTime"),
                     defined_trophies=TrophySet(
                         **trophy_title.get(
                             "definedTrophies",
