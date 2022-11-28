@@ -1,0 +1,163 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
+  response:
+    body:
+      string: '{"groups": [{"groupId": "a6b980e78a6365af5eb253dbedd5aa5efa29d1b3-884",
+        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]}],
+        "previousOffset": 0, "nextOffset": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '258'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:50 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/a6b980e78a6365af5eb253dbedd5aa5efa29d1b3-884?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "a6b980e78a6365af5eb253dbedd5aa5efa29d1b3-884", "groupType":
+        1, "modifiedTimestamp": "1669621370259", "groupName": {"value": "Testing API",
+        "status": 1, "modifier": {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}, "modifiedTimestamp": "1669621370000"}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669621369000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "a6b980e78a6365af5eb253dbedd5aa5efa29d1b3-884",
+        "modifiedTimestamp": "1669621370259", "latestMessage": {"messageUid": "1#427423070786464",
+        "messageType": 2003, "alternativeMessageType": 2001, "body": "VaultTec TradingCo
+        changed the group name.", "createdTimestamp": "1669621370259", "sender": {"accountId":
+        "8520698476712646544", "onlineId": "VaultTec_Trading"}}, "readMessageUid":
+        "1#427423070786464"}, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co", "role": "member"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading", "role": "owner"}], "partySessions": [], "notificationSetting":
+        {"isMute": false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1007'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:51 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: DELETE
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/a6b980e78a6365af5eb253dbedd5aa5efa29d1b3-884/members/me
+  response:
+    body:
+      string: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Nov 2022 07:42:51 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 204
+      message: No Content
+version: 1

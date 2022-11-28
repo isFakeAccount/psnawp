@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:11 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - 3b7b241f-eb99-4d2c-8594-0adddf7a5db8
+      X-Psn-Correlation-Id:
+      - 3b7b241f-eb99-4d2c-8594-0adddf7a5db8
+      X-Psn-Request-Id:
+      - 3b7b241f-eb99-4d2c-8594-0adddf7a5db8
+      X-RequestId:
+      - 3b7b241f-eb99-4d2c-8594-0adddf7a5db8
+    status:
+      code: 200
+      message: OK
+version: 1

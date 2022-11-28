@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 28 Nov 2022 07:42:07 GMT
+      Expires:
+      - '0'
+      Location:
+      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=ac8d161a-d966-4728-b0ea-ffec22f69edc&scope=psn%3Aclientapp+psn%3Amobile.v1&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=1e7fb8e3-76a3-4e65-b219-dfdef554540c
+      Server:
+      - nginx
+      Set-Cookie:
+      - _abck=1A80573B8EED73A5638074A5B5F98A80~-1~YAAQSjovF53AipyEAQAA9KUvvQgxsfcRqgJNuqn6qUd5zenjoqrHpKvGxy4n3zw4jFtAIffbp5TrmiSEPtKGLMtgprkygY1jW7dxDPcGLDNTGnE7miQa1bMXwS/x69XEYmW0DuLVytUPuia7ZblC58ccv9kBbNxE00jfLAiA4TVFekeDNK5ynzMsn+9pdCjvLZCWPYKfeGe6BXJEYxQhm61ej/AjNYljZRmooloo4PTbFOeuBjC7W0lmB0ZISKNssK5t6biDVS6EEGrZJ8js5fNa6UMXmWp278S7M3TvB0+ijXi7l98Q0J4aPKYwFWGS8pthGKahbHxyksKYcxeMceQTy/5an7fAakKRlw==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 05 Dec 2022 07:42:07 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=0EABFB3859CC0E28D7120B5FAB1747D6~YAAQSjovF57AipyEAQAA9KUvvRHztTH5IxU5PjsXjxbqwoVe/IBqvfbNsWex/U1SXSMkvkap++PMsQpHMBjVc9NAARAZe6I297RIPZr5TXei9x2kiVCfmEFVN0Os29zzdeyP5IMsrJhnzxnKj6i9nwGlEoMk70mhbgsypHk3uNxpCcVedxcUlE6Bl4uaaE1ppxgcK541BJHTtf5i6P9SXGkS7BJInaSgSJueiAaeQmUzCgJTYyAyrEf/+pN7QtkJDvHmTL/4gKpdYS9bW6DfJBtw4i1Q8TjiPLBfmBqMqZ9rrkiS7yC4q2MyjcC9XpziHtC4myyQjWKIee13z9mNwZjDqCXVLZdj63UCnu76OuBkfwBxvW3TpJ+IqWE=~4342849~3360057;
+        Domain=.sony.com; Path=/; Expires=Mon, 28 Nov 2022 11:42:07 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 1e7fb8e3-76a3-4e65-b219-dfdef554540c
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 1e7fb8e3-76a3-4e65-b219-dfdef554540c
+      X-Psn-Request-Id:
+      - f87b7ffc438603e12d5bb9b3006d321b
+      X-RequestId:
+      - f87b7ffc438603e12d5bb9b3006d321b
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
+version: 1

@@ -1,0 +1,178 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:09 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - d8fd5908-cea1-4257-b0c5-01c830add1c9
+      X-Psn-Correlation-Id:
+      - d8fd5908-cea1-4257-b0c5-01c830add1c9
+      X-Psn-Request-Id:
+      - d8fd5908-cea1-4257-b0c5-01c830add1c9
+      X-RequestId:
+      - d8fd5908-cea1-4257-b0c5-01c830add1c9
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/profiles
+  response:
+    body:
+      string: '{"onlineId": "VaultTec_Trading", "personalDetail": {"firstName": "VaultTec",
+        "lastName": "TradingCo", "profilePictures": [{"size": "s", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=50&h=50&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "m", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=160&h=160&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "l", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=240&h=240&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "xl", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"}]},
+        "aboutMe": "r/Fallout76Marketplace Moderator", "avatars": [{"size": "s", "url":
+        "http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        true}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1621'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:10 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0003695676916059939
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=npId%2ConlineId%2CaccountId%2CavatarUrls%2Cplus%2CaboutMe%2ClanguagesUsed%2CtrophySummary%28%40default%2Clevel%2Cprogress%2CearnedTrophies%29%2CisOfficiallyVerified%2CpersonalDetail%28%40default%2CprofilePictureUrls%29%2CpersonalDetailSharing%2CpersonalDetailSharingRequestMessageFlag%2CprimaryOnlineStatus%2Cpresences%28%40default%2C%40titleInfo%2Cplatform%2ClastOnlineDate%2ChasBroadcastData%29%2CrequestMessageFlag%2Cblocking%2CfriendRelation%2Cfollowing%2CconsoleAvailability
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAHRTbU/bMBD+K5Ml+FTaJOSliVRNMNSxScAEhUlF0+Q659SqY2e2A3So/31nF1jF
+        ixQl8d357p57nnskndFcSCDVI9FKCgXfalKRG9pLNwP2e2ZoLVRDBoQypnvlgnucJVFejtMiL+Ik
+        T/MsTTFCddu77TRenF5ez3+e85vT78v5V9nPo2NxLrKY3U8mPtcdddRcG2lJdftIrPiLDRC568Hz
+        0rmuGo2so06wAwNW94bBUHVDptu2V8Kth52k6xCg1VCBG23vj2rgHsHoZPs9CtZhh0A2vwakkz0W
+        jrDaQvfuzNc2oymVEk9FfkbNChwmZvDpTNdgqNMGW5NUNT1twF5bQJy3BBTBZM7obrm+6tuWmrUf
+        o4Q7wPbjgZ9tg21vawE1CuqZjxZgfSCWcEL1bXA3Wtbhxwp5Byb8LoxWfjLRZjMgwl5wLpjANtc3
+        YAQXvgtOpQWsBMZqReUJOCqkT86Fse6ctrDDZgDxYn2i9osmg2cV/BDM9QZeE/Mg3wt5YsgiRaLF
+        uQxpJzw5q/YNK8FvR5+5Ni11E+Rh/36SptH+MryDexKS7R0e7SVTfFbcslp9nBND3lEhWuM8jsoy
+        LrOiTA895ftWNGpS0ISXizIfR0UGOYtLGnHG64JhMNQZL8b1uCwOUxTI5vU8r5bU+CWoiArDes95
+        CX96sCgmaxHMVNLmPzlGeG1chPW6QghefURz7s9hsmBBMdjOXH8UtqT22GhaM6TwBPX8kt9zuk2O
+        Zs9XEiXxQZQcRNksiao4rdJsHoTPjQBVX4IMY3zGYz5ufSE1WwXoTwaucUvudy1MK6sl4IoJSRdC
+        4lZ6/dGd8xswm83mHwAAAP//AwB91bEwegQAAA==
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        If-None-Match
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '655'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:10 GMT
+      Server:
+      - Apache
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

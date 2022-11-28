@@ -1,0 +1,673 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=10&offset=0
+  response:
+    body:
+      string: '{"groups": [{"groupId": "~217D2804AA75D3CE.763F9A1EB6AB5790", "groupType":
+        0, "members": [{"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"},
+        {"accountId": "2413128975845282766", "onlineId": "casual_AF88"}]}, {"groupId":
+        "~26127C2A21D125EA.763F9A1EB6AB5790", "groupType": 0, "members": [{"accountId":
+        "2743391643419878890", "onlineId": "Tripwire4oscar"}, {"accountId": "8520698476712646544",
+        "onlineId": "VaultTec_Trading"}]}, {"groupId": "~115C989AEC72A790.763F9A1EB6AB5790",
+        "groupType": 0, "members": [{"accountId": "1251042587661477776", "onlineId":
+        "Dante154"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]},
+        {"groupId": "~02EA6A8238554F13.763F9A1EB6AB5790", "groupType": 0, "members":
+        [{"accountId": "210097440149557011", "onlineId": "Luke-Shortboy"}, {"accountId":
+        "8520698476712646544", "onlineId": "VaultTec_Trading"}]}, {"groupId": "~6411590B24CDA365.763F9A1EB6AB5790",
+        "groupType": 0, "members": [{"accountId": "7210642382793843557", "onlineId":
+        "DragonofChugoku"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]},
+        {"groupId": "~3D7EF53F3AD81C0A.763F9A1EB6AB5790", "groupType": 0, "members":
+        [{"accountId": "4431248735298133002", "onlineId": "Dmonslyr66"}, {"accountId":
+        "8520698476712646544", "onlineId": "VaultTec_Trading"}]}, {"groupId": "~56E2CD1F74AF67FD.763F9A1EB6AB5790",
+        "groupType": 0, "members": [{"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}, {"accountId": "6260791966983743485", "onlineId": "pirateglenn1"}]},
+        {"groupId": "~1772A8388FDD2116.763F9A1EB6AB5790", "groupType": 0, "members":
+        [{"accountId": "1689597771102626070", "onlineId": "CJcurious"}, {"accountId":
+        "8520698476712646544", "onlineId": "VaultTec_Trading"}]}, {"groupId": "~526DCA4A5BAC40DF.763F9A1EB6AB5790",
+        "groupType": 0, "members": [{"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}, {"accountId": "5939625904285958367", "onlineId": "why"}]},
+        {"groupId": "~6AD844E7CFFFC2C5.763F9A1EB6AB5790", "groupType": 0, "members":
+        [{"accountId": "7698979325407642309", "onlineId": "MisterrGage"}, {"accountId":
+        "8520698476712646544", "onlineId": "VaultTec_Trading"}]}], "previousOffset":
+        0, "nextOffset": 10}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2062'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:27 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~217D2804AA75D3CE.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~217D2804AA75D3CE.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669573214798", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669573214000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~217D2804AA75D3CE.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669573214798", "latestMessage": {"messageUid": "1#427410742988310", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 647798.
+        Please do not share this with anyone.", "createdTimestamp": "1669573214798",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427410742988310"}, "members": [{"accountId": "8520698476712646544",
+        "onlineId": "VaultTec_Trading"}, {"accountId": "2413128975845282766", "onlineId":
+        "casual_AF88"}], "partySessions": [], "notificationSetting": {"isMute": false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '855'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:28 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~26127C2A21D125EA.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~26127C2A21D125EA.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669560700658", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669560700000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~26127C2A21D125EA.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669560700658", "latestMessage": {"messageUid": "1#427407539368680", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 403677.
+        Please do not share this with anyone.", "createdTimestamp": "1669560700658",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427407539368680"}, "members": [{"accountId": "2743391643419878890",
+        "onlineId": "Tripwire4oscar"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '858'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:28 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~115C989AEC72A790.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~115C989AEC72A790.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669557832994", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669557831000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~115C989AEC72A790.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669557832994", "latestMessage": {"messageUid": "1#427406805246470", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 568503.
+        Please do not share this with anyone.", "createdTimestamp": "1669557832994",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427406805246470"}, "members": [{"accountId": "1251042587661477776",
+        "onlineId": "Dante154"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '852'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:28 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~02EA6A8238554F13.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~02EA6A8238554F13.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669545530374", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669545144000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~02EA6A8238554F13.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669545530374", "latestMessage": {"messageUid": "1#427403655775796", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 327623.
+        Please do not share this with anyone.", "createdTimestamp": "1669545530374",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427403655775796"}, "members": [{"accountId": "210097440149557011",
+        "onlineId": "Luke-Shortboy"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '856'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:29 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~6411590B24CDA365.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~6411590B24CDA365.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669527136533", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1665810978000", "isFavorite": false, "existsNewArrival":
+        true, "mainThread": {"threadId": "~6411590B24CDA365.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669527136533", "latestMessage": {"messageUid": "1#427398946952556", "messageType":
+        3, "alternativeMessageType": 1, "body": "", "createdTimestamp": "1669527136533",
+        "sender": {"accountId": "7210642382793843557", "onlineId": "DragonofChugoku"}},
+        "readMessageUid": "1#426447623155547"}, "members": [{"accountId": "7210642382793843557",
+        "onlineId": "DragonofChugoku"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '786'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:29 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~3D7EF53F3AD81C0A.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~3D7EF53F3AD81C0A.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669524183977", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669524183000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~3D7EF53F3AD81C0A.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669524183977", "latestMessage": {"messageUid": "1#427398191098237", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 457005.
+        Please do not share this with anyone.", "createdTimestamp": "1669524183977",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427398191098237"}, "members": [{"accountId": "4431248735298133002",
+        "onlineId": "Dmonslyr66"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '854'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:30 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~56E2CD1F74AF67FD.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~56E2CD1F74AF67FD.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669507410317", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669506757000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~56E2CD1F74AF67FD.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669507410317", "latestMessage": {"messageUid": "1#427393897041235", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 575319.
+        Please do not share this with anyone.", "createdTimestamp": "1669507410317",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427393897041235"}, "members": [{"accountId": "8520698476712646544",
+        "onlineId": "VaultTec_Trading"}, {"accountId": "6260791966983743485", "onlineId":
+        "pirateglenn1"}], "partySessions": [], "notificationSetting": {"isMute": false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '856'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:30 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~1772A8388FDD2116.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~1772A8388FDD2116.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669496076325", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669496076000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~1772A8388FDD2116.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669496076325", "latestMessage": {"messageUid": "1#427390995539387", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 598881.
+        Please do not share this with anyone.", "createdTimestamp": "1669496076325",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427390995539387"}, "members": [{"accountId": "1689597771102626070",
+        "onlineId": "CJcurious"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '853'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:31 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~526DCA4A5BAC40DF.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~526DCA4A5BAC40DF.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669476206662", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669476206000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~526DCA4A5BAC40DF.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669476206662", "latestMessage": {"messageUid": "1#427385908905508", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 362666.
+        Please do not share this with anyone.", "createdTimestamp": "1669476206662",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427385908905508"}, "members": [{"accountId": "8520698476712646544",
+        "onlineId": "VaultTec_Trading"}, {"accountId": "5939625904285958367", "onlineId":
+        "why"}], "partySessions": [], "notificationSetting": {"isMute": false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '847'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:31 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~6AD844E7CFFFC2C5.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~6AD844E7CFFFC2C5.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1669475299794", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1669475299000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~6AD844E7CFFFC2C5.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1669475299794", "latestMessage": {"messageUid": "1#427385676747445", "messageType":
+        1, "alternativeMessageType": 1, "body": "Your verification code is 747640.
+        Please do not share this with anyone.", "createdTimestamp": "1669475299794",
+        "sender": {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}},
+        "readMessageUid": "1#427385676747445"}, "members": [{"accountId": "7698979325407642309",
+        "onlineId": "MisterrGage"}, {"accountId": "8520698476712646544", "onlineId":
+        "VaultTec_Trading"}], "partySessions": [], "notificationSetting": {"isMute":
+        false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '855'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:31 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
