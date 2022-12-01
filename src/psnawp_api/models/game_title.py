@@ -61,7 +61,7 @@ class GameTitle:
 
         """
 
-        param = {"age": 99}
+        param = {"age": 99, "country": "US", "language": "en-US"}
 
         response: list[dict[str, Any]] = self._request_builder.get(
             url=f"{BASE_PATH['game_titles']}{API_PATH['title_concept'].format(title_id=self.title_id)}",
