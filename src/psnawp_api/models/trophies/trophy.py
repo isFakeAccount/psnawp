@@ -131,8 +131,8 @@ def _get_trophy_from_endpoint(
         trophies: list[dict[str, Any]] = response.get("trophies")
         for trophy in trophies:
             trophy_instance = Trophy.from_trophy_dict(
-                trophy
-                | {
+                {
+                    **trophy,
                     "trophySetVersion": response.get("trophySetVersion"),
                     "hasTrophyGroups": response.get("hasTrophyGroups"),
                     "totalItemCount": response.get("totalItemCount"),

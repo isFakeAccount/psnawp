@@ -49,21 +49,21 @@ class GameTitle:
             request_builder, title_id, account_id
         )
 
-    def get_details(self) -> dict[str, Any]:
+    def get_details(self) -> list[dict[str, Any]]:
         """Get game details.
 
-        :returns: A dict containing info similar to what is shown below (Not all values
-            are shown because of space limitations):
-        :rtype: dict[str, Any]
+        :returns: A list of dicts containing info similar to what is shown below (Not
+            all values are shown because of space limitations):
+        :rtype: list[dict[str, Any]]
 
             .. literalinclude:: examples/game_title/get_details.json
                 :language: json
 
         """
 
-        param = {"age": 99, "country": "US", "language": "en-US"}
+        param = {"age": 99}
 
-        response: dict[str, Any] = self._request_builder.get(
+        response: list[dict[str, Any]] = self._request_builder.get(
             url=f"{BASE_PATH['game_titles']}{API_PATH['title_concept'].format(title_id=self.title_id)}",
             params=param,
         ).json()
