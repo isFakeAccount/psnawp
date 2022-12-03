@@ -31,7 +31,7 @@ API_PATH = {
     "send_group_message": "/groups/{group_id}/threads/{group_id}/messages",
     "conversation": "/members/me/groups/{group_id}/threads/{group_id}/messages",
     "leave_group": "/groups/{group_id}/members/me",
-    # Search Endpoint
+    # Game Title Details
     "title_concept": "/{title_id}/concepts",
     # Trophy Endpoints
     "trophy_titles": "/users/{account_id}/trophyTitles",

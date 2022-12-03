@@ -30,7 +30,7 @@ def test_group__group_with_wrong_id(psnawp_fixture):
 @pytest.mark.vcr()
 def test_group__group_with_users(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        example_user = psnawp_fixture.user(online_id="VaultTec-Co")
+        example_user = psnawp_fixture.user(online_id="VaultTec_Trading")
         group = psnawp_fixture.group(users_list=[example_user])
         message_info = group.send_message("Hello World")
 
@@ -75,7 +75,7 @@ def test_group__dming_blocked_user(psnawp_fixture):
 @pytest.mark.vcr()
 def test_group__change_name(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        example_user = psnawp_fixture.user(online_id="VaultTec-Co")
+        example_user = psnawp_fixture.user(online_id="VaultTec_Trading")
         is_fake_account = psnawp_fixture.user(online_id="isFakeAccount")
         group = psnawp_fixture.group(users_list=[example_user, is_fake_account])
         group.change_name("Testing API")
