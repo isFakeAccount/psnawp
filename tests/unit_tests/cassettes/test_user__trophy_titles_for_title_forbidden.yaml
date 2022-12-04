@@ -18,12 +18,12 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlNjg8pSkzJzEtX0lFKTE7O
-        L80rAUtbmBoZmFlamJibmRsamZmYmZqYKNXWAgAAAP//AwA5+YU3TQAAAA==
+        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspOLcouLknNU9JRSkxOzi/NKwELmxmY
+        mxgbGpgZGphYWBiYmJqZmCrV1gIAAAD//wMAuno24EUAAAA=
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -39,11 +39,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '100'
+      - '92'
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 20:30:45 GMT
+      - Sun, 04 Dec 2022 08:15:18 GMT
       Server:
       - Apache
       Vary:
@@ -72,40 +72,27 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/basicPresences?type=primary
+    uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/titles/trophyTitles?npTitleIds=CUSA12057_00
   response:
     body:
-      string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2021-02-05T20:14:45.656Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "ps4", "lastOnlineDate": "2021-02-05T20:14:45.656Z"}}}'
+      string: '{"error": {"referenceId": "ca676969-73ab-11ed-8f9e-efa733259de7", "code":
+        2240526, "message": "Not permitted by access control"}}'
     headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
-        X-Psn-Span-Id, X-Psn-Trace-Id
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, PATCH
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - private
       Connection:
       - keep-alive
       Content-Length:
-      - '205'
+      - '123'
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 20:30:45 GMT
+      - Sun, 04 Dec 2022 08:15:19 GMT
       Server:
       - Apache
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
-      X-Psn-Track-Id:
-      - 0070959703134544098
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

@@ -43,14 +43,10 @@ class User:
                 params=query,
             ).json()
             account_id = response["profile"]["accountId"]
-            online_id = response["profile"].get("currentOnlineId") or response[
-                "profile"
-            ].get("onlineId")
+            online_id = response["profile"].get("currentOnlineId") or response["profile"].get("onlineId")
             return cls(request_builder, online_id, account_id)
         except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound(
-                f"Online ID {online_id} does not exist."
-            ) from not_found
+            raise PSNAWPNotFound(f"Online ID {online_id} does not exist.") from not_found
 
     @classmethod
     def from_account_id(cls, request_builder: RequestBuilder, account_id: str) -> User:
@@ -68,14 +64,10 @@ class User:
 
         """
         try:
-            response: dict[str, Any] = request_builder.get(
-                url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=account_id)}"
-            ).json()
+            response: dict[str, Any] = request_builder.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=account_id)}").json()
             return cls(request_builder, response["onlineId"], account_id)
         except PSNAWPBadRequest as bad_request:
-            raise PSNAWPNotFound(
-                f"Account ID {account_id} does not exist."
-            ) from bad_request
+            raise PSNAWPNotFound(f"Account ID {account_id} does not exist.") from bad_request
 
     def __init__(
         self,
@@ -96,8 +88,7 @@ class User:
         :param account_id: Account ID of the user.
         :type account_id: str
 
-        :raises: ``PSNAWPIllegalArgumentError`` If both online_id and account_id are not
-            provided.
+        :raises: ``PSNAWPIllegalArgumentError`` If both online_id and account_id are not provided.
 
         :raises: ``PSNAWPNotFound`` If the online id or account id is not valid/found.
 
@@ -117,8 +108,6 @@ class User:
                 :language: json
 
 
-        :raises: ``PSNAWPNotFound`` If the user is not valid/found.
-
         .. code-block:: Python
 
             user_example = psnawp.user(online_id='VaultTec_Trading')
@@ -126,15 +115,8 @@ class User:
 
         """
 
-        try:
-            response: dict[str, Any] = self._request_builder.get(
-                url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}"
-            ).json()
-            return response
-        except PSNAWPBadRequest as bad_request:
-            raise PSNAWPNotFound(
-                f"Account ID {self.account_id} does not exist."
-            ) from bad_request
+        response: dict[str, Any] = self._request_builder.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}").json()
+        return response
 
     def get_presence(self) -> dict[str, Any]:
         """Gets the presences of a user. If the profile is private
@@ -146,8 +128,7 @@ class User:
                 :language: json
 
 
-        :raises: ``PSNAWPForbidden`` When the user's profile is private, and you don't
-            have permission to view their online status.
+        :raises: ``PSNAWPForbidden`` When the user's profile is private, and you don't have permission to view their online status.
 
         .. code-block:: Python
 
@@ -163,9 +144,7 @@ class User:
             ).json()
             return response
         except PSNAWPForbidden as forbidden:
-            raise PSNAWPForbidden(
-                f"You are not allowed to check the presence of user {self.online_id}"
-            ) from forbidden
+            raise PSNAWPForbidden(f"You are not allowed to check the presence of user {self.online_id}") from forbidden
 
     def friendship(self) -> dict[str, Any]:
         """Gets the friendship status and stats of the user
@@ -200,9 +179,7 @@ class User:
             print(user_example.is_blocked())
 
         """
-        response = self._request_builder.get(
-            url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}"
-        ).json()
+        response = self._request_builder.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}").json()
         return self.account_id in response["blockList"]
 
     def trophy_summary(self) -> TrophySummary:
@@ -224,9 +201,9 @@ class User:
             print(user_example.trophy_summary())
 
         """
-        return TrophySummary.from_endpoint(self._request_builder, self.account_id)
+        return TrophySummary.from_endpoint(request_builder=self._request_builder, account_id=self.account_id)
 
-    def trophy_titles(self, limit: Optional[int]) -> Iterator[TrophyTitle]:
+    def trophy_titles(self, limit: Optional[int] = None) -> Iterator[TrophyTitle]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
@@ -244,12 +221,14 @@ class User:
                 print(trophy_title)
 
         """
-        return TrophyTitles(self._request_builder, self.account_id).get_trophy_titles(
-            limit
-        )
+        return TrophyTitles(request_builder=self._request_builder, account_id=self.account_id).get_trophy_titles(limit=limit)
 
     def trophy_titles_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
         """Retrieve a summary of the trophies earned by a user for specific titles.
+
+        .. note::
+
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:meth:`psnawp_api.models.search.Search.get_title_id`
 
         :param title_ids: Unique ID of the title
         :type title_ids: list[str]
@@ -266,9 +245,7 @@ class User:
                 print(trophy_title)
 
         """
-        return TrophyTitles(
-            self._request_builder, self.account_id
-        ).get_trophy_summary_for_title(title_ids)
+        return TrophyTitles(request_builder=self._request_builder, account_id=self.account_id).get_trophy_summary_for_title(title_ids=title_ids)
 
     def trophies(
         self,
@@ -280,42 +257,45 @@ class User:
     ) -> Iterator[Trophy]:
         """Retrieves the earned status individual trophy detail of a single - or all - trophy groups for a title.
 
-        :param np_communication_id: Unique ID of the title used to request trophy
-            information
+        :param np_communication_id: Unique ID of the title used to request trophy information
         :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is
-            represented by a separate ID. all to return all trophies for the title,
-            default for the game itself, and additional groups starting from 001 and so
-            on return expansions trophies.
+        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
+            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
         :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy
-            titles.
+        :param limit: Limit of trophies returned, None means to return all trophy titles.
         :type limit: Optional[int]
-        :param include_metadata: If True, will fetch metadata for trophy such as name
-            and detail
+        :param include_metadata: If True, will fetch metadata for trophy such as name and detail
         :type include_metadata: bool
 
         .. warning::
 
-            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
-            limit since the API wrapper has to obtain metadata from a separate endpoint.
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate limit since the API wrapper has to obtain metadata from a separate
+            endpoint.
 
         :returns: Returns the Trophy Generator object with all the information
         :rtype: Iterator[Trophy]
 
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
+
         """
 
         if not include_metadata:
-            return TrophyBuilder(
-                self._request_builder, np_communication_id
-            ).earned_game_trophies(self.account_id, platform, trophy_group_id, limit)
+            return TrophyBuilder(request_builder=self._request_builder, np_communication_id=np_communication_id,).earned_game_trophies(
+                account_id=self.account_id,
+                platform=platform,
+                trophy_group_id=trophy_group_id,
+                limit=limit,
+            )
         else:
-            return TrophyBuilder(
-                self._request_builder, np_communication_id
-            ).earned_game_trophies_with_metadata(
-                self.account_id, platform, trophy_group_id, limit
+            return TrophyBuilder(request_builder=self._request_builder, np_communication_id=np_communication_id,).earned_game_trophies_with_metadata(
+                account_id=self.account_id,
+                platform=platform,
+                trophy_group_id=trophy_group_id,
+                limit=limit,
             )
 
     def trophy_groups_summary(
@@ -326,37 +306,39 @@ class User:
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
-        :param np_communication_id: Unique ID of the title used to request trophy
-            information
+        :param np_communication_id: Unique ID of the title used to request trophy information
         :type np_communication_id: str
         :param platform: The platform this title belongs to.
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param include_metadata: If True, will fetch results from another endpoint and
-            include metadata for trophy group such as name and detail
+        :param include_metadata: If True, will fetch results from another endpoint and include metadata for trophy group such as name and detail
         :type include_metadata: bool
 
         .. warning::
 
-            Setting ``include_metadata`` to ``True`` will use twice the amount of rate
-            limit since the API wrapper has to obtain metadata from a separate endpoint.
+            Setting ``include_metadata`` to ``True`` will use twice the amount of rate limit since the API wrapper has to obtain metadata from a separate
+            endpoint.
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
         if not include_metadata:
             return TrophyGroupsSummaryBuilder(
-                self._request_builder, np_communication_id
-            ).user_trophy_groups_summary(self.account_id, platform)
+                request_builder=self._request_builder,
+                np_communication_id=np_communication_id,
+            ).user_trophy_groups_summary(account_id=self.account_id, platform=platform)
         else:
             return TrophyGroupsSummaryBuilder(
-                self._request_builder, np_communication_id
-            ).user_trophy_groups_summary_with_metadata(self.account_id, platform)
+                request_builder=self._request_builder,
+                np_communication_id=np_communication_id,
+            ).user_trophy_groups_summary_with_metadata(account_id=self.account_id, platform=platform)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

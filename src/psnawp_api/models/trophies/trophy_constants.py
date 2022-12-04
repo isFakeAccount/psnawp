@@ -13,8 +13,8 @@ class TrophyType(Enum):
 
 
 class PlatformType(Enum):
-    UNKNOWN = "Unknown"
-    PS_VITA = "PS Vita"
+    UNKNOWN = "UNKNOWN"
+    PS_VITA = "PSVITA"
     PS3 = "PS3"
     PS4 = "PS4"
     PS5 = "PS5"

@@ -28,8 +28,7 @@ class Group:
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make
-            HTTPRequests.
+        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
         :type request_builder: RequestBuilder
         :param group_id: The Group ID of a group.
         :type group_id: Optional[str]
@@ -38,8 +37,7 @@ class Group:
 
         :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
 
-        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
-            blocked you.
+        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you. blocked you.
 
         """
 
@@ -69,17 +67,14 @@ class Group:
                 ).json()
                 self.group_id = response["groupId"]
             except PSNAWPForbidden as forbidden:
-                raise PSNAWPForbidden(
-                    "The group cannot be created because the user has either set messages to private or has blocked you."
-                ) from forbidden
+                raise PSNAWPForbidden("The group cannot be created because the user has either set messages to private or has blocked you.") from forbidden
 
     def change_name(self, group_name: str) -> None:
         """Changes the group name to one specified in arguments.
 
         .. note::
 
-            You cannot change the name of DM groups. i.e. Groups with only two people
-            (including you).
+            You cannot change the name of DM groups. i.e. Groups with only two people (including you).
 
         :param group_name: The name of the group that will be set.
         :type group_name: str
@@ -97,9 +92,7 @@ class Group:
                 data=json.dumps(data),
             )
         except PSNAWPBadRequest as bad_req:
-            raise PSNAWPBadRequest(
-                f"The group name of Group ID {self.group_id} does cannot be changed. Group is either a dm or does not exist."
-            ) from bad_req
+            raise PSNAWPBadRequest(f"The group name of Group ID {self.group_id} does cannot be changed. Group is either a dm or does not exist.") from bad_req
 
     def get_group_information(self) -> dict[str, Any]:
         """Gets the group chat information such as about me, avatars, languages etc...
@@ -172,9 +165,7 @@ class Group:
 
             return response
         except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound(
-                f"Group ID {self.group_id} does not exist."
-            ) from not_found
+            raise PSNAWPNotFound(f"Group ID {self.group_id} does not exist.") from not_found
 
     def send_message(self, message: str) -> dict[str, str]:
         """Sends a message in the group.
@@ -255,9 +246,7 @@ class Group:
 
         """
 
-        self._request_builder.delete(
-            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}"
-        )
+        self._request_builder.delete(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}")
 
     def __repr__(self) -> str:
         return f"<Group group_id:{self.group_id}>"

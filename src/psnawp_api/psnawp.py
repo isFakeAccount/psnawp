@@ -36,9 +36,7 @@ class PSNAWP:
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        self._request_builder = request_builder.RequestBuilder(
-            authenticator.Authenticator(npsso_cookie)
-        )
+        self._request_builder = request_builder.RequestBuilder(authenticator.Authenticator(npsso_cookie))
 
     def me(self) -> Client:
         """Creates a new client object (your account).
@@ -68,11 +66,9 @@ class PSNAWP:
 
         .. note::
 
-            The account_id takes higher precedence than online_id. If both arguments are
-            passed, online_id will be ignored.
+            The account_id takes higher precedence than online_id. If both arguments are passed, online_id will be ignored.
 
-        :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id
-            (str): Account ID of the user.
+        :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id (str): Account ID of the user.
         :type kwargs: dict
 
         :returns: User Object
@@ -96,43 +92,41 @@ class PSNAWP:
         elif online_id is not None:
             return User.from_online_id(self._request_builder, online_id)
         else:
-            raise PSNAWPIllegalArgumentError(
-                "You must provide at least online ID or account ID."
-            )
+            raise PSNAWPIllegalArgumentError("You must provide at least online ID or account ID.")
 
-    def game_title(
-        self, title_id: str, account_id: str = "6515971742264256071"
-    ) -> GameTitle:
+    def game_title(self, title_id: str, account_id: str = "6515971742264256071", np_communication_id: Optional[str] = None) -> GameTitle:
         """Creates a GameTitle class object from title_id which represents a PlayStation video game title.
 
         .. note::
 
-            The GameTitle class is only useful if the user has played that video game.
-            To allow users to retrieve information without having to play that video
-            game I picked a default user who has played the most number of games based
-            on this website
-            (https://www.truetrophies.com/leaderboard/gamer/gamesplayed). It is possible
-            that the there are games this user has not played and in that case it is
-            better to provide your own account id (``'me'``) or someone who has played
-            that game.
+            The GameTitle class is only useful if the user has played that video game. To allow users to retrieve information without having to play that video
+            game I picked a default user who has played the most number of games based on this website
+            (https://www.truetrophies.com/leaderboard/gamer/gamesplayed). It is possible that the there are games this user has not played and in that case it
+            is better to provide your own account id (``'me'``) or someone who has played that game.
 
         .. note::
 
-            title_id can be obtained from https://andshrew.github.io/PlayStation-Titles/
-            or from :py:meth:`psnawp_api.models.search.Search.universal_search`
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:meth:`psnawp_api.models.search.Search.get_title_id`
+
+        .. note::
+
+            During the construction of the object, an additional call is made to get the np_communication_id. This ID is important for getting trophy data. This
+            call can be skipped by providing np_communication_id in as argument.
 
         :param title_id: unique ID of game title.
         :type title_id: str
         :param: account_id: The account whose trophy list is being accessed
         :type account_id: str
+        :param np_communication_id: Unique ID of a game title used to request trophy information.
+        :type np_communication_id: Optional[str]
 
         :returns: Title Object
         :rtype: GameTitle
 
+        :raises: ``PSNAWPNotFound`` If the user does not have any trophies for that game or the game doesn't exist.
+
         """
-        return GameTitle(
-            self._request_builder, title_id=title_id, account_id=account_id
-        )
+        return GameTitle(self._request_builder, title_id=title_id, account_id=account_id, np_communication_id=np_communication_id)
 
     @overload
     def group(self, *, group_id: str) -> Group:
@@ -147,13 +141,11 @@ class PSNAWP:
 
         .. warning::
 
-            Passing ``users_list`` will create a new group each time. If you want to
-            continue from the same group. Use group id obtained from
+            Passing ``users_list`` will create a new group each time. If you want to continue from the same group. Use group id obtained from
             ``client.get_groups()``
 
-        :param kwargs: group_id (str): The Group ID of a group usually retrieved with
-            the get_groups() method. users_list(Iterator[User]): A list of users of the
-            members in the group.
+        :param kwargs: group_id (str): The Group ID of a group usually retrieved with the get_groups() method. users_list(Iterator[User]): A list of users of
+            the members in the group.
 
         :returns: Group Object
         :rtype: Group
@@ -168,9 +160,7 @@ class PSNAWP:
         users: Optional[Iterator[User]] = kwargs.get("users_list")
 
         if (group_id and users) or not (group_id or users):
-            raise PSNAWPIllegalArgumentError(
-                "You provide at least Group Id or Users, and not both."
-            )
+            raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users, and not both.")
         return Group(self._request_builder, group_id=group_id, users=users)
 
     def search(self) -> Search:

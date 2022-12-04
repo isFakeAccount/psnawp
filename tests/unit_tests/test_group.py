@@ -15,9 +15,7 @@ from tests.unit_tests import my_vcr
 def test_group__group_incorrect_args(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPIllegalArgumentError):
-            psnawp_fixture.group(
-                group_id="~25C4C5406FD6D50E.763F9A1EB6AB5790", users_list=["Help"]
-            )
+            psnawp_fixture.group(group_id="~25C4C5406FD6D50E.763F9A1EB6AB5790", users_list=["Help"])
 
 
 @pytest.mark.vcr()

@@ -45,8 +45,7 @@ class RequestBuilder:
     def __init__(self, authenticator: Authenticator):
         """Initialized Request Handler and saves the instance of authenticator for future use.
 
-        :param authenticator: The instance of :class: `Authenticator`. Represents single
-            authentication to PSN API.
+        :param authenticator: The instance of :class: `Authenticator`. Represents single authentication to PSN API.
 
         """
         self.authenticator = authenticator
@@ -74,9 +73,7 @@ class RequestBuilder:
         params = kwargs.get("params")
         data = kwargs.get("data")
 
-        response = requests.get(
-            url=kwargs["url"], headers=headers, params=params, data=data
-        )
+        response = requests.get(url=kwargs["url"], headers=headers, params=params, data=data)
         response_checker(response)
         return response
 
@@ -97,9 +94,7 @@ class RequestBuilder:
         params = kwargs.get("params")
         data = kwargs.get("data")
 
-        response = requests.patch(
-            url=kwargs["url"], headers=headers, data=data, params=params
-        )
+        response = requests.patch(url=kwargs["url"], headers=headers, data=data, params=params)
 
         response_checker(response)
         return response
@@ -121,9 +116,7 @@ class RequestBuilder:
         params = kwargs.get("params")
         data = kwargs.get("data")
 
-        response = requests.post(
-            url=kwargs["url"], headers=headers, data=data, params=params
-        )
+        response = requests.post(url=kwargs["url"], headers=headers, data=data, params=params)
 
         response_checker(response)
         return response
@@ -175,8 +168,6 @@ class RequestBuilder:
         params = kwargs.get("params")
         data = kwargs.get("data")
 
-        response = requests.delete(
-            url=kwargs["url"], headers=headers, params=params, data=data
-        )
+        response = requests.delete(url=kwargs["url"], headers=headers, params=params, data=data)
         response_checker(response)
         return response

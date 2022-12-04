@@ -1,0 +1,754 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
+        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        If-None-Match
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '93'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 06:13:02 GMT
+      Server:
+      - Apache
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/trophyTitles?limit=100&offset=0
+  response:
+    body:
+      string: '{"trophyTitles": [{"npServiceName": "trophy2", "npCommunicationId":
+        "NPWR21237_00", "trophySetVersion": "01.40", "trophyTitleName": "Immortals
+        Fenyx Rising \u2122", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/98744844-873e-479e-83c1-5853ea2024b6.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 47, "silver": 16, "gold": 5, "platinum": 1}, "progress": 26, "earnedTrophies":
+        {"bronze": 13, "silver": 5, "gold": 1, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-25T19:43:25Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR26800_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "PGA TOUR 2K23", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR26800_00/a98539ed-9283-4206-a36a-9e29c3b11850.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 17, "silver": 5, "gold": 7, "platinum": 1}, "progress": 88, "earnedTrophies":
+        {"bronze": 15, "silver": 5, "gold": 6, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-24T16:00:32Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR08959_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The Book of Unwritten Tales 2", "trophyTitleDetail": "The Book of Unwritten
+        Tales 2", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR08959_00_00FB0CF53B0E34C9A4B69CDCE3CC4EDC6D1DF50D74/1ECC30112CB59F3359EA1B74A0DB2893A0651507.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 39, "silver": 10, "gold": 1, "platinum": 1}, "progress": 3, "earnedTrophies":
+        {"bronze": 2, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-24T04:20:52Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR06008_00", "trophySetVersion": "01.33", "trophyTitleName":
+        "The Elder Scrolls Online Trophies", "trophyTitleDetail": "The Elder Scrolls
+        Online Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06008_00_00B8BB8A5B5921B026BBC07210D9DF2A83BB0B904B/CF3000EE9177CC9A5270472A0F1F931BEB6E73EA.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 69, "silver": 35, "gold": 19, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-22T22:06:27Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR12261_00", "trophySetVersion": "01.33", "trophyTitleName":
+        "The Elder Scrolls Online Additional Trophies", "trophyTitleDetail": "The
+        Elder Scrolls Online Additional Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR12261_00_00DF14AACE527D518BF89FF1A55792260652936DAA/154746564C84148DED8C8D59C0ADD495102F688B.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 5, "silver": 15, "gold": 12, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-22T22:06:25Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR28198_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "2022 Little League\u00ae World Series Baseball", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28198_00/777a5af3-b282-4619-9962-23094283355e.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 8, "silver": 7, "gold": 7, "platinum": 1}, "progress": 6, "earnedTrophies":
+        {"bronze": 2, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-11-17T01:49:14Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR24223_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Call of Duty\u00ae Modern Warfare\u00ae II", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24223_00/4bf6ce0f-4c4c-42a2-b3d0-66c295cbd7aa.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 4, "silver": 14, "gold": 6, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-24T20:41:25Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22420_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Crusader Kings III", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22420_00/24d6957d-a0c2-45be-83b8-f871dfe99825.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 49, "silver": 8, "gold": 3, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-22T22:42:00Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22029_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "FINAL FANTASY VII REMAKE", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22029_00/43bbf78e-89fe-4fd7-ab42-3bfb3b9666d2.PNG",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 49, "silver": 11, "gold": 2, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-22T04:17:40Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR20849_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Chicken Police", "trophyTitleDetail": "Chicken Police Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR20849_00_006DF2A087EFFBAB3EFF5A9688D227DE236CF34304/24DC6E712421F992B6224F68F40ED6312A2BA8A0.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 16, "silver": 9, "gold": 6, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-09T16:16:16Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR21088_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Scott Pilgrim vs. the World: The Game", "trophyTitleDetail": "Trophies",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR21088_00_005838635FB05B79F3A06D4AE66E93BE9DCE2BB945/E1EFCE46CF73FDEAB4B09351044A9952DC3B9BEC.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 12, "gold": 7, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-09T14:10:08Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR25328_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Monopoly Madness", "trophyTitleDetail": "Base Game", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR25328_00_00CB4DE847231ABC1257C0ECB4B813328075A498E4/E19248F15996CB65C37B47CEEA56CEA0BA314BBE.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 4, "silver": 21, "gold": 3, "platinum": 1}, "progress": 3, "earnedTrophies":
+        {"bronze": 0, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-08T22:13:02Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22987_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Hot Wheels Unleashed\u2122", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22987_00/917f6481-875d-4aa2-b81c-b995b3895187.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 43, "silver": 6, "gold": 4, "platinum": 1}, "progress": 3, "earnedTrophies":
+        {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-08T21:40:47Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22176_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Tony Hawk''s Pro Skater 1 + 2", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22176_00/6d7dd8b5-9d3d-417c-bebb-47ffe1873cab.PNG",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 19, "silver": 13, "gold": 4, "platinum": 1}, "progress": 78, "earnedTrophies":
+        {"bronze": 18, "silver": 9, "gold": 3, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-10-01T15:03:30Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR09604_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Virginia", "trophyTitleDetail": "A selection of Trophies for the computer
+        game known as Virginia", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR09604_00_00656B24A910ED8A0A103CF92269CB45F8D99B8098/B99A5FED3253E71FF0758870C216BA12D570DEA1.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 2, "silver": 6, "gold": 9, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-09-26T02:04:06Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20006_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Deathloop", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20006_00/a7e28f3e-f5be-408f-9d6a-3090df02c972.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 46, "silver": 11, "gold": 1, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-09-26T01:57:54Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16078_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Jack N'' Jill DX", "trophyTitleDetail": "Jack N'' Jill DX", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR16078_00_00A7D00ECD35A5AB51F24B66C2C904129796BBC424/54DCB38B068C510FAE765FCD0821175CF11C674D.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-09-14T12:38:58Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR28217_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Hot Shots Golf", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/e2a772bc-3dfe-4b04-9f9c-3e2a0aa8add4.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 8, "gold": 9, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-09-10T19:46:29Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR26947_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Madden NFL 23", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR26947_00/4c64b21e-c687-4f00-93f5-4e921528eb14.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 10, "gold": 7, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-31T04:21:12Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR13601_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Wheel of Fortune\u00ae", "trophyTitleDetail": "American''s Game - Wheel of
+        Fortune\u00ae comes to the PlayStation\u00ae4 computer entertainment system
+        with HD graphics for the first time!\n-Enjoy thousands of unique puzzles which
+        stay true to the original TV Show.\u00a0\n-Compete with your friends and family
+        online and try to reach the top of the leaderboards.\n-Progress through the
+        game by unlocking all the rewards, leveling up and collecting all the souvenirs.\nWheel
+        of Fortune offers both the original TV show\u2018s DNA as well as unique and
+        new features for both veteran players and new players alike. ", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR13601_00_0082C03D5B9A6F8F2EE669162146F265937FF3B0CF/92C0B8A62013E8BED5D56DE68A6CCD8B2BC39CF5.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 9, "silver": 3, "gold": 1, "platinum": 0}, "progress": 4, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-21T12:52:18Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR14016_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Bubsy: The Woolies Strike Back", "trophyTitleDetail": "Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR14016_00_003E8FB71B638EBD34191142205C6442D36A2424A7/DAD3836CC8A3E6081B4A10A8FA00030918F1724D.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 7, "silver": 3, "gold": 1, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-10T20:40:12Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16443_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "MediEvil", "trophyTitleDetail": "MediEvil trophy set.", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR16443_00_0010CC5C017FC0D895E2FFBBB3D1E4E6DA10116CCD/1A6906E7C59D42B35F25D6749733A6146726C466.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 22, "silver": 13, "gold": 3, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-10T18:28:16Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20004_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Returnal", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20004_00/f60fd55f-a01f-4274-a865-d8356dc0fd9c.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 23, "silver": 6, "gold": 8, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-07T15:28:38Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22237_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Key We", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22237_00/2da4c43a-0af1-47be-b129-f9279626d28e.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 3, "silver": 4, "gold": 9, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-07T15:08:04Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22362_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Last Stop Trophies", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22362_00/0e34c18c-e7fa-4fa0-96d7-44c6fd7db7b1.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 20, "silver": 11, "gold": 4, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-07T14:16:28Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR10785_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "South Park\u2122: The Stick of Truth\u2122", "trophyTitleDetail": "South
+        Park\u2122: The Stick of Truth\u2122 Trophy Set", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR10785_00_00CED98F2112743D2D48C82578C3069CFE624DD1B0/D914EF7E7C627BAA9CDF64062CDA87B1AC8E6313.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 42, "silver": 5, "gold": 3, "platinum": 1}, "progress": 87, "earnedTrophies":
+        {"bronze": 39, "silver": 5, "gold": 2, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-06T17:58:49Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23684_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "MultiVersus Trophies", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23684_00/08d0225b-205c-476f-a761-b7bedf1dcbc3.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 14, "silver": 7, "gold": 7, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-08-05T17:42:08Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR27202_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Wytchwood", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27202_00/8a3ca236-cbaf-4321-87bc-8d0fdc6c520d.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 5, "gold": 9, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-29T12:49:46Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22008_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Stray", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22008_00/6c1d6ee2-469a-4b97-ad63-98ec651ad4f2.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 8, "silver": 9, "gold": 7, "platinum": 1}, "progress": 11, "earnedTrophies":
+        {"bronze": 2, "silver": 3, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-25T19:11:32Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR26086_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The Artful Escape", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR26086_00/d518da04-70e3-4c1b-870c-78775a4b89d5.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 2, "gold": 10, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 2, "gold": 10, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-24T17:19:36Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR18797_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Telling Lies", "trophyTitleDetail": "Telling Lies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR18797_00_009DFBFC71FD01D9A564C02EC0BA9BCF99CE6C0779/091179D209EBA25869857CFA1D5FD409CD5C1E33.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 2, "silver": 4, "gold": 9, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-21T22:52:37Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR10989_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Mahjong", "trophyTitleDetail": "Mahjong trophy Collection", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR10989_00_00CB52BBF26BFDB1B1E1D4C75241E1C278E05F260F/47D4021960F354D3682327051DDCB72C107A552D.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 10, "gold": 0, "platinum": 0}, "progress": 10, "earnedTrophies":
+        {"bronze": 0, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-20T00:53:36Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR25297_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Fall Guys", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25297_00/34ff04f4-655c-4b5e-ab44-270a1cb9885f.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 21, "silver": 8, "gold": 5, "platinum": 1}, "progress": 5, "earnedTrophies":
+        {"bronze": 4, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-16T15:02:10Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23957_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Yu-Gi-Oh! Master Duel", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23957_00/9e630a80-b23f-4b19-be9d-7fb41890b409.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 5, "silver": 5, "gold": 1, "platinum": 0}, "progress": 4, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-07-15T22:11:53Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR12514_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "Far Cry\u00ae 5", "trophyTitleDetail": "Far Cry\u00ae 5 Trophy Set", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR12514_00_009BCFE499309C300848B10C92F26E4E6F65E0CCB8/86ECC1A6B4A17FDDC6BBD9631DBAB8F9CDF80E1F.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 53, "silver": 14, "gold": 5, "platinum": 1}, "progress": 49, "earnedTrophies":
+        {"bronze": 29, "silver": 7, "gold": 2, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-06-26T14:34:18Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR24889_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Nickelodeon All-Star Brawl", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24889_00/513e29a7-58e8-40e7-a9cf-08fc6a046b13.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 11, "gold": 7, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-06-08T15:01:00Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR27447_00", "trophySetVersion": "01.03", "trophyTitleName":
+        "Fall Guys", "trophyTitleDetail": "Fall Guys", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR27447_00_005D6EB1B9353EB6A6387762F54756013033B010E0/F6CA3F360937BF37E4BA0E1DD13D5D201018E412.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 21, "silver": 8, "gold": 5, "platinum": 1}, "progress": 34, "earnedTrophies":
+        {"bronze": 17, "silver": 3, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-05-30T13:55:03Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11974_00", "trophySetVersion": "01.03", "trophyTitleName":
+        "Little Nightmares", "trophyTitleDetail": "Little Nightmare Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR11974_00_00F8E589325CE5C9E4BC479997BE6E9AE9A3214781/61E5D1B9BE30031957EB8CBC7FB15ACD538730F2.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 13, "silver": 5, "gold": 4, "platinum": 0}, "progress": 6, "earnedTrophies":
+        {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-05-14T00:50:51Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR25179_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "FIFA 22 Trophies", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25179_00/9f7d91bf-019d-4734-bbda-319bb01ca4e0.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 17, "silver": 17, "gold": 3, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-05-03T19:54:44Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR17353_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "SpongeBob SquarePants: Battle for Bikini Bottom: Rehydrated", "trophyTitleDetail":
+        "Cool SpongeBob related trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR17353_00_009F8C81B85852D16116481DD0899B88990D8D9CE6/8E7339C1E83979A1D355244EDCC556B07C4FA347.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 21, "silver": 5, "gold": 6, "platinum": 1}, "progress": 10, "earnedTrophies":
+        {"bronze": 5, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-05-02T00:05:35Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23600_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "WWE 2K22", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23600_00/45fb0fe3-bc3b-41a4-bf1d-c000f4bc3099.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 46, "silver": 6, "gold": 2, "platinum": 1}, "progress": 57, "earnedTrophies":
+        {"bronze": 32, "silver": 4, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-04-27T14:41:30Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR09124_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Unravel\u2122", "trophyTitleDetail": "Unravel\u2122 Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR09124_00_0081C0245874DC9B27E63C282FF13C0BEC7A6FB553/E54C44BA8969BBF703600979CB2596AB2441E293.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 10, "silver": 8, "gold": 7, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-04-23T14:55:25Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR17743_00", "trophySetVersion": "01.10", "trophyTitleName":
+        "Sid Meier''s Civilization VI", "trophyTitleDetail": "Sid Meier''s Civilization
+        VI", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR17743_00_00E4993986A34531803F56A042E5242B4B82DB7222/E2A53CD5ED60A3582F748D3759E46C4D22A11DDC.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 79, "silver": 13, "gold": 5, "platinum": 1}, "progress": 20, "earnedTrophies":
+        {"bronze": 18, "silver": 5, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-03-15T14:41:00Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR26567_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Tiny Tina''s Assault on Dragon Keep: A Wonderlands One-shot Adventure", "trophyTitleDetail":
+        "Tiny Tina''s Assault on Dragon Keep: A Wonderlands One-shot Adventure trophy
+        collection", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR26567_00_0004925AE29B059E38F90912359EB987889CF7BD54/5C1FAF708BFB1524803FB15E3263626488F96347.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 16, "silver": 9, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-02-26T02:50:29Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR12624_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Mr. Massagy", "trophyTitleDetail": "Trophies for the glorious Mr. Massagy",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR12624_00_004F81DB70BFDFC010FBAACB19B756F90B02D0FB3E/860C00E76A8E00F00CB7C0200E6EA4432EAF0AFE.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 16, "silver": 12, "gold": 5, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 16, "silver": 12, "gold": 5, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-02-17T22:56:25Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR22415_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Chickens On The Road", "trophyTitleDetail": "Trophy set for Chickens On The
+        Road", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22415_00_008C6600740D1C242A9822468465B5CDA3ECD37254/73694EF5C46178EA2C88AF5A72E4DDF086D0C183.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-02-13T18:43:23Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11243_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Batman", "trophyTitleDetail": "Batman Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR11243_00_00BA59038C4D483C5AA9817CAFD98B3DA960E696D2/7BFFC34724C6B792D74A8FE8A11456B33C54F6D4.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 15, "silver": 10, "gold": 5, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 15, "silver": 10, "gold": 5, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-02-13T17:26:11Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21586_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Marvel''s Guardians of the Galaxy", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21586_00/e4cba10a-c4ef-4c63-8632-c0d2d6632874.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 54, "silver": 3, "gold": 1, "platinum": 1}, "progress": 9, "earnedTrophies":
+        {"bronze": 6, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-02-05T22:38:01Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21100_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "DIRT5\u2122", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21100_00/63c58efc-6c1a-4f67-a06c-ca82325bae8f.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 18, "silver": 10, "gold": 12, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-01-25T03:24:50Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21131_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "Godfall", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21131_00/5666d504-7825-4fc1-b4a3-e706e42a4359.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 44, "silver": 14, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-01-24T04:43:31Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11401_00", "trophySetVersion": "01.02", "trophyTitleName":
+        "South Park\u2122: The Fractured But Whole\u2122", "trophyTitleDetail": "South
+        Park\u2122: The Fractured But Whole\u2122 Trophy Set", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR11401_00_00E79CCF48EA4680189C9B5887677C4E558F6DFAC3/97EA73EF0FAF9D4DF8095C237BBEB396A6CB11B9.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 19, "silver": 12, "gold": 4, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 19, "silver": 12, "gold": 4, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-01-18T05:01:11Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11659_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The Witcher 3: Wild Hunt \u2013 Complete Edition", "trophyTitleDetail": "Trophies
+        available in The Witcher 3: Wild Hunt \u2013 Complete Edition", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR11659_00_00FE152270D32C183E5668061360344FF2E486902C/EDF87EA76193FF25BC13EF8902478B5851B978F6.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 68, "silver": 8, "gold": 2, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-01-01T15:20:59Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23631_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "STAR WARS Jedi: Fallen Order", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23631_00/ee967b85-6f76-4294-84af-ac7112dd4e7e.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 25, "silver": 11, "gold": 3, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-12-25T23:36:26Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR15597_00", "trophySetVersion": "01.06", "trophyTitleName":
+        "LEGO\u00ae DC Super-Villains", "trophyTitleDetail": "LEGO\u00ae DC Super-Villains",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15597_00_00FB3FA644712BACF0B4A82E2250FECE6B651948E0/EBF37C1EB0D637C98173684C1A7F324EE1468841.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 62, "silver": 10, "gold": 3, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-12-15T16:45:28Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR24213_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Jurassic World Evolution 2", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24213_00/1159bb1f-aed5-4257-8d63-533cc211b68a.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 31, "silver": 17, "gold": 1, "platinum": 1}, "progress": 15, "earnedTrophies":
+        {"bronze": 9, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-12-03T14:28:18Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21809_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The Persistence", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21809_00/f55875b7-fa30-4093-8781-2e8008bbcf71.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 32, "silver": 7, "gold": 4, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-11-07T16:27:39Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23196_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Madden NFL 22", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23196_00/49d107c1-9efa-44f4-bd4f-99cf572fd249.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 5, "silver": 5, "gold": 9, "platinum": 1}, "progress": 17, "earnedTrophies":
+        {"bronze": 0, "silver": 3, "gold": 1, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-11-03T05:35:47Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22598_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Hell Let Loose", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22598_00/3ed51d5f-36b0-4da2-ae2f-8b3c445237e5.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 28, "silver": 10, "gold": 4, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-10-08T23:11:26Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22859_00", "trophySetVersion": "01.25", "trophyTitleName":
+        "Ghost of Tsushima", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22859_00/d7213b2e-8048-40ae-859e-3ce1863b9390.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 59, "silver": 13, "gold": 4, "platinum": 1}, "progress": 14, "earnedTrophies":
+        {"bronze": 16, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-09-08T16:01:54Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21643_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Planet Coaster", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21643_00/d94384c6-f4f5-4ab1-be4f-7ce5006dfcf2.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 24, "silver": 11, "gold": 3, "platinum": 1}, "progress": 21, "earnedTrophies":
+        {"bronze": 14, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-08-15T19:20:45Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22860_00", "trophySetVersion": "00.10", "trophyTitleName":
+        "Hunter''s Arena: Legends", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22860_00/b4aa86c0-f517-43e5-8624-9a17995cb9ac.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 14, "silver": 10, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-08-07T20:12:21Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR21219_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Tennis World Tour 2", "trophyTitleDetail": "Trophies for Tennis World Tour
+        2.", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR21219_00_005345A435DE4D4C0D3BAECD929D22C0BB804F89BB/03291C62B4997B4811C6977208CEFB305C66AE54.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 16, "silver": 8, "gold": 6, "platinum": 1}, "progress": 4, "earnedTrophies":
+        {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-08-06T16:35:32Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR23786_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Operation: Tango", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23786_00/fdd76bae-fc0c-461a-9534-bde70a1142cc.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 7, "silver": 12, "gold": 6, "platinum": 1}, "progress": 65, "earnedTrophies":
+        {"bronze": 6, "silver": 7, "gold": 4, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-31T17:10:29Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR19742_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Stranded Deep", "trophyTitleDetail": "Stranded Deep Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR19742_00_000D1954AA2F2C085234C504104F6F657F2B71C00E/CD3B327923C37C0087EA93A721438A3846F46371.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 20, "silver": 10, "gold": 5, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-25T11:52:51Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR19418_00", "trophySetVersion": "01.02", "trophyTitleName":
+        "Fall Guys", "trophyTitleDetail": "Fall Guys", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR19418_00_00DD64BDB8FDDEC62DE6E561F32D6232100339A04A/4E1DE7EDED859551704FF395BA37CADEB296E48D.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 21, "silver": 8, "gold": 5, "platinum": 1}, "progress": 34, "earnedTrophies":
+        {"bronze": 17, "silver": 3, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-24T18:34:41Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR14879_00", "trophySetVersion": "01.08", "trophyTitleName":
+        "Trover Saves The Universe", "trophyTitleDetail": "Trover Saves The Universe",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR14879_00_009B86485BC109480ABFCECA8966EF7E29C8627D59/9B1D70C74245BEFC0DF2096459E42CEAD6EF2329.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 10, "silver": 10, "gold": 7, "platinum": 1}, "progress": 94, "earnedTrophies":
+        {"bronze": 6, "silver": 10, "gold": 7, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-15T22:09:06Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR18633_00", "trophySetVersion": "01.02", "trophyTitleName":
+        "WWE 2K Battlegrounds", "trophyTitleDetail": "Win matches. Have fun.", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR18633_00_0014FA5C1603B19CE7EA0BECCA449329D88EDAE789/91903CAAC31F94F88929DE99B0CA94BE684CEC09.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 9, "silver": 3, "gold": 1, "platinum": 0}, "progress": 9, "earnedTrophies":
+        {"bronze": 2, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-11T14:46:50Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22506_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "A Plague Tale: Innocence", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22506_00/ce344b9c-7a9d-4e98-a8e4-c4f9e42d8796.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 22, "silver": 9, "gold": 4, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-10T16:14:31Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR18763_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Darwin Project", "trophyTitleDetail": "Darwin Project", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR18763_00_00B40F3C20090A28A96C66780E5BFADEA98F3A85C5/0A88A201269DD325BA6E8870F9B2ADD30AB11B8A.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 11, "silver": 2, "gold": 1, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-07-06T19:50:16Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR19950_00", "trophySetVersion": "01.02", "trophyTitleName":
+        "Sackboy: A Big Adventure", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19950_00/28286d6e-d0b0-492f-8e0e-573ad62184ef.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 32, "silver": 10, "gold": 3, "platinum": 1}, "progress": 21, "earnedTrophies":
+        {"bronze": 13, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-30T19:00:05Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20842_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Ratchet & Clank: Rift Apart", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20842_00/693b98ed-1b2b-4111-abcd-39ad740aa941.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 36, "silver": 7, "gold": 3, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 36, "silver": 7, "gold": 3, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-27T17:04:50Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22080_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "Metro Exodus", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22080_00/6dbc9bf0-bec8-4632-b932-0506845ebdd3.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 57, "silver": 6, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-19T22:59:41Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21743_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Maquette", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21743_00/421679aa-b7b7-4405-8947-52a5b3e420d7.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 2, "silver": 14, "gold": 6, "platinum": 1}, "progress": 15, "earnedTrophies":
+        {"bronze": 2, "silver": 1, "gold": 1, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-10T21:12:12Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR21317_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "Virtua Fighter 5 Ultimate Showdown", "trophyTitleDetail": "Virtua Fighter
+        5 Ultimate Showdown", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR21317_00_00D089A8E4D4792CBCD4D44A9A409D0B3143A5805E/478F3F88EC8085B71CE75647E03CDEEAF5313275.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 12, "silver": 3, "gold": 1, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-10T20:21:24Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22305_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Wreckfest", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22305_00/d2fcf97e-1676-4ce9-a09a-f75bcda1d119.PNG",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 2, "silver": 11, "gold": 7, "platinum": 1}, "progress": 74, "earnedTrophies":
+        {"bronze": 1, "silver": 9, "gold": 5, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-06-08T19:25:23Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20813_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Marvel''s Spider-Man Remastered", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20813_00/19515081-883c-41e2-9c49-8a8706c59efc.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 54, "silver": 19, "gold": 5, "platinum": 1}, "progress": 72, "earnedTrophies":
+        {"bronze": 45, "silver": 13, "gold": 3, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-05-17T14:03:23Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20684_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Marvel''s Spider-Man: Miles Morales", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20684_00/baa4acc4-a8e5-42f6-ae09-3ae51b6a38fb.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 37, "silver": 10, "gold": 2, "platinum": 1}, "progress": 7, "earnedTrophies":
+        {"bronze": 5, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-05-10T12:40:40Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21249_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Mortal Kombat 11 Trophies", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21249_00/b0ca5165-b152-46ce-9584-16b09baabafd.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 50, "silver": 7, "gold": 1, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-04-28T23:03:53Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR10751_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "Resident Evil 7: Biohazard", "trophyTitleDetail": "Resident Evil 7: Biohazard",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR10751_00_0067A75086AF6955957B0F14790DB6DEDF01270DD1/0F061D22C9840D6AF8BF72E1520F986C13376604.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 34, "silver": 19, "gold": 5, "platinum": 1}, "progress": 4, "earnedTrophies":
+        {"bronze": 5, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-04-17T22:03:17Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21451_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Oddworld: Soulstorm", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21451_00/77347841-a502-435a-b497-4f30c624a1f8.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 18, "silver": 9, "gold": 5, "platinum": 1}, "progress": 9, "earnedTrophies":
+        {"bronze": 6, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-04-11T13:40:40Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR19785_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Cyberpunk 2077", "trophyTitleDetail": "Trophies available in Cyberpunk 2077",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR19785_00_00157A5FE9FC5D51F15199BF5555DBA323DF24700A/A9C15439E4D4B02C86C0412D2FBA0D1394CE7C9C.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 26, "silver": 17, "gold": 1, "platinum": 1}, "progress": 6, "earnedTrophies":
+        {"bronze": 4, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-04-05T16:13:32Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR21232_00", "trophySetVersion": "01.10", "trophyTitleName":
+        "Genshin Impact", "trophyTitleDetail": "Genshin Impact Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR21232_00_0095BDA1569E0A38C1CF5A25FA9775CB4C418FA42A/DFEB354B113E766EFDB4F28A40165347BD4A1E93.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 46, "silver": 17, "gold": 6, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-03-19T19:33:31Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21810_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Maneater", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21810_00/fa2ca3f3-0fc6-4a3e-bb4e-0d8a43aeb518.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 31, "silver": 7, "gold": 6, "platinum": 1}, "progress": 3, "earnedTrophies":
+        {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-03-18T11:45:11Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR22322_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Auto Chess", "trophyTitleDetail": "Auto Chess", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22322_00_00876DFE101CF48587B13FE9CA58E8F94D95CC8948/333D5674C4A37A5BEFD42D34FC882A25413A97A2.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 5, "silver": 5, "gold": 1, "platinum": 0}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-03-17T19:26:53Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR20188_00", "trophySetVersion": "01.40", "trophyTitleName":
+        "ASTRO\u2019s PLAYROOM", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/035a02db-e64f-4572-8653-4a3db37fe2f6.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 27, "silver": 13, "gold": 5, "platinum": 1}, "progress": 91, "earnedTrophies":
+        {"bronze": 26, "silver": 13, "gold": 4, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-03-02T01:30:03Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR22792_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Destruction AllStars", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22792_00/2d7f64f7-fa2f-4ea2-b3f4-910ec2e93aaa.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 17, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-28T20:07:28Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR21279_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Bugsnax", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21279_00/35352171-8ad3-402d-a901-618cf30c156e.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 11, "silver": 12, "gold": 7, "platinum": 1}, "progress": 2, "earnedTrophies":
+        {"bronze": 2, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-28T19:57:58Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR18488_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "Immortals Fenyx Rising\u2122", "trophyTitleDetail": "Trophy Set for Immortals
+        Fenyx Rising\u2122", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR18488_00_00739A980297AFB4D56851B528337DC38724071566/64E271BCEBA6C7590719CDED8C1493689D31DF0F.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 47, "silver": 16, "gold": 5, "platinum": 1}, "progress": 27, "earnedTrophies":
+        {"bronze": 28, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-24T16:03:09Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR15359_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "Control", "trophyTitleDetail": "The game''s basic trophy set", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR15359_00_00D751EBF01D244B855D6F6505F39472370226458A/CA4CF82D2BDBC187FF50424C2BCCE6E88CD83DED.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 50, "silver": 14, "gold": 3, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-06T20:52:45Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16873_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "GreedFall", "trophyTitleDetail": "GreedFall", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16873_00_002A998F935D488E1230F719A8B117B9B92310A786/BA3C576F3B2CFDB668B0347DD72EFFE7B707519B.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 53, "silver": 8, "gold": 2, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-05T23:40:15Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16694_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Hello Neighbor: Hide and Seek Trophies", "trophyTitleDetail": "Hello Neighbor
+        Hide and Seek trophy set", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16694_00_004969FEFE00142D581584510A02BCA80D7153F2D2/86C1C398EBAAF1D2CB0613806D9F3A40A8A38EFA.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 9, "gold": 8, "platinum": 1}, "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-05T23:40:08Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR14287_00", "trophySetVersion": "01.08", "trophyTitleName":
+        "Jurassic World Evolution", "trophyTitleDetail": "Trophies for Jurassic World
+        Evolution", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR14287_00_00E58FB610AA57A31A8C8C261586AB40B38B6C4275/1645C3D94367E2AFCB89449B96AE9B7E6C4504DF.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 53, "silver": 15, "gold": 5, "platinum": 1}, "progress": 35, "earnedTrophies":
+        {"bronze": 34, "silver": 3, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2021-02-05T00:15:20Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR15509_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "Fallout 76", "trophyTitleDetail": "Fallout 76", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 47, "silver": 18, "gold": 1, "platinum": 1}, "progress": 83, "earnedTrophies":
+        {"bronze": 38, "silver": 15, "gold": 1, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-11-28T22:55:19Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16485_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Hollow Knight", "trophyTitleDetail": "Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16485_00_00E103B3956DE82B6A07846BA046B2F2E31A463E1C/ABD7ED71241D7B65C6F212CA261E08831E9DB365.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 18, "silver": 11, "gold": 5, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-11-21T05:19:35Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR17352_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Destroy All Humans", "trophyTitleDetail": "Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR17352_00_0063483168503975C10D83EE567B4A9C09492ECC91/7271FAB001186DB26A1C3E49451D25F604A88060.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 26, "silver": 11, "gold": 3, "platinum": 1}, "progress": 37, "earnedTrophies":
+        {"bronze": 21, "silver": 2, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-10-24T17:23:02Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR09862_00", "trophySetVersion": "01.04", "trophyTitleName":
+        "Vampyr", "trophyTitleDetail": "The trophy set of Vampyr", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR09862_00_00FC81FA414C9E0FE5C3A4E507686C60D825FF9172/5472DBF543D139228055098E14B20D74E8B36CB0.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 17, "gold": 5, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-10-18T21:57:55Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR19532_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "PGA TOUR 2K21", "trophyTitleDetail": "PGA TOUR 2K21", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR19532_00_00455A27823C4C4ED469A182AE970488C5460ACB49/160EDD9E14FAFD97DDBE59F1225F551305729CD1.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 17, "silver": 5, "gold": 7, "platinum": 1}, "progress": 85, "earnedTrophies":
+        {"bronze": 15, "silver": 4, "gold": 6, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-10-12T14:16:38Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11619_00", "trophySetVersion": "01.03", "trophyTitleName":
+        "Need for Speed\u2122 Payback", "trophyTitleDetail": "Need for Speed\u2122
+        Payback Trophy Set", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR11619_00_00C9019FFB34CD1FEBE6CCDCA91FC664AB4561C053/26EDFCCDE962840728E58CBA3736C35ACC82CA26.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 47, "silver": 8, "gold": 2, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-10-06T19:48:14Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR11453_00", "trophySetVersion": "01.05", "trophyTitleName":
+        "Rise of the Tomb Raider", "trophyTitleDetail": "Rise of the Tomb Raider",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR11453_00_00094E790F4EFEFE2495B522E982D20528432FF99A/149075FB4FB57A1F3BA94F2B1DF479347405AC40.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
+        {"bronze": 118, "silver": 5, "gold": 1, "platinum": 1}, "progress": 1, "earnedTrophies":
+        {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-07-19T17:41:55Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR18341_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "NBA 2K20", "trophyTitleDetail": "NBA 2K20 Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR18341_00_006E5C1FDCA4507719D6C0D83DDCBD4B0177DB47BB/85967650BB9AF7C3A96AC84A1814DC5A147E8967.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 38, "silver": 10, "gold": 2, "platinum": 1}, "progress": 10, "earnedTrophies":
+        {"bronze": 7, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2020-07-19T16:59:45Z"}], "nextOffset": 100, "totalItemCount":
+        302}'
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56480'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 06:13:03 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

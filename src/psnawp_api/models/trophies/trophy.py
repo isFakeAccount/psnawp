@@ -5,6 +5,7 @@ from typing import Optional, Literal, Iterator, Any
 
 from attrs import define
 
+from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_constants import TrophyType, TrophyRarity
 from psnawp_api.models.trophies.utility_functions import (
     trophy_type_str_to_enum,
@@ -83,9 +84,7 @@ class Trophy:
             earned=trophy_dict.get("earned"),
             progress=trophy_dict.get("progress"),
             progress_rate=trophy_dict.get("progressRate"),
-            progressed_date_time=iso_format_to_datetime(
-                trophy_dict.get("progressedDateTime")
-            ),
+            progressed_date_time=iso_format_to_datetime(trophy_dict.get("progressedDateTime")),
             earned_date_time=iso_format_to_datetime(trophy_dict.get("earnedDateTime")),
             trophy_rarity=trophy_rarity_to_enum(trophy_dict.get("trophyRare")),
             trophy_earn_rate=trophy_dict.get("trophyEarnedRate"),
@@ -93,9 +92,7 @@ class Trophy:
         return trophy_instance
 
     @classmethod
-    def from_trophies_list(
-        cls, trophies_dict: Optional[list[dict[str, Any]]]
-    ) -> list[Trophy]:
+    def from_trophies_list(cls, trophies_dict: Optional[list[dict[str, Any]]]) -> list[Trophy]:
         trophy_list: list[Trophy] = []
         if trophies_dict is None:
             return trophy_list
@@ -110,7 +107,7 @@ def _get_trophy_from_endpoint(
     endpoint: str,
     request_builder: RequestBuilder,
     platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-    limit: Optional[int] = None,
+    limit: Optional[int],
 ) -> Iterator[Trophy]:
     offset = 0
     service_name = "trophy2" if platform == "PS5" else "trophy"
@@ -122,10 +119,15 @@ def _get_trophy_from_endpoint(
     while True:
         if limit is not None:
             params["limit"] = min(limit, limit_per_request)
-        response = request_builder.get(
-            url=f"{BASE_PATH['trophies']}{endpoint}",
-            params=params,
-        ).json()
+        try:
+            response = request_builder.get(
+                url=f"{BASE_PATH['trophies']}{endpoint}",
+                params=params,
+            ).json()
+        except PSNAWPNotFound as not_found:
+            raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
+        except PSNAWPForbidden as forbidden:
+            raise PSNAWPForbidden("The following user has made their trophy private.") from forbidden
 
         per_page_items = 0
         trophies: list[dict[str, Any]] = response.get("trophies")
@@ -161,11 +163,9 @@ class TrophyBuilder:
     def __init__(self, request_builder: RequestBuilder, np_communication_id: str):
         """Constructor for class TrophyBuilder.
 
-        :param request_builder: The instance of RequestBuilder. Used to make
-            HTTPRequests.
+        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
         :type request_builder: RequestBuilder
-        :param np_communication_id: Unique ID of a game title used to request trophy
-            information. This can be obtained from ``GameTitle`` class.
+        :param np_communication_id: Unique ID of a game title used to request trophy information. This can be obtained from ``GameTitle`` class.
         :type np_communication_id: str
 
         """
@@ -175,24 +175,23 @@ class TrophyBuilder:
     def game_trophies(
         self,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        trophy_group_id: str,
+        limit: Optional[int],
     ) -> Iterator[Trophy]:
         """Retrieves the individual trophy detail of a single - or all - trophy groups for a title.
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is
-            represented by a separate ID. all to return all trophies for the title,
-            default for the game itself, and additional groups starting from 001 and so
-            on return expansions trophies.
+        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
+            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
         :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy
-            titles.
+        :param limit: Limit of trophies returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
         :returns: Returns the Trophy Generator object with all the information
         :rtype: Iterator[Trophy]
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
 
         """
         return _get_trophy_from_endpoint(
@@ -209,8 +208,8 @@ class TrophyBuilder:
         self,
         account_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        trophy_group_id: str,
+        limit: Optional[int],
     ) -> Iterator[Trophy]:
         """Retrieves the earned status individual trophy detail of a single - or all - trophy groups for a title.
 
@@ -218,17 +217,18 @@ class TrophyBuilder:
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is
-            represented by a separate ID. all to return all trophies for the title,
-            default for the game itself, and additional groups starting from 001 and so
-            on return expansions trophies.
+        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
+            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
         :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy
-            titles.
+        :param limit: Limit of trophies returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
         :returns: Returns the Trophy Generator object with all the information
         :rtype: Iterator[Trophy]
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
         return _get_trophy_from_endpoint(
@@ -246,8 +246,8 @@ class TrophyBuilder:
         self,
         account_id: str,
         platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        trophy_group_id: str,
+        limit: Optional[int],
     ) -> Iterator[Trophy]:
         """Retrieves the earned status with metadata of individual trophy detail of a single - or all - trophy groups for a title.
 
@@ -255,17 +255,18 @@ class TrophyBuilder:
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is
-            represented by a separate ID. all to return all trophies for the title,
-            default for the game itself, and additional groups starting from 001 and so
-            on return expansions trophies.
+        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
+            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
         :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy
-            titles.
+        :param limit: Limit of trophies returned, None means to return all trophy titles.
         :type limit: Optional[int]
 
         :returns: Returns the Trophy Generator object with all the information
         :rtype: Iterator[Trophy]
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
         trophy_metadata = _get_trophy_from_endpoint(
@@ -294,8 +295,6 @@ class TrophyBuilder:
                 if key.startswith("_") or key.startswith("from"):
                     continue
                 else:
-                    combined_data_dict[key] = getattr(combined_data[0], key) or getattr(
-                        combined_data[1], key
-                    )
+                    combined_data_dict[key] = getattr(combined_data[0], key) or getattr(combined_data[1], key)
             trophy_instance = Trophy(**combined_data_dict)
             yield trophy_instance

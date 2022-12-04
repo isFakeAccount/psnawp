@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+
 from psnawp_api import psnawp
 
 
@@ -20,9 +21,7 @@ def create_logger(module_name: str) -> logging.Logger:
 
     log_stream = logging.StreamHandler()
     log_stream.setLevel(psnawp.logging_level)
-    formatter = logging.Formatter(
-        "[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s"
-    )
+    formatter = logging.Formatter("[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s")
     log_stream.setFormatter(formatter)
     logger.addHandler(log_stream)
     logger.propagate = False

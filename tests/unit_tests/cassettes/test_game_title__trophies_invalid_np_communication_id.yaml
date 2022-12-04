@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/SSSA01325_00/trophyGroups/all/trophies?npServiceName=trophy2
+  response:
+    body:
+      string: '{"error": {"referenceId": "80726b74-73aa-11ed-87da-63c6e96925ba", "code":
+        2240525, "message": "Resource not found"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '110'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 08:06:05 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
+version: 1

@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: '{"searchTerm": "dsfasdfadsf", "domainRequests": [{"domain": "ConceptGameMobileApp",
+      "pagination": {"cursor": "", "pageSize": 1}, "featureFlags": {"isSpartacusEnabled":
+      true}}], "countryCode": "us", "languageCode": "en", "age": 99}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '230'
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: POST
+    uri: https://m.np.playstation.com/api/search/v1/universalSearch
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAJxRTWvDMAz9K0bnUHrubXSw7VDGPm7rKGqiJKaObSx5Cyv975ObjTUwGOxgGz30
+        nt6TjxATtXaEFTTcIjct6gsVcO46YrHBM6xeXitowoDWPxJHhaiAxy9Muevga4pygwNtwt46uooR
+        vjnPVhxpk3KzEzZtSOY3gnm30hsmTHVvhNJgtpemtjBX3BAzdnTXqPTAnW12Pjs377m1Xe/0iNr9
+        1/wiN9uLQrqMD0rhSVA0lqRMFWRv32g8e5kEFj7saIyU7EBetPKLZblV4ge+RsHi7A+KDmyxJrmP
+        F//hadRUxaAEQTeFW4fsFV1WkKawpfd05ju3x/rwkFWe1KYCTKdPAAAA//8DANB/Yyz/AQAA
+    headers:
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '282'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 08:08:47 GMT
+      Expires:
+      - Sun, 04 Dec 2022 08:08:47 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

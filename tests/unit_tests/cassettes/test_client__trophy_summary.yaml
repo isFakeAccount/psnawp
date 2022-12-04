@@ -18,36 +18,27 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://m.np.playstation.com/api/trophy/v1/users/me/trophySummary
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlNjg8pSkzJzEtX0lFKTE7O
-        L80rAUtbmBoZmFlamJibmRsamZmYmZqYKNXWAgAAAP//AwA5+YU3TQAAAA==
+      string: '{"accountId": "2721516955383551246", "trophyLevel": 1, "progress":
+        0, "tier": 1, "earnedTrophies": {"bronze": 0, "silver": 0, "gold": 0, "platinum":
+        0}}'
     headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-store
+      - private
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Length:
-      - '100'
+      - '136'
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 20:30:44 GMT
+      - Sat, 03 Dec 2022 07:26:50 GMT
       Server:
       - Apache
-      Vary:
-      - accept-encoding
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
     status:

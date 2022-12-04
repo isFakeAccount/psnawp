@@ -5,6 +5,7 @@ from typing import Optional, Literal, Any
 
 from attrs import define, field
 
+from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
 from psnawp_api.models.trophies.utility_functions import iso_format_to_datetime
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
@@ -95,9 +96,7 @@ def _trophy_groups_dict_to_obj(trophy_groups_dict: Any) -> TrophyGroupsSummary:
         trophy_title_name=trophy_groups_dict.get("trophyTitleName"),
         trophy_title_detail=trophy_groups_dict.get("trophyTitleDetail"),
         trophy_title_icon_url=trophy_groups_dict.get("trophyTitleIconUrl"),
-        trophy_title_platform=PlatformType(
-            trophy_groups_dict.get("trophyTitlePlatform", "Unknown")
-        ),
+        trophy_title_platform=PlatformType(trophy_groups_dict.get("trophyTitlePlatform", "UNKNOWN")),
         defined_trophies=TrophySet(
             **trophy_groups_dict.get(
                 "definedTrophies",
@@ -137,24 +136,29 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
 
         service_name = "trophy2" if platform == "PS5" else "trophy"
         params = {"npServiceName": service_name}
-        response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=self.np_communication_id)}",
-            params=params,
-        ).json()
+        try:
+            response = self._request_builder.get(
+                url=f"{BASE_PATH['trophies']}{API_PATH['title_trophy_group'].format(np_communication_id=self.np_communication_id)}",
+                params=params,
+            ).json()
+        except PSNAWPNotFound as not_found:
+            raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
         return _trophy_groups_dict_to_obj(response)
 
     def user_trophy_groups_summary(
@@ -164,26 +168,33 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
 
         service_name = "trophy2" if platform == "PS5" else "trophy"
         params = {"npServiceName": service_name}
-        response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
-            params=params,
-        ).json()
+        try:
+            response = self._request_builder.get(
+                url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
+                params=params,
+            ).json()
+        except PSNAWPNotFound as not_found:
+            raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
+        except PSNAWPForbidden as forbidden:
+            raise PSNAWPForbidden("The following user has made their trophy private.") from forbidden
         return _trophy_groups_dict_to_obj(response)
 
     def user_trophy_groups_summary_with_metadata(
@@ -193,17 +204,19 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count along with metadata.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
+
+        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+
+        :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
 

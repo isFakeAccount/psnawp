@@ -3,7 +3,7 @@ repos:
     rev: 22.10.0
     hooks:
       - id: black
-        args: [--safe]
+        args: [--safe, --config=./pyproject.toml]
         exclude: "docs"
 
   - repo: https://github.com/LilSpazJoekp/docstrfmt
@@ -21,6 +21,7 @@ repos:
       - id: end-of-file-fixer
         exclude: "pytest.xml|pytest-coverage.txt"
       - id: check-added-large-files
+        args: ['--maxkb=700']
       - id: debug-statements
         language_version: python3
 

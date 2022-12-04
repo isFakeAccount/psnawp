@@ -5,9 +5,9 @@ from typing import Optional, Iterator, Any
 
 from attrs import define, field
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound
+from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPBadRequest
 from psnawp_api.models.trophies.trophy import Trophy
-from psnawp_api.models.trophies.trophy_constants import TrophySet
+from psnawp_api.models.trophies.trophy_constants import TrophySet, PlatformType
 from psnawp_api.models.trophies.utility_functions import (
     iso_format_to_datetime,
 )
@@ -18,6 +18,10 @@ from psnawp_api.utils.request_builder import RequestBuilder
 @define(frozen=True)
 class TrophyTitle:
     """A class containing summary of trophy data for a user for a game title"""
+
+    # Trophy Title Metadata
+    total_items_count: Optional[int]
+    "The total number of trophy titles for this account"
 
     np_service_name: Optional[str]
     "trophy for PS3, PS4, or PS Vita platforms and trophy2 for the PS5 platform"
@@ -31,7 +35,7 @@ class TrophyTitle:
     "Title description (PS3, PS4 and PS Vita titles only)"
     title_icon_url: Optional[str]
     "URL of the icon for the title"
-    title_platform: list[str]
+    title_platform: frozenset[PlatformType]
     "Platforms this title belongs to"
     has_trophy_groups: Optional[bool]
     "True if the title has multiple groups of trophies (eg. DLC trophies which are separate from the main trophy list)"
@@ -46,7 +50,7 @@ class TrophyTitle:
     last_updated_date_time: Optional[datetime] = field(converter=iso_format_to_datetime)
     "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
     # when title_id is passed
-    rarest_trophies: list[Trophy] = field(factory=list)
+    rarest_trophies: list[Trophy] = field(factory=list, hash=False)
     "Returns the trophy where earned is true with the lowest trophyEarnedRate"
 
 
@@ -60,8 +64,7 @@ class TrophyTitles:
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make
-            HTTPRequests.
+        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
         :type request_builder: RequestBuilder
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
@@ -95,14 +98,18 @@ class TrophyTitles:
             trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
             for trophy_title in trophy_titles:
                 title_trophy_sum = TrophyTitle(
+                    total_items_count=response.get("totalItemCount"),
                     np_service_name=trophy_title.get("npServiceName"),
                     np_communication_id=trophy_title.get("npCommunicationId"),
                     trophy_set_version=trophy_title.get("trophySetVersion"),
                     title_name=trophy_title.get("trophyTitleName"),
                     title_detail=trophy_title.get("trophyTitleDetail"),
                     title_icon_url=trophy_title.get("trophyTitleIconUrl"),
-                    title_platform=trophy_title.get("trophyTitlePlatform", "").split(
-                        ","
+                    title_platform=frozenset(
+                        [
+                            PlatformType(platform_str) if platform_str else PlatformType("UNKNOWN")
+                            for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")
+                        ]
                     ),
                     has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                     progress=trophy_title.get("progress"),
@@ -120,9 +127,7 @@ class TrophyTitles:
                             {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                         )
                     ),
-                    rarest_trophies=Trophy.from_trophies_list(
-                        trophy_title.get("rarestTrophies")
-                    ),
+                    rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
                 )
                 yield title_trophy_sum
                 per_page_items += 1
@@ -140,9 +145,7 @@ class TrophyTitles:
             if offset <= 0:
                 break
 
-    def get_trophy_summary_for_title(
-        self, title_ids: list[str]
-    ) -> Iterator[TrophyTitle]:
+    def get_trophy_summary_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
         """Retrieve a summary of the trophies earned by a user for specific titles.
 
         :param title_ids: Unique ID of the title
@@ -163,13 +166,19 @@ class TrophyTitles:
         for title in response.get("titles"):
             for trophy_title in title.get("trophyTitles"):
                 title_trophy_sum = TrophyTitle(
+                    total_items_count=response.get("totalItemCount"),
                     np_service_name=trophy_title.get("npServiceName"),
                     np_communication_id=trophy_title.get("npCommunicationId"),
                     trophy_set_version=trophy_title.get("trophySetVersion"),
                     title_name=trophy_title.get("trophyTitleName"),
                     title_detail=trophy_title.get("trophyTitleDetail"),
                     title_icon_url=trophy_title.get("trophyTitleIconUrl"),
-                    title_platform=trophy_title.get("trophyTitlePlatform"),
+                    title_platform=frozenset(
+                        [
+                            PlatformType(platform_str) if platform_str else PlatformType("UNKNOWN")
+                            for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")
+                        ]
+                    ),
                     has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                     progress=trophy_title.get("progress"),
                     hidden_flag=trophy_title.get("hiddenFlag"),
@@ -182,25 +191,19 @@ class TrophyTitles:
                         "earnedTrophies",
                         {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                     ),
-                    rarest_trophies=Trophy.from_trophies_list(
-                        trophy_title.get("rarestTrophies")
-                    ),
+                    rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
                 )
                 yield title_trophy_sum
 
     @staticmethod
-    def get_np_communication_id(
-        request_builder: RequestBuilder, title_id: str, account_id: str
-    ) -> str:
+    def get_np_communication_id(request_builder: RequestBuilder, title_id: str, account_id: str) -> str:
         """Returns the np communication id of title. This is required for requesting detail about a titles trophies.
 
         .. note::
 
-            The endpoint only returns useful response back if the account has played
-            that particular video game.
+            The endpoint only returns useful response back if the account has played that particular video game.
 
-        :param request_builder: The instance of RequestBuilder. Used to make
-            HTTPRequests.
+        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
         :type request_builder: RequestBuilder
         :param title_id: Unique ID of the title
         :type title_id: str
@@ -210,20 +213,21 @@ class TrophyTitles:
         :returns: np communication id of title
         :rtype: str
 
+        :raises: ``PSNAWPNotFound`` If the user does not have any trophies for that game or the game doesn't exist.
+
         """
         params = {"npTitleIds": f"{title_id},"}
 
-        response = request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles_for_title'].format(account_id=account_id)}",
-            params=params,
-        ).json()
+        try:
+            response = request_builder.get(
+                url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles_for_title'].format(account_id=account_id)}",
+                params=params,
+            ).json()
+        except (PSNAWPBadRequest, PSNAWPNotFound) as bad_req:
+            raise PSNAWPNotFound(f"Could not find a Video Game with Title: {title_id}") from bad_req
 
         if len(response.get("titles")[0].get("trophyTitles")) == 0:
-            raise PSNAWPNotFound(f"Could not find a Video Game with Title: {title_id}")
+            raise PSNAWPNotFound(f"Could not find a Video Game with Title: {title_id}. Most likely the user doesn't own the game.")
 
-        np_comm_id: str = (
-            response.get("titles")[0]
-            .get("trophyTitles")[0]
-            .get("npCommunicationId", title_id)
-        )
+        np_comm_id: str = response.get("titles")[0].get("trophyTitles")[0].get("npCommunicationId", title_id)
         return np_comm_id
