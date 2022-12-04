@@ -114,7 +114,7 @@ def _get_trophy_from_endpoint(
     params: dict[str, str | int] = {"npServiceName": service_name}
     limit_per_request = 400
     if limit is not None:
-        params |= {"limit": min(limit, limit_per_request), "offset": offset}
+        params = {**params, "limit": min(limit, limit_per_request), "offset": offset}
 
     while True:
         if limit is not None:

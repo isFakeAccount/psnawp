@@ -232,13 +232,7 @@ class TrophyGroupsSummaryBuilder:
             url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
             params=params,
         ).json()
-        merged_data = trophy_groups_metadata | trophy_groups_user_data
-        merged_trophy_groups = [
-            x[0] | x[1]
-            for x in zip(
-                trophy_groups_metadata.get("trophyGroups"),
-                trophy_groups_user_data.get("trophyGroups"),
-            )
-        ]
+        merged_data = {**trophy_groups_metadata, **trophy_groups_user_data}
+        merged_trophy_groups = [{**x[0], **x[1]} for x in zip(trophy_groups_metadata.get("trophyGroups"), trophy_groups_user_data.get("trophyGroups"))]
         merged_data["trophyGroups"] = merged_trophy_groups
         return _trophy_groups_dict_to_obj(merged_data)
