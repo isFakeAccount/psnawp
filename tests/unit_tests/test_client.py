@@ -129,6 +129,13 @@ def test_client__trophy_groups_summary(psnawp_fixture):
 
 
 @pytest.mark.vcr()
+def test_client__title_stats(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        for title in psnawp_fixture.me().title_stats():
+            print(title)
+
+
+@pytest.mark.vcr()
 def test_client__repr_and_str(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         client = psnawp_fixture.me()

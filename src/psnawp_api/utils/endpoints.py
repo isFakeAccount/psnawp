@@ -8,6 +8,7 @@ BASE_PATH = {
     "universal_search": "https://m.np.playstation.com/api/search/v1/universalSearch",
     "game_titles": "https://m.np.playstation.com/api/catalog/v2/titles",
     "trophies": "https://m.np.playstation.com/api/trophy/v1",
+    "games_list": "https://m.np.playstation.com/api/gamelist/v2",
 }
 
 API_PATH = {
@@ -41,4 +42,6 @@ API_PATH = {
     "title_trophy_group": "/npCommunicationIds/{np_communication_id}/trophyGroups",
     "user_title_trophy_group": "/users/{account_id}/npCommunicationIds/{np_communication_id}/trophyGroups",
     "trophy_titles_for_title": "/users/{account_id}/titles/trophyTitles",
+    # User Title Data
+    "user_game_data": "/users/{account_id}/titles",
 }

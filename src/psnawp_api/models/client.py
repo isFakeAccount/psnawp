@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Iterator, Optional, Literal
 
 from psnawp_api.models.group import Group
+from psnawp_api.models.title_stats import TitleStats
 from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
 from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummary,
@@ -367,6 +368,28 @@ class Client:
                 request_builder=self._request_builder,
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id="me", platform=platform)
+
+    def title_stats(self, limit: Optional[int] = 100) -> Iterator[TitleStats]:
+        """Retrieve a list of title with their stats and basic meta-data
+
+        :param limit: Limit of titles returned, will default to 100.
+        :type limit: Optional[int]
+
+        .. warning::
+
+            Only returns data for PS4 games and above. Don't put a very high limit as the data returned includes a lot of extra meta-data which makes the
+            payload large.
+
+        :returns: List of Titles with their play times
+        :rtype: Iterator[TitleStats]
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            titles = client.title_stats()
+
+        """
+        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id="me", limit=limit)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
