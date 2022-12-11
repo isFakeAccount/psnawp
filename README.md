@@ -95,6 +95,9 @@ new_group = psnawp.group(users_list=[example_user_1, example_user_2])
 search = psnawp.search()
 print(search.get_title_details(title_id="PPSA03420_00"))
 print(search.universal_search("GTA 5"))
+
+# Get Play Times (PS4, PS5 above only)
+titles_with_stats = client.title_stats()
  ```
 
 **Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**
