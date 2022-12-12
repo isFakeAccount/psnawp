@@ -14,6 +14,7 @@ from psnawp_api.models.trophies.trophy_group import (
 )
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
 from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TrophyTitle
+from psnawp_api.models.title_stats import TitleStats
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
@@ -339,6 +340,32 @@ class User:
                 request_builder=self._request_builder,
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id=self.account_id, platform=platform)
+
+    def title_stats(self, limit: Optional[int] = 100) -> Iterator[TitleStats]:
+        """Retrieve a list of title with their stats and basic meta-data
+
+        :param limit: Limit of titles returned, will default to 100.
+        :type limit: Optional[int]
+
+        .. warning::
+
+            Only returns data for PS4 games and above. Don't put a very high limit as the data returned includes a lot of extra meta data which makes the
+            payload large.
+
+        :returns: List of Titles with their play times
+        :rtype: Iterator[TitleStats]
+
+            .. literalinclude:: examples/client/get_title_stats.json
+                :language: json
+
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.title_stats())
+
+        """
+        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

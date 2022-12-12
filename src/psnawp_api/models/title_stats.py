@@ -56,7 +56,7 @@ class TitleStats:
         return title_instance
 
     @classmethod
-    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int] = 200) -> Iterator[TitleStats]:
+    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int] = 100) -> Iterator[TitleStats]:
 
         offset = 0
         params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit, "offset": offset}
