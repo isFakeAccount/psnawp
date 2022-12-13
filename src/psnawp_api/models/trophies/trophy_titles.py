@@ -8,10 +8,9 @@ from attrs import define, field
 from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPBadRequest
 from psnawp_api.models.trophies.trophy import Trophy
 from psnawp_api.models.trophies.trophy_constants import TrophySet, PlatformType
-from psnawp_api.models.trophies.utility_functions import (
-    iso_format_to_datetime,
-)
+
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.request_builder import RequestBuilder
 
 

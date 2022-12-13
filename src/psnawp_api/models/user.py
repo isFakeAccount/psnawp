@@ -355,14 +355,10 @@ class User:
         :returns: List of Titles with their play times
         :rtype: Iterator[TitleStats]
 
-            .. literalinclude:: examples/client/get_title_stats.json
-                :language: json
-
-
         .. code-block:: Python
 
-            client = psnawp.me()
-            print(client.title_stats())
+            user_example = psnawp.user(online_id='jeranther')
+            titles = user_example.title_stats()
 
         """
         return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit)

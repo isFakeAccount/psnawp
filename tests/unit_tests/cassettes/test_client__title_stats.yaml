@@ -18,69 +18,13 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
-  response:
-    body:
-      string: '{"accountId": "1910435906181122317", "accountDevices": [{"deviceId":
-        "50534cfe9c93f044ff7dd5efcd4445fabc5fa1829951069a1b710874c672261dcbf4", "deviceType":
-        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2018-08-10T09:42:08.814Z",
-        "accountDeviceVector": "c6hBjf7C1tA2oFlJPDctwA"}, {"deviceId": "5053b5052d7028ef850a368fcad0cccea3f8db6dd3a42c7f78f54af0a95b6fbb69d9",
-        "deviceType": "PS5", "activationType": "PRIMARY", "activationDate": "2021-01-22T03:03:00.400Z",
-        "accountDeviceVector": "VbAOBsBdVbJuFQ5NYrmBFg"}]}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '500'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 11 Dec 2022 12:18:48 GMT
-      Server:
-      - nginx
-      Set-Cookie:
-      - _abck=E1EB8EBEA1CB5C915EECF89D25DC0977~-1~YAAQUgUgF4pfkJuEAQAA7aMfAQlF/JJyS1EzYOQjDsptUYnF1bhoH1t4fO6IW84OAOmwbj66x7dPEp7Yu0ei0cKiDg9O1/rD+p6mxnHPzVP2eQWs9T/A02WT4/Z7n+CoQ91NwjGhVY2qzLxELnOqFofg8HgGMX0JwcA/bTtNy/PKO6lV46MwPobUAtv38iugNIsjOqlAhamtrVVjpiiLH3WT3sOgALZ9ZR5ccbmH/4mBHk3KURCr9pQ9LqWkiFrloCT3aXTwEuHTyjht1eRoEBYUVE2a0Pdwwfn19EB7glqgGpIvId7rhsYaSUMzfwS8o6b1EUWA7EhgbAH1p5cEs05/Q0aFdBkjmQvFvKkpZGtKjh4FzFGcw0gStl3CE7EFL3yL/2Jb+F4baN//~-1~-1~-1;
-        Domain=.playstation.com; Path=/; Expires=Sun, 18 Dec 2022 12:18:48 GMT; Max-Age=604800;
-        Secure
-      - bm_sz=F52CED864E182035A6E4CC232AF209AE~YAAQUgUgF4tfkJuEAQAA7aMfARILy1zk0uBEl2nJzg3XkK5t6bLxbm/bXDGKZyCnA/QkoQoU6lgyg8fR2Mow1tys6g+3mvsDURh7KRiyx8kEWVNoJN15NRlNoW4bsjAvnd6HNGqPr4KXRvswl7NkRIJlB09c28wrS+ALXMCnjOV/u6pZ2UQAGG/d+lK94ny6ko+YO7l4w6BtOkCfpo87Sl1Ocbq/ncv7p8UsNRZIqviC7Qf3mB/LiC6yvEVl+VlD+UUQa4Yn/egheRc0q8QBGn4l90WBAr4efx27E0R1uulhbtAsTFI0ySg79UTNkP5+8wJrXRnwqXRD5vLVc03pnJsOwy6hLzQo7AvXxQBL/hgJJ9vIL+BmB9FPMwct5Sd4DwmzXHsDoL0RJOl3rm/OeoX+0Rd7JcXW~4404021~4535861;
-        Domain=.playstation.com; Path=/; Expires=Sun, 11 Dec 2022 16:18:48 GMT; Max-Age=14400
-      X-CorrelationId:
-      - 2fd93ab3-4fe0-4e84-abbb-83afdf755c45
-      X-Psn-Correlation-Id:
-      - 2fd93ab3-4fe0-4e84-abbb-83afdf755c45
-      X-Psn-Request-Id:
-      - 2fd93ab3-4fe0-4e84-abbb-83afdf755c45
-      X-RequestId:
-      - 2fd93ab3-4fe0-4e84-abbb-83afdf755c45
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/gamelist/v2/users/1910435906181122317/titles?categories=ps4_game%2Cps5_native_game&limit=200&offset=0
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/me/titles?categories=ps4_game%2Cps5_native_game&limit=100&offset=0
   response:
     body:
       string: '{"titles": [{"titleId": "PPSA08330_00", "name": "God of War Ragnar\u00f6k",
         "localizedName": "God of War Ragnar\u00f6k", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/KkIiB8w4CBvZspu6zyzOza3p.png",
         "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/KkIiB8w4CBvZspu6zyzOza3p.png",
-        "category": "ps5_native_game", "service": "other", "playCount": 46, "concept":
+        "category": "ps5_native_game", "service": "other", "playCount": 48, "concept":
         {"id": 10001850, "titleIds": ["CUSA34357_00", "CUSA34384_00", "CUSA34605_00",
         "CUSA34603_00", "PPSA08330_00", "CUSA25471_00", "CUSA34390_00", "PPSA08332_00",
         "PPSA08334_00", "CUSA34395_00", "CUSA31680_00", "CUSA34393_00", "CUSA31678_00",
@@ -119,7 +63,7 @@ interactions:
         "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/SZRc7OMwGgv8lJXIOlYyuBU2.jpg",
         "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/KkIiB8w4CBvZspu6zyzOza3p.png",
         "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-11-09T07:21:10.120000Z",
-        "lastPlayedDateTime": "2022-12-09T15:26:27.900000Z", "playDuration": "PT46H24M50S"},
+        "lastPlayedDateTime": "2022-12-12T07:52:34.200000Z", "playDuration": "PT46H24M50S"},
         {"titleId": "CUSA01433_00", "name": "Rocket League\u00ae", "localizedName":
         "Rocket League\u00ae", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1900/WwXQmYTM3fvSRSvVzVbrnmdD.png",
         "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1900/WwXQmYTM3fvSRSvVzVbrnmdD.png",
@@ -3932,9 +3876,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 11 Dec 2022 12:18:49 GMT
+      - Tue, 13 Dec 2022 08:03:46 GMT
       Expires:
-      - Sun, 11 Dec 2022 12:18:49 GMT
+      - Tue, 13 Dec 2022 08:03:46 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -3944,9 +3888,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - e0be9e55-58e1-1031-b699-5fb361502ab7
+      - 3a783235-590a-1031-9b16-b676f3b52377
       X-Psn-Request-Id:
-      - e0be9e55-58e1-1031-b698-5fb361502ab7
+      - 3a783235-590a-1031-9b15-b676f3b52377
     status:
       code: 200
       message: OK

@@ -377,23 +377,19 @@ class Client:
 
         .. warning::
 
-            Only returns data for PS4 games and above. Don't put a very high limit as the data returned includes a lot of extra meta data which makes the
+            Only returns data for PS4 games and above. Don't put a very high limit as the data returned includes a lot of extra meta-data which makes the
             payload large.
 
         :returns: List of Titles with their play times
         :rtype: Iterator[TitleStats]
 
-            .. literalinclude:: examples/client/get_title_stats.json
-                :language: json
-
-
         .. code-block:: Python
 
             client = psnawp.me()
-            print(client.title_stats())
+            titles = client.title_stats()
 
         """
-        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit)
+        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id="me", limit=limit)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
