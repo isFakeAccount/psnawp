@@ -16,7 +16,7 @@ class Authenticator:
 
     __PARAMS = {
         "CLIENT_ID": "09515159-7237-4370-9b40-3806e67c0891",
-        "SCOPE": "psn:clientapp psn:mobile.v1",
+        "SCOPE": "psn:mobile.v2.core psn:clientapp",
         "REDIRECT_URI": "com.scee.psxandroid.scecompcall://redirect",
     }
     __AUTH_HEADER = {"Authorization": "Basic MDk1MTUxNTktNzIzNy00MzcwLTliNDAtMzgwNmU2N2MwODkxOnVjUGprYTV0bnRCMktxc1A="}
