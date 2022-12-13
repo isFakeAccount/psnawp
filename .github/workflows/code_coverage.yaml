@@ -1,0 +1,51 @@
+name: code coverage
+on:
+  push:
+    branches: "master"
+  pull_request:
+    branches: "master"
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements_dev.txt
+          pip install .
+      - name: Build coverage file
+        run: |
+          pytest --cov-config=.coveragerc --junitxml=pytest.xml --cov=psnawp_api | tee pytest-coverage.txt
+        env:
+          NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+      - name: PyTest Coverage comment
+        id: coverageComment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          hide-comment: true
+          badge-title: Coverage
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
+
+      - name: Create Variable of Summary Report
+        id: summary_report
+        run: |
+          SUMMARY_REPORT=${{ steps.coverageComment.outputs.summaryReport }}
+          echo "::set-output name=content::$SUMMARY_REPORT"
+
+      - name: Update Readme with Coverage Html
+        run: |
+          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
+
+      - name: Commit & Push changes to Readme
+        uses: actions-js/push@master
+        with:
+          branch: master
+          message: Update coverage on Readme
+          github_token: ${{ secrets.GITHUB_TOKEN }}

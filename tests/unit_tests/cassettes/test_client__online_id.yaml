@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 03 Dec 2022 05:56:35 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      X-Psn-Correlation-Id:
+      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      X-Psn-Request-Id:
+      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      X-RequestId:
+      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles
+  response:
+    body:
+      string: '{"onlineId": "VaultTec-Co", "personalDetail": {"firstName": "VaultTec",
+        "lastName": "BlacklistBot", "profilePictures": [{"size": "s", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=50&h=50&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51"},
+        {"size": "m", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=160&h=160&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51"},
+        {"size": "l", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=240&h=240&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51"},
+        {"size": "xl", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51"}]},
+        "aboutMe": "r/Fallout76Marketplace Moderator", "avatars": [{"size": "s", "url":
+        "http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        true}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1619'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 03 Dec 2022 05:56:36 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0040568399800983657
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,322 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:33 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - 8d72402e-5c4f-4dc3-9d85-7379fe4878ce
+      X-Psn-Correlation-Id:
+      - 8d72402e-5c4f-4dc3-9d85-7379fe4878ce
+      X-Psn-Request-Id:
+      - 8d72402e-5c4f-4dc3-9d85-7379fe4878ce
+      X-RequestId:
+      - 8d72402e-5c4f-4dc3-9d85-7379fe4878ce
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/profiles
+  response:
+    body:
+      string: '{"onlineId": "VaultTec_Trading", "personalDetail": {"firstName": "VaultTec",
+        "lastName": "TradingCo", "profilePictures": [{"size": "s", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=50&h=50&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "m", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=160&h=160&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "l", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=240&h=240&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "xl", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"}]},
+        "aboutMe": "r/Fallout76Marketplace Moderator", "avatars": [{"size": "s", "url":
+        "http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        true}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1621'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:34 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0541426884334355459
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:35 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - ebbaf468-0b71-43c8-b16c-4aa58b1188e0
+      X-Psn-Correlation-Id:
+      - ebbaf468-0b71-43c8-b16c-4aa58b1188e0
+      X-Psn-Request-Id:
+      - ebbaf468-0b71-43c8-b16c-4aa58b1188e0
+      X-RequestId:
+      - ebbaf468-0b71-43c8-b16c-4aa58b1188e0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:35 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - c70b70ba-af22-4051-867c-3258a293b4ea
+      X-Psn-Correlation-Id:
+      - c70b70ba-af22-4051-867c-3258a293b4ea
+      X-Psn-Request-Id:
+      - c70b70ba-af22-4051-867c-3258a293b4ea
+      X-RequestId:
+      - c70b70ba-af22-4051-867c-3258a293b4ea
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/profiles
+  response:
+    body:
+      string: '{"onlineId": "VaultTec_Trading", "personalDetail": {"firstName": "VaultTec",
+        "lastName": "TradingCo", "profilePictures": [{"size": "s", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=50&h=50&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "m", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=160&h=160&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "l", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=240&h=240&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"},
+        {"size": "xl", "url": "https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F8520698476712646544%2F1610991957943.png&sign=7a2f9b968075e6c19a0fcfd7c099ed5f78d89734"}]},
+        "aboutMe": "r/Fallout76Marketplace Moderator", "avatars": [{"size": "s", "url":
+        "http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        true}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1621'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:37 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0754891020157064188
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
+        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
+        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
+        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:38 GMT
+      Server:
+      - nginx
+      X-CorrelationId:
+      - dc8a935f-b225-4f16-abad-6f7832dbbbe3
+      X-Psn-Correlation-Id:
+      - dc8a935f-b225-4f16-abad-6f7832dbbbe3
+      X-Psn-Request-Id:
+      - dc8a935f-b225-4f16-abad-6f7832dbbbe3
+      X-RequestId:
+      - dc8a935f-b225-4f16-abad-6f7832dbbbe3
+    status:
+      code: 200
+      message: OK
+version: 1

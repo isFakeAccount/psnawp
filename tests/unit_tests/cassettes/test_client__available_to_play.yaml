@@ -1,0 +1,173 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends/subscribing/availableToPlay
+  response:
+    body:
+      string: '{"settings": [{"accountId": "1572780007594060283"}, {"accountId": "258529421351944452"}]}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:32 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0851162782357051304
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1572780007594060283/profiles
+  response:
+    body:
+      string: '{"onlineId": "HolyVaultBoy", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UP43611208W01_90E779569BB36140D67B_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UP43611208W01_5E8AE3139D24EE68D8A0_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UP43611208W01_5E8AE3139D24EE68D8A0_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UP43611208W01_36B99D5D8BC0D8E4DF49_M.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '639'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:32 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0088992483523377860
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/258529421351944452/profiles
+  response:
+    body:
+      string: '{"onlineId": "L1qu1dKrystaL", "aboutMe": "M76 courier. Father. Rad
+        dude.", "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UT00161201NG4_0F2547C2BE73733CAD47_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UT00161201NG4_F09D983458D77CE7132A_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UT00161201NG4_F09D983458D77CE7132A_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UT00161201NG4_298184435DAB4620D9D8_M.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '670'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:33 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0595462057310036726
+    status:
+      code: 200
+      message: OK
+version: 1

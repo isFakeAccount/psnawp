@@ -1,0 +1,35 @@
+[
+  {
+    "id": 201930,
+    "name": "Grand Theft Auto V (PlayStation®5)",
+    "nameEn": "Grand Theft Auto V (PlayStation®5)",
+    "publisherName": "Rockstar Games",
+    "media": {
+    },
+    "descriptions": [],
+    "categorizedProducts": [],
+    "titleIds": [],
+    "country": "US",
+    "language": "en",
+    "type": "GAME",
+    "localizedName": {},
+    "localizedDescriptions": {},
+    "localizedPublisherName": {},
+    "defaultProduct": {},
+    "genres": [],
+    "localizedGenres": [],
+    "subGenres": [],
+    "localizedSubGenres": [],
+    "minimumAge": 17,
+    "releaseDate": {},
+    "isRecommendableOnStore": true,
+    "isSearchableOnStore": true,
+    "storeFronts": [],
+    "supportedStoreFronts": [],
+    "marketingStories": [],
+    "compatibilityNotices": [],
+    "localizedMedia": {},
+    "revisionIds": {},
+    "contentRating": {}
+  }
+]

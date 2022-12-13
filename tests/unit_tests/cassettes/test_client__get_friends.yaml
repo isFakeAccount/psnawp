@@ -1,0 +1,2131 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000
+  response:
+    body:
+      string: '{"friends": ["8518662057912692550", "258529421351944452", "1433466746267737212",
+        "5991850572572051521", "7222824374247471500", "4337647799935995704", "7108615122010912373",
+        "846116067800322905", "4257803862677544723", "8573673572348923758", "9021861119870663195",
+        "4131443832945497518", "9205769651418840784", "117627244710818722", "2174539459039328143",
+        "7864156239834184535", "8270071905163343033", "8078591355116286307", "4881162353155276397",
+        "5608493910963319221", "2845101365541465607", "7087732409622469912", "5433233870466023413",
+        "4273405838384737823", "8910003479695062706", "4895496131809901811", "4151397070963970862",
+        "2721516955383551246", "1723276347980666990", "7422146373650127843", "1943456703361936658",
+        "1870113034603872922", "6370876631718498141", "7538640474462320126", "1572780007594060283"],
+        "totalItemCount": 35}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '800'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:11 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0612581585678951388
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8518662057912692550/profiles
+  response:
+    body:
+      string: '{"onlineId": "Evil_Meeseeks420", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A2119_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A2119_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2119_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A2119_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '535'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:11 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0641477354105641936
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/258529421351944452/profiles
+  response:
+    body:
+      string: '{"onlineId": "L1qu1dKrystaL", "aboutMe": "M76 courier. Father. Rad
+        dude.", "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UT00161201NG4_0F2547C2BE73733CAD47_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UT00161201NG4_F09D983458D77CE7132A_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UT00161201NG4_F09D983458D77CE7132A_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UT00161201NG4_298184435DAB4620D9D8_M.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '670'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:12 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0688291307287630606
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1433466746267737212/profiles
+  response:
+    body:
+      string: '{"onlineId": "apey1126", "aboutMe": "LETS GOOOOOOOOOO", "avatars":
+        [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0006/CUSA09209_00-THESIMS4AVATAR01_727A5244E41C33AED021_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '700'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:12 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0565667490162407840
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5991850572572051521/profiles
+  response:
+    body:
+      string: '{"onlineId": "JLBman101", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/30006_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/30006_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/30006.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/30006_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '518'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:13 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0637076952159093825
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7222824374247471500/profiles
+  response:
+    body:
+      string: '{"onlineId": "Ghosted_Thunder", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP1184/CUSA06590_00-AV00000000000015_062FAD6F98FA4C80EE04_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP1184/CUSA06590_00-AV00000000000015_062FAD6F98FA4C80EE04_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP1184/CUSA06590_00-AV00000000000015_062FAD6F98FA4C80EE04_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP1184/CUSA06590_00-AV00000000000015_062FAD6F98FA4C80EE04_m.png"}],
+        "languages": ["fr-FR"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '692'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:13 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0226355463254196272
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4337647799935995704/profiles
+  response:
+    body:
+      string: '{"onlineId": "Battlepants57", "aboutMe": "exo-48506993", "avatars":
+        [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0001/CUSA05904_00-AV00000000000008_163E3503FAE00F4A45B2_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0001/CUSA05904_00-AV00000000000008_163E3503FAE00F4A45B2_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0001/CUSA05904_00-AV00000000000008_163E3503FAE00F4A45B2_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0001/CUSA05904_00-AV00000000000008_163E3503FAE00F4A45B2_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '701'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:14 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0527387272101421060
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7108615122010912373/profiles
+  response:
+    body:
+      string: '{"onlineId": "Selling76Account", "aboutMe": "F76 is currently the game
+        I play!", "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_E/E2109_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_E/E2109_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_E/E2109_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_E/E2109_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '568'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:14 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0042870143654038454
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/846116067800322905/profiles
+  response:
+    body:
+      string: '{"onlineId": "mr_juice999", "aboutMe": "I will smash my controler",
+        "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A2080_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A2080_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2080_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A2080_m.png"}],
+        "languages": ["en-US", "es-ES", "en-GB"], "isPlus": true, "isOfficiallyVerified":
+        false, "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '571'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:15 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0390703612600751303
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4257803862677544723/profiles
+  response:
+    body:
+      string: '{"onlineId": "TheKidsABeast", "aboutMe": "English \n\nMy youtube is
+        TheKidsABeast \nPlease subscribe;)", "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A0004_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A0004_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A0004.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A0004_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '590'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:15 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0561437312505734018
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8573673572348923758/profiles
+  response:
+    body:
+      string: '{"onlineId": "madt12", "aboutMe": "Homra red king", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/30006_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/30006_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/30006.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/30006_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '529'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:15 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0792217224676876507
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/9021861119870663195/profiles
+  response:
+    body:
+      string: '{"onlineId": "rafileons7", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP4497/CUSA01439_00-AV00000000000001_C8307BEA30673335330A_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP4497/CUSA01439_00-AV00000000000001_C8307BEA30673335330A_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP4497/CUSA01439_00-AV00000000000001_C8307BEA30673335330A_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP4497/CUSA01439_00-AV00000000000001_C8307BEA30673335330A_m.png"}],
+        "languages": ["pl-PL"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '687'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:16 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0394780644255380540
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4131443832945497518/profiles
+  response:
+    body:
+      string: '{"onlineId": "BunningsTrolley4", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0061_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/SCEI/I0061_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/SCEI/I0061.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/SCEI/I0061_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '529'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:16 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0410124072879159181
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/9205769651418840784/profiles
+  response:
+    body:
+      string: '{"onlineId": "ImmortalGlaz", "aboutMe": "Everyone wants to believe
+        that there\u2019s something else something great waiting for them on the other
+        side. Paradise.Valhalla.Heaven.TheirNext", "avatars": [{"size": "s", "url":
+        "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08966_00-AV00000000000001_BA0295EB3BDBE48A7408_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08966_00-AV00000000000001_BA0295EB3BDBE48A7408_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08966_00-AV00000000000001_BA0295EB3BDBE48A7408_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08966_00-AV00000000000001_BA0295EB3BDBE48A7408_m.png"}],
+        "languages": ["en-US", "no-NO"], "isPlus": true, "isOfficiallyVerified": false,
+        "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '838'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:17 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0059823048293599971
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/117627244710818722/profiles
+  response:
+    body:
+      string: '{"onlineId": "SynTOKYO", "aboutMe": "Stalking my account, i see", "avatars":
+        [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000125_B331F3376702BE42A941_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000125_B331F3376702BE42A941_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000125_B331F3376702BE42A941_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000125_B331F3376702BE42A941_m.png"}],
+        "languages": ["en-US", "ja-JP"], "isPlus": false, "isOfficiallyVerified":
+        false, "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '719'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:17 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0157577275916929442
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2174539459039328143/profiles
+  response:
+    body:
+      string: '{"onlineId": "dam7005", "aboutMe": "I like good things", "avatars":
+        [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP0001/CUSA01788_00-AV00000000000040_B99A014ABE48975D6815_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP0001/CUSA01788_00-AV00000000000040_B99A014ABE48975D6815_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP0001/CUSA01788_00-AV00000000000040_B99A014ABE48975D6815_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP0001/CUSA01788_00-AV00000000000040_B99A014ABE48975D6815_m.png"}],
+        "languages": ["en-GB", "ko-KR", "ru-RU"], "isPlus": false, "isOfficiallyVerified":
+        false, "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '718'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:18 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0760115408063313234
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7864156239834184535/profiles
+  response:
+    body:
+      string: '{"onlineId": "temp-712302", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3332/CUSA14003_00-AV00000000000001_0A9B38E4BE23ED9A74F1_m.png"}],
+        "languages": ["en-US", "ja-JP", "ar-AE"], "isPlus": false, "isOfficiallyVerified":
+        false, "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '704'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:18 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0081536447777650610
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8270071905163343033/profiles
+  response:
+    body:
+      string: '{"onlineId": "Diabolical_Sudz", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08344_00-AV00000000000008_400482C457FBC354CD1A_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08344_00-AV00000000000008_400482C457FBC354CD1A_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08344_00-AV00000000000008_400482C457FBC354CD1A_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP9000/CUSA08344_00-AV00000000000008_400482C457FBC354CD1A_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '691'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:18 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0131028495891429704
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8078591355116286307/profiles
+  response:
+    body:
+      string: '{"onlineId": "llSchemell", "aboutMe": "Plotting...", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_E/E2110_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_E/E2110_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_E/E2110_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_E/E2110_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '540'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:19 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0893413446493991195
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4881162353155276397/profiles
+  response:
+    body:
+      string: '{"onlineId": "Dark-night19876", "aboutMe": "Find out", "avatars": [{"size":
+        "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0774/CUSA04917_00-AV00000000000002_62D7F954944B0B460C7C_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0774/CUSA04917_00-AV00000000000002_62D7F954944B0B460C7C_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0774/CUSA04917_00-AV00000000000002_62D7F954944B0B460C7C_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP0774/CUSA04917_00-AV00000000000002_62D7F954944B0B460C7C_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '700'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:19 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0350180635788189004
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5608493910963319221/profiles
+  response:
+    body:
+      string: '{"onlineId": "VBigBear1227", "aboutMe": "Im ok at the games i play",
+        "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A2118_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A2118_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2118_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A2118_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '557'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:20 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0062702035361566280
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2845101365541465607/profiles
+  response:
+    body:
+      string: '{"onlineId": "unknown0413", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000190_3240EFE6A77B076D73F5_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000190_3240EFE6A77B076D73F5_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000190_3240EFE6A77B076D73F5_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1415/CUSA03724_00-AV00000000000190_3240EFE6A77B076D73F5_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '687'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:20 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0924910757492471462
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7087732409622469912/profiles
+  response:
+    body:
+      string: '{"onlineId": "Itz_HouseCat", "aboutMe": "Lucas sucks BBC", "avatars":
+        [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP2166/CUSA01684_00-AV00000000000220_E2E1C766F1A3EF255496_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP2166/CUSA01684_00-AV00000000000220_E2E1C766F1A3EF255496_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP2166/CUSA01684_00-AV00000000000220_E2E1C766F1A3EF255496_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP2166/CUSA01684_00-AV00000000000220_E2E1C766F1A3EF255496_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '703'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:21 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0007586674168505750
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5433233870466023413/profiles
+  response:
+    body:
+      string: '{"onlineId": "ItzIIllIlIlllIII", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/30002_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/30002_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/30002.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/30002_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '526'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:21 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0732880800228921975
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4273405838384737823/profiles
+  response:
+    body:
+      string: '{"onlineId": "DaUglyDucklin", "aboutMe": "Go get bent.\nYa''ll are
+        planks.\nCasablumkin.\nG.G. is bomb.", "avatars": [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '749'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:22 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0988493279266131373
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8910003479695062706/profiles
+  response:
+    body:
+      string: '{"onlineId": "warson08_v3", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UP10631304002_288AF5426F41087CAD91_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UP10631304002_82C93B51B6F9EF4228FB_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304002_82C93B51B6F9EF4228FB_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UP10631304002_FAB2AA4DC6EA2CE698F3_M.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '638'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:22 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0637411352800591908
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4895496131809901811/profiles
+  response:
+    body:
+      string: '{"onlineId": "Tigerface_HD", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/30002_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/30002_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/30002.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/30002_m.png"}],
+        "languages": ["de-DE"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '521'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:23 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0408969995159323822
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4151397070963970862/profiles
+  response:
+    body:
+      string: '{"onlineId": "tanniman78", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_E/E0009_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_E/E0009_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_E/E0009.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_E/E0009_m.png"}],
+        "languages": ["de-DE", "en-US"], "isPlus": true, "isOfficiallyVerified": false,
+        "isMe": false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '535'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:23 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0007017164119030630
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles
+  response:
+    body:
+      string: '{"onlineId": "VaultTec-Co", "aboutMe": "r/Fallout76Marketplace Moderator",
+        "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '601'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:24 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0458380639129813519
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1723276347980666990/profiles
+  response:
+    body:
+      string: '{"onlineId": "sinbad1352", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UP10631304009_1C142A8AA25A76C1D4B1_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UP10631304009_9EEB5D072AAA95302926_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304009_9EEB5D072AAA95302926_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UP10631304009_F8B1013369E7CD6B7587_M.png"}],
+        "languages": ["en-GB"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '637'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:24 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0332701101534111758
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7422146373650127843/profiles
+  response:
+    body:
+      string: '{"onlineId": "desmond1310", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0045_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/SCEI/I0045_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/SCEI/I0045.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/SCEI/I0045_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '525'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:24 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0450413509896844123
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1943456703361936658/profiles
+  response:
+    body:
+      string: '{"onlineId": "thepillaging", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP9000/CUSA02009_00-AV00000000000011_3B7B57F0C80918D0997D_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP9000/CUSA02009_00-AV00000000000011_3B7B57F0C80918D0997D_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP9000/CUSA02009_00-AV00000000000011_3B7B57F0C80918D0997D_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/EP9000/CUSA02009_00-AV00000000000011_3B7B57F0C80918D0997D_m.png"}],
+        "languages": ["en-GB"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '689'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:25 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0639734384465529299
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1870113034603872922/profiles
+  response:
+    body:
+      string: '{"onlineId": "CTHERIAQUE", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP8805/CUSA03855_00-AV00000000000030_F4E62458EB508D545612_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP8805/CUSA03855_00-AV00000000000030_F4E62458EB508D545612_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP8805/CUSA03855_00-AV00000000000030_F4E62458EB508D545612_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP8805/CUSA03855_00-AV00000000000030_F4E62458EB508D545612_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '686'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:25 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0832612002571259492
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/6370876631718498141/profiles
+  response:
+    body:
+      string: '{"onlineId": "wiggly_Willy6909", "aboutMe": "", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A2004_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A2004_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2004_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A2004_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '535'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:26 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0269548068449823975
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/7538640474462320126/profiles
+  response:
+    body:
+      string: '{"onlineId": "trey123519", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_A/A0021_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_A/A0021_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_A/A0021.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_A/A0021_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '527'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:26 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0466609734730569640
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1572780007594060283/profiles
+  response:
+    body:
+      string: '{"onlineId": "HolyVaultBoy", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/3RD/UP43611208W01_90E779569BB36140D67B_S.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/3RD/UP43611208W01_5E8AE3139D24EE68D8A0_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/3RD/UP43611208W01_5E8AE3139D24EE68D8A0_L.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/3RD/UP43611208W01_36B99D5D8BC0D8E4DF49_M.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '639'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Nov 2022 07:42:27 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0207417556489252316
+    status:
+      code: 200
+      message: OK
+version: 1

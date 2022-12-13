@@ -1,0 +1,143 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
+  response:
+    body:
+      string: '{"error": {"referenceId": "36616a86-73a7-11ed-8bcb-e3f36c443fc9", "code":
+        2240525, "message": "Resource not found"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '110'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 07:42:32 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
+  response:
+    body:
+      string: '{"trophySetVersion": "01.03", "trophyTitleName": "RESIDENT EVIL 2",
+        "trophyTitleDetail": "RESIDENT EVIL 2", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG",
+        "trophyTitlePlatform": "PS4", "definedTrophies": {"bronze": 30, "silver":
+        10, "gold": 4, "platinum": 1}, "trophyGroups": [{"trophyGroupId": "default",
+        "trophyGroupName": "RESIDENT EVIL 2", "trophyGroupDetail": "RESIDENT EVIL
+        2", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG",
+        "definedTrophies": {"bronze": 28, "silver": 9, "gold": 4, "platinum": 1}},
+        {"trophyGroupId": "001", "trophyGroupName": "The Ghost Survivors", "trophyGroupDetail":
+        "The Ghost Survivors", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/FB76E0DCB21411CED6788A7102640D817E8AE9BC.PNG",
+        "definedTrophies": {"bronze": 1, "silver": 1, "gold": 0, "platinum": 0}},
+        {"trophyGroupId": "002", "trophyGroupName": "Another Survivor", "trophyGroupDetail":
+        "Another Survivor", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/1A3F3ECC12830FA7CDCC88F8DADD69EC396DCE3A.PNG",
+        "definedTrophies": {"bronze": 1, "silver": 0, "gold": 0, "platinum": 0}}]}'
+    headers:
+      Cache-Control:
+      - max-age=300
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1386'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 07:42:33 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Accept-Language
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
+  response:
+    body:
+      string: '{"error": {"referenceId": "36d73734-73a7-11ed-a2eb-e5acef5ce37c", "code":
+        2240525, "message": "Resource not found"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '110'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Dec 2022 07:42:33 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
+version: 1
