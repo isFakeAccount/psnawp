@@ -1,44 +1,46 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.1, pytest-7.2.0, pluggy-1.0.0
+platform linux -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
-plugins: vcr-1.0.2, cov-4.0.0
-collected 63 items
+plugins: cov-4.0.0, vcr-1.0.2
+collected 67 items
 
 tests/unit_tests/test_authenticator.py .                                 [  1%]
-tests/unit_tests/test_client.py ................                         [ 26%]
-tests/unit_tests/test_game_title.py .........                            [ 41%]
-tests/unit_tests/test_group.py .........                                 [ 55%]
-tests/unit_tests/test_search.py ...                                      [ 60%]
-tests/unit_tests/test_user.py .........................                  [100%]
+tests/unit_tests/test_client.py .................                        [ 26%]
+tests/unit_tests/test_game_title.py .........                            [ 40%]
+tests/unit_tests/test_group.py .........                                 [ 53%]
+tests/unit_tests/test_search.py ...                                      [ 58%]
+tests/unit_tests/test_user.py ..........................                 [ 97%]
+tests/unit_tests/test_utils_misc.py ..                                   [100%]
 
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
----------- coverage: platform linux, python 3.11.1-final-0 -----------
+---------- coverage: platform linux, python 3.11.0-final-0 -----------
 Name                                                                                                                  Stmts   Miss  Cover
 -----------------------------------------------------------------------------------------------------------------------------------------
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/__init__.py                                1      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/core/__init__.py                           0      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/core/authenticator.py                     46      3    93%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/core/psnawp_exceptions.py                  9      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/__init__.py                         0      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/client.py                          65      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/game_title.py                      22      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/group.py                           52      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/search.py                          22      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/__init__.py                0      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy.py                113      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_constants.py       25      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_group.py           89      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_summary.py         25      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_titles.py          84      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/utility_functions.py      10      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/user.py                            66      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/psnawp.py                                 35      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/__init__.py                          0      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/endpoints.py                         2      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/misc.py                             13      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/request_builder.py                  72     15    79%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/__init__.py                                1      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/core/__init__.py                           0      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/core/authenticator.py                     46      3    93%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/core/psnawp_exceptions.py                  9      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/__init__.py                         0      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/client.py                          68      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/game_title.py                      22      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/group.py                           52      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/search.py                          22      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/title_stats.py                     56      2    96%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/__init__.py                0      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy.py                114      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_constants.py       25      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_group.py           89      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_summary.py         25      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_titles.py          84      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/utility_functions.py       7      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/models/user.py                            69      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/psnawp.py                                 35      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/utils/__init__.py                          0      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/utils/endpoints.py                         2      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/utils/misc.py                             35      0   100%
+/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/psnawp_api/utils/request_builder.py                  72     15    79%
 -----------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                                   751     18    98%
+TOTAL                                                                                                                   833     20    98%
 
-============================== 63 passed in 2.82s ==============================
+============================== 67 passed in 2.91s ==============================
