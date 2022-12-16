@@ -2,16 +2,128 @@
 platform linux -- Python 3.11.1, pytest-7.2.0, pluggy-1.0.0
 rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
 plugins: vcr-1.0.2, cov-4.0.0
-collected 67 items
+collected 68 items
 
 tests/unit_tests/test_authenticator.py .                                 [  1%]
-tests/unit_tests/test_client.py .................                        [ 26%]
-tests/unit_tests/test_game_title.py .........                            [ 40%]
-tests/unit_tests/test_group.py .........                                 [ 53%]
-tests/unit_tests/test_search.py ...                                      [ 58%]
-tests/unit_tests/test_user.py ..........................                 [ 97%]
+tests/unit_tests/test_client.py ...............F.                        [ 26%]
+tests/unit_tests/test_game_title.py .........                            [ 39%]
+tests/unit_tests/test_group.py .........                                 [ 52%]
+tests/unit_tests/test_search.py ...                                      [ 57%]
+tests/unit_tests/test_user.py ........................F..                [ 97%]
 tests/unit_tests/test_utils_misc.py ..                                   [100%]
 
+=================================== FAILURES ===================================
+___________________________ test_client__title_stats ___________________________
+
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fc788128510>
+
+    @pytest.mark.vcr()
+    def test_client__title_stats(psnawp_fixture):
+        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+>           for title in psnawp_fixture.me().title_stats():
+
+tests/unit_tests/test_client.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'psnawp_api.models.title_stats.TitleStats'>
+request_builder = <psnawp_api.utils.request_builder.RequestBuilder object at 0x7fc788113b90>
+account_id = 'me', limit = None
+
+    @classmethod
+    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int]) -> Iterator[TitleStats]:
+    
+        offset = 0
+        limit_per_page = min(limit, 1000) if limit is not None else 1000
+        params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}
+    
+        total_items = 0
+        while True:
+            params["offset"] = offset
+            try:
+                response = request_builder.get(
+                    url=f"{BASE_PATH['games_list']}{API_PATH['user_game_data'].format(account_id=account_id)}",
+                    params=params,
+                ).json()
+            except PSNAWPForbidden as forbidden:
+                raise PSNAWPForbidden("The following user has made their profile private.") from forbidden
+    
+            titles: list[dict[str, Any]] = response.get("titles")
+    
+            for title in titles:
+                title_instance = TitleStats.from_dict({**title, "totalItemCount": response.get("totalItemCount")})
+                yield title_instance
+                total_items += 1
+    
+            if limit is not None:
+                limit -= total_items
+                params["limit"] = min(limit, limit_per_page)
+    
+                # If limit is reached
+                if limit <= 0:
+                    break
+    
+            offset = response.get("nextOffset", 0)
+            # If there is not more offset, we've reached the end
+>           if offset <= 0:
+E           TypeError: '<=' not supported between instances of 'NoneType' and 'int'
+
+/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/title_stats.py:99: TypeError
+____________________________ test_user__title_stats ____________________________
+
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fc788128510>
+
+    @pytest.mark.vcr()
+    def test_user__title_stats(psnawp_fixture):
+        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+            total_count = 0
+>           for title in psnawp_fixture.user(online_id="jeranther").title_stats():
+
+tests/unit_tests/test_user.py:269: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'psnawp_api.models.title_stats.TitleStats'>
+request_builder = <psnawp_api.utils.request_builder.RequestBuilder object at 0x7fc788113b90>
+account_id = '1802043923080044300', limit = None
+
+    @classmethod
+    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int]) -> Iterator[TitleStats]:
+    
+        offset = 0
+        limit_per_page = min(limit, 1000) if limit is not None else 1000
+        params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}
+    
+        total_items = 0
+        while True:
+            params["offset"] = offset
+            try:
+                response = request_builder.get(
+                    url=f"{BASE_PATH['games_list']}{API_PATH['user_game_data'].format(account_id=account_id)}",
+                    params=params,
+                ).json()
+            except PSNAWPForbidden as forbidden:
+                raise PSNAWPForbidden("The following user has made their profile private.") from forbidden
+    
+            titles: list[dict[str, Any]] = response.get("titles")
+    
+            for title in titles:
+                title_instance = TitleStats.from_dict({**title, "totalItemCount": response.get("totalItemCount")})
+                yield title_instance
+                total_items += 1
+    
+            if limit is not None:
+                limit -= total_items
+                params["limit"] = min(limit, limit_per_page)
+    
+                # If limit is reached
+                if limit <= 0:
+                    break
+    
+            offset = response.get("nextOffset", 0)
+            # If there is not more offset, we've reached the end
+>           if offset <= 0:
+E           TypeError: '<=' not supported between instances of 'NoneType' and 'int'
+
+/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/title_stats.py:99: TypeError
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.11.1-final-0 -----------
@@ -26,9 +138,9 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/game_title.py                      22      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/group.py                           52      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/search.py                          22      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/title_stats.py                     56      2    96%
+/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/title_stats.py                     64      3    95%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/__init__.py                0      0   100%
-/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy.py                114      0   100%
+/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy.py                112      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_constants.py       25      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_group.py           89      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/models/trophies/trophy_summary.py         25      0   100%
@@ -41,6 +153,9 @@ Name                                                                            
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/misc.py                             35      0   100%
 /opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/psnawp_api/utils/request_builder.py                  72     15    79%
 -----------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                                   833     20    98%
+TOTAL                                                                                                                   839     21    97%
 
-============================== 67 passed in 3.35s ==============================
+=========================== short test summary info ============================
+FAILED tests/unit_tests/test_client.py::test_client__title_stats - TypeError: '<=' not supported between instances of 'NoneType' and 'int'
+FAILED tests/unit_tests/test_user.py::test_user__title_stats - TypeError: '<=' not supported between instances of 'NoneType' and 'int'
+========================= 2 failed, 66 passed in 5.44s =========================
