@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:16:45 GMT
+      - Fri, 16 Dec 2022 05:23:26 GMT
       Server:
       - Apache
       Vary:
@@ -75,7 +75,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"error": {"referenceId": "fe6161ed-73ab-11ed-adf8-5d967c8acc87", "code":
+      string: '{"error": {"referenceId": "c4a15508-7d01-11ed-a349-45cf59a130ff", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -85,7 +85,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:16:46 GMT
+      - Fri, 16 Dec 2022 05:23:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -139,7 +139,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:16:46 GMT
+      - Fri, 16 Dec 2022 05:23:27 GMT
       Server:
       - Apache
       Vary:
@@ -213,7 +213,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:16:47 GMT
+      - Fri, 16 Dec 2022 05:23:27 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -247,7 +247,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"error": {"referenceId": "ff0b5d0f-73ab-11ed-880a-e7525b31b0da", "code":
+      string: '{"error": {"referenceId": "c559f72a-7d01-11ed-a890-71c142924e43", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -257,7 +257,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:16:47 GMT
+      - Fri, 16 Dec 2022 05:23:27 GMT
       Server:
       - Apache
       Strict-Transport-Security:

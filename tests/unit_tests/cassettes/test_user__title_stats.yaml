@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 00:38:00 GMT
+      - Fri, 16 Dec 2022 05:12:26 GMT
       Server:
       - Apache
       Vary:
@@ -72,7 +72,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/gamelist/v2/users/1802043923080044300/titles?categories=ps4_game%2Cps5_native_game&limit=150&offset=0
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/1802043923080044300/titles?categories=ps4_game%2Cps5_native_game&limit=1000&offset=0
   response:
     body:
       string: '{"titles": [{"titleId": "CUSA07408_00", "name": "God of War", "localizedName":
@@ -5903,67 +5903,9 @@ interactions:
         "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/UKBGQA7E5vUK9gEzKdfkeaYI.png",
         "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/8galiZfjE4UBwA70UbFmX77R.png",
         "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2017-12-28T16:25:33.690000Z",
-        "lastPlayedDateTime": "2018-02-19T03:26:00.150000Z", "playDuration": "PT41H24M9S"}],
-        "nextOffset": 150, "previousOffset": 0, "totalItemCount": 221}'
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform
-      Access-Control-Allow-Methods:
-      - OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD
-      Access-Control-Allow-Origin:
-      - '*'
-      Access-Control-Max-Age:
-      - '3600'
-      Cache-Control:
-      - max-age=0, no-cache, no-store
-      Connection:
-      - keep-alive
-      - Transfer-Encoding
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 16 Dec 2022 00:38:00 GMT
-      Expires:
-      - Fri, 16 Dec 2022 00:38:00 GMT
-      Pragma:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
-      X-Psn-Correlation-Id:
-      - 25e0b81c-593b-1031-8692-e58ba731d06b
-      X-Psn-Request-Id:
-      - 25e0b81c-593b-1031-8691-e58ba731d06b
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/gamelist/v2/users/1802043923080044300/titles?categories=ps4_game%2Cps5_native_game&limit=150&offset=150
-  response:
-    body:
-      string: '{"titles": [{"titleId": "CUSA07713_00", "name": "Monster Hunter: World",
-        "localizedName": "Monster Hunter: World", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA07708_00/4/i_f67bf14d3e83d266c618db72087c180869334fbbbc1b972936848e2489190681/i/icon0.png",
+        "lastPlayedDateTime": "2018-02-19T03:26:00.150000Z", "playDuration": "PT41H24M9S"},
+        {"titleId": "CUSA07713_00", "name": "Monster Hunter: World", "localizedName":
+        "Monster Hunter: World", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA07708_00/4/i_f67bf14d3e83d266c618db72087c180869334fbbbc1b972936848e2489190681/i/icon0.png",
         "localizedImageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA07708_00/4/i_f67bf14d3e83d266c618db72087c180869334fbbbc1b972936848e2489190681/i/icon0.png",
         "category": "ps4_game", "service": "none_purchased", "playCount": 5, "concept":
         {"id": 228785, "titleIds": ["CUSA07708_00", "CUSA15825_00", "CUSA11730_00",
@@ -8192,7 +8134,7 @@ interactions:
         "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA00503_00/4/i_791823c1be7770e0bc047a48df694a714bf2b5fbae9777fc24cc64a94ba947eb/i/icon0_01.png",
         "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2014-11-23T00:15:03.000000Z",
         "lastPlayedDateTime": "2014-11-23T00:23:35.000000Z", "playDuration": "PT3H2M18S"}],
-        "nextOffset": null, "previousOffset": 149, "totalItemCount": 221}'
+        "nextOffset": null, "previousOffset": 0, "totalItemCount": 221}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform
@@ -8210,9 +8152,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 00:38:01 GMT
+      - Fri, 16 Dec 2022 05:12:26 GMT
       Expires:
-      - Fri, 16 Dec 2022 00:38:01 GMT
+      - Fri, 16 Dec 2022 05:12:26 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -8222,9 +8164,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - 2079962a-593b-1031-93e9-b69898499ffa
+      - 2064b177-593b-1031-a3c7-b29befb55426
       X-Psn-Request-Id:
-      - 2079962a-593b-1031-93e8-b69898499ffa
+      - 2064b177-593b-1031-a3c6-b29befb55426
     status:
       code: 200
       message: OK

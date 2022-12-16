@@ -1,8 +1,9 @@
 from __future__ import annotations
-from enum import Enum
 
 from datetime import datetime, timedelta
+from enum import Enum
 from typing import Optional, Iterator, Any
+
 from attrs import define
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
@@ -27,20 +28,23 @@ class TitleStats:
 
     # Title and Stats Data
     title_id: Optional[str]
-    "Game title name"
+    "Game title id"
     name: Optional[str]
-    "Image URL"
+    "Game title name"
     image_url: Optional[str]
-    "Category/Platform Type"
+    "Image URL"
     category: Optional[PlatformCategory]
-    "Number of times the game has been played"
+    "Category/Platform Type"
     play_count: Optional[int]
-    "First time the game was played"
+    "Number of times the game has been played"
     first_played_date_time: Optional[datetime]
-    "Last time the game was played"
+    "First time the game was played"
     last_played_date_time: Optional[datetime]
-    "Total time the game has been played. Example: PT1H51M21S"
+    "Last time the game was played"
     play_duration: Optional[timedelta]
+    "Total time the game has been played. Example: PT1H51M21S"
+    total_items_count: Optional[int]
+    "Total Number of Titles a user own"
 
     @classmethod
     def from_dict(cls, game_stats_dict: dict[str, Any]) -> TitleStats:
@@ -53,14 +57,15 @@ class TitleStats:
             first_played_date_time=iso_format_to_datetime(game_stats_dict.get("firstPlayedDateTime")),
             last_played_date_time=iso_format_to_datetime(game_stats_dict.get("lastPlayedDateTime")),
             play_duration=play_duration_to_timedelta(game_stats_dict.get("playDuration")),
+            total_items_count=game_stats_dict.get("totalItemCount"),
         )
         return title_instance
 
     @classmethod
-    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int] = None) -> Iterator[TitleStats]:
+    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int]) -> Iterator[TitleStats]:
 
         offset = 0
-        limit_per_page = min(limit, 150) if limit is not None else 150
+        limit_per_page = min(limit, 1000) if limit is not None else 1000
         params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}
 
         total_items = 0
@@ -77,20 +82,19 @@ class TitleStats:
             titles: list[dict[str, Any]] = response.get("titles")
 
             for title in titles:
-                title_instance = TitleStats.from_dict(title)
+                title_instance = TitleStats.from_dict({**title, "totalItemCount": response.get("totalItemCount")})
                 yield title_instance
                 total_items += 1
 
-                # If we've reached the limit, we're done
-                if limit is not None and total_items >= limit:
+            if limit is not None:
+                limit -= total_items
+                params["limit"] = min(limit, limit_per_page)
+
+                # If limit is reached
+                if limit <= 0:
                     break
 
-            # If we've reached the limit, we're done
-            if limit is not None and total_items >= limit:
-                break
-
-            next_offset = response.get("nextOffset", None)
-            offset = next_offset if next_offset is not None else 0
+            offset = response.get("nextOffset", 0)
             # If there is not more offset, we've reached the end
             if offset <= 0:
                 break

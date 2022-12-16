@@ -18,7 +18,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/gamelist/v2/users/me/titles?categories=ps4_game%2Cps5_native_game&limit=150&offset=0
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/me/titles?categories=ps4_game%2Cps5_native_game&limit=1000&offset=0
   response:
     body:
       string: '{"titles": [], "nextOffset": null, "previousOffset": 0, "totalItemCount":
@@ -41,9 +41,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 00:37:31 GMT
+      - Fri, 16 Dec 2022 05:24:11 GMT
       Expires:
-      - Fri, 16 Dec 2022 00:37:31 GMT
+      - Fri, 16 Dec 2022 05:24:11 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -51,9 +51,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - 25f15dcf-593b-1031-8759-11ed40c86c19
+      - 26eb2a0f-593b-1031-8712-62fd5e8d2f7b
       X-Psn-Request-Id:
-      - 25f15dcf-593b-1031-8758-11ed40c86c19
+      - 26eb2a0f-593b-1031-8711-62fd5e8d2f7b
     status:
       code: 200
       message: OK
