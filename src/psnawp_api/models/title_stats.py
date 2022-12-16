@@ -94,7 +94,7 @@ class TitleStats:
                 if limit <= 0:
                     break
 
-            offset = response.get("nextOffset", 0)
+            offset = response.get("nextOffset") or 0
             # If there is not more offset, we've reached the end
             if offset <= 0:
                 break
