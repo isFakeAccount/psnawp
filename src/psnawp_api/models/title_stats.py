@@ -61,11 +61,7 @@ class TitleStats:
 
         offset = 0
         limit_per_page = min(limit, 150) if limit is not None else 150
-        params: dict[str, Any] = {
-            "categories": "ps4_game,ps5_native_game",
-            "limit": limit_per_page,
-            "offset": offset
-        }
+        params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}
 
         total_items = 0
         while True:
