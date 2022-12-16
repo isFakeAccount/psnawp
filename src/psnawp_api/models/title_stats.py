@@ -57,11 +57,17 @@ class TitleStats:
         return title_instance
 
     @classmethod
-    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int] = 100) -> Iterator[TitleStats]:
+    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int] = None) -> Iterator[TitleStats]:
 
         offset = 0
-        params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit, "offset": offset}
+        limit_per_page = min(limit, 150) if limit is not None else 150
+        params: dict[str, Any] = {
+            "categories": "ps4_game,ps5_native_game",
+            "limit": limit_per_page,
+            "offset": offset
+        }
 
+        total_items = 0
         while True:
             params["offset"] = offset
             try:
@@ -70,15 +76,22 @@ class TitleStats:
                     params=params,
                 ).json()
             except PSNAWPForbidden as forbidden:
-                raise PSNAWPForbidden("The following user has made profile private.") from forbidden
+                raise PSNAWPForbidden("The following user has made their profile private.") from forbidden
 
-            per_page_items = 0
             titles: list[dict[str, Any]] = response.get("titles")
 
             for title in titles:
                 title_instance = TitleStats.from_dict(title)
                 yield title_instance
-                per_page_items += 1
+                total_items += 1
+
+                # If we've reached the limit, we're done
+                if limit is not None and total_items >= limit:
+                    break
+
+            # If we've reached the limit, we're done
+            if limit is not None and total_items >= limit:
+                break
 
             next_offset = response.get("nextOffset", None)
             offset = next_offset if next_offset is not None else 0

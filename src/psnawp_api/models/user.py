@@ -341,16 +341,15 @@ class User:
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id=self.account_id, platform=platform)
 
-    def title_stats(self, limit: Optional[int] = 100) -> Iterator[TitleStats]:
-        """Retrieve a list of title with their stats and basic meta-data
+    def title_stats(self, limit: Optional[int] = None) -> Iterator[TitleStats]:
+        """Retrieve a list of titles with their stats and basic meta-data
 
-        :param limit: Limit of titles returned, will default to 100.
+        :param limit: Limit of titles returned.
         :type limit: Optional[int]
 
         .. warning::
 
-            Only returns data for PS4 games and above. Don't put a very high limit as the data returned includes a lot of extra meta data which makes the
-            payload large.
+            Only returns data for PS4 games and above.
 
         :returns: List of Titles with their play times
         :rtype: Iterator[TitleStats]
