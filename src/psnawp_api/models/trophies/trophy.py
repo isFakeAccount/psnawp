@@ -13,6 +13,7 @@ from psnawp_api.models.trophies.utility_functions import (
 )
 from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.request_builder import RequestBuilder
 
 
@@ -117,8 +118,6 @@ def _get_trophy_from_endpoint(
         params = {**params, "limit": min(limit, limit_per_request), "offset": offset}
 
     while True:
-        if limit is not None:
-            params["limit"] = min(limit, limit_per_request)
         try:
             response = request_builder.get(
                 url=f"{BASE_PATH['trophies']}{endpoint}",
@@ -145,7 +144,7 @@ def _get_trophy_from_endpoint(
 
         if limit is not None:
             limit -= per_page_items
-            limit_per_request = min(limit, 400)
+            params["limit"] = min(limit, limit_per_request)
 
             # If limit is reached
             if limit <= 0:

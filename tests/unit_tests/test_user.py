@@ -188,6 +188,7 @@ def test_user__trophies(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         earned_status = list(psnawp_fixture.user(online_id="jeranther").trophies("NPWR15509_00", "PS4", limit=10))
         earned_status_with_metadata = list(psnawp_fixture.user(online_id="jeranther").trophies("NPWR15509_00", "PS4", limit=10, include_metadata=True))
+        assert len(earned_status) == 10
         assert earned_status[0].total_items_count == earned_status_with_metadata[0].total_items_count
         for zipped_data in zip(earned_status, earned_status_with_metadata):
             assert zipped_data[0].trophy_id == zipped_data[1].trophy_id
@@ -217,6 +218,7 @@ def test_user__trophies_pagination_test(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         earned_status = list(psnawp_fixture.user(online_id="ikemenzi").trophies("NPWR08964_00", "PS4"))
         earned_status_with_metadata = list(psnawp_fixture.user(online_id="ikemenzi").trophies("NPWR08964_00", "PS4", include_metadata=True))
+        assert len(earned_status) == earned_status[0].total_items_count
         assert earned_status[0].total_items_count == earned_status_with_metadata[0].total_items_count
         for zipped_data in zip(earned_status, earned_status_with_metadata):
             assert zipped_data[0].trophy_id == zipped_data[1].trophy_id
@@ -264,10 +266,18 @@ def test_user__trophy_groups_summary_forbidden(psnawp_fixture):
 def test_user__title_stats(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         total_count = 0
-        for title in psnawp_fixture.user(online_id="omzzz90").title_stats():
+        for title in psnawp_fixture.user(online_id="jeranther").title_stats():
             total_count += 1
-            assert len(title.title_id) > 0
-        assert total_count > 0
+        assert total_count == title.total_items_count
+
+
+@pytest.mark.vcr()
+def test_user__title_stats_with_limit(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        limit = 1050
+        titles = psnawp_fixture.user(online_id="ikemenzi").title_stats(limit=limit)
+        title_count = len(list(titles))
+        assert title_count == limit
 
 
 @pytest.mark.vcr()

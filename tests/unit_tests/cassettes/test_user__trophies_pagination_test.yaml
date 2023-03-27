@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:48:12 GMT
+      - Fri, 16 Dec 2022 05:23:28 GMT
       Server:
       - Apache
       Vary:
@@ -82,9 +82,9 @@ interactions:
         false, "earned": true, "earnedDateTime": "2016-04-27T11:41:11Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "76.9"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-03T01:36:40Z", "trophyType":
-        "gold", "trophyRare": 1, "trophyEarnedRate": "6.6"}, {"trophyId": 3, "trophyHidden":
+        "gold", "trophyRare": 1, "trophyEarnedRate": "6.7"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T16:55:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "69.4"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "69.3"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:11:48Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "62.4"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:37:41Z", "trophyType":
@@ -156,7 +156,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:48:12 GMT
+      - Fri, 16 Dec 2022 05:23:29 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -210,7 +210,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:48:13 GMT
+      - Fri, 16 Dec 2022 05:23:29 GMT
       Server:
       - Apache
       Vary:
@@ -353,7 +353,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:48:13 GMT
+      - Fri, 16 Dec 2022 05:23:30 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -394,9 +394,9 @@ interactions:
         false, "earned": true, "earnedDateTime": "2016-04-27T11:41:11Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "76.9"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-03T01:36:40Z", "trophyType":
-        "gold", "trophyRare": 1, "trophyEarnedRate": "6.6"}, {"trophyId": 3, "trophyHidden":
+        "gold", "trophyRare": 1, "trophyEarnedRate": "6.7"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T16:55:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "69.4"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "69.3"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:11:48Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "62.4"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:37:41Z", "trophyType":
@@ -468,7 +468,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:48:13 GMT
+      - Fri, 16 Dec 2022 05:23:30 GMT
       Server:
       - Apache
       Strict-Transport-Security:

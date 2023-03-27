@@ -43,7 +43,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:20:53 GMT
+      - Fri, 16 Dec 2022 05:23:24 GMT
       Server:
       - Apache
       Vary:
@@ -82,13 +82,13 @@ interactions:
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "86.1"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.8"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.7"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.8"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.7"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.6"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.5"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "29.2"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "29.1"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "14.1"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
@@ -110,7 +110,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:20:53 GMT
+      - Fri, 16 Dec 2022 05:23:24 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -164,7 +164,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:20:54 GMT
+      - Fri, 16 Dec 2022 05:23:25 GMT
       Server:
       - Apache
       Vary:
@@ -238,7 +238,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:20:54 GMT
+      - Fri, 16 Dec 2022 05:23:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -279,13 +279,13 @@ interactions:
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
         "bronze", "trophyRare": 3, "trophyEarnedRate": "86.1"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.8"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.7"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.8"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.7"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.6"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.5"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "29.2"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "29.1"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "14.1"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
@@ -307,7 +307,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:20:54 GMT
+      - Fri, 16 Dec 2022 05:23:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:

@@ -15,11 +15,11 @@ class Authenticator:
     """Provides an interface for PSN Authentication."""
 
     __PARAMS = {
-        "CLIENT_ID": "ac8d161a-d966-4728-b0ea-ffec22f69edc",
-        "SCOPE": "psn:clientapp psn:mobile.v1",
-        "REDIRECT_URI": "com.playstation.PlayStationApp://redirect",
+        "CLIENT_ID": "09515159-7237-4370-9b40-3806e67c0891",
+        "SCOPE": "psn:mobile.v2.core psn:clientapp",
+        "REDIRECT_URI": "com.scee.psxandroid.scecompcall://redirect",
     }
-    __AUTH_HEADER = {"Authorization": "Basic YWM4ZDE2MWEtZDk2Ni00NzI4LWIwZWEtZmZlYzIyZjY5ZWRjOkRFaXhFcVhYQ2RYZHdqMHY="}
+    __AUTH_HEADER = {"Authorization": "Basic MDk1MTUxNTktNzIzNy00MzcwLTliNDAtMzgwNmU2N2MwODkxOnVjUGprYTV0bnRCMktxc1A="}
 
     def __init__(self, npsso_cookie: str):
         """Represents a single authentication to PSN API.
