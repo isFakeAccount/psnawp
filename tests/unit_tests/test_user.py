@@ -167,12 +167,15 @@ def test_user__trophy_titles_for_title(psnawp_fixture):
             if trophy_title.title_name == "Fallout 76":
                 assert trophy_title.np_communication_id == "NPWR15509_00"
                 assert trophy_title.np_service_name == "trophy"
+                assert trophy_title.np_title_id == "PPSA01506_00"
             elif trophy_title.title_name == "Immortals Fenyx Rising ™":
                 assert trophy_title.np_communication_id == "NPWR21237_00"
                 assert trophy_title.np_service_name == "trophy2"
+                assert trophy_title.np_title_id == "CUSA12057_00"
             elif trophy_title.title_name == "Grand Theft Auto V":
                 assert trophy_title.np_communication_id == "NPWR06221_00"
                 assert trophy_title.np_service_name == "trophy"
+                assert trophy_title.np_title_id == "CUSA00419_00"
 
 
 @pytest.mark.vcr()
