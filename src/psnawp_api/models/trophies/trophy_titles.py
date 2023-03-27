@@ -49,6 +49,8 @@ class TrophyTitle:
     last_updated_date_time: Optional[datetime] = field(converter=iso_format_to_datetime)
     "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
     # when title_id is passed
+    np_title_id: Optional[str]
+    "Title ID of the title if passed"
     rarest_trophies: list[Trophy] = field(factory=list, hash=False)
     "Returns the trophy where earned is true with the lowest trophyEarnedRate"
 
@@ -94,6 +96,7 @@ class TrophyTitles:
             ).json()
 
             per_page_items = 0
+            np_title_id: Optional[str]
             trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
             for trophy_title in trophy_titles:
                 title_trophy_sum = TrophyTitle(
@@ -126,6 +129,7 @@ class TrophyTitles:
                             {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                         )
                     ),
+                    np_title_id=None,
                     rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
                 )
                 yield title_trophy_sum
@@ -190,6 +194,7 @@ class TrophyTitles:
                         "earnedTrophies",
                         {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                     ),
+                    np_title_id=title.get("npTitleId"),
                     rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
                 )
                 yield title_trophy_sum
