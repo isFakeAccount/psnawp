@@ -9,28 +9,9 @@ tests/unit_tests/test_client.py .................                        [ 26%]
 tests/unit_tests/test_game_title.py .........                            [ 39%]
 tests/unit_tests/test_group.py .........                                 [ 52%]
 tests/unit_tests/test_search.py ...                                      [ 57%]
-tests/unit_tests/test_user.py .................F.........                [ 97%]
+tests/unit_tests/test_user.py ...........................                [ 97%]
 tests/unit_tests/test_utils_misc.py ..                                   [100%]
 
-=================================== FAILURES ===================================
-______________________ test_user__trophy_titles_for_title ______________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7faa0b611150>
-
-    @pytest.mark.vcr()
-    def test_user__trophy_titles_for_title(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            for trophy_title in psnawp_fixture.user(online_id="jeranther").trophy_titles_for_title(title_ids=["PPSA01506_00", "CUSA12057_00", "CUSA00419_00"]):
-                assert {PlatformType.UNKNOWN} == trophy_title.title_platform
-                if trophy_title.title_name == "Fallout 76":
-                    assert trophy_title.np_communication_id == "NPWR15509_00"
-                    assert trophy_title.np_service_name == "trophy"
->                   assert trophy_title.np_title_id == "PPSA01506_00"
-E                   AssertionError: assert 'CUSA12057_00' == 'PPSA01506_00'
-E                     - PPSA01506_00
-E                     + CUSA12057_00
-
-tests/unit_tests/test_user.py:170: AssertionError
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.11.2-final-0 -----------
@@ -62,8 +43,4 @@ Name                                                                            
 -----------------------------------------------------------------------------------------------------------------------------------------
 TOTAL                                                                                                                   841     20    98%
 
-=========================== short test summary info ============================
-FAILED tests/unit_tests/test_user.py::test_user__trophy_titles_for_title - AssertionError: assert 'CUSA12057_00' == 'PPSA01506_00'
-  - PPSA01506_00
-  + CUSA12057_00
-========================= 1 failed, 67 passed in 3.27s =========================
+============================== 68 passed in 3.93s ==============================
