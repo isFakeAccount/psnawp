@@ -28,8 +28,7 @@ class Group:
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make
-            HTTPRequests.
+        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
         :type request_builder: RequestBuilder
         :param group_id: The Group ID of a group.
         :type group_id: Optional[str]
@@ -38,8 +37,7 @@ class Group:
 
         :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
 
-        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
-            blocked you.
+        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you. blocked you.
 
         """
 
@@ -76,8 +74,7 @@ class Group:
 
         .. note::
 
-            You cannot change the name of DM groups. i.e. Groups with only two people
-            (including you).
+            You cannot change the name of DM groups. i.e. Groups with only two people (including you).
 
         :param group_name: The name of the group that will be set.
         :type group_name: str
