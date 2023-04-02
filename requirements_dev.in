@@ -14,7 +14,7 @@ pytest-vcr
 python-dotenv
 requests
 sphinx
-sphinx-rtd-theme
+sphinx_materialdesign_theme
 types-attrs
 types-requests
 twine

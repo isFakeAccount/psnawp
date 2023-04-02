@@ -1,3 +1,32 @@
-.wy-nav-content {
-    max-width: none;
+body {
+    background-color: #263238 !important;
+    color: white; !important;
+}
+
+.document {
+    width: 100%;
+    margin: 0 auto;
+    display: flex
+}
+
+.mdl-layout__drawer {
+    background-color: #181a1b;
+    color: white;
+}
+
+.globaltoc ul li .link-wrapper>a {
+    color: white;
+}
+
+.highlight pre {
+  background-color: #181a1b;
+  color: #ffffff;
+}
+
+.md-content {
+    background-color: #263238 !important;
+}
+
+.document .side-doc-outline {
+    width: 45%;
 }
