@@ -65,10 +65,9 @@ class TitleStats:
     def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int]) -> Iterator[TitleStats]:
 
         offset = 0
-        limit_per_page = min(limit, 1000) if limit is not None else 1000
+        limit_per_page = min(limit, 500) if limit is not None else 500
         params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}
 
-        total_items = 0
         while True:
             params["offset"] = offset
             try:
@@ -81,13 +80,14 @@ class TitleStats:
 
             titles: list[dict[str, Any]] = response.get("titles")
 
+            per_page_items = 0
             for title in titles:
                 title_instance = TitleStats.from_dict({**title, "totalItemCount": response.get("totalItemCount")})
                 yield title_instance
-                total_items += 1
+                per_page_items += 1
 
             if limit is not None:
-                limit -= total_items
+                limit -= per_page_items
                 params["limit"] = min(limit, limit_per_page)
 
                 # If limit is reached
