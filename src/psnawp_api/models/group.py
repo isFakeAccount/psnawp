@@ -102,53 +102,8 @@ class Group:
 
         :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
 
-        .. code-block:: json
-
-            {
-                "groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790",
-                "groupType": 0,
-                "modifiedTimestamp": "1663911908531",
-                "groupName": {
-                    "value": "",
-                    "status": 0
-                },
-                "groupIcon": {
-                    "status": 0
-                },
-                "joinedTimestamp": "1616356026000",
-                "isFavorite": false,
-                "existsNewArrival": false,
-                "mainThread": {
-                    "threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790",
-                    "modifiedTimestamp": "1663911908531",
-                    "latestMessage": {
-                        "messageUid": "1#425961448584099",
-                        "messageType": 1,
-                        "alternativeMessageType": 1,
-                        "body": "Hello World",
-                        "createdTimestamp": "1663911908531",
-                        "sender": {
-                            "accountId": "8520698476712646544",
-                            "onlineId": "VaultTec_Trading"
-                        }
-                    },
-                    "readMessageUid": "1#425961448584099"
-                },
-                "members": [
-                    {
-                        "accountId": "2721516955383551246",
-                        "onlineId": "VaultTec-Co"
-                    },
-                    {
-                        "accountId": "8520698476712646544",
-                        "onlineId": "VaultTec_Trading"
-                    }
-                ],
-                "partySessions": [],
-                "notificationSetting": {
-                    "isMute": false
-                }
-            }
+        .. literalinclude:: examples/group/group_information.json
+            :language: json
 
         """
 

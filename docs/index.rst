@@ -13,6 +13,11 @@ PSNAWP: PlayStation Network API Wrapper Python
 
     psnawp_api
 
+.. contents:: Table of Contents
+   :depth: 1
+   :local:
+   :backlinks: none
+
 .. toctree::
     :maxdepth: 1
     :caption: Additional Resources:
