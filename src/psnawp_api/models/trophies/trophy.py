@@ -11,7 +11,6 @@ from psnawp_api.models.trophies.utility_functions import (
     trophy_type_str_to_enum,
     trophy_rarity_to_enum,
 )
-from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.request_builder import RequestBuilder

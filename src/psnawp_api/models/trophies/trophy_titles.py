@@ -144,7 +144,7 @@ class TrophyTitles:
 
             offset = response.get("nextOffset", 0)
             # If end is reached the end
-            if offset <= 0:
+            if offset is not None and offset <= 0:
                 break
 
     def get_trophy_summary_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
