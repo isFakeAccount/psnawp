@@ -74,7 +74,7 @@ class TrophyTitles:
         self._request_builder = request_builder
         self._account_id = account_id
 
-    def get_trophy_titles(self, limit: Optional[int]) -> Iterator[TrophyTitle]:
+    def get_trophy_titles(self, limit: Optional[int], offset: Optional[int] = 0) -> Iterator[TrophyTitle]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
@@ -86,7 +86,6 @@ class TrophyTitles:
         :raises: ``PSNAWPForbidden`` If the user's profile is private
 
         """
-        offset = 0
         limit_per_request = min(limit, 800) if limit is not None else 800
         while True:
             params = {"limit": limit_per_request, "offset": offset}

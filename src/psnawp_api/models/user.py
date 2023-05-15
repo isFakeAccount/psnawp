@@ -204,11 +204,13 @@ class User:
         """
         return TrophySummary.from_endpoint(request_builder=self._request_builder, account_id=self.account_id)
 
-    def trophy_titles(self, limit: Optional[int] = None) -> Iterator[TrophyTitle]:
+    def trophy_titles(self, limit: Optional[int] = None, offset: Optional[int] = 0) -> Iterator[TrophyTitle]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
         :type limit: Optional[int]
+        :param offset: Pagination offset.
+        :type offset: Optional[int]
 
         :returns: Generator object with TitleTrophySummary objects
         :rtype: Iterator[TrophyTitle]
@@ -222,7 +224,7 @@ class User:
                 print(trophy_title)
 
         """
-        return TrophyTitles(request_builder=self._request_builder, account_id=self.account_id).get_trophy_titles(limit=limit)
+        return TrophyTitles(request_builder=self._request_builder, account_id=self.account_id).get_trophy_titles(limit=limit, offset=offset)
 
     def trophy_titles_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
         """Retrieve a summary of the trophies earned by a user for specific titles.
@@ -341,11 +343,13 @@ class User:
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id=self.account_id, platform=platform)
 
-    def title_stats(self, limit: Optional[int] = None) -> Iterator[TitleStats]:
+    def title_stats(self, limit: Optional[int] = None, offset: Optional[int] = 0) -> Iterator[TitleStats]:
         """Retrieve a list of titles with their stats and basic meta-data
 
         :param limit: Limit of titles returned.
         :type limit: Optional[int]
+        :param offset: Pagination offset.
+        :type offset: Optional[int]
 
         .. warning::
 
@@ -360,7 +364,7 @@ class User:
             titles = user_example.title_stats()
 
         """
-        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit)
+        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit, offset=offset)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
