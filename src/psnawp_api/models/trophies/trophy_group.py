@@ -80,14 +80,14 @@ def _trophy_groups_dict_to_obj(trophy_groups_dict: Any) -> TrophyGroupsSummary:
                     {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                 )
             ),
-            progress=trophy_groups_dict.get("progress"),
+            progress=trophy_group.get("progress"),
             earned_trophies=TrophySet(
                 **trophy_group.get(
                     "earnedTrophies",
                     {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                 )
             ),
-            last_updated_datetime=trophy_groups_dict.get("lastUpdatedDateTime"),
+            last_updated_datetime=trophy_group.get("lastUpdatedDateTime"),
         )
         trophy_groups.append(trophy_group_instance)
 
