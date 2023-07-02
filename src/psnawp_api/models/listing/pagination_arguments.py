@@ -1,15 +1,15 @@
-from dataclasses import dataclass
+from attrs import define
 from typing import Optional
 
 
-@dataclass(kw_only=True)
+@define(kw_only=True)
 class PaginationArguments:
     total_limit: Optional[int]
     page_size: int
     offset: int
     limit: int = 0
 
-    def __post_init__(self) -> None:
+    def __attrs_post_init__(self) -> None:
         if self.total_limit is not None:
             self.limit = min(self.total_limit, self.page_size)
         else:
