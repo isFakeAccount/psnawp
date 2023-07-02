@@ -3,7 +3,8 @@ from __future__ import annotations
 from typing import Any, Iterator, Optional, Literal
 
 from psnawp_api.models.group import Group
-from psnawp_api.models.title_stats import TitleStats
+from psnawp_api.models.listing.pagination_arguments import PaginationArguments
+from psnawp_api.models.title_stats import TitleStatsListing
 from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
 from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummary,
@@ -369,26 +370,31 @@ class Client:
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id="me", platform=platform)
 
-    def title_stats(self, limit: Optional[int] = None) -> Iterator[TitleStats]:
+    def title_stats(self, *, limit: Optional[int] = None, offset: int = 0, page_size: int = 200) -> TitleStatsListing:
         """Retrieve a list of titles with their stats and basic meta-data
 
         :param limit: Limit of titles returned.
         :type limit: Optional[int]
+        :param page_size: The number of items to receive per api request.
+        :type page_size: int
+        :param offset: Specifies the offset for paginator
+        :type offset: int
 
         .. warning::
 
             Only returns data for PS4 games and above.
 
-        :returns: List of Titles with their play times
-        :rtype: Iterator[TitleStats]
+        :returns: Iterator class for TitleStats
+        :rtype: Iterator[TitleStatsListing]
 
         .. code-block:: Python
 
-            client = psnawp.me()
-            titles = client.title_stats()
+            user_example = psnawp.client()
+            titles = list(user_example.title_stats())
 
         """
-        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id="me", limit=limit)
+        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
+        return TitleStatsListing(request_builder=self._request_builder, account_id="me", pagination_arguments=pg_args)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

@@ -7,6 +7,8 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPForbidden,
     PSNAWPBadRequest,
 )
+from psnawp_api.models.listing.pagination_arguments import PaginationArguments
+from psnawp_api.models.title_stats import TitleStatsListing
 from psnawp_api.models.trophies.trophy import TrophyBuilder, Trophy
 from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummary,
@@ -14,7 +16,6 @@ from psnawp_api.models.trophies.trophy_group import (
 )
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
 from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TrophyTitle
-from psnawp_api.models.title_stats import TitleStats
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
@@ -341,26 +342,32 @@ class User:
                 np_communication_id=np_communication_id,
             ).user_trophy_groups_summary_with_metadata(account_id=self.account_id, platform=platform)
 
-    def title_stats(self, limit: Optional[int] = None) -> Iterator[TitleStats]:
+    def title_stats(self, *, limit: Optional[int] = None, offset: int = 0, page_size: int = 200) -> TitleStatsListing:
         """Retrieve a list of titles with their stats and basic meta-data
 
         :param limit: Limit of titles returned.
         :type limit: Optional[int]
+        :param page_size: The number of items to receive per api request.
+        :type page_size: int
+        :param offset: Specifies the offset for paginator
+        :type offset: int
 
         .. warning::
 
             Only returns data for PS4 games and above.
 
-        :returns: List of Titles with their play times
-        :rtype: Iterator[TitleStats]
+        :returns: Iterator class for TitleStats
+        :rtype: Iterator[TitleStatsListing]
 
         .. code-block:: Python
 
             user_example = psnawp.user(online_id='jeranther')
-            titles = user_example.title_stats()
+            for title in user_example.title_stats():
+                ...
 
         """
-        return TitleStats.from_endpoint(request_builder=self._request_builder, account_id=self.account_id, limit=limit)
+        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
+        return TitleStatsListing(request_builder=self._request_builder, account_id=self.account_id, pagination_arguments=pg_args)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"
