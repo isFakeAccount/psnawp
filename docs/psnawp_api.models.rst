@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   psnawp_api.models.listing
    psnawp_api.models.trophies
 
 Submodules

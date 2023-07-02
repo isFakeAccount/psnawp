@@ -7,6 +7,8 @@ from typing import Optional, Iterator, Any
 from attrs import define
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
+from psnawp_api.models.listing.listing_generator import ListingGenerator
+from psnawp_api.models.listing.pagination_arguments import PaginationArguments
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime, play_duration_to_timedelta
 from psnawp_api.utils.request_builder import RequestBuilder
@@ -43,8 +45,6 @@ class TitleStats:
     "Last time the game was played"
     play_duration: Optional[timedelta]
     "Total time the game has been played. Example: PT1H51M21S"
-    total_items_count: Optional[int]
-    "Total Number of Titles a user own"
 
     @classmethod
     def from_dict(cls, game_stats_dict: dict[str, Any]) -> TitleStats:
@@ -57,7 +57,6 @@ class TitleStats:
             first_played_date_time=iso_format_to_datetime(game_stats_dict.get("firstPlayedDateTime")),
             last_played_date_time=iso_format_to_datetime(game_stats_dict.get("lastPlayedDateTime")),
             play_duration=play_duration_to_timedelta(game_stats_dict.get("playDuration")),
-            total_items_count=game_stats_dict.get("totalItemCount"),
         )
         return title_instance
 
@@ -98,3 +97,51 @@ class TitleStats:
             # If there is not more offset, we've reached the end
             if offset <= 0:
                 break
+
+
+class TitleStatsListing(Iterator[TitleStats]):
+    """Iterator for retrieving title statistics.
+
+    This iterator fetches title statistics for a given account ID with pagination support.
+
+    :param request_builder: The request builder instance.
+    :type request_builder: RequestBuilder
+    :param account_id: The ID of the account for which to retrieve title statistics.
+    :type account_id: str
+    :param pagination_arguments: The pagination arguments for configuring the listing.
+    :type pagination_arguments: PaginationArguments
+    :ivar count: The count of retrieved title statistics.
+    :vartype count: int
+    :ivar total_item_count: The total count of title statistics. Note that this won't be accurate until the first item is fetched. Also, it can be retrieved
+        using `len()` function.
+    :vartype total_item_count: int
+    :yields: TitleStats: The title statistics for each iteration.
+
+    :raises: If the specified total limit is reached or all the data is exhausted.
+
+    """
+
+    def __init__(self, request_builder: RequestBuilder, account_id: str, pagination_arguments: PaginationArguments):
+        params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", **pagination_arguments.get_params_dict()}
+        url = f"{BASE_PATH['games_list']}{API_PATH['user_game_data'].format(account_id=account_id)}"
+
+        self.title_stats_paginator = ListingGenerator(request_builder=request_builder, url=url, listing_name="titles", params=params)
+        self._pagination_arguments = pagination_arguments
+        self.count = 0
+        self.total_item_count = 0
+
+    def __iter__(self) -> TitleStatsListing:
+        return self
+
+    def __next__(self) -> TitleStats:
+        if self._pagination_arguments.total_limit is not None:
+            if self.count == self._pagination_arguments.total_limit:
+                raise StopIteration
+
+        response = next(self.title_stats_paginator)
+        self.total_item_count = response["totalItemCount"]
+        self.count += 1
+        return TitleStats.from_dict({**response["item"]})
+
+    def __len__(self) -> int:
+        return self.total_item_count

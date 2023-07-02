@@ -269,9 +269,10 @@ def test_user__trophy_groups_summary_forbidden(psnawp_fixture):
 def test_user__title_stats(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         total_count = 0
-        for title in psnawp_fixture.user(online_id="jeranther").title_stats():
+        title_stat_iter = psnawp_fixture.user(online_id="jeranther").title_stats()
+        for title in title_stat_iter:
             total_count += 1
-        assert total_count == title.total_items_count
+        assert total_count == len(title_stat_iter)
 
 
 @pytest.mark.vcr()
@@ -281,6 +282,15 @@ def test_user__title_stats_with_limit(psnawp_fixture):
         titles = psnawp_fixture.user(online_id="ikemenzi").title_stats(limit=limit)
         title_count = len(list(titles))
         assert title_count == limit
+
+
+@pytest.mark.vcr()
+def test_user__title_stats_with_jump(psnawp_fixture):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        limit = 10
+        titles = list(psnawp_fixture.user(online_id="jeranther").title_stats(limit=limit))
+        tenth_title = next(psnawp_fixture.user(online_id="jeranther").title_stats(limit=limit, offset=9))
+        assert titles[9] == tenth_title
 
 
 @pytest.mark.vcr()
