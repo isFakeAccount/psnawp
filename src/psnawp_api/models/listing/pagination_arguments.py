@@ -1,5 +1,8 @@
-from attrs import define
+from __future__ import annotations
+
 from typing import Optional
+
+from attrs import define
 
 
 @define(kw_only=True)
