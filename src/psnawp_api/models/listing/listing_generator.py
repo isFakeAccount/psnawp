@@ -59,12 +59,7 @@ class ListingGenerator(Iterator[Dict[str, Any]]):
             raise StopIteration
 
     def _fetch_next_page(self) -> None:
-        """Fetch the next page of items from the API.
-
-        This method updates the `_response` and `_has_next` variables based on the API
-        response.
-
-        """
+        """Fetch the next page of items from the API."""
         self._response = self._request_builder.get(url=self._url, params=self._params).json()
         self._params["offset"] = self._response.get("nextOffset") or 0  # nextOffset is None when the list ends
         self._has_next = cast(int, self._params["offset"]) > 0
