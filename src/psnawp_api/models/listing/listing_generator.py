@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from typing import Any, cast, Iterator
+from typing import Any, cast, Iterator, Dict
 
 from psnawp_api.utils.request_builder import RequestBuilder
 
 
-class ListingGenerator(Iterator[dict[str, Any]]):
+class ListingGenerator(Iterator[Dict[str, Any]]):
     """Iterator class for generating a list of items from an endpoint."""
 
     def __init__(self, *, request_builder: RequestBuilder, url: str, listing_name: str, params: dict[str, str | int]):
