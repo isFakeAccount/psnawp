@@ -1,7 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterator
-from typing import Any, cast
+from typing import Any, cast, Iterator
 
 from psnawp_api.utils.request_builder import RequestBuilder
 
@@ -62,7 +61,8 @@ class ListingGenerator(Iterator[dict[str, Any]]):
     def _fetch_next_page(self) -> None:
         """Fetch the next page of items from the API.
 
-        This method updates the `_response` and `_has_next` variables based on the API response.
+        This method updates the `_response` and `_has_next` variables based on the API
+        response.
 
         """
         self._response = self._request_builder.get(url=self._url, params=self._params).json()
