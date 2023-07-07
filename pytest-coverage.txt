@@ -1,7 +1,9 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.4, pytest-7.2.1, pluggy-1.0.0
-rootdir: /home/runner/work/psnawp/psnawp, configfile: pyproject.toml, testpaths: tests
-plugins: vcr-1.0.2, cov-4.0.0
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /home/runner/work/psnawp/psnawp
+configfile: pyproject.toml
+testpaths: tests
+plugins: vcr-1.0.2, cov-4.1.0
 collected 69 items
 
 tests/unit_tests/test_authenticator.py .                                 [  1%]
@@ -46,4 +48,4 @@ Name                                                                            
 -------------------------------------------------------------------------------------------------------------------------------------------
 TOTAL                                                                                                                     916     46    95%
 
-============================== 69 passed in 3.44s ==============================
+============================== 69 passed in 3.56s ==============================
