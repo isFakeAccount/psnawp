@@ -5,6 +5,23 @@ description = "Python API Wrapper for PlayStation Network API"
 authors = ["isFakeAccount <trevorphillips@gmx.us>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/isFakeAccount/psnawp"
+repository = "https://github.com/isFakeAccount/psnawp"
+documentation = "https://psnawp.readthedocs.io/en/latest/"
+keywords = ["PSN API"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [{ include = "src/psnawp_api" }]
 
 [tool.poetry.dependencies]
 python = "^3.8"
