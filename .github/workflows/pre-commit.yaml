@@ -1,16 +1,12 @@
 name: pre-commit
-on:
-  pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - "htmlcov/**"
-      - "pytest.xml"
-  push:
-    paths-ignore:
-      - 'docs/**'
-      - "htmlcov/**"
-      - "pytest.xml"
 
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
