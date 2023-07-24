@@ -31,7 +31,8 @@ def do_process(args, shell=False, cwd="."):
 def run_git_pull():
     """Runs the git pull command.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
+    statuscode 1
 
     """
     return do_process(["git", "pull"])
@@ -40,7 +41,8 @@ def run_git_pull():
 def run_static():
     """Runs the static tests.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
+    statuscode 1
 
     """
     success = True
@@ -58,10 +60,11 @@ def run_static():
 def run_unit():
     """Runs the unit-tests.
 
-    Follows the behavior of the static tests, where any failed tests cause pre_push.py to fail.
+    Follows the behavior of the static tests, where any failed tests cause pre_push.py
+    to fail.
 
     """
-    return do_process(["pytest", "--cov-config=.coveragerc", "--cov-report=html"])
+    return do_process(["poetry", "run", "pytest", "--cov-config=.coveragerc", "--cov-report=html"])
 
 
 def main():
