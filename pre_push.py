@@ -9,7 +9,7 @@ from subprocess import CalledProcessError, check_call
 def do_process(args, shell=False, cwd="."):
     """Run program provided by args.
 
-    Return ``True`` on success.
+    Returns ``True`` upon success.
 
     Output failed message on non-zero exit and return False.
 
@@ -46,11 +46,11 @@ def run_static():
 
     """
     success = True
-    success &= do_process(["pre-commit", "run", "--all-files"])
-    success &= do_process(["mypy", "src/psnawp_api/"])
-    success &= do_process(["black", "src/psnawp_api/"])
-    success &= do_process(["ruff", "src/psnawp_api/"])
-    success &= do_process(["sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "pre-commit", "run", "--all-files"])
+    success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "black", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "ruff", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")
     success &= do_process(["make", "linkcheck"], cwd="docs/")
