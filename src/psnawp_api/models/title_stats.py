@@ -62,7 +62,6 @@ class TitleStats:
 
     @classmethod
     def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, limit: Optional[int]) -> Iterator[TitleStats]:
-
         offset = 0
         limit_per_page = min(limit, 500) if limit is not None else 500
         params: dict[str, Any] = {"categories": "ps4_game,ps5_native_game", "limit": limit_per_page, "offset": offset}

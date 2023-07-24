@@ -46,6 +46,8 @@ def run_static():
     success = True
     success &= do_process(["pre-commit", "run", "--all-files"])
     success &= do_process(["mypy", "src/psnawp_api/"])
+    success &= do_process(["black", "src/psnawp_api/"])
+    success &= do_process(["ruff", "src/psnawp_api/"])
     success &= do_process(["sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")

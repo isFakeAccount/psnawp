@@ -96,7 +96,6 @@ class TrophyTitles:
             ).json()
 
             per_page_items = 0
-            np_title_id: Optional[str]
             trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
             for trophy_title in trophy_titles:
                 title_trophy_sum = TrophyTitle(

@@ -1,11 +1,4 @@
 repos:
-  - repo: https://github.com/psf/black
-    rev: 22.10.0
-    hooks:
-      - id: black
-        args: [--safe, --config=./pyproject.toml]
-        exclude: "docs"
-
   - repo: https://github.com/LilSpazJoekp/docstrfmt
     rev: v1.5.1
     hooks:
@@ -13,19 +6,11 @@ repos:
         language_version: python3
         exclude: "docs"
 
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
-        exclude: "pytest.xml|pytest-coverage.txt"
       - id: check-added-large-files
-        args: ['--maxkb=700']
       - id: debug-statements
         language_version: python3
-
-  - repo: https://github.com/pycqa/flake8
-    hooks:
-      - id: flake8
-    rev: 5.0.4

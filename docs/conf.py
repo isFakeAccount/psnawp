@@ -38,28 +38,12 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
 ]
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "sphinx_materialdesign_theme"
+html_theme = "furo"
 pygments_style = "perldoc"
-html_theme_options = {
-    'header_links': [
-        ('Home', 'index', False, 'home'),
-        ("GitHub", "https://github.com/isFakeAccount/psnawp", True, 'link')
-    ],
-    'primary_color': 'light_blue',
-    'accent_color': 'deep_purple',
-    'fixed_drawer': False,
-    'fixed_header': False,
-    'header_waterfall': True,
-    'header_scroll': False,
-
-    'show_header_title': False,
-    'show_drawer_title': True,
-    'show_footer': True
-}
+html_logo = "_static/psn_logo.png"
 intersphinx_mapping = {"python": ("https://docs.python.org", None),
                        "requests": ("https://requests.readthedocs.io/en/latest/", None)}
 htmlhelp_basename = "PSNAWP"

@@ -5,7 +5,7 @@
     contain the root `toctree` directive.
 
 PSNAWP: PlayStation Network API Wrapper Python
-===========================================================================
+==============================================
 
 .. toctree::
     :maxdepth: 2
@@ -14,9 +14,9 @@ PSNAWP: PlayStation Network API Wrapper Python
     psnawp_api
 
 .. contents:: Table of Contents
-   :depth: 1
-   :local:
-   :backlinks: none
+    :depth: 1
+    :local:
+    :backlinks: none
 
 .. toctree::
     :maxdepth: 1

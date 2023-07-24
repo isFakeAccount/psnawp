@@ -14,7 +14,7 @@ from psnawp_api.utils.request_builder import RequestBuilder
 
 
 class Group:
-    """The Group class is responsible for providing convenient methods to interact with PSN group endpoints, responsible for managing messages groups and sending messages."""
+    """The Group class manages PSN group endpoints related to messages (Group and Direct Messages)."""
 
     def __init__(
         self,

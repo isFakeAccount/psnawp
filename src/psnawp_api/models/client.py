@@ -318,14 +318,20 @@ class Client:
         """
 
         if not include_metadata:
-            return TrophyBuilder(request_builder=self._request_builder, np_communication_id=np_communication_id,).earned_game_trophies(
+            return TrophyBuilder(
+                request_builder=self._request_builder,
+                np_communication_id=np_communication_id,
+            ).earned_game_trophies(
                 account_id="me",
                 platform=platform,
                 trophy_group_id=trophy_group_id,
                 limit=limit,
             )
         else:
-            return TrophyBuilder(request_builder=self._request_builder, np_communication_id=np_communication_id,).earned_game_trophies_with_metadata(
+            return TrophyBuilder(
+                request_builder=self._request_builder,
+                np_communication_id=np_communication_id,
+            ).earned_game_trophies_with_metadata(
                 account_id="me",
                 platform=platform,
                 trophy_group_id=trophy_group_id,
