@@ -21,7 +21,7 @@ black = "^23.3.0"
 ruff = "^0.0.280"
 pre-commit = "^3.3.3"
 
-[tool.poetry.group.doc.dependencies]
+[tool.poetry.group.docs.dependencies]
 sphinx = "^6.0"
 furo = "^2023.5.20"
 myst-parser = "^2.0.0"

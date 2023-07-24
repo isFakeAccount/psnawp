@@ -1,7 +1,9 @@
 name: pytest
+
 on:
   - push
   - pull_request
+
 jobs:
   pytest:
     runs-on: ${{ matrix.os }}-latest
@@ -11,18 +13,20 @@ jobs:
         python-version: [ '3.8', '3.9', '3.10', '3.11' ]
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Environment ${{ matrix.python-version }} ${{ matrix.os }}
+      - name: Set up Python ${{ matrix.python-version }} ${{ matrix.os }}
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
+      - name: Install Poetry
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements_dev.txt
-          pip install .
+          python -m pip install poetry
+      - name: Install dependencies and build package
+        run: |
+          poetry install
       - name: Test with pytest
         run: |
-          pytest
+          poetry run pytest
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ secrets.USER_NAME }}
