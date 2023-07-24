@@ -21,11 +21,12 @@ jobs:
 
       - name: Install Poetry
         run: |
-          curl -sL https://install.python-poetry.org | python - -y
+          python -m pip install --upgrade pip
+          python -m pip install poetry
 
-      - name: Setup Poetry
+      - name: Install dependencies and build package
         run: |
-          poetry config virtualenvs.in-project true
+          poetry install
 
       - name: Install dependencies and build package
         run: |
