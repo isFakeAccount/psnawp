@@ -141,14 +141,12 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
@@ -175,16 +173,14 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
@@ -213,16 +209,14 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count along with metadata.
 
-        This is most commonly seen in games which have expansions where additional
-        trophies are added.
+        This is most commonly seen in games which have expansions where additional trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy
-            information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
