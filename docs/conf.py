@@ -22,7 +22,14 @@ release = metadata.version("PSNAWP")
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 source_suffix = ['.rst', '.md']
-extensions = ["sphinx.ext.todo", "sphinx.ext.viewcode", "sphinx.ext.autodoc", "sphinx.ext.intersphinx", "myst_parser"]
+extensions = [
+    "sphinx.ext.todo",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.napoleon",
+    "myst_parser",
+]
 add_module_names = False
 autodoc_default_options = {
     "members": True,

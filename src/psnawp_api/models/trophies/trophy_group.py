@@ -7,8 +7,8 @@ from attrs import define, field
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
-from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.request_builder import RequestBuilder
 
 
@@ -48,7 +48,7 @@ class TrophyGroupsSummary:
     "Title description (PS3, PS4 and PS Vita titles only)"
     trophy_title_icon_url: Optional[str]
     "URL of the icon for the trophy title"
-    trophy_title_platform: PlatformType
+    trophy_title_platform: frozenset[PlatformType]
     "The platform this title belongs to"
     defined_trophies: TrophySet
     "Total number of trophies for the title by type"
@@ -96,7 +96,12 @@ def _trophy_groups_dict_to_obj(trophy_groups_dict: Any) -> TrophyGroupsSummary:
         trophy_title_name=trophy_groups_dict.get("trophyTitleName"),
         trophy_title_detail=trophy_groups_dict.get("trophyTitleDetail"),
         trophy_title_icon_url=trophy_groups_dict.get("trophyTitleIconUrl"),
-        trophy_title_platform=PlatformType(trophy_groups_dict.get("trophyTitlePlatform", "UNKNOWN")),
+        trophy_title_platform=frozenset(
+            [
+                PlatformType(platform_str) if platform_str else PlatformType("UNKNOWN")
+                for platform_str in trophy_groups_dict.get("trophyTitlePlatform", "").split(",")
+            ]
+        ),
         defined_trophies=TrophySet(
             **trophy_groups_dict.get(
                 "definedTrophies",
@@ -136,12 +141,14 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional trophies are added.
+        This is most commonly seen in games which have expansions where additional
+        trophies are added.
 
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy
+            information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
@@ -168,14 +175,16 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count.
 
-        This is most commonly seen in games which have expansions where additional trophies are added.
+        This is most commonly seen in games which have expansions where additional
+        trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy
+            information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
@@ -204,14 +213,16 @@ class TrophyGroupsSummaryBuilder:
     ) -> TrophyGroupsSummary:
         """Retrieves the earned trophy groups for a title and their respective trophy count along with metadata.
 
-        This is most commonly seen in games which have expansions where additional trophies are added.
+        This is most commonly seen in games which have expansions where additional
+        trophies are added.
 
         :param account_id: The account whose trophy list is being accessed
         :type account_id: str
         :param platform: The platform this title belongs to.
         :type platform: Literal
 
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
+        :returns: TrophyGroupSummary object containing title and title groups trophy
+            information.
         :rtype: TrophyGroupsSummary
 
         :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
