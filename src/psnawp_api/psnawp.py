@@ -27,16 +27,17 @@ class PSNAWP:
 
     """
 
-    def __init__(self, npsso_cookie: str):
+    def __init__(self, npsso_cookie: str, *, accept_language: str = "en-US", country: str = "US"):
         """Constructor Method. Takes the npsso_cookie and creates instance of ``request_builder.RequestBuilder`` which is used later in code for HTTPS requests.
 
-        :param npsso_cookie: npsso cookie obtained from PSN website.
-        :type npsso_cookie: str
+        :param str npsso_cookie: npsso cookie obtained from PSN website.
+        :param str accept_language: The preferred language(s) for content negotiation in HTTP headers.
+        :param str country: The client's country for HTTP headers.
 
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        self._request_builder = request_builder.RequestBuilder(authenticator.Authenticator(npsso_cookie))
+        self._request_builder = request_builder.RequestBuilder(authenticator.Authenticator(npsso_cookie), accept_language, country)
 
     def me(self) -> Client:
         """Creates a new client object (your account).

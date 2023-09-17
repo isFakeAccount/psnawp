@@ -42,18 +42,20 @@ def response_checker(response: requests.Response) -> None:
 class RequestBuilder:
     """Handles all the HTTP Requests and provides a gateway to interacting with PSN API."""
 
-    def __init__(self, authenticator: Authenticator):
+    def __init__(self, authenticator: Authenticator, accept_language: str, country: str):
         """Initialized Request Handler and saves the instance of authenticator for future use.
 
-        :param authenticator: The instance of :class: `Authenticator`. Represents single authentication to PSN API.
+        :param Authenticator authenticator: The instance of :class: `Authenticator`. Represents single authentication to PSN API.
+        :param str accept_language: The preferred language(s) for content negotiation in HTTP headers.
+        :param str country: The client's country for HTTP headers.
 
         """
         self.authenticator = authenticator
         self.default_headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
             "Content-Type": "application/json",
-            "Accept-Language": "en-US",
-            "Country": "US",
+            "Accept-Language": accept_language,
+            "Country": country,
         }
 
     def get(self, **kwargs: Any) -> requests.Response:
