@@ -95,7 +95,7 @@ print(group.leave_group())
 new_group = psnawp.group(users_list=[example_user_1, example_user_2])
 
 search = psnawp.search()
-print(search.get_title_details(title_id="PPSA03420_00"))
+print(search.get_title_id(title_name="GTA 5"))
 print(search.universal_search("GTA 5"))
 
 # Get Play Times (PS4, PS5 above only)
