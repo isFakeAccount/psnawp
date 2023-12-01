@@ -243,7 +243,7 @@ class User:
         .. code-block:: Python
 
             user_example = psnawp.user(online_id="VaultTec_Trading")
-            for trophy_title in user_example.trophy_titles_for_title(title_id='CUSA00265_00'):
+            for trophy_title in user_example.trophy_titles_for_title(title_ids=['CUSA00265_00']):
                 print(trophy_title)
 
         """
