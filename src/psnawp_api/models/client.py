@@ -279,7 +279,7 @@ class Client:
         .. code-block:: Python
 
             client = psnawp.me()
-            for trophy_title in client.trophy_titles_for_title(title_id='CUSA00265_00'):
+            for trophy_title in client.trophy_titles_for_title(title_ids=['CUSA00265_00']):
                 print(trophy_title)
 
         """
