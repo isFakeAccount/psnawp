@@ -53,23 +53,20 @@ def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
     minutes = 0
     seconds = 0
 
-    if play_duration is not None:
-        # Strip everything and split into list of numbers separated by alphabets
-        digits_list = [int(s) for s in re.findall(r"\d+", play_duration)]
-        length = len(digits_list)
+    if play_duration:
+        # Regex pattern to match hours, minutes, and seconds
+        # Valid patters: PT243H18M48S, PT21M18S, PT18H, PT18H20S, PT4H21M
+        pattern = r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?'
 
-        # Example: PT243H18M48S = 243 hours, 18 minutes, 48 seconds
-        if length == 3:
-            hours = digits_list[0]
-            minutes = digits_list[1]
-            seconds = digits_list[2]
-        # Example: PT21M18S = 21 minutes, 18 seconds
-        elif length == 2:
-            minutes = digits_list[0]
-            seconds = digits_list[1]
-        # Example: PT39S = 39 seconds
-        elif length == 1:
-            seconds = digits_list[0]
+        # Search for patterns in the input string
+        match = re.search(pattern, play_duration)
+        if not match:
+            return timedelta(hours=hours, minutes=minutes, seconds=seconds)
+
+        # Extract hours, minutes, and seconds, or default to 0 if not present
+        hours = int(match.group(1)) if match.group(1) else 0
+        minutes = int(match.group(2)) if match.group(2) else 0
+        seconds = int(match.group(3)) if match.group(3) else 0
 
     # If for some reason the string is malformed or None, timedelta will return 0
     return timedelta(hours=hours, minutes=minutes, seconds=seconds)
