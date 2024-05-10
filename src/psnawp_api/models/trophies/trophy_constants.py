@@ -18,6 +18,7 @@ class PlatformType(Enum):
     PS3 = "PS3"
     PS4 = "PS4"
     PS5 = "PS5"
+    PSPC = "PSPC"
 
 
 class TrophyRarity(Enum):
