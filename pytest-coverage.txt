@@ -35,7 +35,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -90,7 +90,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -145,7 +145,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -200,7 +200,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -255,7 +255,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -310,7 +310,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -365,7 +365,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -420,7 +420,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -475,7 +475,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -530,7 +530,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -585,7 +585,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -640,7 +640,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -695,7 +695,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -750,7 +750,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -805,7 +805,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -860,7 +860,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -915,7 +915,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -970,7 +970,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1025,7 +1025,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1080,7 +1080,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1135,7 +1135,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1190,7 +1190,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1245,7 +1245,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1300,7 +1300,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1355,7 +1355,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1410,7 +1410,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1465,7 +1465,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1520,7 +1520,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1575,7 +1575,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1630,7 +1630,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1685,7 +1685,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1740,7 +1740,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1795,7 +1795,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1850,7 +1850,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1905,7 +1905,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -1960,7 +1960,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2015,7 +2015,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2070,7 +2070,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2125,7 +2125,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2180,7 +2180,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2235,7 +2235,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2290,7 +2290,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2345,7 +2345,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2400,7 +2400,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2455,7 +2455,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2510,7 +2510,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2565,7 +2565,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2620,7 +2620,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2675,7 +2675,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2730,7 +2730,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2785,7 +2785,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2840,7 +2840,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2895,7 +2895,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -2950,7 +2950,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3005,7 +3005,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3060,7 +3060,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3115,7 +3115,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3170,7 +3170,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3225,7 +3225,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3280,7 +3280,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3335,7 +3335,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3390,7 +3390,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3445,7 +3445,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3500,7 +3500,7 @@ src/psnawp_api/core/authenticator.py:34: in __init__
     self._authenticate()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fa80c525090>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd425d12ed0>
 
     def _authenticate(self) -> None:
         """Authenticate using the npsso code provided in the constructor.
@@ -3634,4 +3634,4 @@ ERROR tests/unit_tests/test_user.py::test_user__title_stats - psnawp_api.core.ps
 ERROR tests/unit_tests/test_user.py::test_user__title_stats_with_limit - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 ERROR tests/unit_tests/test_user.py::test_user__title_stats_with_jump - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 ERROR tests/unit_tests/test_user.py::test_user__repr_and_str - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
-========================= 5 passed, 64 errors in 7.66s =========================
+========================= 5 passed, 64 errors in 7.72s =========================
