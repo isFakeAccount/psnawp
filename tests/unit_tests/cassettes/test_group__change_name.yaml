@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlNjg8pSkzJzEtX0lFKTE7O
-        L80rAUtbmBoZmFlamJibmRsamZmYmZqYKNXWAgAAAP//AwA5+YU3TQAAAA==
+      string: '{"profile": {"onlineId": "VaultTec_Trading", "accountId": "8520698476712646544"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 05:56:39 GMT
+      - Sat, 11 May 2024 04:53:59 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,9 +74,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUsosdkvMTnVMTs4vzStR0lFKhLDAckYG
-        ZmZG5samBsbGluaGhkZmZuZKtbUAAAAA//8DABhg7r9KAAAA
+      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -97,9 +94,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 05:56:39 GMT
+      - Sat, 11 May 2024 04:53:59 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -131,9 +129,9 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"groupId": "911982aa672ef1517eeb3fafd0e3d19499e4900b-261", "mainThread":
-        {"threadId": "911982aa672ef1517eeb3fafd0e3d19499e4900b-261"}, "hasAllAccountInvited":
-        true}'
+      string: '{"groupId": "b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246", "mainThread":
+        {"threadId": "b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246"}, "hasAllAccountInvited":
+        false}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -146,13 +144,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '159'
+      - '160'
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 05:56:39 GMT
+      - Sat, 11 May 2024 04:54:00 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -181,7 +180,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: PATCH
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/911982aa672ef1517eeb3fafd0e3d19499e4900b-261
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246
   response:
     body:
       string: ''
@@ -197,9 +196,15 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 03 Dec 2022 05:56:40 GMT
+      - Sat, 11 May 2024 04:54:00 GMT
       Server:
       - Apache
+      Set-Cookie:
+      - _abck=BF1408783E526F2D09062D5283415E08~-1~YAAQqc0vF8C+1TGPAQAADTQAZgstvXQDQL2jtlfl//OaoEiVfIgP5Mp1BEMM2Lki1pwbSj47ADfo9ntzXbzklgSAdlmYGqoCr9VYj7jdKDprX7FWBumsrKkx5CJL/w+7h20fm8elh8+OX6jE1YoM/dOT1ydsrqtrpTHM1yli87cAgyJcffplzMTZ8UgpfPsZos6pJtGwK9EaGq7nwnuw+cDOVEvAldMXL2/cUM9oVQPxYKA96eExsTqNX/ASVehmAKv4NazHFbxZgs2T0CRfL+x6+e2KWC2FJdQQWAZXGaC1CCekDouXdvehQwjrAuFj4LLJxFnHkKU66cmsp6Y9HKE/YNe5i5YPaQQ0VJQQPxjlfvaGE3CJHnNUqmQXSNH/ePZfSSoLM3+4fqvv~-1~-1~-1;
+        Domain=.playstation.com; Path=/; Expires=Sat, 18 May 2024 04:54:00 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=39BEF27C9B5F50C2ABE15C8F31D02B87~YAAQqc0vF8G+1TGPAQAADTQAZheSs752g1c48XMgET/04xdcRCZqOvPxBoZu3tud9mNtzohpibRkDpD8wQOr+N0IKi5q+Dw4PCbAK//cK+jksO7JKrLwC9OxRmNzvjjuFB5xockD4jBc5fBsiggAl9uiKATM7Vo4e8MRcLTrYAc+HHqOLVmYJpFwbDibsj2l0xIOdTlHJ2PAij9ha4syEs2aL04fKZjFx+tuZgOV0RwIQKj7FxYyzdu0zkcgZOQIPiSUl3b0753zdO+5edPgl74jVKGkiNVXz8yss20RE69vBHL/tDF/JJ5jMDS2ctdmAjbU8xhch7/tmTxrbQsSfhP/Mj6xEBWCzFiXo/jggFlXpWTiCSVZfW+jDy3+fqFc83bN~3228211~4470337;
+        Domain=.playstation.com; Path=/; Expires=Sat, 11 May 2024 08:54:00 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

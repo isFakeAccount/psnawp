@@ -28,7 +28,7 @@ interactions:
         false, "trophyType": "bronze", "trophyName": "American Dream", "trophyDetail":
         "GTA Online: Own an Apartment, Garage and an Insured Vehicle", "trophyIconUrl":
         "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png",
-        "trophyRare": 3, "trophyEarnedRate": "71.8", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "67.9", "earned": true, "earnedDateTime":
         "2022-03-15T13:34:38Z"}], "progress": 1, "earnedTrophies": {"bronze": 2, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2022-03-15T13:34:39Z"}]}]}'
@@ -42,9 +42,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:38 GMT
+      - Sat, 11 May 2024 04:53:52 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -74,111 +75,293 @@ interactions:
     uri: https://m.np.playstation.com/api/catalog/v2/titles/PPSA03420_00/concepts?age=99&country=US&language=en-US
   response:
     body:
-      string: !!binary |
-        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
+      string: '[{"id": 201930, "name": "Grand Theft Auto V (PlayStation\u00ae5)",
+        "nameEn": "Grand Theft Auto V (PlayStation\u00ae5)", "publisherName": "Rockstar
+        Games", "media": {"videos": [{"id": "10908545", "url": "https://vulcan.dl.playstation.net/img/rnd/202312/1411/5fa8f17c4c81cf21a277e64f8a4031eabd7a119700ae45db.mp4",
+        "hlsUrl": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_avc.m3u8",
+        "hlsUrl4k": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_hevc.m3u8",
+        "posters": ["https://image.api.playstation.com/vulcan/img/rnd/202312/1411/d0464983961065b9777f63354c675f21cd1f58bab031b481.png"],
+        "type": "PREVIEW"}], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0302/bZ1JTRXzoyl3hkcsloKcCgdB.jpg",
+        "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202011/2419/XFDZtpMiMpFaJLuo9azJK6Gl.png",
+        "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/K6mmm89oNII1iI1aqaClO0wh.png",
+        "type": "MASTER"}]}, "descriptions": [{"type": "LONG", "desc": "Special introductory
+        price valid from 15-03-2022 to 14-06-2022 (Standard Price: $39.99)<br/><br/>Includes
+        Grand Theft Auto V: Story Mode and Grand Theft Auto Online. <br/><br/>Continue
+        your journey on PS5\u2122 and transfer both GTAV Story Mode progress and GTA
+        Online characters and progression to PS5\u2122 with a one-time migration.<br/><br/>Experience
+        entertainment blockbusters, Grand Theft Auto V and GTA Online \u2014 now for
+        PS5\u2122.<br/><br/>PS5\u2122 players can enjoy new high-performance vehicle
+        upgrades and improvements like the Career Builder as well as all GTA Online
+        gameplay upgrades, expansions, and access to all current and previous content
+        updates, ready to enjoy solo or with friends. Pull off daring co-operative
+        Heists, enter adrenaline-fueled Stunt Races, compete in unique Adversary Modes,
+        or hang out in social spaces including nightclubs, arcades, penthouse parties,
+        car meetups, and much more. <br/><br/>Explore Los Santos and Blaine County
+        in greater detail than ever before, now featuring:<br/><br/>\u2022\tSTUNNING
+        VISUALS \u2014 Enhanced levels of fidelity and performance with new graphics
+        modes featuring up to 4K resolution, up to 60 frames per second, HDR options,
+        ray tracing, improved texture quality, and more<br/>\u2022\tFASTER LOADING
+        \u2014 Quicker access to the action as the world of Los Santos and Blaine
+        County load in faster than ever before <br/>\u2022\tADAPTIVE TRIGGERS AND
+        HAPTIC FEEDBACK \u2014 Feel every moment through the DualSense\u2122 controller,
+        from directional damage to weather effects, rough road surfaces to explosions,
+        and more<br/>\u2022\tTEMPEST 3D AUDIO \u2014 Hear the sounds of the world
+        with pinpoint precision: the throttle of a stolen supercar, the rattle of
+        neighboring gunfire, the roar of a helicopter overhead, and more<br/><br/>Plus,
+        all-new enhancements to the ever-evolving world of GTA Online, including:
+        <br/><br/>\u2022\tEXCLUSIVE NEW CONTENT \u2014 Step into Hao\u2019s Special
+        Works at the Los Santos Car Meet, featuring elite new vehicle upgrades and
+        exclusive modifications. Then take these high-performance vehicles into HSW
+        races, new time trials, and more.<br/>\u2022\tTHE CAREER BUILDER \u2014 Get
+        started in GTA Online with the tools of the trade. Quickly choose from one
+        of four illicit businesses \u2014 Biker, Executive, Nightclub Owner, or Gunrunner
+        \u2014 and select from properties, powerhouse vehicles, and weaponry to kick-start
+        your enterprise.<br/>\u2022\tNEW MENU DESIGN \u2014 Immediately access everything
+        GTA Online has to offer right from the Main Menu, including the latest and
+        most popular updates <br/>\u2022\tACCESS TO ALL CURRENT AND PREVIOUS UPDATES
+        \u2014 Dive into more than 40 massive updates with more to come, featuring
+        everything from the high-stakes hunt for Dr. Dre\u2019s missing music files
+        with Franklin Clinton in The Contract to the high-octane underground street
+        racing action of Los Santos Tuners; Heists on the lush tropical island of
+        Cayo Perico to the nightlife circuit of After Hours and The Diamond Casino
+        & Resort; all available alongside a wide range of races, modes, activities,
+        and social spaces to enjoy solo or with friends \u2014 including golf courses,
+        nightclubs, arcades, poolside lounges, and much more"}, {"type": "COMPATIBILITY_NOTICE",
+        "desc": "PS\u00a0Plus required for online play<br/>Supports up to 30 online
+        players with PS Plus<br/>In-game purchases optional<br/>Online play required<br/>Vibration
+        function and trigger effect supported (DualSense wireless controller)<br/>30
+        network players<br/>Remote Play supported<br/>DUALSHOCK\u00a04 vibration"}],
+        "categorizedProducts": [{"topCategory": "ADD_ON", "ids": ["UP1004-PPSA03420_00-GTAVPS5CASHPLUS2",
+        "UP1004-PPSA03420_00-GTAVPS5CASHPLUS3", "UP1004-PPSA03420_00-GTAVPS5CASHPLUS4",
+        "UP1004-PPSA03420_00-GTAVPS5CASHPLUS5", "UP1004-PPSA03420_00-GTAVPS5CASHPLUS6",
+        "UP1004-PPSA03420_00-GTAVPS5CASHPACK2", "UP1004-PPSA03420_00-GTAVPS5CASHPACK3",
+        "UP1004-PPSA03420_00-GTAVPS5CASHPACK4", "UP1004-PPSA03420_00-GTAVPS5CASHPACK5",
+        "UP1004-PPSA03420_00-GTAVPS5CASHPACK6", "UP1004-CUSA00419_00-STARTERPACKOG001",
+        "UP1004-CUSA00419_00-GTAVCASHPACK000B", "UP1004-CUSA00419_00-GTAVCASHPACK000C",
+        "UP1004-CUSA00419_00-GTAVCASHPACK000D", "UP1004-CUSA00419_00-GTAVCASHPACK000E",
+        "UP1004-CUSA00419_00-GTAVCASHPACK000F"]}, {"topCategory": "GAME", "ids": ["UP1004-CUSA00419_00-GTAVCROSSGENBUND",
+        "UP1004-PPSA03420_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAOANDSPUPGRADE",
+        "UP1004-PPSA03420_00-GTAOSTANDALONE01", "UP1004-CUSA00419_00-PREMIUMPACKOG001",
+        "UP1004-CUSA00419_00-PREMIUMPACKOGGW1", "UP1004-CUSA00419_00-PREMIUMPACKOGME1",
+        "UP1004-CUSA00419_00-PREMIUMPACKOGWS1", "UP1004-CUSA00419_00-GTAVDIGITALDOWNL"]},
+        {"topCategory": "PVU_GAME", "ids": ["UP1004-CUSA00419_00-GTAVCROSSGENBUND",
+        "UP1004-PPSA03420_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAOSTANDALONE01"]}],
+        "titleIds": ["CUSA01436_00", "CUSA00880_00", "PPSA03421_00", "CUSA00419_00",
+        "CUSA29862_00", "PPSA04263_00", "PPSA03420_00", "CUSA00411_00", "PPSA04265_00",
+        "PPSA04264_00", "PPSA01721_00"], "country": "US", "language": "en", "type":
+        "GAME", "localizedName": {"defaultLanguage": "en-US", "metadata": {"en-US":
+        "Grand Theft Auto V (PlayStation\u00ae5)"}}, "localizedDescriptions": {"defaultLanguage":
+        "en-US", "metadata": {"en-US": [{"desc": "Special introductory price valid
+        from 15-03-2022 to 14-06-2022 (Standard Price: $39.99)<br/><br/>Includes Grand
+        Theft Auto V: Story Mode and Grand Theft Auto Online. <br/><br/>Continue your
+        journey on PS5\u2122 and transfer both GTAV Story Mode progress and GTA Online
+        characters and progression to PS5\u2122 with a one-time migration.<br/><br/>Experience
+        entertainment blockbusters, Grand Theft Auto V and GTA Online \u2014 now for
+        PS5\u2122.<br/><br/>PS5\u2122 players can enjoy new high-performance vehicle
+        upgrades and improvements like the Career Builder as well as all GTA Online
+        gameplay upgrades, expansions, and access to all current and previous content
+        updates, ready to enjoy solo or with friends. Pull off daring co-operative
+        Heists, enter adrenaline-fueled Stunt Races, compete in unique Adversary Modes,
+        or hang out in social spaces including nightclubs, arcades, penthouse parties,
+        car meetups, and much more. <br/><br/>Explore Los Santos and Blaine County
+        in greater detail than ever before, now featuring:<br/><br/>\u2022\tSTUNNING
+        VISUALS \u2014 Enhanced levels of fidelity and performance with new graphics
+        modes featuring up to 4K resolution, up to 60 frames per second, HDR options,
+        ray tracing, improved texture quality, and more<br/>\u2022\tFASTER LOADING
+        \u2014 Quicker access to the action as the world of Los Santos and Blaine
+        County load in faster than ever before <br/>\u2022\tADAPTIVE TRIGGERS AND
+        HAPTIC FEEDBACK \u2014 Feel every moment through the DualSense\u2122 controller,
+        from directional damage to weather effects, rough road surfaces to explosions,
+        and more<br/>\u2022\tTEMPEST 3D AUDIO \u2014 Hear the sounds of the world
+        with pinpoint precision: the throttle of a stolen supercar, the rattle of
+        neighboring gunfire, the roar of a helicopter overhead, and more<br/><br/>Plus,
+        all-new enhancements to the ever-evolving world of GTA Online, including:
+        <br/><br/>\u2022\tEXCLUSIVE NEW CONTENT \u2014 Step into Hao\u2019s Special
+        Works at the Los Santos Car Meet, featuring elite new vehicle upgrades and
+        exclusive modifications. Then take these high-performance vehicles into HSW
+        races, new time trials, and more.<br/>\u2022\tTHE CAREER BUILDER \u2014 Get
+        started in GTA Online with the tools of the trade. Quickly choose from one
+        of four illicit businesses \u2014 Biker, Executive, Nightclub Owner, or Gunrunner
+        \u2014 and select from properties, powerhouse vehicles, and weaponry to kick-start
+        your enterprise.<br/>\u2022\tNEW MENU DESIGN \u2014 Immediately access everything
+        GTA Online has to offer right from the Main Menu, including the latest and
+        most popular updates <br/>\u2022\tACCESS TO ALL CURRENT AND PREVIOUS UPDATES
+        \u2014 Dive into more than 40 massive updates with more to come, featuring
+        everything from the high-stakes hunt for Dr. Dre\u2019s missing music files
+        with Franklin Clinton in The Contract to the high-octane underground street
+        racing action of Los Santos Tuners; Heists on the lush tropical island of
+        Cayo Perico to the nightlife circuit of After Hours and The Diamond Casino
+        & Resort; all available alongside a wide range of races, modes, activities,
+        and social spaces to enjoy solo or with friends \u2014 including golf courses,
+        nightclubs, arcades, poolside lounges, and much more", "type": "LONG"}]}},
+        "localizedPublisherName": {"defaultLanguage": "en-US", "metadata": {"en-US":
+        "Rockstar Games"}}, "defaultProduct": {"id": "UP1004-PPSA03420_00-GTAOSTANDALONE01",
+        "conceptId": 201930, "titleId": "PPSA03420_00", "name": "Grand Theft Auto
+        Online (PlayStation\u00ae5)", "nameEn": "Grand Theft Auto Online (PlayStation\u00ae5)",
+        "phoneticPronunciation": "", "spokenName": "", "minimumAge": 17, "type": "GAME.BUNDLE",
+        "storeClassification": "GAME", "storePrimaryClassification": "PREMIUM_GAME",
+        "storeSubClassification": "BUNDLE", "storeDisplayClassification": "GAME_BUNDLE",
+        "localizedStoreDisplayClassification": "Game Bundle", "topCategory": "GAME",
+        "localizedTopCategory": "Game", "edition": {"name": "", "nameEn": "", "phoneticPronunciation":
+        "", "spokenName": "", "ordering": 2, "type": "STANDARD", "features": ["Grand
+        Theft Auto Online (PS5\u2122)"]}, "isDefaultProduct": true, "isBestSelling":
+        false, "descriptions": [{"type": "LONG", "desc": "Includes Grand Theft Auto
+        Online. GTAV: Story Mode can be purchased separately. <br/><br/>Continue your
+        journey on PS5\u2122 and transfer your GTA Online characters and progression
+        to PS5\u2122 with a one-time migration.<br/><br/>Experience GTA Online, a
+        dynamic and ever-evolving online universe for up to 30 players, where you
+        can rise from street-level hustler to become a kingpin of your own criminal
+        empire. PlayStation\u00ae5 players can enjoy new high-performance vehicle
+        upgrades and improvements like the Career Builder as well as all GTA Online
+        gameplay upgrades, expansions, and content released since launch, ready to
+        enjoy solo or with friends. Pull off daring co-operative Heists, enter adrenaline-fueled
+        Stunt Races, compete in unique Adversary Modes, or hang out in social spaces
+        including nightclubs, arcades, penthouse parties, car meetups, and much more.
+        <br/><br/>GTA Online for PlayStation\u00ae5 also features all-new enhancements,
+        including: <br/><br/>\u2022\tEXCLUSIVE NEW CONTENT \u2014 Step into Hao\u2019s
+        Special Works at the Los Santos Car Meet, featuring elite new upgrades and
+        exclusive modifications. Then take these high-performance vehicles into HSW
+        races, new time trials, and more.<br/>\u2022\tTHE CAREER BUILDER \u2014 Get
+        started in GTA Online with the tools of the trade. Quickly choose from one
+        of four businesses \u2014 Biker, Executive, Nightclub Owner, or Gunrunner
+        \u2014 and select from properties, powerhouse vehicles, and weaponry to kick-start
+        your enterprise.<br/>\u2022\tNEW MENU DESIGN \u2014 Immediately access everything
+        GTA Online has to offer right from the Main Menu, including the latest and
+        most popular updates <br/>\u2022\tACCESS TO ALL CURRENT AND PREVIOUS UPDATES
+        \u2014 Dive into more than 40 massive updates with more to come, featuring
+        everything from the high-stakes hunt for Dr. Dre\u2019s missing music files
+        with Franklin Clinton in The Contract to the high-octane underground street
+        racing action of Los Santos Tuners; Heists on the lush tropical island of
+        Cayo Perico to the nightlife circuit of After Hours and The Diamond Casino
+        & Resort. All this and more available alongside a wide range of races, modes,
+        activities, and social spaces to enjoy solo or with friends \u2014 including
+        nightclubs, arcades, penthouse parties, car meetups, and much more<br/><br/>Plus,
+        all of the enhancements available on latest generation consoles bringing the
+        world of Los Santos and Blaine County in greater detail than ever before,
+        including:<br/><br/>\u2022\tSTUNNING VISUALS \u2014 Enhanced levels of fidelity
+        and performance with new graphics modes featuring up to 4K resolution, a frame
+        rate of up to 60 frames per second, HDR options, ray tracing, improved texture
+        quality, and more<br/>\u2022\tFASTER LOADING \u2014 Quicker access to the
+        action as the world of Los Santos and Blaine County load in faster than ever
+        before <br/>\u2022\tADAPTIVE TRIGGERS AND HAPTIC FEEDBACK \u2014 Feel every
+        moment through the DualSense\u2122 controller, from directional damage to
+        weather effects, rough road surfaces to explosions, and much more<br/>\u2022\tTEMPEST
+        3D AUDIO \u2014 Hear the sounds of the world with pinpoint precision: the
+        throttle of a stolen supercar, the rattle of neighboring gunfire, the roar
+        of a helicopter overhead, and more<br/>"}, {"type": "COMPATIBILITY_NOTICE",
+        "desc": "PS\u00a0Plus required for online play<br/>Supports up to 30 online
+        players with PS Plus<br/>In-game purchases optional<br/>Online play required<br/>Vibration
+        function and trigger effect supported (DualSense wireless controller)<br/>Remote
+        Play supported"}, {"type": "LEGAL", "desc": "<br><br>Online features require
+        an account and are subject to terms of service and applicable privacy policy
+        (playstationnetwork.com/terms-of-service & playstationnetwork.com/privacy-policy).
+        <br><br>Software subject to license (us.playstation.com/softwarelicense).
+        <br>", "metadata": {"downloadCloudFlag": "BOTH", "subType": "SCEA_TOS"}},
+        {"type": "LEGAL", "desc": "<br>You can download and play this content on the
+        main PS5 console associated with your account (through the \u201cConsole Sharing
+        and Offline Play\u201d setting) and on any other PS5 consoles when you login
+        with your same account.<br>", "metadata": {"downloadCloudFlag": "DOWNLOAD",
+        "subType": "SCEA_PS5_DRM"}}, {"type": "LEGAL", "desc": "<br/>\u00a9 2008\u20132022.
+        Rockstar Games, Rockstar North, Grand Theft Auto, GTA Five, Grand Theft Auto
+        Online, and R* are marks/logos/copyrights of Take-Two Interactive. Uses Bink
+        Video. \u00a9 1997\u20132022 by Epic Game Tools, Inc. This game includes Autodesk\u00ae
+        Scaleform\u00ae software, \u00a9 2013 Autodesk, Inc. All other marks and trademarks
+        are properties of their respective owners. All rights reserved.<br/>"}], "contentRating":
+        {"authority": "ESRB", "description": "ESRB Mature", "name": "ESRB_MATURE",
+        "url": "https://image.api.playstation.com/grc/images/ratings/hd/esrb/m.png",
+        "url4k": "https://image.api.playstation.com/grc/images/ratings/4k/esrb/m.png",
+        "descriptors": [{"description": "Blood and Gore", "name": "ESRB_BLOOD_AND_GORE"},
+        {"description": "Intense Violence", "name": "ESRB_INTENSE_VIOLENCE"}, {"description":
+        "Mature Humor", "name": "ESRB_MATURE_HUMOR"}, {"description": "Nudity", "name":
+        "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
+        {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
+        {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
+        "interactiveElements": []}, "media": {"videos": [{"id": "10427117", "url":
+        "https://vulcan.dl.playstation.net/img/rnd/202203/2115/Ov4Wa7uZST7SyVV8kAgUbS8y.mp4",
+        "hlsUrl": "https://vulcan.dl.playstation.net/ap/bm/cdba937f-e310-4798-a293-2633da3a61f2-l10vor03/master_avc.m3u8",
+        "hlsUrl4k": "https://vulcan.dl.playstation.net/ap/bm/cdba937f-e310-4798-a293-2633da3a61f2-l10vor03/master_hevc.m3u8",
+        "posters": ["https://image.api.playstation.com/vulcan/img/rnd/202203/2115/5WZd4yvNgJ80hrysrckNR6Op.png"],
+        "type": "PREVIEW"}, {"id": "10983933", "url": "https://vulcan.dl.playstation.net/img/rnd/202403/1817/32635bc8c1f1fcdf3c096d4138ecce6d123aa20ad1609f67.mp4",
+        "hlsUrl": "https://vulcan.dl.playstation.net/ap/bm/91f5e632-13bc-4bea-9185-7311982a69c0-ltx8lse4/master_avc.m3u8",
+        "hlsUrl4k": "https://vulcan.dl.playstation.net/ap/bm/91f5e632-13bc-4bea-9185-7311982a69c0-ltx8lse4/master_hevc.m3u8",
+        "posters": ["https://image.api.playstation.com/vulcan/img/rnd/202403/1817/2f24bad0c576d8c21856c97c7d6e821aa52863ad45b9cd3f.png"],
+        "type": "PREVIEW"}], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1714/RWdg9GkTDSgztsFVKuvvgVwt.jpg",
+        "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0302/tsPK3f1LykIBkCUxAEdPMfeZ.png",
+        "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0820/4OL8c6zeV95pA70XFmwQYvCj.png",
+        "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/YHqWG89UegirLGRyNIn8tmnv.jpg",
+        "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1515/tpPFgPeAv6YWMBUg51YyZcdv.jpg",
+        "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1515/4aX03Zu8ocLyP0bQui1AiKco.jpg",
+        "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1515/DogIYjDGyXPn1vI4a62P5XN3.jpg",
+        "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1515/WGP58ZYx9ZjS816Ksjm3fgNR.jpg",
+        "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1515/8kNkdvIIbW8YCoFQkv5tdVU5.jpg",
+        "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/mYn2ETBKFct26V9mJnZi4aSS.png",
+        "type": "MASTER"}]}, "genres": ["ACTION", "ADVENTURE"], "localizedGenres":
+        [{"value": "Action", "type": "ACTION"}, {"value": "Adventure", "type": "ADVENTURE"}],
+        "subGenres": ["N/A", "N/A"], "localizedSubGenres": [{"value": "NA", "type":
+        "N/A"}, {"value": "NA", "type": "N/A"}], "releaseDate": "2022-03-15T04:00:00Z",
+        "localizedReleaseDate": "03/15/2022", "synonyms": "Rockstar Games,GTA Online,GTA
+        V,GTA+,GTA Plus,Shark Cash Card,GTA$,Tarjeta Tibur\u00f3n,CashCard,\u0420\u043e\u043a\u0441\u0442\u0430\u0440
+        \u0433\u0435\u0439\u043c\u0441", "isRecommendableOnStore": true, "isSearchableOnStore":
+        true, "isInGameStore": false, "isPlaystationStore": true, "isPlatformRepresentative":
+        false, "isConsumable": false, "leadPublisherName": "Rockstar Games", "marketingStories":
+        [], "compatibilityNotices": [{"type": "NO_OF_NETWORK_PLAYERS_PS_PLUS", "value":
+        30}, {"type": "REMOTE_PLAY_SUPPORTED", "value": true}, {"type": "PS5_VIBRATION",
+        "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "PS5_TRIGGER_EFFECT",
+        "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "ONLINE_PLAY_MODE",
+        "value": "REQUIRED"}, {"type": "IN_GAME_PURCHASES", "value": "OPTIONAL"},
+        {"type": "STREAMING_SUPPORTED", "value": "ENABLED", "targetPlatforms": ["PS5"]}],
+        "storeFronts": ["PS5", "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"],
+        "revisionIds": {}, "targetPlatforms": ["PS5"], "skus": [{"id": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003",
+        "displayPrice": "$19.99", "price": 1999, "eligibilities": [], "type": "STANDARD",
+        "name": "Game", "entitlements": [{"id": "UP1004-PPSA03420_00-GTAONLINEDIGITAL",
+        "name": "Grand Theft Auto V", "applicationType": "STANDARD", "packageType":
+        "PSGD", "preorderPlaceholderFlag": false, "type": "UNIFIED", "subType": "REGULAR",
+        "spokenLanguages": ["en"], "screenLanguages": ["es", "zh", "fr", "ru", "de",
+        "pl", "it", "pt_BR", "en", "es_MX", "ko", "ch"], "packages": [{"playablePlatform":
+        "PS5", "size": 95945162752}], "streamingSupported": true, "featureType": "FULL_GAME"},
+        {"id": "UP1004-PPSA03420_00-PSTRACK000000000", "name": "Grand Theft Auto Online
+        (PS5\u2122) Tracker", "packageType": "PSTRACK", "preorderPlaceholderFlag":
+        false, "type": "UNIFIED", "subType": "REGULAR", "packages": [], "featureType":
+        "NOT_APPLICABLE"}], "chargeImmediatelyFlag": false, "storeFronts": ["PS5",
+        "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"], "contentCollections":
+        []}], "offers": {"osls": [], "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003",
+        "offerAvailability": []}]}, "starRating": {"total": "688413", "score": "4.52",
+        "count": [{"score": 1, "count": 47025}, {"score": 2, "count": 6942}, {"score":
+        3, "count": 32699}, {"score": 4, "count": 55980}, {"score": 5, "count": 545767}]},
+        "isTrending": false, "contentTypeId": 1}, "genres": ["ACTION", "ADVENTURE"],
+        "localizedGenres": [{"value": "Action", "type": "ACTION"}, {"value": "Adventure",
+        "type": "ADVENTURE"}], "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres":
+        [{"value": "Shoot ''Em Up", "type": "SHOOT_EM_UP"}, {"value": "NA", "type":
+        "N/A"}], "minimumAge": 17, "releaseDate": {"date": "2014-11-18T00:00:00Z",
+        "localizedDate": "11/17/2014", "type": "DAY_MONTH_YEAR"}, "isRecommendableOnStore":
+        true, "isSearchableOnStore": true, "storeFronts": ["WEB_STORE", "PS5", "PS4"],
+        "supportedStoreFronts": ["WEB_STORE", "PS5", "PS4"], "marketingStories": [],
+        "compatibilityNotices": [{"type": "NO_OF_NETWORK_PLAYERS", "value": 30}, {"type":
+        "NO_OF_NETWORK_PLAYERS_PS_PLUS", "value": 30}, {"type": "DUALSHOCK4_VIBRATION",
+        "value": true, "targetPlatforms": ["PS4"]}, {"type": "REMOTE_PLAY_SUPPORTED",
+        "value": true}, {"type": "PS5_VIBRATION", "value": "OPTIONAL", "targetPlatforms":
+        ["PS5"]}, {"type": "PS5_TRIGGER_EFFECT", "value": "OPTIONAL", "targetPlatforms":
+        ["PS5"]}, {"type": "ONLINE_PLAY_MODE", "value": "REQUIRED"}, {"type": "IN_GAME_PURCHASES",
+        "value": "OPTIONAL"}], "localizedMedia": {"defaultLanguage": "en-US", "metadata":
+        {"en-US": {"videos": [{"id": "10908545", "url": "https://vulcan.dl.playstation.net/img/rnd/202312/1411/5fa8f17c4c81cf21a277e64f8a4031eabd7a119700ae45db.mp4",
+        "hlsUrl": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_avc.m3u8",
+        "hlsUrl4k": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_hevc.m3u8",
+        "posters": ["https://image.api.playstation.com/vulcan/img/rnd/202312/1411/d0464983961065b9777f63354c675f21cd1f58bab031b481.png"],
+        "type": "PREVIEW"}], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0302/bZ1JTRXzoyl3hkcsloKcCgdB.jpg",
+        "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202011/2419/XFDZtpMiMpFaJLuo9azJK6Gl.png",
+        "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/K6mmm89oNII1iI1aqaClO0wh.png",
+        "type": "MASTER"}]}}}, "revisionIds": {"all": 1715195736775, "self": 1710535295308},
+        "contentRating": {"authority": "ESRB", "description": "ESRB Mature", "name":
+        "ESRB_MATURE", "url": "https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/esrb/m.png",
+        "descriptors": [{"description": "Blood and Gore", "name": "ESRB_BLOOD_AND_GORE"},
+        {"description": "Intense Violence", "name": "ESRB_INTENSE_VIOLENCE"}, {"description":
+        "Mature Humor", "name": "ESRB_MATURE_HUMOR"}, {"description": "Nudity", "name":
+        "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
+        {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
+        {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
+        "interactiveElements": []}, "starRating": {"total": "688413", "score": "4.52",
+        "count": [{"score": 1, "count": 47025}, {"score": 2, "count": 6942}, {"score":
+        3, "count": 32699}, {"score": 4, "count": 55980}, {"score": 5, "count": 545767}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -187,11 +370,12 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '5911'
+      - '5743'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 28 Nov 2022 07:42:39 GMT
+      - Sat, 11 May 2024 04:53:53 GMT
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:

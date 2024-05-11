@@ -40,15 +40,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:33 GMT
+      - Sat, 11 May 2024 04:53:48 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0240433375848003816
+      - 0255209356351508608
     status:
       code: 200
       message: OK

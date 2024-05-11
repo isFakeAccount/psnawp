@@ -28,7 +28,7 @@ interactions:
         false, "trophyType": "bronze", "trophyName": "American Dream", "trophyDetail":
         "GTA Online: Own an Apartment, Garage and an Insured Vehicle", "trophyIconUrl":
         "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png",
-        "trophyRare": 3, "trophyEarnedRate": "71.8", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "67.9", "earned": true, "earnedDateTime":
         "2022-03-15T13:34:38Z"}], "progress": 1, "earnedTrophies": {"bronze": 2, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2022-03-15T13:34:39Z"}]}]}'
@@ -42,9 +42,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:38 GMT
+      - Sat, 11 May 2024 04:53:52 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

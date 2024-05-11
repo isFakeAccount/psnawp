@@ -2,9 +2,9 @@ import inspect
 import os
 import time
 
+import psnawp_api
 import pytest
 
-import psnawp_api
 from tests.unit_tests import my_vcr
 
 

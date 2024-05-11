@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 from enum import Enum
-from typing import Optional, Iterator, Any
+from typing import Any, Iterator, Optional
 
 from attrs import define
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
 from psnawp_api.models.listing.listing_generator import ListingGenerator
 from psnawp_api.models.listing.pagination_arguments import PaginationArguments
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime, play_duration_to_timedelta
 from psnawp_api.utils.request_builder import RequestBuilder
 

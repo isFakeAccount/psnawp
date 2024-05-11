@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 05:23:24 GMT
+      - Sat, 11 May 2024 04:54:12 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,31 +74,31 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "hasTrophyGroups": true, "lastUpdatedDateTime":
+      string: '{"trophySetVersion": "01.07", "hasTrophyGroups": true, "lastUpdatedDateTime":
         "2020-11-28T22:55:19Z", "trophies": [{"trophyId": 0, "trophyHidden": false,
         "earned": true, "earnedDateTime": "2020-11-22T17:51:30Z", "trophyType": "platinum",
-        "trophyRare": 0, "trophyEarnedRate": "1.3"}, {"trophyId": 1, "trophyHidden":
+        "trophyRare": 0, "trophyEarnedRate": "1.0"}, {"trophyId": 1, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "86.1"}, {"trophyId": 2, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.8"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.7"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "49.1"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.7"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "35.4"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.5"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.2"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "29.1"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "22.7"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "14.1"}, {"trophyId": 7, "trophyHidden":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "10.7"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
-        "silver", "trophyRare": 1, "trophyEarnedRate": "5.6"}, {"trophyId": 8, "trophyHidden":
+        "silver", "trophyRare": 0, "trophyEarnedRate": "4.5"}, {"trophyId": 8, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-02-16T16:05:42Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "17.3"}, {"trophyId": 9, "trophyHidden":
+        "silver", "trophyRare": 1, "trophyEarnedRate": "13.4"}, {"trophyId": 9, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-19T18:01:53Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "14.2"}], "rarestTrophies":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "10.9"}], "rarestTrophies":
         [{"trophyId": 0, "trophyHidden": false, "earned": true, "earnedDateTime":
         "2020-11-22T17:51:30Z", "trophyType": "platinum", "trophyRare": 0, "trophyEarnedRate":
-        "1.3"}], "nextOffset": 10, "totalItemCount": 51}'
+        "1.0"}], "nextOffset": 10, "totalItemCount": 51}'
     headers:
       Cache-Control:
       - private
@@ -110,9 +109,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 05:23:24 GMT
+      - Sat, 11 May 2024 04:54:12 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -142,9 +142,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -164,9 +162,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 05:23:25 GMT
+      - Sat, 11 May 2024 04:54:12 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -196,7 +195,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "hasTrophyGroups": true, "trophies":
+      string: '{"trophySetVersion": "01.07", "hasTrophyGroups": true, "trophies":
         [{"trophyId": 0, "trophyHidden": false, "trophyType": "platinum", "trophyName":
         "Platinum Trophy", "trophyDetail": "Collect all other 50 Trophies for this
         Trophy", "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG",
@@ -238,9 +237,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 05:23:25 GMT
+      - Sat, 11 May 2024 04:54:12 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -272,31 +272,31 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "hasTrophyGroups": true, "lastUpdatedDateTime":
+      string: '{"trophySetVersion": "01.07", "hasTrophyGroups": true, "lastUpdatedDateTime":
         "2020-11-28T22:55:19Z", "trophies": [{"trophyId": 0, "trophyHidden": false,
         "earned": true, "earnedDateTime": "2020-11-22T17:51:30Z", "trophyType": "platinum",
-        "trophyRare": 0, "trophyEarnedRate": "1.3"}, {"trophyId": 1, "trophyHidden":
+        "trophyRare": 0, "trophyEarnedRate": "1.0"}, {"trophyId": 1, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "86.1"}, {"trophyId": 2, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.8"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.7"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "49.1"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "45.7"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "35.4"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "54.5"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.2"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "29.1"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "22.7"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "14.1"}, {"trophyId": 7, "trophyHidden":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "10.7"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
-        "silver", "trophyRare": 1, "trophyEarnedRate": "5.6"}, {"trophyId": 8, "trophyHidden":
+        "silver", "trophyRare": 0, "trophyEarnedRate": "4.5"}, {"trophyId": 8, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-02-16T16:05:42Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "17.3"}, {"trophyId": 9, "trophyHidden":
+        "silver", "trophyRare": 1, "trophyEarnedRate": "13.4"}, {"trophyId": 9, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-19T18:01:53Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "14.2"}], "rarestTrophies":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "10.9"}], "rarestTrophies":
         [{"trophyId": 0, "trophyHidden": false, "earned": true, "earnedDateTime":
         "2020-11-22T17:51:30Z", "trophyType": "platinum", "trophyRare": 0, "trophyEarnedRate":
-        "1.3"}], "nextOffset": 10, "totalItemCount": 51}'
+        "1.0"}], "nextOffset": 10, "totalItemCount": 51}'
     headers:
       Cache-Control:
       - private
@@ -307,9 +307,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Dec 2022 05:23:25 GMT
+      - Sat, 11 May 2024 04:54:13 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

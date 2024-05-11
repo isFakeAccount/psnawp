@@ -1,7 +1,7 @@
 import json
+from contextlib import suppress
 
 import vcr
-from contextlib import suppress
 
 
 def filter_response_information(response):
@@ -15,14 +15,21 @@ def filter_response_information(response):
     hide_params = ["access_token", "id_token", "refresh_token"]
     # vcr throws error if multipart form data is received as binary https://github.com/kevin1024/vcrpy/issues/521
     with suppress(UnicodeDecodeError):
-        if isinstance(response, dict):
-            response_body = response.get("body").get("string")
-            if response_body:
-                response_body = json.loads(response_body)
-                for param in hide_params:
-                    if response_body.get(param, None):
-                        response_body[param] = "REDACTED"
-                response["body"]["string"] = json.dumps(response_body).encode("utf-8")
+        if not isinstance(response, dict):
+            return response
+
+        response_body = response.get("body").get("string")
+        if not response_body:
+            return response
+
+        response_body = json.loads(response_body)
+        if isinstance(response_body, dict):
+            for param in hide_params:
+                if response_body.get(param, None):
+                    response_body[param] = "REDACTED"
+        response["body"]["string"] = json.dumps(response_body).encode("utf-8")
+        response["headers"]["Set-Cookie"] = "REDACTED"
+
     return response
 
 

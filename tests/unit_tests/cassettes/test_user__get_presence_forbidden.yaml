@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspOLcouLknNU9JRSkxOzi/NKwELmxmY
-        mxgbGpgZGphYWBiYmJqZmCrV1gIAAAD//wMAuno24EUAAAA=
+      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:56 GMT
+      - Sat, 11 May 2024 04:54:04 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,8 +74,9 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/6074310610488045645/basicPresences?type=primary
   response:
     body:
-      string: '{"error": {"referenceId": "46843868-6ef0-11ed-acdc-9521792d4775", "code":
-        2281486, "message": "Not permitted by access control"}}'
+      string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
+        "2024-02-19T01:15:19.445Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "PS5", "lastOnlineDate": "2024-02-19T01:15:19.445Z"}}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -91,20 +91,21 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '123'
+      - '205'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:57 GMT
+      - Sat, 11 May 2024 04:54:04 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0874670732302888891
+      - 0453887241818800365
     status:
-      code: 403
-      message: Forbidden
+      code: 200
+      message: OK
 version: 1

@@ -1,13 +1,13 @@
 import inspect
 
 import pytest
-
 from psnawp_api.core.psnawp_exceptions import (
-    PSNAWPIllegalArgumentError,
-    PSNAWPNotFound,
     PSNAWPBadRequest,
     PSNAWPForbidden,
+    PSNAWPIllegalArgumentError,
+    PSNAWPNotFound,
 )
+
 from tests.unit_tests import my_vcr
 
 

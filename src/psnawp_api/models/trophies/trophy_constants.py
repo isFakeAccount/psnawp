@@ -20,6 +20,13 @@ class PlatformType(Enum):
     PS5 = "PS5"
     PSPC = "PSPC"
 
+    @classmethod
+    def _missing_(cls, value: object) -> "PlatformType":
+        for member in cls:
+            if member.value == value:
+                return member
+        return cls.UNKNOWN
+
 
 class TrophyRarity(Enum):
     ULTRA_RARE = 0

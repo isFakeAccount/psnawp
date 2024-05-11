@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional, Literal, Iterator
+from typing import Any, Iterator, Literal, Optional
 
 from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
 from psnawp_api.models.trophies.trophy_group import (
@@ -8,7 +8,7 @@ from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummaryBuilder,
 )
 from psnawp_api.models.trophies.trophy_titles import TrophyTitles
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
 

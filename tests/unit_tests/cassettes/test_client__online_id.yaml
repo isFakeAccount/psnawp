@@ -30,17 +30,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 05:56:35 GMT
+      - Sat, 11 May 2024 04:53:43 GMT
       Server:
       - nginx
+      Set-Cookie: REDACTED
       X-CorrelationId:
-      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      - 46b6d2b7-840a-4c8d-af42-b85c1363e27f
       X-Psn-Correlation-Id:
-      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      - 46b6d2b7-840a-4c8d-af42-b85c1363e27f
       X-Psn-Request-Id:
-      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      - 46b6d2b7-840a-4c8d-af42-b85c1363e27f
       X-RequestId:
-      - d0507dca-f6e7-4c7e-b3da-959bdcd81b06
+      - 46b6d2b7-840a-4c8d-af42-b85c1363e27f
     status:
       code: 200
       message: OK
@@ -96,15 +97,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 05:56:36 GMT
+      - Sat, 11 May 2024 04:53:43 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0040568399800983657
+      - 0748937868189701236
     status:
       code: 200
       message: OK

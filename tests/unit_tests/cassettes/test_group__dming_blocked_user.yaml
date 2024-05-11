@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUsosdkvMTnVMTs4vzStR0lFKhLDAckYG
-        ZmZG5samBsbGluaGhkZmZuZKtbUAAAAA//8DABhg7r9KAAAA
+      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:48 GMT
+      - Sat, 11 May 2024 04:53:59 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -77,7 +76,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"error": {"referenceId": "4157c215-6ef0-11ed-8529-b7cdadb1eda8", "code":
+      string: '{"error": {"referenceId": "7ad8fbcc-0f52-11ef-9b43-a30ddc315fa5", "code":
         2286592, "message": "Request is rejected due to all targets'' settings"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -93,9 +92,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:48 GMT
+      - Sat, 11 May 2024 04:53:59 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

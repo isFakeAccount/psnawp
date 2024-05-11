@@ -2,10 +2,10 @@ import inspect
 import os
 import re
 
-import pytest
-
 import psnawp_api
+import pytest
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError, PSNAWPNotFound
+
 from tests.unit_tests import my_vcr
 
 

@@ -5,10 +5,10 @@ import requests
 
 from psnawp_api.core.authenticator import Authenticator
 from psnawp_api.core.psnawp_exceptions import (
-    PSNAWPNotFound,
-    PSNAWPForbidden,
     PSNAWPBadRequest,
+    PSNAWPForbidden,
     PSNAWPNotAllowed,
+    PSNAWPNotFound,
     PSNAWPServerError,
     PSNAWPUnauthorized,
 )

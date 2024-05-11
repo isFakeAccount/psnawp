@@ -21,29 +21,27 @@ interactions:
     uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
   response:
     body:
-      string: '{"accountId": "8520698476712646544", "accountDevices": [{"deviceId":
-        "50535fdf6f67cbdc35c06c44d31c7674167b7c1316a5d1891a92a538c234d1e819f6", "deviceType":
-        "PS4", "activationType": "PSN_GAME_V3", "activationDate": "2021-02-05T20:11:27.815Z",
-        "accountDeviceVector": "0ibUHDSN/uu37z0K/ZJnAw"}]}'
+      string: '{"accountId": "2721516955383551246"}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '279'
+      - '35'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:09 GMT
+      - Sat, 11 May 2024 04:53:43 GMT
       Server:
       - nginx
+      Set-Cookie: REDACTED
       X-CorrelationId:
-      - 63680295-9576-4887-b73f-10b618dfaead
+      - 6a94f8cc-e188-44ae-83a7-fd8a4052e0c1
       X-Psn-Correlation-Id:
-      - 63680295-9576-4887-b73f-10b618dfaead
+      - 6a94f8cc-e188-44ae-83a7-fd8a4052e0c1
       X-Psn-Request-Id:
-      - 63680295-9576-4887-b73f-10b618dfaead
+      - 6a94f8cc-e188-44ae-83a7-fd8a4052e0c1
       X-RequestId:
-      - 63680295-9576-4887-b73f-10b618dfaead
+      - 6a94f8cc-e188-44ae-83a7-fd8a4052e0c1
     status:
       code: 200
       message: OK

@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "36616a86-73a7-11ed-8bcb-e3f36c443fc9", "code":
+      string: '{"error": {"referenceId": "754b51e4-0f52-11ef-acfa-1196158308ec", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -31,9 +31,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:42:32 GMT
+      - Sat, 11 May 2024 04:53:50 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -63,8 +64,9 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"trophySetVersion": "01.03", "trophyTitleName": "RESIDENT EVIL 2",
-        "trophyTitleDetail": "RESIDENT EVIL 2", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG",
+      string: '{"npServiceName": "trophy", "npCommunicationId": "NPWR15179_00", "trophySetVersion":
+        "01.04", "trophyTitleName": "RESIDENT EVIL 2", "trophyTitleDetail": "RESIDENT
+        EVIL 2", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG",
         "trophyTitlePlatform": "PS4", "definedTrophies": {"bronze": 30, "silver":
         10, "gold": 4, "platinum": 1}, "trophyGroups": [{"trophyGroupId": "default",
         "trophyGroupName": "RESIDENT EVIL 2", "trophyGroupDetail": "RESIDENT EVIL
@@ -82,13 +84,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1386'
+      - '1446'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:42:33 GMT
+      - Sat, 11 May 2024 04:53:50 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -120,7 +123,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "36d73734-73a7-11ed-a2eb-e5acef5ce37c", "code":
+      string: '{"error": {"referenceId": "758fd4b1-0f52-11ef-bb3f-3b8581168435", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -130,9 +133,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:42:33 GMT
+      - Sat, 11 May 2024 04:53:50 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

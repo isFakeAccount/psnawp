@@ -27,7 +27,7 @@ interactions:
         "hasTrophyGroups": true, "rarestTrophies": [{"trophyId": 44, "trophyHidden":
         true, "trophyType": "gold", "trophyName": "Run Astro Run!", "trophyDetail":
         "Got a total Speed Run time of 7 minutes or under.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/77cba17d-c338-41c6-a3e5-4a6687d8730d.png",
-        "trophyRare": 0, "trophyEarnedRate": "4.7", "earned": true, "earnedDateTime":
+        "trophyRare": 0, "trophyEarnedRate": "3.7", "earned": true, "earnedDateTime":
         "2020-12-20T08:06:44Z"}], "progress": 100, "earnedTrophies": {"bronze": 27,
         "silver": 13, "gold": 5, "platinum": 1}, "definedTrophies": {"bronze": 27,
         "silver": 13, "gold": 5, "platinum": 1}, "lastUpdatedDateTime": "2020-12-20T08:06:45Z"}]}]}'
@@ -41,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:40 GMT
+      - Sat, 11 May 2024 04:53:53 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -73,8 +74,9 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR20188_00/trophyGroups?npServiceName=trophy2
   response:
     body:
-      string: '{"trophySetVersion": "01.40", "trophyTitleName": "ASTRO\u2019s PLAYROOM",
-        "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/035a02db-e64f-4572-8653-4a3db37fe2f6.png",
+      string: '{"npServiceName": "trophy2", "npCommunicationId": "NPWR20188_00", "trophySetVersion":
+        "01.40", "trophyTitleName": "ASTRO\u2019s PLAYROOM", "trophyTitleIconUrl":
+        "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/035a02db-e64f-4572-8653-4a3db37fe2f6.png",
         "trophyTitlePlatform": "PS5", "definedTrophies": {"bronze": 27, "silver":
         13, "gold": 5, "platinum": 1}, "trophyGroups": [{"trophyGroupId": "default",
         "trophyGroupName": "ASTRO\u2019s PLAYROOM", "trophyGroupIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/035a02db-e64f-4572-8653-4a3db37fe2f6.png",
@@ -88,13 +90,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '816'
+      - '877'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:40 GMT
+      - Sat, 11 May 2024 04:53:54 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:

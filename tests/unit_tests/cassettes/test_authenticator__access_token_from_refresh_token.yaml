@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: GET
     uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&scope=psn%3Amobile.v2.core+psn%3Aclientapp&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code
   response:
@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Wed, 14 Dec 2022 05:50:09 GMT
+      - Sat, 11 May 2024 04:53:40 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.JEQ6ST&cid=5f45b193-5ea4-48bc-9b4a-5280ac0d9cc3
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.sPb5dY&cid=fc6f645e-d6f0-41fb-b167-f5425d425717
       Server:
       - nginx
       Set-Cookie:
-      - _abck=754AE4A2FDB33799F50DDDFEDB6D3646~-1~YAAQSjovF26SuseEAQAAl+UuDwk4IozVYfyl6A0dgmp4Q7b9nY8HHB4ux2RUaAXVNrxPx7Hubjdkhd2IT/GrQ0MMwVR/t+MMfHcH04yymLvKdP7e4LXKSkGEnoIEDbblqJaaBPMtaiZPCB7XqY/IbN07ixJSqGAjPwDOX1r6G7Q+L+RvubDyLVd1E5cTesYJJxrfm4uvLIoPVu5mKrx7z5Fc2pFQit2jBhr1kikOWUYEJl/I6Iyh2G8LHw599kO2kJJs6CP865bSHPNCfeS1y0BWnaCWc/59r3GitZGJuMqZK3UBXghuGBF3rClQSiY9RydS3okjOmE4YZ5Nig+9GINTehNQYNgaUBYPVw==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Wed, 21 Dec 2022 05:50:09 GMT; Max-Age=604800;
+      - _abck=4DD60ADE3D681F369CA47AA631F9BA53~-1~YAAQ7CY+F2nZBkuPAQAApeb/ZQtRqwCRYU5Aqhg6r4WTSxmHffoCyEcpqsrNPKCFGh1RGbjY3TEOkXX1anXJkTdkio6L57bbFU46E1lGHXwLRHQYG97O4w9psAVRLdZvol0FctP6E07rQ/joJ8P1rVEJh47negVXPDg1exLOHvQ6ytGxYTE8oIKzoCbRHAFDcHCSrn0LmLSE58TKmX2kaGLjt9sc09aEt6TivWCdgjF5UBhQM1BytSXgtfKN00gtnBL5jb/C8Qia0d40t9KVk5UtRaP8rqMfcRY8amjLCxH3KfwaIEV/WXUY+ZP2hXf20uws/GqS2DhR5zGHpezToS3m+u4a6O6rTZVLIsAEUN1Mb4qrHoMh9EddJIqgwEw/eNCdS7FDli/0MhSMtQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Sat, 18 May 2024 04:53:40 GMT; Max-Age=604800;
         Secure
-      - bm_sz=0B1C7F5549BF5E2F9BD1C34246F8DE52~YAAQSjovF2+SuseEAQAAl+UuDxKW6nY4mTUjOI9YRMThiytTJHmehxh354sJOVNXvmY4ABdlPGycxS6dDzgBL/4n/4CV9LqaXb83tx5oCttTdcjYo6nlzN8HK7P8tYAMSSAVXBnhYoaYVzjliA5HyM3ykUszSfr4EFjesfW8r0oOo2Fb0vEA9E4kPOYZOO8nxswSpaQFbLDePL5NWVpQ2rzULzfCunn4QZApMEYu2m6KtZlnuwmjIMaj/84OYiLqFy+q4guFFBoqRFVNGGBZm3S4iXWSVmbB5SqL7+UPKZW2+i1BrGfEuYfsldmNfCYjxWxvnOiROiY56U+GItC/3avzOVA1LIqy6ojFVF2jYJgNo+g+02q1Fp4aEhc=~3553347~4343353;
-        Domain=.sony.com; Path=/; Expires=Wed, 14 Dec 2022 09:50:09 GMT; Max-Age=14400
+      - bm_sz=FA75A52EED2515606CB3CA3A27813740~YAAQ7CY+F2rZBkuPAQAApeb/ZRcOXOv3/ETQM02+gAe8DGXNfULEfmEfQxtzzC4OqCBnHoW34vV+I61OpFuBjl7zLd9cQce00GSyary+ph5bt/t2j5Axb+mFDLTrJX27XA3E6NXP7RSePtSuPXMsq8qtKP3/aKz4G0Th7Pvbtu0rnrAlcr/s0vJB46kKh/2DM0h1SDv8uaxthBScFEtRhH1+a6lFcmX33g4fglYe9m9dOGurU0QkjgeVfYMu1xXzySFO96Thq/YvCzSI12XAZnz+z+ryOiGcF2GhD0slFYmsdX7+7Q9GjuTUVqAjw0ld+dXe3iKJQ7KP1aVf4ozfjygvDs2SsPO5SBGQus+fgFSMXrzk/cra+vuvoh/umvHHyfDpFfmmgYFY3xNwStmtB/HjhS0=~3486773~3683888;
+        Domain=.sony.com; Path=/; Expires=Sat, 11 May 2024 08:53:40 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 5f45b193-5ea4-48bc-9b4a-5280ac0d9cc3
+      - fc6f645e-d6f0-41fb-b167-f5425d425717
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - 5f45b193-5ea4-48bc-9b4a-5280ac0d9cc3
+      - fc6f645e-d6f0-41fb-b167-f5425d425717
       X-Psn-Request-Id:
-      - 594af9675325e1cbd903ed437e995258
+      - cc03d9f939f77ca09166791b86af52d0
       X-RequestId:
-      - 594af9675325e1cbd903ed437e995258
+      - cc03d9f939f77ca09166791b86af52d0
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -69,7 +69,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://ca.account.sony.com/api/authz/v3/oauth/token
   response:
@@ -83,29 +83,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3690'
+      - '3998'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 14 Dec 2022 05:50:10 GMT
+      - Sat, 11 May 2024 04:53:40 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - _abck=A456ABAE1B7612F0A3B7554413EB86D5~-1~YAAQSjovF3mSuseEAQAA/+YuDwmhhl0mbm6v/mQAIRPLbvfQrQGsSViaFGb/dnQAo+tQr1sBCxkKKbDjD0eYXw/Bfkqqaw7UUdtFfpaJ/RQ0WaaJ3YgILl4JNYNX9aDAndopCJNMUYtGc1Og++eB06sPC1CM5KsJFhqVCCv1Hkpq9Dka2K9PN7Ef7fDa3wA2ZqW5R7+T5FmC832a9JjTRbDouosp5rIFPaiwjnelf6YC7KhF17OgGYyEz7bx4YfhHQuXD7R9AEG1MJVR0oqmblcnGxsb8j4zrxUDgMhjvycXIpGRoX1qahPUd/CT98vvvvqlIeSPhJvc8RxY8UrimUP93AVDngvWPqUcyQ==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Wed, 21 Dec 2022 05:50:10 GMT; Max-Age=604800;
-        Secure
-      - bm_sz=C3AA0E84C92D64254567D4D274E4CB29~YAAQSjovF3qSuseEAQAA/+YuDxLhPP3SfKXjDV5AkU2lBLIHJf8FX6w1dL5gQ73hQAE1SIlgPJlijMNiiGodrT5ug9eNXcrf0M3s5sxomCvnTtiYmgA0V05ikjR3jJt42OuBb/qXLQ8tEGL/1KyeKvq7C4cKAoAt3TzCCnnSu/mC1ErMt/mpeZms78e+kmHsu6hTEdwVGRoLR6oCuWRhWofyZ1DS5SqgIotkVlVUeF/v56PlqYVjnFY5QSf28axw2L2f4o/xDbg4dv3ZDqq5c94yLSZP3hdYHmM/f5LCJKbVtZIUunzWkUj/Qs+Utz5kCjCbwAr8p4h5WR2KM45CyVl2EaDszt8CSnt4xXI5wD0/d3QGGHyN8ZZrZCw=~3753271~4600113;
-        Domain=.sony.com; Path=/; Expires=Wed, 14 Dec 2022 09:50:10 GMT; Max-Age=14400
+      Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - eebee521-bb94-49e4-91d2-6fa25d8afed0
+      - 621b250a-2720-44ae-8e9c-d436c6c7bff4
       X-Psn-Correlation-Id:
-      - eebee521-bb94-49e4-91d2-6fa25d8afed0
+      - 621b250a-2720-44ae-8e9c-d436c6c7bff4
       X-Psn-Request-Id:
-      - 614ab56d42e5e631cab2bfca307901e5
+      - a3476319ae3ac4b8b0d1b40c2b03298c
       X-RequestId:
-      - 614ab56d42e5e631cab2bfca307901e5
+      - a3476319ae3ac4b8b0d1b40c2b03298c
     status:
       code: 200
       message: OK
@@ -123,7 +118,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://ca.account.sony.com/api/authz/v3/oauth/token
   response:
@@ -137,29 +132,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3690'
+      - '3998'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 14 Dec 2022 05:50:10 GMT
+      - Sat, 11 May 2024 04:53:41 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - _abck=23511E6D78FEA8614FD9487540FCF2A9~-1~YAAQSjovF4mSuseEAQAAhOguDwkjvvHPN3DVjLW5fa40t/b6jf+fqn3lk627oDZOfy74KAJy277ydiaVpWoc0IGmOh9cQzsRKqffhtOva2RDpPTDF7Q4QP3dGnaKT0TI9sJt1kxaSUfVcdhGBfNCw4RkQOg3vzIXpKBR+tIGhvT8oC5oRNWWgxjmVNCzIhusuxu5X7yiBYncCz7WfVmZNkPaVFE+0z8u85eJqm6HI9nNl4qCvG1akFAlRe9UEzXMyKZT/aXAwEQr4882uYISho/bDPXE8HT0KhCb8JlaucxwNl7iIyoDYzyes3O/bAInmKKuGVqUi+YsP5PCEPiKv8H/V9JQUzt7ttbMPA==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Wed, 21 Dec 2022 05:50:10 GMT; Max-Age=604800;
-        Secure
-      - bm_sz=CAAC7AFF221DC636C352A9408C864248~YAAQSjovF4qSuseEAQAAhOguDxI92Fu8MBefXCquEmX4e9PDpOmJPO6vIJVv94hB9FRuGEpxS3yakW711qBOZlJJPGt8N2IFfDC1qZRdTIPC1CTScJ3pMvpGrt0p/XAMZiBlT5wRm1YIDBHZsR3xV6fleWI23nQ02uuGcN/R4MetPQwgh8aTVwcZY4s9vgAXH3sf84CgMnZTF/ElnFerWxKNG0xRCaNMMWCao56uBaezGVSOtkf7JIrWPU46QL/LzEqEiA6xZOB/DMqOcaV6t06XR6UyOLgFywZTRGPvNe25j/9h/sUZVk0dO97GcK1kUDD5WbJn1gc61BSn5AHPo40yHHawzhKGKb0+xiMyEBdyHN+XLBRQQ5vOigg=~3753271~4600113;
-        Domain=.sony.com; Path=/; Expires=Wed, 14 Dec 2022 09:50:10 GMT; Max-Age=14400
+      Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - f96b2406-00a7-42de-8995-c2dbe78593a4
+      - a3fe8b76-6fff-4d10-8800-b692822f61cd
       X-Psn-Correlation-Id:
-      - f96b2406-00a7-42de-8995-c2dbe78593a4
+      - a3fe8b76-6fff-4d10-8800-b692822f61cd
       X-Psn-Request-Id:
-      - 4871abb8014cc6c1785418e50dbc11cc
+      - 07c12c16baca66061a3e1664ce609906
       X-RequestId:
-      - 4871abb8014cc6c1785418e50dbc11cc
+      - 07c12c16baca66061a3e1664ce609906
     status:
       code: 200
       message: OK
@@ -194,23 +184,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 14 Dec 2022 05:50:11 GMT
+      - Sat, 11 May 2024 04:53:41 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - _abck=9ECD1574D39F4BF0C4A41A6B3C24476B~-1~YAAQmzgvFwpsKQWFAQAAP+ouDwlDXOW5436hRzAjREcmR4bIm3D1BiLks+6KbOkZV4L2Q1ee6mvix1Zj4r57/xCEsivgAfkxHG2WvRjuzlhwGoVXp/2SqmGsam/XppgVgoaplUU+VU7b14E6+JXjyf6X4eqIRZ6ovzgas3hrFeRGv2keNlX8dRnFZAwrGdy6Zlhn/qqVuu6tLE4k4blQ/DSM0XAUwfi+/b5eMZhAcxu/dnUJyFv7s63Odk5hrUJjN7v4JvGPeEzirR+tu8CSuUu8HJqZGfXRwsCavc8NjUzscf2lVcf4eZtbnGMXtkmevesvJWjyD1LbAWmSLZFUHUaENF1u2lAAlKxH9UaxvSAgIXz/hmVp3MH7o8jCaTpLo53pYw3+5mrI9+dm~-1~-1~-1;
-        Domain=.playstation.com; Path=/; Expires=Wed, 21 Dec 2022 05:50:11 GMT; Max-Age=604800;
-        Secure
-      - bm_sz=233439DCFF9F77A1E6C5BAA0F264A6DF~YAAQmzgvFwtsKQWFAQAAP+ouDxLQwePsadc4Aq1YCurkWyisGe4soK8Az6TrlZo4HkP+o5verx46ckhZIe9nANCu/ZH0mY4BrfqP+CgM3CRG5Iu3IHEXYyIGCyjOQn4b/5DtFPHD2UJz9ENLYRZKGEuzk8rg37Wr7j+TFOpvS5O3sXQ/SdDWh89hclpJI0wxaEhpaVAM4IJjpS6QInvPexqogPYjK+6sGqyiMw8MCKyU48Z4jNaekcVB9tWe3pp4VHnzYQWxTH9LarDh3Y0ts95suq2NqSIIpHx1GDwcpwz0OeBRo21mNgD5gcXsyxLLW4fqt/3FSlzZ9elW0OFdFJ+o9kxXAE0H/Bvi1jJpDI3dK19lrQ3KxIa+eit0Nw61g4RpZ3lUw7VPIgJaKoPiiKwY~4605233~4538931;
-        Domain=.playstation.com; Path=/; Expires=Wed, 14 Dec 2022 09:50:10 GMT; Max-Age=14399
+      Set-Cookie: REDACTED
       X-CorrelationId:
-      - 54545de8-099c-44f6-a091-dae4475d573a
+      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
       X-Psn-Correlation-Id:
-      - 54545de8-099c-44f6-a091-dae4475d573a
+      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
       X-Psn-Request-Id:
-      - 54545de8-099c-44f6-a091-dae4475d573a
+      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
       X-RequestId:
-      - 54545de8-099c-44f6-a091-dae4475d573a
+      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
     status:
       code: 200
       message: OK
@@ -266,15 +251,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 14 Dec 2022 05:50:11 GMT
+      - Sat, 11 May 2024 04:53:41 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0252709836182302370
+      - 0120747179002047282
     status:
       code: 200
       message: OK

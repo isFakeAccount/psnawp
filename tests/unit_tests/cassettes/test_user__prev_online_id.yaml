@@ -21,10 +21,8 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/EvangelionKills/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAETMsQqAIBCA4Xe5ucFITdoboqFnELtCPM4wbQnfvWhp/j/+G44UN08Iww2RyTNO
-        KwwwXpZ3JB959kQnNGCdi4XzV7XoZdcK3QppjJBKS/UKV1JCzst/CZjCmZGh1gcAAP//AwCn1lYO
-        aQAAAA==
+      string: '{"profile": {"onlineId": "EvangelionKills", "accountId": "6074310610488045645",
+        "currentOnlineId": "kerksten"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -44,9 +42,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:53 GMT
+      - Sat, 11 May 2024 04:54:02 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:

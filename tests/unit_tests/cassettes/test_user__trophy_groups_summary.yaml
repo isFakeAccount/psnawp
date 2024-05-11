@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 05:20:19 GMT
+      - Sat, 11 May 2024 04:54:16 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "hiddenFlag": false, "progress": 83,
+      string: '{"trophySetVersion": "01.07", "hiddenFlag": false, "progress": 77,
         "earnedTrophies": {"bronze": 38, "silver": 15, "gold": 1, "platinum": 1},
         "lastUpdatedDateTime": "2020-11-28T22:55:19Z", "trophyGroups": [{"trophyGroupId":
         "default", "progress": 100, "earnedTrophies": {"bronze": 34, "silver": 15,
@@ -84,20 +83,23 @@ interactions:
         0, "gold": 0, "platinum": 0}, "lastUpdatedDateTime": "2020-11-28T22:55:16Z"},
         {"trophyGroupId": "002", "progress": 0, "earnedTrophies": {"bronze": 0, "silver":
         0, "gold": 0, "platinum": 0}}, {"trophyGroupId": "003", "progress": 0, "earnedTrophies":
-        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}]}'
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}, {"trophyGroupId": "004",
+        "progress": 0, "earnedTrophies": {"bronze": 0, "silver": 0, "gold": 0, "platinum":
+        0}}]}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '687'
+      - '787'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 05:20:19 GMT
+      - Sat, 11 May 2024 04:54:16 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -127,9 +129,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -149,9 +149,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 05:20:19 GMT
+      - Sat, 11 May 2024 04:54:16 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -181,9 +182,10 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "trophyTitleName": "Fallout 76", "trophyTitleDetail":
-        "Fallout 76", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
-        "trophyTitlePlatform": "PS4", "definedTrophies": {"bronze": 47, "silver":
+      string: '{"npServiceName": "trophy", "npCommunicationId": "NPWR15509_00", "trophySetVersion":
+        "01.07", "trophyTitleName": "Fallout 76", "trophyTitleDetail": "Fallout 76",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
+        "trophyTitlePlatform": "PS4", "definedTrophies": {"bronze": 53, "silver":
         18, "gold": 1, "platinum": 1}, "trophyGroups": [{"trophyGroupId": "default",
         "trophyGroupName": "Fallout 76", "trophyGroupDetail": "Fallout 76", "trophyGroupIconUrl":
         "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
@@ -196,20 +198,24 @@ interactions:
         "definedTrophies": {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}},
         {"trophyGroupId": "003", "trophyGroupName": "The Pitt", "trophyGroupDetail":
         "The Pitt", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/10CCAE41F3E3147E655BD0BA904371DFE5E95B09.PNG",
-        "definedTrophies": {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}}]}'
+        "definedTrophies": {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}},
+        {"trophyGroupId": "004", "trophyGroupName": "Atlantic City", "trophyGroupDetail":
+        "Atlantic City", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/5C1F67981CBD31F9EB0FCFF50E0310C006F5C50A.PNG",
+        "definedTrophies": {"bronze": 6, "silver": 0, "gold": 0, "platinum": 0}}]}'
     headers:
       Cache-Control:
       - max-age=300
       Connection:
       - keep-alive
       Content-Length:
-      - '1659'
+      - '2045'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 05:20:20 GMT
+      - Sat, 11 May 2024 04:54:16 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -241,7 +247,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"trophySetVersion": "01.05", "hiddenFlag": false, "progress": 83,
+      string: '{"trophySetVersion": "01.07", "hiddenFlag": false, "progress": 77,
         "earnedTrophies": {"bronze": 38, "silver": 15, "gold": 1, "platinum": 1},
         "lastUpdatedDateTime": "2020-11-28T22:55:19Z", "trophyGroups": [{"trophyGroupId":
         "default", "progress": 100, "earnedTrophies": {"bronze": 34, "silver": 15,
@@ -250,20 +256,23 @@ interactions:
         0, "gold": 0, "platinum": 0}, "lastUpdatedDateTime": "2020-11-28T22:55:16Z"},
         {"trophyGroupId": "002", "progress": 0, "earnedTrophies": {"bronze": 0, "silver":
         0, "gold": 0, "platinum": 0}}, {"trophyGroupId": "003", "progress": 0, "earnedTrophies":
-        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}]}'
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}, {"trophyGroupId": "004",
+        "progress": 0, "earnedTrophies": {"bronze": 0, "silver": 0, "gold": 0, "platinum":
+        0}}]}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '687'
+      - '787'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 05:20:20 GMT
+      - Sat, 11 May 2024 04:54:17 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

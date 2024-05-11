@@ -1,8 +1,8 @@
 import inspect
 
 import pytest
-
 from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound
+
 from tests.unit_tests import my_vcr
 
 

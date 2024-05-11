@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Iterator, Optional, Literal
+from typing import Any, Iterator, Literal, Optional
 
 from psnawp_api.models.group import Group
 from psnawp_api.models.listing.pagination_arguments import PaginationArguments
@@ -11,9 +11,9 @@ from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummaryBuilder,
 )
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
-from psnawp_api.models.trophies.trophy_titles import TrophyTitles, TrophyTitle
+from psnawp_api.models.trophies.trophy_titles import TrophyTitle, TrophyTitles
 from psnawp_api.models.user import User
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
 

@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/VaultTec-Co/profiles
   response:
     body:
-      string: '{"error": {"referenceId": "441497c1-6ef0-11ed-bb99-c774d443d076", "code":
+      string: '{"error": {"referenceId": "7cb2c432-0f52-11ef-ad30-03243f6124e3", "code":
         2281473, "message": "Bad Request (path: accountId)"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -41,15 +41,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:53 GMT
+      - Sat, 11 May 2024 04:54:02 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0732626812247996653
+      - 0587181653680808629
     status:
       code: 400
       message: Bad Request

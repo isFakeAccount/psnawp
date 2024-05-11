@@ -3,8 +3,8 @@
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
 [![PyPI version](https://badge.fury.io/py/psnawp.svg)](https://badge.fury.io/py/psnawp)
-[![Downloads](https://static.pepy.tech/badge/psnawp)](https://pepy.tech/project/psnawp)
-[![python-logo](https://img.shields.io/badge/python-3.8_|_3.9_|_3.10_|_3.11-blue.svg)](https://www.python.org/)
+[![Downloads](https://static.pepy.tech/badge/psnawp)](https://www.pepy.tech/projects/psnawp)
+[![python-logo](https://img.shields.io/badge/python-3.9_|_3.10_|_3.11_|_3.12-blue.svg)](https://www.python.org/)
 [![pytest](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest.yaml)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
@@ -114,4 +114,4 @@ This project was not intended to be used for spam, abuse, or anything of the sor
 
 ## Credit
 
-This project contains code from PlayStationNetwork::API and PSN-PHP Wrapper that was translated to Python. See more in [LICENSE](LICENSE.md)
+This project contains code from PlayStationNetwork::API and PSN-PHP Wrapper that was translated to Python. See more in [LICENSE](LICENSE.md#Licenses)

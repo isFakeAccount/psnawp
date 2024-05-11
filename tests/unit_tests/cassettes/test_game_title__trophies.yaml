@@ -28,7 +28,7 @@ interactions:
         false, "trophyType": "bronze", "trophyName": "American Dream", "trophyDetail":
         "GTA Online: Own an Apartment, Garage and an Insured Vehicle", "trophyIconUrl":
         "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png",
-        "trophyRare": 3, "trophyEarnedRate": "71.8", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "67.9", "earned": true, "earnedDateTime":
         "2022-03-15T13:34:38Z"}], "progress": 1, "earnedTrophies": {"bronze": 2, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2022-03-15T13:34:39Z"}]}]}'
@@ -42,9 +42,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:39 GMT
+      - Sat, 11 May 2024 04:53:53 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -264,10 +265,12 @@ interactions:
         platinum medals across Heist Setups and Finales.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/a4de49db-bdb6-4bd1-93b4-623c64c856f2.png",
         "trophyGroupId": "001"}, {"trophyId": 60, "trophyHidden": false, "trophyType":
         "bronze", "trophyName": "Vinewood Visionary", "trophyDetail": "Create and
-        export a video using the Rockstar Editor.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/a9e1a4dc-0eeb-4fa2-9ff3-5a9f60fda39c.png",
+        export a video using the Rockstar Editor or enter Director Mode 5 times.",
+        "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/a9e1a4dc-0eeb-4fa2-9ff3-5a9f60fda39c.png",
         "trophyGroupId": "002"}, {"trophyId": 61, "trophyHidden": false, "trophyType":
         "silver", "trophyName": "Majestic", "trophyDetail": "Create and export 10
-        videos using the Rockstar Editor.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/f562afb6-2620-4d3c-be6b-d4172c3d6eb6.png",
+        videos using the Rockstar Editor or enter Director Mode 10 times.", "trophyIconUrl":
+        "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/f562afb6-2620-4d3c-be6b-d4172c3d6eb6.png",
         "trophyGroupId": "002"}, {"trophyId": 62, "trophyHidden": false, "trophyType":
         "bronze", "trophyName": "Humans of Los Santos", "trophyDetail": "Unlock all
         Special Characters and enter Director Mode as an actor from this category.",
@@ -329,13 +332,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '23797'
+      - '23860'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:40 GMT
+      - Sat, 11 May 2024 04:53:53 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:

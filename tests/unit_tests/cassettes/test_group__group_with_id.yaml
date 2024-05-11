@@ -41,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:43 GMT
+      - Sat, 11 May 2024 04:53:56 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -74,13 +75,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1669621362692", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1715403236239", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1669621362692", "latestMessage": {"messageUid": "1#427423068849198", "messageType":
+        "1715403236239", "latestMessage": {"messageUid": "1#439143228477424", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp":
-        "1669621362692", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#427423068849198"}, "members": [{"accountId":
+        "1715403236239", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439143228477424"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -96,13 +97,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '795'
+      - '790'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:44 GMT
+      - Sat, 11 May 2024 04:53:56 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -133,13 +135,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1669621362692", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1715403236239", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1669621362692", "latestMessage": {"messageUid": "1#427423068849198", "messageType":
+        "1715403236239", "latestMessage": {"messageUid": "1#439143228477424", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp":
-        "1669621362692", "sender": {"accountId": "8520698476712646544", "onlineId":
-        "VaultTec_Trading"}}, "readMessageUid": "1#427423068849198"}, "members": [{"accountId":
+        "1715403236239", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439143228477424"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
         {"isMute": false}}'
@@ -155,13 +157,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '795'
+      - '790'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:44 GMT
+      - Sat, 11 May 2024 04:53:57 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -193,7 +196,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages
   response:
     body:
-      string: '{"messageUid": "1#427423069380014", "createdTimestamp": "1669621364765"}'
+      string: '{"messageUid": "1#439143228780571", "createdTimestamp": "1715403237424"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -210,9 +213,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:44 GMT
+      - Sat, 11 May 2024 04:53:57 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, cast, Iterator, Dict
+from typing import Any, Dict, Iterator, cast
 
 from psnawp_api.utils.request_builder import RequestBuilder
 

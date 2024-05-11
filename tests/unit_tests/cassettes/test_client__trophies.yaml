@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "08d2ee45-73a6-11ed-ac72-11ebaf9e3bac", "code":
+      string: '{"error": {"referenceId": "74db03a6-0f52-11ef-99c8-7febe1eeecb4", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -31,9 +31,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:34:06 GMT
+      - Sat, 11 May 2024 04:53:49 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -63,7 +64,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy
   response:
     body:
-      string: '{"trophySetVersion": "01.03", "hasTrophyGroups": true, "trophies":
+      string: '{"trophySetVersion": "01.04", "hasTrophyGroups": true, "trophies":
         [{"trophyId": 0, "trophyHidden": false, "trophyType": "platinum", "trophyName":
         "Raccoon City Native", "trophyDetail": "Obtain all trophies.", "trophyIconUrl":
         "https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/F957C0C5B0D2B63EBE1BB072B521E2B5A24D2986.PNG",
@@ -201,9 +202,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:34:08 GMT
+      - Sat, 11 May 2024 04:53:49 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -235,7 +237,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "0a01f880-73a6-11ed-a599-85ca508a384b", "code":
+      string: '{"error": {"referenceId": "75252c35-0f52-11ef-b1c8-65398bca6de7", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -245,9 +247,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 07:34:08 GMT
+      - Sat, 11 May 2024 04:53:49 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

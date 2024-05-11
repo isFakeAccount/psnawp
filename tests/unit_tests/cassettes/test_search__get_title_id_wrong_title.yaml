@@ -25,27 +25,29 @@ interactions:
     uri: https://m.np.playstation.com/api/search/v1/universalSearch
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAJxRTWvDMAz9K0bnUHrubXSw7VDGPm7rKGqiJKaObSx5Cyv975ObjTUwGOxgGz30
-        nt6TjxATtXaEFTTcIjct6gsVcO46YrHBM6xeXitowoDWPxJHhaiAxy9Muevga4pygwNtwt46uooR
-        vjnPVhxpk3KzEzZtSOY3gnm30hsmTHVvhNJgtpemtjBX3BAzdnTXqPTAnW12Pjs377m1Xe/0iNr9
-        1/wiN9uLQrqMD0rhSVA0lqRMFWRv32g8e5kEFj7saIyU7EBetPKLZblV4ge+RsHi7A+KDmyxJrmP
-        F//hadRUxaAEQTeFW4fsFV1WkKawpfd05ju3x/rwkFWe1KYCTKdPAAAA//8DANB/Yyz/AQAA
+      string: '{"error": {"referenceId": "f678bcdc-e192-43ae-938c-724a233e6462", "code":
+        3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`,
+        problem: Unexpected value ''ConceptGameMobileApp''; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException:
+        Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`,
+        problem: Unexpected value ''ConceptGameMobileApp''\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream);
+        line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])",
+        "reason": "invalid_parameter", "source": "api"}}'
     headers:
       Cache-Control:
       - max-age=0
       Connection:
-      - keep-alive
+      - close
       Content-Encoding:
       - gzip
       Content-Length:
-      - '282'
+      - '452'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:08:47 GMT
+      - Sat, 11 May 2024 04:54:01 GMT
       Expires:
-      - Sun, 04 Dec 2022 08:08:47 GMT
+      - Sat, 11 May 2024 04:54:01 GMT
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=15768000
       Vary:
@@ -53,6 +55,6 @@ interactions:
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
 version: 1

@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5791?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
   response:
     body:
-      string: '{"error": {"referenceId": "3d057f3a-6ef0-11ed-9924-dbd223b445c0", "code":
+      string: '{"error": {"referenceId": "7874f36b-0f52-11ef-bd56-df63691fec08", "code":
         2285581, "message": "Resource not found (groupId=''~25C4C5406FD6D50E.763F9A1EB6AB5791'')"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -37,9 +37,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:41 GMT
+      - Sat, 11 May 2024 04:53:55 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

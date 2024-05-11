@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlNjg8pSkzJzEtX0lFKTE7O
-        L80rAUtbmBoZmFlamJibmRsamZmYmZqYKNXWAgAAAP//AwA5+YU3TQAAAA==
+      string: '{"profile": {"onlineId": "VaultTec_Trading", "accountId": "8520698476712646544"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 20:30:45 GMT
+      - Sat, 11 May 2024 04:54:04 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -96,15 +95,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 03 Dec 2022 20:30:45 GMT
+      - Sat, 11 May 2024 04:54:04 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0070959703134544098
+      - 0738236442578629366
     status:
       code: 200
       message: OK

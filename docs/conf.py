@@ -38,12 +38,14 @@ autodoc_default_options = {
     "undoc-members": True,
     "exclude-members": "__weakref__",
 }
+myst_heading_anchors = 3
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
 ]
+suppress_warnings = ['ref.myst']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -53,4 +55,3 @@ html_logo = "_static/psn_logo.png"
 intersphinx_mapping = {"python": ("https://docs.python.org", None),
                        "requests": ("https://requests.readthedocs.io/en/latest/", None)}
 htmlhelp_basename = "PSNAWP"
-suppress_warnings = ['ref.myst']

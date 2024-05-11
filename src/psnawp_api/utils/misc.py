@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import logging
+import re
 from datetime import datetime, timedelta
 from typing import Optional
-import re
 
 from psnawp_api import psnawp
 
@@ -35,8 +35,13 @@ def iso_format_to_datetime(iso_format: Optional[str]) -> Optional[datetime]:
     return datetime.fromisoformat(iso_format.replace("Z", "+00:00")) if iso_format is not None else None
 
 
+PT_REGEX = re.compile(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?")
+
+
 def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
     """Provides a timedelta object for the play duration PSN sends
+
+    Valid patters: PT243H18M48S, PT21M18S, PT18H, PT18H20S, PT4H21M
 
     :param play_duration: String from API
     :type play_duration: Optional[str]
@@ -54,12 +59,8 @@ def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
     seconds = 0
 
     if play_duration:
-        # Regex pattern to match hours, minutes, and seconds
-        # Valid patters: PT243H18M48S, PT21M18S, PT18H, PT18H20S, PT4H21M
-        pattern = r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?'
-
         # Search for patterns in the input string
-        match = re.search(pattern, play_duration)
+        match = re.search(PT_REGEX, play_duration)
         if not match:
             return timedelta(hours=hours, minutes=minutes, seconds=seconds)
 

@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 01:06:45 GMT
+      - Sat, 11 May 2024 04:54:11 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -81,9 +80,9 @@ interactions:
         "hasTrophyGroups": true, "rarestTrophies": [{"trophyId": 0, "trophyHidden":
         false, "trophyType": "platinum", "trophyName": "Platinum Trophy", "trophyDetail":
         "Collect all other 50 Trophies for this Trophy", "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG",
-        "trophyRare": 0, "trophyEarnedRate": "1.3", "earned": true, "earnedDateTime":
-        "2020-11-22T17:51:30Z"}], "progress": 83, "earnedTrophies": {"bronze": 38,
-        "silver": 15, "gold": 1, "platinum": 1}, "definedTrophies": {"bronze": 47,
+        "trophyRare": 0, "trophyEarnedRate": "1.0", "earned": true, "earnedDateTime":
+        "2020-11-22T17:51:30Z"}], "progress": 77, "earnedTrophies": {"bronze": 38,
+        "silver": 15, "gold": 1, "platinum": 1}, "definedTrophies": {"bronze": 53,
         "silver": 18, "gold": 1, "platinum": 1}, "lastUpdatedDateTime": "2020-11-28T22:55:19Z"}]},
         {"npTitleId": "PPSA01506_00", "trophyTitles": [{"npServiceName": "trophy2",
         "npCommunicationId": "NPWR21237_00", "trophyTitleName": "Immortals Fenyx Rising
@@ -91,7 +90,7 @@ interactions:
         "hasTrophyGroups": true, "rarestTrophies": [{"trophyId": 32, "trophyHidden":
         false, "trophyType": "gold", "trophyName": "Armed and Dangerous", "trophyDetail":
         "Fully upgrade everything at the Forge of Hephaistos.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/4684baab-bcb8-49fc-9224-deeac059ac35.png",
-        "trophyRare": 1, "trophyEarnedRate": "11.7", "earned": true, "earnedDateTime":
+        "trophyRare": 1, "trophyEarnedRate": "7.8", "earned": true, "earnedDateTime":
         "2021-03-07T19:18:41Z"}], "progress": 26, "earnedTrophies": {"bronze": 13,
         "silver": 5, "gold": 1, "platinum": 0}, "definedTrophies": {"bronze": 47,
         "silver": 16, "gold": 5, "platinum": 1}, "lastUpdatedDateTime": "2022-11-25T19:43:25Z"}]},
@@ -111,13 +110,14 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2879'
+      - '2878'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 01:06:45 GMT
+      - Sat, 11 May 2024 04:54:11 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

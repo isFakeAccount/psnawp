@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import time
 from typing import Any
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs, urlparse
 
 import requests
 
 from psnawp_api.core import psnawp_exceptions
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.misc import create_logger
 
 

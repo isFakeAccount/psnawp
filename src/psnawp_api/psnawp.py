@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import overload, Optional, Iterator, Any
+from typing import Any, Iterator, Optional, overload
 
 from psnawp_api.core import authenticator
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
@@ -55,12 +55,10 @@ class PSNAWP:
         return Client(self._request_builder)
 
     @overload
-    def user(self, *, online_id: str) -> User:
-        ...
+    def user(self, *, online_id: str) -> User: ...
 
     @overload
-    def user(self, *, account_id: str) -> User:
-        ...
+    def user(self, *, account_id: str) -> User: ...
 
     def user(self, **kwargs: Any) -> User:
         """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
@@ -130,12 +128,10 @@ class PSNAWP:
         return GameTitle(self._request_builder, title_id=title_id, account_id=account_id, np_communication_id=np_communication_id)
 
     @overload
-    def group(self, *, group_id: str) -> Group:
-        ...
+    def group(self, *, group_id: str) -> Group: ...
 
     @overload
-    def group(self, *, users_list: Iterator[User]) -> Group:
-        ...
+    def group(self, *, users_list: Iterator[User]) -> Group: ...
 
     def group(self, **kwargs: Any) -> Group:
         """Creates a group object from a Group ID or from list of users.

@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec-Co/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUgpLLM0pCUlN1nXOV9JRSkxOzi/NKwHL
-        GJkbGZoamlmamhpbGJuaGhqZmCnV1gIAAAD//wMADQC2nUgAAAA=
+      string: '{"profile": {"onlineId": "VaultTec-Co", "accountId": "2721516955383551246"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:59 GMT
+      - Sat, 11 May 2024 04:54:26 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:

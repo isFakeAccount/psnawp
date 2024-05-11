@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from psnawp_api.models.trophies.trophy_constants import TrophyType, TrophyRarity
+from psnawp_api.models.trophies.trophy_constants import TrophyRarity, TrophyType
 
 
 def trophy_type_str_to_enum(trophy_type_str: Optional[str]) -> Optional[TrophyType]:

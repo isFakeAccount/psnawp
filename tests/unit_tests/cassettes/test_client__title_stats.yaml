@@ -41,19 +41,20 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 02 Jul 2023 03:35:29 GMT
+      - Sat, 11 May 2024 04:53:50 GMT
       Expires:
-      - Sun, 02 Jul 2023 03:35:29 GMT
+      - Sat, 11 May 2024 04:53:50 GMT
       Pragma:
       - no-cache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - 2f83bdf7-68ca-1031-b3da-0ddccf1a2e8b
+      - 0d68d928-80b8-1031-a2c2-90e748591f3c
       X-Psn-Request-Id:
-      - 2f83bdf7-68ca-1031-b3d9-0ddccf1a2e8b
+      - 0d68d928-80b8-1031-a2c3-90e748591f3c
     status:
       code: 200
       message: OK

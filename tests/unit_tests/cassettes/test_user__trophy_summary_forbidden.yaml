@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspOLcouLknNU9JRSkxOzi/NKwELmxmY
-        mxgbGpgZGphYWBiYmJqZmCrV1gIAAAD//wMAuno24EUAAAA=
+      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:49:58 GMT
+      - Sat, 11 May 2024 04:54:06 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,24 +74,29 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/trophySummary
   response:
     body:
-      string: '{"error": {"referenceId": "deab366f-739f-11ed-b298-61eee00418fb", "code":
-        2240526, "message": "Not permitted by access control"}}'
+      string: '{"accountId": "6074310610488045645", "trophyLevel": 214, "trophyPoint":
+        21555, "trophyLevelBasePoint": 21240, "trophyLevelNextPoint": 21690, "progress":
+        70, "tier": 3, "earnedTrophies": {"bronze": 665, "silver": 154, "gold": 64,
+        "platinum": 4}}'
     headers:
+      Cache-Control:
+      - private
       Connection:
       - keep-alive
       Content-Length:
-      - '123'
+      - '222'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 06:49:59 GMT
+      - Sat, 11 May 2024 04:54:06 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 403
-      message: Forbidden
+      code: 200
+      message: OK
 version: 1

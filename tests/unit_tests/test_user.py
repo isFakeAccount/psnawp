@@ -1,13 +1,13 @@
 import inspect
 
 import pytest
-
 from psnawp_api.core.psnawp_exceptions import (
+    PSNAWPForbidden,
     PSNAWPIllegalArgumentError,
     PSNAWPNotFound,
-    PSNAWPForbidden,
 )
 from psnawp_api.models.trophies.trophy_constants import PlatformType
+
 from tests.unit_tests import my_vcr
 
 

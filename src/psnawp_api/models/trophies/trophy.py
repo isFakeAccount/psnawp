@@ -1,17 +1,17 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Optional, Literal, Iterator, Any
+from typing import Any, Iterator, Literal, Optional
 
 from attrs import define
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound, PSNAWPForbidden
-from psnawp_api.models.trophies.trophy_constants import TrophyType, TrophyRarity
+from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden, PSNAWPNotFound
+from psnawp_api.models.trophies.trophy_constants import TrophyRarity, TrophyType
 from psnawp_api.models.trophies.utility_functions import (
-    trophy_type_str_to_enum,
     trophy_rarity_to_enum,
+    trophy_type_str_to_enum,
 )
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime
 from psnawp_api.utils.request_builder import RequestBuilder
 

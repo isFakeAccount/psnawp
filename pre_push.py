@@ -47,7 +47,7 @@ def run_static():
     success &= do_process(["poetry", "run", "pre-commit", "run", "--all-files"])
     success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
     success &= do_process(["poetry", "run", "black", "src/psnawp_api/"])
-    success &= do_process(["poetry", "run", "ruff", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "ruff", "check", "src/psnawp_api/", "--fix"])
     success &= do_process(["poetry", "run", "sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")

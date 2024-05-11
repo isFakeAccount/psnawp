@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspKLUrMK8lILVLSUUpMTs4vzSsBixta
-        GBgZmBhbGhkbWBgYmJgYGxgo1dYCAAAA//8DAGzJOKlGAAAA
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:57 GMT
+      - Sat, 11 May 2024 04:54:05 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -76,7 +75,7 @@ interactions:
   response:
     body:
       string: '{"friendRelation": "no-friend", "personalDetailSharing": "none", "friendsCount":
-        94, "mutualFriendsCount": 1}'
+        -2, "mutualFriendsCount": -2}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -91,19 +90,20 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '102'
+      - '103'
       Content-Type:
       - application/json
       Date:
-      - Mon, 28 Nov 2022 07:42:58 GMT
+      - Sat, 11 May 2024 04:54:05 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0145510054172135784
+      - 0909619441657241710
     status:
       code: 200
       message: OK

@@ -21,9 +21,7 @@ interactions:
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspOLcouLknNU9JRSkxOzi/NKwELmxmY
-        mxgbGpgZGphYWBiYmJqZmCrV1gIAAAD//wMAuno24EUAAAA=
+      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -43,9 +41,10 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:18:54 GMT
+      - Sat, 11 May 2024 04:54:17 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Vary:
       - accept-encoding
       X-Content-Type-Options:
@@ -75,180 +74,37 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "4b33abf0-73ac-11ed-91f7-f776a1a81875", "code":
-        2240526, "message": "Not permitted by access control"}}'
+      string: '{"trophySetVersion": "01.07", "hiddenFlag": false, "progress": 65,
+        "earnedTrophies": {"bronze": 32, "silver": 12, "gold": 1, "platinum": 0},
+        "lastUpdatedDateTime": "2021-07-27T22:31:14Z", "trophyGroups": [{"trophyGroupId":
+        "default", "progress": 77, "earnedTrophies": {"bronze": 28, "silver": 10,
+        "gold": 1, "platinum": 0}, "lastUpdatedDateTime": "2021-03-09T21:59:00Z"},
+        {"trophyGroupId": "001", "progress": 46, "earnedTrophies": {"bronze": 2, "silver":
+        2, "gold": 0, "platinum": 0}, "lastUpdatedDateTime": "2021-03-03T19:45:17Z"},
+        {"trophyGroupId": "002", "progress": 66, "earnedTrophies": {"bronze": 2, "silver":
+        0, "gold": 0, "platinum": 0}, "lastUpdatedDateTime": "2021-07-27T22:31:11Z"},
+        {"trophyGroupId": "003", "progress": 0, "earnedTrophies": {"bronze": 0, "silver":
+        0, "gold": 0, "platinum": 0}}, {"trophyGroupId": "004", "progress": 0, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}]}'
     headers:
+      Cache-Control:
+      - private
       Connection:
       - keep-alive
       Content-Length:
-      - '123'
+      - '832'
       Content-Type:
       - application/json
       Date:
-      - Sun, 04 Dec 2022 08:18:55 GMT
+      - Sat, 11 May 2024 04:54:17 GMT
       Server:
       - Apache
+      Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 403
-      message: Forbidden
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAKpWKijKT8vMSVWyqlbKz8vJzEv1TFGyUspOLcouLknNU9JRSkxOzi/NKwELmxmY
-        mxgbGpgZGphYWBiYmJqZmCrV1gIAAAD//wMAuno24EUAAAA=
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '92'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 04 Dec 2022 08:18:55 GMT
-      Server:
-      - Apache
-      Vary:
-      - accept-encoding
       X-Content-Type-Options:
       - nosniff
     status:
       code: 200
       message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
-  response:
-    body:
-      string: '{"trophySetVersion": "01.05", "trophyTitleName": "Fallout 76", "trophyTitleDetail":
-        "Fallout 76", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
-        "trophyTitlePlatform": "PS4", "definedTrophies": {"bronze": 47, "silver":
-        18, "gold": 1, "platinum": 1}, "trophyGroups": [{"trophyGroupId": "default",
-        "trophyGroupName": "Fallout 76", "trophyGroupDetail": "Fallout 76", "trophyGroupIconUrl":
-        "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
-        "definedTrophies": {"bronze": 34, "silver": 15, "gold": 1, "platinum": 1}},
-        {"trophyGroupId": "001", "trophyGroupName": "Wastelanders", "trophyGroupDetail":
-        "Wastelanders", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/55E3C78AABD34ED96A441471811AD7F6CCEAC6F9.PNG",
-        "definedTrophies": {"bronze": 7, "silver": 3, "gold": 0, "platinum": 0}},
-        {"trophyGroupId": "002", "trophyGroupName": "Steel Reign", "trophyGroupDetail":
-        "Steel Reign", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/566C06C46917370907DEFDE93C8A279AA203891A.PNG",
-        "definedTrophies": {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}},
-        {"trophyGroupId": "003", "trophyGroupName": "The Pitt", "trophyGroupDetail":
-        "The Pitt", "trophyGroupIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/10CCAE41F3E3147E655BD0BA904371DFE5E95B09.PNG",
-        "definedTrophies": {"bronze": 3, "silver": 0, "gold": 0, "platinum": 0}}]}'
-    headers:
-      Cache-Control:
-      - max-age=300
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '1659'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 04 Dec 2022 08:18:55 GMT
-      Server:
-      - Apache
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      Vary:
-      - Accept-Language
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
-  response:
-    body:
-      string: '{"error": {"referenceId": "4bd9621d-73ac-11ed-953c-8fd621f8d535", "code":
-        2240526, "message": "Not permitted by access control"}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '123'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 04 Dec 2022 08:18:56 GMT
-      Server:
-      - Apache
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 403
-      message: Forbidden
 version: 1

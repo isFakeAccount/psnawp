@@ -15,16 +15,16 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 packages = [{ include = "psnawp_api", from = "src" }]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 attrs = "23.1.0"
 requests = "^2.31.0"
 
@@ -33,20 +33,20 @@ mypy = "^1.4.0"
 types-requests = "^2.31.0.2"
 
 [tool.poetry.group.linting.dependencies]
-black = "^23.3.0"
-ruff = "^0.0.280"
-pre-commit = "^3.3.3"
+black = "^24.4.2"
+ruff = "^0.4.4"
+pre-commit = "^3.7.1"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.0"
-furo = "^2023.08.19"
-myst-parser = "^2.0.0"
+furo = "^2024.04.27"
+myst-parser = "^3.0.0"
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^7.3.2"
+pytest = "^8.2.0"
 python-dotenv = "^1.0.0"
-vcrpy = "^5.0.0"
-pytest-cov = "^4.1.0"
+vcrpy = "^6.0.1"
+pytest-cov = "^5.0.0"
 pytest-vcr = "^1.0.2"
 
 [build-system]
@@ -75,3 +75,6 @@ line-length = 160
 
 [tool.ruff]
 line-length = 160
+
+[tool.ruff.lint]
+select = ["E", "F", "I001", "I002", "TID252"]

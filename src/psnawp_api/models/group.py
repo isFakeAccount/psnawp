@@ -1,15 +1,15 @@
 from __future__ import annotations
 
 import json
-from typing import Optional, Iterator, Any
+from typing import Any, Iterator, Optional
 
 from psnawp_api.core.psnawp_exceptions import (
-    PSNAWPNotFound,
     PSNAWPBadRequest,
     PSNAWPForbidden,
+    PSNAWPNotFound,
 )
 from psnawp_api.models.user import User
-from psnawp_api.utils.endpoints import BASE_PATH, API_PATH
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.request_builder import RequestBuilder
 
 
