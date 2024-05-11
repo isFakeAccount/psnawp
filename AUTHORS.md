@@ -1,6 +1,6 @@
 # Maintainers
 
-- Yoshikage Kira <trevorphillips@gmx.us>
+- Yoshikage Kira @isFakeAccount <trevorphillips@gmx.us>
 
 # Source Contributors
 
@@ -10,3 +10,5 @@
 
 # Documentation Contributors
 - andshrew @andshrew
+- Niccolò @NiccoloGranieri
+- R @Dev-R

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PSNAWP"
-version = "1.3.3"
+version = "1.3.4"
 description = "Python API Wrapper for PlayStation Network API"
 authors = ["isFakeAccount <trevorphillips@gmx.us>"]
 license = "MIT"
