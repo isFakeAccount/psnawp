@@ -3,14 +3,14 @@ from __future__ import annotations
 import json
 from typing import Any, Iterator, Optional
 
-from psnawp_api.core.psnawp_exceptions import (
+from psnawp_api.core import (
     PSNAWPBadRequest,
     PSNAWPForbidden,
     PSNAWPNotFound,
+    RequestBuilder,
 )
 from psnawp_api.models.user import User
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.utils import API_PATH, BASE_PATH
 
 
 class Group:

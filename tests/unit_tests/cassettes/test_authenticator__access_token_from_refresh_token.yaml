@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Sat, 11 May 2024 04:53:40 GMT
+      - Sun, 19 May 2024 06:38:22 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.sPb5dY&cid=fc6f645e-d6f0-41fb-b167-f5425d425717
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.HWPmwL&cid=35327767-a802-411d-8836-4b09ec5765fd
       Server:
       - nginx
       Set-Cookie:
-      - _abck=4DD60ADE3D681F369CA47AA631F9BA53~-1~YAAQ7CY+F2nZBkuPAQAApeb/ZQtRqwCRYU5Aqhg6r4WTSxmHffoCyEcpqsrNPKCFGh1RGbjY3TEOkXX1anXJkTdkio6L57bbFU46E1lGHXwLRHQYG97O4w9psAVRLdZvol0FctP6E07rQ/joJ8P1rVEJh47negVXPDg1exLOHvQ6ytGxYTE8oIKzoCbRHAFDcHCSrn0LmLSE58TKmX2kaGLjt9sc09aEt6TivWCdgjF5UBhQM1BytSXgtfKN00gtnBL5jb/C8Qia0d40t9KVk5UtRaP8rqMfcRY8amjLCxH3KfwaIEV/WXUY+ZP2hXf20uws/GqS2DhR5zGHpezToS3m+u4a6O6rTZVLIsAEUN1Mb4qrHoMh9EddJIqgwEw/eNCdS7FDli/0MhSMtQ==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Sat, 18 May 2024 04:53:40 GMT; Max-Age=604800;
+      - _abck=BA85E09073D1C94E703BC63B06948AE8~-1~YAAQ6CY+FxWaZliPAQAAyKKSjwtXGjrJ+sj2351y8aJky+Ks8sUYGnqrgWHz08R7kUMJ2tnhpAiDifOU8G1WFPBODsgl83D6AZMe4+Y5OEzpIiI+WNDCfiuNQp45FuWoxqkT8V9isfTjNI4Lxv/GQZlbrJ+q3+IVZ1d6wy5kUv4i14CheDiFOwpm88ICmZWzeoyNWnduYjVDLf8XI5WJX/kqExeuQykMtc7snocKtavZtx1kthVAw97o12u9mPQMipC8ItQvY5y999drlnInC1x759X2Cw3FzdaIJbbrpJOw8EQYno4v0mQ0xd6N5K/jQdv7pAzWkH8a4TxQLR4cOrUnhnpybgpfC9ef97/dsuMf1hji8MsOPz7+0m6MhQLSNA49ue1B5jhFvgOwoA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Sun, 26 May 2024 06:38:22 GMT; Max-Age=604800;
         Secure
-      - bm_sz=FA75A52EED2515606CB3CA3A27813740~YAAQ7CY+F2rZBkuPAQAApeb/ZRcOXOv3/ETQM02+gAe8DGXNfULEfmEfQxtzzC4OqCBnHoW34vV+I61OpFuBjl7zLd9cQce00GSyary+ph5bt/t2j5Axb+mFDLTrJX27XA3E6NXP7RSePtSuPXMsq8qtKP3/aKz4G0Th7Pvbtu0rnrAlcr/s0vJB46kKh/2DM0h1SDv8uaxthBScFEtRhH1+a6lFcmX33g4fglYe9m9dOGurU0QkjgeVfYMu1xXzySFO96Thq/YvCzSI12XAZnz+z+ryOiGcF2GhD0slFYmsdX7+7Q9GjuTUVqAjw0ld+dXe3iKJQ7KP1aVf4ozfjygvDs2SsPO5SBGQus+fgFSMXrzk/cra+vuvoh/umvHHyfDpFfmmgYFY3xNwStmtB/HjhS0=~3486773~3683888;
-        Domain=.sony.com; Path=/; Expires=Sat, 11 May 2024 08:53:40 GMT; Max-Age=14400
+      - bm_sz=2B34F81F242A08364EA5AC1DDCBFF78B~YAAQ6CY+FxaaZliPAQAAyKKSjxdhNsKynauYwSHiDMJRoI2sEfH6q9CL4EGGk21nhxMFwtxbPCzJbj+Vxz0kWAQ8+Iy9yW06FzwI5XU48r88KUmzPjOEm9jqBwOWCH2XwpZPDLFBh+eMxfk5i5CKiv0ETX1P2WEDnhchFK5c0ReicjmOthSv7fxhoGuFGue7ZeQFqL2u39gt9Kp5be1thJBeaTz79XjqVFMtcYtIWZIKVWmJgyJ8ODJCvEFkPAXqiLsWKnWW4B5A1HgwmW5G+FnS4/S6DCDaRK3H0wP4hLuiq0qO/pqy6OJlC1ptQIYyYQh6xVUMqZf4p5MuwA08jaJStzEByup7yy/XWtxOBQOJCg2XzJse4cIIjBAFqdT/B+s0qntYMgUykgPZ7Yojj57ThQ==~4474422~3290689;
+        Domain=.sony.com; Path=/; Expires=Sun, 19 May 2024 10:38:22 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - fc6f645e-d6f0-41fb-b167-f5425d425717
+      - 35327767-a802-411d-8836-4b09ec5765fd
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - fc6f645e-d6f0-41fb-b167-f5425d425717
+      - 35327767-a802-411d-8836-4b09ec5765fd
       X-Psn-Request-Id:
-      - cc03d9f939f77ca09166791b86af52d0
+      - c6bb180d9aeb45632e3a8f09ac3b9b45
       X-RequestId:
-      - cc03d9f939f77ca09166791b86af52d0
+      - c6bb180d9aeb45632e3a8f09ac3b9b45
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -83,24 +83,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3998'
+      - '3997'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 11 May 2024 04:53:40 GMT
+      - Sun, 19 May 2024 06:38:23 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 621b250a-2720-44ae-8e9c-d436c6c7bff4
+      - adecca89-78c3-4222-8a32-9862b41299c0
       X-Psn-Correlation-Id:
-      - 621b250a-2720-44ae-8e9c-d436c6c7bff4
+      - adecca89-78c3-4222-8a32-9862b41299c0
       X-Psn-Request-Id:
-      - a3476319ae3ac4b8b0d1b40c2b03298c
+      - 40c65a40202221880899486623b8cbda
       X-RequestId:
-      - a3476319ae3ac4b8b0d1b40c2b03298c
+      - 40c65a40202221880899486623b8cbda
     status:
       code: 200
       message: OK
@@ -132,24 +132,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3998'
+      - '3997'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 11 May 2024 04:53:41 GMT
+      - Sun, 19 May 2024 06:38:23 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - a3fe8b76-6fff-4d10-8800-b692822f61cd
+      - 79a0a0db-e15b-4ca6-a6a9-2e07ff977aa2
       X-Psn-Correlation-Id:
-      - a3fe8b76-6fff-4d10-8800-b692822f61cd
+      - 79a0a0db-e15b-4ca6-a6a9-2e07ff977aa2
       X-Psn-Request-Id:
-      - 07c12c16baca66061a3e1664ce609906
+      - a411a14b1d5fc005ad4a0c97fafa0d72
       X-RequestId:
-      - 07c12c16baca66061a3e1664ce609906
+      - a411a14b1d5fc005ad4a0c97fafa0d72
     status:
       code: 200
       message: OK
@@ -184,18 +184,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:41 GMT
+      - Sun, 19 May 2024 06:38:23 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-CorrelationId:
-      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
+      - ef145fb2-26f6-431c-842a-dffdb72c2944
       X-Psn-Correlation-Id:
-      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
+      - ef145fb2-26f6-431c-842a-dffdb72c2944
       X-Psn-Request-Id:
-      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
+      - ef145fb2-26f6-431c-842a-dffdb72c2944
       X-RequestId:
-      - 0bc3a2db-d80f-4b9a-b5a2-c70a0d6650cd
+      - ef145fb2-26f6-431c-842a-dffdb72c2944
     status:
       code: 200
       message: OK
@@ -251,7 +251,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:41 GMT
+      - Sun, 19 May 2024 06:38:23 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -260,7 +260,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0120747179002047282
+      - 0113165163516531852
     status:
       code: 200
       message: OK

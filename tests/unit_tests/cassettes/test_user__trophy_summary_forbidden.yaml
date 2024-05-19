@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
+      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '92'
+      - '93'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:06 GMT
+      - Sun, 19 May 2024 07:04:17 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,24 +71,23 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/trophySummary
+    uri: https://m.np.playstation.com/api/trophy/v1/users/2066273503397112667/trophySummary
   response:
     body:
-      string: '{"accountId": "6074310610488045645", "trophyLevel": 214, "trophyPoint":
-        21555, "trophyLevelBasePoint": 21240, "trophyLevelNextPoint": 21690, "progress":
-        70, "tier": 3, "earnedTrophies": {"bronze": 665, "silver": 154, "gold": 64,
-        "platinum": 4}}'
+      string: '{"accountId": "2066273503397112667", "trophyLevel": 1, "trophyPoint":
+        0, "trophyLevelBasePoint": 0, "trophyLevelNextPoint": 60, "progress": 0, "tier":
+        1, "earnedTrophies": {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '222'
+      - '203'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:06 GMT
+      - Sun, 19 May 2024 07:04:17 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

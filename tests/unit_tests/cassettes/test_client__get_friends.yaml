@@ -21,8 +21,8 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000
   response:
     body:
-      string: '{"friends": ["940512162723934331", "4273405838384737823", "8520698476712646544"],
-        "totalItemCount": 3}'
+      string: '{"friends": ["2066273503397112667", "940512162723934331", "4273405838384737823",
+        "8520698476712646544"], "totalItemCount": 4}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '97'
+      - '119'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:44 GMT
+      - Sun, 19 May 2024 06:38:26 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -50,7 +50,67 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0604896437150899467
+      - 0957872057395349791
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2066273503397112667/profiles
+  response:
+    body:
+      string: '{"onlineId": "isFakeAccount", "personalDetail": {"firstName": "Yoshikage",
+        "lastName": "Kira"}, "aboutMe": "", "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_J/J2085_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_J/J2085_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_J/J2085_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_J/J2085_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '594'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 19 May 2024 06:38:26 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0879317093917222388
     status:
       code: 200
       message: OK
@@ -101,7 +161,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:44 GMT
+      - Sun, 19 May 2024 06:38:27 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -110,7 +170,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0070762553118993515
+      - 0226877258475644334
     status:
       code: 200
       message: OK
@@ -162,7 +222,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:45 GMT
+      - Sun, 19 May 2024 06:38:27 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -171,7 +231,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0686388705290827348
+      - 0484097336703907334
     status:
       code: 200
       message: OK
@@ -222,7 +282,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:45 GMT
+      - Sun, 19 May 2024 06:38:27 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -231,7 +291,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0994718674813978287
+      - 0462900847800280469
     status:
       code: 200
       message: OK

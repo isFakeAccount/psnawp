@@ -27,6 +27,7 @@ packages = [{ include = "psnawp_api", from = "src" }]
 python = "^3.9"
 attrs = "23.1.0"
 requests = "^2.31.0"
+typing-extensions = "^4.11.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.4.0"
@@ -40,7 +41,7 @@ pre-commit = "^3.7.1"
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.0"
 furo = "^2024.04.27"
-myst-parser = "^3.0.0"
+myst-parser = {extras = ["linkify"], version = "^3.0.1"}
 
 [tool.poetry.group.tests.dependencies]
 pytest = "^8.2.0"

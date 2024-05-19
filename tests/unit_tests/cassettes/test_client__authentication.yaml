@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Sat, 11 May 2024 04:53:41 GMT
+      - Sun, 19 May 2024 06:38:24 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.IIgWAN&cid=9bade0c1-dc76-4b45-8acc-b4c1eeb07e90
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.OwTB2R&cid=8fca0d47-66fa-47d0-9b85-64bab15505c8
       Server:
       - nginx
       Set-Cookie:
-      - _abck=D1BCDD9016AB32AA374036FAC26D1F9D~-1~YAAQ7CY+F1jcBkuPAQAAQOv/ZQuVrgsAnlAWP4YqdCLzcOmzTKh/3Q1DnE8Z2fOkkWSymRvHeRJVKNDe0lxQj3kVthreZJwouR16BmwpVXB8YdQvL6ALNyJCPG2WbM2g+LT7PEhIV7O/WKWwhdg+a9zmK5m7W+whLdU5uufzryWzW2rN/EJFp4Ca3BVNkp8rbDkd5hL1KKx12jPxCWeWoGQbZxke9JoPCXuC3LhHReTgC7qTICoUgCjpKEyqhv1CfjywcLdg2aS4/rM/OakKCsfjgTBt1gYM7vMBRH0eyCtpPHfuyTBwxmiql+1Rj8Da6+YscSsXxHB2QMi0MH646u1U3rnnkA3/5hYsBv9iuJJs02tlZ9lU+2E2JygW+kgDGlcPZiukRM8rzFw3AQ==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Sat, 18 May 2024 04:53:41 GMT; Max-Age=604800;
+      - _abck=B554D115CCD92A962DE42B363D8CF548~-1~YAAQ7CY+FyXCwmCPAQAAbKeSjwvq7PlWJBP1y9vaL+JzyofIXoSkDe8SxsyLds8PHrM0HO7jRBIKpM2ie0ahqORokfOzwmfauYkGEk2AWq106gwQ8ANQC2mHXKPF0pROGLwN+Py00ZEaGqGKSJtVL1dBijFsbMDsvrgnrETgOIcRknnJhaFUlOrTP5RjA1+MZocpAzKTaMcHEWByGvVwL88NdCKNqcqjeowsL8AWeGcX9/mI79uNaOPCg3F0h7HU7CX6SQYBLNeaSC7I5AOY8/voqWEvhWZ07b/ZSbNs8oyqLFVKkjB6BLlAywddRq2fzCPAkvb6VKvnt0EozSDxdMkZgqtR+ypc8eAdmrrT7Bw5RYQo5grVf/JQJ2aaVD/5RNPzqsV8fM9UTLLJMA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Sun, 26 May 2024 06:38:24 GMT; Max-Age=604800;
         Secure
-      - bm_sz=2D3CAC5FE0B4F606643CF0C754D985AC~YAAQ7CY+F1ncBkuPAQAAQOv/ZReYuz66yaZUoSSdlcI2299stiu//BKa1DtU/DaZLhb4YZeYnpLForICYNG59l5CWniH52e0xQtHbSwAbL1dMXEX34Jd7hXGLKKVpNhGLWb1QpO0tEcmctYS+OPdMJPOyJhQI0l+adplrJRaHtdhyyQoHfdT68CSyc72vE8grFQaMMb4P5EUam++W7nQeshGf8UzKINu6lAG93olAzyIOwEyICRgSDs0s3X9tFelNuZmjxMfh3TQbEL+uo+WKzBMM03KQnMGukOObOJnjfUAuULVQk1TWoi8sgLUyKKvbSkfRa5RDiGVjWNs7GcDgjlODATgW6/OaIBu+nmyedfU7j5+MaZaoosMsOEIVot6rC+XliGFYsl0sdcwnH8HIGIda8s=~3223622~3356981;
-        Domain=.sony.com; Path=/; Expires=Sat, 11 May 2024 08:53:41 GMT; Max-Age=14400
+      - bm_sz=619A27E40277F878A5CF90B5CB699C41~YAAQ7CY+FybCwmCPAQAAbKeSjxdVLHVHnPirdiIyhA2RNUDrYhycr/AOrSi8J2Wovxo9oc441xnwIdWe1GkzoVjKAIFyeScVmeqTqTo/6rOBaYrPCR/iN8VbZzMlSAfiOzsRvcFevsqveaYmXsCsM4d+d2laPBocB/MnZouGe3ERos3QyjELpLqtgRETvbtiWCELSdjcHkj/XQeNe1bxjXv7VjKPh0HB3HSJvs87tGp/E76Vxxz76L3405dSasr4Dn/vNgW68QomK9R9AmNImvJlanIept0fpzsRfckABOpK7GY9SpYWrxihRBeevJ1YuVM1r7l7aY3iZMb+hecJFfWYLq5wqQASuukz+ibTVR3SeLNNzBAdufZx/ulDHb0UZy9PyShKtImw7NByDtfy0K0zPQ==~3684402~4601666;
+        Domain=.sony.com; Path=/; Expires=Sun, 19 May 2024 10:38:24 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 9bade0c1-dc76-4b45-8acc-b4c1eeb07e90
+      - 8fca0d47-66fa-47d0-9b85-64bab15505c8
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - 9bade0c1-dc76-4b45-8acc-b4c1eeb07e90
+      - 8fca0d47-66fa-47d0-9b85-64bab15505c8
       X-Psn-Request-Id:
-      - b133a39d08efc1c325feac3219895a74
+      - 6712262ab0b3c4a9357360b808dff615
       X-RequestId:
-      - b133a39d08efc1c325feac3219895a74
+      - 6712262ab0b3c4a9357360b808dff615
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -83,24 +83,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3998'
+      - '3997'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 11 May 2024 04:53:42 GMT
+      - Sun, 19 May 2024 06:38:24 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 3a3eddd7-3f25-49d0-a82e-3ed6bfc91b50
+      - 6a04a018-c237-4819-a816-1239a4a000b3
       X-Psn-Correlation-Id:
-      - 3a3eddd7-3f25-49d0-a82e-3ed6bfc91b50
+      - 6a04a018-c237-4819-a816-1239a4a000b3
       X-Psn-Request-Id:
-      - f8ee1caa8f47eff528938b3295a52cf5
+      - ddcbb6d3e65ae4fa5c1c45ed61e99296
       X-RequestId:
-      - f8ee1caa8f47eff528938b3295a52cf5
+      - ddcbb6d3e65ae4fa5c1c45ed61e99296
     status:
       code: 200
       message: OK

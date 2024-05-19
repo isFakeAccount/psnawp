@@ -42,7 +42,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:52 GMT
+      - Sun, 19 May 2024 06:38:34 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -324,10 +324,12 @@ interactions:
         false, "type": "UNIFIED", "subType": "REGULAR", "packages": [], "featureType":
         "NOT_APPLICABLE"}], "chargeImmediatelyFlag": false, "storeFronts": ["PS5",
         "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"], "contentCollections":
-        []}], "offers": {"osls": [], "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003",
-        "offerAvailability": []}]}, "starRating": {"total": "688413", "score": "4.52",
-        "count": [{"score": 1, "count": 47025}, {"score": 2, "count": 6942}, {"score":
-        3, "count": 32699}, {"score": 4, "count": 55980}, {"score": 5, "count": 545767}]},
+        []}], "offers": {"osls": ["{\"metadata\":{\"id\":\"OFFER-PROD-8490_50\",\"schemaVersion\":\"1.3.2\",\"modified\":\"2024-05-15T12:27:29Z\",\"financeKeyId\":\"14452799\",\"campaignId\":\"PROMO-PROD-00008490\",\"promoId\":8490,\"start\":\"2024-05-17T07:00:00Z\",\"end\":\"2024-05-21T06:59:00Z\",\"version\":2,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":50,\"wholesale\":null}}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}"],
+        "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003", "offerAvailability":
+        [{"offerId": "OFFER-PROD-8490_50", "startDate": "2024-05-17T07:00:00Z", "endDate":
+        "2024-05-21T06:59:00Z"}]}]}, "starRating": {"total": "689746", "score": "4.52",
+        "count": [{"score": 1, "count": 47111}, {"score": 2, "count": 6954}, {"score":
+        3, "count": 32791}, {"score": 4, "count": 56110}, {"score": 5, "count": 546780}]},
         "isTrending": false, "contentTypeId": 1}, "genres": ["ACTION", "ADVENTURE"],
         "localizedGenres": [{"value": "Action", "type": "ACTION"}, {"value": "Adventure",
         "type": "ADVENTURE"}], "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres":
@@ -359,9 +361,9 @@ interactions:
         "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
         {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
         {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
-        "interactiveElements": []}, "starRating": {"total": "688413", "score": "4.52",
-        "count": [{"score": 1, "count": 47025}, {"score": 2, "count": 6942}, {"score":
-        3, "count": 32699}, {"score": 4, "count": 55980}, {"score": 5, "count": 545767}]}}]'
+        "interactiveElements": []}, "starRating": {"total": "689746", "score": "4.52",
+        "count": [{"score": 1, "count": 47111}, {"score": 2, "count": 6954}, {"score":
+        3, "count": 32791}, {"score": 4, "count": 56110}, {"score": 5, "count": 546780}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -370,11 +372,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '5743'
+      - '6061'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 11 May 2024 04:53:53 GMT
+      - Sun, 19 May 2024 06:38:34 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains

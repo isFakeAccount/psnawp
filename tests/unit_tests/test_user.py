@@ -74,14 +74,14 @@ def test_user__get_profile(psnawp_fixture):
 @pytest.mark.vcr()
 def test_user__get_presence(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        psnawp_fixture.user(online_id="VaultTec_Trading").get_presence()
+        psnawp_fixture.user(online_id="jeranther").get_presence()
 
 
 @pytest.mark.vcr()
 def test_user__get_presence_forbidden(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbidden):
-            psnawp_fixture.user(online_id="kerksten").get_presence()
+            psnawp_fixture.user(online_id="isFakeAccount").get_presence()
 
 
 @pytest.mark.vcr()
@@ -114,7 +114,7 @@ def test_user__trophy_summary(psnawp_fixture):
 def test_user__trophy_summary_forbidden(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbidden):
-            psnawp_fixture.user(online_id="kerksten").trophy_summary()
+            psnawp_fixture.user(online_id="isFakeAccount").trophy_summary()
 
 
 @pytest.mark.vcr()
@@ -182,7 +182,7 @@ def test_user__trophy_titles_for_title(psnawp_fixture):
 def test_user__trophy_titles_for_title_forbidden(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbidden):
-            for trophy_title in psnawp_fixture.user(online_id="kerksten").trophy_titles_for_title(title_ids=["CUSA12057_00"]):
+            for trophy_title in psnawp_fixture.user(online_id="isFakeAccount").trophy_titles_for_title(title_ids=["CUSA12057_00"]):
                 print(trophy_title)
 
 
@@ -210,10 +210,10 @@ def test_user__trophies(psnawp_fixture):
 def test_user__trophies_forbidden(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbidden):
-            list(psnawp_fixture.user(online_id="kerksten").trophies("NPWR15509_00", "PS4", limit=10))
+            list(psnawp_fixture.user(online_id="isFakeAccount").trophies("NPWR15509_00", "PS4", limit=10))
 
         with pytest.raises(PSNAWPForbidden):
-            list(psnawp_fixture.user(online_id="kerksten").trophies("NPWR15509_00", "PS4", limit=10, include_metadata=True))
+            list(psnawp_fixture.user(online_id="isFakeAccount").trophies("NPWR15509_00", "PS4", limit=10, include_metadata=True))
 
 
 @pytest.mark.vcr()
@@ -259,10 +259,10 @@ def test_user__trophy_groups_summary(psnawp_fixture):
 def test_user__trophy_groups_summary_forbidden(psnawp_fixture):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbidden):
-            psnawp_fixture.user(online_id="kerksten").trophy_groups_summary("NPWR15509_00", "PS4")
+            psnawp_fixture.user(online_id="isFakeAccount").trophy_groups_summary("NPWR15509_00", "PS4")
 
         with pytest.raises(PSNAWPForbidden):
-            psnawp_fixture.user(online_id="kerksten").trophy_groups_summary("NPWR15509_00", "PS4", include_metadata=True)
+            psnawp_fixture.user(online_id="isFakeAccount").trophy_groups_summary("NPWR15509_00", "PS4", include_metadata=True)
 
 
 @pytest.mark.vcr()

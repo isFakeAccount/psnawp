@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:08 GMT
+      - Sun, 19 May 2024 07:04:19 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -75,8 +75,54 @@ interactions:
   response:
     body:
       string: '{"trophyTitles": [{"npServiceName": "trophy2", "npCommunicationId":
-        "NPWR33633_00", "trophySetVersion": "01.00", "trophyTitleName": "The Dog Quiz",
-        "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR33633_00/4f4a5b6c-1c3e-483c-a6b3-dcd2e27cce7a.png",
+        "NPWR35039_00", "trophySetVersion": "01.00", "trophyTitleName": "Prince of
+        Persia\u2122: The Lost Crown", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35039_00/6187a2c9-2ba5-41dc-a291-c0a8f5554219.PNG",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "progress": 13, "earnedTrophies":
+        {"bronze": 5, "silver": 2, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T02:18:18Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR44026_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Learn to Play Vol. 2 - A Simple Shooter", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44026_00/896daa11-8921-4ba9-a981-efb7cb6a37a4.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 5, "gold": 10, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 5, "gold": 10, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-17T15:40:49Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR44024_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Learn to Play Vol. 2 - A Simple Shooter", "trophyTitleDetail": "Learn to
+        Play Vol. 2 - A Simple Shooter", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR44024_00_00D922BE9B52E7109CCFD9FAA05E4111979721CAE2/EFB7AC8AC69AA9FC9AF8F046332C1640C7C738EA.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 5, "gold": 10, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 5, "gold": 10, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-17T13:05:02Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR10793_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Batman: Return to Arkham - Arkham Asylum", "trophyTitleDetail": "Batman:
+        Return to Arkham - Arkham Asylum", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR10793_00_001C51C206F64F7E24DC45425E265840126C5B420C/1B863E6C4394F3C084915F80BFF34D3A20711ED0.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 28, "silver": 18, "gold": 1, "platinum": 1}, "progress": 5, "earnedTrophies":
+        {"bronze": 4, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-17T09:55:49Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR38376_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Road Bustle 2", "trophyTitleDetail": "Trophy set for Road Bustle 2", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR38376_00_00448E88008A85E33EE5BFF3EDF4A9D32FA915DD33/A67E69B94D30009E27A167BA9D2E186854C72971.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-15T23:15:55Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR41529_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Road Bustle Online", "trophyTitleDetail": "Trophy set for Road Bustle Online",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR41529_00_0023C0C5CEE3C6B3A56E4927CEFF5977A329D83494/0269E218A58A93B795E68AD686570DFFD4B59839.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 14, "gold": 7, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-15T21:58:42Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR35342_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Alone in the Dark", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35342_00/a9efe463-7e5d-40c4-bad0-65ab914deab8.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 21, "silver": 12, "gold": 4, "platinum": 1}, "progress": 26, "earnedTrophies":
+        {"bronze": 14, "silver": 2, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-11T20:31:27Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR33633_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The Dog Quiz", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR33633_00/4f4a5b6c-1c3e-483c-a6b3-dcd2e27cce7a.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
@@ -166,12 +212,6 @@ interactions:
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2024-05-11T00:01:30Z"}, {"npServiceName": "trophy2",
-        "npCommunicationId": "NPWR35342_00", "trophySetVersion": "01.00", "trophyTitleName":
-        "Alone in the Dark", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35342_00/a9efe463-7e5d-40c4-bad0-65ab914deab8.png",
-        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 21, "silver": 12, "gold": 4, "platinum": 1}, "progress": 18, "earnedTrophies":
-        {"bronze": 11, "silver": 1, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-05-10T20:25:32Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR37356_00", "trophySetVersion": "01.00", "trophyTitleName":
         "Stellar Blade", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR37356_00/d1f990db-1929-4092-84dc-4b1c64af872d.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
@@ -5239,10 +5279,55 @@ interactions:
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 2, "silver": 1, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 2, "silver": 1, "gold": 11, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-04-24T23:45:40Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR22197_00", "trophySetVersion": "01.01", "trophyTitleName":
-        "Snake Boat: Otterrific Arcade", "trophyTitleDetail": "This is the trophy
-        set for Snake Boat: Otterrific Arcade.", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22197_00_00334B7421DA67A6433BE202AADD7F66EB2934DEEE/73912E21E88390B6FE405D6975A2E2294AC19635.PNG",
+        "lastUpdatedDateTime": "2022-04-24T23:45:40Z"}], "nextOffset": 800, "totalItemCount":
+        1346}'
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '450315'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 19 May 2024 07:04:20 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/93330175277685226/trophyTitles?limit=800&offset=800
+  response:
+    body:
+      string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
+        "NPWR22197_00", "trophySetVersion": "01.01", "trophyTitleName": "Snake Boat:
+        Otterrific Arcade", "trophyTitleDetail": "This is the trophy set for Snake
+        Boat: Otterrific Arcade.", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22197_00_00334B7421DA67A6433BE202AADD7F66EB2934DEEE/73912E21E88390B6FE405D6975A2E2294AC19635.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
         {"bronze": 11, "silver": 10, "gold": 7, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 11, "silver": 10, "gold": 7, "platinum": 1}, "hiddenFlag": false,
@@ -5278,54 +5363,9 @@ interactions:
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-04-20T22:50:16Z"}], "nextOffset": 800, "totalItemCount":
-        1340}'
-    headers:
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '450117'
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 11 May 2024 04:54:09 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/93330175277685226/trophyTitles?limit=800&offset=800
-  response:
-    body:
-      string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
-        "NPWR26924_00", "trophySetVersion": "01.00", "trophyTitleName": "The pig D",
-        "trophyTitleDetail": "The pig D", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR26924_00_007108DF582EE05FC5E50B1075CDDF5420ED051C81/36DF3BE6BCC34EB884001C6E921B4CD904C3EBEB.PNG",
+        "lastUpdatedDateTime": "2022-04-20T22:50:16Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR26924_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "The pig D", "trophyTitleDetail": "The pig D", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR26924_00_007108DF582EE05FC5E50B1075CDDF5420ED051C81/36DF3BE6BCC34EB884001C6E921B4CD904C3EBEB.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
@@ -7499,7 +7539,7 @@ interactions:
         {"bronze": 55, "silver": 1, "gold": 2, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 55, "silver": 1, "gold": 2, "platinum": 1}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2020-10-03T18:09:14Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR15120_00", "trophySetVersion": "01.33", "trophyTitleName":
+        "npCommunicationId": "NPWR15120_00", "trophySetVersion": "01.34", "trophyTitleName":
         "Ghost of Tsushima", "trophyTitleDetail": "Trophy set for Ghost of Tsushima",
         "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15120_00_00736F40BFE5A427C57A238478A141FABB81ABA3C7/F7780A7B9141F2A1D0B68E578787D962D7F69C31.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
@@ -9024,18 +9064,18 @@ interactions:
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2017-07-20T12:42:09Z"}], "previousOffset": 799, "totalItemCount":
-        1340}'
+        1346}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '324685'
+      - '328040'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:10 GMT
+      - Sun, 19 May 2024 07:04:21 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

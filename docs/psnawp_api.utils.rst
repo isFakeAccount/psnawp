@@ -20,14 +20,6 @@ psnawp\_api.utils.misc module
    :undoc-members:
    :show-inheritance:
 
-psnawp\_api.utils.request\_builder module
------------------------------------------
-
-.. automodule:: psnawp_api.utils.request_builder
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 Module contents
 ---------------
 

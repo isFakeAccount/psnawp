@@ -21,7 +21,10 @@ release = metadata.version("PSNAWP")
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
@@ -37,13 +40,32 @@ autodoc_default_options = {
     "special-members": "__init__",
     "undoc-members": True,
     "exclude-members": "__weakref__",
+    'ignore-module-all': True
 }
-myst_heading_anchors = 3
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
+]
+
+# myst_parser configs
+myst_heading_anchors = 3
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
 ]
 suppress_warnings = ['ref.myst']
 # -- Options for HTML output -------------------------------------------------

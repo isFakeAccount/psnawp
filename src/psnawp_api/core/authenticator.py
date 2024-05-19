@@ -6,9 +6,8 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 
-from psnawp_api.core import psnawp_exceptions
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.misc import create_logger
+from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
+from psnawp_api.utils import API_PATH, BASE_PATH, create_logger
 
 
 class Authenticator:
@@ -115,7 +114,7 @@ class Authenticator:
         parsed_query = parse_qs(parsed_url.query)
         if "error" in parsed_query.keys():
             if "4165" in parsed_query["error_code"]:
-                raise psnawp_exceptions.PSNAWPAuthenticationError("Your npsso code has expired or is incorrect. Please generate a new code!")
+                raise PSNAWPAuthenticationError("Your npsso code has expired or is incorrect. Please generate a new code!")
             else:
-                raise psnawp_exceptions.PSNAWPAuthenticationError("Something went wrong while authenticating")
+                raise PSNAWPAuthenticationError("Something went wrong while authenticating")
         self.oauth_token(parsed_query["code"][0])

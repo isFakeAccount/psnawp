@@ -5,12 +5,10 @@ from typing import Any, Iterator, Optional
 
 from attrs import define, field
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPBadRequest, PSNAWPNotFound
+from psnawp_api.core import PSNAWPBadRequest, PSNAWPNotFound, RequestBuilder
 from psnawp_api.models.trophies.trophy import Trophy
 from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.misc import iso_format_to_datetime
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
 
 
 @define(frozen=True)

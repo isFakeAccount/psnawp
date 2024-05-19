@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
+      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '92'
+      - '93'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:11 GMT
+      - Sun, 19 May 2024 07:04:22 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,31 +71,21 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/titles/trophyTitles?npTitleIds=CUSA12057_00
+    uri: https://m.np.playstation.com/api/trophy/v1/users/2066273503397112667/titles/trophyTitles?npTitleIds=CUSA12057_00
   response:
     body:
-      string: '{"titles": [{"npTitleId": "CUSA12057_00", "trophyTitles": [{"npServiceName":
-        "trophy", "npCommunicationId": "NPWR15509_00", "trophyTitleName": "Fallout
-        76", "trophyTitleDetail": "Fallout 76", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG",
-        "hasTrophyGroups": true, "rarestTrophies": [{"trophyId": 63, "trophyHidden":
-        false, "trophyType": "bronze", "trophyName": "Gold Star Crafter", "trophyDetail":
-        "Craft a 1 star legendary mod, a 2 star legendary mod, and a 3 star legendary
-        mod", "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F7993B5ACADF58505B72A0705BD813DE227ED92E.PNG",
-        "trophyRare": 0, "trophyEarnedRate": "2.6", "earned": true, "earnedDateTime":
-        "2021-07-27T22:31:11Z"}], "progress": 65, "earnedTrophies": {"bronze": 32,
-        "silver": 12, "gold": 1, "platinum": 0}, "definedTrophies": {"bronze": 53,
-        "silver": 18, "gold": 1, "platinum": 1}, "lastUpdatedDateTime": "2021-07-27T22:31:14Z"}]}]}'
+      string: '{"titles": [{"npTitleId": "CUSA12057_00", "trophyTitles": []}]}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '1031'
+      - '59'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:11 GMT
+      - Sun, 19 May 2024 07:04:22 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

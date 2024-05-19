@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:11 GMT
+      - Sun, 19 May 2024 07:04:22 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -90,7 +90,7 @@ interactions:
         "hasTrophyGroups": true, "rarestTrophies": [{"trophyId": 32, "trophyHidden":
         false, "trophyType": "gold", "trophyName": "Armed and Dangerous", "trophyDetail":
         "Fully upgrade everything at the Forge of Hephaistos.", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/4684baab-bcb8-49fc-9224-deeac059ac35.png",
-        "trophyRare": 1, "trophyEarnedRate": "7.8", "earned": true, "earnedDateTime":
+        "trophyRare": 1, "trophyEarnedRate": "7.7", "earned": true, "earnedDateTime":
         "2021-03-07T19:18:41Z"}], "progress": 26, "earnedTrophies": {"bronze": 13,
         "silver": 5, "gold": 1, "platinum": 0}, "definedTrophies": {"bronze": 47,
         "silver": 16, "gold": 5, "platinum": 1}, "lastUpdatedDateTime": "2022-11-25T19:43:25Z"}]},
@@ -114,7 +114,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:11 GMT
+      - Sun, 19 May 2024 07:04:22 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

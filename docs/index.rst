@@ -23,7 +23,6 @@ PSNAWP: PlayStation Network API Wrapper Python
     :caption: Additional Resources:
 
     additional_resources/README.rst
-    additional_resources/CHANGELOG.rst
     additional_resources/AUTHORS.rst
     additional_resources/LICENSE.rst
 

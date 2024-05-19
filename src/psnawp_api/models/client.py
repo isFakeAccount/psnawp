@@ -2,8 +2,9 @@ from __future__ import annotations
 
 from typing import Any, Iterator, Literal, Optional
 
+from psnawp_api.core import RequestBuilder
 from psnawp_api.models.group import Group
-from psnawp_api.models.listing.pagination_arguments import PaginationArguments
+from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.title_stats import TitleStatsListing
 from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
 from psnawp_api.models.trophies.trophy_group import (
@@ -13,8 +14,7 @@ from psnawp_api.models.trophies.trophy_group import (
 from psnawp_api.models.trophies.trophy_summary import TrophySummary
 from psnawp_api.models.trophies.trophy_titles import TrophyTitle, TrophyTitles
 from psnawp_api.models.user import User
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.utils import API_PATH, BASE_PATH
 
 
 class Client:
@@ -400,7 +400,7 @@ class Client:
 
         """
         pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
-        return TitleStatsListing(request_builder=self._request_builder, account_id="me", pagination_arguments=pg_args)
+        return TitleStatsListing.from_endpoint(request_builder=self._request_builder, account_id="me", pagination_args=pg_args)
 
     def __repr__(self) -> str:
         return f"<User online_id:{self.online_id} account_id:{self.account_id}>"

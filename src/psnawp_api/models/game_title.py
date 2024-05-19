@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from typing import Any, Iterator, Literal, Optional
 
+from psnawp_api.core import RequestBuilder
 from psnawp_api.models.trophies.trophy import Trophy, TrophyBuilder
 from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummary,
     TrophyGroupsSummaryBuilder,
 )
 from psnawp_api.models.trophies.trophy_titles import TrophyTitles
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.utils import API_PATH, BASE_PATH
 
 
 class GameTitle:

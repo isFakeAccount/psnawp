@@ -1,8 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import dataclass, field
 from enum import Enum
-
-from attr import define, field
 
 
 class TrophyType(Enum):
@@ -22,9 +21,7 @@ class PlatformType(Enum):
 
     @classmethod
     def _missing_(cls, value: object) -> "PlatformType":
-        for member in cls:
-            if member.value == value:
-                return member
+        _ = value
         return cls.UNKNOWN
 
 
@@ -35,7 +32,7 @@ class TrophyRarity(Enum):
     COMMON = 3
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class TrophySet:
     bronze: int = field(default=0)
     silver: int = field(default=0)

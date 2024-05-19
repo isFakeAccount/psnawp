@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "VaultTec_Trading", "accountId": "8520698476712646544"}}'
+      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '100'
+      - '93'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:04 GMT
+      - Sun, 19 May 2024 07:05:45 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,12 +71,12 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/8520698476712646544/basicPresences?type=primary
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1802043923080044300/basicPresences?type=primary
   response:
     body:
       string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2021-02-05T20:14:45.656Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "ps4", "lastOnlineDate": "2021-02-05T20:14:45.656Z"}}}'
+        "2024-05-18T23:13:44.864Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "PS5", "lastOnlineDate": "2024-05-18T23:13:44.864Z"}}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -95,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:04 GMT
+      - Sun, 19 May 2024 07:05:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -104,7 +104,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0738236442578629366
+      - 0266242685128519938
     status:
       code: 200
       message: OK

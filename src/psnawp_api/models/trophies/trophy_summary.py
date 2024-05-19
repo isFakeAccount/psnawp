@@ -2,10 +2,9 @@ from __future__ import annotations
 
 from attrs import define
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPForbidden
+from psnawp_api.core import PSNAWPForbidden, RequestBuilder
 from psnawp_api.models.trophies.trophy_constants import TrophySet
-from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.utils import API_PATH, BASE_PATH
 
 
 @define(frozen=True)

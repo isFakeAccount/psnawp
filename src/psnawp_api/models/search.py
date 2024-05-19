@@ -3,9 +3,8 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound
-from psnawp_api.utils.endpoints import BASE_PATH
-from psnawp_api.utils.request_builder import RequestBuilder
+from psnawp_api.core import PSNAWPNotFound, RequestBuilder
+from psnawp_api.utils import BASE_PATH
 
 
 class Search:

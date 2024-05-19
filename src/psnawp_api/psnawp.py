@@ -3,14 +3,12 @@ from __future__ import annotations
 import logging
 from typing import Any, Iterator, Optional, overload
 
-from psnawp_api.core import authenticator
-from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
+from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, request_builder
 from psnawp_api.models.client import Client
 from psnawp_api.models.game_title import GameTitle
 from psnawp_api.models.group import Group
 from psnawp_api.models.search import Search
 from psnawp_api.models.user import User
-from psnawp_api.utils import request_builder
 
 logging_level = logging.INFO
 
@@ -37,7 +35,7 @@ class PSNAWP:
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        self._request_builder = request_builder.RequestBuilder(authenticator.Authenticator(npsso_cookie), accept_language, country)
+        self._request_builder = request_builder.RequestBuilder(Authenticator(npsso_cookie), accept_language, country)
 
     def me(self) -> Client:
         """Creates a new client object (your account).

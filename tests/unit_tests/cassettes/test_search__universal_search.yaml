@@ -25,7 +25,7 @@ interactions:
     uri: https://m.np.playstation.com/api/search/v1/universalSearch
   response:
     body:
-      string: '{"error": {"referenceId": "5dd0c8e3-59ca-4b14-a8b9-31df1e0d5054", "code":
+      string: '{"error": {"referenceId": "22d5fd39-9f70-4f56-bef9-9c2a1b823fa0", "code":
         3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`,
         problem: Unexpected value ''ConceptGameMobileApp''; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException:
         Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`,
@@ -44,9 +44,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:01 GMT
+      - Sun, 19 May 2024 06:38:42 GMT
       Expires:
-      - Sat, 11 May 2024 04:54:01 GMT
+      - Sun, 19 May 2024 06:38:42 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=15768000

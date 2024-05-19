@@ -21,10 +21,11 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
   response:
     body:
-      string: '{"groups": [{"groupId": "b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246",
+      string: '{"groups": [{"groupId": "f5ba7d11cf0164d24185a908d27d729e1847b250-188",
         "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]}],
-        "previousOffset": 0, "nextOffset": 1}'
+        "VaultTec-Co"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"},
+        {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}], "previousOffset":
+        0, "nextOffset": 1}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -37,11 +38,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '258'
+      - '321'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:00 GMT
+      - Sun, 19 May 2024 06:38:41 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,23 +72,23 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/f5ba7d11cf0164d24185a908d27d729e1847b250-188?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
   response:
     body:
-      string: '{"groupId": "b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246", "groupType":
-        1, "modifiedTimestamp": "1715403240405", "groupName": {"value": "Testing API",
+      string: '{"groupId": "f5ba7d11cf0164d24185a908d27d729e1847b250-188", "groupType":
+        1, "modifiedTimestamp": "1716100721484", "groupName": {"value": "Testing API",
         "status": 1, "modifier": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, "modifiedTimestamp": "1715403240000"}, "groupIcon": {"status":
-        0}, "joinedTimestamp": "1715403240000", "isFavorite": false, "existsNewArrival":
-        false, "mainThread": {"threadId": "b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246",
-        "modifiedTimestamp": "1715403240405", "latestMessage": {"messageUid": "1#439143229543844",
+        "VaultTec-Co"}, "modifiedTimestamp": "1716100721000"}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1716100721000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "f5ba7d11cf0164d24185a908d27d729e1847b250-188",
+        "modifiedTimestamp": "1716100721484", "latestMessage": {"messageUid": "1#439321784699959",
         "messageType": 2003, "alternativeMessageType": 2001, "body": "VaultTec BlacklistBot
-        changed the group name.", "createdTimestamp": "1715403240405", "sender": {"accountId":
-        "2721516955383551246", "onlineId": "VaultTec-Co"}}, "readMessageUid": "1#439143229543844"},
+        changed the group name.", "createdTimestamp": "1716100721484", "sender": {"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co"}}, "readMessageUid": "1#439321784699959"},
         "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co",
         "role": "owner"}, {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading",
-        "role": "member"}], "partySessions": [], "notificationSetting": {"isMute":
-        false}}'
+        "role": "member"}, {"accountId": "2066273503397112667", "onlineId": "isFakeAccount",
+        "role": "member"}], "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -100,11 +101,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1000'
+      - '1060'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:00 GMT
+      - Sun, 19 May 2024 06:38:42 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -136,7 +137,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: DELETE
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/b4f51b7a0e92030dd4a1943dd0c86f13398c2b5f-246/members/me
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/f5ba7d11cf0164d24185a908d27d729e1847b250-188/members/me
   response:
     body:
       string: ''
@@ -152,15 +153,15 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 11 May 2024 04:54:01 GMT
+      - Sun, 19 May 2024 06:38:42 GMT
       Server:
       - Apache
       Set-Cookie:
-      - _abck=27502902EC2CFFBE540831ED088DB4A8~-1~YAAQqc0vFzi/1TGPAQAAeDcAZgulQYMknDYUatlzSiwyUuOismjX2rK/Pj5931ydE/2D4umNimcvKHIbExRYGN42UKnmExQ5zqvRq+gu44+9M2BlFGU+c87TebxzyfaehFNuOx2hAKqLiXyxDnCjvEEmxO+himPYhUKwiLTFhc4D3ii311FuP1B8w++wIQGu60pUylhi8Zc+s5ttzU32UDatMU71bvCJtxfz+U0Gna1Ows3rkRq+21noZ51qQ9lJJgN+L9/SrfSxNTyFor+3d5/9Ap7DnhF4h1GuGU0EWIVLGQr/bQXn54q2oADLNGbxaet65ekd+B4S20MH8ykPFRZCrVBxJm0EH+4/fC0/NU+UrFwkigvdaqCpzIYutEFOjFLigKErO37T7o3l~-1~-1~-1;
-        Domain=.playstation.com; Path=/; Expires=Sat, 18 May 2024 04:54:01 GMT; Max-Age=604800;
+      - _abck=ACCB9649E0E7D5AFF0E7FCFF4C6B7CBE~-1~YAAQqc0vF83o6oSPAQAAW+6Sjwvllm3IBhiRdgRPp4I1WHmTU5dYnI4//52xZ97M0vgSVOpqMgNrmSpJDn9cX02Cvx/zoyyfPkKuLMQIeSxpRsJW5/XxO1/SjMox7MFqxvbP/bJ1Y1dS3FzM7a3snY7TOoueQoxGcbhnLWNHXqkPYOLhIJBlIHfZE4DLhIP11avq4jfNwSJ5+pxC2boeb71v8bbDnOAVe05lA2mYU8jFoLwTcubFc3yBa+2DcnD0uU3szbidxVU1Jro5wfBBmETfo7pLEAdStd0P6PV6wFcrB13KbDliT5iSf0zrOi6LYkw7iGvQI2ozyMbYxjkmefUAeO3dXmdD2x5D4lNAxAHmdCwsfRv31lZvcq2Y+FZYMFVOf3+vE0QmFYgj~-1~-1~-1;
+        Domain=.playstation.com; Path=/; Expires=Sun, 26 May 2024 06:38:42 GMT; Max-Age=604800;
         Secure
-      - bm_sz=4F01773E69D683E62E0C723A8AADE6A0~YAAQqc0vFzm/1TGPAQAAeDcAZhfp9wuNTmbPgYp7acfD8IfyvUFTcyIggkVzrJG80A/jFKfCZcjV9LsThaGsFY5iacmMz1AFgvD5qiZPPY5XfUdhPD11G/cEr2BMJ+tfHnvdm4jEnD1ODnDdCeTHQXoxqshkcwS+kHK0x79zIvHxAFQZrWugXPt6Z9tLd/i4Be3fww14z7Cj+Gv6vFQoEV5PdhSZ2dBFl9jMskKsD9lov/UYhJxqK0XhVXUw7/exye0/gCFp/RrtCm+9cOJKf0EGtq+GHFgdWcneGAkVUaC/DEhqFRMieLsjvlvTWyKGni+hdyQTZoDRbVX+d5ix6U8h7zcVMHNAd69l6qri5qXcDqoU2ePdhUbbFTJxI8jrBe4d~3748920~4469048;
-        Domain=.playstation.com; Path=/; Expires=Sat, 11 May 2024 08:54:01 GMT; Max-Age=14400
+      - bm_sz=4A2B00B862656278CC9BAE24F047C9B1~YAAQqc0vF87o6oSPAQAAW+6SjxdIYiy7em2scqGtVveJWYcJLPftGia6+9XkmCHHnwn4/n+Rj9w+gupztXpBpJI7l9/xcQot73QpfzW1duNFkJvVP7xzripFIEyR+3gONl644IkEn2HJ0RO9JdLy2AkSJ9aKUlOKBlAGdGwOaCD9Wx4b4ajQ3y599EAMo6mIfOHrdMhqDDYfmTpZ3a/jly/9SdTBAVSBHBTYdp9kSPqN8HAlhYV/M5e1Tq8ZuE7w02r5zJ9UFxImw0Aul98iwloTfEyGMaHBPYKtut15fDPM9NJOh+WHFuOquSqZHUN0UAUkE/e1NjC7TkVM6JotQyKBn2Mnn+hh7x0ehE/ayHMPcDFrWk9t5meVaCqNeL2yZufC~4339768~3422520;
+        Domain=.playstation.com; Path=/; Expires=Sun, 19 May 2024 10:38:42 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

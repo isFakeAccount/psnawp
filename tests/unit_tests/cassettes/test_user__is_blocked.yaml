@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:05 GMT
+      - Sun, 19 May 2024 07:04:16 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/blocks
   response:
     body:
-      string: '{"blockList": []}'
+      string: '{"blockList": ["2721516955383551246", "8520698476712646544"]}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -89,11 +89,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '16'
+      - '59'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:05 GMT
+      - Sun, 19 May 2024 07:04:16 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -102,7 +102,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0190448101234133097
+      - 0368729408517562658
     status:
       code: 200
       message: OK

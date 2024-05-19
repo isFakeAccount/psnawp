@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:06 GMT
+      - Sun, 19 May 2024 07:04:18 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -78,9 +78,9 @@ interactions:
         "NPWR31904_00", "trophySetVersion": "01.07", "trophyTitleName": "Fallout 4",
         "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR31904_00/c57616d5-bba3-4b9e-a40a-cf9ff3c64d8f.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
-        {"bronze": 66, "silver": 17, "gold": 1, "platinum": 1}, "progress": 19, "earnedTrophies":
-        {"bronze": 13, "silver": 4, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-05-10T13:24:55Z"}, {"npServiceName": "trophy2",
+        {"bronze": 66, "silver": 17, "gold": 1, "platinum": 1}, "progress": 28, "earnedTrophies":
+        {"bronze": 20, "silver": 5, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-18T16:40:23Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR38673_00", "trophySetVersion": "01.00", "trophyTitleName":
         "MLB\u00ae The Show\u2122 24", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR38673_00/3b977f67-340a-4d18-bb2b-93c47eec47b2.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
@@ -735,7 +735,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:07 GMT
+      - Sun, 19 May 2024 07:04:18 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

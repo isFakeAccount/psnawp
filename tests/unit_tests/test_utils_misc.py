@@ -1,6 +1,6 @@
 from datetime import timedelta
 
-from psnawp_api.utils.misc import play_duration_to_timedelta
+from psnawp_api.models.title_stats import play_duration_to_timedelta
 
 
 def test_play_duration_to_timedelta_valid_inputs():

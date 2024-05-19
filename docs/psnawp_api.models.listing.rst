@@ -4,18 +4,10 @@ psnawp\_api.models.listing package
 Submodules
 ----------
 
-psnawp\_api.models.listing.listing\_generator module
-----------------------------------------------------
+psnawp\_api.models.listing.pagination\_iterator module
+------------------------------------------------------
 
-.. automodule:: psnawp_api.models.listing.listing_generator
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-psnawp\_api.models.listing.pagination\_arguments module
--------------------------------------------------------
-
-.. automodule:: psnawp_api.models.listing.pagination_arguments
+.. automodule:: psnawp_api.models.listing.pagination_iterator
    :members:
    :undoc-members:
    :show-inheritance:

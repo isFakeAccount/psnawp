@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/kerksten/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "kerksten", "accountId": "6074310610488045645"}}'
+      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '92'
+      - '93'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:13 GMT
+      - Sun, 19 May 2024 07:04:24 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,42 +71,20 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/6074310610488045645/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
+    uri: https://m.np.playstation.com/api/trophy/v1/users/2066273503397112667/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"trophySetVersion": "01.07", "hasTrophyGroups": true, "lastUpdatedDateTime":
-        "2021-07-27T22:31:14Z", "trophies": [{"trophyId": 0, "trophyHidden": false,
-        "earned": false, "trophyType": "platinum", "trophyRare": 0, "trophyEarnedRate":
-        "1.0"}, {"trophyId": 1, "trophyHidden": false, "earned": true, "earnedDateTime":
-        "2020-05-26T19:37:00Z", "trophyType": "bronze", "trophyRare": 3, "trophyEarnedRate":
-        "83.8"}, {"trophyId": 2, "trophyHidden": false, "earned": true, "earnedDateTime":
-        "2021-02-25T22:42:09Z", "trophyType": "bronze", "trophyRare": 2, "trophyEarnedRate":
-        "49.1"}, {"trophyId": 3, "trophyHidden": false, "earned": true, "earnedDateTime":
-        "2020-10-25T22:31:44Z", "trophyType": "bronze", "trophyRare": 2, "trophyEarnedRate":
-        "35.4"}, {"trophyId": 4, "trophyHidden": false, "earned": true, "earnedDateTime":
-        "2021-02-25T22:56:07Z", "trophyType": "bronze", "trophyRare": 2, "trophyEarnedRate":
-        "43.2"}, {"trophyId": 5, "trophyHidden": false, "earned": false, "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "22.7"}, {"trophyId": 6, "trophyHidden":
-        false, "earned": false, "trophyType": "bronze", "trophyRare": 1, "trophyEarnedRate":
-        "10.7"}, {"trophyId": 7, "trophyHidden": false, "earned": false, "trophyType":
-        "silver", "trophyRare": 0, "trophyEarnedRate": "4.5"}, {"trophyId": 8, "trophyHidden":
-        false, "earned": false, "trophyType": "silver", "trophyRare": 1, "trophyEarnedRate":
-        "13.4"}, {"trophyId": 9, "trophyHidden": false, "earned": false, "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "10.9"}], "rarestTrophies":
-        [{"trophyId": 41, "trophyHidden": false, "earned": true, "earnedDateTime":
-        "2020-10-22T16:12:41Z", "trophyType": "bronze", "trophyRare": 0, "trophyEarnedRate":
-        "3.8"}], "nextOffset": 10, "totalItemCount": 51}'
+      string: '{"error": {"referenceId": "063405d3-15ae-11ef-bef6-732aecd0929c", "code":
+        2240525, "message": "Resource not found"}}'
     headers:
-      Cache-Control:
-      - private
       Connection:
       - keep-alive
       Content-Length:
-      - '1613'
+      - '110'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:54:13 GMT
+      - Sun, 19 May 2024 07:04:24 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -115,6 +93,6 @@ interactions:
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

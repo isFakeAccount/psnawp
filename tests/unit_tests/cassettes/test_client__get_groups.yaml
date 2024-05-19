@@ -69,7 +69,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:45 GMT
+      - Sun, 19 May 2024 06:38:27 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -105,13 +105,15 @@ interactions:
   response:
     body:
       string: '{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType": 0, "modifiedTimestamp":
-        "1715400190178", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1715418321046", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1715400190000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "modifiedTimestamp":
-        "1715400190178", "readMessageUid": "1#427423047723838"}, "members": [{"accountId":
-        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "2066273503397112667",
-        "onlineId": "isFakeAccount"}], "partySessions": [], "notificationSetting":
-        {"isMute": false}}'
+        "1715418321046", "latestMessage": {"messageUid": "1#439147090187857", "messageType":
+        1, "alternativeMessageType": 1, "body": "12", "createdTimestamp": "1715418321046",
+        "sender": {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"}},
+        "readMessageUid": "1#439147090187857"}, "members": [{"accountId": "2721516955383551246",
+        "onlineId": "VaultTec-Co"}, {"accountId": "2066273503397112667", "onlineId":
+        "isFakeAccount"}], "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -124,11 +126,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '567'
+      - '759'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:45 GMT
+      - Sun, 19 May 2024 06:38:28 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -162,16 +164,15 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1715400182977", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1715403237424", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1715400182977", "latestMessage": {"messageUid": "1#439142446842219", "messageType":
+        "1715403237424", "latestMessage": {"messageUid": "1#439143228780571", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
-        "1715400182977", "sender": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}}, "readMessageUid": "1#439142446842219"}, "members": [{"accountId":
+        "1715403237424", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439143228780571"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
-        "onlineId": "VaultTec_Trading"}], "partySessions": [], "notificationSetting":
-        {"isMute": false}}'
+        "onlineId": "VaultTec_Trading"}], "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -184,11 +185,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '791'
+      - '772'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:46 GMT
+      - Sun, 19 May 2024 06:38:28 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -231,7 +232,7 @@ interactions:
         "onlineId": "gabrieljemail"}}, "readMessageUid": "1#436700901894266"}, "members":
         [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co", "role": "owner"},
         {"accountId": "8859462586603699392", "onlineId": "test", "role": "member"}],
-        "partySessions": [], "notificationSetting": {"isMute": false}}'
+        "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -244,11 +245,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '845'
+      - '826'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:46 GMT
+      - Sun, 19 May 2024 06:38:28 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -292,8 +293,8 @@ interactions:
         "Salvadxsz"}}, "readMessageUid": "1#436144962292626"}, "members": [{"accountId":
         "2338752500650724106", "onlineId": "Salvadxsz", "role": "owner"}, {"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co", "role": "member"}, {"accountId":
-        "8859462586603699392", "onlineId": "test", "role": "member"}], "partySessions":
-        [], "notificationSetting": {"isMute": false}}'
+        "8859462586603699392", "onlineId": "test", "role": "member"}], "notificationSetting":
+        {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -306,11 +307,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '975'
+      - '956'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:46 GMT
+      - Sun, 19 May 2024 06:38:28 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -353,7 +354,7 @@ interactions:
         "onlineId": "septicstewie"}}, "readMessageUid": "1#435476077469780"}, "members":
         [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co", "role": "owner"},
         {"accountId": "8859462586603699392", "onlineId": "test", "role": "member"}],
-        "partySessions": [], "notificationSetting": {"isMute": false}}'
+        "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -366,11 +367,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '843'
+      - '824'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:46 GMT
+      - Sun, 19 May 2024 06:38:29 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -413,7 +414,7 @@ interactions:
         "onlineId": "ROTTEN_MIND666"}}, "readMessageUid": "1#435279255964549"}, "members":
         [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co", "role": "owner"},
         {"accountId": "8859462586603699392", "onlineId": "test", "role": "member"}],
-        "partySessions": [], "notificationSetting": {"isMute": false}}'
+        "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -426,11 +427,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '847'
+      - '828'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:46 GMT
+      - Sun, 19 May 2024 06:38:29 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -475,8 +476,7 @@ interactions:
         [{"accountId": "3228711241517547934", "onlineId": "RealTrabstarbr", "role":
         "owner"}, {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co",
         "role": "member"}, {"accountId": "8859462586603699392", "onlineId": "test",
-        "role": "member"}], "partySessions": [], "notificationSetting": {"isMute":
-        false}}'
+        "role": "member"}], "notificationSetting": {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -489,11 +489,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '995'
+      - '976'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:47 GMT
+      - Sun, 19 May 2024 06:38:29 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -537,8 +537,8 @@ interactions:
         "buffk1"}}, "readMessageUid": "1#432903133472433"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co", "role": "member"}, {"accountId":
         "9111077425924553349", "onlineId": "buffk1", "role": "owner"}, {"accountId":
-        "8859462586603699392", "onlineId": "test", "role": "member"}], "partySessions":
-        [], "notificationSetting": {"isMute": false}}'
+        "8859462586603699392", "onlineId": "test", "role": "member"}], "notificationSetting":
+        {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -551,11 +551,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '963'
+      - '944'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:47 GMT
+      - Sun, 19 May 2024 06:38:29 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -599,8 +599,8 @@ interactions:
         "saeedg362"}}, "readMessageUid": "1#432060715498273"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co", "role": "member"}, {"accountId":
         "4273044099593005394", "onlineId": "saeedg362", "role": "owner"}, {"accountId":
-        "8859462586603699392", "onlineId": "test", "role": "member"}], "partySessions":
-        [], "notificationSetting": {"isMute": false}}'
+        "8859462586603699392", "onlineId": "test", "role": "member"}], "notificationSetting":
+        {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -613,11 +613,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '975'
+      - '956'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:47 GMT
+      - Sun, 19 May 2024 06:38:29 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -658,10 +658,10 @@ interactions:
         "messageType": 2006, "alternativeMessageType": 2001, "body": "zeldner created
         this group.\nzeldner added VaultTec BlacklistBot and test.", "createdTimestamp":
         "1685998234161", "sender": {"accountId": "9131409893874544561", "onlineId":
-        "zeldner"}}}, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co", "role": "member"}, {"accountId": "8859462586603699392", "onlineId":
-        "test", "role": "member"}, {"accountId": "9131409893874544561", "onlineId":
-        "zeldner", "role": "owner"}], "partySessions": [], "notificationSetting":
+        "zeldner"}}, "readMessageUid": "1#431615547945453"}, "members": [{"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co", "role": "member"}, {"accountId":
+        "8859462586603699392", "onlineId": "test", "role": "member"}, {"accountId":
+        "9131409893874544561", "onlineId": "zeldner", "role": "owner"}], "notificationSetting":
         {"isMute": false}}'
     headers:
       Access-Control-Allow-Headers:
@@ -675,11 +675,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '930'
+      - '948'
       Content-Type:
       - application/json
       Date:
-      - Sat, 11 May 2024 04:53:47 GMT
+      - Sun, 19 May 2024 06:38:30 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
