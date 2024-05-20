@@ -1,40 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="69" time="2.687" timestamp="2024-05-20T02:38:00.485842" hostname="fv-az840-671"><testcase classname="tests.unit_tests.test_authenticator" name="test_authenticator__access_token_from_refresh_token" time="0.047" /><testcase classname="tests.unit_tests.test_client" name="test_client__authentication" time="0.021" /><testcase classname="tests.unit_tests.test_client" name="test_client__incorrect_npsso" time="0.015" /><testcase classname="tests.unit_tests.test_client" name="test_client__online_id" time="0.492" /><testcase classname="tests.unit_tests.test_client" name="test_client__account_id" time="0.013" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_profile_legacy" time="0.025" /><testcase classname="tests.unit_tests.test_client" name="test_client__account_devices" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_friends" time="0.038" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_groups" time="0.079" /><testcase classname="tests.unit_tests.test_client" name="test_client__available_to_play" time="0.013" /><testcase classname="tests.unit_tests.test_client" name="test_client__blocked_list" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_summary" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_titles" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_titles_for_title" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophies" time="0.025" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_groups_summary" time="0.024" /><testcase classname="tests.unit_tests.test_client" name="test_client__title_stats" time="0.013" /><testcase classname="tests.unit_tests.test_client" name="test_client__repr_and_str" time="0.043" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__np_communication_id" time="0.013" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__wrong_title_id" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__get_title_details" time="0.019" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies" time="0.020" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary" time="0.019" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies_game_not_owned_by_user" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary_game_not_owned_by_user" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies_invalid_np_communication_id" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary_invalid_np_communication_id" time="0.012" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_incorrect_args" time="0.006" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_wrong_id" time="0.013" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_users" time="0.034" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_id" time="0.033" /><testcase classname="tests.unit_tests.test_group" name="test_group__repr_and_str" time="0.019" /><testcase classname="tests.unit_tests.test_group" name="test_group__change_name_dm" time="0.045" /><testcase classname="tests.unit_tests.test_group" name="test_group__dming_blocked_user" time="0.019"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;84e72191-15ad-11ef-9720-f7ea5ba06b96&quot;, &quot;code&quot;: 2285696, &quot;message&quot;: &quot;Bad Request&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_group__dming_blocked_user(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            with pytest.raises(PSNAWPForbidden):
-                is_fake_account = psnawp_fixture.user(online_id="isFakeAccount")
-&gt;               group = psnawp_fixture.group(users_list=[is_fake_account])
-
-tests/unit_tests/test_group.py:69: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/psnawp.py:159: in group
-    return Group(self._request_builder, group_id=group_id, users=users)
-src/psnawp_api/models/group.py:51: in __init__
-    self._create_group()
-src/psnawp_api/models/group.py:64: in _create_group
-    response = self._request_builder.post(
-src/psnawp_api/core/request_builder.py:123: in post
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-response = &lt;Response [400]&gt;
-
-    def response_checker(response: requests.Response) -&gt; None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-    
-        :param response: :class:`Response &lt;Response&gt;` object
-        :type response: requests.Response
-    
-        :returns: None
-    
-        """
-        if response.status_code == 400:
-&gt;           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "84e72191-15ad-11ef-9720-f7ea5ba06b96", "code": 2285696, "message": "Bad Request"}}
-
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_group" name="test_group__change_name" time="0.031" /><testcase classname="tests.unit_tests.test_group" name="test_group__leave_group" time="0.025" /><testcase classname="tests.unit_tests.test_search" name="test_search__universal_search" time="0.013"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;22d5fd39-9f70-4f56-bef9-9c2a1b823fa0&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="69" time="2.629" timestamp="2024-05-20T04:08:05.150170" hostname="fv-az692-597"><testcase classname="tests.unit_tests.test_authenticator" name="test_authenticator__access_token_from_refresh_token" time="0.047" /><testcase classname="tests.unit_tests.test_client" name="test_client__authentication" time="0.021" /><testcase classname="tests.unit_tests.test_client" name="test_client__incorrect_npsso" time="0.015" /><testcase classname="tests.unit_tests.test_client" name="test_client__online_id" time="0.560" /><testcase classname="tests.unit_tests.test_client" name="test_client__account_id" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_profile_legacy" time="0.025" /><testcase classname="tests.unit_tests.test_client" name="test_client__account_devices" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_friends" time="0.031" /><testcase classname="tests.unit_tests.test_client" name="test_client__get_groups" time="0.078" /><testcase classname="tests.unit_tests.test_client" name="test_client__available_to_play" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__blocked_list" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_summary" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_titles" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_titles_for_title" time="0.012" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophies" time="0.025" /><testcase classname="tests.unit_tests.test_client" name="test_client__trophy_groups_summary" time="0.024" /><testcase classname="tests.unit_tests.test_client" name="test_client__title_stats" time="0.013" /><testcase classname="tests.unit_tests.test_client" name="test_client__repr_and_str" time="0.043" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__np_communication_id" time="0.013" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__wrong_title_id" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__get_title_details" time="0.019" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies" time="0.020" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary" time="0.019" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies_game_not_owned_by_user" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary_game_not_owned_by_user" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophies_invalid_np_communication_id" time="0.012" /><testcase classname="tests.unit_tests.test_game_title" name="test_game_title__trophy_groups_summary_invalid_np_communication_id" time="0.012" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_incorrect_args" time="0.006" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_wrong_id" time="0.013" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_users" time="0.032" /><testcase classname="tests.unit_tests.test_group" name="test_group__group_with_id" time="0.032" /><testcase classname="tests.unit_tests.test_group" name="test_group__repr_and_str" time="0.019" /><testcase classname="tests.unit_tests.test_group" name="test_group__change_name_dm" time="0.032" /><testcase classname="tests.unit_tests.test_group" name="test_group__dming_blocked_user" time="0.029" /><testcase classname="tests.unit_tests.test_group" name="test_group__change_name" time="0.031" /><testcase classname="tests.unit_tests.test_group" name="test_group__leave_group" time="0.025" /><testcase classname="tests.unit_tests.test_search" name="test_search__universal_search" time="0.013"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;13c30796-75db-4ead-b214-721803d196d6&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010&gt;
 
     @pytest.mark.vcr()
     def test_search__universal_search(psnawp_fixture):
@@ -63,9 +27,9 @@ response = &lt;Response [400]&gt;
         """
         if response.status_code == 400:
 &gt;           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "22d5fd39-9f70-4f56-bef9-9c2a1b823fa0", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
+E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "13c30796-75db-4ead-b214-721803d196d6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
 
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_search" name="test_search__get_title_id" time="0.012"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;bd904960-9fcf-43e6-9084-14a768691e84&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
+src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_search" name="test_search__get_title_id" time="0.012"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;2b7d6383-3c94-4737-8cb0-14853e081ca6&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010&gt;
 
     @pytest.mark.vcr()
     def test_search__get_title_id(psnawp_fixture):
@@ -94,9 +58,9 @@ response = &lt;Response [400]&gt;
         """
         if response.status_code == 400:
 &gt;           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "bd904960-9fcf-43e6-9084-14a768691e84", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
+E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "2b7d6383-3c94-4737-8cb0-14853e081ca6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
 
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_search" name="test_search__get_title_id_wrong_title" time="0.012"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;77fdadda-e71a-46ce-bc29-a5e5cd0f26e1&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
+src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_search" name="test_search__get_title_id_wrong_title" time="0.012"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {&quot;error&quot;: {&quot;referenceId&quot;: &quot;0b810e5c-8acc-4594-9b3a-6c37f1bdc618&quot;, &quot;code&quot;: 3415813, &quot;message&quot;: &quot;JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\&quot;domainRequests\&quot;]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\&quot;domain\&quot;])&quot;, &quot;reason&quot;: &quot;invalid_parameter&quot;, &quot;source&quot;: &quot;api&quot;}}">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010&gt;
 
     @pytest.mark.vcr()
     def test_search__get_title_id_wrong_title(psnawp_fixture):
@@ -126,247 +90,6 @@ response = &lt;Response [400]&gt;
         """
         if response.status_code == 400:
 &gt;           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "77fdadda-e71a-46ce-bc29-a5e5cd0f26e1", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
+E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "0b810e5c-8acc-4594-9b3a-6c37f1bdc618", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]-&gt;java.util.ArrayList[0]-&gt;com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
 
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__user" time="0.013" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_account_id" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_no_argument" time="0.006" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_wrong_acc_id" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__prev_online_id" time="0.013" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_not_found" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_acct_id_not_found" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_profile" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_presence" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_presence_forbidden" time="0.019"><failure message="Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__get_presence_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-&gt;           with pytest.raises(PSNAWPForbidden):
-E           Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;
-
-tests/unit_tests/test_user.py:83: Failed</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__friendship" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__is_blocked" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_summary" time="0.018" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_summary_forbidden" time="0.019"><failure message="Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__trophy_summary_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-&gt;           with pytest.raises(PSNAWPForbidden):
-E           Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;
-
-tests/unit_tests/test_user.py:116: Failed</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles" time="0.022" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_forbidden" time="0.026"><failure message="Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__trophy_titles_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-&gt;           with pytest.raises(PSNAWPForbidden):
-E           Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;
-
-tests/unit_tests/test_user.py:139: Failed</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_pagination_test" time="0.076" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_for_title" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_for_title_forbidden" time="0.018"><failure message="Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__trophy_titles_for_title_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-&gt;           with pytest.raises(PSNAWPForbidden):
-E           Failed: DID NOT RAISE &lt;class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'&gt;
-
-tests/unit_tests/test_user.py:184: Failed</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__trophies" time="0.038" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophies_forbidden" time="0.018"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.">endpoint = '/users/2066273503397112667/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies'
-request_builder = &lt;psnawp_api.core.request_builder.RequestBuilder object at 0x7f7d8fda5310&gt;
-platform = 'PS4', limit = 10
-
-    def _get_trophy_from_endpoint(
-        endpoint: str,
-        request_builder: RequestBuilder,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        limit: Optional[int],
-    ) -&gt; Iterator[Trophy]:
-        offset = 0
-        service_name = "trophy2" if platform == "PS5" else "trophy"
-        params: dict[str, str | int] = {"npServiceName": service_name}
-        limit_per_request = 400
-        if limit is not None:
-            params = {**params, "limit": min(limit, limit_per_request), "offset": offset}
-    
-        while True:
-            try:
-&gt;               response = request_builder.get(
-                    url=f"{BASE_PATH['trophies']}{endpoint}",
-                    params=params,
-                ).json()
-
-src/psnawp_api/models/trophies/trophy.py:119: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/core/request_builder.py:79: in get
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-response = &lt;Response [404]&gt;
-
-    def response_checker(response: requests.Response) -&gt; None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-    
-        :param response: :class:`Response &lt;Response&gt;` object
-        :type response: requests.Response
-    
-        :returns: None
-    
-        """
-        if response.status_code == 400:
-            raise PSNAWPBadRequest(response.text)
-        elif response.status_code == 401:
-            raise PSNAWPUnauthorized(response.text)
-        elif response.status_code == 403:
-            raise PSNAWPForbidden(response.text)
-        elif response.status_code == 404:
-&gt;           raise PSNAWPNotFound(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: {"error": {"referenceId": "063405d3-15ae-11ef-bef6-732aecd0929c", "code": 2240525, "message": "Resource not found"}}
-
-src/psnawp_api/core/request_builder.py:33: PSNAWPNotFound
-
-The above exception was the direct cause of the following exception:
-
-psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__trophies_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            with pytest.raises(PSNAWPForbidden):
-&gt;               list(psnawp_fixture.user(online_id="isFakeAccount").trophies("NPWR15509_00", "PS4", limit=10))
-
-tests/unit_tests/test_user.py:213: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-endpoint = '/users/2066273503397112667/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies'
-request_builder = &lt;psnawp_api.core.request_builder.RequestBuilder object at 0x7f7d8fda5310&gt;
-platform = 'PS4', limit = 10
-
-    def _get_trophy_from_endpoint(
-        endpoint: str,
-        request_builder: RequestBuilder,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        limit: Optional[int],
-    ) -&gt; Iterator[Trophy]:
-        offset = 0
-        service_name = "trophy2" if platform == "PS5" else "trophy"
-        params: dict[str, str | int] = {"npServiceName": service_name}
-        limit_per_request = 400
-        if limit is not None:
-            params = {**params, "limit": min(limit, limit_per_request), "offset": offset}
-    
-        while True:
-            try:
-                response = request_builder.get(
-                    url=f"{BASE_PATH['trophies']}{endpoint}",
-                    params=params,
-                ).json()
-            except PSNAWPNotFound as not_found:
-&gt;               raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
-E               psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.
-
-src/psnawp_api/models/trophies/trophy.py:124: PSNAWPNotFound</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__trophies_pagination_test" time="0.040" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_groups_summary" time="0.037" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_groups_summary_forbidden" time="0.019"><failure message="psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.">self = &lt;psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f7d8f9d19d0&gt;
-account_id = '2066273503397112667', platform = 'PS4'
-
-    def user_trophy_groups_summary(
-        self,
-        account_id: str,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-    ) -&gt; TrophyGroupsSummary:
-        """Retrieves the earned trophy groups for a title and their respective trophy count.
-    
-        This is most commonly seen in games which have expansions where additional trophies are added.
-    
-        :param account_id: The account whose trophy list is being accessed
-        :type account_id: str
-        :param platform: The platform this title belongs to.
-        :type platform: Literal
-    
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
-        :rtype: TrophyGroupsSummary
-    
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
-    
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
-    
-        """
-    
-        service_name = "trophy2" if platform == "PS5" else "trophy"
-        params = {"npServiceName": service_name}
-        try:
-&gt;           response = self._request_builder.get(
-                url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
-                params=params,
-            ).json()
-
-src/psnawp_api/models/trophies/trophy_group.py:193: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/core/request_builder.py:79: in get
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-response = &lt;Response [404]&gt;
-
-    def response_checker(response: requests.Response) -&gt; None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-    
-        :param response: :class:`Response &lt;Response&gt;` object
-        :type response: requests.Response
-    
-        :returns: None
-    
-        """
-        if response.status_code == 400:
-            raise PSNAWPBadRequest(response.text)
-        elif response.status_code == 401:
-            raise PSNAWPUnauthorized(response.text)
-        elif response.status_code == 403:
-            raise PSNAWPForbidden(response.text)
-        elif response.status_code == 404:
-&gt;           raise PSNAWPNotFound(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: {"error": {"referenceId": "07f00d9f-15ae-11ef-b602-47941dda4bf7", "code": 2240525, "message": "Resource not found"}}
-
-src/psnawp_api/core/request_builder.py:33: PSNAWPNotFound
-
-The above exception was the direct cause of the following exception:
-
-psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050&gt;
-
-    @pytest.mark.vcr()
-    def test_user__trophy_groups_summary_forbidden(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            with pytest.raises(PSNAWPForbidden):
-&gt;               psnawp_fixture.user(online_id="isFakeAccount").trophy_groups_summary("NPWR15509_00", "PS4")
-
-tests/unit_tests/test_user.py:262: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/models/user.py:344: in trophy_groups_summary
-    ).user_trophy_groups_summary(account_id=self.account_id, platform=platform)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = &lt;psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f7d8f9d19d0&gt;
-account_id = '2066273503397112667', platform = 'PS4'
-
-    def user_trophy_groups_summary(
-        self,
-        account_id: str,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-    ) -&gt; TrophyGroupsSummary:
-        """Retrieves the earned trophy groups for a title and their respective trophy count.
-    
-        This is most commonly seen in games which have expansions where additional trophies are added.
-    
-        :param account_id: The account whose trophy list is being accessed
-        :type account_id: str
-        :param platform: The platform this title belongs to.
-        :type platform: Literal
-    
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
-        :rtype: TrophyGroupsSummary
-    
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
-    
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
-    
-        """
-    
-        service_name = "trophy2" if platform == "PS5" else "trophy"
-        params = {"npServiceName": service_name}
-        try:
-            response = self._request_builder.get(
-                url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
-                params=params,
-            ).json()
-        except PSNAWPNotFound as not_found:
-&gt;           raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
-E           psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.
-
-src/psnawp_api/models/trophies/trophy_group.py:198: PSNAWPNotFound</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats" time="0.070" /><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats_with_limit" time="0.259" /><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats_with_jump" time="0.034" /><testcase classname="tests.unit_tests.test_user" name="test_user__repr_and_str" time="0.013" /><testcase classname="tests.unit_tests.test_utils_misc" name="test_play_duration_to_timedelta_valid_inputs" time="0.001" /><testcase classname="tests.unit_tests.test_utils_misc" name="test_play_duration_to_timedelta_invalid_inputs" time="0.001" /></testsuite></testsuites>
+src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest</failure></testcase><testcase classname="tests.unit_tests.test_user" name="test_user__user" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_account_id" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_no_argument" time="0.006" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_wrong_acc_id" time="0.013" /><testcase classname="tests.unit_tests.test_user" name="test_user__prev_online_id" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_not_found" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__user_acct_id_not_found" time="0.012" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_profile" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_presence" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__get_presence_forbidden" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__friendship" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__is_blocked" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_summary" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_summary_forbidden" time="0.018" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles" time="0.023" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_forbidden" time="0.018" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_pagination_test" time="0.075" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_for_title" time="0.019" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_titles_for_title_forbidden" time="0.018" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophies" time="0.039" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophies_forbidden" time="0.038" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophies_pagination_test" time="0.041" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_groups_summary" time="0.038" /><testcase classname="tests.unit_tests.test_user" name="test_user__trophy_groups_summary_forbidden" time="0.038" /><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats" time="0.069" /><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats_with_limit" time="0.253" /><testcase classname="tests.unit_tests.test_user" name="test_user__title_stats_with_jump" time="0.033" /><testcase classname="tests.unit_tests.test_user" name="test_user__repr_and_str" time="0.013" /><testcase classname="tests.unit_tests.test_utils_misc" name="test_play_duration_to_timedelta_valid_inputs" time="0.001" /><testcase classname="tests.unit_tests.test_utils_misc" name="test_play_duration_to_timedelta_invalid_inputs" time="0.001" /></testsuite></testsuites>
