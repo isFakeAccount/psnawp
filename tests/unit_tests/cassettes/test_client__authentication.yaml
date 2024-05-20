@@ -23,33 +23,33 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Sun, 19 May 2024 06:38:24 GMT
+      - Mon, 20 May 2024 03:47:37 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.OwTB2R&cid=8fca0d47-66fa-47d0-9b85-64bab15505c8
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.Ro27Ax&cid=94c597e6-921b-4ac3-bc48-6c1d83cd24f6
       Server:
       - nginx
       Set-Cookie:
-      - _abck=B554D115CCD92A962DE42B363D8CF548~-1~YAAQ7CY+FyXCwmCPAQAAbKeSjwvq7PlWJBP1y9vaL+JzyofIXoSkDe8SxsyLds8PHrM0HO7jRBIKpM2ie0ahqORokfOzwmfauYkGEk2AWq106gwQ8ANQC2mHXKPF0pROGLwN+Py00ZEaGqGKSJtVL1dBijFsbMDsvrgnrETgOIcRknnJhaFUlOrTP5RjA1+MZocpAzKTaMcHEWByGvVwL88NdCKNqcqjeowsL8AWeGcX9/mI79uNaOPCg3F0h7HU7CX6SQYBLNeaSC7I5AOY8/voqWEvhWZ07b/ZSbNs8oyqLFVKkjB6BLlAywddRq2fzCPAkvb6VKvnt0EozSDxdMkZgqtR+ypc8eAdmrrT7Bw5RYQo5grVf/JQJ2aaVD/5RNPzqsV8fM9UTLLJMA==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Sun, 26 May 2024 06:38:24 GMT; Max-Age=604800;
+      - _abck=6D9C8BA3DBBADD1A8ECCA61494A9A4D6~-1~YAAQ7CY+FzQ0IGOPAQAAVaoclAvDUCHcfEFwqCweYnkCsiFZxzjN/w0UUgktSGyKvWey5768CX097FeeZGcGufzTQAFkcSIoM1FTJQs0yXxms+eFzkwYT8NEfGQU4H3oQDKGYyvNgB71u7fWTMuOEmim/7Gvcgk+YUlUfXmhAJDwhjy809BXNrf9aMqewApyqXHDvypsu6/0lDzL5KF5l1foSUU+7+Gf/OTQ0l9EUYlrJMddnOOwX57YYigKqwnIVMpgFt1N3BmhqOF2isTXPa4a5rZA7Xg9p1/chg6s7/i+NU9KFKzrHI3NDI80MnNE+jzMIDrj24cmRbjvphb2+DZ6hCt7lksMLVVJ/s03AabC46Cvkd7qLFIRf7J7GCFH/lNip4Iaz/aSdzmxJA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Mon, 27 May 2024 03:47:37 GMT; Max-Age=604800;
         Secure
-      - bm_sz=619A27E40277F878A5CF90B5CB699C41~YAAQ7CY+FybCwmCPAQAAbKeSjxdVLHVHnPirdiIyhA2RNUDrYhycr/AOrSi8J2Wovxo9oc441xnwIdWe1GkzoVjKAIFyeScVmeqTqTo/6rOBaYrPCR/iN8VbZzMlSAfiOzsRvcFevsqveaYmXsCsM4d+d2laPBocB/MnZouGe3ERos3QyjELpLqtgRETvbtiWCELSdjcHkj/XQeNe1bxjXv7VjKPh0HB3HSJvs87tGp/E76Vxxz76L3405dSasr4Dn/vNgW68QomK9R9AmNImvJlanIept0fpzsRfckABOpK7GY9SpYWrxihRBeevJ1YuVM1r7l7aY3iZMb+hecJFfWYLq5wqQASuukz+ibTVR3SeLNNzBAdufZx/ulDHb0UZy9PyShKtImw7NByDtfy0K0zPQ==~3684402~4601666;
-        Domain=.sony.com; Path=/; Expires=Sun, 19 May 2024 10:38:24 GMT; Max-Age=14400
+      - bm_sz=D451B47AE3C6C7B445C28C29C6814C4E~YAAQ7CY+FzU0IGOPAQAAVaoclBcyE7WfpjCSS7fDb9gk3sgqXwCtYVBkYD9LaXOzVFsDnIAs34nnMXARmFeC4zsVlFV3DJ/Hb2sOFxXP4xA9UqEAl4z+oTnTElYyyFjPQ8eVRkqJdkpOqM5IbSp7oUiPbiKP9c6eKOEKI+FZ/hI6Mx/pDpyZxdNLRR/ftSDZlLp01mO6VYH35QFgx3syg46wYYRoK76Epv95lFBPG0OpTW9XVhJpeEyF3+urNLfrxCfwh5czhNIjdwotER4NcYwj0xUrr8bavME0DuerVfTtUzO0rq+NrhhqFf4ChgAyYRvIwESaghYHTN1PkL495uRlFY4CUnL/qoV/OM7CoJ3imtruM4gwxSDBe8Y+z0Qms3P+GK/4hBepoAX6z7g/VyZi~3748919~3752761;
+        Domain=.sony.com; Path=/; Expires=Mon, 20 May 2024 07:47:37 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 8fca0d47-66fa-47d0-9b85-64bab15505c8
+      - 94c597e6-921b-4ac3-bc48-6c1d83cd24f6
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - 8fca0d47-66fa-47d0-9b85-64bab15505c8
+      - 94c597e6-921b-4ac3-bc48-6c1d83cd24f6
       X-Psn-Request-Id:
-      - 6712262ab0b3c4a9357360b808dff615
+      - a404026c3ee577c58f4ae0ef2fabe628
       X-RequestId:
-      - 6712262ab0b3c4a9357360b808dff615
+      - a404026c3ee577c58f4ae0ef2fabe628
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -87,20 +87,20 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 19 May 2024 06:38:24 GMT
+      - Mon, 20 May 2024 03:47:37 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-Content-Type-Options:
       - nosniff
       X-CorrelationId:
-      - 6a04a018-c237-4819-a816-1239a4a000b3
+      - bf712fd3-7d6d-42c8-bdbd-239aeebc69d7
       X-Psn-Correlation-Id:
-      - 6a04a018-c237-4819-a816-1239a4a000b3
+      - bf712fd3-7d6d-42c8-bdbd-239aeebc69d7
       X-Psn-Request-Id:
-      - ddcbb6d3e65ae4fa5c1c45ed61e99296
+      - 5e4f301fc32b9ae5841d228ac6ffeb04
       X-RequestId:
-      - ddcbb6d3e65ae4fa5c1c45ed61e99296
+      - 5e4f301fc32b9ae5841d228ac6ffeb04
     status:
       code: 200
       message: OK

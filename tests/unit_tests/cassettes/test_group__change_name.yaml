@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:40 GMT
+      - Mon, 20 May 2024 03:48:01 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -94,7 +94,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:40 GMT
+      - Mon, 20 May 2024 03:48:01 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -129,9 +129,9 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"groupId": "f5ba7d11cf0164d24185a908d27d729e1847b250-188", "mainThread":
-        {"threadId": "f5ba7d11cf0164d24185a908d27d729e1847b250-188"}, "hasAllAccountInvited":
-        true}'
+      string: '{"groupId": "247f39758f5844f3d918911ef9d2486d0b828ac4-881", "mainThread":
+        {"threadId": "247f39758f5844f3d918911ef9d2486d0b828ac4-881"}, "hasAllAccountInvited":
+        false}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -144,11 +144,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '159'
+      - '160'
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:41 GMT
+      - Mon, 20 May 2024 03:48:02 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -180,7 +180,7 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: PATCH
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/f5ba7d11cf0164d24185a908d27d729e1847b250-188
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/247f39758f5844f3d918911ef9d2486d0b828ac4-881
   response:
     body:
       string: ''
@@ -196,15 +196,15 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 19 May 2024 06:38:41 GMT
+      - Mon, 20 May 2024 03:48:02 GMT
       Server:
       - Apache
       Set-Cookie:
-      - _abck=DDF049ED95F1E96B6B7CC7D26B0BD215~-1~YAAQqc0vF43o6oSPAQAAjuuSjwtQFGCogWQw/wI7XBUTt/nY6fiBxU8lb+y5OPZKbxYiirGgpfH8LPSx8LtUKCDiYSHOO4Q2yyzvOBOGBTFPTszxdcy37UrJJv/M41ZgYC8zxP1+fqs9Lb2+Odwnxg+ALnqC11kYTHk6j4soghb39d8bBL0Luhwa1vuGr3A0/DXtmJpWMmhQY5NWqX1Ct9Ma3ijMgfzG7WUMlOBl3wEYqmRFmQTNWGeQfW06YcUBY4jQY70Vybl1uT0KK7ua0e9SXjQxMMY9CzgnLf7GDutibzm35YEtpLzNvXbKNic5KT3vMSRXllabWBHJCBWllvonyts8tSvcOTBOX6f0FANWYtMkIl38fkwHKwmbW4Xp8hlhi6nvuF8THE44~-1~-1~-1;
-        Domain=.playstation.com; Path=/; Expires=Sun, 26 May 2024 06:38:41 GMT; Max-Age=604800;
+      - _abck=4068571C3E95327E16E1D34C7A97BE22~-1~YAAQsc0vF2TNtoWPAQAAAAsdlAuanoICb2Tn8rhrl5HaldJIx7Q59cTZq9F6gnZUx0IHTRbyH7wvpyZlU9bDCeVof3yN8pe9AAUR0ii14YS26ZeUXsVFJwKbrCbly2mcTDlemJeURuuEuq48LBsw92yWBNZGHg0uuRXfLGNQ1q8cLnrb//lCHzXDZz2k651QOPhrQHHtFSfZKAM/xORrlaGsC3Leiw6BTxUqY3XeAmcvcEkBbfuSyd78+zHjE7sXLRtR4vcwPCHD8RkMsuOt5cOlSFuWLuy9wcWOdK2YIBUpXDFIxNuixB6KP05htn0bxVsWab+YBFaSitmxhuQ+r/WqbgM2cJVOMfEj+z/NP5twNXC7GcGrIeR8zwt8Vp+SjT6/aymv30ElGs8O~-1~-1~-1;
+        Domain=.playstation.com; Path=/; Expires=Mon, 27 May 2024 03:48:02 GMT; Max-Age=604800;
         Secure
-      - bm_sz=7A12F346F92B2659222F1F0BD26EF18A~YAAQqc0vF47o6oSPAQAAjuuSjxdQ71Yq5Ku9pCC0nvd3xHxL647RwF7hpD7kpTYk7vflwC13bFuO3WnyxPzlsVFwkAF+wuWiw9eJPGbHgyNiE4a5k/A0h8leH7EbTTlLWloRc5iEeug9Dn96bJUqjUGiccqFKIopb/Com3p6PlSCygzm+RnAHfx4K8WPzT4x64JqhUB/3NoUjTTmF2fSNPv4D0MVGI/QQvhoWCNB4Zu3lu8MfpmVrPFD46YKraWx6C5ZsmwkeIQfjS8Hh7SvT4em5EZEfIQeUQ8/JX5Q1bq75LvKeaqNzNzgcYg4lpmsFLATaNmtbM0j/dtmF0U8LRdV6mB4ggnOyJSKHpnKeOlL/LnrnKtcjqcS3QxIx++lKHNg~3616820~3683894;
-        Domain=.playstation.com; Path=/; Expires=Sun, 19 May 2024 10:38:41 GMT; Max-Age=14400
+      - bm_sz=2E886C99CDEDBC1AF5369877B97FB51E~YAAQsc0vF2XNtoWPAQAAAAsdlBejIRsby/wxdl7SB7lrp0nIQJ1LrXC5zKO3cPo2kOZGLsD+LpG13T5QHSGn3lspcz/hGLGs+tkdC5NJwXW2i3KeC0JjXHlAULWr/CyV/YEGTnXFUHNIfLlQK7b34VMYlTA5qKXXUHrm1RBeCbOu69yFYgXxLNffl2hNFagIa6VuYGGFubTZd0eErMWuXpjFgEnqajwD17QyA0r1UwW7jsmYYAruWYGaeJmFLU+BxSoSmglbuVl8YeAglsymboByWZdSvJb5vDO/bIUEgoiDRtaL1uEHHdPeataikhC3Q7tsylgabkI9z6qUD5ewn4tybpR0RMeUw/kvmrVrqLUohHrmipxZOCDKkePa3CTvQa/T~4535365~3159365;
+        Domain=.playstation.com; Path=/; Expires=Mon, 20 May 2024 07:48:02 GMT; Max-Age=14400
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:

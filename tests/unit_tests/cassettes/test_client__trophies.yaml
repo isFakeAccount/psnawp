@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "689b8175-15aa-11ef-bc82-f3eef154e39e", "code":
+      string: '{"error": {"referenceId": "b8354ba9-165b-11ef-aeb4-1dc7940a2637", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -31,7 +31,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:31 GMT
+      - Mon, 20 May 2024 03:47:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -202,7 +202,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:31 GMT
+      - Mon, 20 May 2024 03:47:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -237,7 +237,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "68d6b5e6-15aa-11ef-832e-595a4aa40f12", "code":
+      string: '{"error": {"referenceId": "b885b568-165b-11ef-9871-23dfa302ed8e", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -247,7 +247,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:31 GMT
+      - Mon, 20 May 2024 03:47:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

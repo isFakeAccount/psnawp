@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:04:19 GMT
+      - Mon, 20 May 2024 03:52:48 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -78,9 +78,61 @@ interactions:
         "NPWR35039_00", "trophySetVersion": "01.00", "trophyTitleName": "Prince of
         Persia\u2122: The Lost Crown", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35039_00/6187a2c9-2ba5-41dc-a291-c0a8f5554219.PNG",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "progress": 13, "earnedTrophies":
-        {"bronze": 5, "silver": 2, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-05-19T02:18:18Z"}, {"npServiceName": "trophy2",
+        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "progress": 37, "earnedTrophies":
+        {"bronze": 8, "silver": 9, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-20T02:35:26Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR34048_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34048_00/05857b48-0b74-433b-93ea-a8c9462667bb.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:38:34Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR34044_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleDetail": "The trophy set of Quiz Thiz Germany",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR34044_00_007F9A8D22CAC6B7C8E98747912C082CD163B8688D/6772F055BB7D37F425F29C7AA68F7536823CA49C.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:37:16Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR34047_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34047_00/0df1e6a1-03fb-4b57-a73a-092d6e21161d.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:35:47Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR34043_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleDetail": "The trophy set of Quiz Thiz Germany",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR34043_00_00B8CAB0CAC0D54B0563A4D6E990EC688558B3FB6E/BD6319D38CF530CD1E0D2186FDCA3B97306135E2.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:34:06Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR34050_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34050_00/7fef5cdb-357c-4b33-8f1c-124751b2cc12.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:32:46Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR34046_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleDetail": "The trophy set of Quiz Thiz Germany",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR34046_00_00B2377A19A267902154767AC2F48D149609021C58/90268EC33163A9BC1595836C4F3B44C9502B05A5.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:31:33Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR34049_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34049_00/a738d894-a15d-40fe-898e-36b4cce2250c.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:29:41Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR34045_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Quiz Thiz Germany", "trophyTitleDetail": "The trophy set of Quiz Thiz Germany",
+        "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR34045_00_0028B3A142423C9D0CB7CC9103EE7C9EF66B2CEFFB/2571B3A1704DFF5A1EB8173B495A0894B467B65E.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 6, "silver": 5, "gold": 9, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-19T12:27:12Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR44026_00", "trophySetVersion": "01.00", "trophyTitleName":
         "Learn to Play Vol. 2 - A Simple Shooter", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44026_00/896daa11-8921-4ba9-a981-efb7cb6a37a4.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
@@ -5225,11 +5277,55 @@ interactions:
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-05-02T22:57:54Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR29744_00", "trophySetVersion": "01.00", "trophyTitleName":
-        "Rock Paper Scissors - Breakthrough Gaming Arcade", "trophyTitleDetail": "Rock
-        Paper Scissors - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl":
-        "https://image.api.playstation.com/trophy/np/NPWR29744_00_00E99D9FED4AD5D43C308D08AB3EF58DAB4874EF24/BE4954FADBEA2D9ADDEE3A098040523C930123A3.PNG",
+        "lastUpdatedDateTime": "2022-05-02T22:57:54Z"}], "nextOffset": 800, "totalItemCount":
+        1354}'
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '450224'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 May 2024 03:52:49 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/93330175277685226/trophyTitles?limit=800&offset=800
+  response:
+    body:
+      string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
+        "NPWR29744_00", "trophySetVersion": "01.00", "trophyTitleName": "Rock Paper
+        Scissors - Breakthrough Gaming Arcade", "trophyTitleDetail": "Rock Paper Scissors
+        - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR29744_00_00E99D9FED4AD5D43C308D08AB3EF58DAB4874EF24/BE4954FADBEA2D9ADDEE3A098040523C930123A3.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
@@ -5279,55 +5375,10 @@ interactions:
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 2, "silver": 1, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 2, "silver": 1, "gold": 11, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-04-24T23:45:40Z"}], "nextOffset": 800, "totalItemCount":
-        1346}'
-    headers:
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '450315'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 19 May 2024 07:04:20 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/93330175277685226/trophyTitles?limit=800&offset=800
-  response:
-    body:
-      string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
-        "NPWR22197_00", "trophySetVersion": "01.01", "trophyTitleName": "Snake Boat:
-        Otterrific Arcade", "trophyTitleDetail": "This is the trophy set for Snake
-        Boat: Otterrific Arcade.", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22197_00_00334B7421DA67A6433BE202AADD7F66EB2934DEEE/73912E21E88390B6FE405D6975A2E2294AC19635.PNG",
+        "lastUpdatedDateTime": "2022-04-24T23:45:40Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR22197_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "Snake Boat: Otterrific Arcade", "trophyTitleDetail": "This is the trophy
+        set for Snake Boat: Otterrific Arcade.", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR22197_00_00334B7421DA67A6433BE202AADD7F66EB2934DEEE/73912E21E88390B6FE405D6975A2E2294AC19635.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": true, "definedTrophies":
         {"bronze": 11, "silver": 10, "gold": 7, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 11, "silver": 10, "gold": 7, "platinum": 1}, "hiddenFlag": false,
@@ -9064,18 +9115,18 @@ interactions:
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2017-07-20T12:42:09Z"}], "previousOffset": 799, "totalItemCount":
-        1346}'
+        1354}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '328040'
+      - '332611'
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:04:21 GMT
+      - Mon, 20 May 2024 03:52:50 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

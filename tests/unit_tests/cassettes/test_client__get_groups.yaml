@@ -21,12 +21,12 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=10&offset=0
   response:
     body:
-      string: '{"groups": [{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType":
+      string: '{"groups": [{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType":
         0, "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
-        {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}, {"groupId":
-        "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "members": [{"accountId":
-        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
-        "onlineId": "VaultTec_Trading"}]}, {"groupId": "18751a7d029fd0ab51664bbdd9ac700a6ce92698-637",
+        {"accountId": "8520698476712646544", "onlineId": "VaultTec_Trading"}]}, {"groupId":
+        "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType": 0, "members": [{"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "2066273503397112667",
+        "onlineId": "isFakeAccount"}]}, {"groupId": "18751a7d029fd0ab51664bbdd9ac700a6ce92698-637",
         "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
         "VaultTec-Co"}, {"accountId": "8859462586603699392", "onlineId": "test"}]},
         {"groupId": "d8397c573e4c1bf5f32e762ee7446ae4a2731957-983", "groupType": 1,
@@ -65,11 +65,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '630'
+      - '629'
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:27 GMT
+      - Mon, 20 May 2024 03:47:41 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -77,6 +77,65 @@ interactions:
       - max-age=63072000; includeSubDomains
       Vary:
       - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/90.0.4430.212 Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
+  response:
+    body:
+      string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
+        "1716176802200", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
+        false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
+        "1716176802200", "latestMessage": {"messageUid": "1#439341261363442", "messageType":
+        1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
+        "1716176802200", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439341261363442"}, "members": [{"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
+        "onlineId": "VaultTec_Trading"}], "notificationSetting": {"isMute": false}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '772'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 May 2024 03:47:42 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
     status:
@@ -130,66 +189,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:28 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/90.0.4430.212 Safari/537.36
-    method: GET
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CpartySessions%2CnotificationSetting
-  response:
-    body:
-      string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1715403237424", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
-        0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
-        false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1715403237424", "latestMessage": {"messageUid": "1#439143228780571", "messageType":
-        1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
-        "1715403237424", "sender": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}}, "readMessageUid": "1#439143228780571"}, "members": [{"accountId":
-        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
-        "onlineId": "VaultTec_Trading"}], "notificationSetting": {"isMute": false}}'
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Content-Type
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, PATCH, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '772'
-      Content-Type:
-      - application/json
-      Date:
-      - Sun, 19 May 2024 06:38:28 GMT
+      - Mon, 20 May 2024 03:47:42 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -249,7 +249,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:28 GMT
+      - Mon, 20 May 2024 03:47:42 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -311,7 +311,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:28 GMT
+      - Mon, 20 May 2024 03:47:42 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -371,7 +371,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:29 GMT
+      - Mon, 20 May 2024 03:47:43 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -431,7 +431,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:29 GMT
+      - Mon, 20 May 2024 03:47:43 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -493,7 +493,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:29 GMT
+      - Mon, 20 May 2024 03:47:43 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -555,7 +555,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:29 GMT
+      - Mon, 20 May 2024 03:47:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -617,7 +617,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:29 GMT
+      - Mon, 20 May 2024 03:47:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -679,7 +679,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:30 GMT
+      - Mon, 20 May 2024 03:47:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

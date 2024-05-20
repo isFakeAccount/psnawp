@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/SSSA01325_00/trophyGroups/all/trophies?npServiceName=trophy2
   response:
     body:
-      string: '{"error": {"referenceId": "6b79261d-15aa-11ef-a04e-f38e1efc9b78", "code":
+      string: '{"error": {"referenceId": "bc0df1a8-165b-11ef-b4b3-cbc16d4e6822", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -31,7 +31,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:36 GMT
+      - Mon, 20 May 2024 03:47:52 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

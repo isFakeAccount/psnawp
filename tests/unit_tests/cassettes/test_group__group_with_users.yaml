@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:37 GMT
+      - Mon, 20 May 2024 03:47:57 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -94,7 +94,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:37 GMT
+      - Mon, 20 May 2024 03:47:58 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -129,7 +129,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages
   response:
     body:
-      string: '{"messageUid": "1#439321783671508", "createdTimestamp": "1716100717466"}'
+      string: '{"messageUid": "1#439341280823800", "createdTimestamp": "1716176878217"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -146,7 +146,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:37 GMT
+      - Mon, 20 May 2024 03:47:58 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -179,10 +179,10 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790/threads/~25C4C5406FD6D50E.763F9A1EB6AB5790/messages?limit=1
   response:
     body:
-      string: '{"messages": [{"messageUid": "1#439321783671508", "messageType": 1,
-        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1716100717466",
+      string: '{"messages": [{"messageUid": "1#439341280823800", "messageType": 1,
+        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1716176878217",
         "sender": {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"}}],
-        "previous": "1#439321783671508", "next": "1#439321783671508", "reachedEndOfPage":
+        "previous": "1#439341280823800", "next": "1#439341280823800", "reachedEndOfPage":
         false, "messageCount": 1}'
     headers:
       Access-Control-Allow-Headers:
@@ -200,7 +200,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:37 GMT
+      - Mon, 20 May 2024 03:47:58 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

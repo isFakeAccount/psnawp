@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:05:45 GMT
+      - Mon, 20 May 2024 03:52:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -75,8 +75,8 @@ interactions:
   response:
     body:
       string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2024-05-18T23:13:44.864Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "PS5", "lastOnlineDate": "2024-05-18T23:13:44.864Z"}}}'
+        "2024-05-19T18:41:02.899Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "PS5", "lastOnlineDate": "2024-05-19T18:41:02.899Z"}}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -95,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:05:46 GMT
+      - Mon, 20 May 2024 03:52:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -104,7 +104,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0266242685128519938
+      - 0721537864476516567
     status:
       code: 200
       message: OK

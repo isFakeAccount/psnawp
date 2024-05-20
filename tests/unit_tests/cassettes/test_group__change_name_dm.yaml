@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:39 GMT
+      - Mon, 20 May 2024 03:48:00 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -75,13 +75,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1716100718525", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1716176879519", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1716100718525", "latestMessage": {"messageUid": "1#439321783942595", "messageType":
+        "1716176879519", "latestMessage": {"messageUid": "1#439341281156995", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
-        "1716100718525", "sender": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}}, "readMessageUid": "1#439321783942595"}, "members": [{"accountId":
+        "1716176879519", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439341281156995"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "notificationSetting": {"isMute": false}}'
     headers:
@@ -100,7 +100,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:39 GMT
+      - Mon, 20 May 2024 03:48:00 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -134,13 +134,13 @@ interactions:
   response:
     body:
       string: '{"groupId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "groupType": 0, "modifiedTimestamp":
-        "1716100718525", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1716176879519", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1664473719000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~25C4C5406FD6D50E.763F9A1EB6AB5790", "modifiedTimestamp":
-        "1716100718525", "latestMessage": {"messageUid": "1#439321783942595", "messageType":
+        "1716176879519", "latestMessage": {"messageUid": "1#439341281156995", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
-        "1716100718525", "sender": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}}, "readMessageUid": "1#439321783942595"}, "members": [{"accountId":
+        "1716176879519", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#439341281156995"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8520698476712646544",
         "onlineId": "VaultTec_Trading"}], "notificationSetting": {"isMute": false}}'
     headers:
@@ -159,7 +159,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:39 GMT
+      - Mon, 20 May 2024 03:48:00 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -194,7 +194,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~25C4C5406FD6D50E.763F9A1EB6AB5790
   response:
     body:
-      string: '{"error": {"referenceId": "6d891aa4-15aa-11ef-be1b-87cacdfc352b", "code":
+      string: '{"error": {"referenceId": "c118887f-165b-11ef-80b9-8b4f057193ff", "code":
         2285696, "message": "Bad Request"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -210,7 +210,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:39 GMT
+      - Mon, 20 May 2024 03:48:00 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

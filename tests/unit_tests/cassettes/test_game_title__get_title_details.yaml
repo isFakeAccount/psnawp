@@ -28,7 +28,7 @@ interactions:
         false, "trophyType": "bronze", "trophyName": "American Dream", "trophyDetail":
         "GTA Online: Own an Apartment, Garage and an Insured Vehicle", "trophyIconUrl":
         "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png",
-        "trophyRare": 3, "trophyEarnedRate": "67.9", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "67.8", "earned": true, "earnedDateTime":
         "2022-03-15T13:34:38Z"}], "progress": 1, "earnedTrophies": {"bronze": 2, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2022-03-15T13:34:39Z"}]}]}'
@@ -42,7 +42,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 06:38:34 GMT
+      - Mon, 20 May 2024 03:47:49 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -327,9 +327,9 @@ interactions:
         []}], "offers": {"osls": ["{\"metadata\":{\"id\":\"OFFER-PROD-8490_50\",\"schemaVersion\":\"1.3.2\",\"modified\":\"2024-05-15T12:27:29Z\",\"financeKeyId\":\"14452799\",\"campaignId\":\"PROMO-PROD-00008490\",\"promoId\":8490,\"start\":\"2024-05-17T07:00:00Z\",\"end\":\"2024-05-21T06:59:00Z\",\"version\":2,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":50,\"wholesale\":null}}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}"],
         "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003", "offerAvailability":
         [{"offerId": "OFFER-PROD-8490_50", "startDate": "2024-05-17T07:00:00Z", "endDate":
-        "2024-05-21T06:59:00Z"}]}]}, "starRating": {"total": "689746", "score": "4.52",
-        "count": [{"score": 1, "count": 47111}, {"score": 2, "count": 6954}, {"score":
-        3, "count": 32791}, {"score": 4, "count": 56110}, {"score": 5, "count": 546780}]},
+        "2024-05-21T06:59:00Z"}]}]}, "starRating": {"total": "689961", "score": "4.52",
+        "count": [{"score": 1, "count": 47130}, {"score": 2, "count": 6956}, {"score":
+        3, "count": 32810}, {"score": 4, "count": 56122}, {"score": 5, "count": 546943}]},
         "isTrending": false, "contentTypeId": 1}, "genres": ["ACTION", "ADVENTURE"],
         "localizedGenres": [{"value": "Action", "type": "ACTION"}, {"value": "Adventure",
         "type": "ADVENTURE"}], "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres":
@@ -361,9 +361,9 @@ interactions:
         "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
         {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
         {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
-        "interactiveElements": []}, "starRating": {"total": "689746", "score": "4.52",
-        "count": [{"score": 1, "count": 47111}, {"score": 2, "count": 6954}, {"score":
-        3, "count": 32791}, {"score": 4, "count": 56110}, {"score": 5, "count": 546780}]}}]'
+        "interactiveElements": []}, "starRating": {"total": "689961", "score": "4.52",
+        "count": [{"score": 1, "count": 47130}, {"score": 2, "count": 6956}, {"score":
+        3, "count": 32810}, {"score": 4, "count": 56122}, {"score": 5, "count": 546943}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -372,11 +372,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '6061'
+      - '6060'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 19 May 2024 06:38:34 GMT
+      - Mon, 20 May 2024 03:47:49 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains

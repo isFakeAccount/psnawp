@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:00:47 GMT
+      - Mon, 20 May 2024 03:48:01 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -76,8 +76,8 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"error": {"referenceId": "84e72191-15ad-11ef-9720-f7ea5ba06b96", "code":
-        2285696, "message": "Bad Request"}}'
+      string: '{"error": {"referenceId": "c1648555-165b-11ef-bf50-65e238eaad94", "code":
+        2286592, "message": "Request is rejected due to all targets'' settings"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -88,11 +88,11 @@ interactions:
       Connection:
       - close
       Content-Length:
-      - '103'
+      - '140'
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 May 2024 07:00:47 GMT
+      - Mon, 20 May 2024 03:48:01 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -101,6 +101,6 @@ interactions:
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 400
-      message: Bad Request
+      code: 403
+      message: Forbidden
 version: 1
