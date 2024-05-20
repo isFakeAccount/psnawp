@@ -1,5 +1,5 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.9, pytest-8.2.0, pluggy-1.5.0
+platform linux -- Python 3.11.9, pytest-8.2.1, pluggy-1.5.0
 rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
@@ -17,7 +17,7 @@ tests/unit_tests/test_utils_misc.py ..                                   [100%]
 =================================== FAILURES ===================================
 ________________________ test_group__dming_blocked_user ________________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_group__dming_blocked_user(psnawp_fixture):
@@ -56,7 +56,7 @@ E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"refe
 src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
 ________________________ test_search__universal_search _________________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_search__universal_search(psnawp_fixture):
@@ -90,7 +90,7 @@ E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"refe
 src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
 __________________________ test_search__get_title_id ___________________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_search__get_title_id(psnawp_fixture):
@@ -124,7 +124,7 @@ E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"refe
 src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
 ____________________ test_search__get_title_id_wrong_title _____________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_search__get_title_id_wrong_title(psnawp_fixture):
@@ -159,7 +159,7 @@ E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"refe
 src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
 ______________________ test_user__get_presence_forbidden _______________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__get_presence_forbidden(psnawp_fixture):
@@ -170,7 +170,7 @@ E           Failed: DID NOT RAISE <class 'psnawp_api.core.psnawp_exceptions.PSNA
 tests/unit_tests/test_user.py:83: Failed
 _____________________ test_user__trophy_summary_forbidden ______________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__trophy_summary_forbidden(psnawp_fixture):
@@ -181,7 +181,7 @@ E           Failed: DID NOT RAISE <class 'psnawp_api.core.psnawp_exceptions.PSNA
 tests/unit_tests/test_user.py:116: Failed
 ______________________ test_user__trophy_titles_forbidden ______________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__trophy_titles_forbidden(psnawp_fixture):
@@ -191,7 +191,7 @@ E           Failed: DID NOT RAISE <class 'psnawp_api.core.psnawp_exceptions.PSNA
 
 tests/unit_tests/test_user.py:139: Failed
 ----------------------------- Captured stdout call -----------------------------
-TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR11887_00', trophy_set_version='01.00', title_name='Pox Nora', title_detail='The trophy set of Pox Nora', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR11887_00_00CD1763C5BA6E0DDF29AB99E756B89FB23C049656/4DD0155C1D10FADA0A092365A910E243E433C281.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>, <PlatformType.PS_VITA: 'PSVITA'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=12, silver=8, gold=6, platinum=1), last_updated_date_time=datetime.datetime(2024, 3, 24, 22, 22, 49, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
+TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR11887_00', trophy_set_version='01.00', title_name='Pox Nora', title_detail='The trophy set of Pox Nora', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR11887_00_00CD1763C5BA6E0DDF29AB99E756B89FB23C049656/4DD0155C1D10FADA0A092365A910E243E433C281.PNG', title_platform=frozenset({<PlatformType.PS_VITA: 'PSVITA'>, <PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=12, silver=8, gold=6, platinum=1), last_updated_date_time=datetime.datetime(2024, 3, 24, 22, 22, 49, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy2', np_communication_id='NPWR36059_00', trophy_set_version='01.00', title_name='Plants At War', title_detail=None, title_icon_url='https://psnobj.prod.dl.playstation.net/psnobj/NPWR36059_00/397a77a2-fa0f-44a4-820d-666ddb6d1e4b.png', title_platform=frozenset({<PlatformType.PS5: 'PS5'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=4, silver=3, gold=2, platinum=0), last_updated_date_time=datetime.datetime(2024, 3, 24, 0, 50, 41, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR09618_00', trophy_set_version='01.00', title_name='Kitten Squad', title_detail='The Core Trophies of Kitten Squad', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR09618_00_002E0C969927ABA11384BB72C67C79A3DD089012E2/A566E75A6FEA54BBF4377A7B0009E6BC4F787374.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=9, silver=0, gold=0, platinum=0), last_updated_date_time=datetime.datetime(2024, 3, 24, 0, 32, 49, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR22014_00', trophy_set_version='01.01', title_name='Live Or Die', title_detail='Main Set', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR22014_00_009A159ABD5F0746AE62AF65E01F4A98D2BBEF6140/6CBA7D33DDC1CB8B3D641CECCDC2CB6D9FF0781C.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=9, silver=3, gold=1, platinum=0), last_updated_date_time=datetime.datetime(2024, 3, 24, 0, 21, 17, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
@@ -201,7 +201,7 @@ TrophyTitle(total_items_count=148, np_service_name='trophy2', np_communication_i
 TrophyTitle(total_items_count=148, np_service_name='trophy2', np_communication_id='NPWR28054_00', trophy_set_version='01.00', title_name='Session: Skateboard Sim', title_detail=None, title_icon_url='https://psnobj.prod.dl.playstation.net/psnobj/NPWR28054_00/08cdb5a5-db89-478e-8a8b-572961ea83be.png', title_platform=frozenset({<PlatformType.PS5: 'PS5'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=40, silver=6, gold=2, platinum=1), last_updated_date_time=datetime.datetime(2024, 2, 17, 5, 38, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR38289_00', trophy_set_version='01.00', title_name='Roblox', title_detail='Trophies for playing Roblox!', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR38289_00_0059EE350DDB76966F1B4FCDFD94DD0AD2EC27B7CB/EC7DF04C99BBEBAEECE2D94E4888D7A879AD5863.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=4, silver=2, gold=2, platinum=0), last_updated_date_time=datetime.datetime(2024, 2, 17, 4, 55, 38, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR12667_00', trophy_set_version='01.02', title_name='Insurgency: Sandstorm', title_detail='Insurgency: Sandstorm', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR12667_00_001980D0856D53A81EE629B028189781FC446703E2/5CD7EB05BF1AEB8BDC0C37E2FAF0198F67C57C06.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=2, hidden_flag=False, earned_trophies=TrophySet(bronze=2, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=14, silver=10, gold=6, platinum=1), last_updated_date_time=datetime.datetime(2023, 12, 27, 2, 19, 54, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
-TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR08648_00', trophy_set_version='01.01', title_name='METAL SLUG 3', title_detail='METAL SLUG 3', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR08648_00_00BCE1AE5D427D924F620ED395BCE972FDC7F33012/70F9C8A89075A4E2C45E1D231EDEA3CD31CD8D95.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>, <PlatformType.PS3: 'PS3'>, <PlatformType.PS_VITA: 'PSVITA'>}), has_trophy_groups=False, progress=4, hidden_flag=False, earned_trophies=TrophySet(bronze=1, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=11, silver=2, gold=1, platinum=0), last_updated_date_time=datetime.datetime(2023, 12, 27, 1, 57, 12, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
+TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR08648_00', trophy_set_version='01.01', title_name='METAL SLUG 3', title_detail='METAL SLUG 3', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR08648_00_00BCE1AE5D427D924F620ED395BCE972FDC7F33012/70F9C8A89075A4E2C45E1D231EDEA3CD31CD8D95.PNG', title_platform=frozenset({<PlatformType.PS_VITA: 'PSVITA'>, <PlatformType.PS3: 'PS3'>, <PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=4, hidden_flag=False, earned_trophies=TrophySet(bronze=1, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=11, silver=2, gold=1, platinum=0), last_updated_date_time=datetime.datetime(2023, 12, 27, 1, 57, 12, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR12205_00', trophy_set_version='01.00', title_name='I, Zombie', title_detail='The trophy set of I, Zombie.', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR12205_00_00459ED8CACF0D1C56DF08B832B28A012013A200DF/8E8923CE9EBC2950BC45245204BF8953978E3F47.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=19, hidden_flag=False, earned_trophies=TrophySet(bronze=4, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=5, silver=5, gold=1, platinum=0), last_updated_date_time=datetime.datetime(2023, 12, 3, 0, 15, 7, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR14927_00', trophy_set_version='01.00', title_name='Plants vs. Zombies: Battle for Neighborville', title_detail='Plants vs. Zombies: Battle for Neighborville', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR14927_00_008EAF73C51FA007D070D82CB7F6133764963BE212/53D62DA296C12E7C7F90C4C30798D8F5FD26CDE0.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=3, hidden_flag=False, earned_trophies=TrophySet(bronze=2, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=38, silver=11, gold=1, platinum=1), last_updated_date_time=datetime.datetime(2023, 10, 6, 3, 45, 35, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR05706_00', trophy_set_version='01.22', title_name='Minecraft: PlayStation®4 Edition', title_detail='Minecraft Trophy Set', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR05706_00_003C44BDCCF6EB21301F194F8CEF00BD1F4DC538D0/82D9739A2BD62B99475DD8B0E1ABE8C33C7A58D1.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=True, progress=49, hidden_flag=False, earned_trophies=TrophySet(bronze=51, silver=16, gold=4, platinum=0), defined_trophies=TrophySet(bronze=79, silver=36, gold=11, platinum=1), last_updated_date_time=datetime.datetime(2023, 8, 4, 6, 24, 39, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
@@ -211,7 +211,7 @@ TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR20567_00', trophy_set_version='01.27', title_name='Minecraft: PlayStation®4 Edition (2)', title_detail='Minecraft Trophy Set (2)', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR20567_00_00EB1693CD75B00EF3CAD0D20B219CB4B01629F9EE/EDE580566744E9734D576CBF7E47FAD7E8EC1CBE.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=True, progress=5, hidden_flag=False, earned_trophies=TrophySet(bronze=2, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=8, silver=2, gold=4, platinum=0), last_updated_date_time=datetime.datetime(2023, 6, 14, 2, 11, 22, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR18622_00', trophy_set_version='01.00', title_name='The Walking Dead: The Telltale Definitive Series', title_detail='The Walking Dead: The Telltale Definitive Series - Trophies', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR18622_00_00011F37781DC647CA1587C039D9B099BF49668883/89140CEA3B44BE429DFE47F60D08EB26FACCB560.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=4, hidden_flag=False, earned_trophies=TrophySet(bronze=1, silver=1, gold=0, platinum=0), defined_trophies=TrophySet(bronze=5, silver=12, gold=6, platinum=1), last_updated_date_time=datetime.datetime(2023, 6, 8, 20, 42, 14, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy2', np_communication_id='NPWR24327_00', trophy_set_version='01.01', title_name='Crossout', title_detail=None, title_icon_url='https://psnobj.prod.dl.playstation.net/psnobj/NPWR24327_00/e335ed72-da8e-4eb0-81a4-59a87e79b874.png', title_platform=frozenset({<PlatformType.PS5: 'PS5'>}), has_trophy_groups=False, progress=4, hidden_flag=False, earned_trophies=TrophySet(bronze=1, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=9, silver=3, gold=1, platinum=0), last_updated_date_time=datetime.datetime(2023, 5, 20, 21, 9, 34, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
-TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR04270_00', trophy_set_version='01.06', title_name='Terraria', title_detail='Trophies for Terraria', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR04270_00_0022396415F240178A00F09426BFC3D467DB3A10DE/728F695A98AD44DA1238DAF81C849033E966B0C1.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>, <PlatformType.PS3: 'PS3'>, <PlatformType.PS_VITA: 'PSVITA'>}), has_trophy_groups=True, progress=2, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=1, gold=0, platinum=0), defined_trophies=TrophySet(bronze=25, silver=20, gold=2, platinum=1), last_updated_date_time=datetime.datetime(2023, 4, 23, 0, 48, 44, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
+TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR04270_00', trophy_set_version='01.06', title_name='Terraria', title_detail='Trophies for Terraria', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR04270_00_0022396415F240178A00F09426BFC3D467DB3A10DE/728F695A98AD44DA1238DAF81C849033E966B0C1.PNG', title_platform=frozenset({<PlatformType.PS_VITA: 'PSVITA'>, <PlatformType.PS3: 'PS3'>, <PlatformType.PS4: 'PS4'>}), has_trophy_groups=True, progress=2, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=1, gold=0, platinum=0), defined_trophies=TrophySet(bronze=25, silver=20, gold=2, platinum=1), last_updated_date_time=datetime.datetime(2023, 4, 23, 0, 48, 44, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR16071_00', trophy_set_version='01.00', title_name='For The King', title_detail='For The King', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR16071_00_00C8961D807D77F075A312073D5EF7389AE3FC23A2/01C73F32A957103FAD0B3CB5BFB3327F4CB596D4.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=46, silver=9, gold=1, platinum=1), last_updated_date_time=datetime.datetime(2023, 4, 23, 0, 32, 12, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR13303_00', trophy_set_version='01.04', title_name='DRAGON BALL FighterZ', title_detail='DRAGON BALL FighterZ', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR13303_00_005E3482033946A86FE084989510004F525B9C2DD9/9C5B5BA05A8645EC48172B8A7274DA7AB11C3A91.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=0, hidden_flag=False, earned_trophies=TrophySet(bronze=0, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=20, silver=10, gold=5, platinum=1), last_updated_date_time=datetime.datetime(2023, 4, 15, 1, 4, 9, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR30866_00', trophy_set_version='01.00', title_name="I'm in Love With Your Dead Grandmother Trophy Set", title_detail='This is the trophy set for the game "I\'m in Love With Your Dead Grandmother"', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR30866_00_00AFE98C95CC79938EE5C8A7E04D5376D532C8AB29/82893B7710B2562650151289542FD5EF830212C0.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=100, hidden_flag=False, earned_trophies=TrophySet(bronze=1, silver=0, gold=11, platinum=1), defined_trophies=TrophySet(bronze=1, silver=0, gold=11, platinum=1), last_updated_date_time=datetime.datetime(2023, 4, 14, 4, 41, 47, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
@@ -293,7 +293,7 @@ TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id
 TrophyTitle(total_items_count=148, np_service_name='trophy', np_communication_id='NPWR14881_00', trophy_set_version='01.02', title_name='Jump Force', title_detail='JUMP FORCE Trophy Set', title_icon_url='https://image.api.playstation.com/trophy/np/NPWR14881_00_00900EF47ABA41B0908847B3C9A73B7E6833F672CD/9FECCF38AADB6CF4F5B1DB013787609695E4BBF5.PNG', title_platform=frozenset({<PlatformType.PS4: 'PS4'>}), has_trophy_groups=False, progress=8, hidden_flag=False, earned_trophies=TrophySet(bronze=6, silver=0, gold=0, platinum=0), defined_trophies=TrophySet(bronze=36, silver=11, gold=2, platinum=1), last_updated_date_time=datetime.datetime(2020, 10, 3, 3, 51, 57, tzinfo=datetime.timezone.utc), np_title_id=None, rarest_trophies=[])
 _________________ test_user__trophy_titles_for_title_forbidden _________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__trophy_titles_for_title_forbidden(psnawp_fixture):
@@ -305,7 +305,7 @@ tests/unit_tests/test_user.py:184: Failed
 ________________________ test_user__trophies_forbidden _________________________
 
 endpoint = '/users/2066273503397112667/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies'
-request_builder = <psnawp_api.core.request_builder.RequestBuilder object at 0x7f41c8c20150>
+request_builder = <psnawp_api.core.request_builder.RequestBuilder object at 0x7f7d8fda5310>
 platform = 'PS4', limit = 10
 
     def _get_trophy_from_endpoint(
@@ -359,7 +359,7 @@ src/psnawp_api/core/request_builder.py:33: PSNAWPNotFound
 
 The above exception was the direct cause of the following exception:
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__trophies_forbidden(psnawp_fixture):
@@ -371,7 +371,7 @@ tests/unit_tests/test_user.py:213:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 endpoint = '/users/2066273503397112667/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies'
-request_builder = <psnawp_api.core.request_builder.RequestBuilder object at 0x7f41c8c20150>
+request_builder = <psnawp_api.core.request_builder.RequestBuilder object at 0x7f7d8fda5310>
 platform = 'PS4', limit = 10
 
     def _get_trophy_from_endpoint(
@@ -400,7 +400,7 @@ E               psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following 
 src/psnawp_api/models/trophies/trophy.py:124: PSNAWPNotFound
 __________________ test_user__trophy_groups_summary_forbidden __________________
 
-self = <psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f41c8e3d710>
+self = <psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f7d8f9d19d0>
 account_id = '2066273503397112667', platform = 'PS4'
 
     def user_trophy_groups_summary(
@@ -465,7 +465,7 @@ src/psnawp_api/core/request_builder.py:33: PSNAWPNotFound
 
 The above exception was the direct cause of the following exception:
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f41c8dbfc10>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f7d8fa0d050>
 
     @pytest.mark.vcr()
     def test_user__trophy_groups_summary_forbidden(psnawp_fixture):
@@ -479,7 +479,7 @@ src/psnawp_api/models/user.py:344: in trophy_groups_summary
     ).user_trophy_groups_summary(account_id=self.account_id, platform=platform)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f41c8e3d710>
+self = <psnawp_api.models.trophies.trophy_group.TrophyGroupsSummaryBuilder object at 0x7f7d8f9d19d0>
 account_id = '2066273503397112667', platform = 'PS4'
 
     def user_trophy_groups_summary(
@@ -561,4 +561,4 @@ FAILED tests/unit_tests/test_user.py::test_user__trophy_titles_forbidden - Faile
 FAILED tests/unit_tests/test_user.py::test_user__trophy_titles_for_title_forbidden - Failed: DID NOT RAISE <class 'psnawp_api.core.psnawp_exceptions.PSNAWPForbidden'>
 FAILED tests/unit_tests/test_user.py::test_user__trophies_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.
 FAILED tests/unit_tests/test_user.py::test_user__trophy_groups_summary_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPNotFound: The following user has no trophies for the given game title.
-======================== 10 failed, 59 passed in 2.80s =========================
+======================== 10 failed, 59 passed in 2.68s =========================
