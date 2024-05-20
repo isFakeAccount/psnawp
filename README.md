@@ -1,4 +1,4 @@
-# <img src="docs/_static/psn_logo.png" onerror="this.src='../_static/psn_logo.png'", alt="PlayStation Logo", height="35px"> PlayStation Network API Wrapper Python (PSNAWP)
+# <img src="docs/_static/psn_logo.png" alt="PlayStation Logo" height="35px"> PlayStation Network API Wrapper Python (PSNAWP)
 
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
 
