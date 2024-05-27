@@ -10,8 +10,8 @@ from urllib.parse import parse_qs, urlparse
 from requests import Response
 from typing_extensions import ParamSpec, Unpack
 
-from psnawp_api.core import RequestBuilder, RequestBuilderHeaders, RequestOptions
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
+from psnawp_api.core.request_builder import RequestBuilder, RequestBuilderHeaders, RequestOptions
 from psnawp_api.utils import API_PATH, BASE_PATH
 
 PT = ParamSpec("PT")
