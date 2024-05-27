@@ -4,120 +4,14 @@ rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
 plugins: cov-5.0.0, vcr-1.0.2
-collected 69 items
+collected 41 items / 1 error
 
-tests/unit_tests/test_authenticator.py .                                 [  1%]
-tests/unit_tests/test_client.py .................                        [ 26%]
-tests/unit_tests/test_game_title.py .........                            [ 39%]
-tests/unit_tests/test_group.py .........                                 [ 52%]
-tests/unit_tests/test_search.py FFF                                      [ 56%]
-tests/unit_tests/test_user.py ............................               [ 97%]
-tests/unit_tests/test_utils_misc.py ..                                   [100%]
-
-=================================== FAILURES ===================================
-________________________ test_search__universal_search _________________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010>
-
-    @pytest.mark.vcr()
-    def test_search__universal_search(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            search = psnawp_fixture.search()
->           search.universal_search(search_query="GTA", limit=1)
-
-tests/unit_tests/test_search.py:13:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-src/psnawp_api/models/search.py:86: in universal_search
-    response: dict[str, Any] = self._request_builder.post(url=f"{BASE_PATH['universal_search']}", data=json.dumps(data)).json()
-src/psnawp_api/core/request_builder.py:123: in post
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-response = <Response [400]>
-
-    def response_checker(response: requests.Response) -> None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-
-        :param response: :class:`Response <Response>` object
-        :type response: requests.Response
-
-        :returns: None
-
-        """
-        if response.status_code == 400:
->           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "13c30796-75db-4ead-b214-721803d196d6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
-__________________________ test_search__get_title_id ___________________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010>
-
-    @pytest.mark.vcr()
-    def test_search__get_title_id(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            search = psnawp_fixture.search()
->           assert search.get_title_id("Minecraft") == ("Minecraft", "CUSA00744_00")
-
-tests/unit_tests/test_search.py:20:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-src/psnawp_api/models/search.py:117: in get_title_id
-    response: dict[str, Any] = self._request_builder.post(url=f"{BASE_PATH['universal_search']}", data=json.dumps(data)).json()
-src/psnawp_api/core/request_builder.py:123: in post
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-response = <Response [400]>
-
-    def response_checker(response: requests.Response) -> None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-
-        :param response: :class:`Response <Response>` object
-        :type response: requests.Response
-
-        :returns: None
-
-        """
-        if response.status_code == 400:
->           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "2b7d6383-3c94-4737-8cb0-14853e081ca6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
-____________________ test_search__get_title_id_wrong_title _____________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fa8e0566010>
-
-    @pytest.mark.vcr()
-    def test_search__get_title_id_wrong_title(psnawp_fixture):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-            with pytest.raises(PSNAWPNotFound):
-                search = psnawp_fixture.search()
->               search.get_title_id("dsfasdfadsf")
-
-tests/unit_tests/test_search.py:30:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-src/psnawp_api/models/search.py:117: in get_title_id
-    response: dict[str, Any] = self._request_builder.post(url=f"{BASE_PATH['universal_search']}", data=json.dumps(data)).json()
-src/psnawp_api/core/request_builder.py:123: in post
-    response_checker(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-response = <Response [400]>
-
-    def response_checker(response: requests.Response) -> None:
-        """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
-
-        :param response: :class:`Response <Response>` object
-        :type response: requests.Response
-
-        :returns: None
-
-        """
-        if response.status_code == 400:
->           raise PSNAWPBadRequest(response.text)
-E           psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "0b810e5c-8acc-4594-9b3a-6c37f1bdc618", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-
-src/psnawp_api/core/request_builder.py:27: PSNAWPBadRequest
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/unit_tests/test_user.py ________________
+tests/unit_tests/test_user.py:16: in <module>
+    assert FRIEND_USER_NAME != "FRIEND_USER_NAME", "FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO."
+E   AssertionError: FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO.
+E   assert 'FRIEND_USER_NAME' != 'FRIEND_USER_NAME'
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.11.9-final-0 -----------
@@ -125,34 +19,34 @@ Name                                                   Stmts   Miss  Cover
 --------------------------------------------------------------------------
 src/psnawp_api/__init__.py                                 2      0   100%
 src/psnawp_api/core/__init__.py                            4      0   100%
-src/psnawp_api/core/authenticator.py                      45      3    93%
+src/psnawp_api/core/authenticator.py                      45     31    31%
 src/psnawp_api/core/psnawp_exceptions.py                   9      0   100%
-src/psnawp_api/core/request_builder.py                    72     15    79%
+src/psnawp_api/core/request_builder.py                    72     59    18%
 src/psnawp_api/models/__init__.py                          0      0   100%
-src/psnawp_api/models/client.py                           70      0   100%
-src/psnawp_api/models/game_title.py                       22      0   100%
-src/psnawp_api/models/group.py                            51      0   100%
+src/psnawp_api/models/client.py                           70     38    46%
+src/psnawp_api/models/game_title.py                       22     10    55%
+src/psnawp_api/models/group.py                            51     35    31%
 src/psnawp_api/models/listing/__init__.py                  2      0   100%
-src/psnawp_api/models/listing/pagination_iterator.py      55      3    95%
-src/psnawp_api/models/search.py                           21      7    67%
-src/psnawp_api/models/title_stats.py                      73      1    99%
+src/psnawp_api/models/listing/pagination_iterator.py      55     29    47%
+src/psnawp_api/models/search.py                           21     12    43%
+src/psnawp_api/models/title_stats.py                      73     29    60%
 src/psnawp_api/models/trophies/__init__.py                 0      0   100%
-src/psnawp_api/models/trophies/trophy.py                 110      0   100%
+src/psnawp_api/models/trophies/trophy.py                 110     50    55%
 src/psnawp_api/models/trophies/trophy_constants.py        30      2    93%
-src/psnawp_api/models/trophies/trophy_group.py            87      0   100%
-src/psnawp_api/models/trophies/trophy_summary.py          24      0   100%
-src/psnawp_api/models/trophies/trophy_titles.py           84      0   100%
-src/psnawp_api/models/trophies/utility_functions.py        7      0   100%
-src/psnawp_api/models/user.py                             70      0   100%
-src/psnawp_api/psnawp.py                                  33      0   100%
+src/psnawp_api/models/trophies/trophy_group.py            87     32    63%
+src/psnawp_api/models/trophies/trophy_summary.py          24      5    79%
+src/psnawp_api/models/trophies/trophy_titles.py           84     36    57%
+src/psnawp_api/models/trophies/utility_functions.py        7      2    71%
+src/psnawp_api/models/user.py                             75     46    39%
+src/psnawp_api/psnawp.py                                  33     16    52%
 src/psnawp_api/utils/__init__.py                           3      0   100%
 src/psnawp_api/utils/endpoints.py                          2      0   100%
-src/psnawp_api/utils/misc.py                              17      0   100%
+src/psnawp_api/utils/misc.py                              17     10    41%
 --------------------------------------------------------------------------
-TOTAL                                                    893     31    97%
+TOTAL                                                    898    442    51%
 
 =========================== short test summary info ============================
-FAILED tests/unit_tests/test_search.py::test_search__universal_search - psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "13c30796-75db-4ead-b214-721803d196d6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 53] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-FAILED tests/unit_tests/test_search.py::test_search__get_title_id - psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "2b7d6383-3c94-4737-8cb0-14853e081ca6", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 59] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-FAILED tests/unit_tests/test_search.py::test_search__get_title_id_wrong_title - psnawp_api.core.psnawp_exceptions.PSNAWPBadRequest: {"error": {"referenceId": "0b810e5c-8acc-4594-9b3a-6c37f1bdc618", "code": 3415813, "message": "JSON parse error: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `com.sony.sie.kamaji.search.universal.model.openapi.SearchDomain`, problem: Unexpected value 'ConceptGameMobileApp'\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 61] (through reference chain: com.sony.sie.kamaji.search.universal.model.openapi.UniversalSearchRequest[\"domainRequests\"]->java.util.ArrayList[0]->com.sony.sie.kamaji.search.universal.model.openapi.SearchDomainRequest[\"domain\"])", "reason": "invalid_parameter", "source": "api"}}
-========================= 3 failed, 66 passed in 2.62s =========================
+ERROR tests/unit_tests/test_user.py - AssertionError: FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO.
+assert 'FRIEND_USER_NAME' != 'FRIEND_USER_NAME'
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.35s ===============================
