@@ -1,17 +1,41 @@
 from __future__ import annotations
 
 import time
-from typing import Any
+from datetime import timedelta
+from functools import wraps
+from logging import getLogger
+from typing import Any, Callable, TypeVar, cast
 from urllib.parse import parse_qs, urlparse
 
-import requests
+from requests import Response
+from typing_extensions import ParamSpec, Unpack
 
+from psnawp_api.core import RequestBuilder, RequestBuilderHeaders, RequestOptions
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
-from psnawp_api.utils import API_PATH, BASE_PATH, create_logger
+from psnawp_api.utils import API_PATH, BASE_PATH
+
+PT = ParamSpec("PT")
+RT = TypeVar("RT")
+
+
+def pre_request_processing(method: Callable[PT, RT]) -> Callable[PT, RT]:
+    @wraps(method)
+    def _impl(*method_args: PT.args, **method_kwargs: PT.kwargs) -> RT:
+        method_out = method(*method_args, **method_kwargs)
+
+        authenticator_obj = cast(Authenticator, method_args[0])
+        if authenticator_obj.refresh_token_expiration_in < authenticator_obj.refresh_token_warn_time.total_seconds():
+            authenticator_obj.refresh_token_warn_callback(authenticator_obj.refresh_token_warn_time)
+        return method_out
+
+    return _impl
+
+
+authenticator_logger = getLogger("psnawp")
 
 
 class Authenticator:
-    """Provides an interface for PSN Authentication."""
+    """Provides an interface for PSN Authentication and API"""
 
     __PARAMS = {
         "CLIENT_ID": "09515159-7237-4370-9b40-3806e67c0891",
@@ -20,7 +44,13 @@ class Authenticator:
     }
     __AUTH_HEADER = {"Authorization": "Basic MDk1MTUxNTktNzIzNy00MzcwLTliNDAtMzgwNmU2N2MwODkxOnVjUGprYTV0bnRCMktxc1A="}
 
-    def __init__(self, npsso_cookie: str):
+    def __init__(
+        self,
+        npsso_cookie: str,
+        refresh_token_warn_time: timedelta,
+        refresh_token_warn_callback: Callable[[timedelta], None],
+        **default_headers: Unpack[RequestBuilderHeaders],
+    ):
         """Represents a single authentication to PSN API.
 
         :param npsso_cookie: npsso cookie obtained from PSN website.
@@ -28,83 +58,92 @@ class Authenticator:
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
-        self._npsso_token = npsso_cookie
-        self._auth_properties: dict[str, Any] = {}
-        self._authenticate()
-        self._authenticator_logger = create_logger(__file__)
+        self.npsso_token = npsso_cookie
+        self.default_headers = default_headers
+        self.request_builder = RequestBuilder(**default_headers)
+        self.auth_properties: dict[str, Any] = {}
 
-    def obtain_fresh_access_token(self) -> Any:
-        """Gets a new access token from refresh token.
+        self.refresh_token_warn_time = refresh_token_warn_time
+        self.refresh_token_warn_callback = refresh_token_warn_callback
 
-        :returns: access token
+    @property
+    def access_token_expiration_time(self) -> float:
+        return self.auth_properties.get("access_token_expires_at", time.time())
 
-        """
+    @property
+    def refresh_token_expiration_time(self) -> float:
+        return self.auth_properties.get("refresh_token_expires_at", time.time())
 
-        if self._auth_properties["access_token_expires_at"] > time.time():
-            return self._auth_properties["access_token"]
+    @property
+    def access_token_expiration_in(self) -> float:
+        return self.auth_properties.get("expire_in", 0)
+
+    @property
+    def refresh_token_expiration_in(self) -> float:
+        return self.auth_properties.get("refresh_token_expires_in", 0)
+
+    def fetch_access_token_from_refresh(self, refresh_token: str) -> None:
+        """Obtain the access token using refresh token."""
 
         data = {
-            "refresh_token": self._auth_properties["refresh_token"],
+            "refresh_token": refresh_token,
             "grant_type": "refresh_token",
-            "scope": Authenticator.__PARAMS["SCOPE"],
+            "scope": type(self).__PARAMS["SCOPE"],
             "token_format": "jwt",
         }
-        response = requests.post(
-            f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
-            headers=Authenticator.__AUTH_HEADER,
+        response = self.request_builder.post(
+            url=f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
+            headers=type(self).__AUTH_HEADER,
             data=data,
         )
-        self._auth_properties = response.json()
-        self._auth_properties["access_token_expires_at"] = self._auth_properties["expires_in"] + time.time()
-        if self._auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            self._authenticator_logger.warning("Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!")
-        return self._auth_properties["access_token"]
+        self.auth_properties = response.json()
+        self.auth_properties["access_token_expires_at"] = self.auth_properties["expires_in"] + time.time()
+        self.auth_properties["refresh_token_expires_at"] = self.auth_properties["refresh_token_expires_in"] + time.time()
 
-    def oauth_token(self, code: str) -> None:
-        """Obtain the access token using oauth code for the first time, after this the access token is obtained via refresh token.
+    def fetch_access_token_from_authorization(self, authorization_code: str) -> None:
+        """Obtain the access token using authorization code for the first time, after this the access token is obtained via refresh token.
 
         :param code: Code obtained using npsso code.
 
         """
 
         data = {
-            "code": code,
+            "code": authorization_code,
             "grant_type": "authorization_code",
-            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
-            "scope": Authenticator.__PARAMS["SCOPE"],
+            "redirect_uri": type(self).__PARAMS["REDIRECT_URI"],
+            "scope": type(self).__PARAMS["SCOPE"],
             "token_format": "jwt",
         }
 
-        response = requests.post(
-            f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
-            headers=Authenticator.__AUTH_HEADER,
+        response = self.request_builder.post(
+            url=f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
+            headers=type(self).__AUTH_HEADER,
             data=data,
         )
-        self._auth_properties = response.json()
-        self._auth_properties["access_token_expires_at"] = self._auth_properties["expires_in"] + time.time()
-        if self._auth_properties["refresh_token_expires_in"] <= 60 * 60 * 24 * 3:
-            self._authenticator_logger.warning("Warning: Your refresh token is going to expire in less than 3 days. Please renew you npsso token!")
+        self.auth_properties = response.json()
+        self.auth_properties["access_token_expires_at"] = self.auth_properties["expires_in"] + time.time()
+        self.auth_properties["refresh_token_expires_at"] = self.auth_properties["refresh_token_expires_in"] + time.time()
 
-    def _authenticate(self) -> None:
-        """Authenticate using the npsso code provided in the constructor.
+    def get_authorization_code(self) -> None:
+        """Obtains the authorization code for PSN authentication.
 
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
 
-        :raises: ``PSNAWPAuthenticationError`` If authentication is not successful.
+        :raises: ``PSNAWPAuthenticationError`` If authorization is not successful.
 
         """
-        cookies = {"Cookie": f"npsso={self._npsso_token}"}
+        headers = {"Cookie": f"npsso={self.npsso_token}"}
         params = {
             "access_type": "offline",
-            "client_id": Authenticator.__PARAMS["CLIENT_ID"],
-            "scope": Authenticator.__PARAMS["SCOPE"],
-            "redirect_uri": Authenticator.__PARAMS["REDIRECT_URI"],
+            "client_id": type(self).__PARAMS["CLIENT_ID"],
+            "scope": type(self).__PARAMS["SCOPE"],
+            "redirect_uri": type(self).__PARAMS["REDIRECT_URI"],
             "response_type": "code",
         }
-        response = requests.get(
-            f"{BASE_PATH['base_uri']}{API_PATH['oauth_code']}",
-            headers=cookies,
+        response = self.request_builder.get(
+            url=f"{BASE_PATH['base_uri']}{API_PATH['oauth_code']}",
+            headers=headers,
             params=params,
             allow_redirects=False,
         )
@@ -117,4 +156,13 @@ class Authenticator:
                 raise PSNAWPAuthenticationError("Your npsso code has expired or is incorrect. Please generate a new code!")
             else:
                 raise PSNAWPAuthenticationError("Something went wrong while authenticating")
-        self.oauth_token(parsed_query["code"][0])
+
+        self.fetch_access_token_from_authorization(parsed_query["code"][0])
+
+    @pre_request_processing
+    def get(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        return self.request_builder.get(**kwargs)
+
+    @pre_request_processing
+    def post(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        return self.request_builder.post(**kwargs)

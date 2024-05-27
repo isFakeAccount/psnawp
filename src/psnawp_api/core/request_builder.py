@@ -1,26 +1,46 @@
-import json
-from typing import Any
+from __future__ import annotations
 
-import requests
+from typing import Any, TypeAlias, TypedDict, cast
 
-from psnawp_api.core.authenticator import Authenticator
+from requests import Response, request
+from requests.sessions import RequestsCookieJar, _Auth, _Cert, _Data, _Files, _HooksInput, _Params, _Timeout, _Verify
+from typing_extensions import NotRequired, Unpack
+
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPBadRequest,
+    PSNAWPClientError,
     PSNAWPForbidden,
     PSNAWPNotAllowed,
     PSNAWPNotFound,
     PSNAWPServerError,
+    PSNAWPTooManyRequests,
     PSNAWPUnauthorized,
 )
 
 
-def response_checker(response: requests.Response) -> None:
-    """Checks the HTTP(S) response and re-raises them as PSNAWP Exceptions
+def response_checker(response: Response) -> None:
+    """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
 
-    :param response: :class:`Response <Response>` object
+    This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+
+    :param response: The HTTP response object.
     :type response: requests.Response
 
-    :returns: None
+    :raises: If the status code is 400.
+
+    :raises: If the status code is 401.
+
+    :raises: If the status code is 403.
+
+    :raises: If the status code is 404.
+
+    :raises: If the status code is 405.
+
+    :raises: If the status code is 429.
+
+    :raises: If the status code is in the 4xx range (excluding the one listed above).
+
+    :raises: If the status code is 500 or above.
 
     """
     if response.status_code == 400:
@@ -33,143 +53,158 @@ def response_checker(response: requests.Response) -> None:
         raise PSNAWPNotFound(response.text)
     elif response.status_code == 405:
         raise PSNAWPNotAllowed(response.text)
+    elif response.status_code == 429:
+        raise PSNAWPTooManyRequests(response.text)
+    elif 400 <= response.status_code < 500:
+        raise PSNAWPClientError(response.text)
     elif response.status_code >= 500:
         raise PSNAWPServerError(response.text)
     else:
         response.raise_for_status()
 
 
+RequestBuilderHeaders = TypedDict(
+    "RequestBuilderHeaders",
+    {
+        "User-Agent": str,
+        "Content-Type": str,
+        "Accept-Language": str,
+        "Country": str,
+    },
+)
+
+_TextMapping: TypeAlias = dict[str, str]
+
+
+class RequestOptions(TypedDict):
+    allow_redirects: NotRequired[bool]
+    auth: NotRequired[_Auth]
+    cert: NotRequired[_Cert]
+    cookies: NotRequired[RequestsCookieJar | _TextMapping]
+    data: NotRequired[_Data]
+    files: NotRequired[_Files]
+    headers: NotRequired[_TextMapping]
+    hooks: NotRequired[_HooksInput]
+    json: NotRequired[Any]
+    params: NotRequired[_Params]
+    proxies: NotRequired[_TextMapping]
+    stream: NotRequired[bool]
+    timeout: NotRequired[_Timeout]
+    url: str | bytes
+    verify: NotRequired[_Verify]
+
+
 class RequestBuilder:
-    """Handles all the HTTP Requests and provides a gateway to interacting with PSN API."""
+    """Handles all the HTTP Requests and provides a gateway to interacting with PSN API.
 
-    def __init__(self, authenticator: Authenticator, accept_language: str, country: str):
-        """Initialized Request Handler and saves the instance of authenticator for future use.
+    :param default_headers: Default headers for the requests.
+    :type default_headers: Unpack[RequestBuilderHeaders]
 
-        :param Authenticator authenticator: The instance of :class: `Authenticator`. Represents single authentication to PSN API.
-        :param str accept_language: The preferred language(s) for content negotiation in HTTP headers.
-        :param str country: The client's country for HTTP headers.
+    """
+
+    def __init__(self, **default_headers: Unpack[RequestBuilderHeaders]) -> None:
+        """Initialize Request Handler with default headers."""
+        self.default_headers = cast(dict[str, str], default_headers)
+
+    def request(self, method: str | bytes, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Handles HTTP requests and returns the requests.Response object.
+
+        :param method: The HTTP method to use for the request (e.g., GET, PATCH).
+        :type method: str | bytes
+        :param kwargs: The options for the HTTP request.
+        :type kwargs: Unpack[RequestOptions]
+
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        :
 
         """
-        self.authenticator = authenticator
-        self.default_headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            "Content-Type": "application/json",
-            "Accept-Language": accept_language,
-            "Country": country,
-        }
+        kwargs["headers"] = self.default_headers | kwargs.get("headers", {})
+        response = request(method=method, **kwargs)
+        response_checker(response)
+        return response
 
-    def get(self, **kwargs: Any) -> requests.Response:
+    def get(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the GET requests and returns the requests.Response object.
 
-        :param kwargs: The query parameters to add to the request.
+        :param kwargs: The options for the GET request.
+        :type kwargs: Unpack[RequestOptions]
 
         :returns: The Request Response Object.
         :rtype: requests.Response
 
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
-        if "headers" in kwargs.keys():
-            headers = {**headers, **kwargs["headers"]}
+        return self.request(method="get", **kwargs)
 
-        params = kwargs.get("params")
-        data = kwargs.get("data")
+    def patch(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Handles the PATCH requests and returns the requests.Response object.
 
-        response = requests.get(url=kwargs["url"], headers=headers, params=params, data=data)
-        response_checker(response)
-        return response
+        :param kwargs: The options for the PATCH request.
+        :type kwargs: Unpack[RequestOptions]
 
-    def patch(self, **kwargs: Any) -> requests.Response:
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        """
+        return self.request(method="patch", **kwargs)
+
+    def post(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the POST requests and returns the requests.Response object.
 
-        :param kwargs: The query parameters to add to the request.
+        :param kwargs: The options for the POST request.
+        :type kwargs: Unpack[RequestOptions]
 
         :returns: The Request Response Object.
         :rtype: requests.Response
 
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
-        if "headers" in kwargs.keys():
-            headers = {**headers, **kwargs["headers"]}
+        return self.request(method="post", **kwargs)
 
-        params = kwargs.get("params")
-        data = kwargs.get("data")
+    def put(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Handles the PUT requests and returns the requests.Response object.
 
-        response = requests.patch(url=kwargs["url"], headers=headers, data=data, params=params)
-
-        response_checker(response)
-        return response
-
-    def post(self, **kwargs: Any) -> requests.Response:
-        """Handles the POST requests and returns the requests.Response object.
-
-        :param kwargs: The query parameters to add to the request.
+        :param kwargs: The options for the PUT request.
+        :type kwargs: Unpack[RequestOptions]
 
         :returns: The Request Response Object.
         :rtype: requests.Response
 
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
-        if "headers" in kwargs.keys():
-            headers = {**headers, **kwargs["headers"]}
+        return self.request(method="put", **kwargs)
 
-        params = kwargs.get("params")
-        data = kwargs.get("data")
-
-        response = requests.post(url=kwargs["url"], headers=headers, data=data, params=params)
-
-        response_checker(response)
-        return response
-
-    def multipart_post(self, **kwargs: Any) -> requests.Response:
-        """Handles the Multipart POST requests and returns the requests.Response object.
-
-        :param kwargs: The query parameters to add to the request.
-
-        :returns: The Request Response Object.
-        :rtype: requests.Response
-
-        """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
-        if "headers" in kwargs.keys():
-            headers = {**headers, **kwargs["headers"]}
-
-        data = kwargs.get("data")
-
-        response = requests.post(
-            url=kwargs["url"],
-            headers=headers,
-            files={
-                kwargs["name"]: (
-                    None,
-                    json.dumps(data),
-                    "application/json; charset=utf-8",
-                )
-            },
-        )
-        response_checker(response)
-        return response
-
-    def delete(self, **kwargs: Any) -> requests.Response:
+    def delete(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the DELETE requests and returns the requests.Response object.
 
-        :param kwargs: The query parameters to add to the request.
+        :param kwargs: The options for the DELETE request.
+        :type kwargs: Unpack[RequestOptions]
 
         :returns: The Request Response Object.
         :rtype: requests.Response
 
         """
-        access_token = self.authenticator.obtain_fresh_access_token()
-        headers = {**self.default_headers, "Authorization": f"Bearer {access_token}"}
-        if "headers" in kwargs.keys():
-            headers = {**headers, **kwargs["headers"]}
+        return self.request(method="delete", **kwargs)
 
-        params = kwargs.get("params")
-        data = kwargs.get("data")
+    def head(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Handles the HEAD requests and returns the requests.Response object.
 
-        response = requests.delete(url=kwargs["url"], headers=headers, params=params, data=data)
-        response_checker(response)
-        return response
+        :param kwargs: The options for the HEAD request.
+        :type kwargs: Unpack[RequestOptions]
+
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        """
+        return self.request(method="head", **kwargs)
+
+    def options(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Handles the OPTIONS requests and returns the requests.Response object.
+
+        :param kwargs: The options for the OPTIONS request.
+        :type kwargs: Unpack[RequestOptions]
+
+        :returns: The Request Response Object.
+        :rtype: requests.Response
+
+        """
+        return self.request(method="options", **kwargs)

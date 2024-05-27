@@ -2,26 +2,32 @@ from psnawp_api.core.authenticator import Authenticator
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPAuthenticationError,
     PSNAWPBadRequest,
+    PSNAWPClientError,
     PSNAWPException,
     PSNAWPForbidden,
     PSNAWPIllegalArgumentError,
     PSNAWPNotAllowed,
     PSNAWPNotFound,
     PSNAWPServerError,
+    PSNAWPTooManyRequests,
     PSNAWPUnauthorized,
 )
-from psnawp_api.core.request_builder import RequestBuilder
+from psnawp_api.core.request_builder import RequestBuilder, RequestBuilderHeaders, RequestOptions
 
 __all__ = [
-    "RequestBuilder",
-    "PSNAWPException",
+    "Authenticator",
     "PSNAWPAuthenticationError",
     "PSNAWPBadRequest",
-    "PSNAWPIllegalArgumentError",
-    "PSNAWPUnauthorized",
+    "PSNAWPClientError",
+    "PSNAWPException",
     "PSNAWPForbidden",
-    "PSNAWPNotFound",
+    "PSNAWPIllegalArgumentError",
     "PSNAWPNotAllowed",
+    "PSNAWPNotFound",
     "PSNAWPServerError",
-    "Authenticator",
+    "PSNAWPTooManyRequests",
+    "PSNAWPUnauthorized",
+    "RequestBuilder",
+    "RequestBuilderHeaders",
+    "RequestOptions",
 ]
