@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:48 GMT
+      - Sun, 26 May 2024 21:57:02 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,13 +74,40 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/93330175277685226/trophyTitles?limit=800&offset=0
   response:
     body:
-      string: '{"trophyTitles": [{"npServiceName": "trophy2", "npCommunicationId":
-        "NPWR35039_00", "trophySetVersion": "01.00", "trophyTitleName": "Prince of
-        Persia\u2122: The Lost Crown", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35039_00/6187a2c9-2ba5-41dc-a291-c0a8f5554219.PNG",
+      string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
+        "NPWR01182_00", "trophySetVersion": "01.01", "trophyTitleName": "Ben 10 Ultimate
+        Alien: Cosmic Destruction", "trophyTitleDetail": "Ben 10 Ultimate Alien: Cosmic
+        Destruction", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR01182_00_000A38EAD84816B0B4573A838F2B732E7B7F240406/1D6918D59FEAD1A633EECEADF7D741843E48A23F.PNG",
+        "trophyTitlePlatform": "PS3", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 36, "silver": 5, "gold": 4, "platinum": 1}, "progress": 54, "earnedTrophies":
+        {"bronze": 28, "silver": 5, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-26T21:22:45Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16713_00", "trophySetVersion": "01.02", "trophyTitleName":
+        "Far Cry\u00ae New Dawn", "trophyTitleDetail": "Far Cry\u00ae New Dawn Trophy
+        Set", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16713_00_00DB634DBCD53785D86AEE988ADBBD2C381124EF17/B2375A614753D87B811C7D6B1F6C95EA8034A655.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 38, "silver": 10, "gold": 2, "platinum": 1}, "progress": 58, "earnedTrophies":
+        {"bronze": 25, "silver": 5, "gold": 1, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-23T23:43:14Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR16639_00", "trophySetVersion": "01.01", "trophyTitleName":
+        "The LEGO\u00ae Movie 2 - Videogame", "trophyTitleDetail": "The LEGO\u00ae
+        Movie 2 - Videogame", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16639_00_009F250098D9FD79707365364545C5370B2B033BB2/B7283BBD5BD20FBBFE9ABC7E4231AACD4571117B.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 37, "silver": 12, "gold": 1, "platinum": 1}, "progress": 7, "earnedTrophies":
+        {"bronze": 5, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-21T20:53:40Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR35039_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Prince of Persia\u2122: The Lost Crown", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR35039_00/6187a2c9-2ba5-41dc-a291-c0a8f5554219.PNG",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "progress": 37, "earnedTrophies":
-        {"bronze": 8, "silver": 9, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-05-20T02:35:26Z"}, {"npServiceName": "trophy2",
+        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 11, "silver": 14, "gold": 5, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-20T21:32:04Z"}, {"npServiceName": "trophy2",
+        "npCommunicationId": "NPWR32584_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Christmas Fun", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR32584_00/c4de1865-4019-443a-aaa1-d1d4e1e444ac.png",
+        "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2024-05-20T21:22:52Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR34048_00", "trophySetVersion": "01.00", "trophyTitleName":
         "Quiz Thiz Germany", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34048_00/05857b48-0b74-433b-93ea-a8c9462667bb.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
@@ -769,13 +796,6 @@ interactions:
         {"bronze": 39, "silver": 9, "gold": 2, "platinum": 1}, "progress": 43, "earnedTrophies":
         {"bronze": 20, "silver": 2, "gold": 1, "platinum": 0}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2024-04-15T19:26:45Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR01182_00", "trophySetVersion": "01.01", "trophyTitleName":
-        "Ben 10 Ultimate Alien: Cosmic Destruction", "trophyTitleDetail": "Ben 10
-        Ultimate Alien: Cosmic Destruction", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR01182_00_000A38EAD84816B0B4573A838F2B732E7B7F240406/1D6918D59FEAD1A633EECEADF7D741843E48A23F.PNG",
-        "trophyTitlePlatform": "PS3", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 36, "silver": 5, "gold": 4, "platinum": 1}, "progress": 50, "earnedTrophies":
-        {"bronze": 25, "silver": 5, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-04-12T02:22:36Z"}, {"npServiceName": "trophy",
         "npCommunicationId": "NPWR05326_00", "trophySetVersion": "01.01", "trophyTitleName":
         "Injustice: Gods Among Us Ultimate Edition", "trophyTitleDetail": "Trophy
         set for Injustice", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR05326_00_00A75883B9747C770037612EA4D1590CF85E999869/47719D67971CDF2825F8069BDEF868656E45B331.PNG",
@@ -900,14 +920,7 @@ interactions:
         "trophyTitlePlatform": "PS3", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 39, "silver": 9, "gold": 2, "platinum": 1}, "progress": 2, "earnedTrophies":
         {"bronze": 2, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-01-21T23:07:29Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR00951_00", "trophySetVersion": "01.02", "trophyTitleName":
-        "God of War\u00ae II Trophies", "trophyTitleDetail": "Trophies for God of
-        War\u00ae II", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR00951_00_009E3D77C68F6962010CA5BC3F7F03654D5AE0A23E/AFB1C251B6DFE461CB4989557C1C1FDB183C6EB5.PNG",
-        "trophyTitlePlatform": "PS3", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 18, "silver": 11, "gold": 5, "platinum": 1}, "progress": 0, "earnedTrophies":
-        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2024-01-20T20:11:44Z"}, {"npServiceName": "trophy2",
+        "lastUpdatedDateTime": "2024-01-21T23:07:29Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR39971_00", "trophySetVersion": "01.00", "trophyTitleName":
         "Alan Wake II", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR39971_00/145b639c-0063-43ed-8dce-83be47c5a846.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
@@ -2094,14 +2107,7 @@ interactions:
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
         {"bronze": 50, "silver": 14, "gold": 3, "platinum": 1}, "progress": 90, "earnedTrophies":
         {"bronze": 45, "silver": 12, "gold": 3, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2023-08-09T13:26:08Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR16713_00", "trophySetVersion": "01.02", "trophyTitleName":
-        "Far Cry\u00ae New Dawn", "trophyTitleDetail": "Far Cry\u00ae New Dawn Trophy
-        Set", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR16713_00_00DB634DBCD53785D86AEE988ADBBD2C381124EF17/B2375A614753D87B811C7D6B1F6C95EA8034A655.PNG",
-        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 38, "silver": 10, "gold": 2, "platinum": 1}, "progress": 47, "earnedTrophies":
-        {"bronze": 21, "silver": 3, "gold": 1, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2023-08-06T12:43:42Z"}, {"npServiceName": "trophy2",
+        "lastUpdatedDateTime": "2023-08-09T13:26:08Z"}, {"npServiceName": "trophy2",
         "npCommunicationId": "NPWR21656_00", "trophySetVersion": "01.00", "trophyTitleName":
         "Forspoken", "trophyTitleIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21656_00/27d88c5c-f35d-4891-a052-c83dada81edb.png",
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": true, "definedTrophies":
@@ -5269,27 +5275,19 @@ interactions:
         "trophyTitlePlatform": "PS5", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 36, "earnedTrophies":
         {"bronze": 0, "silver": 0, "gold": 4, "platinum": 0}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-05-03T02:58:20Z"}, {"npServiceName": "trophy",
-        "npCommunicationId": "NPWR29743_00", "trophySetVersion": "01.00", "trophyTitleName":
-        "Rock Paper Scissors - Breakthrough Gaming Arcade", "trophyTitleDetail": "Rock
-        Paper Scissors - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl":
-        "https://image.api.playstation.com/trophy/np/NPWR29743_00_00A3FCD64653E71344F6C4995018D7F9440F1A4297/2021ED149A1CC7A0DA256E700F5CFF85D114D7E2.PNG",
-        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
-        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
-        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
-        "lastUpdatedDateTime": "2022-05-02T22:57:54Z"}], "nextOffset": 800, "totalItemCount":
-        1354}'
+        "lastUpdatedDateTime": "2022-05-03T02:58:20Z"}], "nextOffset": 800, "totalItemCount":
+        1355}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '450224'
+      - '450076'
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:49 GMT
+      - Sun, 26 May 2024 21:57:04 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -5323,9 +5321,17 @@ interactions:
   response:
     body:
       string: '{"trophyTitles": [{"npServiceName": "trophy", "npCommunicationId":
-        "NPWR29744_00", "trophySetVersion": "01.00", "trophyTitleName": "Rock Paper
+        "NPWR29743_00", "trophySetVersion": "01.00", "trophyTitleName": "Rock Paper
         Scissors - Breakthrough Gaming Arcade", "trophyTitleDetail": "Rock Paper Scissors
-        - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR29744_00_00E99D9FED4AD5D43C308D08AB3EF58DAB4874EF24/BE4954FADBEA2D9ADDEE3A098040523C930123A3.PNG",
+        - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR29743_00_00A3FCD64653E71344F6C4995018D7F9440F1A4297/2021ED149A1CC7A0DA256E700F5CFF85D114D7E2.PNG",
+        "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
+        {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
+        "lastUpdatedDateTime": "2022-05-02T22:57:54Z"}, {"npServiceName": "trophy",
+        "npCommunicationId": "NPWR29744_00", "trophySetVersion": "01.00", "trophyTitleName":
+        "Rock Paper Scissors - Breakthrough Gaming Arcade", "trophyTitleDetail": "Rock
+        Paper Scissors - Breakthrough Gaming Arcade Trophies", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR29744_00_00E99D9FED4AD5D43C308D08AB3EF58DAB4874EF24/BE4954FADBEA2D9ADDEE3A098040523C930123A3.PNG",
         "trophyTitlePlatform": "PS4", "hasTrophyGroups": false, "definedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 0, "silver": 0, "gold": 11, "platinum": 1}, "hiddenFlag": false,
@@ -9115,18 +9121,18 @@ interactions:
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "progress": 100, "earnedTrophies":
         {"bronze": 46, "silver": 0, "gold": 4, "platinum": 1}, "hiddenFlag": false,
         "lastUpdatedDateTime": "2017-07-20T12:42:09Z"}], "previousOffset": 799, "totalItemCount":
-        1354}'
+        1355}'
     headers:
       Cache-Control:
       - private
       Connection:
       - keep-alive
       Content-Length:
-      - '332611'
+      - '333277'
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:50 GMT
+      - Sun, 26 May 2024 21:57:05 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

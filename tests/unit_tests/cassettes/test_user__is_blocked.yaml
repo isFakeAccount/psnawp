@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/DaUglyDucklin/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
+      string: '{"profile": {"onlineId": "DaUglyDucklin", "accountId": "4273405838384737823"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '93'
+      - '94'
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:46 GMT
+      - Sun, 26 May 2024 21:56:59 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -93,7 +93,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:46 GMT
+      - Sun, 26 May 2024 21:56:59 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -102,7 +102,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0030699893950032701
+      - 0325672060189619804
     status:
       code: 200
       message: OK

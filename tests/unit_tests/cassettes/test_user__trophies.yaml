@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:52 GMT
+      - Sun, 26 May 2024 21:57:07 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -79,15 +79,15 @@ interactions:
         "earned": true, "earnedDateTime": "2020-11-22T17:51:30Z", "trophyType": "platinum",
         "trophyRare": 0, "trophyEarnedRate": "1.0"}, {"trophyId": 1, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.8"}, {"trophyId": 2, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.9"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "49.0"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "48.9"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
         "bronze", "trophyRare": 2, "trophyEarnedRate": "35.3"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.1"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.0"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "22.8"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "22.7"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "10.7"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
@@ -109,7 +109,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:52 GMT
+      - Sun, 26 May 2024 21:57:07 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -162,7 +162,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:52 GMT
+      - Sun, 26 May 2024 21:57:08 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -237,7 +237,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:53 GMT
+      - Sun, 26 May 2024 21:57:08 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -277,15 +277,15 @@ interactions:
         "earned": true, "earnedDateTime": "2020-11-22T17:51:30Z", "trophyType": "platinum",
         "trophyRare": 0, "trophyEarnedRate": "1.0"}, {"trophyId": 1, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:13:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.8"}, {"trophyId": 2, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "83.9"}, {"trophyId": 2, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-14T06:44:08Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "49.0"}, {"trophyId": 3, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "48.9"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T11:12:08Z", "trophyType":
         "bronze", "trophyRare": 2, "trophyEarnedRate": "35.3"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-11-15T02:30:34Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.1"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "43.0"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2018-12-17T17:18:13Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "22.8"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "22.7"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-05-28T22:46:16Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "10.7"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2019-06-02T13:05:58Z", "trophyType":
@@ -307,7 +307,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:53 GMT
+      - Sun, 26 May 2024 21:57:08 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

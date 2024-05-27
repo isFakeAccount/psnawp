@@ -21,7 +21,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/0000000000000000000/profiles
   response:
     body:
-      string: '{"error": {"referenceId": "69ce6180-165c-11ef-8a92-91db8ecf731c", "code":
+      string: '{"error": {"referenceId": "d910781a-1baa-11ef-902d-059c8ed6f86f", "code":
         2281473, "message": "Bad Request (path: accountId)"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:44 GMT
+      - Sun, 26 May 2024 21:56:47 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -50,7 +50,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0870634786650113174
+      - 0173241585230132778
     status:
       code: 400
       message: Bad Request

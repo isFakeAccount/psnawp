@@ -2,7 +2,6 @@ import os
 
 import pytest
 from dotenv import load_dotenv
-
 from psnawp_api import PSNAWP
 
 load_dotenv()
@@ -16,4 +15,4 @@ def psnawp_fixture():
     :rtype: PSNAWP
 
     """
-    return PSNAWP(os.getenv("NPSSO_CODE"))
+    return PSNAWP(os.getenv("NPSSO_CODE", "NPSSO_CODE"))

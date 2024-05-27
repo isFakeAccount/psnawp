@@ -18,10 +18,10 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/DaUglyDucklin/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
     body:
-      string: '{"profile": {"onlineId": "jeranther", "accountId": "1802043923080044300"}}'
+      string: '{"profile": {"onlineId": "DaUglyDucklin", "accountId": "4273405838384737823"}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -37,11 +37,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '93'
+      - '94'
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:44 GMT
+      - Sun, 26 May 2024 21:56:48 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,12 +71,12 @@ interactions:
       - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/90.0.4430.212 Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1802043923080044300/basicPresences?type=primary
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4273405838384737823/basicPresences?type=primary
   response:
     body:
       string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2024-05-19T18:41:02.899Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "PS5", "lastOnlineDate": "2024-05-19T18:41:02.899Z"}}}'
+        "2024-05-24T02:51:54.450Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "ps4", "lastOnlineDate": "2024-05-24T02:51:54.450Z"}}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -95,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:44 GMT
+      - Sun, 26 May 2024 21:56:48 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -104,7 +104,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0721537864476516567
+      - 0383077886371283831
     status:
       code: 200
       message: OK

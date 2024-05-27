@@ -124,7 +124,7 @@ class Client:
         return account_devices
 
     def friends_list(self, limit: int = 1000) -> Iterator[User]:
-        """Gets the friends list and return their account ids.
+        """Gets the friends list and returns an iterator of User objects.
 
         :param limit: The number of items from input max is 1000.
         :type limit: int
@@ -144,7 +144,7 @@ class Client:
         limit = min(1000, limit)
 
         params = {"limit": limit}
-        response = self._request_builder.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list']}", params=params).json()
+        response = self._request_builder.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list'].format(account_id='me')}", params=params).json()
         return (
             User.from_account_id(
                 request_builder=self._request_builder,

@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:51 GMT
+      - Sun, 26 May 2024 21:57:07 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/8859462586603699392/titles/trophyTitles?npTitleIds=CUSA12057_00
   response:
     body:
-      string: '{"error": {"referenceId": "6ea4f017-165c-11ef-ab92-0f0a6e67bc87", "code":
+      string: '{"error": {"referenceId": "e50895d3-1baa-11ef-b173-857225fa46a5", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -84,7 +84,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:52 GMT
+      - Sun, 26 May 2024 21:57:07 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

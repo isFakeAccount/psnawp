@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:48 GMT
+      - Sun, 26 May 2024 21:57:09 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/8859462586603699392/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"error": {"referenceId": "908915a9-165c-11ef-ad42-855052cfa14f", "code":
+      string: '{"error": {"referenceId": "e633cf66-1baa-11ef-aef8-a5ca86710de1", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -84,7 +84,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:48 GMT
+      - Sun, 26 May 2024 21:57:09 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -137,7 +137,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:49 GMT
+      - Sun, 26 May 2024 21:57:09 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -212,7 +212,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:49 GMT
+      - Sun, 26 May 2024 21:57:09 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -247,7 +247,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/8859462586603699392/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?npServiceName=trophy&limit=10&offset=0
   response:
     body:
-      string: '{"error": {"referenceId": "90ec44a2-165c-11ef-8019-bdb65ae0d324", "code":
+      string: '{"error": {"referenceId": "e6aa5f31-1baa-11ef-8625-73ad8aa1a54c", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -257,7 +257,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:49 GMT
+      - Sun, 26 May 2024 21:57:10 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

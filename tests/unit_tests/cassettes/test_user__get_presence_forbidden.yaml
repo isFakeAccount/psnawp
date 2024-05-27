@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:45 GMT
+      - Sun, 26 May 2024 21:56:48 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2066273503397112667/basicPresences?type=primary
   response:
     body:
-      string: '{"error": {"referenceId": "6aa9a698-165c-11ef-a83a-0b25ddf595d0", "code":
+      string: '{"error": {"referenceId": "d9f16249-1baa-11ef-858b-f10ea60642f5", "code":
         2281486, "message": "Not permitted by access control"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -94,7 +94,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:45 GMT
+      - Sun, 26 May 2024 21:56:48 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -103,7 +103,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0608477826015343319
+      - 0911509993337554923
     status:
       code: 403
       message: Forbidden

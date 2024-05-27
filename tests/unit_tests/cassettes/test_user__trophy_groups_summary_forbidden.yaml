@@ -41,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:52:58 GMT
+      - Sun, 26 May 2024 21:57:13 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/8859462586603699392/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "758669c6-165c-11ef-88b1-b94b5b1a0b7b", "code":
+      string: '{"error": {"referenceId": "e8e0520b-1baa-11ef-96d2-4502af3b57d8", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -84,7 +84,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:03 GMT
+      - Sun, 26 May 2024 21:57:13 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -137,7 +137,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:03 GMT
+      - Sun, 26 May 2024 21:57:14 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -200,7 +200,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:04 GMT
+      - Sun, 26 May 2024 21:57:14 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -235,7 +235,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/8859462586603699392/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "75f3aab2-165c-11ef-958e-6dc60d880fb7", "code":
+      string: '{"error": {"referenceId": "e94862ad-1baa-11ef-96d2-4502af3b57d8", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -245,7 +245,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 May 2024 03:53:04 GMT
+      - Sun, 26 May 2024 21:57:14 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

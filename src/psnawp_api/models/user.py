@@ -169,6 +169,40 @@ class User:
         ).json()
         return response
 
+    def friends_list(self, limit: int = 1000) -> Iterator[User]:
+        """Gets the friends list and returns an iterator of User objects.
+
+        :param limit: The number of items from input max is 1000.
+        :type limit: int
+
+        :returns: All friends in your friends list.
+        :rtype: Iterator[User]
+
+        :raises: ``PSNAWPForbidden`` When the user's when you don't have permission to view their friends list.
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            friends_list = client.friends_list()
+
+            for friend in friends_list:
+                ...
+
+        """
+        limit = min(1000, limit)
+
+        params = {"limit": limit}
+        response = self._request_builder.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list'].format(account_id=self.account_id)}", params=params
+        ).json()
+        return (
+            User.from_account_id(
+                request_builder=self._request_builder,
+                account_id=account_id,
+            )
+            for account_id in response["friends"]
+        )
+
     def is_blocked(self) -> bool:
         """Checks if the user is blocked by you
 
