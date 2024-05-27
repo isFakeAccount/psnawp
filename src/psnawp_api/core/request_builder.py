@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-from typing import Any, TypeAlias, TypedDict, cast
+from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
 
 from requests import Response, request
-from requests.sessions import RequestsCookieJar, _Auth, _Cert, _Data, _Files, _HooksInput, _Params, _Timeout, _Verify
 from typing_extensions import NotRequired, Unpack
 
 from psnawp_api.core.psnawp_exceptions import (
@@ -16,6 +15,9 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPTooManyRequests,
     PSNAWPUnauthorized,
 )
+
+if TYPE_CHECKING:
+    from requests.sessions import RequestsCookieJar, _Auth, _Cert, _Data, _Files, _HooksInput, _Params, _Timeout, _Verify
 
 
 def response_checker(response: Response) -> None:
