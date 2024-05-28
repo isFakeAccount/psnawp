@@ -5,7 +5,7 @@ from collections.abc import Iterator
 from dataclasses import dataclass
 from typing import Generator, Generic, Optional, TypeVar
 
-from psnawp_api.core import RequestBuilder
+from psnawp_api.core import Authenticator
 
 T = TypeVar("T")
 
@@ -13,18 +13,15 @@ T = TypeVar("T")
 class PaginationIterator(Iterator[T], Generic[T]):
     """Iterator class for iterating over paginated API endpoints."""
 
-    def __init__(self, *, request_builder: RequestBuilder, url: str, pagination_args: PaginationArguments):
+    def __init__(self, *, authenticator: Authenticator, url: str, pagination_args: PaginationArguments):
         """Initialize the PaginationIterator.
 
-        :param request_builder: An instance of RequestBuilder for making API requests.
-        :type request_builder: RequestBuilder
+        :param authenticator: An instance of Authenticator for making API requests.
         :param url: The URL of the endpoint.
-        :type url: str
         :param params: Dictionary of parameters to be passed in the API request.
-        :type params: dict[str, str | int]
 
         """
-        self._request_builder = request_builder
+        self.authenticator = authenticator
         self._url = url
         self._pagination_args = pagination_args
 

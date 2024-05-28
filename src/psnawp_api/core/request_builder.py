@@ -99,14 +99,13 @@ class RequestOptions(TypedDict):
 class RequestBuilder:
     """Handles all the HTTP Requests and provides a gateway to interacting with PSN API.
 
-    :param default_headers: Default headers for the requests.
-    :type default_headers: Unpack[RequestBuilderHeaders]
+    :param common_headers: Default headers for the requests.
 
     """
 
-    def __init__(self, **default_headers: Unpack[RequestBuilderHeaders]) -> None:
+    def __init__(self, common_headers: RequestBuilderHeaders) -> None:
         """Initialize Request Handler with default headers."""
-        self.default_headers = cast(dict[str, str], default_headers)
+        self.common_headers = cast(dict[str, str], common_headers)
 
     def request(self, method: str | bytes, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles HTTP requests and returns the requests.Response object.
@@ -122,7 +121,7 @@ class RequestBuilder:
         :
 
         """
-        kwargs["headers"] = self.default_headers | kwargs.get("headers", {})
+        kwargs["headers"] = self.common_headers | kwargs.get("headers", {})
         response = request(method=method, **kwargs)
         response_checker(response)
         return response

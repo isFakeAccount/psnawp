@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import time
-from datetime import timedelta
 from functools import wraps
 from logging import getLogger
 from typing import Any, Callable, TypeVar, cast
@@ -21,11 +20,14 @@ RT = TypeVar("RT")
 def pre_request_processing(method: Callable[PT, RT]) -> Callable[PT, RT]:
     @wraps(method)
     def _impl(*method_args: PT.args, **method_kwargs: PT.kwargs) -> RT:
-        method_out = method(*method_args, **method_kwargs)
-
         authenticator_obj = cast(Authenticator, method_args[0])
-        if authenticator_obj.refresh_token_expiration_in < authenticator_obj.refresh_token_warn_time.total_seconds():
-            authenticator_obj.refresh_token_warn_callback(authenticator_obj.refresh_token_warn_time)
+        if not authenticator_obj.auth_properties:
+            authorization_code = authenticator_obj.get_authorization_code()
+            authenticator_obj.fetch_access_token_from_authorization(authorization_code)
+        else:
+            authenticator_obj.fetch_access_token_from_refresh()
+
+        method_out = method(*method_args, **method_kwargs)
         return method_out
 
     return _impl
@@ -47,43 +49,44 @@ class Authenticator:
     def __init__(
         self,
         npsso_cookie: str,
-        refresh_token_warn_time: timedelta,
-        refresh_token_warn_callback: Callable[[timedelta], None],
-        **default_headers: Unpack[RequestBuilderHeaders],
+        common_headers: RequestBuilderHeaders,
     ):
         """Represents a single authentication to PSN API.
 
         :param npsso_cookie: npsso cookie obtained from PSN website.
+        :param common_headers: Common headers that will be added to all HTTP request.
 
         :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
 
         """
         self.npsso_token = npsso_cookie
-        self.default_headers = default_headers
-        self.request_builder = RequestBuilder(**default_headers)
+        self.common_headers = common_headers
+        self.request_builder = RequestBuilder(common_headers)
         self.auth_properties: dict[str, Any] = {}
-
-        self.refresh_token_warn_time = refresh_token_warn_time
-        self.refresh_token_warn_callback = refresh_token_warn_callback
 
     @property
     def access_token_expiration_time(self) -> float:
-        return self.auth_properties.get("access_token_expires_at", time.time())
+        return cast(float, self.auth_properties.get("access_token_expires_at", time.time()))
 
     @property
     def refresh_token_expiration_time(self) -> float:
-        return self.auth_properties.get("refresh_token_expires_at", time.time())
+        return cast(float, self.auth_properties.get("refresh_token_expires_at", time.time()))
 
     @property
-    def access_token_expiration_in(self) -> float:
-        return self.auth_properties.get("expire_in", 0)
+    def access_token_expiration_in(self) -> int:
+        return cast(int, self.auth_properties.get("expire_in", 0))
 
     @property
-    def refresh_token_expiration_in(self) -> float:
-        return self.auth_properties.get("refresh_token_expires_in", 0)
+    def refresh_token_expiration_in(self) -> int:
+        return cast(int, self.auth_properties.get("refresh_token_expires_in", 0))
 
-    def fetch_access_token_from_refresh(self, refresh_token: str) -> None:
+    def fetch_access_token_from_refresh(self) -> None:
         """Obtain the access token using refresh token."""
+
+        refresh_token = self.auth_properties["refresh_token"]
+
+        if self.access_token_expiration_time > time.time():
+            return None
 
         data = {
             "refresh_token": refresh_token,
@@ -124,7 +127,7 @@ class Authenticator:
         self.auth_properties["access_token_expires_at"] = self.auth_properties["expires_in"] + time.time()
         self.auth_properties["refresh_token_expires_at"] = self.auth_properties["refresh_token_expires_in"] + time.time()
 
-    def get_authorization_code(self) -> None:
+    def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
 
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
@@ -147,7 +150,7 @@ class Authenticator:
             params=params,
             allow_redirects=False,
         )
-        response.raise_for_status()
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -157,12 +160,16 @@ class Authenticator:
             else:
                 raise PSNAWPAuthenticationError("Something went wrong while authenticating")
 
-        self.fetch_access_token_from_authorization(parsed_query["code"][0])
+        return parsed_query["code"][0]
 
     @pre_request_processing
     def get(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        if "headers" in kwargs:
+            kwargs["headers"]["Authorization"] = f"Bearer {self.auth_properties['access_token']}"
         return self.request_builder.get(**kwargs)
 
     @pre_request_processing
     def post(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        if "headers" in kwargs:
+            kwargs["headers"]["Authorization"] = f"Bearer {self.auth_properties['access_token']}"
         return self.request_builder.post(**kwargs)
