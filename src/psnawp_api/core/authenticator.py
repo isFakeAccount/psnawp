@@ -109,7 +109,6 @@ class Authenticator:
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to obtain access_token using refresh token when refresh token is missing.")
 
-        refresh_token = self.token_response["refresh_token"]
 
         if self.access_token_expiration_time > time.time():
             return None
@@ -119,7 +118,7 @@ class Authenticator:
             "User-Agent": "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT",
         }
         data = {
-            "refresh_token": refresh_token,
+            "refresh_token": self.token_response["refresh_token"],
             "grant_type": "refresh_token",
             "scope": type(self).__CONSTANTS["SCOPE"],
             "token_format": "jwt",
@@ -145,7 +144,6 @@ class Authenticator:
             "User-Agent": "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT",
             "X-Psn-Correlation-Id": self.cid,
         }
-
         data = {
             "cid": self.cid,
             "code": authorization_code,
@@ -154,7 +152,6 @@ class Authenticator:
             "scope": type(self).__CONSTANTS["SCOPE"],
             "token_format": "jwt",
         }
-
         response = self.request_builder.post(
             url=f"{BASE_PATH['base_uri']}{API_PATH['access_token']}",
             headers=header,
