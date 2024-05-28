@@ -69,7 +69,6 @@ RequestBuilderHeaders = TypedDict(
     "RequestBuilderHeaders",
     {
         "User-Agent": str,
-        "Content-Type": str,
         "Accept-Language": str,
         "Country": str,
     },
