@@ -22,7 +22,7 @@ def pre_request_processing(method: Callable[PT, RT]) -> Callable[PT, RT]:
     @wraps(method)
     def _impl(*method_args: PT.args, **method_kwargs: PT.kwargs) -> RT:
         authenticator_obj = cast(Authenticator, method_args[0])
-        if not authenticator_obj.token_response:
+        if authenticator_obj.token_response is None:
             authorization_code = authenticator_obj.get_authorization_code()
             authenticator_obj.fetch_access_token_from_authorization(authorization_code)
         else:
