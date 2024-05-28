@@ -109,7 +109,6 @@ class Authenticator:
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to obtain access_token using refresh token when refresh token is missing.")
 
-
         if self.access_token_expiration_time > time.time():
             return None
 
