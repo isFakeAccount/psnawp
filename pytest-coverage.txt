@@ -49,4 +49,4 @@ TOTAL                                                    898    442    51%
 ERROR tests/unit_tests/test_user.py - AssertionError: FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO.
 assert 'FRIEND_USER_NAME' != 'FRIEND_USER_NAME'
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.35s ===============================
+=============================== 1 error in 0.33s ===============================

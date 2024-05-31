@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.363" timestamp="2024-05-27T01:35:36.218851" hostname="fv-az1778-152"><testcase classname="" name="tests.unit_tests.test_user" time="0.000"><error message="collection failure">tests/unit_tests/test_user.py:16: in &lt;module&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.337" timestamp="2024-05-31T21:38:09.209843" hostname="fv-az1117-299"><testcase classname="" name="tests.unit_tests.test_user" time="0.000"><error message="collection failure">tests/unit_tests/test_user.py:16: in &lt;module&gt;
     assert FRIEND_USER_NAME != "FRIEND_USER_NAME", "FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO."
 E   AssertionError: FRIEND_USER_NAME is not set. Please set it in .env file along with NPSSO.
 E   assert 'FRIEND_USER_NAME' != 'FRIEND_USER_NAME'</error></testcase></testsuite></testsuites>
