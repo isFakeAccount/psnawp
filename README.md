@@ -82,7 +82,7 @@ available_to_play = client.available_to_play()
 for user in available_to_play:
     print(f"Available to Play: {user} \n")
 
-# Your Chat Groups 
+# Your Chat Groups
 groups = client.get_groups()
 first_group_id = None # This will be used later to test group methods
 for id, group in enumerate(groups):

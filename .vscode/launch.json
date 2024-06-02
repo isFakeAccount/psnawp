@@ -12,10 +12,10 @@
             "justMyCode": false
         },
         {
-            "name": "Python Debugger: Current File",
+            "name": "Python Debugger: test.py",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceFolder}/test.py",
             "console": "integratedTerminal",
             "cwd": "${fileDirname}"
         }
