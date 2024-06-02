@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from attrs import define
+from dataclasses import dataclass
 
-from psnawp_api.core import PSNAWPForbidden, RequestBuilder
+from psnawp_api.core import Authenticator, PSNAWPForbidden
 from psnawp_api.models.trophies.trophy_constants import TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class TrophySummary:
     """Class representing the overall summary of the number of trophies earned by a user."""
 
@@ -23,7 +23,7 @@ class TrophySummary:
     "Number of trophies which have been earned by type"
 
     @classmethod
-    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str) -> TrophySummary:
+    def from_endpoint(cls, authenticator: Authenticator, account_id: str) -> TrophySummary:
         """Retrieve an overall summary of the number of trophies earned for a user broken down by
 
         - type
@@ -34,11 +34,11 @@ class TrophySummary:
         :returns: TrophySummary object with all the information
         :rtype: TrophySummary
 
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
+        :raises PSNAWPForbidden: If the user's profile is private
 
         """
         try:
-            response = request_builder.get(url=f"{BASE_PATH['trophies']}{API_PATH['trophy_summary'].format(account_id=account_id)}").json()
+            response = authenticator.get(url=f"{BASE_PATH['trophies']}{API_PATH['trophy_summary'].format(account_id=account_id)}").json()
         except PSNAWPForbidden as forbidden:
             raise PSNAWPForbidden("The target user has set their trophies visibility to private.") from forbidden
         return cls(
