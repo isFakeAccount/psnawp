@@ -44,6 +44,7 @@ class TrophyGroupSummary:
 
 @define(frozen=True)
 class EarnedTrophyGroupSummary(TrophyGroupSummary):
+    """EarnedTrophyGroupSummary contains trophy count data for one trophy group of a game title and user progress for each trophy group."""
     progress: Optional[int]
     "Percentage of trophies earned for group"
     earned_trophies: TrophySet
