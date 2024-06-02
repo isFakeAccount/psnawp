@@ -8,5 +8,6 @@
     "cSpell.words": [
         "npsso",
         "psnawp"
-    ]
+    ],
+    "autoDocstring.docstringFormat": "sphinx"
 }

@@ -8,7 +8,7 @@ PSNAWP: PlayStation Network API Wrapper Python
 ==============================================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Code Overview:
 
     psnawp_api
@@ -25,8 +25,3 @@ PSNAWP: PlayStation Network API Wrapper Python
     additional_resources/README.rst
     additional_resources/AUTHORS.rst
     additional_resources/LICENSE.rst
-
-.. toctree::
-    :hidden:
-
-    modules
