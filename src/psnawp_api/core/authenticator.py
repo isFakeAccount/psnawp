@@ -69,8 +69,6 @@ class Authenticator:
         :param npsso_cookie: npsso cookie obtained from PSN website.
         :param common_headers: Common headers that will be added to all HTTP request.
 
-        :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
-
         """
         self.npsso_token = npsso_cookie
         self.common_headers = common_headers
@@ -81,30 +79,58 @@ class Authenticator:
 
     @property
     def access_token_expiration_time(self) -> float:
+        """Get the access token expiration time.
+
+        If the ``token_response`` is not available or ``access_token_expires_at``, returns current time.
+
+        :returns: The expiration time of the access token as a Unix timestamp.
+
+        """
         if self.token_response is None:
             return time.time()
         return self.token_response.get("access_token_expires_at", time.time())
 
     @property
     def refresh_token_expiration_time(self) -> float:
+        """Get the refresh token expiration time.
+
+        If the ``token_response`` is not available or ``refresh_token_expires_at``, returns current time.
+
+        :returns: The expiration time of the refresh token as a Unix timestamp.
+
+        """
         if self.token_response is None:
             return time.time()
         return self.token_response.get("refresh_token_expires_at", time.time())
 
     @property
     def access_token_expiration_in(self) -> int:
+        """Get the time until the access token expires.
+
+        If the ``token_response`` is not available or ``expires_in``, returns 0.
+
+        :returns: The number of seconds until the access token expires.
+
+        """
         if self.token_response is None:
             return 0
         return self.token_response.get("expires_in", 0)
 
     @property
     def refresh_token_expiration_in(self) -> int:
+        """Get the time until the refresh token expires.
+
+        If the ``token_response`` is not available or ``refresh_token_expires_in``, returns 0.
+
+        :returns: The number of seconds until the refresh token expires.
+
+        """
         if self.token_response is None:
             return 0
         return self.token_response.get("refresh_token_expires_in", 0)
 
     def fetch_access_token_from_refresh(self) -> None:
-        """Obtain the access token using refresh token."""
+        """Updates the access token using refresh token."""
 
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to obtain access_token using refresh token when refresh token is missing.")
@@ -166,7 +192,7 @@ class Authenticator:
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
 
-        :raises: ``PSNAWPAuthenticationError`` If authorization is not successful.
+        :raises PSNAWPAuthenticationError: If authorization is not successful.
 
         """
         headers = {
@@ -218,6 +244,32 @@ class Authenticator:
 
     @pre_request_processing
     def get(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Make a GET request with automatic Bearer token authorization.
+
+        This method simplifies making GET requests by automatically adding the necessary Authorization header with a Bearer token. You can pass any additional
+        arguments or keyword arguments, which will be forwarded to the underlying request builder's ``get`` method.
+
+        :param kwargs: Additional arguments to be forwarded to the ``get`` method of the request builder.
+
+        :returns: The response from the GET request.
+
+        :raises PSNAWPAuthenticationError: If the ``token_response`` is ``None``, indicating that an attempt to make an HTTP request was made without an access
+            token.
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+
+        .. note::
+
+            The ``pre_request_processing`` decorator ensures that ``token_response`` is usually set correctly. The check for ``self.token_response is None`` is
+            a safeguard in case of unexpected issues.
+
+        """
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
 
@@ -229,6 +281,32 @@ class Authenticator:
 
     @pre_request_processing
     def post(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Make a POST request with automatic Bearer token authorization.
+
+        This method simplifies making POST requests by automatically adding the necessary Authorization header with a Bearer token. You can pass any additional
+        arguments or keyword arguments, which will be forwarded to the underlying request builder's ``post`` method.
+
+        :param kwargs: Additional arguments to be forwarded to the ``post`` method of the request builder.
+
+        :returns: The response from the POST request.
+
+        :raises PSNAWPAuthenticationError: If the ``token_response`` is ``None``, indicating that an attempt to make an HTTP request was made without an access
+            token.
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+
+        .. note::
+
+            The ``pre_request_processing`` decorator ensures that ``token_response`` is usually set correctly. The check for ``self.token_response is None`` is
+            a safeguard in case of unexpected issues.
+
+        """
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
 
