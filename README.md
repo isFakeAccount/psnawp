@@ -151,4 +151,4 @@ This project was not intended to be used for spam, abuse, or anything of the sor
 
 ## Credit
 
-This project contains code from PlayStationNetwork::API and PSN-PHP Wrapper that was translated to Python. See more in [LICENSE](LICENSE.md)
+This project contains code from PlayStationNetwork::API and PSN-PHP Wrapper that was translated to Python. Also, special thanks @andshrew for documenting the PlayStation Trophy endpoints. All licenses are included in this repository.
