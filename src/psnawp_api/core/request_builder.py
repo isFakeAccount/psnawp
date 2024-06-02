@@ -25,24 +25,16 @@ def response_checker(response: Response) -> None:
 
     This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
 
-    :param response: The HTTP response object.
-    :type response: requests.Response
+    :param requests.Response response: The HTTP response object.
 
-    :raises: If the status code is 400.
-
-    :raises: If the status code is 401.
-
-    :raises: If the status code is 403.
-
-    :raises: If the status code is 404.
-
-    :raises: If the status code is 405.
-
-    :raises: If the status code is 429.
-
-    :raises: If the status code is in the 4xx range (excluding the one listed above).
-
-    :raises: If the status code is 500 or above.
+    :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+    :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+    :raises PSNAWPForbidden: If the HTTP response status code is 403.
+    :raises PSNAWPNotFound: If the HTTP response status code is 404.
+    :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+    :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+    :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+    :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
     """
     if response.status_code == 400:
@@ -109,15 +101,20 @@ class RequestBuilder:
     def request(self, method: str | bytes, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles HTTP requests and returns the requests.Response object.
 
-        :param method: The HTTP method to use for the request (e.g., GET, PATCH).
-        :type method: str | bytes
-        :param kwargs: The options for the HTTP request.
-        :type kwargs: Unpack[RequestOptions]
+        :param str | bytes method: The HTTP method to use for the request (e.g., GET, PATCH).
+        :param Unpack[RequestOptions] kwargs: The options for the HTTP request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
 
-        :
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         kwargs["headers"] = self.common_headers | kwargs.get("headers", {})
@@ -128,11 +125,19 @@ class RequestBuilder:
     def get(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the GET requests and returns the requests.Response object.
 
-        :param kwargs: The options for the GET request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the GET request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="get", **kwargs)
@@ -140,11 +145,19 @@ class RequestBuilder:
     def patch(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the PATCH requests and returns the requests.Response object.
 
-        :param kwargs: The options for the PATCH request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the PATCH request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="patch", **kwargs)
@@ -152,11 +165,19 @@ class RequestBuilder:
     def post(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the POST requests and returns the requests.Response object.
 
-        :param kwargs: The options for the POST request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the POST request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="post", **kwargs)
@@ -164,11 +185,19 @@ class RequestBuilder:
     def put(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the PUT requests and returns the requests.Response object.
 
-        :param kwargs: The options for the PUT request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the PUT request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="put", **kwargs)
@@ -176,11 +205,19 @@ class RequestBuilder:
     def delete(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the DELETE requests and returns the requests.Response object.
 
-        :param kwargs: The options for the DELETE request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the DELETE request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="delete", **kwargs)
@@ -188,11 +225,19 @@ class RequestBuilder:
     def head(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the HEAD requests and returns the requests.Response object.
 
-        :param kwargs: The options for the HEAD request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the HEAD request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="head", **kwargs)
@@ -200,11 +245,19 @@ class RequestBuilder:
     def options(self, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles the OPTIONS requests and returns the requests.Response object.
 
-        :param kwargs: The options for the OPTIONS request.
-        :type kwargs: Unpack[RequestOptions]
+        :param Unpack[RequestOptions] kwargs: The options for the OPTIONS request.
 
         :returns: The Request Response Object.
         :rtype: requests.Response
+
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
         return self.request(method="options", **kwargs)
