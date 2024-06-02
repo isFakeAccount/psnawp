@@ -221,8 +221,10 @@ class Authenticator:
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
 
-        if "headers" in kwargs:
-            kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+        if "headers" not in kwargs:
+            kwargs["headers"] = {}
+        kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+
         return self.request_builder.get(**kwargs)
 
     @pre_request_processing
@@ -230,6 +232,8 @@ class Authenticator:
         if self.token_response is None:
             raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
 
-        if "headers" in kwargs:
-            kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+        if "headers" not in kwargs:
+            kwargs["headers"] = {}
+        kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+
         return self.request_builder.post(**kwargs)
