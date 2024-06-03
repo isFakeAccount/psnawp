@@ -68,7 +68,6 @@ class PaginationIterator(Iterator[T], Generic[T]):
         """Set the offset parameter for the API request.
 
         :param offset: The offset value to set.
-        :type offset: int
 
         """
         self._pagination_args.offset = offset
@@ -77,7 +76,6 @@ class PaginationIterator(Iterator[T], Generic[T]):
         """Set the page size (limit) parameter for the API request.
 
         :param page_size: The page size value to set.
-        :type page_size: int
 
         """
         self._pagination_args.page_size = page_size
