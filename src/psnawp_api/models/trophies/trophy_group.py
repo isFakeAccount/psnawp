@@ -1,14 +1,17 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Any, Generic, Optional, TypeVar
+from typing import TYPE_CHECKING, Any, Generic, Optional, TypeVar
 
 from attrs import define, field
 from typing_extensions import Self
 
-from psnawp_api.core import Authenticator, PSNAWPForbidden, PSNAWPNotFound
-from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
+from psnawp_api.core import PSNAWPForbidden, PSNAWPNotFound
+from psnawp_api.models.trophies import PlatformType, TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
+
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
 
 
 @define(frozen=True)
@@ -120,7 +123,7 @@ class TrophyGroupsSummary(Generic[T]):
         self.last_updated_date_time = iso_format_to_datetime(last_updated_date_time)
         "Date most recent trophy earned for the title (UTC+00:00 TimeZone)"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"TrophyGroupsSummary(Title: {self.trophy_title_name}, "
             f"Defined: {self.defined_trophies}, "
@@ -128,7 +131,7 @@ class TrophyGroupsSummary(Generic[T]):
             f"Progress: {self.progress})"
         )
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"TrophyGroupsSummary(trophy_set_version={self.trophy_set_version}, "
             f"trophy_title_name={self.trophy_title_name}, "
@@ -144,7 +147,7 @@ class TrophyGroupsSummary(Generic[T]):
         )
 
 
-class TrophyGroupsSummaryBuilder(Generic[T]):
+class TrophyGroupsSummaryBuilder:
     """Class for providing convenient method to Build TrophyGroupsSummary from PlayStation Endpoints"""
 
     def __init__(self, authenticator: Authenticator, np_communication_id: str):
