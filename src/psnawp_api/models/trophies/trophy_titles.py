@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Any, Generator, Optional
+from typing import TYPE_CHECKING, Any, Generator, Optional
 
 from attrs import define, field
 from typing_extensions import Self
 
-from psnawp_api.core import Authenticator, PSNAWPBadRequest, PSNAWPNotFound
-from psnawp_api.models.listing import PaginationArguments, PaginationIterator
-from psnawp_api.models.trophies.trophy import Trophy
-from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
+from psnawp_api.core import PSNAWPBadRequest, PSNAWPNotFound
+from psnawp_api.models.listing import PaginationIterator
+from psnawp_api.models.trophies import PlatformType, TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
+
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
+    from psnawp_api.models.listing import PaginationArguments
+    from psnawp_api.models.trophies.trophy import Trophy
 
 
 @define(frozen=True)
