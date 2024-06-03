@@ -3,9 +3,10 @@ from __future__ import annotations
 from abc import abstractmethod
 from collections.abc import Iterator
 from dataclasses import dataclass
-from typing import Generator, Generic, Optional, TypeVar
+from typing import TYPE_CHECKING, Generator, Generic, Optional, TypeVar
 
-from psnawp_api.core import Authenticator
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
 
 T = TypeVar("T")
 
