@@ -45,6 +45,7 @@ class TrophyGroupSummary:
 @define(frozen=True)
 class EarnedTrophyGroupSummary(TrophyGroupSummary):
     """EarnedTrophyGroupSummary contains trophy count data for one trophy group of a game title and user progress for each trophy group."""
+
     progress: Optional[int]
     "Percentage of trophies earned for group"
     earned_trophies: TrophySet
@@ -156,7 +157,8 @@ class TrophyGroupsSummaryBuilder(Generic[T]):
 
     @staticmethod
     def trophy_groups_dict_to_obj(trophy_groups_dict: dict[str, Any], trophy_groups: list[T]) -> TrophyGroupsSummary[T]:
-        """Takes list of TrophyGroupSummary and EarnedTrophyGroupSummary and returns TrophyGroupsSummary[TrophyGroupSummary] or TrophyGroupsSummary[EarnedTrophyGroupSummary].
+        """Takes list of TrophyGroupSummary and EarnedTrophyGroupSummary and returns TrophyGroupsSummary[TrophyGroupSummary]
+            or TrophyGroupsSummary[EarnedTrophyGroupSummary].
 
         :param trophy_groups_dict: dict from endpoint.
         :param trophy_groups: list of TrophyGroupSummary or EarnedTrophyGroupSummary

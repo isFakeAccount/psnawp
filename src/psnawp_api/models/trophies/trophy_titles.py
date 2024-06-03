@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Any, Iterator, Optional
+from typing import Any, Generator, Optional
 
 from attrs import define, field
+from typing_extensions import Self
 
-from psnawp_api.core import PSNAWPBadRequest, PSNAWPNotFound, RequestBuilder
+from psnawp_api.core import Authenticator, PSNAWPBadRequest, PSNAWPNotFound
+from psnawp_api.models.listing import PaginationArguments, PaginationIterator
 from psnawp_api.models.trophies.trophy import Trophy
 from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
@@ -52,115 +54,112 @@ class TrophyTitle:
     "Returns the trophy where earned is true with the lowest trophyEarnedRate"
 
 
-class TrophyTitles:
+class TrophyTitles(PaginationIterator[TrophyTitle]):
     """Retrieve all game titles associated with an account, and a summary of trophies earned from them."""
 
-    def __init__(self, request_builder: RequestBuilder, account_id: str):
+    def __init__(self, authenticator: Authenticator, url: str, pagination_args: PaginationArguments, title_ids: Optional[list[str]]) -> None:
         """Constructor of TrophyTitles class.
 
         .. note::
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
-        :type request_builder: RequestBuilder
-        :param account_id: The account whose trophy list is being accessed
-        :type account_id: str
+        :param authenticator: The instance of Authenticator. Used to make HTTPRequests.
+        :param url: The url of endpoint.
+        :param pagination_args: Arguments related to pagination like limit and offset.
 
         """
-        self._request_builder = request_builder
-        self._account_id = account_id
+        super().__init__(authenticator=authenticator, url=url, pagination_args=pagination_args)
+        self.title_ids = title_ids
 
-    def get_trophy_titles(self, limit: Optional[int]) -> Iterator[TrophyTitle]:
+    @classmethod
+    def from_endpoint(
+        cls,
+        authenticator: Authenticator,
+        pagination_args: PaginationArguments,
+        account_id: str,
+        title_ids: Optional[list[str]],
+    ) -> Self:
+        if title_ids is None:
+            url = f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=account_id)}"
+        else:
+            url = f"{BASE_PATH['trophies']}{API_PATH['trophy_titles_for_title'].format(account_id=account_id)}"
+        return cls(
+            authenticator,
+            url,
+            pagination_args,
+            title_ids,
+        )
+
+    def fetch_next_page(self) -> Generator[TrophyTitle, None, None]:
+        if self.title_ids is None:
+            return self.get_trophy_title()
+        else:
+            return self.get_trophy_summary_for_title()
+
+    def get_trophy_title(self) -> Generator[TrophyTitle, None, None]:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
-        :type limit: Optional[int]
 
         :returns: Generator object with TitleTrophySummary objects
-        :rtype: Iterator[TrophyTitle]
 
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
+        :raises PSNAWPForbidden: If the user's profile is private
 
         """
-        offset = 0
-        limit_per_request = min(limit, 800) if limit is not None else 800
-        while True:
-            params = {"limit": limit_per_request, "offset": offset}
-            response = self._request_builder.get(
-                url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles'].format(account_id=self._account_id)}",
-                params=params,
-            ).json()
-
-            per_page_items = 0
-            trophy_titles: list[dict[Any, Any]] = response.get("trophyTitles")
-            for trophy_title in trophy_titles:
-                title_trophy_sum = TrophyTitle(
-                    total_items_count=response.get("totalItemCount"),
-                    np_service_name=trophy_title.get("npServiceName"),
-                    np_communication_id=trophy_title.get("npCommunicationId"),
-                    trophy_set_version=trophy_title.get("trophySetVersion"),
-                    title_name=trophy_title.get("trophyTitleName"),
-                    title_detail=trophy_title.get("trophyTitleDetail"),
-                    title_icon_url=trophy_title.get("trophyTitleIconUrl"),
-                    title_platform=frozenset(
-                        [
-                            PlatformType(platform_str) if platform_str else PlatformType("UNKNOWN")
-                            for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")
-                        ]
+        response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
+        trophy_titles: list[dict[str, Any]] = response.get("trophyTitles")
+        for trophy_title in trophy_titles:
+            title_trophy_sum = TrophyTitle(
+                total_items_count=response.get("totalItemCount"),
+                np_service_name=trophy_title.get("npServiceName"),
+                np_communication_id=trophy_title.get("npCommunicationId"),
+                trophy_set_version=trophy_title.get("trophySetVersion"),
+                title_name=trophy_title.get("trophyTitleName"),
+                title_detail=trophy_title.get("trophyTitleDetail"),
+                title_icon_url=trophy_title.get("trophyTitleIconUrl"),
+                title_platform=frozenset(
+                    [PlatformType(platform_str) for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")],
+                ),
+                has_trophy_groups=trophy_title.get("hasTrophyGroups"),
+                progress=trophy_title.get("progress"),
+                hidden_flag=trophy_title.get("hiddenFlag"),
+                last_updated_date_time=trophy_title.get("lastUpdatedDateTime"),
+                defined_trophies=TrophySet(
+                    **trophy_title.get(
+                        "definedTrophies",
+                        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                     ),
-                    has_trophy_groups=trophy_title.get("hasTrophyGroups"),
-                    progress=trophy_title.get("progress"),
-                    hidden_flag=trophy_title.get("hiddenFlag"),
-                    last_updated_date_time=trophy_title.get("lastUpdatedDateTime"),
-                    defined_trophies=TrophySet(
-                        **trophy_title.get(
-                            "definedTrophies",
-                            {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
-                        ),
-                    ),
-                    earned_trophies=TrophySet(
-                        **trophy_title.get(
-                            "earnedTrophies",
-                            {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
-                        )
-                    ),
-                    np_title_id=None,
-                    rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
-                )
-                yield title_trophy_sum
-                per_page_items += 1
+                ),
+                earned_trophies=TrophySet(
+                    **trophy_title.get(
+                        "earnedTrophies",
+                        {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
+                    )
+                ),
+                np_title_id=None,
+                rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
+            )
+            yield title_trophy_sum
 
-            if limit is not None:
-                limit -= per_page_items
-                limit_per_request = min(limit, 800)
+        offset = response.get("nextOffset") or 0
+        if offset > 0:
+            self._has_next = True
+        else:
+            self._has_next = False
 
-                # If limit is reached
-                if limit <= 0:
-                    break
-
-            offset = response.get("nextOffset", 0)
-            # If end is reached the end
-            if offset <= 0:
-                break
-
-    def get_trophy_summary_for_title(self, title_ids: list[str]) -> Iterator[TrophyTitle]:
+    def get_trophy_summary_for_title(self) -> Generator[TrophyTitle, None, None]:
         """Retrieve a summary of the trophies earned by a user for specific titles.
 
-        :param title_ids: Unique ID of the title
-        :type title_ids: list[str]
+        :param list[str] title_ids: Unique ID of the title
 
         :returns: Generator object with TitleTrophySummary objects
-        :rtype: Iterator[TrophyTitle]
 
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
+        :raises PSNAWPForbidden: If the user's profile is private
 
         """
-        params = {"npTitleIds": ",".join(title_ids)}
-        response = self._request_builder.get(
-            url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles_for_title'].format(account_id=self._account_id)}",
-            params=params,
-        ).json()
+        params = {"npTitleIds": ",".join(self.title_ids if self.title_ids is not None else [])}
+        response = self.authenticator.get(url=self._url, params=params).json()
 
         for title in response.get("titles"):
             for trophy_title in title.get("trophyTitles"):
@@ -173,10 +172,7 @@ class TrophyTitles:
                     title_detail=trophy_title.get("trophyTitleDetail"),
                     title_icon_url=trophy_title.get("trophyTitleIconUrl"),
                     title_platform=frozenset(
-                        [
-                            PlatformType(platform_str) if platform_str else PlatformType("UNKNOWN")
-                            for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")
-                        ]
+                        [PlatformType(platform_str) for platform_str in trophy_title.get("trophyTitlePlatform", "").split(",")],
                     ),
                     has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                     progress=trophy_title.get("progress"),
@@ -195,31 +191,30 @@ class TrophyTitles:
                 )
                 yield title_trophy_sum
 
+        # This endpoint does not have pagination
+        self._has_next = False
+
     @staticmethod
-    def get_np_communication_id(request_builder: RequestBuilder, title_id: str, account_id: str) -> str:
+    def get_np_communication_id(authenticator: Authenticator, title_id: str, account_id: str) -> str:
         """Returns the np communication id of title. This is required for requesting detail about a titles trophies.
 
         .. note::
 
             The endpoint only returns useful response back if the account has played that particular video game.
 
-        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
-        :type request_builder: RequestBuilder
+        :param authenticator: The instance of Authenticator. Used to make HTTPRequests.
         :param title_id: Unique ID of the title
-        :type title_id: str
         :param account_id: Account ID of the user.
-        :type account_id: str
 
         :returns: np communication id of title
-        :rtype: str
 
-        :raises: ``PSNAWPNotFound`` If the user does not have any trophies for that game or the game doesn't exist.
+        :raises PSNAWPNotFound: If the user does not have any trophies for that game or the game doesn't exist.
 
         """
         params = {"npTitleIds": f"{title_id},"}
 
         try:
-            response = request_builder.get(
+            response = authenticator.get(
                 url=f"{BASE_PATH['trophies']}{API_PATH['trophy_titles_for_title'].format(account_id=account_id)}",
                 params=params,
             ).json()
