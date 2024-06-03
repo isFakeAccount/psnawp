@@ -4,15 +4,18 @@ import time
 import uuid
 from functools import wraps
 from logging import getLogger
-from typing import Callable, NotRequired, Optional, TypedDict, TypeVar, cast
+from typing import TYPE_CHECKING, Callable, NotRequired, Optional, TypedDict, TypeVar, cast
 from urllib.parse import parse_qs, urlparse
 
 from requests import Response
 from typing_extensions import ParamSpec, Unpack
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
-from psnawp_api.core.request_builder import RequestBuilder, RequestBuilderHeaders, RequestOptions
+from psnawp_api.core.request_builder import RequestBuilder
 from psnawp_api.utils import API_PATH, BASE_PATH
+
+if TYPE_CHECKING:
+    from psnawp_api.core.request_builder import RequestBuilderHeaders, RequestOptions
 
 PT = ParamSpec("PT")
 RT = TypeVar("RT")
