@@ -62,7 +62,14 @@ class PaginationIterator(Iterator[T], Generic[T]):
 
     @abstractmethod
     def fetch_next_page(self) -> Generator[T, None, None]:
-        """Fetch the next page of items from the API."""
+        """Fetch the next page of items from the API.
+
+        .. note::
+
+            The implementation of this methods are also responsible for incrementing the offset using ``increment_offset()`` and setting the
+            ``self._total_item_count``.
+
+        """
         raise NotImplementedError("Subclasses must implement the fetch_next_page method")
 
     def set_offset(self, offset: int) -> None:
