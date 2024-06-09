@@ -318,3 +318,77 @@ class Authenticator:
         kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
 
         return self.request_builder.post(**kwargs)
+
+    @pre_request_processing
+    def patch(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Make a PATCH request with automatic Bearer token authorization.
+
+        This method simplifies making POST requests by automatically adding the necessary Authorization header with a Bearer token. You can pass any additional
+        arguments or keyword arguments, which will be forwarded to the underlying request builder's ``patch`` method.
+
+        :param kwargs: Additional arguments to be forwarded to the ``patch`` method of the request builder.
+
+        :returns: The response from the POST request.
+
+        :raises PSNAWPAuthenticationError: If the ``token_response`` is ``None``, indicating that an attempt to make an HTTP request was made without an access
+            token.
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+
+        .. note::
+
+            The ``pre_request_processing`` decorator ensures that ``token_response`` is usually set correctly. The check for ``self.token_response is None`` is
+            a safeguard in case of unexpected issues.
+
+        """
+        if self.token_response is None:
+            raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
+
+        if "headers" not in kwargs:
+            kwargs["headers"] = {}
+        kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+
+        return self.request_builder.patch(**kwargs)
+
+    @pre_request_processing
+    def delete(self, **kwargs: Unpack[RequestOptions]) -> Response:
+        """Make a DELETE request with automatic Bearer token authorization.
+
+        This method simplifies making POST requests by automatically adding the necessary Authorization header with a Bearer token. You can pass any additional
+        arguments or keyword arguments, which will be forwarded to the underlying request builder's ``delete`` method.
+
+        :param kwargs: Additional arguments to be forwarded to the ``delete`` method of the request builder.
+
+        :returns: The response from the POST request.
+
+        :raises PSNAWPAuthenticationError: If the ``token_response`` is ``None``, indicating that an attempt to make an HTTP request was made without an access
+            token.
+        :raises PSNAWPBadRequest: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorized: If the HTTP response status code is 401.
+        :raises PSNAWPForbidden: If the HTTP response status code is 403.
+        :raises PSNAWPNotFound: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowed: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequests: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+
+        .. note::
+
+            The ``pre_request_processing`` decorator ensures that ``token_response`` is usually set correctly. The check for ``self.token_response is None`` is
+            a safeguard in case of unexpected issues.
+
+        """
+        if self.token_response is None:
+            raise PSNAWPAuthenticationError("Attempt to make HTTP Request without access_token.")
+
+        if "headers" not in kwargs:
+            kwargs["headers"] = {}
+        kwargs["headers"]["Authorization"] = f"Bearer {self.token_response['access_token']}"
+
+        return self.request_builder.delete(**kwargs)
