@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Iterator, Optional
+from typing import TYPE_CHECKING, Any, Iterator, Optional
+
+from typing_extensions import Self
 
 from psnawp_api.core import (
     PSNAWPBadRequest,
     PSNAWPForbidden,
     PSNAWPNotFound,
-    RequestBuilder,
 )
-from psnawp_api.models.user import User
 from psnawp_api.utils import API_PATH, BASE_PATH
+
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
+    from psnawp_api.models.user import User
 
 
 class Group:
@@ -18,76 +22,67 @@ class Group:
 
     def __init__(
         self,
-        request_builder: RequestBuilder,
+        authenticator: Authenticator,
         group_id: Optional[str],
-        users: Optional[Iterator[User]],
-    ):
+    ) -> None:
         """Constructor of Group.
+
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
+        :param group_id: The Group ID of a group.
+
+        :raises PSNAWPNotFound: If group id does not exist or is invalid.
+        :raises PSNAWPForbidden: If you are sending message a user who has blocked you.
 
         .. note::
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
-        :type request_builder: RequestBuilder
-        :param group_id: The Group ID of a group.
-        :type group_id: Optional[str]
-        :param users: A list of users of the members in the group.
-        :type users: Optional[Iterator[User]]
-
-        :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
-
-        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you. blocked you.
-
         """
 
-        self._request_builder = request_builder
+        self.authenticator = authenticator
         self.group_id = group_id
-        self.users = users
 
-        if self.group_id is not None:
-            self.get_group_information()
-        elif self.users is not None:
-            self._create_group()
+    @classmethod
+    def create_from_group_id(cls, authenticator: Authenticator, group_id: str) -> Self:
+        return cls(authenticator, group_id)
 
-    def _create_group(self) -> None:
-        """Creates a new group if it doesn't exist. Doesn't work if user's privacy settings block invites.
+    @classmethod
+    def create_from_users(cls, authenticator: Authenticator, users: Iterator[User]) -> Self:
+        """Creates a new group from the provide list of Users.
 
-        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
+        :raises PSNAWPForbidden: If you are sending message a user who has blocked you.
 
         """
-        if self.users is not None:
-            invitees = [{"accountId": user.account_id} for user in self.users]
-            data = {"invitees": invitees}
+        invitees = [{"accountId": user.account_id} for user in users]
+        data = {"invitees": invitees}
 
-            try:
-                response = self._request_builder.post(
-                    url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
-                    data=json.dumps(data),
-                ).json()
-                self.group_id = response["groupId"]
-            except PSNAWPForbidden as forbidden:
-                raise PSNAWPForbidden("The group cannot be created because the user has either set messages to private or has blocked you.") from forbidden
+        try:
+            response = authenticator.post(
+                url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
+                data=json.dumps(data),
+            ).json()
+            return cls(authenticator, response["groupId"])
+        except PSNAWPForbidden as forbidden:
+            raise PSNAWPForbidden("The group cannot be created because the user has either set messages to private or has blocked you.") from forbidden
 
     def change_name(self, group_name: str) -> None:
         """Changes the group name to one specified in arguments.
+
+        :param group_name: The name of the group that will be set.
+
+        :returns: None
+
+        :raises PSNAWPBadRequest: If you are not part of group or the group is a DM.
 
         .. note::
 
             You cannot change the name of DM groups. i.e. Groups with only two people (including you).
 
-        :param group_name: The name of the group that will be set.
-        :type group_name: str
-
-        :returns: None
-
-        :raises: ``PSNAWPBadRequest`` If you are not part of group or the group is a DM.
-
         """
 
         data = {"groupName": {"value": group_name}}
         try:
-            self._request_builder.patch(
+            self.authenticator.patch(
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['group_settings'].format(group_id=self.group_id)}",
                 data=json.dumps(data),
             )
@@ -98,9 +93,8 @@ class Group:
         """Gets the group chat information such as about me, avatars, languages etc...
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict[str, Any]
 
-        :raises: ``PSNAWPNotFound`` If group id does not exist or is invalid.
+        :raises PSNAWPNotFound: If group id does not exist or is invalid.
 
         .. literalinclude:: examples/group/group_information.json
             :language: json
@@ -113,7 +107,7 @@ class Group:
         }
 
         try:
-            response: dict[str, Any] = self._request_builder.get(
+            response: dict[str, Any] = self.authenticator.get(
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['group_members'].format(group_id=self.group_id)}",
                 params=param,
             ).json()
@@ -132,7 +126,6 @@ class Group:
         :param message: Message Body
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict[str, str]
 
         .. code-block:: json
 
@@ -145,7 +138,7 @@ class Group:
 
         data = {"messageType": 1, "body": message}
 
-        response: dict[str, str] = self._request_builder.post(
+        response: dict[str, str] = self.authenticator.post(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['send_group_message'].format(group_id=self.group_id)}",
             data=json.dumps(data),
         ).json()
@@ -156,10 +149,8 @@ class Group:
         """Gets the conversations in a group.
 
         :param limit: The number of conversations to receive.
-        :type limit: int
 
         :returns: A dict containing info similar to what is shown below:
-        :rtype: dict[str, Any]
 
             .. code-block::
 
@@ -187,7 +178,7 @@ class Group:
 
         param = {"limit": limit}
 
-        response: dict[str, Any] = self._request_builder.get(
+        response: dict[str, Any] = self.authenticator.get(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['conversation'].format(group_id=self.group_id)}",
             params=param,
         ).json()
@@ -197,11 +188,11 @@ class Group:
     def leave_group(self) -> None:
         """Leave the current group
 
-        :raises: ``PSNAWPNotFound`` If you are not part of the group.
+        :raises PSNAWPNotFound: If you are not part of the group.
 
         """
 
-        self._request_builder.delete(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}")
+        self.authenticator.delete(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['leave_group'].format(group_id=self.group_id)}")
 
     def __repr__(self) -> str:
         return f"<Group group_id:{self.group_id}>"
