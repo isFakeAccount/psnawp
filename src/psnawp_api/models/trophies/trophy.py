@@ -1,20 +1,26 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from datetime import datetime
-from typing import Any, Iterator, Literal, Optional
+from typing import TYPE_CHECKING, Any, Generator, Optional, TypedDict
 
-from attrs import define
+from typing_extensions import Self
 
-from psnawp_api.core import PSNAWPForbidden, PSNAWPNotFound, RequestBuilder
-from psnawp_api.models.trophies.trophy_constants import TrophyRarity, TrophyType
+from psnawp_api.models.listing import PaginationIterator
+from psnawp_api.models.trophies.trophy_constants import PlatformType, TrophyRarity, TrophyType
 from psnawp_api.models.trophies.utility_functions import (
     trophy_rarity_to_enum,
     trophy_type_str_to_enum,
 )
-from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
+from psnawp_api.utils import iso_format_to_datetime
+from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
+
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
+    from psnawp_api.models.listing import PaginationArguments
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class Trophy:
     """A class that represents a PlayStation Video Game Trophy."""
 
@@ -23,8 +29,7 @@ class Trophy:
     "The current version of the trophy set"
     has_trophy_groups: Optional[bool]
     "True if this title has additional trophy groups"
-    total_items_count: Optional[int]
-    "Total trophies in the group (or total trophies for the title if all specified)"
+
     # Trophy Meta
     trophy_id: Optional[int]
     "Unique ID for this trophy"
@@ -47,6 +52,27 @@ class Trophy:
     trophy_reward_img_url: Optional[str]
     "URL for the graphic associated with the reward (PS5 Only)"
 
+    @classmethod
+    def from_trophy_dict(cls, trophy_dict: dict[str, Any]) -> Self:
+        trophy_instance = cls(
+            trophy_set_version=trophy_dict.get("trophySetVersion"),
+            has_trophy_groups=trophy_dict.get("hasTrophyGroups"),
+            trophy_id=trophy_dict.get("trophyId"),
+            trophy_hidden=trophy_dict.get("trophyHidden"),
+            trophy_type=trophy_type_str_to_enum(trophy_dict.get("trophyType")),
+            trophy_name=trophy_dict.get("trophyName"),
+            trophy_detail=trophy_dict.get("trophyDetail"),
+            trophy_icon_url=trophy_dict.get("trophyIconUrl"),
+            trophy_group_id=trophy_dict.get("trophyGroupId"),
+            trophy_progress_target_value=trophy_dict.get("trophyProgressTargetValue"),
+            trophy_reward_name=trophy_dict.get("trophyRewardName"),
+            trophy_reward_img_url=trophy_dict.get("trophyRewardImageUrl"),
+        )
+        return trophy_instance
+
+
+@dataclass(frozen=True)
+class TrophyWithProgress(Trophy):
     # Earned Trophy Info
     earned: Optional[bool]
     "True if this trophy has been earned"
@@ -64,11 +90,10 @@ class Trophy:
     "Percentage of all users who have earned the trophy"
 
     @classmethod
-    def from_trophy_dict(cls, trophy_dict: dict[str, Any]) -> Trophy:
+    def from_trophy_dict(cls, trophy_dict: dict[str, Any]) -> Self:
         trophy_instance = cls(
             trophy_set_version=trophy_dict.get("trophySetVersion"),
             has_trophy_groups=trophy_dict.get("hasTrophyGroups"),
-            total_items_count=trophy_dict.get("totalItemCount"),
             trophy_id=trophy_dict.get("trophyId"),
             trophy_hidden=trophy_dict.get("trophyHidden"),
             trophy_type=trophy_type_str_to_enum(trophy_dict.get("trophyType")),
@@ -101,196 +126,126 @@ class Trophy:
         return trophy_list
 
 
-def _get_trophy_from_endpoint(
-    endpoint: str,
-    request_builder: RequestBuilder,
-    platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-    limit: Optional[int],
-) -> Iterator[Trophy]:
-    offset = 0
-    service_name = "trophy2" if platform == "PS5" else "trophy"
-    params: dict[str, str | int] = {"npServiceName": service_name}
-    limit_per_request = 400
-    if limit is not None:
-        params = {**params, "limit": min(limit, limit_per_request), "offset": offset}
+class TrophyIterator(PaginationIterator[Trophy]):
+    """Class for Iterating over all trophies for a specified group within a game title."""
 
-    while True:
-        try:
-            response = request_builder.get(
-                url=f"{BASE_PATH['trophies']}{endpoint}",
-                params=params,
-            ).json()
-        except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
-        except PSNAWPForbidden as forbidden:
-            raise PSNAWPForbidden("The following user has made their trophy private.") from forbidden
+    def __init__(
+        self,
+        authenticator: Authenticator,
+        url: str,
+        pagination_args: PaginationArguments,
+        platform: PlatformType,
+    ) -> None:
+        super().__init__(authenticator=authenticator, url=url, pagination_args=pagination_args)
+        self.platform = platform
 
-        per_page_items = 0
-        trophies: list[dict[str, Any]] = response.get("trophies")
+    @classmethod
+    def from_endpoint(
+        cls,
+        authenticator: Authenticator,
+        pagination_args: PaginationArguments,
+        np_communication_id: str,
+        platform: PlatformType,
+        trophy_group_id: str,
+    ) -> Self:
+        url = f"{BASE_PATH['trophies']}{API_PATH['trophies_for_title'].format(np_communication_id=np_communication_id, trophy_group_id=trophy_group_id)}"
+        return cls(authenticator, url, pagination_args, platform)
+
+    def fetch_next_page(self) -> Generator[Trophy, None, None]:
+        service_name = "trophy2" if self.platform == PlatformType.PS5 else "trophy"
+        params = {"npServiceName": service_name} | self._pagination_args.get_params_dict()
+        response = self.authenticator.get(url=self._url, params=params).json()
+        self._total_item_count = response["totalItemCount"]
+
+        trophies: list[dict[str, Any]] = response.get("trophies", [])
         for trophy in trophies:
             trophy_instance = Trophy.from_trophy_dict(
                 {
                     **trophy,
                     "trophySetVersion": response.get("trophySetVersion"),
                     "hasTrophyGroups": response.get("hasTrophyGroups"),
-                    "totalItemCount": response.get("totalItemCount"),
                 }
             )
+            self._pagination_args.increment_offset()
             yield trophy_instance
-            per_page_items += 1
 
-        if limit is not None:
-            limit -= per_page_items
-            params["limit"] = min(limit, limit_per_request)
-
-            # If limit is reached
-            if limit <= 0:
-                break
-
-        offset = response.get("nextOffset", 0)
-        # If end is reached the end
-        if offset <= 0:
-            break
+        offset = response.get("nextOffset") or 0
+        if offset > 0:
+            self._has_next = True
+        else:
+            self._has_next = False
 
 
-class TrophyBuilder:
-    """Class for providing convenient methods to Build Trophy from PlayStation Endpoints"""
+class RarestTrophies(TypedDict):
+    trophyId: int
+    trophyHidden: bool
+    earned: bool
+    earnedDateTime: str
+    trophyType: str
+    trophyRare: int
+    trophyEarnedRate: str
 
-    def __init__(self, request_builder: RequestBuilder, np_communication_id: str):
-        """Constructor for class TrophyBuilder.
 
-        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
-        :type request_builder: RequestBuilder
-        :param np_communication_id: Unique ID of a game title used to request trophy information. This can be obtained from ``GameTitle`` class.
-        :type np_communication_id: str
+class TrophyWithProgressIterator(PaginationIterator[TrophyWithProgress]):
+    """Class for Iterating over all trophies for a specified group within a game title, this class includes user progress for each trophy."""
 
-        """
-        self._request_builder = request_builder
-        self.np_communication_id: str = np_communication_id
-
-    def game_trophies(
+    def __init__(
         self,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
+        authenticator: Authenticator,
+        url: str,
+        pagination_args: PaginationArguments,
+        platform: PlatformType,
+        progress_url: str,
+    ) -> None:
+        super().__init__(authenticator=authenticator, url=url, pagination_args=pagination_args)
+        self.platform = platform
+        self._progress_url = progress_url
+
+        self.rarest_trophies: Optional[list[RarestTrophies]] = None
+
+    @classmethod
+    def from_endpoint(
+        cls,
+        authenticator: Authenticator,
+        pagination_args: PaginationArguments,
+        np_communication_id: str,
+        platform: PlatformType,
         trophy_group_id: str,
-        limit: Optional[int],
-    ) -> Iterator[Trophy]:
-        """Retrieves the individual trophy detail of a single - or all - trophy groups for a title.
-
-        :param platform: The platform this title belongs to.
-        :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
-            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
-        :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy titles.
-        :type limit: Optional[int]
-
-        :returns: Returns the Trophy Generator object with all the information
-        :rtype: Iterator[Trophy]
-
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
-
-        """
-        return _get_trophy_from_endpoint(
-            API_PATH["trophies_for_title"].format(
-                np_communication_id=self.np_communication_id,
-                trophy_group_id=trophy_group_id,
-            ),
-            self._request_builder,
-            platform,
-            limit,
-        )
-
-    def earned_game_trophies(
-        self,
         account_id: str,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        trophy_group_id: str,
-        limit: Optional[int],
-    ) -> Iterator[Trophy]:
-        """Retrieves the earned status individual trophy detail of a single - or all - trophy groups for a title.
-
-        :param account_id: The account whose trophy list is being accessed.
-        :type account_id: str
-        :param platform: The platform this title belongs to.
-        :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
-            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
-        :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy titles.
-        :type limit: Optional[int]
-
-        :returns: Returns the Trophy Generator object with all the information
-        :rtype: Iterator[Trophy]
-
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
-
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
-
-        """
-        return _get_trophy_from_endpoint(
-            API_PATH["trophies_earned_for_title"].format(
-                account_id=account_id,
-                np_communication_id=self.np_communication_id,
-                trophy_group_id=trophy_group_id,
-            ),
-            self._request_builder,
-            platform,
-            limit,
+    ) -> Self:
+        url = f"{BASE_PATH['trophies']}{API_PATH['trophies_for_title'].format(np_communication_id=np_communication_id, trophy_group_id=trophy_group_id)}"
+        progress_url = (
+            f"{BASE_PATH['trophies']}"
+            f"{API_PATH['trophies_earned_for_title'].format(account_id=account_id, np_communication_id=np_communication_id, trophy_group_id=trophy_group_id)}"
         )
+        return cls(authenticator, url, pagination_args, platform, progress_url)
 
-    def earned_game_trophies_with_metadata(
-        self,
-        account_id: str,
-        platform: Literal["PS Vita", "PS3", "PS4", "PS5"],
-        trophy_group_id: str,
-        limit: Optional[int],
-    ) -> Iterator[Trophy]:
-        """Retrieves the earned status with metadata of individual trophy detail of a single - or all - trophy groups for a title.
+    def fetch_next_page(self) -> Generator[TrophyWithProgress, None, None]:
+        service_name = "trophy2" if self.platform == PlatformType.PS5 else "trophy"
+        params = {"npServiceName": service_name} | self._pagination_args.get_params_dict()
 
-        :param account_id: The account whose trophy list is being accessed.
-        :type account_id: str
-        :param platform: The platform this title belongs to.
-        :type platform: Literal
-        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
-            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
-        :type trophy_group_id: str
-        :param limit: Limit of trophies returned, None means to return all trophy titles.
-        :type limit: Optional[int]
+        response = self.authenticator.get(url=self._url, params=params).json()
+        self._total_item_count = response["totalItemCount"]
+        trophies: list[dict[str, Any]] = response.get("trophies")
 
-        :returns: Returns the Trophy Generator object with all the information
-        :rtype: Iterator[Trophy]
+        response_progress = self.authenticator.get(url=self._progress_url, params=params).json()
+        self.rarest_trophies = response_progress.get("rarestTrophies")
+        trophies_progress: list[dict[str, Any]] = response_progress.get("trophies")
 
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
-
-        :raises: ``PSNAWPForbidden`` If the user's profile is private
-
-        """
-        trophy_metadata = _get_trophy_from_endpoint(
-            API_PATH["trophies_for_title"].format(
-                np_communication_id=self.np_communication_id,
-                trophy_group_id=trophy_group_id,
-            ),
-            self._request_builder,
-            platform,
-            limit,
-        )
-        trophy_earned_status = _get_trophy_from_endpoint(
-            API_PATH["trophies_earned_for_title"].format(
-                account_id=account_id,
-                np_communication_id=self.np_communication_id,
-                trophy_group_id=trophy_group_id,
-            ),
-            self._request_builder,
-            platform,
-            limit,
-        )
-
-        for combined_data in zip(trophy_metadata, trophy_earned_status):
-            combined_data_dict = {}
-            for key in dir(combined_data[0]):
-                if key.startswith("_") or key.startswith("from"):
-                    continue
-                else:
-                    combined_data_dict[key] = getattr(combined_data[0], key) or getattr(combined_data[1], key)
-            trophy_instance = Trophy(**combined_data_dict)
+        for trophy, progress in zip(trophies, trophies_progress):
+            trophy_instance = TrophyWithProgress.from_trophy_dict(
+                {
+                    **trophy,
+                    **progress,
+                    "trophySetVersion": response.get("trophySetVersion"),
+                    "hasTrophyGroups": response.get("hasTrophyGroups"),
+                }
+            )
+            self._pagination_args.increment_offset()
             yield trophy_instance
+
+        offset = response.get("nextOffset") or 0
+        if offset > 0:
+            self._has_next = True
+        else:
+            self._has_next = False
