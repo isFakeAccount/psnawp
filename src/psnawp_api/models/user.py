@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, Generator, Iterator, Literal, Optional, overload
+from typing import TYPE_CHECKING, Any, Generator, Literal, Optional, overload
 
 from typing_extensions import Self
 
@@ -14,15 +14,15 @@ from psnawp_api.models.title_stats import TitleStatsIterator
 from psnawp_api.models.trophies import (
     TrophyGroupsSummaryBuilder,
     TrophyIterator,
+    TrophySummary,
+    TrophyTitleIterator,
     TrophyWithProgressIterator,
 )
-from psnawp_api.models.trophies.trophy_summary import TrophySummary
-from psnawp_api.models.trophies.trophy_titles import TrophyTitle, TrophyTitleIterator
 from psnawp_api.utils import API_PATH, BASE_PATH
 
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
-    from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress
+    from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress, TrophyTitle
 
 
 class User:
@@ -158,7 +158,7 @@ class User:
         ).json()
         return response
 
-    def friends_list(self, limit: int = 1000) -> Iterator[User]:
+    def friends_list(self, limit: int = 1000) -> Generator[User, None, None]:
         """Gets the friends list and returns an iterator of User objects.
 
         :param limit: The number of items from input max is 1000.
@@ -348,20 +348,20 @@ class User:
         self,
         np_communication_id: str,
         platform: PlatformType,
-        include_metadata: Literal[False] = False,
+        include_progress: Literal[False] = False,
     ) -> TrophyGroupsSummary[TrophyGroupSummary]: ...
     @overload
     def trophy_groups_summary(
         self,
         np_communication_id: str,
         platform: PlatformType,
-        include_metadata: Literal[True],
+        include_progress: Literal[True],
     ) -> TrophyGroupsSummary[TrophyGroupSummaryWithProgress]: ...
     def trophy_groups_summary(
         self,
         np_communication_id: str,
         platform: PlatformType,
-        include_metadata: bool = False,
+        include_progress: bool = False,
     ) -> TrophyGroupsSummary[TrophyGroupSummary] | TrophyGroupsSummary[TrophyGroupSummaryWithProgress]:
         """Retrieves the trophy groups for a title and their respective trophy count.
 
@@ -370,11 +370,11 @@ class User:
         :param np_communication_id: Unique ID of the title used to request trophy information
         :param platform: The platform this title belongs to.
         :param platform: The platform this title belongs to.
-        :param include_metadata: If True, will fetch results from another endpoint and include metadata for trophy group such as name and detail
+        :param include_progress: If True, will fetch results from another endpoint and include progress for trophy group such as name and detail
 
         .. warning::
 
-            Setting ``include_metadata`` to ``True`` will use twice the amount of rate limit since the API wrapper has to obtain metadata from a separate
+            Setting ``include_progress`` to ``True`` will use twice the amount of rate limit since the API wrapper has to obtain progress from a separate
             endpoint.
 
         :returns: TrophyGroupSummary object containing title and title groups trophy information.
@@ -383,7 +383,7 @@ class User:
         :raises PSNAWPForbidden: If the user's profile is private.
 
         """
-        if not include_metadata:
+        if not include_progress:
             return TrophyGroupsSummaryBuilder(
                 authenticator=self.authenticator,
                 np_communication_id=np_communication_id,
