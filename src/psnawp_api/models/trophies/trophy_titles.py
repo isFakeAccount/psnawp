@@ -14,16 +14,11 @@ from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
     from psnawp_api.models.listing import PaginationArguments
-    from psnawp_api.models.trophies.trophy import Trophy
 
 
 @define(frozen=True)
 class TrophyTitle:
     """A class containing summary of trophy data for a user for a game title"""
-
-    # Trophy Title Metadata
-    total_items_count: Optional[int]
-    "The total number of trophy titles for this account"
 
     np_service_name: Optional[str]
     "trophy for PS3, PS4, or PS Vita platforms and trophy2 for the PS5 platform"
@@ -54,11 +49,9 @@ class TrophyTitle:
     # when title_id is passed
     np_title_id: Optional[str]
     "Title ID of the title if passed"
-    rarest_trophies: list[Trophy] = field(factory=list, hash=False)
-    "Returns the trophy where earned is true with the lowest trophyEarnedRate"
 
 
-class TrophyTitles(PaginationIterator[TrophyTitle]):
+class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
     """Retrieve all game titles associated with an account, and a summary of trophies earned from them."""
 
     def __init__(self, authenticator: Authenticator, url: str, pagination_args: PaginationArguments, title_ids: Optional[list[str]]) -> None:
@@ -112,10 +105,11 @@ class TrophyTitles(PaginationIterator[TrophyTitle]):
 
         """
         response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
+        self._total_item_count = response["totalItemCount"]
+
         trophy_titles: list[dict[str, Any]] = response.get("trophyTitles")
         for trophy_title in trophy_titles:
             title_trophy_sum = TrophyTitle(
-                total_items_count=response.get("totalItemCount"),
                 np_service_name=trophy_title.get("npServiceName"),
                 np_communication_id=trophy_title.get("npCommunicationId"),
                 trophy_set_version=trophy_title.get("trophySetVersion"),
@@ -142,8 +136,8 @@ class TrophyTitles(PaginationIterator[TrophyTitle]):
                     )
                 ),
                 np_title_id=None,
-                rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
             )
+            self._pagination_args.increment_offset()
             yield title_trophy_sum
 
         offset = response.get("nextOffset") or 0
@@ -164,11 +158,11 @@ class TrophyTitles(PaginationIterator[TrophyTitle]):
         """
         params = {"npTitleIds": ",".join(self.title_ids if self.title_ids is not None else [])}
         response = self.authenticator.get(url=self._url, params=params).json()
+        self._total_item_count = response["totalItemCount"]
 
         for title in response.get("titles"):
             for trophy_title in title.get("trophyTitles"):
                 title_trophy_sum = TrophyTitle(
-                    total_items_count=response.get("totalItemCount"),
                     np_service_name=trophy_title.get("npServiceName"),
                     np_communication_id=trophy_title.get("npCommunicationId"),
                     trophy_set_version=trophy_title.get("trophySetVersion"),
@@ -191,7 +185,6 @@ class TrophyTitles(PaginationIterator[TrophyTitle]):
                         {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                     ),
                     np_title_id=title.get("npTitleId"),
-                    rarest_trophies=Trophy.from_trophies_list(trophy_title.get("rarestTrophies")),
                 )
                 yield title_trophy_sum
 
