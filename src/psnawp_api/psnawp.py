@@ -1,16 +1,16 @@
 from __future__ import annotations
 
-import logging
+from logging import getLogger
 from typing import Any, Iterator, Optional, overload
 
-from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, request_builder
+from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, RequestBuilderHeaders
 from psnawp_api.models.client import Client
 from psnawp_api.models.game_title import GameTitle
 from psnawp_api.models.group import Group
 from psnawp_api.models.search import Search
 from psnawp_api.models.user import User
 
-logging_level = logging.INFO
+psnawp_logger = getLogger("psnawp")
 
 
 class PSNAWP:
@@ -25,23 +25,37 @@ class PSNAWP:
 
     """
 
-    def __init__(self, npsso_cookie: str, *, accept_language: str = "en-US", country: str = "US"):
+    def __init__(
+        self,
+        npsso_cookie: str,
+        headers: Optional[RequestBuilderHeaders] = None,
+    ) -> None:
         """Constructor Method. Takes the npsso_cookie and creates instance of ``request_builder.RequestBuilder`` which is used later in code for HTTPS requests.
 
-        :param str npsso_cookie: npsso cookie obtained from PSN website.
-        :param str accept_language: The preferred language(s) for content negotiation in HTTP headers.
-        :param str country: The client's country for HTTP headers.
+        :param npsso_cookie: npsso cookie obtained from PSN website.
+        :param headers: Common headers that will be added to all HTTP request such as ``Country`` and ``Accept-Language``.
 
-        :raises: ``PSNAWPAuthenticationError`` If npsso code is expired or is incorrect.
+        :raises PSNAWPAuthenticationError: If npsso code is expired or is incorrect.
 
         """
-        self._request_builder = request_builder.RequestBuilder(Authenticator(npsso_cookie), accept_language, country)
+
+        default_headers: RequestBuilderHeaders = {
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv) \
+            AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Country": "US",
+        }
+
+        _header = default_headers | headers if headers is not None else default_headers
+        self.authenticator = Authenticator(
+            npsso_cookie=npsso_cookie,
+            common_headers=_header,
+        )
 
     def me(self) -> Client:
         """Creates a new client object (your account).
 
         :returns: Client Object
-        :rtype: Client
 
         .. code-block:: Python
 
@@ -50,7 +64,7 @@ class PSNAWP:
             client = psnawp.me()
 
         """
-        return Client(self._request_builder)
+        return Client(self.authenticator)
 
     @overload
     def user(self, *, online_id: str) -> User: ...
@@ -65,15 +79,13 @@ class PSNAWP:
 
             The account_id takes higher precedence than online_id. If both arguments are passed, online_id will be ignored.
 
-        :param kwargs: online_id (str): Online ID (GamerTag) of the user. account_id (str): Account ID of the user.
-        :type kwargs: dict
+        :param online_id: Online ID (GamerTag) of the user.
+        :param account_id: Account ID of the user.
 
         :returns: User Object
-        :rtype: User
 
-        :raises: `PSNAWPIllegalArgumentError` If None of the kwargs are passed.
-
-        :raises: ``PSNAWPNotFound`` If the online_id or account_id is not valid/found.
+        :raises PSNAWPIllegalArgumentError: If None of the kwargs are passed.
+        :raises PSNAWPNotFound: If the online_id or account_id is not valid/found.
 
         .. code-block:: Python
 
@@ -85,9 +97,9 @@ class PSNAWP:
         account_id: Optional[str] = kwargs.get("account_id")
 
         if account_id is not None:
-            return User.from_account_id(self._request_builder, account_id)
+            return User.from_account_id(self.authenticator, account_id)
         elif online_id is not None:
-            return User.from_online_id(self._request_builder, online_id)
+            return User.from_online_id(self.authenticator, online_id)
         else:
             raise PSNAWPIllegalArgumentError("You must provide at least online ID or account ID.")
 
@@ -111,19 +123,15 @@ class PSNAWP:
             call can be skipped by providing np_communication_id in as argument.
 
         :param title_id: unique ID of game title.
-        :type title_id: str
         :param: account_id: The account whose trophy list is being accessed
-        :type account_id: str
         :param np_communication_id: Unique ID of a game title used to request trophy information.
-        :type np_communication_id: Optional[str]
 
         :returns: Title Object
-        :rtype: GameTitle
 
-        :raises: ``PSNAWPNotFound`` If the user does not have any trophies for that game or the game doesn't exist.
+        :raises PSNAWPNotFound: If the user does not have any trophies for that game or the game doesn't exist.
 
         """
-        return GameTitle(self._request_builder, title_id=title_id, account_id=account_id, np_communication_id=np_communication_id)
+        return GameTitle(self.authenticator, title_id=title_id, account_id=account_id, np_communication_id=np_communication_id)
 
     @overload
     def group(self, *, group_id: str) -> Group: ...
@@ -139,15 +147,13 @@ class PSNAWP:
             Passing ``users_list`` will create a new group each time. If you want to continue from the same group. Use group id obtained from
             ``client.get_groups()``
 
-        :param kwargs: group_id (str): The Group ID of a group usually retrieved with the get_groups() method. users_list(Iterator[User]): A list of users of
-            the members in the group.
+        :param group_id: The Group ID of a group usually retrieved with the ``get_groups()`` method.
+        :param users_list: A list of users of the members in the group.
 
         :returns: Group Object
-        :rtype: Group
 
-        :raises: ``PSNAWPIllegalArgumentError`` If None or Both kwargs are passed.
-
-        :raises: ``PSNAWPForbidden`` If you are Dming a user who has blocked you.
+        :raises PSNAWPNotFound: If group id does not exist or is invalid.
+        :raises PSNAWPForbidden: If you are sending message a user who has blocked you.
 
         """
 
@@ -156,7 +162,13 @@ class PSNAWP:
 
         if (group_id and users) or not (group_id or users):
             raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users, and not both.")
-        return Group(self._request_builder, group_id=group_id, users=users)
+
+        if group_id is not None:
+            return Group.create_from_group_id(self.authenticator, group_id=group_id)
+        elif users is not None:
+            return Group.create_from_users(self.authenticator, users=users)
+        else:
+            raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users")
 
     def search(self) -> Search:
         """Creates a new search object
@@ -164,4 +176,4 @@ class PSNAWP:
         :returns: Search Object
 
         """
-        return Search(self._request_builder)
+        return Search(self.authenticator)
