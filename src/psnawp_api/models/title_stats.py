@@ -4,14 +4,17 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from enum import Enum
-from typing import Any, Generator, Optional
+from typing import TYPE_CHECKING, Any, Generator, Literal, Optional
 
 from typing_extensions import Self
 
-from psnawp_api.core import RequestBuilder
-from psnawp_api.models.listing import PaginationArguments, PaginationIterator
+from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime
+
+if TYPE_CHECKING:
+    from psnawp_api.core import Authenticator
+    from psnawp_api.models.listing import PaginationArguments
 
 
 class PlatformCategory(Enum):
@@ -20,7 +23,7 @@ class PlatformCategory(Enum):
     PS5 = "ps5_native_game"
 
     @classmethod
-    def _missing_(cls, value: object) -> "PlatformCategory":
+    def _missing_(cls, value: object) -> Literal[PlatformCategory.UNKNOWN]:
         _ = value
         return cls.UNKNOWN
 
@@ -34,10 +37,8 @@ def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
     Valid patters: PT243H18M48S, PT21M18S, PT18H, PT18H20S, PT4H21M
 
     :param play_duration: String from API
-    :type play_duration: Optional[str]
 
     :returns: String parsed into a timedelta object
-    :rtype: timedelta
 
     .. note::
 
@@ -62,7 +63,13 @@ def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
 
 @dataclass(frozen=True)
 class TitleStats:
-    """A class that represents a PlayStation Video Game Play Time Stats."""
+    """A class that represents a PlayStation Video Game Play Time Stats.
+
+    .. note::
+
+        This class is intended to be interfaced with through PSNAWP.
+
+    """
 
     title_id: Optional[str]
     "Game title id"
@@ -96,16 +103,24 @@ class TitleStats:
         return title_instance
 
 
-class TitleStatsListing(PaginationIterator[TitleStats]):
-    def __init__(self, *, request_builder: RequestBuilder, url: str, pagination_args: PaginationArguments) -> None:
-        super().__init__(request_builder=request_builder, url=url, pagination_args=pagination_args)
+class TitleStatsIterator(PaginationIterator[TitleStats]):
+    """An iterator for fetching and paginating through TitleStats objects from the PlayStation Network API."""
+
+    def __init__(self, authenticator: Authenticator, url: str, pagination_args: PaginationArguments) -> None:
+        super().__init__(authenticator=authenticator, url=url, pagination_args=pagination_args)
 
     def fetch_next_page(self) -> Generator[TitleStats, None, None]:
-        response = self._request_builder.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
+        """Fetches the next page of TitleStats objects from the API.
+
+        :yield: A generator yielding TitleStats objects.
+
+        """
+        response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
+        self._total_item_count = response["totalItemCount"]
+
         titles: list[dict[str, Any]] = response.get("titles")
         for title in titles:
             title_instance = TitleStats.from_dict(title)
-            self._total_item_count = response["totalItemCount"]
             self._pagination_args.increment_offset()
             yield title_instance
 
@@ -116,6 +131,15 @@ class TitleStatsListing(PaginationIterator[TitleStats]):
             self._has_next = False
 
     @classmethod
-    def from_endpoint(cls, request_builder: RequestBuilder, account_id: str, pagination_args: PaginationArguments) -> Self:
+    def from_endpoint(cls, authenticator: Authenticator, account_id: str, pagination_args: PaginationArguments) -> Self:
+        """Creates an instance of TitleStatsIterator from the given endpoint.
+
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
+        :param account_id: The account ID for which to fetch title stats.
+        :param pagination_args: Arguments for handling pagination, including limit, offset, and page size.
+
+        :returns: An instance of TitleStatsIterator.
+
+        """
         url = f"{BASE_PATH['games_list']}{API_PATH['user_game_data'].format(account_id=account_id)}"
-        return cls(request_builder=request_builder, url=url, pagination_args=pagination_args)
+        return cls(authenticator=authenticator, url=url, pagination_args=pagination_args)
