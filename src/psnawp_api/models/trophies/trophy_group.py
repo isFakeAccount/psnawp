@@ -46,8 +46,8 @@ class TrophyGroupSummary:
 
 
 @define(frozen=True)
-class EarnedTrophyGroupSummary(TrophyGroupSummary):
-    """EarnedTrophyGroupSummary contains trophy count data for one trophy group of a game title and user progress for each trophy group."""
+class TrophyGroupSummaryWithProgress(TrophyGroupSummary):
+    """TrophyGroupSummaryWithProgress contains trophy count data for one trophy group of a game title and user progress for each trophy group."""
 
     progress: Optional[int]
     "Percentage of trophies earned for group"
@@ -160,13 +160,13 @@ class TrophyGroupsSummaryBuilder:
 
     @staticmethod
     def trophy_groups_dict_to_obj(trophy_groups_dict: dict[str, Any], trophy_groups: list[T]) -> TrophyGroupsSummary[T]:
-        """Takes list of TrophyGroupSummary and EarnedTrophyGroupSummary and returns TrophyGroupsSummary[TrophyGroupSummary]
-            or TrophyGroupsSummary[EarnedTrophyGroupSummary].
+        """Takes list of TrophyGroupSummary and TrophyGroupSummaryWithProgress and returns TrophyGroupsSummary[TrophyGroupSummary]
+            or TrophyGroupsSummary[TrophyGroupSummaryWithProgress].
 
         :param trophy_groups_dict: dict from endpoint.
-        :param trophy_groups: list of TrophyGroupSummary or EarnedTrophyGroupSummary
+        :param trophy_groups: list of TrophyGroupSummary or TrophyGroupSummaryWithProgress
 
-        :returns: TrophyGroupsSummary containing list of TrophyGroupSummary or EarnedTrophyGroupSummary along with some more information.
+        :returns: TrophyGroupsSummary containing list of TrophyGroupSummary or TrophyGroupSummaryWithProgress along with some more information.
 
         """
         trophy_group_summary = TrophyGroupsSummary(
@@ -272,7 +272,7 @@ class TrophyGroupsSummaryBuilder:
         self,
         account_id: str,
         platform: PlatformType,
-    ) -> TrophyGroupsSummary[EarnedTrophyGroupSummary]:
+    ) -> TrophyGroupsSummary[TrophyGroupSummaryWithProgress]:
         """Retrieves the earned trophy groups for a title and their respective trophy count along with their trophy earned progress.
 
         This is most commonly seen in games which have expansions where additional trophies are added.
@@ -306,7 +306,7 @@ class TrophyGroupsSummaryBuilder:
         ]
         merged_data["trophyGroups"] = merged_trophy_groups
 
-        trophy_groups = [EarnedTrophyGroupSummary.from_dict(trophy_group) for trophy_group in merged_data.get("trophyGroups", [])]
+        trophy_groups = [TrophyGroupSummaryWithProgress.from_dict(trophy_group) for trophy_group in merged_data.get("trophyGroups", [])]
 
         return type(self).trophy_groups_dict_to_obj(
             merged_data,
