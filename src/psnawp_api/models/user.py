@@ -32,7 +32,7 @@ class User:
     def from_online_id(cls, authenticator: Authenticator, online_id: str) -> Self:
         """Creates the User instance from online ID and returns the instance.
 
-        :param authenticator: Used to call http requests.
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param online_id: Online ID (GamerTag) of the user.
 
         :returns: User Class object which represents a PlayStation account
@@ -78,7 +78,7 @@ class User:
     ):
         """Constructor of Class User.
 
-        :param authenticator: Used to call http requests.
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param online_id: Online ID (GamerTag) of the user.
         :param account_id: Account ID of the user.
 
