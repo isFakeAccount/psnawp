@@ -61,7 +61,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param authenticator: The instance of Authenticator. Used to make HTTPRequests.
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param url: The url of endpoint.
         :param pagination_args: Arguments related to pagination like limit and offset.
 
@@ -199,7 +199,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
 
             The endpoint only returns useful response back if the account has played that particular video game.
 
-        :param authenticator: The instance of Authenticator. Used to make HTTPRequests.
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param title_id: Unique ID of the title
         :param account_id: Account ID of the user.
 

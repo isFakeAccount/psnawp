@@ -31,7 +31,7 @@ class Client:
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param authenticator: The instance of Authenticator. Used to make HTTPRequests.
+        :param authenticator: The Authenticator instance used for making authenticated requests to the API.
 
         """
         self.authenticator = authenticator
@@ -205,7 +205,7 @@ class Client:
         :returns: Generator of Group Objects.
 
         """
-        param = {"includeFields": "members", "limit": limit, "offset": offset}
+        param: dict[str, str | int] = {"includeFields": "members", "limit": limit, "offset": offset}
 
         response = self.authenticator.get(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}", params=param).json()
 
