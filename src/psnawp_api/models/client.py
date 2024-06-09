@@ -210,10 +210,9 @@ class Client:
         response = self.authenticator.get(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}", params=param).json()
 
         return (
-            Group(
+            Group.create_from_group_id(
                 authenticator=self.authenticator,
                 group_id=group_info["groupId"],
-                users=None,
             )
             for group_info in response["groups"]
         )
