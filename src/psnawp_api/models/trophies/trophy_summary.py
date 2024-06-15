@@ -4,11 +4,11 @@ from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from psnawp_api.core import PSNAWPForbidden
+from psnawp_api.models.trophies.trophy_constants import TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH
 
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
-    from psnawp_api.models.trophies.trophy_constants import TrophySet
 
 
 @dataclass(frozen=True)

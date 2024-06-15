@@ -22,7 +22,7 @@ from psnawp_api.utils import API_PATH, BASE_PATH
 
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
-    from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress, TrophyTitle
+    from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress
 
 
 class User:
@@ -222,7 +222,7 @@ class User:
         """
         return TrophySummary.from_endpoint(authenticator=self.authenticator, account_id=self.account_id)
 
-    def trophy_titles(self, limit: Optional[int] = None, offset: int = 0, page_size: int = 50) -> Generator[TrophyTitle, None, None]:
+    def trophy_titles(self, limit: Optional[int] = None, offset: int = 0, page_size: int = 50) -> TrophyTitleIterator:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
@@ -241,11 +241,9 @@ class User:
 
         """
         pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
-        return TrophyTitleIterator.from_endpoint(
-            authenticator=self.authenticator, pagination_args=pg_args, account_id=self.account_id, title_ids=None
-        ).get_trophy_title()
+        return TrophyTitleIterator.from_endpoint(authenticator=self.authenticator, pagination_args=pg_args, account_id=self.account_id, title_ids=None)
 
-    def trophy_titles_for_title(self, title_ids: list[str]) -> Generator[TrophyTitle, None, None]:
+    def trophy_titles_for_title(self, title_ids: list[str]) -> TrophyTitleIterator:
         """Retrieve a summary of the trophies earned by a user for specific titles.
 
         :param list[str] title_ids: Unique ID of the title.
@@ -266,9 +264,7 @@ class User:
 
         """
         pg_args = PaginationArguments(total_limit=None, offset=0, page_size=0)  # Not used
-        return TrophyTitleIterator.from_endpoint(
-            authenticator=self.authenticator, pagination_args=pg_args, account_id=self.account_id, title_ids=title_ids
-        ).get_trophy_summary_for_title()
+        return TrophyTitleIterator.from_endpoint(authenticator=self.authenticator, pagination_args=pg_args, account_id=self.account_id, title_ids=title_ids)
 
     @overload
     def trophies(
@@ -387,7 +383,7 @@ class User:
             return TrophyGroupsSummaryBuilder(
                 authenticator=self.authenticator,
                 np_communication_id=np_communication_id,
-            ).user_trophy_groups_summary(account_id=self.account_id, platform=platform)
+            ).game_title_trophy_groups_summary(platform=platform)
         else:
             return TrophyGroupsSummaryBuilder(
                 authenticator=self.authenticator,

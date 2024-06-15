@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING, Any, Iterator, Optional
+from typing import TYPE_CHECKING, Any, Iterable, Optional
 
 from typing_extensions import Self
 
@@ -41,13 +41,14 @@ class Group:
 
         self.authenticator = authenticator
         self.group_id = group_id
+        self._group_common_header = {"Content-Type": "application/json"}
 
     @classmethod
     def create_from_group_id(cls, authenticator: Authenticator, group_id: str) -> Self:
         return cls(authenticator, group_id)
 
     @classmethod
-    def create_from_users(cls, authenticator: Authenticator, users: Iterator[User]) -> Self:
+    def create_from_users(cls, authenticator: Authenticator, users: Iterable[User]) -> Self:
         """Creates a new group from the provide list of Users.
 
         :raises PSNAWPForbidden: If you are sending message a user who has blocked you.
@@ -60,6 +61,7 @@ class Group:
             response = authenticator.post(
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['create_group']}",
                 data=json.dumps(data),
+                headers={"Content-Type": "application/json"},
             ).json()
             return cls(authenticator, response["groupId"])
         except PSNAWPForbidden as forbidden:
@@ -85,6 +87,7 @@ class Group:
             self.authenticator.patch(
                 url=f"{BASE_PATH['gaming_lounge']}{API_PATH['group_settings'].format(group_id=self.group_id)}",
                 data=json.dumps(data),
+                headers=self._group_common_header,
             )
         except PSNAWPBadRequest as bad_req:
             raise PSNAWPBadRequest(f"The group name of Group ID {self.group_id} does cannot be changed. Group is either a dm or does not exist.") from bad_req
@@ -141,6 +144,7 @@ class Group:
         response: dict[str, str] = self.authenticator.post(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['send_group_message'].format(group_id=self.group_id)}",
             data=json.dumps(data),
+            headers=self._group_common_header,
         ).json()
 
         return response

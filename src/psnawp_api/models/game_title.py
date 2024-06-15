@@ -116,7 +116,7 @@ class GameTitle:
 
         :returns: TrophyGroupSummary object containing title and title groups trophy information.
 
-        :raises: ``PSNAWPNotFound`` if you don't have any trophies for that game.
+        :raises PSNAWPNotFound: If you don't have any trophies for that game.
 
         """
         return TrophyGroupsSummaryBuilder(

@@ -116,7 +116,7 @@ class TitleStatsIterator(PaginationIterator[TitleStats]):
 
         """
         response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
-        self._total_item_count = response["totalItemCount"]
+        self._total_item_count = response.get("totalItemCount", 0)
 
         titles: list[dict[str, Any]] = response.get("titles")
         for title in titles:

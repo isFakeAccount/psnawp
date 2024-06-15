@@ -155,7 +155,7 @@ class TrophyIterator(PaginationIterator[Trophy]):
         service_name = "trophy2" if self.platform == PlatformType.PS5 else "trophy"
         params = {"npServiceName": service_name} | self._pagination_args.get_params_dict()
         response = self.authenticator.get(url=self._url, params=params).json()
-        self._total_item_count = response["totalItemCount"]
+        self._total_item_count = response.get("totalItemCount", 0)
 
         trophies: list[dict[str, Any]] = response.get("trophies", [])
         for trophy in trophies:
@@ -225,7 +225,7 @@ class TrophyWithProgressIterator(PaginationIterator[TrophyWithProgress]):
         params = {"npServiceName": service_name} | self._pagination_args.get_params_dict()
 
         response = self.authenticator.get(url=self._url, params=params).json()
-        self._total_item_count = response["totalItemCount"]
+        self._total_item_count = response.get("totalItemCount", 0)
         trophies: list[dict[str, Any]] = response.get("trophies")
 
         response_progress = self.authenticator.get(url=self._progress_url, params=params).json()

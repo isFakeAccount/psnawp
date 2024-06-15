@@ -47,6 +47,7 @@ Below is a template for the .env file:
 NPSSO_CODE=<npsso-code>
 USER_NAME=<your-username>
 FRIEND_USER_NAME=<your-friend-username>
+BLOCKED_USER_NAME=<username-who-has-blocked-you>
 ```
 
 ### 2. Run Tests

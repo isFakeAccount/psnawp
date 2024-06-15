@@ -1,4 +1,4 @@
-## PlayStation API Python (PSNAWP)
+# PlayStation API Python (PSNAWP)
 The MIT License (MIT)
 
 Copyright (c) 2021 isFakeAccount

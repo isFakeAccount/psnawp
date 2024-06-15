@@ -15,8 +15,7 @@ class Search:
 
             This class is intended to be interfaced with through PSNAWP.
 
-        :param request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
-        :type request_builder: RequestBuilder
+        :param RequestBuilder request_builder: The instance of RequestBuilder. Used to make HTTPRequests.
 
         """
         self._request_builder = request_builder
@@ -28,10 +27,8 @@ class Search:
 
             Pagination not yet supported. The max number of results returned will be 20.
 
-        :param search_query: search query
-        :type search_query: str
-        :param limit: Limit of number of results
-        :type limit: int
+        :param str search_query: search query
+        :param int limit: Limit of number of results
 
         :returns: A dict containing info similar to what is shown below (Not all values are shown because of space limitations):
         :rtype: dict[str, Any]
@@ -94,8 +91,7 @@ class Search:
             Make sure to use the official full name of the video game otherwise the returned results may not be accurate. For example: GTA V returns the GTA
             Vice City since the Vice City shows up above GTA V. However, Grand Theft Auto V returns the correct results.
 
-        :param title_name: Video Game title name
-        :type title_name: str
+        :param str title_name: Video Game title name
 
         :returns: A tuple containing English Title Name and Title ID
         :rtype: tuple[str, str]
