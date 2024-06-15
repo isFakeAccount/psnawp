@@ -1,14 +1,10 @@
 from __future__ import annotations
 
 from logging import getLogger
-from typing import Any, Iterator, Optional, overload
+from typing import Any, Iterable, Optional, overload
 
 from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, RequestBuilderHeaders
-from psnawp_api.models.client import Client
-from psnawp_api.models.game_title import GameTitle
-from psnawp_api.models.group import Group
-from psnawp_api.models.search import Search
-from psnawp_api.models.user import User
+from psnawp_api.models import Client, GameTitle, Group, Search, User
 
 psnawp_logger = getLogger("psnawp")
 
@@ -137,7 +133,7 @@ class PSNAWP:
     def group(self, *, group_id: str) -> Group: ...
 
     @overload
-    def group(self, *, users_list: Iterator[User]) -> Group: ...
+    def group(self, *, users_list: Iterable[User]) -> Group: ...
 
     def group(self, **kwargs: Any) -> Group:
         """Creates a group object from a Group ID or from list of users.
@@ -158,7 +154,7 @@ class PSNAWP:
         """
 
         group_id: Optional[str] = kwargs.get("group_id")
-        users: Optional[Iterator[User]] = kwargs.get("users_list")
+        users: Optional[Iterable[User]] = kwargs.get("users_list")
 
         if (group_id and users) or not (group_id or users):
             raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users, and not both.")

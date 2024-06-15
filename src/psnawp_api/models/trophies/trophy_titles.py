@@ -105,7 +105,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
 
         """
         response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
-        self._total_item_count = response["totalItemCount"]
+        self._total_item_count = response.get("totalItemCount", 0)
 
         trophy_titles: list[dict[str, Any]] = response.get("trophyTitles")
         for trophy_title in trophy_titles:
@@ -158,7 +158,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
         """
         params = {"npTitleIds": ",".join(self.title_ids if self.title_ids is not None else [])}
         response = self.authenticator.get(url=self._url, params=params).json()
-        self._total_item_count = response["totalItemCount"]
+        self._total_item_count = response.get("totalItemCount", 0)
 
         for title in response.get("titles"):
             for trophy_title in title.get("trophyTitles"):

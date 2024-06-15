@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Any, Generic, Optional, TypeVar
 from attrs import define, field
 from typing_extensions import Self
 
-from psnawp_api.core import PSNAWPForbidden, PSNAWPNotFound
+from psnawp_api.core import PSNAWPNotFound
 from psnawp_api.models.trophies import PlatformType, TrophySet
 from psnawp_api.utils import API_PATH, BASE_PATH, iso_format_to_datetime
 
@@ -222,44 +222,6 @@ class TrophyGroupsSummaryBuilder:
             ).json()
         except PSNAWPNotFound as not_found:
             raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
-
-        trophy_groups = [TrophyGroupSummary.from_dict(trophy_group) for trophy_group in response.get("trophyGroups", [])]
-
-        return type(self).trophy_groups_dict_to_obj(
-            response,
-            trophy_groups,
-        )
-
-    def user_trophy_groups_summary(
-        self,
-        account_id: str,
-        platform: PlatformType,
-    ) -> TrophyGroupsSummary[TrophyGroupSummary]:
-        """Retrieves the earned trophy groups for a title and their respective trophy count.
-
-        This is most commonly seen in games which have expansions where additional trophies are added.
-
-        :param account_id: The account whose trophy list is being accessed
-        :param platform: The platform this title belongs to.
-
-        :returns: TrophyGroupSummary object containing title and title groups trophy information.
-
-        :raises PSNAWPNotFound: if you don't have any trophies for that game.
-        :raises PSNAWPForbidden: If the user's profile is private.
-
-        """
-
-        service_name = "trophy2" if platform == PlatformType.PS5 else "trophy"
-        params = {"npServiceName": service_name}
-        try:
-            response = self.authenticator.get(
-                url=f"{BASE_PATH['trophies']}{API_PATH['user_title_trophy_group'].format(account_id=account_id, np_communication_id=self.np_communication_id)}",
-                params=params,
-            ).json()
-        except PSNAWPNotFound as not_found:
-            raise PSNAWPNotFound("The following user has no trophies for the given game title.") from not_found
-        except PSNAWPForbidden as forbidden:
-            raise PSNAWPForbidden("The following user has made their trophy private.") from forbidden
 
         trophy_groups = [TrophyGroupSummary.from_dict(trophy_group) for trophy_group in response.get("trophyGroups", [])]
 

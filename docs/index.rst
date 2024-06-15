@@ -11,7 +11,7 @@ PSNAWP: PlayStation Network API Wrapper Python
     :maxdepth: 1
     :caption: Code Overview:
 
-    psnawp_api
+    modules.rst
 
 .. contents:: Table of Contents
     :depth: 1

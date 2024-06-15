@@ -78,7 +78,7 @@ class Authenticator:
         self.request_builder = RequestBuilder(common_headers)
         self.token_response: Optional[TokenResponse] = None
 
-        self.cid = str(uuid.uuid4())
+        self.cid = str(uuid.UUID(int=uuid.getnode()))
 
     @property
     def access_token_expiration_time(self) -> float:
