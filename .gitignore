@@ -1,6 +1,6 @@
 # My files
 .idea
-test*.py
+test.py
 src/psnawp
 
 # Byte-compiled / optimized / DLL files

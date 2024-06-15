@@ -1,0 +1,166 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      Sec-Fetch-Dest:
+      - document
+      Sec-Fetch-Mode:
+      - navigate
+      Sec-Fetch-Site:
+      - same-site
+      Sec-Fetch-User:
+      - ?1
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
+        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
+      X-Requested-With:
+      - com.scee.psxandroid
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 10 Jun 2024 03:41:25 GMT
+      Expires:
+      - '0'
+      Location:
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.cEMzIF&cid=00000000-0000-0000-0000-b025aa3b2674
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - f22dc91061dae34f38fbc48e074211ef
+      X-RequestId:
+      - f22dc91061dae34f38fbc48e074211ef
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
+- request:
+    body: cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '207'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      User-Agent:
+      - com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v2.core psn:clientapp", "id_token": "REDACTED",
+        "refresh_token": "REDACTED", "refresh_token_expires_in": 5183999}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3998'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 10 Jun 2024 03:41:25 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - 314b7c58a435d05b467cbded3d9c3f32
+      X-RequestId:
+      - 314b7c58a435d05b467cbded3d9c3f32
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
+        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=SSSA01325_00%2C
+  response:
+    body:
+      string: '{"error": {"referenceId": "5015be01-26db-11ef-8bf7-77af967f56ec", "code":
+        2240525, "message": "Resource not found (npTitleId=''SSSA01325_00'')"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Jun 2024 03:41:25 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
+version: 1

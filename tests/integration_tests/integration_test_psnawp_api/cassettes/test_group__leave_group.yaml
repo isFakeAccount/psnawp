@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
+        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
+  response:
+    body:
+      string: '{"groups": [{"groupId": "db3b170affdf134f078bc5606216d2a81c2a916e-499",
+        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}, {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"},
+        {"accountId": "8859462586603699392", "onlineId": "test"}]}], "previousOffset":
+        0, "nextOffset": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '309'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Jun 2024 03:54:36 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
+        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
+    method: DELETE
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/db3b170affdf134f078bc5606216d2a81c2a916e-499/members/me
+  response:
+    body:
+      string: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 10 Jun 2024 03:54:37 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 204
+      message: No Content
+version: 1
