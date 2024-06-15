@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
+        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Jun 2024 03:38:27 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-CorrelationId:
+      - 054adc35-7499-4d1f-9807-94099ae13b12
+      X-Psn-Correlation-Id:
+      - 054adc35-7499-4d1f-9807-94099ae13b12
+      X-Psn-Request-Id:
+      - 054adc35-7499-4d1f-9807-94099ae13b12
+      X-RequestId:
+      - 054adc35-7499-4d1f-9807-94099ae13b12
+    status:
+      code: 200
+      message: OK
+version: 1
