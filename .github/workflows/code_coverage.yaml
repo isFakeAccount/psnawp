@@ -1,9 +1,14 @@
 name: code coverage
 on:
   push:
-    branches: ["master"]
+    branches:
+      - master
   pull_request:
-    branches: ["master"]
+    branches:
+      - master
+    types:
+      - ready_for_review
+      - closed
 
 jobs:
   pre-commit:
