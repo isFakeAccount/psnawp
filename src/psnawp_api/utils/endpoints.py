@@ -9,6 +9,7 @@ BASE_PATH = {
     "game_titles": "https://m.np.playstation.com/api/catalog/v2/titles",
     "trophies": "https://m.np.playstation.com/api/trophy/v1",
     "games_list": "https://m.np.playstation.com/api/gamelist/v2",
+    "graph_ql": "https://m.np.playstation.com/api/graphql/v1/op",
 }
 
 API_PATH = {

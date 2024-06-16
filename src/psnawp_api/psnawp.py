@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from logging import getLogger
-from typing import Any, Iterable, Optional, overload
+from typing import Any, Generator, Iterable, Optional, overload
 
 from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, RequestBuilderHeaders
-from psnawp_api.models import Client, GameTitle, Group, Search, User
+from psnawp_api.models import Client, GameTitle, Group, SearchDomain, UniversalSearch, User
+from psnawp_api.models.listing import PaginationArguments
+from psnawp_api.models.search import SearchResult
 
 psnawp_logger = getLogger("psnawp")
 
@@ -166,10 +168,27 @@ class PSNAWP:
         else:
             raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users")
 
-    def search(self) -> Search:
+    def search(
+        self,
+        search_query: str,
+        search_domain: SearchDomain,
+        limit: Optional[int] = None,
+        offset: int = 0,
+        page_size: int = 20,
+    ) -> Generator[SearchResult, None, None]:
         """Creates a new search object
 
-        :returns: Search Object
+        :param search_query: _description_
+        :param search_domain: _description_
+        :param limit: Total numbers of items to receive, None means no limit.
+        :param page_size: The number of items to receive per api request.
+        :param offset: Specifies the offset for paginator.
+
+        :returns: Search Iterator object to iterate over search results.
 
         """
-        return Search(self.authenticator)
+        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
+        if search_domain == SearchDomain.FULL_GAMES:
+            return UniversalSearch(authenticator=self.authenticator, pagination_args=pg_args, search_query=search_query).search_full_game()
+        else:
+            return UniversalSearch(authenticator=self.authenticator, pagination_args=pg_args, search_query=search_query).search_add_onns()
