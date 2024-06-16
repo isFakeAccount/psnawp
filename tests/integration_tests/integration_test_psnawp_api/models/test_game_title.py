@@ -10,21 +10,21 @@ from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 @pytest.mark.vcr()
 def test_game_title__np_communication_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         game_title = psnawp_fixture.game_title(title_id="PPSA03420_00")
         assert game_title.np_communication_id == "NPWR21647_00"
 
 
 @pytest.mark.vcr()
 def test_game_title__wrong_title_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPNotFound):
             psnawp_fixture.game_title(title_id="SSSA01325_00")
 
 
 @pytest.mark.vcr()
 def test_game_title__get_title_details(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         game_title = psnawp_fixture.game_title(title_id="PPSA03420_00")
         title_details = game_title.get_details()
         assert title_details[0].get("name") == "Grand Theft Auto V (PlayStation®5)"
@@ -32,7 +32,7 @@ def test_game_title__get_title_details(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr()
 def test_game_title__trophies(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         game_title = psnawp_fixture.game_title(title_id="PPSA03420_00")
         actual_count = 0
         trophy_iter = game_title.trophies(platform=PlatformType.PS5, trophy_group_id="all")
@@ -50,7 +50,7 @@ def test_game_title__trophies(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr()
 def test_game_title__trophy_groups_summary(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         game_title = psnawp_fixture.game_title(title_id="PPSA01325_00")
         trophy_groups_summary = game_title.trophy_groups_summary(platform=PlatformType.PS5)
         assert trophy_groups_summary.trophy_set_version is not None
@@ -68,21 +68,21 @@ def test_game_title__trophy_groups_summary(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr()
 def test_game_title__trophies_game_not_owned_by_user(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPNotFound):
             psnawp_fixture.game_title(title_id="PPSA03420_00", account_id="me")
 
 
 @pytest.mark.vcr()
 def test_game_title__trophy_groups_summary_game_not_owned_by_user(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPNotFound):
             psnawp_fixture.game_title(title_id="PPSA01325_00", account_id="me")
 
 
 @pytest.mark.vcr()
 def test_game_title__trophies_invalid_np_communication_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPNotFound):
             game_title = psnawp_fixture.game_title(title_id="PPSA03420_00", account_id="me", np_communication_id="SSSA01325_00")
             for trophy in game_title.trophies(platform=PlatformType.PS5, trophy_group_id="all"):
@@ -91,7 +91,7 @@ def test_game_title__trophies_invalid_np_communication_id(psnawp_fixture: PSNAWP
 
 @pytest.mark.vcr()
 def test_game_title__trophy_groups_summary_invalid_np_communication_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPNotFound):
             game_title = psnawp_fixture.game_title(title_id="PPSA01325_00", account_id="me", np_communication_id="SSSA01325_00")
             trophy_groups_summary = game_title.trophy_groups_summary(platform=PlatformType.PS5)

@@ -1,0 +1,218 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://dms.api.playstation.com/api/v1/devices/accounts/me",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "d4389c96-749c-479f-a1a6-7015204bb314"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "d4389c96-749c-479f-a1a6-7015204bb314"
+                    ],
+                    "X-RequestId": [
+                        "d4389c96-749c-479f-a1a6-7015204bb314"
+                    ],
+                    "Content-Length": [
+                        "35"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:10 GMT"
+                    ],
+                    "X-CorrelationId": [
+                        "d4389c96-749c-479f-a1a6-7015204bb314"
+                    ]
+                },
+                "body": {
+                    "string": "{\"accountId\": \"2721516955383551246\"}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Content-Length": [
+                        "1619"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:10 GMT"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0044977435577757654"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\"onlineId\": \"VaultTec-Co\", \"personalDetail\": {\"firstName\": \"VaultTec\", \"lastName\": \"BlacklistBot\", \"profilePictures\": [{\"size\": \"s\", \"url\": \"https://image.api.np.km.playstation.net/images/?format=png&w=50&h=50&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51\"}, {\"size\": \"m\", \"url\": \"https://image.api.np.km.playstation.net/images/?format=png&w=160&h=160&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51\"}, {\"size\": \"l\", \"url\": \"https://image.api.np.km.playstation.net/images/?format=png&w=240&h=240&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51\"}, {\"size\": \"xl\", \"url\": \"https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51\"}]}, \"aboutMe\": \"r/Fallout76Marketplace Moderator\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_s/default/DefaultAvatar_s.png\"}, {\"size\": \"xl\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_xl/default/Defaultavatar_xl.png\"}, {\"size\": \"l\", \"url\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\"}, {\"size\": \"m\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_m/default/DefaultAvatar_m.png\"}], \"languages\": [\"en-US\"], \"isPlus\": false, \"isOfficiallyVerified\": false, \"isMe\": true}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec-Co/profile2?fields=npId%2ConlineId%2CaccountId%2CavatarUrls%2Cplus%2CaboutMe%2ClanguagesUsed%2CtrophySummary%28%40default%2Clevel%2Cprogress%2CearnedTrophies%29%2CisOfficiallyVerified%2CpersonalDetail%28%40default%2CprofilePictureUrls%29%2CpersonalDetailSharing%2CpersonalDetailSharingRequestMessageFlag%2CprimaryOnlineStatus%2Cpresences%28%40default%2C%40titleInfo%2Cplatform%2ClastOnlineDate%2ChasBroadcastData%29%2CrequestMessageFlag%2Cblocking%2CfriendRelation%2Cfollowing%2CconsoleAvailability",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "content-length": [
+                        "1096"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, OPTIONS"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Vary": [
+                        "accept-encoding"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:11 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Set-Cookie": "REDACTED"
+                },
+                "body": {
+                    "string": "{\"profile\": {\"onlineId\": \"VaultTec-Co\", \"accountId\": \"2721516955383551246\", \"npId\": \"VmF1bHRUZWMtQ29AYjcudXM=\", \"avatarUrls\": [{\"size\": \"l\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\"}], \"plus\": 0, \"aboutMe\": \"r/Fallout76Marketplace Moderator\", \"languagesUsed\": [\"en\"], \"trophySummary\": {\"level\": 1, \"progress\": 0, \"earnedTrophies\": {\"platinum\": 0, \"gold\": 0, \"silver\": 0, \"bronze\": 0}}, \"isOfficiallyVerified\": false, \"personalDetail\": {\"firstName\": \"VaultTec\", \"lastName\": \"BlacklistBot\", \"profilePictureUrls\": [{\"size\": \"xl\", \"profilePictureUrl\": \"https://image.api.np.km.playstation.net/images/?format=png&w=440&h=440&image=https%3A%2F%2Fkfscdn.api.np.km.playstation.net%2F2721516955383551246%2F1616355099647.png&sign=7e3003da6a783ce92219a4e7e3d1dba5f4e4fb51\"}]}, \"personalDetailSharing\": \"no\", \"personalDetailSharingRequestMessageFlag\": false, \"primaryOnlineStatus\": \"offline\", \"presences\": [{\"onlineStatus\": \"offline\", \"hasBroadcastData\": false}], \"friendRelation\": \"no\", \"requestMessageFlag\": false, \"blocking\": false, \"following\": false, \"consoleAvailability\": {\"availabilityStatus\": \"offline\"}}}"
+                }
+            }
+        }
+    ]
+}

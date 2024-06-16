@@ -1,0 +1,71 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://dms.api.playstation.com/api/v1/devices/accounts/me?includeFields=device%2CsystemData&platform=PS5%2CPS4%2CPS3%2CPSVita",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
+                    ],
+                    "X-RequestId": [
+                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
+                    ],
+                    "Content-Length": [
+                        "35"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:11 GMT"
+                    ],
+                    "X-CorrelationId": [
+                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
+                    ]
+                },
+                "body": {
+                    "string": "{\"accountId\": \"2721516955383551246\"}"
+                }
+            }
+        }
+    ]
+}
