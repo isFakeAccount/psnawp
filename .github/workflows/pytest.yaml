@@ -30,10 +30,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          echo "USERNAME: $USER_NAME"
-          echo "FRIEND_USER_NAME: $FRIEND_USER_NAME"
-          echo "BLOCKED_USER_NAME: $BLOCKED_USER_NAME"
-          poetry run pytest
+          poetry run python pre_push.py -nu
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
