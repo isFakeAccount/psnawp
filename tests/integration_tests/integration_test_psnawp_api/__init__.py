@@ -37,12 +37,13 @@ def filter_response_information(response: Response) -> Response:
 
 
 my_vcr = vcr.VCR(
-    serializer="yaml",
+    serializer="json",
     cassette_library_dir="tests/integration_tests/integration_test_psnawp_api/cassettes",
     record_mode=RecordMode.ONCE,
     match_on=["uri", "method"],
     filter_headers=["Authorization", "Cookie", "Set-Cookie", "Location"],
     filter_query_parameters=["cid"],
     filter_post_data_parameters=["refresh_token", "code"],
+    decode_compressed_response=True,
     before_record_response=filter_response_information,
 )

@@ -1,0 +1,272 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://us-prof.np.community.playstation.net/userProfile/v1/users/ikemenzi/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "content-length": [
+                        "69"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, OPTIONS"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Vary": [
+                        "accept-encoding"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:56 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Set-Cookie": "REDACTED"
+                },
+                "body": {
+                    "string": "{\"profile\": {\"onlineId\": \"ikemenzi\", \"accountId\": \"6515971742264256071\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Content-Length": [
+                        "11002"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Vary": [
+                        "Accept-Language"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:57 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"trophySetVersion\": \"01.02\", \"hasTrophyGroups\": true, \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Chip Off the Old Block\", \"trophyDetail\": \"Earned all Trophies\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/3DE120BEA7DAE4937A6990241113193829DE55FE.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"New Kid on the Block\", \"trophyDetail\": \"Completed Chapter 1 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/E5EBC00D2EE480D23AE3037FD23A6883AF944471.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Leveraging Resources\", \"trophyDetail\": \"Attempt to craft a lever at the crafting table\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/10B29B46E36C38FF1A325C4D33432C59423B05E1.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Some Assembly Required\", \"trophyDetail\": \"Completed Chapter 2 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/24C33109118D4A7D9DD5C1E4E6DC222737C9CC32.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"To Catch a Thief\", \"trophyDetail\": \"Completed Chapter 3 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/619DF27347974328F11B894831834BA00DE93CCF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out of the Frying Pan\\u2026\", \"trophyDetail\": \"Completed Chapter 4 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/DB3FE2553DA8703191714B1136BF898A3C7F567E.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Safety First\", \"trophyDetail\": \"Completed Chapter 5 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B30AC18975784B54ECEA3C0C1CE940796B74E546.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"The Calm Before the Storm\", \"trophyDetail\": \"Completed Chapter 6 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/F59B85A6F721AC09EF993D8AE1DE46D21411FFBF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Nether Say Die\", \"trophyDetail\": \"Completed Chapter 1 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/64F800E00D8B29934888CEA3872DBC81CDCA25D9.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Griefer Madness\", \"trophyDetail\": \"Acquired the Griefer\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/CCB49BCE981F685F9495383000D6968F82C47904.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 10, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Occam's Razor\", \"trophyDetail\": \"Acquired the Engineer\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/7A306FC359275C6CAA7EE401C56E064625FDF948.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 11, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"No Time to Lose\", \"trophyDetail\": \"Completed Chapter 4 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/64A42AEC963D7DF337836D317420E0E742DBD233.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 12, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"In the Shadow of Giants\", \"trophyDetail\": \"Completed Chapter 5 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/6646D902769268D86B13E415C5C34C3BC6D60192.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 13, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Left Behind\", \"trophyDetail\": \"Completed Chapter 6 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/24496DB272386E0B1C5D1F08052BA6B255D384FD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 14, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Back to the Grind\", \"trophyDetail\": \"Completed Chapter 1 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/70D0A8EE96BF4E12CC5B7F1F51689F91AA1E0166.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 15, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"A World of Pure Imagination\", \"trophyDetail\": \"Completed Chapter 2 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/AF531D50CB6D5BAC8FF42BA090434B70B035AD65.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 16, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Pretender Man\", \"trophyDetail\": \"Completed Chapter 3 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/987EB9E9FDC89C549B1BED8B33FAA35E18B73A5A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 17, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"When a Plan Comes Together\", \"trophyDetail\": \"Completed Chapter 4 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B2E72513265982A139300780E4D8061EF55F4B20.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 18, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Blockbuster\", \"trophyDetail\": \"Completed Chapter 5 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/77BC9511D5CDA3F241ADD984D4152FC3966555B4.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 19, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out With A Bang\", \"trophyDetail\": \"Completed Chapter 6 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/BAA5A02F98E5CC93CDD203DE3C2ACC8E0BDAC4F3.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 20, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"That's Some Pig\", \"trophyDetail\": \"Exhaust your conversation with Reuben\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/75983742BD248DC290818A9442533973B25B37B4.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 21, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Dramatic Timing\", \"trophyDetail\": \"Completed Chapter 1 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B59A698BF81C86716320149504FC97895B7F33CD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 22, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"In a Land Far Away\", \"trophyDetail\": \"Completed Chapter 2 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/5AB8ADADBE0FE814C469E0ED6D7D440F94935755.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 23, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"It Came From Outer Space\", \"trophyDetail\": \"Completed Chapter 3 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/C789A07E7448F62EC5EAA9C979398C011DF450BF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 24, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"The End of the Line\", \"trophyDetail\": \"Completed Chapter 4 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B08C26CEB7B34C7B040E02F43D4E66D1149B9E04.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 25, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"From the Jaws of Defeat\", \"trophyDetail\": \"Completed Chapter 5 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/706785E66128C53924BD8D389E5617A1A1B8DB4B.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 26, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"A New World Order\", \"trophyDetail\": \"Completed Chapter 6 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/C3460A077495C755E5C3A2AFAB6755AACDDAD17A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 27, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Finders Keepers\", \"trophyDetail\": \"Completed Chapter 1 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/411073D3DB1F3ECDCC94E73E78471168F7C68882.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 28, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Losers Weepers\", \"trophyDetail\": \"Completed Chapter 2 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/15327F20BEC18DFFABDD54CAA54FE280C2C20273.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 29, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Friends in High Places\", \"trophyDetail\": \"Completed Chapter 3 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/F5EEB3E9BC730662B3B08EEDD056DD1C7B9B5D9A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 30, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Castles in the Sky\", \"trophyDetail\": \"Completed Chapter 4 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/70C0DF715187E287749CD199B3EC9A46FED62283.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 31, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out of the Blue\", \"trophyDetail\": \"Completed Chapter 5 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B3306F76ED149C2EE18F0DE41A69E29CC01E4EF8.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 32, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"To Boldly Go\\u2026\", \"trophyDetail\": \"Completed Chapter 6 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/38DA5332837AA2F9274401F943D60DD179171547.PNG\", \"trophyGroupId\": \"default\"}], \"totalItemCount\": 33}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Content-Length": [
+                        "11002"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Vary": [
+                        "Accept-Language"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:57 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"trophySetVersion\": \"01.02\", \"hasTrophyGroups\": true, \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Chip Off the Old Block\", \"trophyDetail\": \"Earned all Trophies\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/3DE120BEA7DAE4937A6990241113193829DE55FE.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"New Kid on the Block\", \"trophyDetail\": \"Completed Chapter 1 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/E5EBC00D2EE480D23AE3037FD23A6883AF944471.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Leveraging Resources\", \"trophyDetail\": \"Attempt to craft a lever at the crafting table\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/10B29B46E36C38FF1A325C4D33432C59423B05E1.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Some Assembly Required\", \"trophyDetail\": \"Completed Chapter 2 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/24C33109118D4A7D9DD5C1E4E6DC222737C9CC32.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"To Catch a Thief\", \"trophyDetail\": \"Completed Chapter 3 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/619DF27347974328F11B894831834BA00DE93CCF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out of the Frying Pan\\u2026\", \"trophyDetail\": \"Completed Chapter 4 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/DB3FE2553DA8703191714B1136BF898A3C7F567E.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Safety First\", \"trophyDetail\": \"Completed Chapter 5 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B30AC18975784B54ECEA3C0C1CE940796B74E546.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"The Calm Before the Storm\", \"trophyDetail\": \"Completed Chapter 6 of Episode 1\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/F59B85A6F721AC09EF993D8AE1DE46D21411FFBF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Nether Say Die\", \"trophyDetail\": \"Completed Chapter 1 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/64F800E00D8B29934888CEA3872DBC81CDCA25D9.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Griefer Madness\", \"trophyDetail\": \"Acquired the Griefer\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/CCB49BCE981F685F9495383000D6968F82C47904.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 10, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Occam's Razor\", \"trophyDetail\": \"Acquired the Engineer\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/7A306FC359275C6CAA7EE401C56E064625FDF948.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 11, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"No Time to Lose\", \"trophyDetail\": \"Completed Chapter 4 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/64A42AEC963D7DF337836D317420E0E742DBD233.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 12, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"In the Shadow of Giants\", \"trophyDetail\": \"Completed Chapter 5 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/6646D902769268D86B13E415C5C34C3BC6D60192.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 13, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Left Behind\", \"trophyDetail\": \"Completed Chapter 6 of Episode 2\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/24496DB272386E0B1C5D1F08052BA6B255D384FD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 14, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Back to the Grind\", \"trophyDetail\": \"Completed Chapter 1 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/70D0A8EE96BF4E12CC5B7F1F51689F91AA1E0166.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 15, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"A World of Pure Imagination\", \"trophyDetail\": \"Completed Chapter 2 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/AF531D50CB6D5BAC8FF42BA090434B70B035AD65.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 16, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Pretender Man\", \"trophyDetail\": \"Completed Chapter 3 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/987EB9E9FDC89C549B1BED8B33FAA35E18B73A5A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 17, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"When a Plan Comes Together\", \"trophyDetail\": \"Completed Chapter 4 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B2E72513265982A139300780E4D8061EF55F4B20.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 18, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Blockbuster\", \"trophyDetail\": \"Completed Chapter 5 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/77BC9511D5CDA3F241ADD984D4152FC3966555B4.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 19, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out With A Bang\", \"trophyDetail\": \"Completed Chapter 6 of Episode 3\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/BAA5A02F98E5CC93CDD203DE3C2ACC8E0BDAC4F3.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 20, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"That's Some Pig\", \"trophyDetail\": \"Exhaust your conversation with Reuben\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/75983742BD248DC290818A9442533973B25B37B4.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 21, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Dramatic Timing\", \"trophyDetail\": \"Completed Chapter 1 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B59A698BF81C86716320149504FC97895B7F33CD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 22, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"In a Land Far Away\", \"trophyDetail\": \"Completed Chapter 2 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/5AB8ADADBE0FE814C469E0ED6D7D440F94935755.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 23, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"It Came From Outer Space\", \"trophyDetail\": \"Completed Chapter 3 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/C789A07E7448F62EC5EAA9C979398C011DF450BF.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 24, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"The End of the Line\", \"trophyDetail\": \"Completed Chapter 4 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B08C26CEB7B34C7B040E02F43D4E66D1149B9E04.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 25, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"From the Jaws of Defeat\", \"trophyDetail\": \"Completed Chapter 5 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/706785E66128C53924BD8D389E5617A1A1B8DB4B.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 26, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"A New World Order\", \"trophyDetail\": \"Completed Chapter 6 of Episode 4\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/C3460A077495C755E5C3A2AFAB6755AACDDAD17A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 27, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Finders Keepers\", \"trophyDetail\": \"Completed Chapter 1 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/411073D3DB1F3ECDCC94E73E78471168F7C68882.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 28, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Losers Weepers\", \"trophyDetail\": \"Completed Chapter 2 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/15327F20BEC18DFFABDD54CAA54FE280C2C20273.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 29, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Friends in High Places\", \"trophyDetail\": \"Completed Chapter 3 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/F5EEB3E9BC730662B3B08EEDD056DD1C7B9B5D9A.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 30, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Castles in the Sky\", \"trophyDetail\": \"Completed Chapter 4 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/70C0DF715187E287749CD199B3EC9A46FED62283.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 31, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Out of the Blue\", \"trophyDetail\": \"Completed Chapter 5 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/B3306F76ED149C2EE18F0DE41A69E29CC01E4EF8.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 32, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"To Boldly Go\\u2026\", \"trophyDetail\": \"Completed Chapter 6 of Episode 5\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR08964_00_0076B51E58264123DB61349EDA177D93770079F7FB/38DA5332837AA2F9274401F943D60DD179171547.PNG\", \"trophyGroupId\": \"default\"}], \"totalItemCount\": 33}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Content-Length": [
+                        "5363"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:58 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"trophySetVersion\": \"01.02\", \"hasTrophyGroups\": true, \"lastUpdatedDateTime\": \"2017-12-19T09:15:37Z\", \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T15:28:44Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.5\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2016-04-27T11:41:11Z\", \"trophyType\": \"bronze\", \"trophyRare\": 3, \"trophyEarnedRate\": \"76.7\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-03T01:36:40Z\", \"trophyType\": \"gold\", \"trophyRare\": 1, \"trophyEarnedRate\": \"6.8\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-02T16:55:04Z\", \"trophyType\": \"bronze\", \"trophyRare\": 3, \"trophyEarnedRate\": \"69.2\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-02T17:11:48Z\", \"trophyType\": \"bronze\", \"trophyRare\": 3, \"trophyEarnedRate\": \"62.2\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-02T17:37:41Z\", \"trophyType\": \"silver\", \"trophyRare\": 3, \"trophyEarnedRate\": \"55.3\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-02T17:48:48Z\", \"trophyType\": \"silver\", \"trophyRare\": 3, \"trophyEarnedRate\": \"53.2\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-02T18:03:13Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"45.8\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T11:51:43Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"23.2\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T13:19:28Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"12.6\"}, {\"trophyId\": 10, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T12:28:20Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"14.4\"}, {\"trophyId\": 11, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T13:37:15Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"20.5\"}, {\"trophyId\": 12, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T13:43:06Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"20.3\"}, {\"trophyId\": 13, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T13:54:45Z\", \"trophyType\": \"gold\", \"trophyRare\": 2, \"trophyEarnedRate\": \"19.6\"}, {\"trophyId\": 14, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T14:19:12Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"18.9\"}, {\"trophyId\": 15, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-05T14:28:29Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"18.5\"}, {\"trophyId\": 16, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-06T10:19:43Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"17.5\"}, {\"trophyId\": 17, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-06T10:39:33Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"16.8\"}, {\"trophyId\": 18, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-06T10:56:53Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"16.5\"}, {\"trophyId\": 19, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-06T11:11:17Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"16.1\"}, {\"trophyId\": 20, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-06T11:18:04Z\", \"trophyType\": \"gold\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.6\"}, {\"trophyId\": 21, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-07T14:16:58Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"17.2\"}, {\"trophyId\": 22, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-07T14:40:42Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"16.0\"}, {\"trophyId\": 23, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-07T14:49:14Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"15.8\"}, {\"trophyId\": 24, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T12:59:41Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"13.2\"}, {\"trophyId\": 25, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T13:07:46Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"13.1\"}, {\"trophyId\": 26, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T13:22:40Z\", \"trophyType\": \"gold\", \"trophyRare\": 1, \"trophyEarnedRate\": \"12.9\"}, {\"trophyId\": 27, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T13:50:40Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"12.7\"}, {\"trophyId\": 28, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T14:10:14Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"12.3\"}, {\"trophyId\": 29, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T14:35:18Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"11.9\"}, {\"trophyId\": 30, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T14:44:26Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"11.8\"}, {\"trophyId\": 31, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T15:03:32Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"11.5\"}, {\"trophyId\": 32, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T15:28:44Z\", \"trophyType\": \"gold\", \"trophyRare\": 1, \"trophyEarnedRate\": \"11.2\"}], \"rarestTrophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2017-12-08T15:28:44Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.5\"}], \"totalItemCount\": 33}"
+                }
+            }
+        }
+    ]
+}

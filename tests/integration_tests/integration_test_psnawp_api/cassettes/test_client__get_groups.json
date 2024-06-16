@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=10&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "content-length": [
+                        "2283"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Vary": [
+                        "accept-encoding"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:12 GMT"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\"groups\": [{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}, {\"groupId\": \"~25C4C5406FD6D50E.7AF3224877607CC0\", \"groupType\": 0, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"8e69128e4611fa8160de2aa33bf229ac8a969c5e-115\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}, {\"groupId\": \"18751a7d029fd0ab51664bbdd9ac700a6ce92698-637\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"d8397c573e4c1bf5f32e762ee7446ae4a2731957-983\", \"groupType\": 1, \"members\": [{\"accountId\": \"2338752500650724106\", \"onlineId\": \"Salvadxsz\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"6cb22f41de0c4d73def6fbceb9d920e24111cc62-245\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"83108bbe436a2b498ff8bd8a859ec928e4879ba6-288\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"5b9ef4dac84464a3c65a98efe9ad5763e5fea630-670\", \"groupType\": 1, \"members\": [{\"accountId\": \"3228711241517547934\", \"onlineId\": \"RealTrabstarbr\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"e46afaa722b17aff6f75e83cd30f3b0973c4fdb4-647\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"9111077425924553349\", \"onlineId\": \"buffk1\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"6bce2421cc43cf4a776116f17b366a97a8728cb3-892\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"4273044099593005394\", \"onlineId\": \"saeedg362\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}], \"previousOffset\": 0, \"nextOffset\": 10}"
+                }
+            }
+        }
+    ]
+}

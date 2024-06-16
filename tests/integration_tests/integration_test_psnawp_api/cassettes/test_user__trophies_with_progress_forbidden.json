@@ -1,0 +1,131 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?limit=10&npServiceName=trophy&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Content-Length": [
+                        "3355"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Vary": [
+                        "Accept-Language"
+                    ],
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:56 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"trophySetVersion\": \"01.07\", \"hasTrophyGroups\": true, \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Platinum Trophy\", \"trophyDetail\": \"Collect all other 50 Trophies for this Trophy\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Reclamation Day!\", \"trophyDetail\": \"Leave Vault 76\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/E357837D8A934CCAD921E371EF66F39445CED7F8.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"First Contact\", \"trophyDetail\": \"Complete \\\"First Contact\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/9CABD84E5198764E806C83244289B344BD1A98AB.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Final Departure\", \"trophyDetail\": \"Complete \\\"Final Departure\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/5760B2670724FE99DD3E0D6B2E6381A1011365B5.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Second Helpings\", \"trophyDetail\": \"Complete \\\"Second Helpings\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/DC1AE39C97314E70706F38C4CB0F57E31088F474.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Into the Fire \", \"trophyDetail\": \"Complete \\\"Into the Fire\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F10B8375ED1C0F41F825D5BF2E653390A324CE9E.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Recruitment Blues\", \"trophyDetail\": \"Complete \\\"Recruitment Blues\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/8BE786B0CA19E566DBA66EB923499A81AA77D881.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Heart of the Enemy\", \"trophyDetail\": \"Complete \\\"Heart of the Enemy\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/3D11BECC455D7C459405FE1C9A663AC66AA61742.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Key to the Past\", \"trophyDetail\": \"Complete \\\"Key to the Past\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F7363A51DCD6499A0B261B458C695E032DE050FD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Coming to Fruition\", \"trophyDetail\": \"Complete \\\"Coming to Fruition\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/0435C1FDD94507311D846E7A3498C70F8EA9FC60.PNG\", \"trophyGroupId\": \"default\"}], \"nextOffset\": 10, \"totalItemCount\": 51}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/users/5007681186655854753/npCommunicationIds/NPWR15509_00/trophyGroups/default/trophies?limit=10&npServiceName=trophy&offset=0",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 403,
+                    "message": "Forbidden"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Content-Length": [
+                        "123"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Sun, 16 Jun 2024 22:59:56 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"error\": {\"referenceId\": \"266d8de1-2c34-11ef-8767-6d664564e453\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
+                }
+            }
+        }
+    ]
+}
