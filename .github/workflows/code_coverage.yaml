@@ -1,25 +1,24 @@
 name: code coverage
 on:
   push:
-    branches: "master"
+    branches: ["master"]
   pull_request:
-    branches: "master"
+    branches: ["master"]
 
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
+    environment: testing
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install Poetry
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install poetry
+        run: pipx install poetry
 
       - name: Install dependencies and build package
         run: |
@@ -30,7 +29,9 @@ jobs:
           poetry run pytest --cov-config=.coveragerc --junitxml=pytest.xml --cov=psnawp_api | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
-          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_NAME: ${{ vars.USER_NAME }}
+          FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
+          BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}
 
       - name: PyTest Coverage comment
         id: coverageComment

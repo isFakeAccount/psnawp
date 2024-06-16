@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - "*"
-  pull_request:
-    branches:
-      - "*"
 
 jobs:
   pytest:
     runs-on: ${{ matrix.os }}-latest
+    environment: testing
     strategy:
       matrix:
         os: [ubuntu, windows, macos]
@@ -19,14 +17,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }} ${{ matrix.os }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install Poetry
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install poetry
+        run: pipx install poetry
 
       - name: Install dependencies and build package
         run: |
@@ -34,7 +30,12 @@ jobs:
 
       - name: Test with pytest
         run: |
+          echo "USERNAME: $USER_NAME"
+          echo "FRIEND_USER_NAME: $FRIEND_USER_NAME"
+          echo "BLOCKED_USER_NAME: $BLOCKED_USER_NAME"
           poetry run pytest
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
-          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_NAME: ${{ vars.USER_NAME }}
+          FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
+          BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}

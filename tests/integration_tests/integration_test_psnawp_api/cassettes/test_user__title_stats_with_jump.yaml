@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:51:28 GMT
+      - Sun, 16 Jun 2024 22:30:25 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
         "localizedName": "Apex Legends\u2122", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202404/1522/b0b76515f9c9a15edc09ab2f5cbcc4c20ef28e7707cd8403.png",
         "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202404/1522/b0b76515f9c9a15edc09ab2f5cbcc4c20ef28e7707cd8403.png",
         "category": "ps5_native_game", "service": "none(purchased)", "playCount":
-        68, "concept": {"id": 232352, "titleIds": ["CUSA23296_00", "CUSA17256_00",
+        70, "concept": {"id": 232352, "titleIds": ["CUSA23296_00", "CUSA17256_00",
         "CUSA19626_00", "CUSA23295_00", "PPSA04873_00", "PPSA04874_00", "CUSA12540_00",
         "CUSA12552_00"], "name": "Apex Legends\u2122", "media": {"audios": [], "videos":
         [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202404/1522/53aaefeaaefa61eccc2c128b0fad5ddc340e5a0ec50e86e7.png",
@@ -115,7 +115,7 @@ interactions:
         "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202404/1522/d8b71660ece8831a64117c19a0b57f16ca71290345971378.jpg",
         "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202404/1522/b0b76515f9c9a15edc09ab2f5cbcc4c20ef28e7707cd8403.png",
         "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-03-29T13:21:34.000000Z",
-        "lastPlayedDateTime": "2024-06-02T14:05:53.850000Z", "playDuration": "PT151H26M25S"},
+        "lastPlayedDateTime": "2024-06-15T15:07:56.880000Z", "playDuration": "PT156H42S"},
         {"titleId": "CUSA08374_00", "name": "Detroit: Become Human\u2122", "localizedName":
         "Detroit: Become Human\u2122", "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
         "localizedImageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
@@ -212,7 +212,7 @@ interactions:
         "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202406/0919/8bf9c67389324480a3e83d732c9a593513b8e6c73f4d0b76.jpg",
         "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202406/0723/46b7158a0cdd76c70dc889e785f7aad8aea96452f23fd016.png",
         "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-10-28T02:30:13.000000Z",
-        "lastPlayedDateTime": "2023-12-23T03:10:29.300000Z", "playDuration": "PT12H15M53S"},
+        "lastPlayedDateTime": "2023-12-23T09:49:57.000000Z", "playDuration": "PT12H15M53S"},
         {"titleId": "CUSA01040_00", "name": "Joysound.TV Plus", "localizedName": "Joysound.TV
         Plus", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
         "localizedImageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
@@ -524,13 +524,13 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '51492'
+      - '51489'
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:51:29 GMT
+      - Sun, 16 Jun 2024 22:30:25 GMT
       Expires:
-      - Mon, 10 Jun 2024 15:51:29 GMT
+      - Sun, 16 Jun 2024 22:30:25 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -539,9 +539,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - 5c884a67-83e8-1031-acc4-7d62a28d774d
+      - dd5e0e80-83f5-1031-bc0d-f9435f0da4da
       X-Psn-Request-Id:
-      - 5c884a67-83e8-1031-acc5-7d62a28d774d
+      - dd5e0e80-83f5-1031-bc0e-f9435f0da4da
     status:
       code: 200
       message: OK
@@ -585,7 +585,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:51:29 GMT
+      - Sun, 16 Jun 2024 22:30:26 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -677,9 +677,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:51:30 GMT
+      - Sun, 16 Jun 2024 22:30:26 GMT
       Expires:
-      - Mon, 10 Jun 2024 15:51:29 GMT
+      - Sun, 16 Jun 2024 22:30:26 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -688,9 +688,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Correlation-Id:
-      - 59aff15f-83e8-1031-b0fc-47d4d20e53f9
+      - f441fd31-8407-1031-82ed-ad010026cd71
       X-Psn-Request-Id:
-      - 59aff15f-83e8-1031-b0fd-47d4d20e53f9
+      - f441fd31-8407-1031-82ee-ad010026cd71
     status:
       code: 200
       message: OK

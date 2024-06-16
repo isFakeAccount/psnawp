@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
+from typing import TYPE_CHECKING, Any, TypedDict, cast
 
 from requests import Response, request
-from typing_extensions import NotRequired, Unpack
+from typing_extensions import NotRequired, TypeAlias, Unpack
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPBadRequest,

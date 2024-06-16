@@ -1,108 +1,6 @@
 interactions:
 - request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
-        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
-    method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
-  response:
-    body:
-      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '93'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 10 Jun 2024 03:54:35 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Vary:
-      - accept-encoding
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
-        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
-    method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/test/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
-  response:
-    body:
-      string: '{"profile": {"onlineId": "test", "accountId": "8859462586603699392"}}'
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '88'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 10 Jun 2024 03:54:36 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Vary:
-      - accept-encoding
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"invitees": [{"accountId": "2066273503397112667"}, {"accountId": "8859462586603699392"}]}'
+    body: '{"invitees": [{"accountId": "2066273503397112667"}, {"accountId": "5007681186655854753"}]}'
     headers:
       Accept:
       - '*/*'
@@ -125,8 +23,8 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"groupId": "db3b170affdf134f078bc5606216d2a81c2a916e-499", "mainThread":
-        {"threadId": "db3b170affdf134f078bc5606216d2a81c2a916e-499"}, "hasAllAccountInvited":
+      string: '{"groupId": "a7405d033fd0269eeca0db7e9f4bc5cbcc124789-972", "mainThread":
+        {"threadId": "a7405d033fd0269eeca0db7e9f4bc5cbcc124789-972"}, "hasAllAccountInvited":
         true}'
     headers:
       Access-Control-Allow-Headers:
@@ -144,7 +42,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:36 GMT
+      - Sun, 16 Jun 2024 22:29:47 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -176,7 +74,7 @@ interactions:
       - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
         (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
     method: PATCH
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/db3b170affdf134f078bc5606216d2a81c2a916e-499
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/a7405d033fd0269eeca0db7e9f4bc5cbcc124789-972
   response:
     body:
       string: ''
@@ -192,7 +90,7 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 10 Jun 2024 03:54:36 GMT
+      - Sun, 16 Jun 2024 22:29:47 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

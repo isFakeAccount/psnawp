@@ -41,7 +41,8 @@ my_vcr = vcr.VCR(
     cassette_library_dir="tests/integration_tests/integration_test_psnawp_api/cassettes",
     record_mode=RecordMode.ONCE,
     match_on=["uri", "method"],
-    filter_headers=["Authorization", "Cookie", "Set-Cookie"],
+    filter_headers=["Authorization", "Cookie", "Set-Cookie", "Location"],
+    filter_query_parameters=["cid"],
     filter_post_data_parameters=["refresh_token", "code"],
     before_record_response=filter_response_information,
 )

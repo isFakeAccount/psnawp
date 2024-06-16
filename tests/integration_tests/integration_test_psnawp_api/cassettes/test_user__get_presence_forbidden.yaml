@@ -19,7 +19,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5007681186655854753/basicPresences?type=primary
   response:
     body:
-      string: '{"error": {"referenceId": "38d1b719-2741-11ef-8f8c-b1264aa237f0", "code":
+      string: '{"error": {"referenceId": "f349f547-2c2f-11ef-b082-abbeb444bb88", "code":
         2281486, "message": "Not permitted by access control"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:50:55 GMT
+      - Sun, 16 Jun 2024 22:29:52 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -48,7 +48,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0774429628229584126
+      - 0270980734146363301
     status:
       code: 403
       message: Forbidden

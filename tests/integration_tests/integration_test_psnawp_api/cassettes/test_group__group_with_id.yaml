@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:33 GMT
+      - Sun, 16 Jun 2024 22:29:45 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/threads/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/messages
   response:
     body:
-      string: '{"messageUid": "1#439805868576712", "createdTimestamp": "1717991674127"}'
+      string: '{"messageUid": "1#439955708271253", "createdTimestamp": "1718576985434"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -91,7 +91,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:34 GMT
+      - Sun, 16 Jun 2024 22:29:45 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
