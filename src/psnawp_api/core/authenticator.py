@@ -4,11 +4,11 @@ import time
 import uuid
 from functools import wraps
 from logging import getLogger
-from typing import TYPE_CHECKING, Callable, NotRequired, Optional, TypedDict, TypeVar, cast
+from typing import TYPE_CHECKING, Callable, Optional, TypedDict, TypeVar, cast
 from urllib.parse import parse_qs, urlparse
 
 from requests import Response
-from typing_extensions import ParamSpec, Unpack
+from typing_extensions import NotRequired, ParamSpec, Unpack
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
 from psnawp_api.core.request_builder import RequestBuilder

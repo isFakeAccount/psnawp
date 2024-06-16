@@ -1,30 +1,27 @@
 import inspect
 
 import pytest
-from psnawp_api.core.psnawp_exceptions import PSNAWPNotFound
+from psnawp_api import PSNAWP
+from psnawp_api.models import SearchDomain
 
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
 @pytest.mark.vcr()
-def test_search__universal_search(psnawp_fixture):
+def test_search__universal_search(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        search = psnawp_fixture.search()
-        search.universal_search(search_query="GTA", limit=1)
+        search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=1)
+        actual_count = 0
+        for _ in search:
+            actual_count += 1
+        assert actual_count == 1
 
 
 @pytest.mark.vcr()
-def test_search__get_title_id(psnawp_fixture):
+def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        search = psnawp_fixture.search()
-        assert search.get_title_id("Minecraft") == ("Minecraft", "CUSA00744_00")
-        assert search.get_title_id("Grand Theft Auto V") == ("Grand Theft Auto V: Premium Edition", "CUSA00419_00")
-        assert search.get_title_id("Fallout 76") == ("Fallout 76", "CUSA12057_00")
-
-
-@pytest.mark.vcr()
-def test_search__get_title_id_wrong_title(psnawp_fixture):
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        with pytest.raises(PSNAWPNotFound):
-            search = psnawp_fixture.search()
-            search.get_title_id("dsfasdfadsf")
+        search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=1)
+        for result in search:
+            assert result["result"]["invariantName"] == "Grand Theft Auto V (PlayStation®5)"
+            assert result["result"]["defaultProduct"]["id"] == "UP1004-PPSA03420_00-GTAOSTANDALONE01"
+            break
