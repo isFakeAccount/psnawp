@@ -1,56 +1,5 @@
 interactions:
 - request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Country:
-      - US
-      User-Agent:
-      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
-        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
-    method: GET
-    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
-  response:
-    body:
-      string: '{"profile": {"onlineId": "isFakeAccount", "accountId": "2066273503397112667"}}'
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
-        If-None-Match
-      Access-Control-Allow-Methods:
-      - GET, PUT, POST, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '93'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 10 Jun 2024 03:54:33 GMT
-      Server:
-      - Apache
-      Set-Cookie: REDACTED
-      Vary:
-      - accept-encoding
-      X-Content-Type-Options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
     body: '{"invitees": [{"accountId": "2066273503397112667"}]}'
     headers:
       Accept:
@@ -92,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:33 GMT
+      - Sun, 16 Jun 2024 22:29:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -127,7 +76,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/threads/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/messages
   response:
     body:
-      string: '{"messageUid": "1#439805868397896", "createdTimestamp": "1717991673429"}'
+      string: '{"messageUid": "1#439955708055321", "createdTimestamp": "1718576984591"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -144,7 +93,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:33 GMT
+      - Sun, 16 Jun 2024 22:29:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -175,10 +124,10 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/threads/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/messages?limit=1
   response:
     body:
-      string: '{"messages": [{"messageUid": "1#439805868397896", "messageType": 1,
-        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1717991673429",
+      string: '{"messages": [{"messageUid": "1#439955708055321", "messageType": 1,
+        "alternativeMessageType": 1, "body": "Hello World", "createdTimestamp": "1718576984591",
         "sender": {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"}}],
-        "previous": "1#439805868397896", "next": "1#439805868397896", "reachedEndOfPage":
+        "previous": "1#439955708055321", "next": "1#439955708055321", "reachedEndOfPage":
         false, "messageCount": 1}'
     headers:
       Access-Control-Allow-Headers:
@@ -196,7 +145,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:33 GMT
+      - Sun, 16 Jun 2024 22:29:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

@@ -40,7 +40,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 02:33:26 GMT
+      - Sun, 16 Jun 2024 22:29:40 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -321,17 +321,17 @@ interactions:
         "NOT_APPLICABLE"}], "chargeImmediatelyFlag": false, "storeFronts": ["PS5",
         "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"], "contentCollections":
         []}], "offers": {"osls": [], "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003",
-        "offerAvailability": []}]}, "starRating": {"total": "696240", "score": "4.52",
-        "count": [{"score": 1, "count": 47597}, {"score": 2, "count": 7040}, {"score":
-        3, "count": 33237}, {"score": 4, "count": 56604}, {"score": 5, "count": 551762}]},
+        "offerAvailability": []}]}, "starRating": {"total": "698988", "score": "4.52",
+        "count": [{"score": 1, "count": 47865}, {"score": 2, "count": 7078}, {"score":
+        3, "count": 33383}, {"score": 4, "count": 56813}, {"score": 5, "count": 553849}]},
         "isTrending": false, "contentTypeId": 1}, "genres": ["ACTION", "ADVENTURE"],
         "localizedGenres": [{"value": "Action", "type": "ACTION"}, {"value": "Adventure",
         "type": "ADVENTURE"}], "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres":
         [{"value": "Shoot ''Em Up", "type": "SHOOT_EM_UP"}, {"value": "NA", "type":
         "N/A"}], "minimumAge": 17, "releaseDate": {"date": "2014-11-18T00:00:00Z",
         "localizedDate": "11/17/2014", "type": "DAY_MONTH_YEAR"}, "isRecommendableOnStore":
-        true, "isSearchableOnStore": true, "storeFronts": ["PS5", "PS4", "WEB_STORE"],
-        "supportedStoreFronts": ["PS5", "PS4", "WEB_STORE"], "marketingStories": [],
+        true, "isSearchableOnStore": true, "storeFronts": ["PS4", "PS5", "WEB_STORE"],
+        "supportedStoreFronts": ["PS4", "PS5", "WEB_STORE"], "marketingStories": [],
         "compatibilityNotices": [{"type": "NO_OF_NETWORK_PLAYERS", "value": 30}, {"type":
         "NO_OF_NETWORK_PLAYERS_PS_PLUS", "value": 30}, {"type": "DUALSHOCK4_VIBRATION",
         "value": true, "targetPlatforms": ["PS4"]}, {"type": "REMOTE_PLAY_SUPPORTED",
@@ -346,7 +346,7 @@ interactions:
         "type": "PREVIEW"}], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0302/bZ1JTRXzoyl3hkcsloKcCgdB.jpg",
         "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202011/2419/XFDZtpMiMpFaJLuo9azJK6Gl.png",
         "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/K6mmm89oNII1iI1aqaClO0wh.png",
-        "type": "MASTER"}]}}}, "revisionIds": {"all": 1717016749764, "self": 1710535295308},
+        "type": "MASTER"}]}}}, "revisionIds": {"all": 1718118515797, "self": 1710535295308},
         "contentRating": {"authority": "ESRB", "description": "ESRB Mature", "name":
         "ESRB_MATURE", "url": "https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/esrb/m.png",
         "descriptors": [{"description": "Blood and Gore", "name": "ESRB_BLOOD_AND_GORE"},
@@ -355,9 +355,9 @@ interactions:
         "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
         {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
         {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
-        "interactiveElements": []}, "starRating": {"total": "696240", "score": "4.52",
-        "count": [{"score": 1, "count": 47597}, {"score": 2, "count": 7040}, {"score":
-        3, "count": 33237}, {"score": 4, "count": 56604}, {"score": 5, "count": 551762}]}}]'
+        "interactiveElements": []}, "starRating": {"total": "698988", "score": "4.52",
+        "count": [{"score": 1, "count": 47865}, {"score": 2, "count": 7078}, {"score":
+        3, "count": 33383}, {"score": 4, "count": 56813}, {"score": 5, "count": 553849}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -366,11 +366,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '5738'
+      - '5737'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 10 Jun 2024 02:33:26 GMT
+      - Sun, 16 Jun 2024 22:29:41 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains

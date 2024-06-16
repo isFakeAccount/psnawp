@@ -11,129 +11,6 @@ interactions:
       Connection:
       - keep-alive
       Content-Type:
-      - application/x-www-form-urlencoded
-      Country:
-      - US
-      Sec-Fetch-Dest:
-      - document
-      Sec-Fetch-Mode:
-      - navigate
-      Sec-Fetch-Site:
-      - same-site
-      Sec-Fetch-User:
-      - ?1
-      User-Agent:
-      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
-        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
-      X-Requested-With:
-      - com.scee.psxandroid
-    method: GET
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
-  response:
-    body:
-      string: ''
-    headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      Date:
-      - Sun, 16 Jun 2024 06:29:26 GMT
-      Expires:
-      - '0'
-      Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.367CXK&cid=00000000-0000-0000-0000-b025aa3b2674
-      Server:
-      - nginx
-      Set-Cookie: REDACTED
-      Strict-Transport-Security:
-      - max-age=31536000 ; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-      X-CorrelationId:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Frame-Options:
-      - DENY
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Request-Id:
-      - 6b00a588f4b91a479b16d5c93c4c6d81
-      X-RequestId:
-      - 6b00a588f4b91a479b16d5c93c4c6d81
-      X-XSS-Protection:
-      - 1; mode=block
-    status:
-      code: 302
-      message: Moved Temporarily
-- request:
-    body: cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '207'
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Country:
-      - US
-      User-Agent:
-      - com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-    method: POST
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
-  response:
-    body:
-      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
-        3599, "scope": "psn:mobile.v2.core psn:clientapp", "id_token": "REDACTED",
-        "refresh_token": "REDACTED", "refresh_token_expires_in": 5183999}'
-    headers:
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '3998'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Sun, 16 Jun 2024 06:29:26 GMT
-      Server:
-      - nginx
-      Set-Cookie: REDACTED
-      X-Content-Type-Options:
-      - nosniff
-      X-CorrelationId:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Request-Id:
-      - af26b4d2d216e39e4687a4525e3fd868
-      X-RequestId:
-      - af26b4d2d216e39e4687a4525e3fd868
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Content-Type:
       - Application/json
       Country:
       - US
@@ -145,12 +22,12 @@ interactions:
       apollographql-client-version:
       - 24.4.1
     method: GET
-    uri: https://m.np.playstation.com/api/graphql/v1/op?operationName=metGetContextSearchResults&variables=%7B%22searchTerm%22%3A+%22GTA%22%2C+%22searchContext%22%3A+%22MobileUniversalSearchGame%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%7D&extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%22a2fbc15433b37ca7bfcd7112f741735e13268f5e9ebd5ffce51b85acc126f41d%22%7D%7D
+    uri: https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%22a2fbc15433b37ca7bfcd7112f741735e13268f5e9ebd5ffce51b85acc126f41d%22%7D%7D&operationName=metGetContextSearchResults&variables=%7B%22searchTerm%22%3A+%22GTA%22%2C+%22searchContext%22%3A+%22MobileUniversalSearchGame%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%7D
   response:
     body:
       string: '{"data": {"universalContextSearch": {"__typename": "UniversalContextSearchResponse",
         "results": [{"__typename": "UniversalDomainSearchResponse", "domain": "MobileGames",
-        "domainTitle": "Full Games", "next": "CA8abQo6NGY1MWYzMjEtNGE5ZC00YTEyLTg1NTUtY2Q0ZDVmYzRjYmI4LVpzSXZ0MFRnLTItMTcxODUxNzYwMBIvc2VhcmNoLXJlbGV2YW5jeS1jb25jZXB0LWdhbWUtbWwtbW9kZWwtYmxhY2tleWUiHnNlYXJjaC5ub19leHBlcmltZW50Lm5vbi4wLm5vbioELTQ2OA",
+        "domainTitle": "Full Games", "next": "CA8abQo6YjRlNWI3ZGUtZGFiNS00Zjc4LTg4OGQtNDc4ZWI0Y2QwMThmLUpzMVI1NjZXLTItMTcxODU2MDgwMBIvc2VhcmNoLXJlbGV2YW5jeS1jb25jZXB0LWdhbWUtbWwtbW9kZWwtYmxhY2tleWUiHnNlYXJjaC5ub19leHBlcmltZW50Lm5vbi4wLm5vbioELTgzNQ",
         "searchResults": [{"__typename": "SearchResultItem", "highlight": {"__typename":
         "ItemHighlight", "name": ["", "Grand", " ", "Theft", " ", "Auto", " V (PlayStation\u00ae5)"]},
         "id": "201930", "result": {"__typename": "Concept", "defaultProduct": {"__typename":
@@ -492,39 +369,6 @@ interactions:
         {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/1517/UyPJCxbE3EoeLtUxjoFBnsD4.png"}],
         "name": "Cyberpunk 2077", "platforms": ["PS4", "PS5"], "price": null, "storeDisplayClassification":
         null}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
-        "name": null}, "id": "10008649", "result": {"__typename": "Concept", "defaultProduct":
-        {"__typename": "Product", "id": "UP1001-CUSA03652_00-MAFIATRILOGYDEFI", "invariantName":
-        "Mafia: Trilogy", "itemType": "CONCEPTPRODUCT", "localizedStoreDisplayClassification":
-        "Game Bundle", "media": [{"__typename": "Media", "role": "PREVIEW", "type":
-        "VIDEO", "url": "https://vulcan.dl.playstation.net/img/rnd/202009/1708/u54yeWPGwLAzT75sfQnzt0ue.mp4"},
-        {"__typename": "Media", "role": "BACKGROUND", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/xvnhK1X1LkQPaUGXMyZerqbO.png"},
-        {"__typename": "Media", "role": "EDITION_KEY_ART", "type": "IMAGE", "url":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/tfRvV3kZZMQM6ktXsJInnc43.jpg"},
-        {"__typename": "Media", "role": "FOUR_BY_THREE_BANNER", "type": "IMAGE", "url":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/qxLDgZUFz8EaIYtzbrSNdoiP.jpg"},
-        {"__typename": "Media", "role": "GAMEHUB_COVER_ART", "type": "IMAGE", "url":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/GaYrunFJCzGUPia3zqBW6b25.jpg"},
-        {"__typename": "Media", "role": "LOGO", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/2422/b1e4c43596c5fdd8e55ae1f766272dacf6b6d336de553096.png"},
-        {"__typename": "Media", "role": "PORTRAIT_BANNER", "type": "IMAGE", "url":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/woNOhynm6JWwEbiQM8SojXoQ.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307v_DELneIPKXG1X5jZCrpOoAkqy6ZtvbdlL_2LSQ2EFQnBI-tMclplzrN6xK_bsybsiIvRfKwtppLM9nReXw850eBAfd.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307lGgeIuBQVvZC-ZOUYeh7eirf-PzF8Fx5Mu4cYP4MLWkDDUCUZor8s1b8y468KwGZKz-wuZRmdb-fm9EojuMMNwYw9SF.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307_UCxK_wszrInoT9c1mcSIi9yqwvXnl5eprDAnPz3UoYE_yWsbSQlkJoK9lElhyfCuJwJy3UNyxppGhKLDoPykoDfCfV.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307K2A9XDoJCj5gRTpNtl3UATTGC6RmuzHs1nIYuI851G4uV8SfVno_7bDko5nIglhLEcVnKh2quq_oJmKcbKxU4EHe5IY.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307wUOJ_BHRdiWDgL6chXdLfcypycnBZn9YCDycTI6oSG8CaV8Uvbh0DBa2JtqwNny3ZkjpqmDmEd_slKOULq07hMTR49T.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307v5q4pDuxk81Qtk_Piffb_7OxCSz6G6ICzfjze83msA0N4Mkj_YugFjnMY9Jom39q8sj94XwETlFBiKsdfXq4SwKpRPk.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307wg6Sqg9XfvGGrim9LU0zTf-XWZ1BwGzozZWIzlbfANkQPrJ-KBMym1P-s5W9MH1uxk9GZ5nrhM8vPhhYwAMrWgWQ2Ly.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/113079-ZhinbOWWymvjNQRZBd9hKgSqEQyowVpeI0AIBFrRkLuDZRM95JYLNtU9abOEcxpOJHLiRGaQoxm4334BL02c11r0U.jpg"},
-        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/113076jJTeKjc9jEYf0PnO58rk-UZ-sg6G5SYBWD0OBWUt-kY8R_fKLsIyxBveHPzlp3JwA2JNrirLh-16W-FGyF5-owYmNP.jpg"},
-        {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/7CAOfTFXzgypO4TWHnWtQstC.png"}],
-        "name": "Mafia: Trilogy", "platforms": ["PS4"], "price": null, "storeDisplayClassification":
-        "GAME_BUNDLE", "type": "GAME"}, "id": "10008649", "invariantName": "Mafia:
-        Trilogy", "itemType": "CONCEPT", "localizedStoreDisplayClassification": null,
-        "media": [{"__typename": "Media", "role": "GAMEHUB_COVER_ART", "type": "IMAGE",
-        "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/1422/8f1bb734cd760d57b4a7054d0c49ee1263bfc1a73f267e51.jpg"},
-        {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/1422/cc8f9a5fea22800aaeed6c8b38032fcc94ab2c0c57a6746e.png"}],
-        "name": "Mafia: Trilogy", "platforms": ["PS4"], "price": null, "storeDisplayClassification":
-        null}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
         "name": null}, "id": "232581", "result": {"__typename": "Concept", "defaultProduct":
         {"__typename": "Product", "id": "UP0001-PPSA01487_00-ORWFULLGAME00000", "invariantName":
         "Watch Dogs\u00ae: Legion PS4 & PS5", "itemType": "CONCEPTPRODUCT", "localizedStoreDisplayClassification":
@@ -706,8 +550,41 @@ interactions:
         "name": "The Elder Scrolls V: Skyrim Special Edition", "platforms": ["PS4",
         "PS5"], "price": null, "storeDisplayClassification": null}}, {"__typename":
         "SearchResultItem", "highlight": {"__typename": "ItemHighlight", "name": null},
-        "id": "10002313", "result": {"__typename": "Concept", "defaultProduct": {"__typename":
-        "Product", "id": "UP0001-PPSA02838_00-THECREWORL000000", "invariantName":
+        "id": "10008649", "result": {"__typename": "Concept", "defaultProduct": {"__typename":
+        "Product", "id": "UP1001-CUSA03652_00-MAFIATRILOGYDEFI", "invariantName":
+        "Mafia: Trilogy", "itemType": "CONCEPTPRODUCT", "localizedStoreDisplayClassification":
+        "Game Bundle", "media": [{"__typename": "Media", "role": "PREVIEW", "type":
+        "VIDEO", "url": "https://vulcan.dl.playstation.net/img/rnd/202009/1708/u54yeWPGwLAzT75sfQnzt0ue.mp4"},
+        {"__typename": "Media", "role": "BACKGROUND", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/xvnhK1X1LkQPaUGXMyZerqbO.png"},
+        {"__typename": "Media", "role": "EDITION_KEY_ART", "type": "IMAGE", "url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/tfRvV3kZZMQM6ktXsJInnc43.jpg"},
+        {"__typename": "Media", "role": "FOUR_BY_THREE_BANNER", "type": "IMAGE", "url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/qxLDgZUFz8EaIYtzbrSNdoiP.jpg"},
+        {"__typename": "Media", "role": "GAMEHUB_COVER_ART", "type": "IMAGE", "url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/GaYrunFJCzGUPia3zqBW6b25.jpg"},
+        {"__typename": "Media", "role": "LOGO", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/2422/b1e4c43596c5fdd8e55ae1f766272dacf6b6d336de553096.png"},
+        {"__typename": "Media", "role": "PORTRAIT_BANNER", "type": "IMAGE", "url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/woNOhynm6JWwEbiQM8SojXoQ.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307v_DELneIPKXG1X5jZCrpOoAkqy6ZtvbdlL_2LSQ2EFQnBI-tMclplzrN6xK_bsybsiIvRfKwtppLM9nReXw850eBAfd.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307lGgeIuBQVvZC-ZOUYeh7eirf-PzF8Fx5Mu4cYP4MLWkDDUCUZor8s1b8y468KwGZKz-wuZRmdb-fm9EojuMMNwYw9SF.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307_UCxK_wszrInoT9c1mcSIi9yqwvXnl5eprDAnPz3UoYE_yWsbSQlkJoK9lElhyfCuJwJy3UNyxppGhKLDoPykoDfCfV.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307K2A9XDoJCj5gRTpNtl3UATTGC6RmuzHs1nIYuI851G4uV8SfVno_7bDko5nIglhLEcVnKh2quq_oJmKcbKxU4EHe5IY.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307wUOJ_BHRdiWDgL6chXdLfcypycnBZn9YCDycTI6oSG8CaV8Uvbh0DBa2JtqwNny3ZkjpqmDmEd_slKOULq07hMTR49T.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307v5q4pDuxk81Qtk_Piffb_7OxCSz6G6ICzfjze83msA0N4Mkj_YugFjnMY9Jom39q8sj94XwETlFBiKsdfXq4SwKpRPk.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/11307wg6Sqg9XfvGGrim9LU0zTf-XWZ1BwGzozZWIzlbfANkQPrJ-KBMym1P-s5W9MH1uxk9GZ5nrhM8vPhhYwAMrWgWQ2Ly.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/113079-ZhinbOWWymvjNQRZBd9hKgSqEQyowVpeI0AIBFrRkLuDZRM95JYLNtU9abOEcxpOJHLiRGaQoxm4334BL02c11r0U.jpg"},
+        {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/img/cfn/113076jJTeKjc9jEYf0PnO58rk-UZ-sg6G5SYBWD0OBWUt-kY8R_fKLsIyxBveHPzlp3JwA2JNrirLh-16W-FGyF5-owYmNP.jpg"},
+        {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202009/0902/7CAOfTFXzgypO4TWHnWtQstC.png"}],
+        "name": "Mafia: Trilogy", "platforms": ["PS4"], "price": null, "storeDisplayClassification":
+        "GAME_BUNDLE", "type": "GAME"}, "id": "10008649", "invariantName": "Mafia:
+        Trilogy", "itemType": "CONCEPT", "localizedStoreDisplayClassification": null,
+        "media": [{"__typename": "Media", "role": "GAMEHUB_COVER_ART", "type": "IMAGE",
+        "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/1422/8f1bb734cd760d57b4a7054d0c49ee1263bfc1a73f267e51.jpg"},
+        {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202307/1422/cc8f9a5fea22800aaeed6c8b38032fcc94ab2c0c57a6746e.png"}],
+        "name": "Mafia: Trilogy", "platforms": ["PS4"], "price": null, "storeDisplayClassification":
+        null}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
+        "name": null}, "id": "10002313", "result": {"__typename": "Concept", "defaultProduct":
+        {"__typename": "Product", "id": "UP0001-PPSA02838_00-THECREWORL000000", "invariantName":
         "The Crew\u2122 Motorfest Standard Edition - Cross-Gen Bundle", "itemType":
         "CONCEPTPRODUCT", "localizedStoreDisplayClassification": "Full Game", "media":
         [{"__typename": "Media", "role": "PREVIEW", "type": "VIDEO", "url": "https://vulcan.dl.playstation.net/img/rnd/202309/1100/d6d8607f86e201b5c44107e6c594195c6740e516c6804959.mp4"},
@@ -752,9 +629,9 @@ interactions:
         {"__typename": "Media", "role": "SCREENSHOT", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202306/0803/faec114f5ef65af0c121053e0426d11d98eb810bc206ae17.jpg"},
         {"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202305/2315/607d9ed1ac762c9de33ef73fd09b3431d0b96ef4985ac2fb.png"}],
         "name": "The Crew Motorfest", "platforms": ["PS4", "PS5"], "price": null,
-        "storeDisplayClassification": null}}], "totalResultCount": 40, "zeroState":
+        "storeDisplayClassification": null}}], "totalResultCount": 41, "zeroState":
         false}, {"__typename": "UniversalDomainSearchResponse", "domain": "MobileAddOns",
-        "domainTitle": "Add-Ons", "next": "CA8aVgokNjk3NTY0ZGJhODkxNGE5OWFmZWM4YjRkNzc5ODkyYmUtMTIwEi5zZWFyY2gtcmVsZXZhbmN5LXByb2R1Y3RzLW9ubHktdG9wSy1wcm9kLWFzdHJhIh5zZWFyY2gubm9fZXhwZXJpbWVudC5ub24uMC5ub24qBC01NTI",
+        "domainTitle": "Add-Ons", "next": "CA8aVgokNjk3NTY0ZGJhODkxNGE5OWFmZWM4YjRkNzc5ODkyYmUtMTI4Ei5zZWFyY2gtcmVsZXZhbmN5LXByb2R1Y3RzLW9ubHktdG9wSy1wcm9kLWFzdHJhIh5zZWFyY2gubm9fZXhwZXJpbWVudC5ub24uMC5ub24qAzE5Nw",
         "searchResults": [{"__typename": "SearchResultItem", "highlight": {"__typename":
         "ItemHighlight", "name": ["", "GTA", "+: Great White Shark Cash Card (PS5\u2122)"]},
         "id": "201930:UP1004-PPSA03420_00-GTAVPS5CASHPLUS4", "result": {"__typename":
@@ -774,6 +651,14 @@ interactions:
         "name": "GTA Online: Great White Shark Cash Card (PS5\u2122)", "platforms":
         [], "price": null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type":
         "GAME"}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
+        "name": ["", "GTA", "+: Tiger Shark Cash Card (PS5\u2122)"]}, "id": "201930:UP1004-PPSA03420_00-GTAVPS5CASHPLUS2",
+        "result": {"__typename": "Product", "id": "UP1004-PPSA03420_00-GTAVPS5CASHPLUS2",
+        "invariantName": "GTA+: Tiger Shark Cash Card (PS5\u2122)", "itemType": "CONCEPTPRODUCT",
+        "localizedStoreDisplayClassification": "Virtual Currency", "media": [{"__typename":
+        "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202211/2114/xZp4YToUlDwGYWizgWBeuXVJ.png"}],
+        "name": "GTA+: Tiger Shark Cash Card (PS5\u2122)", "platforms": [], "price":
+        null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type": "GAME"}},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
         "name": ["", "GTA", " Online: Bull Shark Cash Card (PS4\u2122)"]}, "id": "201930:UP1004-CUSA00419_00-GTAVCASHPACK000C",
         "result": {"__typename": "Product", "id": "UP1004-CUSA00419_00-GTAVCASHPACK000C",
         "invariantName": "GTA Online: Bull Shark Cash Card (PS4\u2122)", "itemType":
@@ -781,14 +666,6 @@ interactions:
         "media": [{"__typename": "Media", "role": "MASTER", "type": "IMAGE", "url":
         "https://image.api.playstation.com/vulcan/ap/rnd/202211/2112/ooR4gmo8ZPfkshgzKbOAE2LA.png"}],
         "name": "GTA Online: Bull Shark Cash Card (PS4\u2122)", "platforms": [], "price":
-        null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type": "GAME"}},
-        {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
-        "name": ["", "GTA", "+: Tiger Shark Cash Card (PS5\u2122)"]}, "id": "201930:UP1004-PPSA03420_00-GTAVPS5CASHPLUS2",
-        "result": {"__typename": "Product", "id": "UP1004-PPSA03420_00-GTAVPS5CASHPLUS2",
-        "invariantName": "GTA+: Tiger Shark Cash Card (PS5\u2122)", "itemType": "CONCEPTPRODUCT",
-        "localizedStoreDisplayClassification": "Virtual Currency", "media": [{"__typename":
-        "Media", "role": "MASTER", "type": "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202211/2114/xZp4YToUlDwGYWizgWBeuXVJ.png"}],
-        "name": "GTA+: Tiger Shark Cash Card (PS5\u2122)", "platforms": [], "price":
         null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type": "GAME"}},
         {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
         "name": ["", "GTA", " Online: Tiger Shark Cash Card (PS5\u2122)"]}, "id":
@@ -861,15 +738,6 @@ interactions:
         "name": "GTA Online: Whale Shark Cash Card (PS5\u2122)", "platforms": [],
         "price": null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type": "GAME"}},
         {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
-        "name": ["", "GTA", " Online: Megalodon Shark Cash Card (PS4\u2122)"]}, "id":
-        "201930:UP1004-CUSA00419_00-GTAVCASHPACK000F", "result": {"__typename": "Product",
-        "id": "UP1004-CUSA00419_00-GTAVCASHPACK000F", "invariantName": "GTA Online:
-        Megalodon Shark Cash Card (PS4\u2122)", "itemType": "CONCEPTPRODUCT", "localizedStoreDisplayClassification":
-        "Virtual Currency", "media": [{"__typename": "Media", "role": "MASTER", "type":
-        "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202211/2113/mCa3ytiMbhVx4ByzmuY1c8lu.png"}],
-        "name": "GTA Online: Megalodon Shark Cash Card (PS4\u2122)", "platforms":
-        [], "price": null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type":
-        "GAME"}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
         "name": ["", "GTA", " Online: Bull Shark Cash Card (PS5\u2122)"]}, "id": "201930:UP1004-PPSA03420_00-GTAVPS5CASHPACK3",
         "result": {"__typename": "Product", "id": "UP1004-PPSA03420_00-GTAVPS5CASHPACK3",
         "invariantName": "GTA Online: Bull Shark Cash Card (PS5\u2122)", "itemType":
@@ -879,6 +747,15 @@ interactions:
         "name": "GTA Online: Bull Shark Cash Card (PS5\u2122)", "platforms": [], "price":
         null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type": "GAME"}},
         {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
+        "name": ["", "GTA", " Online: Megalodon Shark Cash Card (PS4\u2122)"]}, "id":
+        "201930:UP1004-CUSA00419_00-GTAVCASHPACK000F", "result": {"__typename": "Product",
+        "id": "UP1004-CUSA00419_00-GTAVCASHPACK000F", "invariantName": "GTA Online:
+        Megalodon Shark Cash Card (PS4\u2122)", "itemType": "CONCEPTPRODUCT", "localizedStoreDisplayClassification":
+        "Virtual Currency", "media": [{"__typename": "Media", "role": "MASTER", "type":
+        "IMAGE", "url": "https://image.api.playstation.com/vulcan/ap/rnd/202211/2113/mCa3ytiMbhVx4ByzmuY1c8lu.png"}],
+        "name": "GTA Online: Megalodon Shark Cash Card (PS4\u2122)", "platforms":
+        [], "price": null, "storeDisplayClassification": "VIRTUAL_CURRENCY", "type":
+        "GAME"}}, {"__typename": "SearchResultItem", "highlight": {"__typename": "ItemHighlight",
         "name": ["", "GTA", " Online: Whale Shark Cash Card (PS4\u2122)"]}, "id":
         "201930:UP1004-CUSA00419_00-GTAVCASHPACK000E", "result": {"__typename": "Product",
         "id": "UP1004-CUSA00419_00-GTAVCASHPACK000E", "invariantName": "GTA Online:
@@ -898,15 +775,15 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '16496'
+      - '16486'
       Content-Type:
       - application/json
       Date:
-      - Sun, 16 Jun 2024 06:29:27 GMT
+      - Sun, 16 Jun 2024 22:29:48 GMT
       ETag:
-      - W/"14a79-32iVnuCG/YQ7QgTgC7RFLnNfJRU"
+      - W/"14a78-rB082ari2jqFOPQ+jBet1BkHg6M"
       Expires:
-      - Sun, 16 Jun 2024 06:29:27 GMT
+      - Sun, 16 Jun 2024 22:29:48 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED

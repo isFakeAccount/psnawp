@@ -22,9 +22,14 @@ interactions:
       string: '{"groups": [{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType":
         0, "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
         {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}, {"groupId":
-        "18751a7d029fd0ab51664bbdd9ac700a6ce92698-637", "groupType": 1, "members":
-        [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId":
-        "8859462586603699392", "onlineId": "test"}]}, {"groupId": "d8397c573e4c1bf5f32e762ee7446ae4a2731957-983",
+        "~25C4C5406FD6D50E.7AF3224877607CC0", "groupType": 0, "members": [{"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "8859462586603699392",
+        "onlineId": "test"}]}, {"groupId": "8e69128e4611fa8160de2aa33bf229ac8a969c5e-115",
+        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}, {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]},
+        {"groupId": "18751a7d029fd0ab51664bbdd9ac700a6ce92698-637", "groupType": 1,
+        "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
+        {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "d8397c573e4c1bf5f32e762ee7446ae4a2731957-983",
         "groupType": 1, "members": [{"accountId": "2338752500650724106", "onlineId":
         "Salvadxsz"}, {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
         {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "6cb22f41de0c4d73def6fbceb9d920e24111cc62-245",
@@ -41,14 +46,8 @@ interactions:
         {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "6bce2421cc43cf4a776116f17b366a97a8728cb3-892",
         "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
         "VaultTec-Co"}, {"accountId": "4273044099593005394", "onlineId": "saeedg362"},
-        {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "7ff2a0f93d22305df92d2511b186e5d2915e488d-536",
-        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, {"accountId": "8859462586603699392", "onlineId": "test"},
-        {"accountId": "9131409893874544561", "onlineId": "zeldner"}]}, {"groupId":
-        "555a140e50c6ff8f66bf56feccaaf089258cd77d-224", "groupType": 1, "members":
-        [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId":
-        "8859462586603699392", "onlineId": "test"}, {"accountId": "9131409893874544561",
-        "onlineId": "zeldner"}]}], "previousOffset": 0, "nextOffset": 10}'
+        {"accountId": "8859462586603699392", "onlineId": "test"}]}], "previousOffset":
+        0, "nextOffset": 10}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -63,11 +62,11 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '616'
+      - '586'
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:38:29 GMT
+      - Sun, 16 Jun 2024 22:29:36 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

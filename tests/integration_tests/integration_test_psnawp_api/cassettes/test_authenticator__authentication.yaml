@@ -28,7 +28,7 @@ interactions:
       X-Requested-With:
       - com.scee.psxandroid
     method: GET
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
   response:
     body:
       string: ''
@@ -40,11 +40,11 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 10 Jun 2024 00:27:51 GMT
+      - Sun, 16 Jun 2024 22:29:29 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.4GkvgH&cid=00000000-0000-0000-0000-b025aa3b2674
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.fZ7UR3&cid=00000000-0000-0000-0000-b025aa3b2674
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -59,9 +59,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - 2c061f3392c682f34d4095e87bef4478
+      - 498e79905e4a4305e635719cd89bf195
       X-RequestId:
-      - 2c061f3392c682f34d4095e87bef4478
+      - 498e79905e4a4305e635719cd89bf195
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -105,7 +105,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 10 Jun 2024 00:27:51 GMT
+      - Sun, 16 Jun 2024 22:29:29 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -116,9 +116,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - 658fb65d49901f93a0f44ecadd3cfa25
+      - 268f9393e20620b30f45ecf190170720
       X-RequestId:
-      - 658fb65d49901f93a0f44ecadd3cfa25
+      - 268f9393e20620b30f45ecf190170720
     status:
       code: 200
       message: OK
@@ -151,18 +151,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 00:27:51 GMT
+      - Sun, 16 Jun 2024 22:29:30 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-CorrelationId:
-      - 1c0c16a0-69cb-4db2-be89-e827c7ec3cb9
+      - 07a75ea9-bab4-4a59-b1aa-a12bc175cb8e
       X-Psn-Correlation-Id:
-      - 1c0c16a0-69cb-4db2-be89-e827c7ec3cb9
+      - 07a75ea9-bab4-4a59-b1aa-a12bc175cb8e
       X-Psn-Request-Id:
-      - 1c0c16a0-69cb-4db2-be89-e827c7ec3cb9
+      - 07a75ea9-bab4-4a59-b1aa-a12bc175cb8e
       X-RequestId:
-      - 1c0c16a0-69cb-4db2-be89-e827c7ec3cb9
+      - 07a75ea9-bab4-4a59-b1aa-a12bc175cb8e
     status:
       code: 200
       message: OK
@@ -216,7 +216,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 00:27:52 GMT
+      - Sun, 16 Jun 2024 22:29:30 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -225,7 +225,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - '0725624462237645410'
+      - 0347049116146756001
     status:
       code: 200
       message: OK

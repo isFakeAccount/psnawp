@@ -28,7 +28,7 @@ interactions:
       X-Requested-With:
       - com.scee.psxandroid
     method: GET
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
   response:
     body:
       string: ''
@@ -40,7 +40,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 10 Jun 2024 00:27:54 GMT
+      - Sun, 16 Jun 2024 22:29:32 GMT
       Expires:
       - '0'
       Location:
@@ -59,9 +59,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - 1b22134ffd3650ff26460ec5d0d881c1
+      - 5aab310e3c8c8a474864367b724477d0
       X-RequestId:
-      - 1b22134ffd3650ff26460ec5d0d881c1
+      - 5aab310e3c8c8a474864367b724477d0
       X-XSS-Protection:
       - 1; mode=block
     status:

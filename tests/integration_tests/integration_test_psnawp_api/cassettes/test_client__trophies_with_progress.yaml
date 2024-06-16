@@ -10,136 +10,13 @@ interactions:
       - en-US,en;q=0.9
       Connection:
       - keep-alive
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Country:
-      - US
-      Sec-Fetch-Dest:
-      - document
-      Sec-Fetch-Mode:
-      - navigate
-      Sec-Fetch-Site:
-      - same-site
-      Sec-Fetch-User:
-      - ?1
-      User-Agent:
-      - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
-        (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
-      X-Requested-With:
-      - com.scee.psxandroid
-    method: GET
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
-  response:
-    body:
-      string: ''
-    headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      Date:
-      - Mon, 10 Jun 2024 03:39:33 GMT
-      Expires:
-      - '0'
-      Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.NDQLj4&cid=00000000-0000-0000-0000-b025aa3b2674
-      Server:
-      - nginx
-      Set-Cookie: REDACTED
-      Strict-Transport-Security:
-      - max-age=31536000 ; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-      X-CorrelationId:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Frame-Options:
-      - DENY
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Request-Id:
-      - 14ce8caa10e15de892a33b41e59c5691
-      X-RequestId:
-      - 14ce8caa10e15de892a33b41e59c5691
-      X-XSS-Protection:
-      - 1; mode=block
-    status:
-      code: 302
-      message: Moved Temporarily
-- request:
-    body: cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '207'
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Country:
-      - US
-      User-Agent:
-      - com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-    method: POST
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
-  response:
-    body:
-      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
-        3599, "scope": "psn:mobile.v2.core psn:clientapp", "id_token": "REDACTED",
-        "refresh_token": "REDACTED", "refresh_token_expires_in": 5183999}'
-    headers:
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '3998'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Mon, 10 Jun 2024 03:39:34 GMT
-      Server:
-      - nginx
-      Set-Cookie: REDACTED
-      X-Content-Type-Options:
-      - nosniff
-      X-CorrelationId:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Correlation-Id:
-      - 00000000-0000-0000-0000-b025aa3b2674
-      X-Psn-Request-Id:
-      - f446027235097b8fb2b02f390c526f69
-      X-RequestId:
-      - f446027235097b8fb2b02f390c526f69
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Accept-Language:
-      - en-US,en;q=0.9
-      Connection:
-      - keep-alive
       Country:
       - US
       User-Agent:
       - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
         (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy&limit=200&offset=0
+    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0
   response:
     body:
       string: '{"trophySetVersion": "01.04", "hasTrophyGroups": true, "trophies":
@@ -280,7 +157,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:39:34 GMT
+      - Sun, 16 Jun 2024 22:29:38 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -310,10 +187,10 @@ interactions:
       - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
         (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?npServiceName=trophy&limit=200&offset=0
+    uri: https://m.np.playstation.com/api/trophy/v1/users/me/npCommunicationIds/NPWR15179_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0
   response:
     body:
-      string: '{"error": {"referenceId": "0e208407-26db-11ef-b171-bd8afefc4b44", "code":
+      string: '{"error": {"referenceId": "eaab3b55-2c2f-11ef-90ff-a3c4a177f77e", "code":
         2240525, "message": "Resource not found"}}'
     headers:
       Connection:
@@ -323,7 +200,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:39:34 GMT
+      - Sun, 16 Jun 2024 22:29:38 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

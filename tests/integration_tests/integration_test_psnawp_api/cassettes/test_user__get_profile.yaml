@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:50:52 GMT
+      - Sun, 16 Jun 2024 22:29:52 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -95,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 15:50:53 GMT
+      - Sun, 16 Jun 2024 22:29:52 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -104,7 +104,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0533103565277602285
+      - 0159051323861507750
     status:
       code: 200
       message: OK

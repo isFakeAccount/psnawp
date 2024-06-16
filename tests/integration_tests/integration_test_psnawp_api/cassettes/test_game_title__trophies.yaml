@@ -40,7 +40,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 02:33:26 GMT
+      - Sun, 16 Jun 2024 22:29:41 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -68,7 +68,7 @@ interactions:
       - Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36
         (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36
     method: GET
-    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR21647_00/trophyGroups/all/trophies?npServiceName=trophy2&limit=200&offset=0
+    uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR21647_00/trophyGroups/all/trophies?limit=200&npServiceName=trophy2&offset=0
   response:
     body:
       string: '{"trophySetVersion": "01.05", "hasTrophyGroups": true, "trophies":
@@ -332,7 +332,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 02:33:27 GMT
+      - Sun, 16 Jun 2024 22:29:41 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

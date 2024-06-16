@@ -49,7 +49,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 16:15:57 GMT
+      - Sun, 16 Jun 2024 22:30:19 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -82,7 +82,7 @@ interactions:
     uri: https://m.np.playstation.com/api/trophy/v1/users/5007681186655854753/npCommunicationIds/NPWR15509_00/trophyGroups?npServiceName=trophy
   response:
     body:
-      string: '{"error": {"referenceId": "b83a1bfe-2744-11ef-aeb6-fbc96d44e62b", "code":
+      string: '{"error": {"referenceId": "03792d48-2c30-11ef-b424-9f34ab72cece", "code":
         2240526, "message": "Not permitted by access control"}}'
     headers:
       Connection:
@@ -92,7 +92,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 16:15:57 GMT
+      - Sun, 16 Jun 2024 22:30:20 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

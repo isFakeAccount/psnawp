@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:34 GMT
+      - Sun, 16 Jun 2024 22:29:45 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -74,7 +74,7 @@ interactions:
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E
   response:
     body:
-      string: '{"error": {"referenceId": "26915004-26dd-11ef-b2dd-e11b533360c5", "code":
+      string: '{"error": {"referenceId": "ef4b4fbd-2c2f-11ef-89ad-f7212e298ce3", "code":
         2285696, "message": "Bad Request"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -90,7 +90,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 10 Jun 2024 03:54:34 GMT
+      - Sun, 16 Jun 2024 22:29:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
