@@ -47,8 +47,10 @@ Following is the quick example on how to use this library
 
 ```py
 from psnawp_api import PSNAWP
+from psnawp_api.models import SearchDomain
+from psnawp_api.models.trophies import PlatformType
 
-psnawp = PSNAWP('<64 character npsso code>')
+psnawp = PSNAWP("<64 character npsso code>")
 
 # Your Personal Account Info
 client = psnawp.me()
@@ -76,11 +78,15 @@ available_to_play = client.available_to_play()
 for user in available_to_play:
     print(f"Available to Play: {user} \n")
 
+# Your trophies (PS4)
+for trophy in client.trophies("NPWR22810_00", PlatformType.PS4):
+    print(trophy)
+
 # Your Chat Groups
 groups = client.get_groups()
-first_group_id = None # This will be used later to test group methods
+first_group_id = None  # This will be used later to test group methods
 for id, group in enumerate(groups):
-    if id == 0: # Get the first group ID
+    if id == 0:  # Get the first group ID
         first_group_id = group.group_id
 
     group_info = group.get_group_information()
@@ -98,7 +104,7 @@ for title in titles_with_stats:
 
 
 # Other User's
-example_user_1 = psnawp.user(online_id="VaultTec-Co") # Get a PSN player by their Online ID
+example_user_1 = psnawp.user(online_id="VaultTec-Co")  # Get a PSN player by their Online ID
 print(f"User 1 Online ID: {example_user_1.online_id}")
 print(f"User 1 Account ID: {example_user_1.account_id}")
 
@@ -114,9 +120,9 @@ print(f"User Account ID: {user_account_id.online_id}")
 
 
 # Messaging and Groups Interaction
-group = psnawp.group(group_id=first_group_id) # This is the first group ID we got earlier - i.e. the first group in your groups list
+group = psnawp.group(group_id=first_group_id)  # This is the first group ID we got earlier - i.e. the first group in your groups list
 print(group.get_group_information())
-print(group.get_conversation(10)) # Get the last 10 messages in the group
+print(group.get_conversation(10))  # Get the last 10 messages in the group
 print(group.send_message("Hello World"))
 print(group.change_name("API Testing 3"))
 # print(group.leave_group()) # Uncomment to leave the group
@@ -128,9 +134,10 @@ print(new_group.get_group_information())
 # You can use the same above methods to interact with the new group - i.e. send messages, change name, etc.
 
 # Searching for Game Titles
-search = psnawp.search()
-print(search.get_title_id(title_name="GTA 5"))
-print(search.universal_search("GTA 5"))
+search = psnawp.search(search_query="GTA 5", search_domain=SearchDomain.FULL_GAMES)
+for search_result in search:
+    print(search_result["result"]["invariantName"])
+
  ```
 
 **Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**
