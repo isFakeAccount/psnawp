@@ -3,26 +3,26 @@
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -59,7 +59,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -73,26 +73,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -129,7 +129,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -143,26 +143,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -199,7 +199,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -213,26 +213,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -269,7 +269,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -283,26 +283,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -339,7 +339,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -353,26 +353,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -409,7 +409,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -423,26 +423,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -479,7 +479,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -493,26 +493,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -549,7 +549,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -563,26 +563,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -619,7 +619,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -633,26 +633,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -689,7 +689,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -703,26 +703,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -759,7 +759,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -773,26 +773,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -829,7 +829,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -843,26 +843,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -899,7 +899,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -913,26 +913,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:36: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:36:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -969,7 +969,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e977d0f0&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -983,26 +983,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -1039,7 +1039,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
@@ -1053,26 +1053,26 @@ src/psnawp_api/core/authenticator.py:242: PSNAWPAuthenticationError</error></tes
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
 
-tests/integration_tests/integration_test_psnawp_api/conftest.py:30: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration_tests/integration_test_psnawp_api/conftest.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 src/psnawp_api/psnawp.py:100: in user
     return User.from_online_id(self.authenticator, online_id)
 src/psnawp_api/models/user.py:45: in from_online_id
     response: dict[str, Any] = authenticator.get(
 src/psnawp_api/core/authenticator.py:29: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
-    
+
         Obtains the access code and the refresh code. Access code lasts about 1 hour. While the refresh code lasts about 2 months. After 2 months a new npsso
         code is needed.
-    
+
         :raises PSNAWPAuthenticationError: If authorization is not successful.
-    
+
         """
         headers = {
             "Cookie": f"npsso={self.npsso_token}",
@@ -1109,7 +1109,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7fc5e9b65b10&
             params=params,
             allow_redirects=False,
         )
-    
+
         location_url = response.headers["location"]
         parsed_url = urlparse(location_url)
         parsed_query = parse_qs(parsed_url.query)
