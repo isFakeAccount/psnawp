@@ -3,7 +3,7 @@ platform linux -- Python 3.10.12, pytest-8.2.2, pluggy-1.5.0
 rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
-plugins: cov-5.0.0, vcr-1.0.2
+plugins: vcr-1.0.2, cov-5.0.0
 collected 72 items
 
 tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py . [  1%]
@@ -54,4 +54,4 @@ src/psnawp_api/utils/misc.py                               5      0   100%
 --------------------------------------------------------------------------
 TOTAL                                                   1162    108    91%
 
-============================== 72 passed in 3.92s ==============================
+============================== 72 passed in 3.10s ==============================
