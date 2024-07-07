@@ -100,7 +100,7 @@ class RequestBuilder:
         """Initialize Request Handler with default headers."""
         self.common_headers = cast(dict[str, str], common_headers)
 
-        psn_api_rate = RequestRate(limit=1, interval=Duration.SECOND * 2)
+        psn_api_rate = RequestRate(limit=300, interval=Duration.MINUTE * 15)
         limiter = Limiter(psn_api_rate, bucket_class=SQLiteBucket)
         self.session = LimiterSession(limiter=limiter, per_host=False, limit_statuses=[], burst=0)
         self.session.headers.update(self.common_headers)
