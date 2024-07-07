@@ -2,7 +2,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, TypedDict, cast
 
-from requests import Response, request
+from pyrate_limiter import Duration, Limiter, RequestRate, SQLiteBucket
+from requests import Response
+from requests_ratelimiter import LimiterSession
 from typing_extensions import NotRequired, TypeAlias, Unpack
 
 from psnawp_api.core.psnawp_exceptions import (
@@ -98,6 +100,11 @@ class RequestBuilder:
         """Initialize Request Handler with default headers."""
         self.common_headers = cast(dict[str, str], common_headers)
 
+        psn_api_rate = RequestRate(limit=300, interval=Duration.SECOND * 600)
+        limiter = Limiter(psn_api_rate, bucket_class=SQLiteBucket)
+        self.session = LimiterSession(limiter=limiter, per_host=False)
+        self.session.headers.update(self.common_headers)
+
     def request(self, method: str | bytes, **kwargs: Unpack[RequestOptions]) -> Response:
         """Handles HTTP requests and returns the requests.Response object.
 
@@ -117,8 +124,7 @@ class RequestBuilder:
         :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
-        kwargs["headers"] = self.common_headers | kwargs.get("headers", {})
-        response = request(method=method, **kwargs)
+        response = self.session.request(method=method, **kwargs)
         response_checker(response)
         return response
 
