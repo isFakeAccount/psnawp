@@ -17,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0             # otherwise, you will fail to push refs to dest repo
+          
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -60,6 +62,6 @@ jobs:
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
         with:
-          branch: master
+          branch: ${{ github.head_ref || github.ref_name }}
           message: Update coverage on Readme
           github_token: ${{ secrets.GITHUB_TOKEN }}
