@@ -6,7 +6,7 @@ import sys
 from subprocess import CalledProcessError, check_call
 
 
-def do_process(args, shell=False, cwd="."):
+def do_process(args: list[str], shell: bool = False, cwd: str = "."):
     """Run program provided by args.
 
     Returns ``True`` upon success.
@@ -45,8 +45,13 @@ def run_static():
     """
     success = True
     success &= do_process(["poetry", "run", "pre-commit", "run", "--all-files"])
+
     success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
-    success &= do_process(["poetry", "run", "black", "src/psnawp_api/"])
+    success &= do_process(["pyright", "src/psnawp_api/"])
+
+    success &= do_process(["poetry", "run", "ruff", "format", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "ruff", "format", "tests/"])
+
     success &= do_process(["poetry", "run", "ruff", "check", "src/psnawp_api/", "--fix"])
     success &= do_process(["poetry", "run", "sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
     success &= do_process(["make", "clean"], cwd="docs/")

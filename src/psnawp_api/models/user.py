@@ -103,7 +103,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.profile())
 
         """
@@ -124,7 +124,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.get_presence())
 
         """
@@ -149,7 +149,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.friendship())
 
         """
@@ -195,7 +195,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.is_blocked())
 
         """
@@ -259,7 +259,7 @@ class User:
         .. code-block:: Python
 
             user_example = psnawp.user(online_id="VaultTec_Trading")
-            for trophy_title in user_example.trophy_titles_for_title(title_ids=['CUSA00265_00']):
+            for trophy_title in user_example.trophy_titles_for_title(title_ids=["CUSA00265_00"]):
                 print(trophy_title)
 
         """
@@ -405,7 +405,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='jeranther')
+            user_example = psnawp.user(online_id="jeranther")
             for title in user_example.title_stats():
                 ...
 
