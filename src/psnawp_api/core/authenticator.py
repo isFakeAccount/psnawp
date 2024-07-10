@@ -3,7 +3,6 @@ from __future__ import annotations
 import time
 import uuid
 from functools import wraps
-from logging import getLogger
 from typing import TYPE_CHECKING, Callable, Optional, TypedDict, TypeVar, cast
 from urllib.parse import parse_qs, urlparse
 
@@ -35,9 +34,6 @@ def pre_request_processing(method: Callable[PT, RT]) -> Callable[PT, RT]:
         return method_out
 
     return _impl
-
-
-authenticator_logger = getLogger("psnawp")
 
 
 class TokenResponse(TypedDict):

@@ -1,14 +1,11 @@
 from __future__ import annotations
 
-from logging import getLogger
 from typing import Any, Generator, Iterable, Optional, overload
 
 from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, RequestBuilderHeaders
 from psnawp_api.models import Client, GameTitle, Group, SearchDomain, UniversalSearch, User
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.search import SearchResult
-
-psnawp_logger = getLogger("psnawp")
 
 
 class PSNAWP:
