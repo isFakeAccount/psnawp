@@ -1,14 +1,11 @@
 from __future__ import annotations
 
-from logging import getLogger
 from typing import Any, Generator, Iterable, Optional, overload
 
 from psnawp_api.core import Authenticator, PSNAWPIllegalArgumentError, RequestBuilderHeaders
 from psnawp_api.models import Client, GameTitle, Group, SearchDomain, UniversalSearch, User
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.search import SearchResult
-
-psnawp_logger = getLogger("psnawp")
 
 
 class PSNAWP:
@@ -19,7 +16,8 @@ class PSNAWP:
     .. code-block:: Python
 
         from psnawp_api import PSNAWP
-        psnawp = PSNAWP('<64 character npsso code>')
+
+        psnawp = PSNAWP("<64 character npsso code>")
 
     """
 
@@ -58,7 +56,8 @@ class PSNAWP:
         .. code-block:: Python
 
             from psnawp_api import PSNAWP
-            psnawp = PSNAWP('<64 character npsso code>')
+
+            psnawp = PSNAWP("<64 character npsso code>")
             client = psnawp.me()
 
         """
@@ -88,7 +87,7 @@ class PSNAWP:
         .. code-block:: Python
 
             user1 = psnawp.user(online_id="VaultTec_Trading")
-            user2 = psnawp.user(account_id='1802043923080044300')
+            user2 = psnawp.user(account_id="1802043923080044300")
 
         """
         online_id: Optional[str] = kwargs.get("online_id")
@@ -113,7 +112,7 @@ class PSNAWP:
 
         .. note::
 
-            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:meth:`psnawp_api.models.search.Search.get_title_id`
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:class:`psnawp_api.models.search.Search`
 
         .. note::
 

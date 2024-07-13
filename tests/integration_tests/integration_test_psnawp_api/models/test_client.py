@@ -46,6 +46,13 @@ def test_client__get_friends(psnawp_fixture: PSNAWP) -> None:
 
 
 @pytest.mark.vcr()
+def test_client__friend_requests(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        assert len(list(client.friend_requests())) > 0
+
+
+@pytest.mark.vcr()
 def test_client__get_groups(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         client = psnawp_fixture.me()

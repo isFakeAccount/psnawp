@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from logging import getLogger
 from typing import TYPE_CHECKING, Any, TypedDict, cast
 
 from pyrate_limiter import Duration, Limiter, RequestRate, SQLiteBucket
@@ -20,6 +21,8 @@ from psnawp_api.core.psnawp_exceptions import (
 
 if TYPE_CHECKING:
     from requests.sessions import RequestsCookieJar, _Auth, _Cert, _Data, _Files, _HooksInput, _Params, _Timeout, _Verify
+
+request_builder_logger = getLogger("psnawp")
 
 
 def response_checker(response: Response) -> None:
@@ -124,7 +127,11 @@ class RequestBuilder:
         :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
 
         """
+        request_builder_logger.debug(
+            "Sending request: method=%s, url=%s, headers=%s, body=%s", method, kwargs.get("url"), kwargs.get("headers"), kwargs.get("data")
+        )
         response = self.session.request(method=method, **kwargs)
+        request_builder_logger.debug("Received response: status_code=%d, headers=%s, body=%s", response.status_code, response.headers, response.text)
         response_checker(response)
         return response
 

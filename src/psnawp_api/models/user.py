@@ -103,7 +103,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.profile())
 
         """
@@ -124,7 +124,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.get_presence())
 
         """
@@ -149,7 +149,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.friendship())
 
         """
@@ -157,6 +157,20 @@ class User:
             url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_summary'].format(account_id=self.account_id)}"
         ).json()
         return response
+
+    def accept_friend_request(self) -> None:
+        """Accept the friend request by the User.
+
+        :returns: None
+        """
+        self.authenticator.put(url=f"{BASE_PATH['profile_uri']}{API_PATH['manage_friendship'].format(account_id=self.account_id)}")
+
+    def remove_friend(self) -> None:
+        """Decline the friend request or unfriend the User.
+
+        :returns: None
+        """
+        self.authenticator.delete(url=f"{BASE_PATH['profile_uri']}{API_PATH['manage_friendship'].format(account_id=self.account_id)}")
 
     def friends_list(self, limit: int = 1000) -> Generator[User, None, None]:
         """Gets the friends list and returns an iterator of User objects.
@@ -195,7 +209,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='VaultTec_Trading')
+            user_example = psnawp.user(online_id="VaultTec_Trading")
             print(user_example.is_blocked())
 
         """
@@ -254,12 +268,12 @@ class User:
 
         .. note::
 
-            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:meth:`psnawp_api.models.search.Search.get_title_id`
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:class:`psnawp_api.models.search.Search`
 
         .. code-block:: Python
 
             user_example = psnawp.user(online_id="VaultTec_Trading")
-            for trophy_title in user_example.trophy_titles_for_title(title_ids=['CUSA00265_00']):
+            for trophy_title in user_example.trophy_titles_for_title(title_ids=["CUSA00265_00"]):
                 print(trophy_title)
 
         """
@@ -405,7 +419,7 @@ class User:
 
         .. code-block:: Python
 
-            user_example = psnawp.user(online_id='jeranther')
+            user_example = psnawp.user(online_id="jeranther")
             for title in user_example.title_stats():
                 ...
 

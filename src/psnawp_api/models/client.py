@@ -150,6 +150,20 @@ class Client:
             for account_id in response["friends"]
         )
 
+    def friend_requests(self) -> Generator[User, None, None]:
+        """Get the friend request list and returns Generator of received requests.
+
+        :returns: All your friend requests.
+        """
+        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_request'].format(account_id='me')}").json()
+        return (
+            User.from_account_id(
+                authenticator=self.authenticator,
+                account_id=request["accountId"],
+            )
+            for request in response["receivedRequests"]
+        )
+
     def available_to_play(self) -> Generator[User, None, None]:
         """Gets the list of users on your "Notify when available" subscription list.
 
@@ -267,12 +281,12 @@ class Client:
 
         .. note::
 
-            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:meth:`psnawp_api.models.search.Search.get_title_id`
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:class:`psnawp_api.models.search.Search`
 
         .. code-block:: Python
 
             user_example = psnawp.user(online_id="VaultTec_Trading")
-            for trophy_title in user_example.trophy_titles_for_title(title_ids=['CUSA00265_00']):
+            for trophy_title in user_example.trophy_titles_for_title(title_ids=["CUSA00265_00"]):
                 print(trophy_title)
 
         """
