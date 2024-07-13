@@ -21,6 +21,8 @@ API_PATH = {
     "profiles": "/{account_id}/profiles",
     "legacy_profile": "/{online_id}/profile2",
     "friends_list": "/{account_id}/friends",
+    "friends_request": "/{account_id}/friends/receivedRequests",
+    "manage_friendship": "/me/friends/{account_id}",
     "friends_summary": "/me/friends/{account_id}/summary",
     "available_to_play": "/me/friends/subscribing/availableToPlay",
     "blocked_users": "/me/blocks",

@@ -22,8 +22,8 @@ release = metadata.version("psnawp")
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown',
+    ".rst": "restructuredtext",
+    ".md": "markdown",
 }
 extensions = [
     "sphinx.ext.todo",
@@ -40,7 +40,7 @@ autodoc_default_options = {
     "special-members": "__init__",
     "undoc-members": True,
     "exclude-members": "__weakref__",
-    'ignore-module-all': True
+    "ignore-module-all": True,
 }
 html_static_path = ["_static"]
 templates_path = ["_templates"]
@@ -67,13 +67,12 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
-suppress_warnings = ['ref.myst']
+suppress_warnings = ["ref.myst"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "furo"
 pygments_style = "perldoc"
 html_logo = "_static/psn_logo.png"
-intersphinx_mapping = {"python": ("https://docs.python.org", None),
-                       "requests": ("https://requests.readthedocs.io/en/latest/", None)}
+intersphinx_mapping = {"python": ("https://docs.python.org", None), "requests": ("https://requests.readthedocs.io/en/latest/", None)}
 htmlhelp_basename = "PSNAWP"

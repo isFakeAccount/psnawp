@@ -1,6 +1,7 @@
 import inspect
 from os import getenv
 
+import jsonschema
 import pytest
 from psnawp_api import PSNAWP
 from psnawp_api.core import (
@@ -93,7 +94,36 @@ def test_user__get_presence_forbidden(blocked_user: User) -> None:
 @pytest.mark.vcr()
 def test_user__friendship(friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-        friend_user.friendship()
+        response = friend_user.friendship()
+
+        expected_schema = {
+            "type": "object",
+            "properties": {
+                "friendRelation": {"type": "string"},
+                "personalDetailSharing": {"type": "string"},
+                "friendsCount": {"type": "integer"},
+                "mutualFriendsCount": {"type": "integer"},
+            },
+            "required": ["friendRelation", "personalDetailSharing", "friendsCount", "mutualFriendsCount"],
+        }
+
+        # Validate the JSON structure against the schema
+        try:
+            jsonschema.validate(instance=response, schema=expected_schema)
+        except jsonschema.ValidationError as e:
+            pytest.fail(f"JSON structure validation failed: {e.message}")
+
+
+@pytest.mark.vcr()
+def test_user__accept_friend_request(friend_user: User) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        friend_user.accept_friend_request()
+
+
+@pytest.mark.vcr()
+def test_user__remove_friend(friend_user: User) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        friend_user.remove_friend()
 
 
 @pytest.mark.vcr()

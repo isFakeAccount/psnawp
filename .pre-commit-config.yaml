@@ -1,12 +1,4 @@
 repos:
-  - repo: https://github.com/LilSpazJoekp/docstrfmt
-    rev: v1.6.1
-    hooks:
-      - id: docstrfmt
-        language_version: python3
-        exclude: "docs"
-
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
