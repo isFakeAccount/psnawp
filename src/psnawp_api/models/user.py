@@ -158,6 +158,20 @@ class User:
         ).json()
         return response
 
+    def accept_friend_request(self) -> None:
+        """Accept the friend request by the User.
+
+        :returns: None
+        """
+        self.authenticator.put(url=f"{BASE_PATH['profile_uri']}{API_PATH['manage_friendship'].format(account_id=self.account_id)}")
+
+    def remove_friend(self) -> None:
+        """Decline the friend request or unfriend the User.
+
+        :returns: None
+        """
+        self.authenticator.delete(url=f"{BASE_PATH['profile_uri']}{API_PATH['manage_friendship'].format(account_id=self.account_id)}")
+
     def friends_list(self, limit: int = 1000) -> Generator[User, None, None]:
         """Gets the friends list and returns an iterator of User objects.
 
