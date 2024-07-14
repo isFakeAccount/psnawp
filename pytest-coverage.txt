@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.7, pytest-8.2.2, pluggy-1.5.0
-rootdir: /mnt/secondary-ssd/Kira_GitProjects/PythonProjects/psnawp
+platform linux -- Python 3.10.12, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
 plugins: cov-5.0.0, vcr-1.0.2
@@ -21,9 +21,9 @@ tests/integration_tests/integration_test_psnawp_api/models/test_user.py . [ 59%]
 tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py . [ 98%]
 .                                                                        [100%]
 
-- generated xml file: /mnt/secondary-ssd/Kira_GitProjects/PythonProjects/psnawp/pytest.xml -
+-------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
----------- coverage: platform linux, python 3.11.7-final-0 -----------
+---------- coverage: platform linux, python 3.10.12-final-0 ----------
 Coverage HTML written to dir htmlcov
 
-============================== 81 passed in 4.76s ==============================
+============================== 81 passed in 4.77s ==============================
