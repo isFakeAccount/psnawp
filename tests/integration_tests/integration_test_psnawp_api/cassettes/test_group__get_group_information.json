@@ -51,35 +51,8 @@
                     "message": "Moved Temporarily"
                 },
                 "headers": {
-                    "Cache-Control": [
-                        "no-cache, no-store, max-age=0, must-revalidate"
-                    ],
                     "Location": [
-                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.KEWAVS&cid=00000000-0000-0000-0000-b025aa3b2674"
-                    ],
-                    "X-XSS-Protection": [
-                        "1; mode=block"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "X-RequestId": [
-                        "4c159ba156569af5cdfbaebf21ba55d2"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "4c159ba156569af5cdfbaebf21ba55d2"
-                    ],
-                    "Date": [
-                        "Sun, 14 Jul 2024 02:58:55 GMT"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=31536000 ; includeSubDomains"
-                    ],
-                    "Expires": [
-                        "0"
-                    ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.3y77vQ&cid=00000000-0000-0000-0000-b025aa3b2674"
                     ],
                     "X-Frame-Options": [
                         "DENY"
@@ -87,15 +60,42 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Length": [
-                        "0"
-                    ],
                     "Set-Cookie": "REDACTED",
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "e5535c2500e6a409f1b60a0c8b3ec01a"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31536000 ; includeSubDomains"
                     ],
                     "Server": [
                         "nginx"
+                    ],
+                    "Date": [
+                        "Sun, 14 Jul 2024 03:02:15 GMT"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-b025aa3b2674"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-b025aa3b2674"
+                    ],
+                    "X-RequestId": [
+                        "e5535c2500e6a409f1b60a0c8b3ec01a"
+                    ],
+                    "Content-Length": [
+                        "0"
                     ]
                 },
                 "body": {
@@ -144,39 +144,39 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
                     "Cache-Control": [
                         "no-store"
                     ],
-                    "Content-Type": [
-                        "application/json;charset=UTF-8"
+                    "X-Psn-Request-Id": [
+                        "f4cedebaac240905f3bfa8544032a616"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "X-RequestId": [
-                        "91b5d3128a623976b654a25e4e521e79"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "91b5d3128a623976b654a25e4e521e79"
-                    ],
                     "Date": [
-                        "Sun, 14 Jul 2024 02:58:55 GMT"
+                        "Sun, 14 Jul 2024 03:02:15 GMT"
+                    ],
+                    "Server": [
+                        "nginx"
                     ],
                     "X-CorrelationId": [
                         "00000000-0000-0000-0000-b025aa3b2674"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Content-Type": [
+                        "application/json;charset=UTF-8"
                     ],
-                    "Content-Length": [
-                        "3998"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "X-Psn-Correlation-Id": [
                         "00000000-0000-0000-0000-b025aa3b2674"
                     ],
-                    "Server": [
-                        "nginx"
+                    "X-RequestId": [
+                        "f4cedebaac240905f3bfa8544032a616"
+                    ],
+                    "Content-Length": [
+                        "3998"
                     ]
                 },
                 "body": {
@@ -187,7 +187,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5791?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CnotificationSetting",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -212,44 +212,119 @@
             },
             "response": {
                 "status": {
-                    "code": 404,
-                    "message": "Not Found"
+                    "code": 200,
+                    "message": "OK"
                 },
                 "headers": {
-                    "Content-Type": [
-                        "application/json"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Cache-Control": [
+                        "private"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
+                    "Date": [
+                        "Sun, 14 Jul 2024 03:02:15 GMT"
+                    ],
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Sun, 14 Jul 2024 02:58:55 GMT"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "157"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "245"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"02623784-418d-11ef-b1db-99d59f5115e6\", \"code\": 2285581, \"message\": \"Resource not found (groupId='~25C4C5406FD6D50E.763F9A1EB6AB5791')\"}}"
+                    "string": "{\"groups\": [{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CnotificationSetting",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Date": [
+                        "Sun, 14 Jul 2024 03:02:15 GMT"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "764"
+                    ]
+                },
+                "body": {
+                    "string": "{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"modifiedTimestamp\": \"1720923646497\", \"groupName\": {\"value\": \"\", \"status\": 0}, \"groupIcon\": {\"status\": 0}, \"joinedTimestamp\": \"1717991006000\", \"isFavorite\": false, \"existsNewArrival\": false, \"mainThread\": {\"threadId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"modifiedTimestamp\": \"1720923646497\", \"latestMessage\": {\"messageUid\": \"1#440556453503362\", \"messageType\": 1, \"alternativeMessageType\": 1, \"body\": \"Hello\", \"createdTimestamp\": \"1720923646497\", \"sender\": {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}}, \"readMessageUid\": \"1#440556453503362\"}, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}], \"notificationSetting\": {\"isMute\": false}}"
                 }
             }
         }

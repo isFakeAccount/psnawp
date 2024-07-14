@@ -25,11 +25,11 @@
                     "Country": [
                         "US"
                     ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "52"
+                    ],
+                    "Content-Type": [
+                        "application/json"
                     ]
                 }
             },
@@ -39,8 +39,11 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Connection": [
-                        "close"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
                     "Server": [
                         "Apache"
@@ -48,31 +51,28 @@
                     "Content-Length": [
                         "140"
                     ],
+                    "Date": [
+                        "Sun, 14 Jul 2024 02:19:17 GMT"
+                    ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:23 GMT"
+                    "Connection": [
+                        "close"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Content-Type": [
+                        "application/json"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"12d6e7b4-2c34-11ef-b2a4-054056f8f73b\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"79081d25-4187-11ef-9e5f-2db2ca44f497\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
                 }
             }
         }
