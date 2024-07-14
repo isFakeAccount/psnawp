@@ -157,9 +157,6 @@ class PSNAWP:
         group_id: Optional[str] = kwargs.get("group_id")
         users: Optional[Iterable[User]] = kwargs.get("users_list")
 
-        if (group_id and users) or not (group_id or users):
-            raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users, and not both.")
-
         if group_id is not None:
             return Group.create_from_group_id(self.authenticator, group_id=group_id)
         elif users is not None:

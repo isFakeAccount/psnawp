@@ -46,10 +46,10 @@
                         "Apache"
                     ],
                     "Content-Length": [
-                        "245"
+                        "255"
                     ],
                     "Date": [
-                        "Sun, 14 Jul 2024 02:19:16 GMT"
+                        "Sun, 14 Jul 2024 02:19:18 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -69,15 +69,15 @@
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"dc6266af0b99f2f7e0a24441e4ee9058c0034b87-961\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
-                "method": "PATCH",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E",
-                "body": "{\"groupName\": {\"value\": \"Testing API\"}}",
+                "method": "DELETE",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/dc6266af0b99f2f7e0a24441e4ee9058c0034b87-961/members/2066273503397112667",
+                "body": null,
                 "headers": {
                     "User-Agent": [
                         "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
@@ -98,19 +98,19 @@
                         "US"
                     ],
                     "Content-Length": [
-                        "39"
-                    ],
-                    "Content-Type": [
-                        "application/json"
+                        "0"
                     ]
                 }
             },
             "response": {
                 "status": {
-                    "code": 400,
-                    "message": "Bad Request"
+                    "code": 204,
+                    "message": "No Content"
                 },
                 "headers": {
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
@@ -120,31 +120,25 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Content-Length": [
-                        "103"
-                    ],
                     "Date": [
-                        "Sun, 14 Jul 2024 02:19:16 GMT"
+                        "Sun, 14 Jul 2024 02:19:19 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
+                    "Set-Cookie": "REDACTED",
                     "Connection": [
-                        "close"
+                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Content-Type": [
-                        "application/json"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"78737ee9-4187-11ef-9d3b-ab129bf6db4c\", \"code\": 2285696, \"message\": \"Bad Request\"}}"
+                    "string": ""
                 }
             }
         }
