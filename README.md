@@ -32,7 +32,7 @@ pip install PSNAWP
 ## Getting Started
 
 > [!CAUTION]
-> This library is an unofficial and reverse-engineered API wrapper for the PlayStation Network (PSN). It has been developed based on the reverse engineering of the PSN Android app. At the moment the library doesn't implement automatic rate limiting. It is crucial for users to manually manage their request rate to avoid sending too many requests in a short period. Excessive use or bulk requests may lead to your PSN account being temporarily or permanently banned.
+> This library is an unofficial and reverse-engineered API wrapper for the PlayStation Network (PSN). It has been developed based on the reverse engineering of the PSN Android app. The API wrapper (>= v2.1.0) will self rate limit at 300 requests per 15 minutes. However, it is still important that you don't send bulk requests using this API. Excessive use of API may lead to your PSN account being temporarily or permanently banned.
 >
 > You can also create a dedicated account to use this library so that in the worst-case scenario you do not lose access to your primary account, along with your video games and progress.
 
