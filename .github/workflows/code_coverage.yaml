@@ -33,7 +33,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          poetry run pytest --cov-config=.coveragerc --junitxml=pytest.xml --cov=psnawp_api | tee pytest-coverage.txt
+          poetry run pytest --cov-config=pyproject.toml | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}

@@ -9,18 +9,18 @@ from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
 @pytest.mark.vcr()
-def test_group__group_incorrect_args(psnawp_fixture: PSNAWP) -> None:
+def test_group__group_incorrect_args_None(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         with pytest.raises(PSNAWPIllegalArgumentError):
-            psnawp_fixture.group(group_id="~25C4C5406FD6D50E.763F9A1EB6AB5790", users_list=["Help"])
+            psnawp_fixture.group(group_id=None, users_list=None)
 
 
 @pytest.mark.vcr()
 def test_group__group_with_wrong_id(psnawp_fixture: PSNAWP) -> None:
-    with pytest.raises(PSNAWPNotFound):
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        with pytest.raises(PSNAWPNotFound):
             group = psnawp_fixture.group(group_id="~25C4C5406FD6D50E.763F9A1EB6AB5791")
-            group.send_message("Hi")
+            group.get_group_information()
 
 
 @pytest.mark.vcr()
@@ -40,6 +40,15 @@ def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
         assert last_group.group_id is not None
         group = psnawp_fixture.group(group_id=last_group.group_id)
         group.send_message("Hello World!")
+
+
+@pytest.mark.vcr()
+def test_group__get_group_information(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        last_group = next(psnawp_fixture.me().get_groups(limit=1))
+        assert last_group.group_id is not None
+        group = psnawp_fixture.group(group_id=last_group.group_id)
+        group.get_group_information()
 
 
 @pytest.mark.vcr()
