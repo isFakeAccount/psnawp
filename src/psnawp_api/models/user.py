@@ -18,7 +18,7 @@ from psnawp_api.models.trophies import (
     TrophyTitleIterator,
     TrophyWithProgressIterator,
 )
-from psnawp_api.utils import API_PATH, BASE_PATH
+from psnawp_api.utils import API_PATH, BASE_PATH, extract_region_from_npid
 
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
@@ -92,6 +92,22 @@ class User:
         self.account_id = account_id
         self.prev_online_id = online_id
 
+    @property
+    def region(self) -> Optional[str]:
+        """Gets the region of the user.
+
+        :returns: A string containing the region of the user or None if not found.
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            print(user_example.region)
+
+        """
+        response = self.get_profile_legacy()
+        npid: Optional[str] = response.get("profile", {}).get("npId", "")
+        return extract_region_from_npid(npid)
+
     def profile(self) -> dict[str, Any]:
         """Gets the profile of the user such as about me, avatars, languages etc...
 
@@ -109,6 +125,35 @@ class User:
         """
 
         response: dict[str, Any] = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}").json()
+        return response
+
+    def get_profile_legacy(self) -> dict[str, Any]:
+        """Gets the user profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
+
+        :returns: A dict containing info similar to what is shown below:
+
+            .. literalinclude:: examples/client/get_profile_legacy.json
+                :language: json
+
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            print(user_example.get_profile_legacy())
+
+        """
+        params = {
+            "fields": "npId,onlineId,accountId,avatarUrls,plus,aboutMe,languagesUsed,trophySummary(@default,level,progress,earnedTrophies),"
+            "isOfficiallyVerified,personalDetail(@default,profilePictureUrls),personalDetailSharing,personalDetailSharingRequestMessageFlag,"
+            "primaryOnlineStatus,presences(@default,@titleInfo,platform,lastOnlineDate,hasBroadcastData),requestMessageFlag,blocking,friendRelation,"
+            "following,consoleAvailability"
+        }
+
+        response: dict[str, Any] = self.authenticator.get(
+            url=f"{BASE_PATH['legacy_profile_uri']}{API_PATH['legacy_profile'].format(online_id=self.online_id)}",
+            params=params,
+        ).json()
+
         return response
 
     def get_presence(self) -> dict[str, Any]:

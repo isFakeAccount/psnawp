@@ -14,7 +14,7 @@ from psnawp_api.models.trophies import (
     TrophyWithProgressIterator,
 )
 from psnawp_api.models.user import User
-from psnawp_api.utils import API_PATH, BASE_PATH
+from psnawp_api.utils import API_PATH, BASE_PATH, extract_region_from_npid
 
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
@@ -67,6 +67,22 @@ class Client:
         response = self.authenticator.get(url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}").json()
         account_id: str = response["accountId"]
         return account_id
+
+    @cached_property
+    def region(self) -> Optional[str]:
+        """Gets the region of the client logged in the api.
+
+        :returns: region of logged in user or None if not found.
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.region)
+
+        """
+        response = self.get_profile_legacy()
+        npid: Optional[str] = response.get("profile", {}).get("npId", "")
+        return extract_region_from_npid(npid)
 
     def get_profile_legacy(self) -> dict[str, Any]:
         """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
