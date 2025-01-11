@@ -142,3 +142,10 @@ def test_client__repr_and_str(psnawp_fixture: PSNAWP) -> None:
         client = psnawp_fixture.me()
         repr(client)
         str(client)
+
+
+@pytest.mark.vcr()
+def test_client__get_region(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        client.get_region()

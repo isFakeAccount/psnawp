@@ -326,3 +326,16 @@ def test_user__repr_and_str(friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         repr(friend_user)
         str(friend_user)
+
+@pytest.mark.vcr()
+def test_user__get_region_as_country_name(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        user_example = psnawp_fixture.user(online_id="VaultTec_Trading")
+        assert user_example.get_region() == "United States"
+
+
+@pytest.mark.vcr()
+def test_user__get_region_as_country_code(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        user_example = psnawp_fixture.user(online_id="VaultTec_Trading")
+        assert user_example.get_region(return_country_name=False) == "US"
