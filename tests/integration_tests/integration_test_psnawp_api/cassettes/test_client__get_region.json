@@ -246,7 +246,7 @@
                     ]
                 },
                 "body": {
-                    "string": "{\"accountId\": \"6016954452236361145\", \"accountDevices\": [{\"deviceId\": \"5053eaed1564227087f5d4973fe9dcacfe68422bf9f945a092ac80869bb13025e2c9\", \"deviceType\": \"PS4\", \"activationType\": \"PSN_GAME_V3\", \"activationDate\": \"2024-08-10T14:11:25.453Z\", \"accountDeviceVector\": \"nkNPzwW7wDArkYuamSJj8w\"}, {\"deviceId\": \"505309b398f28581a3cfd915d3b30fa02976746a64b2b23bd8a99f36b6518091e402\", \"deviceType\": \"PS5\", \"activationType\": \"PRIMARY\", \"activationDate\": \"2024-11-18T23:13:36.338Z\", \"accountDeviceVector\": \"ZDn8RBVPVRF3su+V2eLyRQ\"}]}"
+                    "string": "{\"accountId\": \"6016954452236361145\"}"
                 }
             }
         },
