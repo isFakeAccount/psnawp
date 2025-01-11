@@ -92,22 +92,6 @@ class User:
         self.account_id = account_id
         self.prev_online_id = online_id
 
-    @property
-    def region(self) -> Optional[str]:
-        """Gets the region of the user.
-
-        :returns: A string containing the region of the user or None if not found.
-
-        .. code-block:: Python
-
-            user_example = psnawp.user(online_id="VaultTec_Trading")
-            print(user_example.region)
-
-        """
-        response = self.get_profile_legacy()
-        npid: Optional[str] = response.get("profile", {}).get("npId", "")
-        return extract_region_from_npid(npid)
-
     def profile(self) -> dict[str, Any]:
         """Gets the profile of the user such as about me, avatars, languages etc...
 
@@ -126,6 +110,24 @@ class User:
 
         response: dict[str, Any] = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}").json()
         return response
+
+    def get_region(self, return_country_name: Optional[bool] = True) -> Optional[str]:
+        """Gets the region of the user.
+
+        :param return_country_name: If True, returns the region as the full country name (e.g., "United States").
+                                    If False, returns the region as an ISO 3166-1 alpha-2 code (e.g., "US").
+
+        :returns: A string containing the region of the user or None if not found.
+
+        .. code-block:: Python
+
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            print(user_example.get_region())
+
+        """
+        response = self.get_profile_legacy()
+        npid: Optional[str] = response.get("profile", {}).get("npId", "")
+        return extract_region_from_npid(npid, return_country_name)
 
     def get_profile_legacy(self) -> dict[str, Any]:
         """Gets the user profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.

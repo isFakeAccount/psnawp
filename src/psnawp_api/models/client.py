@@ -68,21 +68,23 @@ class Client:
         account_id: str = response["accountId"]
         return account_id
 
-    @cached_property
-    def region(self) -> Optional[str]:
+    def get_region(self, return_country_name: Optional[bool] = True) -> Optional[str]:
         """Gets the region of the client logged in the api.
+
+        :param return_country_name: If True, returns the region as the full country name (e.g., "United States").
+                                    If False, returns the region as an ISO 3166-1 alpha-2 code (e.g., "US").
 
         :returns: region of logged in user or None if not found.
 
         .. code-block:: Python
 
             client = psnawp.me()
-            print(client.region)
+            print(client.get_region())
 
         """
         response = self.get_profile_legacy()
         npid: Optional[str] = response.get("profile", {}).get("npId", "")
-        return extract_region_from_npid(npid)
+        return extract_region_from_npid(npid, return_country_name)
 
     def get_profile_legacy(self) -> dict[str, Any]:
         """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.
