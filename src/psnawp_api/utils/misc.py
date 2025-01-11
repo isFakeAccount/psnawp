@@ -2,18 +2,17 @@ from __future__ import annotations
 
 import base64
 import binascii
-import re
 from datetime import datetime
 from typing import Optional
 
-DECODED_NPID_PATTERN = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+from pycountry import countries as pycounties
 
 
 def iso_format_to_datetime(iso_format: Optional[str]) -> Optional[datetime]:
     return datetime.fromisoformat(iso_format.replace("Z", "+00:00")) if iso_format is not None else None
 
 
-def extract_region_from_npid(npid: Optional[str]) -> Optional[str]:
+def extract_region_from_npid(npid: Optional[str], return_full_ctry_name: Optional[bool] = True) -> Optional[str]:
     if not npid:
         return None
 
@@ -22,9 +21,15 @@ def extract_region_from_npid(npid: Optional[str]) -> Optional[str]:
     except (binascii.Error, UnicodeDecodeError):
         return None
 
-    if re.match(DECODED_NPID_PATTERN, decoded_npid):
-        match = re.search(r"\.([a-zA-Z]{2})$", decoded_npid)
-        # Parse the region from the decoded npId (e.g. User@a1.us -> "US")
-        return match.group(1).upper() if match and match.group(1) else None
+    # Assuming a valid decoded npid format (e.g. VaultTec-Co@b7.us), extract the region (e.g. "US")
+    if "@" in decoded_npid and "." in decoded_npid:
+        region_candidate = decoded_npid.split(".")[-1]
+        if len(region_candidate) == 2 and region_candidate.isalpha():
+            return get_country_name_from_code(region_candidate) if return_full_ctry_name else region_candidate.upper()
 
     return None
+
+
+def get_country_name_from_code(code: str) -> Optional[str]:
+    country = pycounties.get(alpha_2=code)
+    return country.name if country else None

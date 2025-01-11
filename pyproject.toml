@@ -30,6 +30,7 @@ requests = "^2.32.3"
 typing-extensions = "^4.12.2"
 requests-ratelimiter = "^0.7.0"
 pyright = "^1.1.370"
+pycountry = "^24.6.1"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.10.1"
