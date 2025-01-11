@@ -327,6 +327,7 @@ def test_user__repr_and_str(friend_user: User) -> None:
         repr(friend_user)
         str(friend_user)
 
+
 @pytest.mark.vcr()
 def test_user__get_region_as_country_name(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
