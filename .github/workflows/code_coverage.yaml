@@ -53,11 +53,12 @@ jobs:
           badge-title: Coverage
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
+          default-branch: ${{ github.head_ref || github.ref_name }}
 
       - name: Update Readme with Coverage Html
         run: |
           sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
-  
+
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
         with:
