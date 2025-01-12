@@ -26,4 +26,4 @@ tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py . [
 ---------- coverage: platform linux, python 3.11.11-final-0 ----------
 Coverage HTML written to dir htmlcov
 
-============================== 84 passed in 4.86s ==============================
+============================== 84 passed in 4.88s ==============================
