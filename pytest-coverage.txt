@@ -9,7 +9,7 @@ collected 84 items
 tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py . [  1%]
 ..                                                                       [  3%]
 tests/integration_tests/integration_test_psnawp_api/models/test_client.py . [  4%]
-.................F                                                       [ 26%]
+..................                                                       [ 26%]
 tests/integration_tests/integration_test_psnawp_api/models/test_game_title.py . [ 27%]
 ........                                                                 [ 36%]
 tests/integration_tests/integration_test_psnawp_api/models/test_group.py . [ 38%]
@@ -17,108 +17,13 @@ tests/integration_tests/integration_test_psnawp_api/models/test_group.py . [ 38%
 tests/integration_tests/integration_test_psnawp_api/models/test_search.py . [ 54%]
 ..                                                                       [ 57%]
 tests/integration_tests/integration_test_psnawp_api/models/test_user.py . [ 58%]
-...............................F                                         [ 96%]
+................................                                         [ 96%]
 tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py . [ 97%]
-.F                                                                       [100%]
+..                                                                       [100%]
 
-=================================== FAILURES ===================================
-___________________________ test_client__get_region ____________________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f92fe73ae90>
-
-    @pytest.mark.vcr()
-    def test_client__get_region(psnawp_fixture: PSNAWP) -> None:
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-            client = psnawp_fixture.me()
->           assert isinstance(client.get_region(), Country)
-
-tests/integration_tests/integration_test_psnawp_api/models/test_client.py:152: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/models/client.py:90: in get_region
-    return extract_region_from_npid(npid)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-npid = 'VmF1bHRUZWMtQ29AYjcudXM='
-
-    def extract_region_from_npid(npid: str) -> Optional[Country]:
-        try:
-            decoded_npid = base64.b64decode(npid).decode("utf-8")
-        except (binascii.Error, UnicodeDecodeError):
-            return None
-    
-        # Assuming a valid decoded npid format (e.g. VaultTec-Co@b7.us), extract the region (e.g. "US")
-        if "@" in decoded_npid and "." in decoded_npid:
-            region_candidate = decoded_npid.split(".")[-1]
-            if len(region_candidate) == 2 and region_candidate.isalpha():
->               return cast(Country, countries.get(alpha_2=region_candidate))
-E               NameError: name 'Country' is not defined
-
-src/psnawp_api/utils/misc.py:28: NameError
-____________________________ test_user__get_region _____________________________
-
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f92fe73ae90>
-
-    @pytest.mark.vcr()
-    def test_user__get_region(psnawp_fixture: PSNAWP) -> None:
-        with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-            user_example = psnawp_fixture.user(online_id="VaultTec_Trading")
->           assert user_example.get_region() == countries.get(alpha_2="US")
-
-tests/integration_tests/integration_test_psnawp_api/models/test_user.py:336: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src/psnawp_api/models/user.py:133: in get_region
-    return extract_region_from_npid(npid)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-npid = 'VmF1bHRUZWNfVHJhZGluZ0BiNi51cw=='
-
-    def extract_region_from_npid(npid: str) -> Optional[Country]:
-        try:
-            decoded_npid = base64.b64decode(npid).decode("utf-8")
-        except (binascii.Error, UnicodeDecodeError):
-            return None
-    
-        # Assuming a valid decoded npid format (e.g. VaultTec-Co@b7.us), extract the region (e.g. "US")
-        if "@" in decoded_npid and "." in decoded_npid:
-            region_candidate = decoded_npid.split(".")[-1]
-            if len(region_candidate) == 2 and region_candidate.isalpha():
->               return cast(Country, countries.get(alpha_2=region_candidate))
-E               NameError: name 'Country' is not defined
-
-src/psnawp_api/utils/misc.py:28: NameError
-________________________ test_extract_region_from_npid _________________________
-
-    def test_extract_region_from_npid() -> None:
-        assert extract_region_from_npid("") is None
-        assert extract_region_from_npid("VaultTec-Co@b7.us") is None
->       assert extract_region_from_npid("VmF1bHRUZWMtQ29AYjcudXM=") == countries.get(alpha_2="US")
-
-tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py:29: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-npid = 'VmF1bHRUZWMtQ29AYjcudXM='
-
-    def extract_region_from_npid(npid: str) -> Optional[Country]:
-        try:
-            decoded_npid = base64.b64decode(npid).decode("utf-8")
-        except (binascii.Error, UnicodeDecodeError):
-            return None
-    
-        # Assuming a valid decoded npid format (e.g. VaultTec-Co@b7.us), extract the region (e.g. "US")
-        if "@" in decoded_npid and "." in decoded_npid:
-            region_candidate = decoded_npid.split(".")[-1]
-            if len(region_candidate) == 2 and region_candidate.isalpha():
->               return cast(Country, countries.get(alpha_2=region_candidate))
-E               NameError: name 'Country' is not defined
-
-src/psnawp_api/utils/misc.py:28: NameError
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 
 ---------- coverage: platform linux, python 3.11.11-final-0 ----------
 Coverage HTML written to dir htmlcov
 
-=========================== short test summary info ============================
-FAILED tests/integration_tests/integration_test_psnawp_api/models/test_client.py::test_client__get_region - NameError: name 'Country' is not defined
-FAILED tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_region - NameError: name 'Country' is not defined
-FAILED tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py::test_extract_region_from_npid - NameError: name 'Country' is not defined
-========================= 3 failed, 81 passed in 4.41s =========================
+============================== 84 passed in 4.37s ==============================
