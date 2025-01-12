@@ -7,7 +7,7 @@
 - kerdion @kerdion
 - andshrew @andshrew
 - Omar Mujtaba @omz1990
-- R @Dev-R 
+- R @Dev-R
 
 # Documentation Contributors
 - andshrew @andshrew
