@@ -51,7 +51,7 @@ jobs:
         with:
           hide-comment: true
           badge-title: Coverage
-          pytest-coverage-path: ./pytest-coverage.txt
+          pytest-coverage-path: pytest-coverage.txt
           junitxml-path: ./pytest.xml
 
       - name: Update Readme with Coverage Html
