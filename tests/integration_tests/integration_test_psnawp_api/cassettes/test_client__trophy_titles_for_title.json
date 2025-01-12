@@ -33,30 +33,30 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Cache-Control": [
-                        "private"
-                    ],
                     "Content-Length": [
                         "59"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "Date": [
-                        "Sun, 16 Jun 2024 22:59:13 GMT"
+                        "Sat, 11 Jan 2025 22:44:29 GMT"
                     ]
                 },
                 "body": {

@@ -33,34 +33,34 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "X-RequestId": [
+                        "5e5f12c2-5b8f-49bb-b187-1f38e2464657"
+                    ],
+                    "X-CorrelationId": [
+                        "5e5f12c2-5b8f-49bb-b187-1f38e2464657"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "5e5f12c2-5b8f-49bb-b187-1f38e2464657"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Request-Id": [
-                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
-                    ],
-                    "X-RequestId": [
-                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
-                    ],
                     "Content-Length": [
                         "35"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "5e5f12c2-5b8f-49bb-b187-1f38e2464657"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "Date": [
-                        "Sun, 16 Jun 2024 22:59:11 GMT"
+                        "Sat, 11 Jan 2025 22:44:25 GMT"
                     ],
-                    "X-CorrelationId": [
-                        "8e3d89b6-f2e2-407a-a85e-2fb82da81f85"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"accountId\": \"2721516955383551246\"}"

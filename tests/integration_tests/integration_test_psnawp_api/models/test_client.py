@@ -6,6 +6,7 @@ import pytest
 from psnawp_api import PSNAWP
 from psnawp_api.core import PSNAWPNotFound
 from psnawp_api.models.trophies import PlatformType
+from pycountry.db import Country
 
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
@@ -142,3 +143,10 @@ def test_client__repr_and_str(psnawp_fixture: PSNAWP) -> None:
         client = psnawp_fixture.me()
         repr(client)
         str(client)
+
+
+@pytest.mark.vcr()
+def test_client__get_region(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        assert isinstance(client.get_region(), Country)

@@ -11,6 +11,7 @@ from psnawp_api.core import (
 )
 from psnawp_api.models import User
 from psnawp_api.models.trophies import PlatformType
+from pycountry import countries
 
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
@@ -326,3 +327,10 @@ def test_user__repr_and_str(friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         repr(friend_user)
         str(friend_user)
+
+
+@pytest.mark.vcr()
+def test_user__get_region(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        user_example = psnawp_fixture.user(online_id="VaultTec_Trading")
+        assert user_example.get_region() == countries.get(alpha_2="US")

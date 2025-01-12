@@ -33,26 +33,14 @@
                     "message": "Bad Request"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
                     "Cache-Control": [
                         "private"
                     ],
-                    "Content-Length": [
-                        "121"
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:18:37 GMT"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
@@ -60,19 +48,31 @@
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:28 GMT"
+                    "Connection": [
+                        "keep-alive"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0014746517760302865"
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "121"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0450675932240266371"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"1581951e-2c34-11ef-a014-098cc16a4335\", \"code\": 2281473, \"message\": \"Bad Request (path: accountId)\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"ea1158f9-d093-11ef-bb6f-55f088887891\", \"code\": 2281473, \"message\": \"Bad Request (path: accountId)\"}}"
                 }
             }
         }

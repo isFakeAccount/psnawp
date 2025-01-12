@@ -51,51 +51,51 @@
                     "message": "Moved Temporarily"
                 },
                 "headers": {
-                    "Location": [
-                        "https://my.account.sony.com/sonyacct/signin/?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=true&cid=00000000-0000-0000-0000-b025aa3b2674"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "a8f4f977efb634ef8b8bfcff83160069"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                    "Content-Length": [
+                        "0"
                     ],
                     "Cache-Control": [
                         "no-cache, no-store, max-age=0, must-revalidate"
                     ],
+                    "Set-Cookie": "REDACTED",
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "X-RequestId": [
+                        "b3e613207ee0ca325327ed990bb9a6f9"
+                    ],
+                    "Location": [
+                        "https://my.account.sony.com/sonyacct/signin/?access_type=offline&cid=00000000-0000-0000-0000-b025aa3b2674&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&PlatformPrivacyWs1=minimal&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=true&cid=00000000-0000-0000-0000-b025aa3b2674"
+                    ],
                     "X-Frame-Options": [
                         "DENY"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "X-RequestId": [
-                        "a8f4f977efb634ef8b8bfcff83160069"
-                    ],
-                    "Content-Length": [
-                        "0"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=31536000 ; includeSubDomains"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "X-Psn-Request-Id": [
+                        "b3e613207ee0ca325327ed990bb9a6f9"
                     ],
                     "Expires": [
                         "0"
                     ],
-                    "X-XSS-Protection": [
-                        "1; mode=block"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Date": [
-                        "Sun, 16 Jun 2024 22:59:09 GMT"
+                        "Sat, 11 Jan 2025 22:11:32 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "X-CorrelationId": [
                         "00000000-0000-0000-0000-b025aa3b2674"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-b025aa3b2674"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31536000 ; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ]
                 },
                 "body": {

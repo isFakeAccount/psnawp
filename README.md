@@ -60,6 +60,7 @@ psnawp = PSNAWP("<64 character npsso code>")
 client = psnawp.me()
 print(f"Online ID: {client.online_id}")
 print(f"Account ID: {client.account_id}")
+print(f"Region: {client.get_region()}")
 print(f"Profile: {client.get_profile_legacy()} \n")
 
 # Your Registered Devices
@@ -111,6 +112,7 @@ for title in titles_with_stats:
 example_user_1 = psnawp.user(online_id="VaultTec-Co")  # Get a PSN player by their Online ID
 print(f"User 1 Online ID: {example_user_1.online_id}")
 print(f"User 1 Account ID: {example_user_1.account_id}")
+print(f"User 1 Region: {example_user_1.get_region()}")
 
 print(example_user_1.profile())
 print(example_user_1.prev_online_id)

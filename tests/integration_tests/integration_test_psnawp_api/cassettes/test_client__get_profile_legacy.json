@@ -33,34 +33,34 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "X-RequestId": [
+                        "d64b3d4e-6976-4107-814a-fab23bbb01f6"
+                    ],
+                    "X-CorrelationId": [
+                        "d64b3d4e-6976-4107-814a-fab23bbb01f6"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "d64b3d4e-6976-4107-814a-fab23bbb01f6"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Request-Id": [
-                        "d4389c96-749c-479f-a1a6-7015204bb314"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "d4389c96-749c-479f-a1a6-7015204bb314"
-                    ],
-                    "X-RequestId": [
-                        "d4389c96-749c-479f-a1a6-7015204bb314"
-                    ],
                     "Content-Length": [
                         "35"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "d64b3d4e-6976-4107-814a-fab23bbb01f6"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "Date": [
-                        "Sun, 16 Jun 2024 22:59:10 GMT"
+                        "Sat, 11 Jan 2025 22:44:24 GMT"
                     ],
-                    "X-CorrelationId": [
-                        "d4389c96-749c-479f-a1a6-7015204bb314"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"accountId\": \"2721516955383551246\"}"
@@ -99,42 +99,42 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Cache-Control": [
-                        "private"
-                    ],
                     "Content-Length": [
                         "1619"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:10 GMT"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "X-Psn-Track-Id": [
-                        "0044977435577757654"
+                        "0834433592898889875"
+                    ],
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 11 Jan 2025 22:44:25 GMT"
                     ]
                 },
                 "body": {
@@ -180,32 +180,29 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Cache-Control": [
-                        "no-store"
-                    ],
-                    "content-length": [
+                    "Content-Length": [
                         "1096"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
-                    "Vary": [
-                        "accept-encoding"
-                    ],
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:11 GMT"
+                    "Cache-Control": [
+                        "no-store"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
+                    ],
+                    "Date": [
+                        "Sat, 11 Jan 2025 22:44:25 GMT"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

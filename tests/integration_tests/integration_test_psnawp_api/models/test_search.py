@@ -30,7 +30,7 @@ def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
 @pytest.mark.vcr()
 def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-        search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=1)
+        search = psnawp_fixture.search(search_query="GTA 5", search_domain=SearchDomain.FULL_GAMES, limit=1)
         for result in search:
             assert result["result"]["invariantName"] == "Grand Theft Auto V (PlayStation®5)"
             assert result["result"]["defaultProduct"]["id"] == "UP1004-PPSA03420_00-GTAOSTANDALONE01"

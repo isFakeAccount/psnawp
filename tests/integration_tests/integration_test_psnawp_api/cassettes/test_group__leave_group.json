@@ -33,50 +33,50 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:23:30 GMT"
+                    ],
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "192"
-                    ],
-                    "Date": [
-                        "Sun, 14 Jul 2024 02:19:21 GMT"
-                    ],
+                    "Set-Cookie": "REDACTED",
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Content-Length": [
+                        "192"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"dc6266af0b99f2f7e0a24441e4ee9058c0034b87-961\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"34e99b8734b0283a0f7e3a291d5d84f35e1bb522-372\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
                 "method": "DELETE",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/dc6266af0b99f2f7e0a24441e4ee9058c0034b87-961/members/me",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/34e99b8734b0283a0f7e3a291d5d84f35e1bb522-372/members/me",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -108,11 +108,23 @@
                     "message": "No Content"
                 },
                 "headers": {
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:23:30 GMT"
+                    ],
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
@@ -120,22 +132,10 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Sun, 14 Jul 2024 02:19:21 GMT"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": ""

@@ -36,37 +36,37 @@
                     "message": "No Content"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Cache-Control": [
                         "private"
+                    ],
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:18:42 GMT"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Sat, 13 Jul 2024 07:42:44 GMT"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "X-Psn-Track-Id": [
-                        "0380588015907686754"
-                    ]
+                        "0721827968730858957"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": ""

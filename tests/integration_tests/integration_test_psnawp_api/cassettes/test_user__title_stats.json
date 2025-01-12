@@ -33,50 +33,50 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Pragma": [
-                        "no-cache"
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:19:09 GMT"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "X-Psn-Request-Id": [
-                        "53a3c1c8-83f5-1031-ad5f-e294c563f466"
+                        "83f775ad-94d1-1031-a2e5-5826db577e13"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
+                    ],
+                    "Pragma": [
+                        "no-cache"
                     ],
                     "X-Psn-Correlation-Id": [
-                        "53a3c1c8-83f5-1031-ad5e-e294c563f466"
-                    ],
-                    "Cache-Control": [
-                        "max-age=0, no-cache, no-store"
+                        "83f775ad-94d1-1031-a2e4-5826db577e13"
                     ],
                     "Content-Length": [
                         "69"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Access-Control-Max-Age": [
+                        "3600"
+                    ],
+                    "Expires": [
+                        "Sun, 12 Jan 2025 03:19:09 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD"
-                    ],
-                    "Expires": [
-                        "Sun, 16 Jun 2024 23:00:00 GMT"
-                    ],
                     "Content-Type": [
                         "application/json"
-                    ],
-                    "Date": [
-                        "Sun, 16 Jun 2024 23:00:00 GMT"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "3600"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
