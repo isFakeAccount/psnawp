@@ -2,7 +2,7 @@
 name = "PSNAWP"
 version = "2.1.0"
 description = "Python API Wrapper for PlayStation Network API"
-authors = ["isFakeAccount <trevorphillips@gmx.us>"]
+authors = ["isFakeAccount <8bit_yoshikage_kira@proton.me>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/isFakeAccount/psnawp"

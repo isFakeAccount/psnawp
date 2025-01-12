@@ -3,12 +3,10 @@ from __future__ import annotations
 import base64
 import binascii
 from datetime import datetime
-from typing import TYPE_CHECKING, Optional, cast
+from typing import Optional, cast
 
 from pycountry import countries
-
-if TYPE_CHECKING:
-    from pycountry.db import Country
+from pycountry.db import Country
 
 
 def iso_format_to_datetime(iso_format: Optional[str]) -> Optional[datetime]:
