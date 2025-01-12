@@ -33,6 +33,9 @@
                     "message": "Not Found"
                 },
                 "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
@@ -42,22 +45,19 @@
                     "Content-Length": [
                         "110"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Date": [
+                        "Sun, 12 Jan 2025 00:15:56 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:19 GMT"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"1039a7b1-2c34-11ef-ba39-bd72c10ade5e\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"64beadf0-d07a-11ef-a509-7509b9324c80\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
                 }
             }
         }

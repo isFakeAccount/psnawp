@@ -125,10 +125,7 @@ class TrophyGroupsSummary(Generic[T]):
 
     def __str__(self) -> str:
         return (
-            f"TrophyGroupsSummary(Title: {self.trophy_title_name}, "
-            f"Defined: {self.defined_trophies}, "
-            f"Earned: {self.earned_trophies}, "
-            f"Progress: {self.progress})"
+            f"TrophyGroupsSummary(Title: {self.trophy_title_name}, Defined: {self.defined_trophies}, Earned: {self.earned_trophies}, Progress: {self.progress})"
         )
 
     def __repr__(self) -> str:

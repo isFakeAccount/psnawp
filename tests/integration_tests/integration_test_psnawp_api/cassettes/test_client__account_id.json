@@ -33,34 +33,34 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "X-RequestId": [
+                        "ef41b76f-4b3a-432d-b0dc-3ec1efb3727b"
+                    ],
+                    "X-CorrelationId": [
+                        "ef41b76f-4b3a-432d-b0dc-3ec1efb3727b"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "ef41b76f-4b3a-432d-b0dc-3ec1efb3727b"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Request-Id": [
-                        "7f488567-6474-46cf-8cf3-3544a695b8c7"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "7f488567-6474-46cf-8cf3-3544a695b8c7"
-                    ],
-                    "X-RequestId": [
-                        "7f488567-6474-46cf-8cf3-3544a695b8c7"
-                    ],
                     "Content-Length": [
                         "35"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "ef41b76f-4b3a-432d-b0dc-3ec1efb3727b"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Set-Cookie": "REDACTED",
                     "Date": [
-                        "Sun, 16 Jun 2024 22:59:10 GMT"
+                        "Sat, 11 Jan 2025 22:44:24 GMT"
                     ],
-                    "X-CorrelationId": [
-                        "7f488567-6474-46cf-8cf3-3544a695b8c7"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"accountId\": \"2721516955383551246\"}"

@@ -17,6 +17,8 @@ from psnawp_api.models.user import User
 from psnawp_api.utils import API_PATH, BASE_PATH, extract_region_from_npid
 
 if TYPE_CHECKING:
+    from pycountry.db import Country
+
     from psnawp_api.core import Authenticator
     from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress
 
@@ -68,23 +70,24 @@ class Client:
         account_id: str = response["accountId"]
         return account_id
 
-    def get_region(self, return_country_name: Optional[bool] = True) -> Optional[str]:
+    def get_region(self) -> Optional[Country]:
         """Gets the region of the client logged in the api.
 
-        :param return_country_name: If True, returns the region as the full country name (e.g., "United States").
-                                    If False, returns the region as an ISO 3166-1 alpha-2 code (e.g., "US").
-
-        :returns: region of logged in user or None if not found.
+        :returns: Returns Country object from Pycountry for logged in user or None if not found.
 
         .. code-block:: Python
 
             client = psnawp.me()
             print(client.get_region())
 
+        .. note::
+
+            See https://github.com/pycountry/pycountry for more info on Country object.
+
         """
         response = self.get_profile_legacy()
-        npid: Optional[str] = response.get("profile", {}).get("npId", "")
-        return extract_region_from_npid(npid, return_country_name)
+        npid = response.get("profile", {}).get("npId", "")
+        return extract_region_from_npid(npid)
 
     def get_profile_legacy(self) -> dict[str, Any]:
         """Gets the profile info from legacy api endpoint. Useful for legacy console (PS3, PS4) presence.

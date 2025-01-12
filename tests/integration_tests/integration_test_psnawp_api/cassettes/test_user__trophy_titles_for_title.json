@@ -33,38 +33,35 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:19:05 GMT"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Cache-Control": [
-                        "no-store"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "content-length": [
-                        "70"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Vary": [
-                        "accept-encoding"
-                    ],
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:54 GMT"
+                    "Content-Length": [
+                        "70"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -105,34 +102,34 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:19:05 GMT"
                     ],
                     "Cache-Control": [
                         "private"
                     ],
-                    "Content-Length": [
-                        "2878"
+                    "Server": [
+                        "Apache"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Content-Length": [
+                        "2941"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Content-Type": [
                         "application/json"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:54 GMT"
                     ]
                 },
                 "body": {
-                    "string": "{\"titles\": [{\"npTitleId\": \"CUSA12057_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR15509_00\", \"trophyTitleName\": \"Fallout 76\", \"trophyTitleDetail\": \"Fallout 76\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG\", \"hasTrophyGroups\": true, \"rarestTrophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Platinum Trophy\", \"trophyDetail\": \"Collect all other 50 Trophies for this Trophy\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\", \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\"}], \"progress\": 77, \"earnedTrophies\": {\"bronze\": 38, \"silver\": 15, \"gold\": 1, \"platinum\": 1}, \"definedTrophies\": {\"bronze\": 53, \"silver\": 18, \"gold\": 1, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2020-11-28T22:55:19Z\"}]}, {\"npTitleId\": \"PPSA01506_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR21237_00\", \"trophyTitleName\": \"Immortals Fenyx Rising \\u2122\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/98744844-873e-479e-83c1-5853ea2024b6.png\", \"hasTrophyGroups\": true, \"rarestTrophies\": [{\"trophyId\": 32, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Armed and Dangerous\", \"trophyDetail\": \"Fully upgrade everything at the Forge of Hephaistos.\", \"trophyIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/4684baab-bcb8-49fc-9224-deeac059ac35.png\", \"trophyRare\": 1, \"trophyEarnedRate\": \"7.7\", \"earned\": true, \"earnedDateTime\": \"2021-03-07T19:18:41Z\"}], \"progress\": 26, \"earnedTrophies\": {\"bronze\": 13, \"silver\": 5, \"gold\": 1, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 47, \"silver\": 16, \"gold\": 5, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2022-11-25T19:43:25Z\"}]}, {\"npTitleId\": \"CUSA00419_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR06221_00\", \"trophyTitleName\": \"Grand Theft Auto V\", \"trophyTitleDetail\": \"Grand Theft Auto V\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/A3E52C438318CCEC6346EB2A31DBF31164A95A25.PNG\", \"hasTrophyGroups\": true, \"rarestTrophies\": [{\"trophyId\": 2, \"trophyHidden\": true, \"trophyType\": \"bronze\", \"trophyName\": \"A Friendship Resurrected\", \"trophyDetail\": \"With friends like this who needs enemies?\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/EDD221A259C9C6F4C72109C133C1D0E239A22DAD.PNG\", \"trophyRare\": 2, \"trophyEarnedRate\": \"33.0\", \"earned\": true, \"earnedDateTime\": \"2020-02-02T00:34:22Z\"}], \"progress\": 4, \"earnedTrophies\": {\"bronze\": 5, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 59, \"silver\": 15, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2020-02-09T17:24:52Z\"}]}]}"
+                    "string": "{\"titles\": [{\"npTitleId\": \"CUSA12057_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR15509_00\", \"trophyTitleName\": \"Fallout 76\", \"trophyTitleDetail\": \"Fallout 76\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/A4D94FEACEEE402B1FFF2742BB5F6E5A3DA1C26C.PNG\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 5, \"rarestTrophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Platinum Trophy\", \"trophyDetail\": \"Collect all other 50 Trophies for this Trophy\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\", \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\"}], \"progress\": 77, \"earnedTrophies\": {\"bronze\": 38, \"silver\": 15, \"gold\": 1, \"platinum\": 1}, \"definedTrophies\": {\"bronze\": 53, \"silver\": 18, \"gold\": 1, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2020-11-28T22:55:19Z\"}]}, {\"npTitleId\": \"PPSA01506_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR21237_00\", \"trophyTitleName\": \"Immortals Fenyx Rising \\u2122\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/98744844-873e-479e-83c1-5853ea2024b6.png\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 4, \"rarestTrophies\": [{\"trophyId\": 32, \"trophyHidden\": false, \"trophyType\": \"gold\", \"trophyName\": \"Armed and Dangerous\", \"trophyDetail\": \"Fully upgrade everything at the Forge of Hephaistos.\", \"trophyIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/4684baab-bcb8-49fc-9224-deeac059ac35.png\", \"trophyRare\": 1, \"trophyEarnedRate\": \"7.5\", \"earned\": true, \"earnedDateTime\": \"2021-03-07T19:18:41Z\"}], \"progress\": 26, \"earnedTrophies\": {\"bronze\": 13, \"silver\": 5, \"gold\": 1, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 47, \"silver\": 16, \"gold\": 5, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2022-11-25T19:43:25Z\"}]}, {\"npTitleId\": \"CUSA00419_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR06221_00\", \"trophyTitleName\": \"Grand Theft Auto V\", \"trophyTitleDetail\": \"Grand Theft Auto V\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/A3E52C438318CCEC6346EB2A31DBF31164A95A25.PNG\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 4, \"rarestTrophies\": [{\"trophyId\": 2, \"trophyHidden\": true, \"trophyType\": \"bronze\", \"trophyName\": \"A Friendship Resurrected\", \"trophyDetail\": \"With friends like this who needs enemies?\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/EDD221A259C9C6F4C72109C133C1D0E239A22DAD.PNG\", \"trophyRare\": 2, \"trophyEarnedRate\": \"32.9\", \"earned\": true, \"earnedDateTime\": \"2020-02-02T00:34:22Z\"}], \"progress\": 4, \"earnedTrophies\": {\"bronze\": 5, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 59, \"silver\": 15, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2020-02-09T17:24:52Z\"}]}]}"
                 }
             }
         }

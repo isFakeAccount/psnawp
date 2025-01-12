@@ -33,35 +33,32 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
+                    "Date": [
+                        "Sun, 12 Jan 2025 03:18:38 GMT"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "content-length": [
-                        "78"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Vary": [
-                        "accept-encoding"
-                    ],
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:29 GMT"
+                    "Content-Length": [
+                        "78"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

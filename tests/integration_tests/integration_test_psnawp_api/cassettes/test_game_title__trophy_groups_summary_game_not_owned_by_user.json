@@ -33,31 +33,31 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Cache-Control": [
-                        "private"
-                    ],
                     "Content-Length": [
                         "59"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Date": [
+                        "Sun, 12 Jan 2025 00:15:56 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Sun, 16 Jun 2024 22:59:18 GMT"
-                    ]
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"titles\": [{\"npTitleId\": \"PPSA01325_00\", \"trophyTitles\": []}]}"
