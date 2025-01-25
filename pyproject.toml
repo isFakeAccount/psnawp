@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PSNAWP"
-version = "2.1.0"
+version = "2.2.0"
 description = "Python API Wrapper for PlayStation Network API"
 authors = ["isFakeAccount <8bit_yoshikage_kira@proton.me>"]
 license = "MIT"
@@ -15,10 +15,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 packages = [{ include = "psnawp_api", from = "src" }]

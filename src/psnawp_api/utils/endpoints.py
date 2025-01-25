@@ -9,6 +9,7 @@ BASE_PATH = {
     "trophies": "https://m.np.playstation.com/api/trophy/v1",
     "games_list": "https://m.np.playstation.com/api/gamelist/v2",
     "graph_ql": "https://m.np.playstation.com/api/graphql/v1/op",
+    "cpss": "https://m.np.playstation.com/api/cpss",
 }
 
 API_PATH = {
@@ -26,6 +27,7 @@ API_PATH = {
     "available_to_play": "/me/friends/subscribing/availableToPlay",
     "blocked_users": "/me/blocks",
     "basic_presences": "/basicPresences",
+    "share_profile": "/v1/share/profile/{account_id}",
     # Group Endpoints
     "my_groups": "/members/me/groups",
     "group_settings": "/groups/{group_id}",
