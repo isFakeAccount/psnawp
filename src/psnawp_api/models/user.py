@@ -283,11 +283,8 @@ class User:
             print(user_example.get_shareable_profile_link())
 
         """
-        try:
-            response: dict[str, str] = self.authenticator.get(url=f"{BASE_PATH['cpss']}{API_PATH['share_profile'].format(account_id=self.account_id)}").json()
-            return response
-        except PSNAWPForbidden as forbidden:
-            raise PSNAWPForbidden("You are not allowed to access the shareable link of this user.") from forbidden
+        response: dict[str, str] = self.authenticator.get(url=f"{BASE_PATH['cpss']}{API_PATH['share_profile'].format(account_id=self.account_id)}").json()
+        return response
 
     def trophy_summary(self) -> TrophySummary:
         """Retrieve an overall summary of the number of trophies earned for a user broken down by

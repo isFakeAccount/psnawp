@@ -1,0 +1,89 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/cpss/v1/share/profile/5007681186655854753",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Expires": [
+                        "Sat, 01 Feb 2025 22:17:17 GMT"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "ec6932f4-9678-1031-8cf6-d4c4290a6069"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Content-Length": [
+                        "599"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Sat, 01 Feb 2025 22:17:17 GMT"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "ec6932f4-9678-1031-8cf7-d4c4290a6069"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "3600"
+                    ]
+                },
+                "body": {
+                    "string": "{\"shareUrl\": \"https://profile.playstation.com/pfsone\", \"shareImageUrl\": \"https://d18lxmvkmz0olj.cloudfront.net/profile-pfsone?Expires=1739053037&Signature=qT70JcOnl3a0HZ-gF5UWafZLJBZlb7GjLsC7sopgCM4TJUQ5sV84rvBbaCoYvEY1sF~wivEu3~kqdXAg~DH7X0BHfCHdcViER5XbIH78rBx3PUjDnKopyG52QRRYdC9snqY~Baj-WKDxcnmkfW0aLioWCA1Qz~2ADei5ymTXAAjUhdm4VWNVPe4BYHf7GDvC4D6MfYXcGUwx1JaU14QRXb1NmF5KnUWYoaxg96Q2iS2lzjB5KzxM5E1DBQGG5PkmWdhl1B34KR6fKgAd7VLDE9AtOEaTmqbnq0szDes62oEbFL0wnWL9L2zRggOoHy0yhZ9ZjkwTjCaIhJwNtxSeqg__&Key-Pair-Id=K2SHBT8E7OQNQU\", \"shareImageUrlDestination\": \"https://profile.playstation.com/share/pfsone\"}"
+                }
+            }
+        }
+    ]
+}

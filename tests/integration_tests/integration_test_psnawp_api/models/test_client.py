@@ -75,6 +75,13 @@ def test_client__blocked_list(psnawp_fixture: PSNAWP) -> None:
 
 
 @pytest.mark.vcr()
+def test_client__get_shareable_profile_link(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        client.get_shareable_profile_link()
+
+
+@pytest.mark.vcr()
 def test_client__trophy_summary(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         summary = psnawp_fixture.me().trophy_summary()
