@@ -231,6 +231,26 @@ class Client:
             for account_id in response["blockList"]
         )
 
+    def get_shareable_profile_link(self) -> dict[str, str]:
+        """Gets the shareable link and QR code for the PlayStation profile.
+
+        This method fetches the URL that can be used to easily share the user's PlayStation profile.
+        Additionally, it provides a QR code image URL that corresponds to the shareable URL.
+
+        :returns: A dict containing info similar to what is shown below:
+
+            .. literalinclude:: examples/client/shareable_profile.json
+                :language: json
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.get_shareable_profile_link())
+
+        """
+        response: dict[str, str] = self.authenticator.get(url=f"{BASE_PATH['cpss']}{API_PATH['share_profile'].format(account_id=self.account_id)}").json()
+        return response
+
     def get_groups(self, limit: int = 200, offset: int = 0) -> Generator[Group, None, None]:
         """Gets all the groups you have participated in.
 

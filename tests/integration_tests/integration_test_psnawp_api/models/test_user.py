@@ -147,6 +147,12 @@ def test_user__is_blocked(friend_user: User) -> None:
 
 
 @pytest.mark.vcr()
+def test_user__get_shareable_profile_link(friend_user: User) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        friend_user.get_shareable_profile_link()
+
+
+@pytest.mark.vcr()
 def test_user__trophy_summary(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         summary = psnawp_fixture.user(online_id="VaultTec_Trading").trophy_summary()
