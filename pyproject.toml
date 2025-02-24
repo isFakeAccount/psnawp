@@ -1,16 +1,14 @@
-[tool.poetry]
-name = "PSNAWP"
+[project]
+name = "psnawp"
 version = "2.2.0"
-description = "Python API Wrapper for PlayStation Network API"
-authors = ["isFakeAccount <8bit_yoshikage_kira@proton.me>"]
-license = "MIT"
+description = "Python API Wrapper for PlayStation Network API."
+authors = [{ name = "Yoshikage Kira", email = "8bit_yoshikage_kira@proton.me" }]
+license = { file = "LICENSE.md" }
 readme = "README.md"
-homepage = "https://github.com/isFakeAccount/psnawp"
-repository = "https://github.com/isFakeAccount/psnawp"
-documentation = "https://psnawp.readthedocs.io/en/latest/"
+requires-python = ">=3.10, <4.0"
 keywords = ["PSN", "PlayStation"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -21,41 +19,47 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-packages = [{ include = "psnawp_api", from = "src" }]
+dependencies = [
+    "attrs (>=25.1.0,<26.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "typing-extensions (>=4.12.2,<5.0.0)",
+    "requests-ratelimiter (>=0.7.0,<0.8.0)",
+    "pycountry (>=24.6.1,<25.0.0)",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-attrs = "24.2.0"
-requests = "^2.32.3"
-typing-extensions = "^4.12.2"
-requests-ratelimiter = "^0.7.0"
-pycountry = "^24.6.1"
+[project.urls]
+homepage = "https://github.com/isFakeAccount/psnawp"
+documentation = "https://psnawp.readthedocs.io/en/latest/"
+repository = "https://github.com/isFakeAccount/psnawp"
+changelog = "https://github.com/isFakeAccount/psnawp/commits/master/"
 
-[tool.poetry.group.typing.dependencies]
-mypy = "^1.14.1"
-pyright = "^1.1.391"
-types-requests = "^2.31.0.6"
-
-[tool.poetry.group.linting.dependencies]
-ruff = "^0.9.1"
-pre-commit = "^4.0.0"
-
-[tool.poetry.group.docs.dependencies]
-sphinx = "^8.1.3"
-furo = "^2024.8.6"
-myst-parser = { extras = ["linkify"], version = "^4.0.0" }
-
-[tool.poetry.group.tests.dependencies]
-pytest = "^8.2.2"
-python-dotenv = "^1.0.1"
-vcrpy = "^7.0.0"
-pytest-cov = "^6.0.0"
-pytest-vcr = "^1.0.2"
-jsonschema = "^4.23.0"
+[project.optional-dependencies]
+typing = [
+    "mypy (>=1.15.0,<2.0.0)",
+    "pyright (>=1.1.394,<2.0.0)",
+    "types-requests (>=2.31.0.6,<2.32.0.0)",
+]
+linting = ["ruff (>=0.9.7,<0.10.0)", "pre-commit (>=4.1.0,<5.0.0)"]
+docs = [
+    "furo (>=2024.8.6,<2025.0.0)",
+    "myst-parser[linkify] (>=4.0.1,<5.0.0)",
+    "sphinx (>=8.1.3,<8.2.0)",
+]
+tests = [
+    "jsonschema (>=4.23.0,<5.0.0)",
+    "pytest (>=8.3.4,<9.0.0)",
+    "pytest-cov (>=6.0.0,<7.0.0)",
+    "pytest-vcr (>=1.0.2,<2.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "vcrpy (>=7.0.0,<8.0.0)",
+]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "psnawp_api", from = "src" }]
 
 [tool.pytest.ini_options]
 addopts = "--cov=psnawp_api --cov-report html --junitxml=pytest.xml"
@@ -70,7 +74,6 @@ exclude_also = [
     "__str__",
 ]
 
-
 [tool.mypy]
 strict = true
 check_untyped_defs = true
@@ -83,22 +86,34 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+ignore_missing_imports = true
+exclude = [".venv", "venv"]
 
 [tool.pyright]
 exclude = [".venv", "venv"]
-pythonVersion = "3.11"
+pythonVersion = "3.10"
 typeCheckingMode = "strict"
 reportPrivateUsage = false
-
-[tool.black]
-line-length = 160
 
 [tool.ruff]
 line-length = 160
 
-[tool.ruff.lint]
-select = ["E", "F", "I001", "I002", "TID252"]
-
 [tool.ruff.format]
 docstring-code-format = true
 docstring-code-line-length = 88
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812", # Allow missing trailing comma. (handled by ruff format)
+    "D100",   # Allow missing module-level doc strings.
+    "D104",   # Allow missing public package doc strings.
+    "D203",   # Allow class doc strings without requiring a blank line before them (conflicts with D211).
+    "D212",   # Allow multi-line docstring summaries to start on the second line (conflicts with D213).
+    "D401",   # Allow docstring summaries that are not in imperative mood.
+    "EM",     # Allow exception messages that do not follow specific formatting rules.
+    "FBT",    # Allow functions to take boolean positional arguments.
+    "S603",   # Allow `subprocess` calls without enforcing `shell=False` (potential security risk).
+    "T201",   # Allow usage of `print()` instead of enforcing logging.
+    "TRY003", # Allow specifying long error messages inside the exception class instead of outside.
+]
