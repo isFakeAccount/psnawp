@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -10,6 +10,11 @@ repos:
               coverage.txt
           )$
       - id: check-added-large-files
-        args: [ '--maxkb=700' ]
+        args: ["--maxkb=700"]
       - id: debug-statements
         language_version: python3
+      - id: check-yaml
+      - id: check-json
+        exclude: ".vscode"
+      - id: detect-private-key
+      - id: check-merge-conflict
