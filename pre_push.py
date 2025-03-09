@@ -1,11 +1,12 @@
-"""Run static analysis on the project."""
+#!/usr/bin/env python
+"""Provides simple way to run formatter/linter/static analysis/tests on the project."""
 
 import argparse
 import sys
 from subprocess import CalledProcessError, check_call
 
 
-def do_process(args: list[str], shell: bool = False, cwd: str = ".") -> bool:
+def do_process(args: list[str], cwd: str = ".") -> bool:
     """
     Run program provided by args.
 
@@ -18,24 +19,14 @@ def do_process(args: list[str], shell: bool = False, cwd: str = ".") -> bool:
     """
     print(f"Running: {' '.join(args)}")
     try:
-        check_call(args, shell=shell, cwd=cwd)
+        check_call(args, shell=False, cwd=cwd)
     except CalledProcessError:
         print(f"\nFailed: {' '.join(args)}")
         return False
     except Exception as exc:
-        sys.stderr.write(f"{exc!s}\n")
-        sys.exit(1)
+        print(f"{exc!s}\n", file=sys.stderr)
+        raise SystemExit(1) from exc
     return True
-
-
-def run_git_pull() -> bool:
-    """
-    Runs the git pull command.
-
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
-
-    """
-    return do_process(["git", "pull"])
 
 
 def run_static() -> bool:

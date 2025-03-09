@@ -41,9 +41,10 @@ typing = [
 ]
 linting = ["ruff (>=0.9.7,<0.10.0)", "pre-commit (>=4.1.0,<5.0.0)"]
 docs = [
-    "furo (>=2024.8.6,<2025.0.0)",
     "myst-parser[linkify] (>=4.0.1,<5.0.0)",
     "sphinx (>=8.1.3,<8.2.0)",
+    "sphinx-copybutton (>=0.5.2,<0.6.0)",
+    "sphinx-book-theme (>=1.1.4,<2.0.0)",
 ]
 tests = [
     "jsonschema (>=4.23.0,<5.0.0)",
@@ -106,8 +107,6 @@ docstring-code-line-length = 88
 select = ["ALL"]
 ignore = [
     "COM812", # Allow missing trailing comma. (handled by ruff format)
-    "D100",   # Allow missing module-level doc strings.
-    "D104",   # Allow missing public package doc strings.
     "D203",   # Allow class doc strings without requiring a blank line before them (conflicts with D211).
     "D212",   # Allow multi-line docstring summaries to start on the second line (conflicts with D213).
     "D401",   # Allow docstring summaries that are not in imperative mood.
@@ -117,3 +116,9 @@ ignore = [
     "T201",   # Allow usage of `print()` instead of enforcing logging.
     "TRY003", # Allow specifying long error messages inside the exception class instead of outside.
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D104"]
+
+[tool.ruff.lint.pylint]
+max-args = 15

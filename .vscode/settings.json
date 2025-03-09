@@ -9,5 +9,8 @@
         "npsso",
         "psnawp"
     ],
-    "autoDocstring.docstringFormat": "sphinx"
+    "autoDocstring.docstringFormat": "sphinx",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
 }

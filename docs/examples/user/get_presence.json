@@ -1,8 +1,20 @@
 {
-  "availability": "availableToPlay",
-  "primaryPlatformInfo": {
-    "onlineStatus": "online",
-    "platform": "ps4",
-    "lastOnlineDate": "2022-09-15T22:50:28.012Z"
-  }
+  "basicPresences": [
+    {
+      "accountId": "940512162723934331",
+      "availability": "availableToPlay",
+      "primaryPlatformInfo": {
+        "onlineStatus": "online",
+        "platform": "PS5"
+      },
+      "gameTitleInfoList": [
+        {
+          "npTitleId": "CUSA14296_00",
+          "titleName": "Rust",
+          "format": "PS4",
+          "launchPlatform": "PS5"
+        }
+      ]
+    }
+  ]
 }
