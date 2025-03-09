@@ -23,7 +23,7 @@ linkcheck:
 
 # Generate API documentation
 apidoc:
-	@$(SPHINXAPIDOC) $(APIDOCFLAGS) -d 1 --separate --no-toc -o "$(SPHINXAPIDOCDIR)" "$(PACKAGEDIR)"
+	@$(SPHINXAPIDOC) $(APIDOCFLAGS) -d 1 --force --separate --no-toc -o "$(SPHINXAPIDOCDIR)" "$(PACKAGEDIR)"
 
 .PHONY: help Makefile
 
