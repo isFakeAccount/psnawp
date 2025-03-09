@@ -2,6 +2,7 @@ from os import getenv
 
 import pytest
 from dotenv import load_dotenv
+
 from psnawp_api import PSNAWP
 from psnawp_api.models.user import User
 
@@ -15,7 +16,8 @@ assert BLOCKED_USER_NAME != "BLOCKED_USER_NAME", "BLOCKED_USER_NAME is not set. 
 
 @pytest.fixture(scope="session")
 def psnawp_fixture() -> PSNAWP:
-    """Creates PSNAWP Instance Fixture for running all the units tests.
+    """
+    Creates PSNAWP Instance Fixture for running all the units tests.
 
     :returns: PSNAWP Instance
     :rtype: PSNAWP

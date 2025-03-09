@@ -1,8 +1,9 @@
 from datetime import timedelta
 
+from pycountry import countries
+
 from psnawp_api.models.title_stats import play_duration_to_timedelta
 from psnawp_api.utils.misc import extract_region_from_npid
-from pycountry import countries
 
 
 def test_play_duration_to_timedelta_valid_inputs():
