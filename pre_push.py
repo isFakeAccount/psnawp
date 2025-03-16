@@ -7,8 +7,7 @@ from subprocess import CalledProcessError, check_call
 
 
 def do_process(args: list[str], cwd: str = ".") -> bool:
-    """
-    Run program provided by args.
+    """Run program provided by args.
 
     Returns ``True`` upon success.
 
@@ -30,10 +29,10 @@ def do_process(args: list[str], cwd: str = ".") -> bool:
 
 
 def run_static() -> bool:
-    """
-    Runs the static tests.
+    """Runs the static tests.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
+    statuscode 1
 
     """
     success = True
@@ -41,6 +40,8 @@ def run_static() -> bool:
 
     success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
     success &= do_process(["pyright", "src/psnawp_api/"])
+
+    success &= do_process(["poetry", "run", "docstrfmt", "src/psnawp_api/"])
 
     success &= do_process(["poetry", "run", "ruff", "format", "src/psnawp_api/"])
     success &= do_process(["poetry", "run", "ruff", "format", "tests/"])
@@ -57,10 +58,10 @@ def run_static() -> bool:
 
 
 def run_unit() -> bool:
-    """
-    Runs the unit-tests.
+    """Runs the unit-tests.
 
-    Follows the behavior of the static tests, where any failed tests cause pre_push.py to fail.
+    Follows the behavior of the static tests, where any failed tests cause pre_push.py
+    to fail.
 
     """
     return do_process(
@@ -69,8 +70,7 @@ def run_unit() -> bool:
 
 
 def main() -> int:
-    """
-    Runs the main function.
+    """Runs the main function.
 
     usage: pre_push.py [-h] [-n] [-u] [-a]
 

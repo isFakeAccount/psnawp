@@ -48,6 +48,7 @@ suppress_warnings = ["ref.myst"]
 autosectionlabel_prefix_document = True
 
 # autodoc Configs
+autoclass_content = "both"
 autodoc_default_options = {
     "members": True,
     "member-order": "alphabetical",
@@ -88,5 +89,6 @@ html_theme_options = {
 intersphinx_mapping = {
     "python": ("https://docs.python.org", None),
     "requests": ("https://requests.readthedocs.io/en/latest/", None),
+    "requests_ratelimiter": ("https://requests-ratelimiter.readthedocs.io/en/stable/", None),
 }
 html_title = "PSNAWP"
