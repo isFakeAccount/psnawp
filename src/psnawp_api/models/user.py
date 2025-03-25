@@ -183,8 +183,8 @@ class User:
 
         .. code-block:: Python
 
-            client = psnawp.me()
-            friends_list = client.friends_list()
+            user_example = psnawp.user(online_id="VaultTec_Trading")
+            friends_list = user_example.friends_list()
 
             for friend in friends_list:
                 ...
