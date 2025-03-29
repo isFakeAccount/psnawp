@@ -127,7 +127,7 @@ class RequestBuilder:
         :param common_headers: Default headers for the requests.
 
         """
-        self.common_headers = cast(dict[str, str], common_headers)
+        self.common_headers = cast("dict[str, str]", common_headers)
 
         psn_api_rate = RequestRate(limit=300, interval=Duration.MINUTE * 15)
         limiter = Limiter(psn_api_rate, bucket_class=SQLiteBucket)

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from abc import abstractmethod
-from collections.abc import Generator, Iterator
+from collections.abc import Iterator
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Generic, TypeVar
 
@@ -18,6 +18,16 @@ class PaginationIterator(Iterator[T], Generic[T]):
 
     This class simplifies pagination by handling iteration over API responses. Subclasses only need to implement the
     :py:meth:`~PaginationIterator.fetch_next_page` method, while this class manages the iteration logic.
+
+    :var Authenticator authenticator: An instance of :py:class:`~psnawp_api.core.authenticator.Authenticator` used to
+        authenticate and make HTTPS requests.
+    :var str _url: URL for the paginated endpoint.
+    :var PaginationArguments _pagination_args: Pagination-specific arguments, such as page size and limit, passed to the
+        endpoint.
+    :var Iterator[T] | None _per_page_iterator: A generator that iterates over items in the fetched page.
+    :var bool _has_next: Indicates whether more pages are available. Is updated when :py:meth:`fetch_next_page` is
+        called.
+    :var int _total_item_count: The total number of items available in the paginated endpoint.
 
     .. warning::
 
@@ -36,14 +46,14 @@ class PaginationIterator(Iterator[T], Generic[T]):
 
         :param authenticator: An instance of Authenticator for making API requests.
         :param url: The URL of the endpoint.
-        :param params: Dictionary of parameters to be passed in the API request.
+        :param pagination_args: Pagination-related arguments, such as page size and limit.
 
         """
         self.authenticator = authenticator
         self._url = url
         self._pagination_args = pagination_args
 
-        self.__iterator: Generator[T, None, None] | None = None
+        self._per_page_iterator: Iterator[T] | None = None
         self._has_next = False
         self._total_item_count = 0
 
@@ -61,10 +71,10 @@ class PaginationIterator(Iterator[T], Generic[T]):
         When we exhaust the iterator, fetch the next page from API until end page is reached.
 
         """
-        if self.__iterator is None:
-            self.__iterator = self.fetch_next_page()
+        if self._per_page_iterator is None:
+            self._per_page_iterator = self.fetch_next_page()
         try:
-            return self.__iterator.__next__()
+            return self._per_page_iterator.__next__()
         except StopIteration:  # If all items on single page have been yielded
             # If we run out of pages
             if not self._has_next:
@@ -75,7 +85,7 @@ class PaginationIterator(Iterator[T], Generic[T]):
                 raise StopIteration from None
 
             # If there are pages remaining and limit is not reached
-            self.__iterator = self.fetch_next_page()
+            self._per_page_iterator = self.fetch_next_page()
             return self.__next__()
 
     def __len__(self) -> int:
@@ -83,7 +93,7 @@ class PaginationIterator(Iterator[T], Generic[T]):
         return self._total_item_count
 
     @abstractmethod
-    def fetch_next_page(self) -> Generator[T, None, None]:
+    def fetch_next_page(self) -> Iterator[T]:
         """Fetch the next page of items from the API.
 
         .. note::
@@ -119,6 +129,11 @@ class PaginationArguments:
     """Class representing the arguments PlayStation API needs for paginating over list items.
 
     Used by the implementations of :py:class:`PaginationIterator`.
+
+    :var int | None total_limit: The maximum number of items to retrieve across all pages. If ``None``, there is no
+        limit.
+    :var int page_size: The number of items to fetch per page.
+    :var int offset: The starting index for fetching items.
 
     """
 
