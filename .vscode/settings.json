@@ -12,5 +12,6 @@
     "autoDocstring.docstringFormat": "sphinx",
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
-    }
+    },
+    "evenBetterToml.taplo.configFile.path": "taplo.toml",
 }
