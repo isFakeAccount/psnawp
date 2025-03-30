@@ -110,12 +110,12 @@ class RequestBuilder:
     """Handles all the HTTP requests to PSN API and manages ratelimit.
 
     :var RequestBuilderHeaders common_headers: Headers that will be passed in each HTTPs request.
-    :var LimiterSession session: Session object with built-in rate limit capabilities. Limit is hardcoded to 300
-        requests per 15 minutes.
+    :var ~requests_ratelimiter.LimiterSession session: :py:class:`~requests_ratelimiter.LimiterSession` object with
+        built-in rate limit capabilities. Limit is hardcoded to 300 requests per 15 minutes.
 
     .. note::
 
-        This class is intended to be used by :class:`psnawp_api.core.authenticator.Authenticator`. If you want to
+        This class is intended to be used by :py:class:`psnawp_api.core.authenticator.Authenticator`. If you want to
         override default headers for language and region, you may do so via
         :py:meth:`psnawp_api.psnawp.PSNAWP.__init__`.
 
