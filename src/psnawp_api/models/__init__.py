@@ -10,8 +10,8 @@ __all__ = [
     "GameTitle",
     "Group",
     "SearchDomain",
-    "UniversalSearch",
     "TitleStats",
     "TitleStatsIterator",
+    "UniversalSearch",
     "User",
 ]
