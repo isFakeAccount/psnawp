@@ -15,5 +15,5 @@ Module contents
 
 .. automodule:: psnawp_api.models.search
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

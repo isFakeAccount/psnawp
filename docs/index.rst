@@ -17,7 +17,7 @@ PSNAWP documentation is organized into the following sections:
 
 The PSNAWP Class
 ^^^^^^^^^^^^^^^^
-If you're new to psnawp_api, start by exploring the :py:class:`psnawp_api.psnawp.PSNAWP` class. This class is the primary gateway into the API wrapper, offering you a unified interface to all its functionality.
+If you're new to psnawp_api, start by exploring the :py:class:`~psnawp_api.psnawp.PSNAWP` class. This class is the primary gateway into the API wrapper, offering you a unified interface to all its functionality.
 
 .. toctree::
     :maxdepth: 1

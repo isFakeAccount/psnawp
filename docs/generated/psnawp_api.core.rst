@@ -16,5 +16,5 @@ Module contents
 
 .. automodule:: psnawp_api.core
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

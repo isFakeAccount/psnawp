@@ -28,5 +28,5 @@ Module contents
 
 .. automodule:: psnawp_api.models
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
