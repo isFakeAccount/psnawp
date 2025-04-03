@@ -48,7 +48,7 @@ class UniversalSearch:
 
     .. note::
 
-        This class is designed to be used through PSNAWP. See :py:meth:`psnawp_api.psnawp.PSNAWP.search`.
+        This class is intended to be used via PSNAWP class. See :py:meth:`psnawp_api.psnawp.PSNAWP.search`.
 
     """
 
@@ -138,7 +138,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
 
     .. note::
 
-        This class is designed to be used through UniversalSearch. See :py:class:`~UniversalSearch`.
+        This class is intended to be used via UniversalSearch. See :py:class:`~UniversalSearch`.
 
     """
 

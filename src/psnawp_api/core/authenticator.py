@@ -80,6 +80,10 @@ class Authenticator:
         token, refresh token, their expiration times.
     :var str cid: The client ID, a unique identifier for the client, generated using the device's MAC address.
 
+    .. note::
+
+        This class is intended to be used via PSNAWP. See :py:meth:`psnawp_api.psnawp.PSNAWP.__init__`
+
     """
 
     AUTH_METADATA: ClassVar[dict[str, str]] = {
@@ -97,11 +101,6 @@ class Authenticator:
         common_headers: RequestBuilderHeaders,
     ) -> None:
         """Represents a single authentication to PSN API.
-
-        .. note::
-
-            This class is intended to be interfaced with through PSNAWP. See
-            :py:meth:`psnawp_api.psnawp.PSNAWP.__init__`
 
         :param npsso_cookie: The Network Platform Single Sign-On (NPSSO) cookie, obtained after signing into PlayStation
             Network.
