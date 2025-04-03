@@ -128,7 +128,7 @@ class PaginationIterator(Iterator[T], Generic[T]):
 class PaginationArguments:
     """Class representing the arguments PlayStation API needs for paginating over list items.
 
-    Used by the implementations of :py:class:`PaginationIterator`.
+    Used by the implementations of :py:class:`~PaginationIterator`.
 
     :var int | None total_limit: The maximum number of items to retrieve across all pages. If ``None``, there is no
         limit.

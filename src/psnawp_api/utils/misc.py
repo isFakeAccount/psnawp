@@ -16,11 +16,11 @@ ISO_3166_1_ALPHA_2_LEN = 2
 
 
 def iso_format_to_datetime(iso_format: str | None) -> datetime | None:
-    """Converts an ISO 8601 formatted string to a :py:class:`datetime.datetime` object.
+    """Converts an ISO 8601 formatted string to a :py:class:`~datetime.datetime` object.
 
     :param iso_format: The ISO 8601 formatted string (e.g., "2025-02-26T12:00:00Z").
 
-    :returns: The corresponding :py:class:`datetime.datetime` object, or ``None`` if input is ``None``.
+    :returns: The corresponding :py:class:`~datetime.datetime` object, or ``None`` if input is ``None``.
 
     """
     return datetime.fromisoformat(iso_format.replace("Z", "+00:00")) if iso_format is not None else None
@@ -34,10 +34,10 @@ def extract_region_from_npid(npid: str) -> Country | None:
 
     :param npid: The base64-encoded NPID string, which is decoded to extract the region code.
 
-    :returns: The region as a :py:class:`pycountry.db.Country` object, or ``None`` if extraction fails or region is
+    :returns: The region as a :py:class:`~pycountry.db.Country` object, or ``None`` if extraction fails or region is
         invalid.
 
-    This function assumes a valid NPID format (e.g., "VaultTec-Co@b7.us"). It splits the string to get the region code
+    This function assumes a valid NPID format (e.g., `"VaultTec-Co@b7.us"`). It splits the string to get the region code
     (e.g., "US"), which is then matched to the full country using the `pycountry` library.
 
     """

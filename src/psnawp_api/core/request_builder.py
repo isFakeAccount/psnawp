@@ -115,7 +115,7 @@ class RequestBuilder:
 
     .. note::
 
-        This class is intended to be used by :py:class:`psnawp_api.core.authenticator.Authenticator`. If you want to
+        This class is intended to be used by :py:class:`~psnawp_api.core.authenticator.Authenticator`. If you want to
         override default headers for language and region, you may do so via
         :py:meth:`psnawp_api.psnawp.PSNAWP.__init__`.
 

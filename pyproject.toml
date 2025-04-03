@@ -1,112 +1,111 @@
 [project]
-name = "psnawp"
-version = "2.2.0"
-description = "Python API Wrapper for PlayStation Network API."
-authors = [ { name = "Yoshikage Kira", email = "8bit_yoshikage_kira@proton.me" } ]
-license = { file = "LICENSE.md" }
-readme = "README.md"
-requires-python = ">=3.10, <4.0"
-keywords = [ "PSN", "PlayStation" ]
+authors = [{ name = "Yoshikage Kira", email = "8bit_yoshikage_kira@proton.me" }]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
     "attrs (>=25.1.0,<26.0.0)",
-    "requests (>=2.32.3,<3.0.0)",
-    "typing-extensions (>=4.12.2,<5.0.0)",
-    "requests-ratelimiter (>=0.7.0,<0.8.0)",
     "pycountry (>=24.6.1,<25.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "requests-ratelimiter (>=0.7.0,<0.8.0)",
+    "typing-extensions (>=4.12.2,<5.0.0)",
 ]
+description = "Python API Wrapper for PlayStation Network API."
+keywords = ["PSN", "PlayStation"]
+license = { file = "LICENSE.md" }
+name = "psnawp"
+readme = "README.md"
+requires-python = ">=3.10, <4.0"
+version = "2.2.0"
 
 [tool.poetry.group.typing.dependencies]
-mypy = { version = "^1.15.0", python = ">=3.11,<4.0.0" }
-pyright = { version = "^1.1.398", python = ">=3.11,<4.0.0" }
+mypy           = { version = "^1.15.0", python = ">=3.11,<4.0.0" }
+pyright        = { version = "^1.1.398", python = ">=3.11,<4.0.0" }
 types-requests = { version = "^2.31.0", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.docs.dependencies]
-sphinx = { version = "^8.2.3", python = ">=3.11,<4.0.0" }
-sphinx-copybutton = { version = "^0.5.2", python = ">=3.11,<4.0.0" }
+myst-parser       = { extras = ["linkify"], version = "^4.0.1", python = ">=3.11,<4.0.0" }
+sphinx            = { version = "^8.2.3", python = ">=3.11,<4.0.0" }
 sphinx-book-theme = { version = "^1.1.4", python = ">=3.11,<4.0.0" }
-myst-parser = { extras = [ "linkify" ], version = "^4.0.1", python = ">=3.11,<4.0.0" }
+sphinx-copybutton = { version = "^0.5.2", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.linting.dependencies]
-ruff = { version = "^0.11.2", python = ">=3.11,<4.0.0" }
+docstrfmt  = { version = "^1.10.0", python = ">=3.11,<4.0.0" }
 pre-commit = { version = "^4.2.0", python = ">=3.11,<4.0.0" }
-docstrfmt = { version = "^1.10.0", python = ">=3.11,<4.0.0" }
+ruff       = { version = "^0.11.2", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.tests.dependencies]
-jsonschema = { version = "^4.23.0", python = ">=3.11,<4.0.0" }
-pytest = { version = "^8.3.5", python = ">=3.11,<4.0.0" }
-pytest-cov = { version = "^6.0.0", python = ">=3.11,<4.0.0" }
-pytest-vcr = { version = "^1.0.2", python = ">=3.11,<4.0.0" }
+jsonschema    = { version = "^4.23.0", python = ">=3.11,<4.0.0" }
+pytest        = { version = "^8.3.5", python = ">=3.11,<4.0.0" }
+pytest-cov    = { version = "^6.0.0", python = ">=3.11,<4.0.0" }
+pytest-vcr    = { version = "^1.0.2", python = ">=3.11,<4.0.0" }
 python-dotenv = { version = "^1.1.0", python = ">=3.11,<4.0.0" }
-vcrpy = { version = "^7.0.0", python = ">=3.11,<4.0.0" }
+vcrpy         = { version = "^7.0.0", python = ">=3.11,<4.0.0" }
 
 [project.urls]
-homepage = "https://github.com/isFakeAccount/psnawp"
+changelog     = "https://github.com/isFakeAccount/psnawp/commits/master/"
 documentation = "https://psnawp.readthedocs.io/en/latest/"
-repository = "https://github.com/isFakeAccount/psnawp"
-changelog = "https://github.com/isFakeAccount/psnawp/commits/master/"
+homepage      = "https://github.com/isFakeAccount/psnawp"
+repository    = "https://github.com/isFakeAccount/psnawp"
 
 [build-system]
-requires = [ "poetry-core>=2.0.0,<3.0.0" ]
 build-backend = "poetry.core.masonry.api"
+requires      = ["poetry-core>=2.0.0,<3.0.0"]
 
 [tool.poetry]
-packages = [ { include = "psnawp_api", from = "src" } ]
+packages = [{ include = "psnawp_api", from = "src" }]
 
 [tool.pytest.ini_options]
-addopts = "--cov=psnawp_api --cov-report html --junitxml=pytest.xml"
-testpaths = [ "tests" ]
+addopts   = "--cov=psnawp_api --cov-report html --junitxml=pytest.xml"
+testpaths = ["tests"]
 
 [tool.coverage.report]
 exclude_also = [
-    "if TYPE_CHECKING:",
     "@overload",
-    "raise NotImplementedError",
     "__repr__",
     "__str__",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
 ]
 
 [tool.mypy]
-strict = true
-check_untyped_defs = true
-disallow_any_generics = true
-no_implicit_optional = true
-show_error_codes = true
-strict_equality = true
-warn_redundant_casts = true
-warn_return_any = true
-warn_unreachable = true
-warn_unused_configs = true
-no_implicit_reexport = true
+check_untyped_defs     = true
+disallow_any_generics  = true
+exclude                = [".venv", "venv"]
 ignore_missing_imports = true
-exclude = [ ".venv", "venv" ]
+no_implicit_optional   = true
+no_implicit_reexport   = true
+show_error_codes       = true
+strict                 = true
+strict_equality        = true
+warn_redundant_casts   = true
+warn_return_any        = true
+warn_unreachable       = true
+warn_unused_configs    = true
 
 [tool.pyright]
-exclude = [ ".venv", "venv" ]
-pythonVersion = "3.10"
-typeCheckingMode = "strict"
+exclude            = [".venv", "venv"]
+pythonVersion      = "3.10"
 reportPrivateUsage = false
+typeCheckingMode   = "strict"
 
 [tool.ruff]
 line-length = 160
 
 [tool.ruff.format]
-docstring-code-format = true
+docstring-code-format      = true
 docstring-code-line-length = 88
 
 [tool.ruff.lint]
-select = [ "ALL" ]
 ignore = [
     "COM812", # Allow missing trailing comma. (handled by ruff format)
     "D203",   # Allow class doc strings without requiring a blank line before them (conflicts with D211).
@@ -118,9 +117,10 @@ ignore = [
     "T201",   # Allow usage of `print()` instead of enforcing logging.
     "TRY003", # Allow specifying long error messages inside the exception class instead of outside.
 ]
+select = ["ALL"]
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = [ "D104" ]
+"__init__.py" = ["D104"]
 
 [tool.ruff.lint.pylint]
 max-args = 15

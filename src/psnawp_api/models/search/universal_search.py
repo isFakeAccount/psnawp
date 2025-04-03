@@ -138,7 +138,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
 
     .. note::
 
-        This class is designed to be used through UniversalSearch. See :py:class:`UniversalSearch`.
+        This class is designed to be used through UniversalSearch. See :py:class:`~UniversalSearch`.
 
     """
 
