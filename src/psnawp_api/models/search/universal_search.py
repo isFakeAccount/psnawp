@@ -181,7 +181,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
         search_domain: SearchDomain,
         next_cursor: str,
     ) -> Self:
-        """Creates an instance of :class:`{classname}` from api endpoint."""
+        """Creates an instance of :py:class:`UniversalDomainSearchIterator` from api endpoint."""
         return cls(
             authenticator=authenticator,
             url=BASE_PATH["graph_ql"],
