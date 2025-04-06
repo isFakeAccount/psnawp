@@ -315,7 +315,7 @@ class TrophyGroupsSummaryBuilder:
 
         This is most commonly seen in games which have expansions where additional trophies are added.
 
-        .. note::
+        .. warning::
 
             Retrieving the progress of TrophyGroupSummary will require double the number of request because the progress
             has to be fetched via separate endpoint.

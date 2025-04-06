@@ -1,3 +1,16 @@
+"""Trophies package for the PlayStation API wrapper.
+
+This package provides modules related to trophy data, including earned trophies, trophy titles, trophy groups, and user
+progress.
+
+Modules in this package include:
+
+- Fetching and interacting with user trophy data.
+- Accessing trophy metadata and groupings.
+- Utilities for filtering or aggregating trophy information.
+
+"""
+
 from psnawp_api.models.trophies.trophy import (
     Trophy,
     TrophyIterator,

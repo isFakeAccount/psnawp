@@ -1,9 +1,11 @@
+"""Provides Class Client representing the logged in user."""
+
 from __future__ import annotations
 
 from functools import cached_property
-from typing import TYPE_CHECKING, Any, Generator, Literal, Optional, overload
+from typing import TYPE_CHECKING, Any, Literal, overload
 
-from psnawp_api.models.group import Group
+from psnawp_api.models.group.group import Group
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.title_stats import TitleStatsIterator
 from psnawp_api.models.trophies import (
@@ -17,21 +19,33 @@ from psnawp_api.models.user import User
 from psnawp_api.utils import API_PATH, BASE_PATH, extract_region_from_npid
 
 if TYPE_CHECKING:
+    from collections.abc import Generator
+
     from pycountry.db import Country
 
     from psnawp_api.core import Authenticator
-    from psnawp_api.models.trophies import PlatformType, TrophyGroupsSummary, TrophyGroupSummary, TrophyGroupSummaryWithProgress
+    from psnawp_api.models.trophies import (
+        PlatformType,
+        TrophyGroupsSummary,
+        TrophyGroupSummary,
+        TrophyGroupSummaryWithProgress,
+    )
 
 
 class Client:
-    """The Client class provides the information and methods for the currently authenticated user."""
+    """The Client class provides the information and methods for the currently authenticated user.
 
-    def __init__(self, authenticator: Authenticator):
+    :var Authenticator authenticator: An instance of :py:class:`~psnawp_api.core.authenticator.Authenticator` used to
+        authenticate and make HTTPS requests.
+
+    .. note::
+
+        This class is intended to be used via PSNAWP. See :py:meth:`psnawp_api.psnawp.PSNAWP.me`
+
+    """
+
+    def __init__(self, authenticator: Authenticator) -> None:
         """Initialize a Client instance.
-
-        .. note::
-
-            This class is intended to be interfaced with through PSNAWP.
 
         :param authenticator: The Authenticator instance used for making authenticated requests to the API.
 
@@ -50,7 +64,9 @@ class Client:
             print(client.online_id)
 
         """
-        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}").json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['profiles'].format(account_id=self.account_id)}",
+        ).json()
         online_id: str = response["onlineId"]
         return online_id
 
@@ -66,11 +82,13 @@ class Client:
             print(client.account_id)
 
         """
-        response = self.authenticator.get(url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}").json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}",
+        ).json()
         account_id: str = response["accountId"]
         return account_id
 
-    def get_region(self) -> Optional[Country]:
+    def get_region(self) -> Country | None:
         """Gets the region of the client logged in the api.
 
         :returns: Returns Country object from Pycountry for logged in user or None if not found.
@@ -94,7 +112,7 @@ class Client:
 
         :returns: A dict containing info similar to what is shown below:
 
-            .. literalinclude:: examples/client/get_profile_legacy.json
+            .. literalinclude:: ../examples/client/get_profile_legacy.json
                 :language: json
 
 
@@ -108,7 +126,7 @@ class Client:
             "fields": "npId,onlineId,accountId,avatarUrls,plus,aboutMe,languagesUsed,trophySummary(@default,level,progress,earnedTrophies),"
             "isOfficiallyVerified,personalDetail(@default,profilePictureUrls),personalDetailSharing,personalDetailSharingRequestMessageFlag,"
             "primaryOnlineStatus,presences(@default,@titleInfo,platform,lastOnlineDate,hasBroadcastData),requestMessageFlag,blocking,friendRelation,"
-            "following,consoleAvailability"
+            "following,consoleAvailability",
         }
 
         response: dict[str, Any] = self.authenticator.get(
@@ -123,7 +141,7 @@ class Client:
 
         :returns: A dict containing info similar to what is shown below:
 
-            .. literalinclude:: examples/client/get_account_devices.json
+            .. literalinclude:: ../examples/client/get_account_devices.json
                 :language: json
 
 
@@ -137,7 +155,10 @@ class Client:
             "includeFields": "device,systemData",
             "platform": "PS5,PS4,PS3,PSVita",
         }
-        response = self.authenticator.get(url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}", params=params).json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['account_uri']}{API_PATH['my_account']}",
+            params=params,
+        ).json()
 
         # Just so mypy doesn't complain
         account_devices: list[dict[str, Any]] = response.get("accountDevices", [])
@@ -162,7 +183,10 @@ class Client:
         limit = min(1000, limit)
 
         params = {"limit": limit}
-        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list'].format(account_id='me')}", params=params).json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_list'].format(account_id='me')}",
+            params=params,
+        ).json()
         return (
             User.from_account_id(
                 authenticator=self.authenticator,
@@ -175,8 +199,11 @@ class Client:
         """Get the friend request list and returns Generator of received requests.
 
         :returns: All your friend requests.
+
         """
-        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_request'].format(account_id='me')}").json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['friends_request'].format(account_id='me')}",
+        ).json()
         return (
             User.from_account_id(
                 authenticator=self.authenticator,
@@ -199,7 +226,9 @@ class Client:
                 ...
 
         """
-        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}").json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['available_to_play']}",
+        ).json()
         return (
             User.from_account_id(
                 authenticator=self.authenticator,
@@ -222,7 +251,9 @@ class Client:
                 ...
 
         """
-        response = self.authenticator.get(url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}").json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['profile_uri']}{API_PATH['blocked_users']}",
+        ).json()
         return (
             User.from_account_id(
                 authenticator=self.authenticator,
@@ -234,13 +265,14 @@ class Client:
     def get_shareable_profile_link(self) -> dict[str, str]:
         """Gets the shareable link and QR code for the PlayStation profile.
 
-        This method fetches the URL that can be used to easily share the user's PlayStation profile.
-        Additionally, it provides a QR code image URL that corresponds to the shareable URL.
+        This method fetches the URL that can be used to easily share the user's PlayStation profile. Additionally, it
+        provides a QR code image URL that corresponds to the shareable URL.
 
         :returns: A dict containing info similar to what is shown below:
 
-            .. literalinclude:: examples/client/shareable_profile.json
+            .. literalinclude:: ../examples/client/shareable_profile.json
                 :language: json
+
 
         .. code-block:: Python
 
@@ -248,10 +280,16 @@ class Client:
             print(client.get_shareable_profile_link())
 
         """
-        response: dict[str, str] = self.authenticator.get(url=f"{BASE_PATH['cpss']}{API_PATH['share_profile'].format(account_id=self.account_id)}").json()
+        response: dict[str, str] = self.authenticator.get(
+            url=f"{BASE_PATH['cpss']}{API_PATH['share_profile'].format(account_id=self.account_id)}",
+        ).json()
         return response
 
-    def get_groups(self, limit: int = 200, offset: int = 0) -> Generator[Group, None, None]:
+    def get_groups(
+        self,
+        limit: int = 200,
+        offset: int = 0,
+    ) -> Generator[Group, None, None]:
         """Gets all the groups you have participated in.
 
         :param limit: The number of groups to receive.
@@ -260,9 +298,16 @@ class Client:
         :returns: Generator of Group Objects.
 
         """
-        param: dict[str, str | int] = {"includeFields": "members", "limit": limit, "offset": offset}
+        param: dict[str, str | int] = {
+            "includeFields": "members",
+            "limit": limit,
+            "offset": offset,
+        }
 
-        response = self.authenticator.get(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}", params=param).json()
+        response = self.authenticator.get(
+            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['my_groups']}",
+            params=param,
+        ).json()
 
         return (
             Group.create_from_group_id(
@@ -273,7 +318,7 @@ class Client:
         )
 
     def trophy_summary(self) -> TrophySummary:
-        """Retrieve an overall summary of the number of trophies earned for a user broken down by
+        """Retrieve an overall summary of the number of trophies earned for a user broken down by.
 
         - type
         - overall trophy level
@@ -288,9 +333,17 @@ class Client:
             print(client.trophy_summary())
 
         """
-        return TrophySummary.from_endpoint(authenticator=self.authenticator, account_id="me")
+        return TrophySummary.from_endpoint(
+            authenticator=self.authenticator,
+            account_id="me",
+        )
 
-    def trophy_titles(self, limit: Optional[int] = None, offset: int = 0, page_size: int = 50) -> TrophyTitleIterator:
+    def trophy_titles(
+        self,
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 50,
+    ) -> TrophyTitleIterator:
         """Retrieve all game titles associated with an account, and a summary of trophies earned from them.
 
         :param limit: Limit of titles returned, None means to return all trophy titles.
@@ -299,7 +352,7 @@ class Client:
 
         :returns: Generator object with TrophyTitle objects.
 
-        :raises PSNAWPForbidden: If the user's profile is private.
+        :raises PSNAWPForbiddenError: If the user's profile is private.
 
         .. code-block:: Python
 
@@ -308,8 +361,17 @@ class Client:
                 print(trophy_title)
 
         """
-        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
-        return TrophyTitleIterator.from_endpoint(authenticator=self.authenticator, pagination_args=pg_args, account_id="me", title_ids=None)
+        pg_args = PaginationArguments(
+            total_limit=limit,
+            offset=offset,
+            page_size=page_size,
+        )
+        return TrophyTitleIterator.from_endpoint(
+            authenticator=self.authenticator,
+            pagination_args=pg_args,
+            account_id="me",
+            title_ids=None,
+        )
 
     def trophy_titles_for_title(self, title_ids: list[str]) -> TrophyTitleIterator:
         """Retrieve a summary of the trophies earned by a user for specific titles.
@@ -318,11 +380,12 @@ class Client:
 
         :returns: Generator object with TrophyTitle objects.
 
-        :raises PSNAWPForbidden: If the user's profile is private.
+        :raises PSNAWPForbiddenError: If the user's profile is private.
 
         .. note::
 
-            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from :py:class:`psnawp_api.models.search.Search`
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
+            :py:class:`~psnawp_api.models.search.Search`
 
         .. code-block:: Python
 
@@ -331,8 +394,17 @@ class Client:
                 print(trophy_title)
 
         """
-        pg_args = PaginationArguments(total_limit=None, offset=0, page_size=0)  # Not used
-        return TrophyTitleIterator.from_endpoint(authenticator=self.authenticator, pagination_args=pg_args, account_id="me", title_ids=title_ids)
+        pg_args = PaginationArguments(
+            total_limit=None,
+            offset=0,
+            page_size=0,
+        )  # Not used
+        return TrophyTitleIterator.from_endpoint(
+            authenticator=self.authenticator,
+            pagination_args=pg_args,
+            account_id="me",
+            title_ids=title_ids,
+        )
 
     @overload
     def trophies(
@@ -341,7 +413,7 @@ class Client:
         platform: PlatformType,
         include_progress: Literal[False] = False,
         trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        limit: int | None = None,
         offset: int = 0,
         page_size: int = 200,
     ) -> TrophyIterator: ...
@@ -352,7 +424,7 @@ class Client:
         platform: PlatformType,
         include_progress: Literal[True],
         trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        limit: int | None = None,
         offset: int = 0,
         page_size: int = 200,
     ) -> TrophyWithProgressIterator: ...
@@ -362,16 +434,18 @@ class Client:
         platform: PlatformType,
         include_progress: bool = False,
         trophy_group_id: str = "default",
-        limit: Optional[int] = None,
+        limit: int | None = None,
         offset: int = 0,
         page_size: int = 200,
     ) -> TrophyIterator | TrophyWithProgressIterator:
         """Retrieves all trophies for a specified group within a game title, optionally including user progress.
 
-        :param np_communication_id: Unique ID of a game title used to request trophy information. This can be obtained from ``GameTitle`` class.
+        :param np_communication_id: Unique ID of a game title used to request trophy information. This can be obtained
+            from ``GameTitle`` class.
         :param platform: The platform this title belongs to.
-        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to return all trophies for the title, default
-            for the game itself, and additional groups starting from 001 and so on return expansions trophies.
+        :param trophy_group_id: ID for the trophy group. Each game expansion is represented by a separate ID. all to
+            return all trophies for the title, default for the game itself, and additional groups starting from 001 and
+            so on return expansions trophies.
         :param limit: Maximum number of trophies to return. None means all available trophies will be returned.
         :param include_progress: If True, includes progress information for each trophy.
         :param offset: The starting point within the collection of trophies.
@@ -379,16 +453,20 @@ class Client:
 
         :returns: Returns the Trophy Generator object with all the information
 
-        :raises PSNAWPNotFound: If you don't have any trophies for that game.
-        :raises PSNAWPForbidden: If the user's profile is private
+        :raises PSNAWPNotFoundError: If you don't have any trophies for that game.
+        :raises PSNAWPForbiddenError: If the user's profile is private
 
         .. warning::
 
-            Setting ``include_progress`` to ``True`` will consume more rate limits as progress information is fetched from a separate endpoint.
+            Setting ``include_progress`` to ``True`` will consume more rate limits as progress information is fetched
+            from a separate endpoint.
 
         """
-
-        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
+        pg_args = PaginationArguments(
+            total_limit=limit,
+            offset=offset,
+            page_size=page_size,
+        )
         if not include_progress:
             return TrophyIterator.from_endpoint(
                 authenticator=self.authenticator,
@@ -397,15 +475,14 @@ class Client:
                 platform=platform,
                 trophy_group_id=trophy_group_id,
             )
-        else:
-            return TrophyWithProgressIterator.from_endpoint(
-                authenticator=self.authenticator,
-                pagination_args=pg_args,
-                np_communication_id=np_communication_id,
-                platform=platform,
-                trophy_group_id=trophy_group_id,
-                account_id="me",
-            )
+        return TrophyWithProgressIterator.from_endpoint(
+            authenticator=self.authenticator,
+            pagination_args=pg_args,
+            np_communication_id=np_communication_id,
+            platform=platform,
+            trophy_group_id=trophy_group_id,
+            account_id="me",
+        )
 
     @overload
     def trophy_groups_summary(
@@ -434,17 +511,18 @@ class Client:
         :param np_communication_id: Unique ID of the title used to request trophy information
         :param platform: The platform this title belongs to.
         :param platform: The platform this title belongs to.
-        :param include_progress: If True, will fetch results from another endpoint and include progress for trophy group such as name and detail
+        :param include_progress: If True, will fetch results from another endpoint and include progress for trophy group
+            such as name and detail
 
         .. warning::
 
-            Setting ``include_progress`` to ``True`` will use twice the amount of rate limit since the API wrapper has to obtain progress from a separate
-            endpoint.
+            Setting ``include_progress`` to ``True`` will use twice the amount of rate limit since the API wrapper has
+            to obtain progress from a separate endpoint.
 
         :returns: TrophyGroupSummary object containing title and title groups trophy information.
 
-        :raises PSNAWPNotFound: If you don't have any trophies for that game.
-        :raises PSNAWPForbidden: If the user's profile is private.
+        :raises PSNAWPNotFoundError: If you don't have any trophies for that game.
+        :raises PSNAWPForbiddenError: If the user's profile is private.
 
         """
         if not include_progress:
@@ -452,20 +530,25 @@ class Client:
                 authenticator=self.authenticator,
                 np_communication_id=np_communication_id,
             ).game_title_trophy_groups_summary(platform=platform)
-        else:
-            return TrophyGroupsSummaryBuilder(
-                authenticator=self.authenticator,
-                np_communication_id=np_communication_id,
-            ).earned_user_trophy_groups_summary(account_id="me", platform=platform)
+        return TrophyGroupsSummaryBuilder(
+            authenticator=self.authenticator,
+            np_communication_id=np_communication_id,
+        ).earned_user_trophy_groups_summary(account_id="me", platform=platform)
 
-    def title_stats(self, *, limit: Optional[int] = None, offset: int = 0, page_size: int = 200) -> TitleStatsIterator:
-        """Retrieve a list of titles with their stats and basic meta-data
+    def title_stats(
+        self,
+        *,
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 200,
+    ) -> TitleStatsIterator:
+        """Retrieve a list of titles with their stats and basic meta-data.
 
         :param limit: Limit of titles returned.
         :param page_size: The number of items to receive per api request.
         :param offset: Specifies the offset for paginator
 
-        .. warning::
+        .. important::
 
             Only returns data for PS4 games and above.
 
@@ -477,11 +560,21 @@ class Client:
             titles = list(user_example.title_stats())
 
         """
-        pg_args = PaginationArguments(total_limit=limit, offset=offset, page_size=page_size)
-        return TitleStatsIterator.from_endpoint(authenticator=self.authenticator, account_id="me", pagination_args=pg_args)
+        pg_args = PaginationArguments(
+            total_limit=limit,
+            offset=offset,
+            page_size=page_size,
+        )
+        return TitleStatsIterator.from_endpoint(
+            authenticator=self.authenticator,
+            account_id="me",
+            pagination_args=pg_args,
+        )
 
     def __repr__(self) -> str:
+        """Returns a detailed string representation of the object for debugging."""
         return f"<Client online_id:{self.online_id} account_id:{self.account_id}>"
 
     def __str__(self) -> str:
+        """Returns a human-readable summary of the trophy group."""
         return f"Online ID: {self.online_id} Account ID: {self.account_id}"

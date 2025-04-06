@@ -1,10 +1,12 @@
+"""Provides TitleStats class for retrieving a user's statistics on played titles and games."""
+
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from enum import Enum
-from typing import TYPE_CHECKING, Any, Generator, Literal, Optional
+from typing import TYPE_CHECKING, Any, Final, Literal
 
 from typing_extensions import Self
 
@@ -13,11 +15,15 @@ from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
 from psnawp_api.utils.misc import iso_format_to_datetime
 
 if TYPE_CHECKING:
+    from collections.abc import Generator
+
     from psnawp_api.core import Authenticator
     from psnawp_api.models.listing import PaginationArguments
 
 
 class PlatformCategory(Enum):
+    """Represents the PlayStation platform associated with title."""
+
     UNKNOWN = "unknown"
     PS4 = "ps4_game"
     PS5 = "ps5_native_game"
@@ -28,11 +34,11 @@ class PlatformCategory(Enum):
         return cls.UNKNOWN
 
 
-PT_REGEX = re.compile(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?")
+PT_REGEX: Final[re.Pattern[str]] = re.compile(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?")
 
 
-def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
-    """Provides a timedelta object for the play duration PSN sends. If for some reason the string is malformed or None, timedelta will return 0
+def play_duration_to_timedelta(play_duration: str | None) -> timedelta:
+    """Provides a timedelta object for the play duration PSN sends. If for some reason the string is malformed or None, timedelta will return 0.
 
     Valid patters: PT243H18M48S, PT21M18S, PT18H, PT18H20S, PT4H21M
 
@@ -42,7 +48,8 @@ def play_duration_to_timedelta(play_duration: Optional[str]) -> timedelta:
 
     .. note::
 
-        PSN API returns the duration in this format: PT243H18M48S. The maximum time Unit is Hours, it does not extend to Days or Months.
+        PSN API returns the duration in this format: PT243H18M48S. The maximum time Unit is Hours, it does not extend to
+        Days or Months.
 
     """
     hours = 0
@@ -67,47 +74,70 @@ class TitleStats:
 
     .. note::
 
-        This class is intended to be interfaced with through PSNAWP.
+        This class is intended to be used via PSNAWP.
 
     """
 
-    title_id: Optional[str]
+    title_id: str | None
     "Game title id"
-    name: Optional[str]
+    name: str | None
     "Game title name"
-    image_url: Optional[str]
+    image_url: str | None
     "Image URL"
-    category: Optional[PlatformCategory]
+    category: PlatformCategory | None
     "Category/Platform Type"
-    play_count: Optional[int]
+    play_count: int | None
     "Number of times the game has been played"
-    first_played_date_time: Optional[datetime]
+    first_played_date_time: datetime | None
     "First time the game was played"
-    last_played_date_time: Optional[datetime]
+    last_played_date_time: datetime | None
     "Last time the game was played"
-    play_duration: Optional[timedelta]
+    play_duration: timedelta | None
     "Total time the game has been played. Example: PT1H51M21S"
 
     @classmethod
     def from_dict(cls, game_stats_dict: dict[str, Any]) -> TitleStats:
-        title_instance = cls(
+        """Creates an instance of :py:class:`TitleStats` from a dictionary."""
+        return cls(
             title_id=game_stats_dict.get("titleId"),
             name=game_stats_dict.get("name"),
             image_url=game_stats_dict.get("imageUrl"),
             category=PlatformCategory(game_stats_dict.get("category")),
             play_count=game_stats_dict.get("playCount"),
-            first_played_date_time=iso_format_to_datetime(game_stats_dict.get("firstPlayedDateTime")),
-            last_played_date_time=iso_format_to_datetime(game_stats_dict.get("lastPlayedDateTime")),
-            play_duration=play_duration_to_timedelta(game_stats_dict.get("playDuration")),
+            first_played_date_time=iso_format_to_datetime(
+                game_stats_dict.get("firstPlayedDateTime"),
+            ),
+            last_played_date_time=iso_format_to_datetime(
+                game_stats_dict.get("lastPlayedDateTime"),
+            ),
+            play_duration=play_duration_to_timedelta(
+                game_stats_dict.get("playDuration"),
+            ),
         )
-        return title_instance
 
 
 class TitleStatsIterator(PaginationIterator[TitleStats]):
-    """An iterator for fetching and paginating through TitleStats objects from the PlayStation Network API."""
+    """An iterator for fetching and paginating through TitleStats objects from the PlayStation Network API.
 
-    def __init__(self, authenticator: Authenticator, url: str, pagination_args: PaginationArguments) -> None:
-        super().__init__(authenticator=authenticator, url=url, pagination_args=pagination_args)
+    .. note::
+
+        This class is intended to be used via Client or User class. See
+        :py:meth:`psnawp_api.models.client.Client.title_stats` or :py:meth:`psnawp_api.models.user.User.title_stats`.
+
+    """
+
+    def __init__(
+        self,
+        authenticator: Authenticator,
+        url: str,
+        pagination_args: PaginationArguments,
+    ) -> None:
+        """Init for TitleStatsIterator."""
+        super().__init__(
+            authenticator=authenticator,
+            url=url,
+            pagination_args=pagination_args,
+        )
 
     def fetch_next_page(self) -> Generator[TitleStats, None, None]:
         """Fetches the next page of TitleStats objects from the API.
@@ -115,7 +145,10 @@ class TitleStatsIterator(PaginationIterator[TitleStats]):
         :yield: A generator yielding TitleStats objects.
 
         """
-        response = self.authenticator.get(url=self._url, params=self._pagination_args.get_params_dict()).json()
+        response = self.authenticator.get(
+            url=self._url,
+            params=self._pagination_args.get_params_dict(),
+        ).json()
         self._total_item_count = response.get("totalItemCount", 0)
 
         titles: list[dict[str, Any]] = response.get("titles")
@@ -131,7 +164,12 @@ class TitleStatsIterator(PaginationIterator[TitleStats]):
             self._has_next = False
 
     @classmethod
-    def from_endpoint(cls, authenticator: Authenticator, account_id: str, pagination_args: PaginationArguments) -> Self:
+    def from_endpoint(
+        cls,
+        authenticator: Authenticator,
+        account_id: str,
+        pagination_args: PaginationArguments,
+    ) -> Self:
         """Creates an instance of TitleStatsIterator from the given endpoint.
 
         :param authenticator: The Authenticator instance used for making authenticated requests to the API.
@@ -142,4 +180,8 @@ class TitleStatsIterator(PaginationIterator[TitleStats]):
 
         """
         url = f"{BASE_PATH['games_list']}{API_PATH['user_game_data'].format(account_id=account_id)}"
-        return cls(authenticator=authenticator, url=url, pagination_args=pagination_args)
+        return cls(
+            authenticator=authenticator,
+            url=url,
+            pagination_args=pagination_args,
+        )

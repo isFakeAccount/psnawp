@@ -239,7 +239,7 @@ class TrophyWithProgressIterator(PaginationIterator[TrophyWithProgress]):
 
     To initialize this class, you need the :meth:`TrophyWithProgressIterator.from_endpoint`.
 
-    .. note::
+    .. warning::
 
         Retrieving the progress of Trophies will require double the number of request because the progress has to be
         fetched via separate endpoint.

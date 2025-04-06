@@ -119,9 +119,6 @@ ignore = [
 ]
 select = ["ALL"]
 
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["D104"]
-
 [tool.ruff.lint.pylint]
 max-args = 15
 

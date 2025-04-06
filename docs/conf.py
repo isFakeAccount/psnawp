@@ -37,6 +37,7 @@ extensions = [
 
 html_static_path = ["_static"]
 templates_path = ["_templates"]
+html_css_files = ["custom.css"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
@@ -85,6 +86,7 @@ html_logo = "_static/psn_logo.png"
 html_theme_options = {
     "repository_url": "https://github.com/isFakeAccount/psnawp",
     "use_repository_button": True,
+    "show_toc_level": 2
 }
 intersphinx_mapping = {
     "python": ("https://docs.python.org", None),

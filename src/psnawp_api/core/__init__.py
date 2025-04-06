@@ -1,3 +1,16 @@
+"""Core package for the PlayStation API wrapper.
+
+This package contains the foundational modules responsible for handling core functionalities such as authentication,
+request management, and exception handling.
+
+Modules in this package include:
+
+- Authentication setup and token refresh.
+- HTTP session and request logic.
+- Custom exception classes and error handling utilities.
+
+"""
+
 from psnawp_api.core.authenticator import Authenticator
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPAuthenticationError,
