@@ -1,6 +1,6 @@
 # <img src="docs/_static/psn_logo.png" alt="PlayStation Logo" height="35px"> PlayStation Network API Wrapper Python (PSNAWP)
 
-Retrieve User Information, Trophies, Game and Store data from the PlayStation Network
+Retrieve User Information, Trophies, Game and Store data from the PlayStation Network.
 
 [![PyPI version](https://badge.fury.io/py/PSNAWP.svg)](https://badge.fury.io/py/PSNAWP)
 [![Downloads](https://static.pepy.tech/badge/psnawp)](https://www.pepy.tech/projects/psnawp)

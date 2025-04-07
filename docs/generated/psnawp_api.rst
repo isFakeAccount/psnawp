@@ -5,7 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
    psnawp_api.core
    psnawp_api.models
@@ -14,18 +14,15 @@ Subpackages
 Submodules
 ----------
 
-psnawp\_api.psnawp module
--------------------------
+.. toctree::
+   :maxdepth: 1
 
-.. automodule:: psnawp_api.psnawp
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   psnawp_api.psnawp
 
 Module contents
 ---------------
 
 .. automodule:: psnawp_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

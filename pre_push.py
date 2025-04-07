@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
-"""Run static analysis on the project."""
+#!/usr/bin/env python
+"""Provides simple way to run formatter/linter/static analysis/tests on the project."""
 
 import argparse
 import sys
 from subprocess import CalledProcessError, check_call
 
 
-def do_process(args: list[str], shell: bool = False, cwd: str = "."):
+def do_process(args: list[str], cwd: str = ".") -> bool:
     """Run program provided by args.
 
     Returns ``True`` upon success.
@@ -18,29 +18,21 @@ def do_process(args: list[str], shell: bool = False, cwd: str = "."):
     """
     print(f"Running: {' '.join(args)}")
     try:
-        check_call(args, shell=shell, cwd=cwd)
+        check_call(args, shell=False, cwd=cwd)
     except CalledProcessError:
         print(f"\nFailed: {' '.join(args)}")
         return False
     except Exception as exc:
-        sys.stderr.write(f"{str(exc)}\n")
-        sys.exit(1)
+        print(f"{exc!s}\n", file=sys.stderr)
+        raise SystemExit(1) from exc
     return True
 
 
-def run_git_pull():
-    """Runs the git pull command.
-
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
-
-    """
-    return do_process(["git", "pull"])
-
-
-def run_static():
+def run_static() -> bool:
     """Runs the static tests.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
+    statuscode 1
 
     """
     success = True
@@ -49,27 +41,35 @@ def run_static():
     success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
     success &= do_process(["pyright", "src/psnawp_api/"])
 
+    success &= do_process(["poetry", "run", "docstrfmt", "src/psnawp_api/"])
+
     success &= do_process(["poetry", "run", "ruff", "format", "src/psnawp_api/"])
     success &= do_process(["poetry", "run", "ruff", "format", "tests/"])
 
-    success &= do_process(["poetry", "run", "ruff", "check", "src/psnawp_api/", "--fix"])
-    success &= do_process(["poetry", "run", "sphinx-apidoc", "-f", "-o", "docs/", "src/psnawp_api/"])
+    success &= do_process(
+        ["poetry", "run", "ruff", "check", "src/psnawp_api/", "--fix"],
+    )
+
+    success &= do_process(["make", "apidoc"], cwd="docs/")
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")
     success &= do_process(["make", "linkcheck"], cwd="docs/")
     return success
 
 
-def run_unit():
+def run_unit() -> bool:
     """Runs the unit-tests.
 
-    Follows the behavior of the static tests, where any failed tests cause pre_push.py to fail.
+    Follows the behavior of the static tests, where any failed tests cause pre_push.py
+    to fail.
 
     """
-    return do_process(["poetry", "run", "pytest", "--cov-config=.coveragerc", "--cov-report=html"])
+    return do_process(
+        ["poetry", "run", "pytest", "--cov-config=.coveragerc", "--cov-report=html"],
+    )
 
 
-def main():
+def main() -> int:
     """Runs the main function.
 
     usage: pre_push.py [-h] [-n] [-u] [-a]
@@ -103,7 +103,6 @@ def main():
     args = parser.parse_args()
     success = True
     try:
-        # success &= run_git_pull()
         if success:
             if not args.unstatic or args.all:
                 success &= run_static()

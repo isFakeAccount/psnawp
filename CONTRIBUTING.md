@@ -13,7 +13,7 @@ This project uses [Poetry](https://python-poetry.org/docs/) for dependency manag
 To install all dependencies, run:
 
 ```bash
-poetry install
+poetry install --all-extras
 ```
 
 ### 3. Activate the Virtual Environment

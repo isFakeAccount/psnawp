@@ -4,17 +4,17 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 from __future__ import annotations
 
-import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from importlib import metadata
+from pathlib import Path
 
-sys.path.insert(1, os.path.abspath("../src"))
+sys.path.insert(0, str(Path("..", "src").resolve()))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 project = "PSNAWP"
-copyright = datetime.today().strftime("%Y, Yoshikage Kira")
+project_copyright = datetime.now(timezone.utc).strftime("%Y, Yoshikage Kira")
 author = "Yoshikage Kira (@isFakeAccount)"
 release = metadata.version("psnawp")
 
@@ -26,28 +26,38 @@ source_suffix = {
     ".md": "markdown",
 }
 extensions = [
+    "myst_parser",
+    "sphinx_copybutton",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "sphinx.ext.autodoc",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.napoleon",
-    "myst_parser",
 ]
-add_module_names = False
-autodoc_default_options = {
-    "members": True,
-    "member-order": "bysource",
-    "special-members": "__init__",
-    "undoc-members": True,
-    "exclude-members": "__weakref__",
-    "ignore-module-all": True,
-}
+
 html_static_path = ["_static"]
 templates_path = ["_templates"]
+html_css_files = ["custom.css"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 nitpick_ignore = [
     ("py:class", "Logging"),
 ]
+add_module_names = False
+suppress_warnings = ["ref.myst"]
+
+# autosectionlabel configs
+autosectionlabel_prefix_document = True
+
+# autodoc Configs
+autoclass_content = "both"
+autodoc_default_options = {
+    "members": True,
+    "member-order": "alphabetical",
+    "special-members": "__init__",
+    "undoc-members": True,
+    "exclude-members": "__weakref__, RequestBuilderHeaders",
+    "ignore-module-all": True,
+}
 
 # myst_parser configs
 myst_heading_anchors = 3
@@ -67,12 +77,20 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
-suppress_warnings = ["ref.myst"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "furo"
-pygments_style = "perldoc"
+html_theme = "sphinx_book_theme"
+pygments_style = "stata-dark"
 html_logo = "_static/psn_logo.png"
-intersphinx_mapping = {"python": ("https://docs.python.org", None), "requests": ("https://requests.readthedocs.io/en/latest/", None)}
-htmlhelp_basename = "PSNAWP"
+html_theme_options = {
+    "repository_url": "https://github.com/isFakeAccount/psnawp",
+    "use_repository_button": True,
+    "show_toc_level": 2
+}
+intersphinx_mapping = {
+    "python": ("https://docs.python.org", None),
+    "requests": ("https://requests.readthedocs.io/en/latest/", None),
+    "requests_ratelimiter": ("https://requests-ratelimiter.readthedocs.io/en/stable/", None),
+}
+html_title = "PSNAWP"

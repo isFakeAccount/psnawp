@@ -3,10 +3,13 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?=
+SPHINXOPTS    ?= -j auto
 SPHINXBUILD   ?= sphinx-build
+SPHINXAPIDOC  ?= sphinx-apidoc
+SPHINXAPIDOCDIR = generated
 SOURCEDIR     = .
 BUILDDIR      = _build
+PACKAGEDIR    ?= ../src
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -17,6 +20,10 @@ linkcheck:
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
+
+# Generate API documentation
+apidoc:
+	@$(SPHINXAPIDOC) $(APIDOCFLAGS) -d 1 --force --separate --no-toc -o "$(SPHINXAPIDOCDIR)" "$(PACKAGEDIR)"
 
 .PHONY: help Makefile
 

@@ -7,7 +7,8 @@ from vcr.record_mode import RecordMode
 
 
 def filter_response_information(response: Response) -> Response:
-    """Filters response information from the given data. This is useful for logging communication with the API.
+    """
+    Filters response information from the given data. This is useful for logging communication with the API.
 
     :param response: The data to redact.
 
