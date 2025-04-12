@@ -1,20 +1,19 @@
 {
-  "basicPresences": [
-    {
-      "accountId": "940512162723934331",
-      "availability": "availableToPlay",
-      "primaryPlatformInfo": {
-        "onlineStatus": "online",
-        "platform": "PS5"
-      },
-      "gameTitleInfoList": [
-        {
-          "npTitleId": "CUSA14296_00",
-          "titleName": "Rust",
-          "format": "PS4",
-          "launchPlatform": "PS5"
-        }
-      ]
+  "basicPresence": {
+    "availability": "availableToPlay",
+    "gameTitleInfoList": [
+      {
+        "format": "PS4",
+        "gameStatus": "Surviving on the server: Chasm HM [Monthly]",
+        "launchPlatform": "PS5",
+        "npTitleIconUrl": "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA14296_00/5/i_2a5430eced065f2c08f1beec578f3990d4dbcba726e70653ac98baf88d73a7f9/i/icon0.png",
+        "npTitleId": "CUSA14296_00",
+        "titleName": "Rust"
+      }
+    ],
+    "primaryPlatformInfo": {
+      "onlineStatus": "online",
+      "platform": "PS5"
     }
-  ]
+  }
 }

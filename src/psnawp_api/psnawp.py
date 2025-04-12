@@ -136,7 +136,7 @@ class PSNAWP:
         .. note::
 
             ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
-            :py:class:`~psnawp_api.models.search.UniversalSearch`
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`
 
         .. note::
 

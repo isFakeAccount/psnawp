@@ -61,7 +61,7 @@ class GameTitle:
         .. note::
 
             ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
-            :py:class:`~psnawp_api.models.search.Search`.
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`.
 
         :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param title_id: unique id of game.

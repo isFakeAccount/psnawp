@@ -119,6 +119,9 @@ ignore = [
 ]
 select = ["ALL"]
 
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D", "S101", "SIM117"]
+
 [tool.ruff.lint.pylint]
 max-args = 15
 

@@ -180,7 +180,7 @@ class User:
         return response
 
     def get_presence(self) -> dict[str, Any]:
-        """Gets the presences of a user. If the profile is private.
+        """Gets the presences of a user.
 
         :returns: A dict containing info similar to what is shown below:
 
@@ -198,9 +198,13 @@ class User:
 
         """
         try:
-            params = {"type": "primary"}
+            params = {
+                "type": "primary",
+                "platforms": "PS4,PS5,MOBILE_APP,PSPC",
+                "withOwnGameTitleInfo": "true",
+            }
             response: dict[str, Any] = self.authenticator.get(
-                url=f"{BASE_PATH['profile_uri']}/{self.account_id}{API_PATH['basic_presences']}",
+                url=f"{BASE_PATH['profile_uri_v2']}/{self.account_id}{API_PATH['basic_presences']}",
                 params=params,
             ).json()
         except PSNAWPForbiddenError as forbidden:
@@ -392,7 +396,7 @@ class User:
         .. note::
 
             ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
-            :py:class:`~psnawp_api.models.search.Search`
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`
 
         .. code-block:: Python
 

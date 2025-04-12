@@ -5,6 +5,7 @@ from __future__ import annotations
 from functools import cached_property
 from typing import TYPE_CHECKING, Any, Literal, overload
 
+from psnawp_api.core import PSNAWPForbiddenError
 from psnawp_api.models.group.group import Group
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.title_stats import TitleStatsIterator
@@ -212,6 +213,42 @@ class Client:
             for request in response["receivedRequests"]
         )
 
+    def get_presences(self, account_ids: list[str]) -> dict[str, Any]:
+        """Gets the presences all the account Ids passed as param.
+
+        :returns: A dict containing info similar to what is shown below:
+
+            .. literalinclude:: ../examples/client/get_presences.json
+                :language: json
+
+
+        :raises PSNAWPForbiddenError: When the user's profile is private, and you don't have permission to view their
+            online status.
+
+        .. code-block:: Python
+
+            client = psnawp.me()
+            print(client.get_presences())
+
+        """
+        try:
+            params = {
+                "type": "primary",
+                "accountIds": ",".join(account_ids),
+                "platforms": "PS4,PS5,MOBILE_APP,PSPC",
+                "withOwnGameTitleInfo": "true",
+            }
+            response: dict[str, Any] = self.authenticator.get(
+                url=f"{BASE_PATH['profile_uri_v2']}/{API_PATH['basic_presences']}",
+                params=params,
+            ).json()
+        except PSNAWPForbiddenError as forbidden:
+            raise PSNAWPForbiddenError(
+                f"You are not allowed to check the presence of user {self.online_id}",
+            ) from forbidden
+        else:
+            return response
+
     def available_to_play(self) -> Generator[User, None, None]:
         """Gets the list of users on your "Notify when available" subscription list.
 
@@ -385,7 +422,7 @@ class Client:
         .. note::
 
             ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
-            :py:class:`~psnawp_api.models.search.Search`
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`
 
         .. code-block:: Python
 
