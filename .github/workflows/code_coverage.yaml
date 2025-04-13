@@ -43,6 +43,7 @@ jobs:
       - name: Build coverage file
         run: |
           poetry run pytest --cov-config=pyproject.toml | tee pytest-coverage.txt
+          sed -i -e ':a' -e 'N' -e '$!ba' -e 's/\(\n\)\{1,\}\n\(Name\)/\n\2/g' pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
