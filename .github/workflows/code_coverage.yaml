@@ -57,6 +57,7 @@ jobs:
           badge-title: Coverage
           pytest-xml-coverage-path: coverage.xml
           junitxml-path: pytest.xml
+          create-new-comment: true
           default-branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Update Readme with Coverage Html
@@ -65,15 +66,6 @@ jobs:
           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
           echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
           echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
-      
-          echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
-      
-          echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
-          echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
-          echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
-          echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
-          echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
-          echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
 
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
