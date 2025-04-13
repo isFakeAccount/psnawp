@@ -65,7 +65,7 @@ requires      = ["poetry-core>=2.0.0,<3.0.0"]
 packages = [{ include = "psnawp_api", from = "src" }]
 
 [tool.pytest.ini_options]
-addopts   = "--cov=psnawp_api --cov-report=html --cov-report=term --cov-report=xml --junitxml=pytest.xml"
+addopts   = "--cov=psnawp_api --cov-report html --cov-report term --cov-report xml --junitxml=pytest.xml"
 testpaths = ["tests"]
 
 [tool.coverage.report]

@@ -40,7 +40,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          poetry run pytest --cov-config=pyproject.toml | tee pytest-coverage.txt
+          poetry run pytest --cov-config=pyproject.toml
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
@@ -53,8 +53,8 @@ jobs:
         with:
           hide-comment: true
           badge-title: Coverage
-          pytest-coverage-path: ./pytest-coverage.txt
-          junitxml-path: ./pytest.xml
+          pytest-xml-coverage-path: coverage.xml
+          junitxml-path: pytest.xml
           default-branch: ${{ github.head_ref || github.ref_name }}
 
       - name: Update Readme with Coverage Html
