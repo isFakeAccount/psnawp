@@ -53,7 +53,7 @@ jobs:
         id: coverageComment
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          hide-comment: true
+          hide-comment: false
           badge-title: Coverage
           pytest-xml-coverage-path: coverage.xml
           junitxml-path: pytest.xml
