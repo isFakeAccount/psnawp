@@ -55,7 +55,7 @@ jobs:
           badge-title: Coverage
           pytest-xml-coverage-path: coverage.xml
           junitxml-path: pytest.xml
-          default-branch: ${{ github.head_ref || github.ref_name }}
+          default-branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Update Readme with Coverage Html
         run: |
@@ -64,7 +64,7 @@ jobs:
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
         with:
-          branch: ${{ github.head_ref || github.ref_name }}
+          branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
           message: Update coverage on Readme
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
