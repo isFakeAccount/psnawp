@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://m.np.playstation.com/api/userProfile/v1/internal/users/2066273503397112667/basicPresences?type=primary",
+                "uri": "https://m.np.playstation.com/api/userProfile/v2/internal/users/2066273503397112667/basicPresences?platforms=PS4%2CPS5%2CMOBILE_APP%2CPSPC&type=primary&withOwnGameTitleInfo=true",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -33,46 +33,46 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Cache-Control": [
-                        "private"
-                    ],
-                    "Date": [
-                        "Sun, 12 Jan 2025 03:18:40 GMT"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
+                    "X-Psn-Track-Id": [
+                        "0806237292797446458"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Content-Length": [
-                        "97"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0282246765665200564"
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Content-Length": [
+                        "212"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Mon, 07 Apr 2025 04:20:20 GMT"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ]
                 },
                 "body": {
-                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\"}}}"
+                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-01-12T06:07:33.538Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-01-12T06:07:33.538Z\"}}}"
                 }
             }
         }

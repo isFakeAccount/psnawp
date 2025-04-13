@@ -7,8 +7,10 @@ on:
     branches:
       - master
     types:
+      - opened
+      - synchronize
+      - reopened
       - ready_for_review
-      - closed
 
 permissions:
   contents: write
@@ -22,8 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0             # otherwise, you will fail to push refs to dest repo
+          persist-credentials: false
+          fetch-depth: 0
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
 
       - uses: actions/setup-python@v5
         with:
@@ -38,7 +42,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          poetry run pytest --cov-report=term --cov-config=pyproject.toml | tee pytest-coverage.txt
+          poetry run pytest --cov-config=pyproject.toml
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
@@ -51,9 +55,9 @@ jobs:
         with:
           hide-comment: true
           badge-title: Coverage
-          pytest-coverage-path: ./pytest-coverage.txt
-          junitxml-path: ./pytest.xml
-          default-branch: ${{ github.head_ref || github.ref_name }}
+          pytest-xml-coverage-path: coverage.xml
+          junitxml-path: pytest.xml
+          default-branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Update Readme with Coverage Html
         run: |
@@ -62,6 +66,12 @@ jobs:
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
         with:
-          branch: ${{ github.head_ref || github.ref_name }}
+          branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
           message: Update coverage on Readme
+          rebase: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

@@ -7,6 +7,7 @@ from typing import Final
 BASE_PATH: Final[dict[str, str]] = {
     "base_uri": "https://ca.account.sony.com/api",
     "profile_uri": "https://m.np.playstation.com/api/userProfile/v1/internal/users",
+    "profile_uri_v2": "https://m.np.playstation.com/api/userProfile/v2/internal/users",
     "account_uri": "https://dms.api.playstation.com/api",
     "legacy_profile_uri": "https://us-prof.np.community.playstation.net/userProfile/v1/users",
     "gaming_lounge": "https://m.np.playstation.com/api/gamingLoungeGroups/v1",

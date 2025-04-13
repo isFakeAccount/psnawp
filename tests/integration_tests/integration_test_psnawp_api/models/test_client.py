@@ -1,8 +1,13 @@
+from __future__ import annotations
+
 import inspect
+import json
 import os
 import re
+from pathlib import Path
 
 import pytest
+from jsonschema import ValidationError, validate
 from pycountry.db import Country
 
 from psnawp_api import PSNAWP
@@ -51,6 +56,29 @@ def test_client__friend_requests(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         client = psnawp_fixture.me()
         assert len(list(client.friend_requests())) > 0
+
+
+@pytest.mark.vcr
+def test_client__friend_requests(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        assert len(list(client.friend_requests())) > 0
+
+
+@pytest.mark.vcr
+def test_client__get_presences(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        client = psnawp_fixture.me()
+        friends_list = [user.account_id for user in client.friends_list()]
+        presences = client.get_presences(friends_list)
+
+        with Path("tests/integration_tests/integration_test_psnawp_api/json_schema/models/client/get_presences.json").open("r") as schema_file:
+            schema = json.load(schema_file)
+
+        try:
+            validate(instance=presences, schema=schema)
+        except ValidationError as e:
+            pytest.fail(f"Validation failed: {e.message}")
 
 
 @pytest.mark.vcr

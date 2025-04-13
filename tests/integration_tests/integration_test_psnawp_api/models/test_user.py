@@ -1,8 +1,10 @@
 import inspect
+import json
 from os import getenv
+from pathlib import Path
 
-import jsonschema
 import pytest
+from jsonschema import ValidationError, validate
 from pycountry import countries
 
 from psnawp_api import PSNAWP
@@ -82,14 +84,21 @@ def test_user__get_profile(psnawp_fixture: PSNAWP) -> None:
 @pytest.mark.vcr
 def test_user__get_presence(friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-        friend_user.get_presence()
+        presence = friend_user.get_presence()
+
+        with Path("tests/integration_tests/integration_test_psnawp_api/json_schema/models/user/get_presence.json").open("r") as schema_file:
+            schema = json.load(schema_file)
+
+        try:
+            validate(instance=presence, schema=schema)
+        except ValidationError as e:
+            pytest.fail(f"Validation failed: {e.message}")
 
 
 @pytest.mark.vcr
 def test_user__get_presence_forbidden(blocked_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-        with pytest.raises(PSNAWPForbiddenError):
-            blocked_user.get_presence()
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"), pytest.raises(PSNAWPForbiddenError):
+        blocked_user.get_presence()
 
 
 @pytest.mark.vcr
@@ -115,8 +124,8 @@ def test_user__friendship(friend_user: User) -> None:
 
         # Validate the JSON structure against the schema
         try:
-            jsonschema.validate(instance=response, schema=expected_schema)
-        except jsonschema.ValidationError as e:
+            validate(instance=response, schema=expected_schema)
+        except ValidationError as e:
             pytest.fail(f"JSON structure validation failed: {e.message}")
 
 

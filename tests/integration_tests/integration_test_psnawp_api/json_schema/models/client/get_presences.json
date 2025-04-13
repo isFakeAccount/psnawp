@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "basicPresences": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "accountId": {
+                        "type": "string"
+                    },
+                    "availability": {
+                        "type": "string",
+                        "enum": [
+                            "unavailable",
+                            "availableToPlay"
+                        ]
+                    },
+                    "lastAvailableDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "primaryPlatformInfo": {
+                        "type": "object",
+                        "properties": {
+                            "onlineStatus": {
+                                "type": "string"
+                            },
+                            "platform": {
+                                "type": "string"
+                            },
+                            "lastOnlineDate": {
+                                "type": "string",
+                                "format": "date-time"
+                            }
+                        },
+                        "required": [
+                            "onlineStatus",
+                            "platform"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "gameTitleInfoList": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "npTitleId": {
+                                    "type": "string"
+                                },
+                                "titleName": {
+                                    "type": "string"
+                                },
+                                "format": {
+                                    "type": "string"
+                                },
+                                "launchPlatform": {
+                                    "type": "string"
+                                },
+                                "gameStatus": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "npTitleId",
+                                "titleName",
+                                "format",
+                                "launchPlatform",
+                                "gameStatus"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "accountId",
+                    "availability",
+                    "primaryPlatformInfo"
+                ],
+                "additionalProperties": false,
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": {
+                                "availability": {
+                                    "const": "unavailable"
+                                }
+                            }
+                        },
+                        "then": {
+                            "required": [
+                                "lastAvailableDate"
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "availability": {
+                                    "const": "availableToPlay"
+                                }
+                            }
+                        },
+                        "then": {
+                            "required": [
+                                "gameTitleInfoList"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "basicPresences"
+    ],
+    "additionalProperties": false
+}

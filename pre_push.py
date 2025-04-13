@@ -65,7 +65,7 @@ def run_unit() -> bool:
 
     """
     return do_process(
-        ["poetry", "run", "pytest", "--cov-config=.coveragerc", "--cov-report=html"],
+        ["poetry", "run", "pytest", "--cov-config=pyproject.toml"],
     )
 
 
