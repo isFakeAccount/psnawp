@@ -7,8 +7,10 @@ on:
     branches:
       - master
     types:
+      - opened
+      - synchronize
+      - reopened
       - ready_for_review
-      - closed
 
 permissions:
   contents: write
@@ -38,7 +40,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          poetry run pytest --cov-report=term --cov-config=pyproject.toml | tee pytest-coverage.txt
+          poetry run pytest --cov-config=pyproject.toml | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
@@ -65,3 +67,8 @@ jobs:
           branch: ${{ github.head_ref || github.ref_name }}
           message: Update coverage on Readme
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
