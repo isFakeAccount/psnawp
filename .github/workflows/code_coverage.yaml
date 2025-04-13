@@ -56,7 +56,6 @@ jobs:
           hide-comment: true
           badge-title: Coverage
           pytest-coverage-path: pytest-coverage.txt
-          pytest-xml-coverage-path: coverage.xml
           junitxml-path: pytest.xml
           default-branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
