@@ -62,9 +62,7 @@ jobs:
 
       - name: Update Readme with Coverage Html
         run: |
-          echo "Coverage Percentage - ${{ steps.coverageComment.outputs.coverage }}"
-          echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
-          echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
 
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master

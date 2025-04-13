@@ -15,7 +15,7 @@ Retrieve User Information, Trophies, Game and Store data from the PlayStation Ne
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
 <!-- Pytest Coverage Comment:Begin -->
-\n<!-- Pytest Coverage Comment:End -->
+<!-- Pytest Coverage Comment:End -->
 
 ## How to install
 
