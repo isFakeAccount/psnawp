@@ -61,12 +61,15 @@ jobs:
           junitxml-path: pytest.xml
           default-branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
+      - name: Show Coverage.xml
+        run: |
+          cat coverage.xml
+
       - name: Update Readme with Coverage Html
         run: |
           echo "Coverage Percentage - ${{ steps.coverageComment.outputs.coverage }}"
           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
           echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
-          echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
 
       - name: Commit & Push changes to Readme
         uses: actions-js/push@master
