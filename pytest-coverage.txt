@@ -13,14 +13,1326 @@ tests/integration_tests/integration_test_psnawp_api/models/test_client.py . [  4
 tests/integration_tests/integration_test_psnawp_api/models/test_game_title.py . [ 28%]
 ........                                                                 [ 37%]
 tests/integration_tests/integration_test_psnawp_api/models/test_group.py . [ 39%]
-.............                                                            [ 54%]
+.E....EEEEEE.                                                            [ 54%]
 tests/integration_tests/integration_test_psnawp_api/models/test_search.py . [ 55%]
 ..                                                                       [ 57%]
 tests/integration_tests/integration_test_psnawp_api/models/test_user.py . [ 58%]
-.................................                                        [ 96%]
+.......EEEEEEEEE.E.E..E.E..EE..E.                                        [ 96%]
 tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py . [ 97%]
 ..                                                                       [100%]
 
+==================================== ERRORS ====================================
+________________ ERROR at setup of test_group__group_with_users ________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_______________ ERROR at setup of test_group__dming_blocked_user _______________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+__________________ ERROR at setup of test_group__change_name ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+__________________ ERROR at setup of test_group__kick_member ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_____________ ERROR at setup of test_group__kick_member_not_found ______________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_________________ ERROR at setup of test_group__invite_members _________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_____________ ERROR at setup of test_group__invite_members_blocked _____________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+__________________ ERROR at setup of test_user__get_presence ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_____________ ERROR at setup of test_user__get_presence_forbidden ______________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+___________________ ERROR at setup of test_user__friendship ____________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+______________ ERROR at setup of test_user__accept_friend_request ______________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+__________________ ERROR at setup of test_user__remove_friend __________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+___________________ ERROR at setup of test_user__get_friends ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+______________ ERROR at setup of test_user__get_friends_forbidden ______________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+___________________ ERROR at setup of test_user__is_blocked ____________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+___________ ERROR at setup of test_user__get_shareable_profile_link ____________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+____________ ERROR at setup of test_user__trophy_summary_forbidden _____________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_____________ ERROR at setup of test_user__trophy_titles_forbidden _____________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+________ ERROR at setup of test_user__trophy_titles_for_title_forbidden ________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+________ ERROR at setup of test_user__trophies_with_progress_forbidden _________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+_________ ERROR at setup of test_user__trophy_groups_summary_forbidden _________
+
+    @pytest.fixture(scope="session")
+    def blocked_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=BLOCKED_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+___________________ ERROR at setup of test_user__title_stats ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
+__________________ ERROR at setup of test_user__repr_and_str ___________________
+
+    @pytest.fixture(scope="session")
+    def friend_user() -> User:
+        psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
+>       return psnawp.user(online_id=FRIEND_USER_NAME)
+
+tests/integration_tests/integration_test_psnawp_api/conftest.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/psnawp_api/psnawp.py:115: in user
+    return User.from_online_id(self.authenticator, online_id)
+src/psnawp_api/models/user.py:62: in from_online_id
+    response: dict[str, Any] = authenticator.get(
+src/psnawp_api/core/authenticator.py:43: in _impl
+    authorization_code = authenticator_obj.get_authorization_code()
+src/psnawp_api/core/authenticator.py:265: in get_authorization_code
+    response = self.request_builder.get(
+src/psnawp_api/core/request_builder.py:198: in get
+    return self.request(method="get", **kwargs)
+src/psnawp_api/core/request_builder.py:178: in request
+    response_checker(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = <Response [429]>
+
+    def response_checker(response: Response) -> None:
+        """Checks the HTTP(S) response and raises corresponding PSNAWP exceptions.
+    
+        This function examines the status code of the HTTP response and raises PSNAWP exceptions based on error conditions.
+    
+        :param requests.Response response: The HTTP response object.
+    
+        :raises PSNAWPBadRequestError: If the HTTP response status code is 400.
+        :raises PSNAWPUnauthorizedError: If the HTTP response status code is 401.
+        :raises PSNAWPForbiddenError: If the HTTP response status code is 403.
+        :raises PSNAWPNotFoundError: If the HTTP response status code is 404.
+        :raises PSNAWPNotAllowedError: If the HTTP response status code is 405.
+        :raises PSNAWPTooManyRequestsError: If the HTTP response status code is 429.
+        :raises PSNAWPClientError: If the HTTP response status code is in the 4xx range (excluding those listed above).
+        :raises PSNAWPServerError: If the HTTP response status code is 500 or above.
+    
+        """
+        if response.status_code == HTTPStatus.BAD_REQUEST:
+            raise PSNAWPBadRequestError(response.text)
+        if response.status_code == HTTPStatus.UNAUTHORIZED:
+            raise PSNAWPUnauthorizedError(response.text)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            raise PSNAWPForbiddenError(response.text)
+        if response.status_code == HTTPStatus.NOT_FOUND:
+            raise PSNAWPNotFoundError(response.text)
+        if response.status_code == HTTPStatus.METHOD_NOT_ALLOWED:
+            raise PSNAWPNotAllowedError(response.text)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+>           raise PSNAWPTooManyRequestsError(response.text)
+E           psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+
+src/psnawp_api/core/request_builder.py:69: PSNAWPTooManyRequestsError
 -------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 ================================ tests coverage ================================
 _______________ coverage: platform linux, python 3.11.11-final-0 _______________
@@ -28,14 +1340,14 @@ Name                                                   Stmts   Miss  Cover
 --------------------------------------------------------------------------
 src/psnawp_api/__init__.py                                 2      0   100%
 src/psnawp_api/core/__init__.py                            4      0   100%
-src/psnawp_api/core/authenticator.py                     131     17    87%
+src/psnawp_api/core/authenticator.py                     131     22    83%
 src/psnawp_api/core/psnawp_exceptions.py                  11      0   100%
-src/psnawp_api/core/request_builder.py                    72      7    90%
+src/psnawp_api/core/request_builder.py                    72      8    89%
 src/psnawp_api/models/__init__.py                          7      0   100%
 src/psnawp_api/models/client.py                           80      0   100%
 src/psnawp_api/models/game_title.py                       23      0   100%
 src/psnawp_api/models/group/__init__.py                    2      0   100%
-src/psnawp_api/models/group/group.py                      56      0   100%
+src/psnawp_api/models/group/group.py                      56     20    64%
 src/psnawp_api/models/group/group_datatypes.py            42     42     0%
 src/psnawp_api/models/listing/__init__.py                  2      0   100%
 src/psnawp_api/models/listing/pagination_iterator.py      52      2    96%
@@ -47,16 +1359,40 @@ src/psnawp_api/models/trophies/__init__.py                 6      0   100%
 src/psnawp_api/models/trophies/trophy.py                 104      7    93%
 src/psnawp_api/models/trophies/trophy_constants.py        33      0   100%
 src/psnawp_api/models/trophies/trophy_group.py            65      0   100%
-src/psnawp_api/models/trophies/trophy_summary.py          20      0   100%
+src/psnawp_api/models/trophies/trophy_summary.py          20      2    90%
 src/psnawp_api/models/trophies/trophy_titles.py           70      0   100%
 src/psnawp_api/models/trophies/trophy_utils.py             6      0   100%
-src/psnawp_api/models/user.py                             87      0   100%
-src/psnawp_api/psnawp.py                                  33      0   100%
+src/psnawp_api/models/user.py                             87     18    79%
+src/psnawp_api/psnawp.py                                  33      1    97%
 src/psnawp_api/utils/__init__.py                           3      0   100%
 src/psnawp_api/utils/endpoints.py                          3      0   100%
 src/psnawp_api/utils/misc.py                              19      0   100%
 --------------------------------------------------------------------------
-TOTAL                                                   1142    102    91%
+TOTAL                                                   1142    149    87%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-============================== 87 passed in 5.49s ==============================
+=========================== short test summary info ============================
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__group_with_users - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__dming_blocked_user - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__change_name - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__kick_member - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__kick_member_not_found - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__invite_members - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_group.py::test_group__invite_members_blocked - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_presence - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_presence_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__friendship - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__accept_friend_request - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__remove_friend - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_friends - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_friends_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__is_blocked - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__get_shareable_profile_link - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophy_summary_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophy_titles_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophy_titles_for_title_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophies_with_progress_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophy_groups_summary_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__title_stats - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__repr_and_str - psnawp_api.core.psnawp_exceptions.PSNAWPTooManyRequestsError: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1></body></html>
+======================== 64 passed, 23 errors in 4.22s =========================
