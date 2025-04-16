@@ -53,7 +53,7 @@ jobs:
 
       - name: PyTest Coverage comment
         id: coverageComment
-        uses: MishaKav/pytest-coverage-comment@main
+        uses: isFakeAccount/pytest-coverage-comment@main
         with:
           hide-comment: true
           badge-title: Coverage
