@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import base64
 import binascii
+import json
 from datetime import datetime
 from typing import TYPE_CHECKING, cast
 
@@ -53,3 +54,20 @@ def extract_region_from_npid(npid: str) -> Country | None:
             return cast("Country", countries.get(alpha_2=region_candidate))
 
     return None
+
+
+def parse_npsso_token(npsso_input: str = "") -> str:
+    """Accepts a string from the user that may contain either a valid npsso token or a json string with key "npsso" and value of the npsso token.
+
+    This function either succeeds at extracting the npsso token from the provided input
+    (meaning a valid npsso json string was provided) or it returns the original input.
+
+    :param npsso_input: User provided input for npsso token.
+
+    :returns: Extracted npsso token from user input or the original string.
+    """
+    try:
+        npsso_input = json.loads(npsso_input)
+        return npsso_input["npsso"]
+    except Exception:  # pylint: disable=broad-except  # noqa: BLE001
+        return npsso_input

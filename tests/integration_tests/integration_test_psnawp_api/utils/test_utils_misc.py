@@ -3,7 +3,7 @@ from datetime import timedelta
 from pycountry import countries
 
 from psnawp_api.models.title_stats import play_duration_to_timedelta
-from psnawp_api.utils.misc import extract_region_from_npid
+from psnawp_api.utils.misc import extract_region_from_npid, parse_npsso_token
 
 
 def test_play_duration_to_timedelta_valid_inputs():
@@ -31,3 +31,9 @@ def test_extract_region_from_npid() -> None:
     assert extract_region_from_npid("ZGF2MWRfMTIzQGIxLmNh") == countries.get(alpha_2="CA")
     assert extract_region_from_npid("Z2lua283NjVAYTUucGw=") == countries.get(alpha_2="PL")
     assert extract_region_from_npid("THVjYXNEaWFzQ0BkMi5icg==") == countries.get(alpha_2="BR")
+
+
+def test_extract_npsso_input() -> None:
+    assert parse_npsso_token('{"npsso":"token"}') == "token" #Valid npsso json
+    assert parse_npsso_token("token") == "token" #User supplied just the npsso token
+    assert parse_npsso_token('"npsso":"token"}') == '"npsso":"token"}' #Invalid npsso json -> Return original
