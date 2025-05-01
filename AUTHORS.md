@@ -8,6 +8,7 @@
 - andshrew @andshrew
 - Omar Mujtaba @omz1990
 - R @Dev-R
+- Jack Powell @jackjpowell
 
 # Documentation Contributors
 - andshrew @andshrew

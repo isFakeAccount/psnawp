@@ -82,7 +82,7 @@ class GameTitle:
         else:
             self.np_communication_id = np_communication_id
 
-    def get_details(self, country: str = "US", language: str = "en-US") -> list[dict[str, Any]]:
+    def get_details(self, country: str | None = None, language: str | None = None) -> list[dict[str, Any]]:
         """Get game details such as full name, description, genre, promotional videos/images, etc...
 
         :param country: The country code of the game details to retrieve the localized content.
@@ -95,6 +95,8 @@ class GameTitle:
                 :language: json
 
         """
+        country = country or self.authenticator.common_headers.get("Country", "US")
+        language = language or self.authenticator.common_headers.get("Accept-Language", "en-US")
         param: dict[str, int | str] = {"age": 99, "country": country, "language": language}
 
         response: list[dict[str, Any]] = self.authenticator.get(
