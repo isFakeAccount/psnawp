@@ -1,4 +1,5 @@
 from datetime import timedelta
+import pytest
 
 from pycountry import countries
 
@@ -36,4 +37,11 @@ def test_extract_region_from_npid() -> None:
 def test_extract_npsso_input() -> None:
     assert parse_npsso_token('{"npsso":"token"}') == "token" #Valid npsso json
     assert parse_npsso_token("token") == "token" #User supplied just the npsso token
-    assert parse_npsso_token('"npsso":"token"}') == '"npsso":"token"}' #Invalid npsso json -> Return original
+
+def test_extract_npsso_invalid_json() -> None:
+    with pytest.raises(ValueError) as ex_info:
+        parse_npsso_token('"npsso":"token"}') #Invalid npsso json -> Raise exception
+
+def test_extract_npsso_invalid_json_key() -> None:
+    with pytest.raises(KeyError) as ex_info:
+        parse_npsso_token('{"missing_key":"token"}') #valid json but missing npsso key -> Raise exception

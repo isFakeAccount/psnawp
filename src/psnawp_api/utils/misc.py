@@ -5,6 +5,7 @@ from __future__ import annotations
 import base64
 import binascii
 import json
+import re
 from datetime import datetime
 from typing import TYPE_CHECKING, cast
 
@@ -65,9 +66,17 @@ def parse_npsso_token(npsso_input: str = "") -> str:
     :param npsso_input: User provided input for npsso token.
 
     :returns: Extracted npsso token from user input or the original string.
+
+    :raises ValueError: If malformed JSON is supplied
+    :raises KeyError: If input json is missing the npsso key
     """
-    try:
-        npsso_input = json.loads(npsso_input)
-        return npsso_input["npsso"]
-    except Exception:  # pylint: disable=broad-except  # noqa: BLE001
-        return npsso_input
+    pattern = r"\{|\}"
+    if re.search(pattern, npsso_input):
+        try:
+            npsso_input = json.loads(npsso_input)
+            return npsso_input["npsso"]
+        except json.JSONDecodeError as exp:
+            raise ValueError("Malformed JSON passed as input.") from exp
+        except KeyError as exp:
+            raise KeyError('Input JSON is missing the "npsso" key') from exp
+    return npsso_input
