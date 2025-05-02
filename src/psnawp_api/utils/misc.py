@@ -58,7 +58,7 @@ def extract_region_from_npid(npid: str) -> Country | None:
 
     return None
 
-@staticmethod
+
 def parse_npsso_token(npsso_input: str = "") -> str:
     """Accept string from the user that may contain either a valid npsso token or a json string with key "npsso" and value of the npsso token.
 
