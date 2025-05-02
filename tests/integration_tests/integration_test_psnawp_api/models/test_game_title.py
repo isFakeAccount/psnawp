@@ -36,6 +36,8 @@ def test_game_title__get_localized_title_details(psnawp_fixture: PSNAWP) -> None
         game_title = psnawp_fixture.game_title(title_id="PPSA02432_00")
         title_details = game_title.get_details(country="FR", language="fr")
         assert title_details[0].get("name") == "Grand Theft Auto V (PlayStation®5)"
+        assert title_details[0].get("country") == "FR"
+        assert title_details[0].get("language") == "fr"
 
 
 @pytest.mark.vcr

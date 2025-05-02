@@ -85,8 +85,12 @@ class GameTitle:
     def get_details(self, country: str | None = None, language: str | None = None) -> list[dict[str, Any]]:
         """Get game details such as full name, description, genre, promotional videos/images, etc...
 
-        :param country: The country code of the game details to retrieve the localized content.
-        :param language: The language of the game details to retrieve the localized content.
+        If `country` or `language` is not provided, defaults will be used from the authenticator headers.
+
+        :param country: The country code used to retrieve localized content, in ISO 3166-1 alpha-2 format (e.g., "US",
+            "JP").
+        :param language: The language code used to retrieve localized content, using the IETF BCP 47 format (e.g.,
+            "en-US", "fr-FR").
 
         :returns: A list of dicts containing info similar to what is shown below (Not all values are shown because of
             space limitations):
