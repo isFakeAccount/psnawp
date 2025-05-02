@@ -11,6 +11,8 @@ from typing import TYPE_CHECKING, cast
 
 from pycountry import countries
 
+from psnawp_api.core.psnawp_exceptions import PSNAWPInvalidTokenError
+
 if TYPE_CHECKING:
     from pycountry.db import Country
 
@@ -56,9 +58,9 @@ def extract_region_from_npid(npid: str) -> Country | None:
 
     return None
 
-
+@staticmethod
 def parse_npsso_token(npsso_input: str = "") -> str:
-    """Accepts a string from the user that may contain either a valid npsso token or a json string with key "npsso" and value of the npsso token.
+    """Accept string from the user that may contain either a valid npsso token or a json string with key "npsso" and value of the npsso token.
 
     This function either succeeds at extracting the npsso token from the provided input
     (meaning a valid npsso json string was provided) or it returns the original input.
@@ -76,7 +78,7 @@ def parse_npsso_token(npsso_input: str = "") -> str:
             npsso_input = json.loads(npsso_input)
             return npsso_input["npsso"]
         except json.JSONDecodeError as exp:
-            raise ValueError("Malformed JSON passed as input.") from exp
+            raise PSNAWPInvalidTokenError("Malformed JSON passed as input.") from exp
         except KeyError as exp:
-            raise KeyError('Input JSON is missing the "npsso" key') from exp
+            raise PSNAWPInvalidTokenError('Input JSON is missing the "npsso" key') from exp
     return npsso_input
