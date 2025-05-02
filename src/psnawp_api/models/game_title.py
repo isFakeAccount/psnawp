@@ -82,8 +82,15 @@ class GameTitle:
         else:
             self.np_communication_id = np_communication_id
 
-    def get_details(self) -> list[dict[str, Any]]:
+    def get_details(self, country: str | None = None, language: str | None = None) -> list[dict[str, Any]]:
         """Get game details such as full name, description, genre, promotional videos/images, etc...
+
+        If `country` or `language` is not provided, defaults will be used from the authenticator headers.
+
+        :param country: The country code used to retrieve localized content, in ISO 3166-1 alpha-2 format (e.g., "US",
+            "JP").
+        :param language: The language code used to retrieve localized content, using the IETF BCP 47 format (e.g.,
+            "en-US", "fr-FR").
 
         :returns: A list of dicts containing info similar to what is shown below (Not all values are shown because of
             space limitations):
@@ -92,7 +99,9 @@ class GameTitle:
                 :language: json
 
         """
-        param: dict[str, int | str] = {"age": 99, "country": "US", "language": "en-US"}
+        country = country or self.authenticator.common_headers.get("Country", "US")
+        language = language or self.authenticator.common_headers.get("Accept-Language", "en-US")
+        param: dict[str, int | str] = {"age": 99, "country": country, "language": language}
 
         response: list[dict[str, Any]] = self.authenticator.get(
             url=f"{BASE_PATH['game_titles']}{API_PATH['title_concept'].format(title_id=self.title_id)}",
