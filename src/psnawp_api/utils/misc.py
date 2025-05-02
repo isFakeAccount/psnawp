@@ -69,8 +69,7 @@ def parse_npsso_token(npsso_input: str = "") -> str:
 
     :returns: Extracted npsso token from user input or the original string.
 
-    :raises ValueError: If malformed JSON is supplied
-    :raises KeyError: If input json is missing the npsso key
+    :raises PSNAWPInvalidTokenError: If malformed npsso JSON is supplied
     """
     pattern = r"\{|\}"
     if re.search(pattern, npsso_input):
