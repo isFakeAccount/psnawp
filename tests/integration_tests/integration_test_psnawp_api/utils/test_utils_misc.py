@@ -5,7 +5,7 @@ from pycountry import countries
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPInvalidTokenError
 from psnawp_api.models.title_stats import play_duration_to_timedelta
-from psnawp_api.utils.misc import extract_region_from_npid, parse_npsso_token
+from psnawp_api.utils.misc import extract_region_from_npid, legacy_title_icon_url, parse_npsso_token
 
 
 def test_play_duration_to_timedelta_valid_inputs():
@@ -48,3 +48,6 @@ def test_extract_npsso_invalid_json() -> None:
 def test_extract_npsso_invalid_json_key() -> None:
     with pytest.raises(PSNAWPInvalidTokenError) as ex_info:
         parse_npsso_token('{"missing_key":"token"}')  # valid json but missing npsso key -> Raise exception
+
+def test_legacy_title_icon_url() -> None:
+    assert legacy_title_icon_url("NPEB00571_00") == "https://tmdb.np.dl.playstation.net/tmdb/NPEB00571_00_1EB03AE017B54F8797D8D96BBBA3F5DACFEF3584/ICON0.PNG"
