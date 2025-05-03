@@ -59,23 +59,24 @@ def extract_region_from_npid(npid: str) -> Country | None:
     return None
 
 
-def parse_npsso_token(npsso_input: str = "") -> str:
+def parse_npsso_token(npsso_input: str) -> str:
     """Accept string from the user that may contain either a valid npsso token or a json string with key "npsso" and value of the npsso token.
 
-    This function either succeeds at extracting the npsso token from the provided input
-    (meaning a valid npsso json string was provided) or it returns the original input.
+    This function either succeeds at extracting the npsso token from the provided input (meaning a valid npsso json
+    string was provided) or it returns the original input.
 
     :param npsso_input: User provided input for npsso token.
 
     :returns: Extracted npsso token from user input or the original string.
 
     :raises PSNAWPInvalidTokenError: If malformed npsso JSON is supplied
+
     """
     pattern = r"\{|\}"
     if re.search(pattern, npsso_input):
         try:
-            npsso_input = json.loads(npsso_input)
-            return npsso_input["npsso"]
+            npsso_dict: dict[str, str] = json.loads(npsso_input)
+            return npsso_dict["npsso"]
         except json.JSONDecodeError as exp:
             raise PSNAWPInvalidTokenError("Malformed JSON passed as input.") from exp
         except KeyError as exp:
