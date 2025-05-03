@@ -29,6 +29,10 @@ class PSNAWPUnauthorizedError(PSNAWPClientError):
     """Exception for accessing an action is not allowed due to missing the right authorization."""
 
 
+class PSNAWPInvalidTokenError(PSNAWPClientError):
+    """Exception raised if user gave unparsable npsso token string."""
+
+
 class PSNAWPForbiddenError(PSNAWPClientError):
     """Exception for accessing an action is not allowed due to insufficient rights to a resource."""
 
