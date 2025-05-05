@@ -13,7 +13,15 @@ jobs:
     steps:
       - id: check
         run: |
-          echo "is_fork=$([[ '${{ github.event.pull_request.head.repo.full_name }}' != '${{ github.repository }}' ]] && echo true || echo false)" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_target" ]]; then
+            if [[ "${{ github.event.pull_request.head.repo.full_name }}" != "${{ github.repository }}" ]]; then
+              echo "is_fork=true" >> $GITHUB_OUTPUT
+            else
+              echo "is_fork=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "is_fork=false" >> $GITHUB_OUTPUT
+          fi
 
   call-sandbox:
     if: needs.detect-fork.outputs.is_fork == 'true'
