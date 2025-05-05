@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import base64
 import binascii
-import hashlib
-import hmac
 import json
 import re
 from datetime import datetime
@@ -84,12 +82,3 @@ def parse_npsso_token(npsso_input: str) -> str:
         except KeyError as exp:
             raise PSNAWPInvalidTokenError('Input JSON is missing the "npsso" key') from exp
     return npsso_input
-
-
-def legacy_title_icon_url(np_title_id: str) -> str:
-    """Generate the legacy title icon URL for a PlayStation 3 title."""
-    hex_key = "F5DE66D2680E255B2DF79E74F890EBF349262F618BCAE2A9ACCDEE5156CE8DF2CDF2D48C71173CDC2594465B87405D197CF1AED3B7E9671EEB56CA6753C2E6B0"
-    key = bytes.fromhex(hex_key)
-    digest = hmac.new(key, np_title_id.encode(), hashlib.sha1).hexdigest()
-
-    return f"https://tmdb.np.dl.playstation.net/tmdb/{np_title_id}_{digest.upper()}/ICON0.PNG"
