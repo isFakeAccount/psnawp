@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import hmac
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, ClassVar
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPClientError
 from psnawp_api.models.listing import PaginationArguments
@@ -23,9 +23,6 @@ if TYPE_CHECKING:
         TrophyGroupSummary,
     )
 
-HMAC_SHA1_KEY = bytes.fromhex(
-    "F5DE66D2680E255B2DF79E74F890EBF349262F618BCAE2A9ACCDEE5156CE8DF2CDF2D48C71173CDC2594465B87405D197CF1AED3B7E9671EEB56CA6753C2E6B0"
-    )
 
 class GameTitle:
     """The GameTitle class provides the information and methods for retrieving Game details and trophies.
@@ -47,6 +44,10 @@ class GameTitle:
         This class is intended to be used via PSNAWP. See :py:meth:`psnawp_api.psnawp.PSNAWP.game_title`.
 
     """
+
+    HMAC_SHA1_KEY: ClassVar[bytes] = bytes.fromhex(
+        "F5DE66D2680E255B2DF79E74F890EBF349262F618BCAE2A9ACCDEE5156CE8DF2CDF2D48C71173CDC2594465B87405D197CF1AED3B7E9671EEB56CA6753C2E6B0"
+    )
 
     def __init__(
         self,
@@ -171,7 +172,6 @@ class GameTitle:
             np_communication_id=self.np_communication_id,
         ).game_title_trophy_groups_summary(platform=platform)
 
-
     def get_title_icon_url(self, platform: PlatformType) -> str:
         """Generate/retrieve the title icon URL for a PlayStation 3/4 title.
 
@@ -182,14 +182,15 @@ class GameTitle:
         :raises PSNAWPClientError: If the platform is not supported.
 
         """
-        digest = hmac.new(HMAC_SHA1_KEY, self.title_id.encode(), hashlib.sha1).hexdigest().upper()
+        digest = hmac.new(type(self).HMAC_SHA1_KEY, self.title_id.encode(), hashlib.sha1).hexdigest().upper()
 
         if platform is PlatformType.PS3:
             return f"https://tmdb.np.dl.playstation.net/tmdb/{self.title_id}_{digest}/ICON0.PNG"
 
         if platform is PlatformType.PS4:
             json_url = f"https://tmdb.np.dl.playstation.net/tmdb2/{self.title_id}_{digest}/{self.title_id}.json"
-            info = self.authenticator.get(url=json_url).json()
-            return info["icons"][0]["icon"]
+            info: dict[str, Any] = self.authenticator.get(url=json_url).json()
+            icon_url: str = info["icons"][0]["icon"]
+            return icon_url
 
         raise PSNAWPClientError(f"Unsupported or unknown platform: {platform}")

@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - fix-cicd-from-fork
   pull_request_target:
     branches:
       - master
