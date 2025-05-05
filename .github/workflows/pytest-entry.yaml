@@ -1,6 +1,9 @@
 name: Pytest (PR Entry)
 
 on:
+  push:
+    branches:
+      - fix-cicd-from-fork
   pull_request_target:
     branches:
       - master
