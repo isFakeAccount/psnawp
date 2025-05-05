@@ -39,7 +39,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -114,7 +114,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -189,7 +189,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -264,7 +264,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -339,7 +339,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -414,7 +414,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -489,7 +489,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -564,7 +564,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -639,7 +639,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -714,7 +714,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -789,7 +789,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -864,7 +864,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -939,7 +939,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1014,7 +1014,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1089,7 +1089,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1164,7 +1164,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1239,7 +1239,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1314,7 +1314,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1389,7 +1389,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1464,7 +1464,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1539,7 +1539,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cb10dc50>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1614,7 +1614,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1689,7 +1689,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <psnawp_api.core.authenticator.Authenticator object at 0x7fd1cad42bd0>
+self = <psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0>
 
     def get_authorization_code(self) -> str:
         """Obtains the authorization code for PSN authentication.
@@ -1763,7 +1763,7 @@ E             + VaultTec-Co
 tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py:24: AssertionError
 ____________________________ test_client__online_id ____________________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fd1cac57550>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f36e941c710>
 
     @pytest.mark.vcr
     def test_client__online_id(psnawp_fixture: PSNAWP) -> None:
@@ -1777,7 +1777,7 @@ E             + VaultTec-Co
 tests/integration_tests/integration_test_psnawp_api/models/test_client.py:23: AssertionError
 _______________________________ test_user__user ________________________________
 
-psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7fd1cac57550>
+psnawp_fixture = <psnawp_api.psnawp.PSNAWP object at 0x7f36e941c710>
 
     @pytest.mark.vcr
     def test_user__user(psnawp_fixture: PSNAWP) -> None:
@@ -1812,7 +1812,7 @@ src/psnawp_api/core/request_builder.py:171: in request
     response = conn.getresponse()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <vcr.patch.VCRRequestsHTTPSConnectiontests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json object at 0x7fd1cacef7d0>
+self = <vcr.patch.VCRRequestsHTTPSConnectiontests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json object at 0x7f36e7728e10>
 _ = False, kwargs = {}
 
     def getresponse(self, _=False, **kwargs):
@@ -1929,4 +1929,4 @@ ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::t
 ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__trophy_groups_summary_forbidden - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__title_stats - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 ERROR tests/integration_tests/integration_test_psnawp_api/models/test_user.py::test_user__repr_and_str - psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
-=================== 3 failed, 65 passed, 23 errors in 4.26s ====================
+=================== 3 failed, 65 passed, 23 errors in 4.13s ====================
