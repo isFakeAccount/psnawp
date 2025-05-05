@@ -1,11 +1,13 @@
 name: code coverage
 on:
-  push:
-    branches:
-      - master
-  pull_request_target:
-    branches:
-      - master
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      NPSSO_CODE:
+        required: true
 
 permissions:
   contents: write
@@ -13,7 +15,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  pre-commit:
+  code-coverage-core:
     runs-on: ubuntu-latest
     environment: trusted-ci
     steps:

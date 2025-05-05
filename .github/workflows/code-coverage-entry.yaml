@@ -1,6 +1,9 @@
-name: Pytest (PR Entry)
-
+name: code coverage entry
 on:
+  push:
+    branches:
+      - master
+      - fix-cicd-from-fork
   pull_request_target:
     branches:
       - master
@@ -18,7 +21,7 @@ jobs:
   call-sandbox:
     if: needs.detect-fork.outputs.is_fork == 'true'
     needs: detect-fork
-    uses: ./.github/workflows/pytest-core.yaml
+    uses: ./.github/workflows/code_coverage-core.yaml
     with:
       environment: sandbox-ci
     secrets:
@@ -27,7 +30,7 @@ jobs:
   call-trusted:
     if: needs.detect-fork.outputs.is_fork == 'false'
     needs: detect-fork
-    uses: ./.github/workflows/pytest-core.yaml
+    uses: ./.github/workflows/code_coverage-core.yaml
     with:
       environment: trusted-ci
     secrets:
