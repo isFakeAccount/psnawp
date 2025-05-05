@@ -9,6 +9,7 @@
 - Omar Mujtaba @omz1990
 - R @Dev-R
 - Jack Powell @jackjpowell
+- Manu @tr4nt0r
 
 # Documentation Contributors
 - andshrew @andshrew
