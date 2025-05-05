@@ -1,14 +1,26 @@
-name: pytest
+name: Core Pytest CI
 
 on:
-  pull_request_target:
-    branches:
-      - master
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      NPSSO_CODE:
+        required: true
+    vars:
+      USER_NAME:
+        required: true
+      FRIEND_USER_NAME:
+        required: true
+      BLOCKED_USER_NAME:
+        required: true
 
 jobs:
   pytest:
     runs-on: ${{ matrix.os }}-latest
-    environment: testing
+    environment: ${{ inputs.environment }}
     strategy:
       matrix:
         os: [ubuntu, windows, macos]
@@ -25,12 +37,10 @@ jobs:
         run: pipx install poetry
 
       - name: Install dependencies and build package
-        run: |
-          poetry install --with tests
+        run: poetry install --with tests
 
       - name: Test with pytest
-        run: |
-          poetry run python pre_push.py -nu
+        run: poetry run python pre_push.py -nu
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
