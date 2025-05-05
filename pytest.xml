@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="23" failures="3" skipped="0" tests="91" time="4.132" timestamp="2025-05-05T04:43:55.889339+00:00" hostname="fv-az1786-763"><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__authentication" time="0.104" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__access_token_from_refresh_token" time="0.039"><failure message="AssertionError: assert 'VaultTec-Co' == ''&#10;  &#10;  + VaultTec-Co">@pytest.mark.vcr
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="23" failures="3" skipped="0" tests="91" time="4.242" timestamp="2025-05-05T04:47:54.287695+00:00" hostname="fv-az1120-596"><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__authentication" time="0.116" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__access_token_from_refresh_token" time="0.047"><failure message="AssertionError: assert 'VaultTec-Co' == ''&#10;  &#10;  + VaultTec-Co">@pytest.mark.vcr
     def test_authenticator__access_token_from_refresh_token():
         with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
             psnawp = PSNAWP(os.getenv("NPSSO_CODE", "NPSSO_CODE"))
@@ -8,7 +8,7 @@ E           AssertionError: assert 'VaultTec-Co' == ''
 E             
 E             + VaultTec-Co
 
-tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py:24: AssertionError</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__incorrect_npsso" time="0.018" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__online_id" time="0.040"><failure message="AssertionError: assert 'VaultTec-Co' == ''&#10;  &#10;  + VaultTec-Co">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f36e941c710&gt;
+tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py:24: AssertionError</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.core.test_authenticator" name="test_authenticator__incorrect_npsso" time="0.022" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__online_id" time="0.041"><failure message="AssertionError: assert 'VaultTec-Co' == ''&#10;  &#10;  + VaultTec-Co">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f56877cb610&gt;
 
     @pytest.mark.vcr
     def test_client__online_id(psnawp_fixture: PSNAWP) -&gt; None:
@@ -19,7 +19,7 @@ E           AssertionError: assert 'VaultTec-Co' == ''
 E             
 E             + VaultTec-Co
 
-tests/integration_tests/integration_test_psnawp_api/models/test_client.py:23: AssertionError</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__account_id" time="0.012" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_profile_legacy" time="0.026" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__account_devices" time="0.012" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_friends" time="0.033" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__friend_requests" time="0.020" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_presences" time="0.046" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_groups" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__available_to_play" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__blocked_list" time="0.019" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_shareable_profile_link" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_summary" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_titles" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_titles_for_title" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophies" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophies_with_progress" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_groups_summary" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_groups_summary_with_progress" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__title_stats" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__repr_and_str" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_region" time="0.034" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__np_communication_id" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__wrong_title_id" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__get_title_details" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__get_localized_title_details" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies" time="0.025" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies_game_not_owned_by_user" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary_game_not_owned_by_user" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies_invalid_np_communication_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary_invalid_np_communication_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_incorrect_args_None" time="0.006" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_wrong_id" time="0.016" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_users" time="0.241"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+tests/integration_tests/integration_test_psnawp_api/models/test_client.py:23: AssertionError</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__account_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_profile_legacy" time="0.029" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__account_devices" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_friends" time="0.040" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__friend_requests" time="0.022" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_presences" time="0.051" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_groups" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__available_to_play" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__blocked_list" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_shareable_profile_link" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_summary" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_titles" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_titles_for_title" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophies" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophies_with_progress" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_groups_summary" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__trophy_groups_summary_with_progress" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__title_stats" time="0.013" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__repr_and_str" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_client" name="test_client__get_region" time="0.033" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__np_communication_id" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__wrong_title_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__get_title_details" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__get_localized_title_details" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary" time="0.022" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies_game_not_owned_by_user" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary_game_not_owned_by_user" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophies_invalid_np_communication_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_game_title" name="test_game_title__trophy_groups_summary_invalid_np_communication_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_incorrect_args_None" time="0.006" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_wrong_id" time="0.016" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_users" time="0.247"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def friend_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
@@ -34,7 +34,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -91,7 +91,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_id" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__get_group_information" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__repr_and_str" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__change_name_dm" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__dming_blocked_user" time="0.111"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__group_with_id" time="0.026" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__get_group_information" time="0.026" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__repr_and_str" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__change_name_dm" time="0.023" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__dming_blocked_user" time="0.116"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -106,7 +106,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -178,7 +178,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -250,7 +250,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -322,7 +322,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -394,7 +394,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -466,7 +466,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -523,7 +523,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__leave_group" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__universal_search" time="0.019" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__get_game_content_id" time="0.018" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__get_addon_content_id" time="0.018" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user" time="0.015"><failure message="vcr.errors.CannotOverwriteExistingCassetteException: Can't overwrite existing cassette ('tests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json') in your current record mode (&lt;RecordMode.ONCE: 'once'&gt;).&#10;No match for the request (&lt;Request (GET) https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId&gt;) was found.&#10;Found 2 similar requests with 1 different matcher(s) :&#10;&#10;1 - (&lt;Request (GET) https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&amp;access_type=offline&amp;client_id=09515159-7237-4370-9b40-3806e67c0891&amp;device_base_font_size=10&amp;device_profile=mobile&amp;elements_visibility=no_aclink&amp;enable_scheme_error_code=true&amp;no_captcha=true&amp;redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&amp;response_type=code&amp;scope=psn%3Amobile.v2.core+psn%3Aclientapp&amp;service_entity=urn%3Aservice-entity%3Apsn&amp;service_logo=ps&amp;smcid=psapp%3Asignin&amp;support_scheme=sneiprls&amp;turnOnTrustedBrowser=true&amp;ui=pr&gt;).&#10;Matchers succeeded : ['method']&#10;Matchers failed :&#10;uri - assertion failure :&#10;https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId != https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&amp;access_type=offline&amp;client_id=09515159-7237-4370-9b40-3806e67c0891&amp;device_base_font_size=10&amp;device_profile=mobile&amp;elements_visibility=no_aclink&amp;enable_scheme_error_code=true&amp;no_captcha=true&amp;redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&amp;response_type=code&amp;scope=psn%3Amobile.v2.core+psn%3Aclientapp&amp;service_entity=urn%3Aservice-entity%3Apsn&amp;service_logo=ps&amp;smcid=psapp%3Asignin&amp;support_scheme=sneiprls&amp;turnOnTrustedBrowser=true&amp;ui=pr&#10;&#10;2 - (&lt;Request (GET) https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId&gt;).&#10;Matchers succeeded : ['method']&#10;Matchers failed :&#10;uri - assertion failure :&#10;https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId != https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f36e941c710&gt;
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_group" name="test_group__leave_group" time="0.026" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__universal_search" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__get_game_content_id" time="0.021" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_search" name="test_search__get_addon_content_id" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user" time="0.017"><failure message="vcr.errors.CannotOverwriteExistingCassetteException: Can't overwrite existing cassette ('tests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json') in your current record mode (&lt;RecordMode.ONCE: 'once'&gt;).&#10;No match for the request (&lt;Request (GET) https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId&gt;) was found.&#10;Found 2 similar requests with 1 different matcher(s) :&#10;&#10;1 - (&lt;Request (GET) https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&amp;access_type=offline&amp;client_id=09515159-7237-4370-9b40-3806e67c0891&amp;device_base_font_size=10&amp;device_profile=mobile&amp;elements_visibility=no_aclink&amp;enable_scheme_error_code=true&amp;no_captcha=true&amp;redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&amp;response_type=code&amp;scope=psn%3Amobile.v2.core+psn%3Aclientapp&amp;service_entity=urn%3Aservice-entity%3Apsn&amp;service_logo=ps&amp;smcid=psapp%3Asignin&amp;support_scheme=sneiprls&amp;turnOnTrustedBrowser=true&amp;ui=pr&gt;).&#10;Matchers succeeded : ['method']&#10;Matchers failed :&#10;uri - assertion failure :&#10;https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId != https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&amp;access_type=offline&amp;client_id=09515159-7237-4370-9b40-3806e67c0891&amp;device_base_font_size=10&amp;device_profile=mobile&amp;elements_visibility=no_aclink&amp;enable_scheme_error_code=true&amp;no_captcha=true&amp;redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&amp;response_type=code&amp;scope=psn%3Amobile.v2.core+psn%3Aclientapp&amp;service_entity=urn%3Aservice-entity%3Apsn&amp;service_logo=ps&amp;smcid=psapp%3Asignin&amp;support_scheme=sneiprls&amp;turnOnTrustedBrowser=true&amp;ui=pr&#10;&#10;2 - (&lt;Request (GET) https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId&gt;).&#10;Matchers succeeded : ['method']&#10;Matchers failed :&#10;uri - assertion failure :&#10;https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId != https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId">psnawp_fixture = &lt;psnawp_api.psnawp.PSNAWP object at 0x7f56877cb610&gt;
 
     @pytest.mark.vcr
     def test_user__user(psnawp_fixture: PSNAWP) -&gt; None:
@@ -558,7 +558,7 @@ src/psnawp_api/core/request_builder.py:171: in request
     response = conn.getresponse()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;vcr.patch.VCRRequestsHTTPSConnectiontests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json object at 0x7f36e7728e10&gt;
+self = &lt;vcr.patch.VCRRequestsHTTPSConnectiontests/integration_tests/integration_test_psnawp_api/cassettes/test_user__user.json object at 0x7f56878c9910&gt;
 _ = False, kwargs = {}
 
     def getresponse(self, _=False, **kwargs):
@@ -591,7 +591,7 @@ E               Matchers failed :
 E               uri - assertion failure :
 E               https://us-prof.np.community.playstation.net/userProfile/v1/users//profile2?fields=accountId%2ConlineId%2CcurrentOnlineId != https://us-prof.np.community.playstation.net/userProfile/v1/users/isFakeAccount/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
 
-../../../.cache/pypoetry/virtualenvs/psnawp-L3gCkbBl-py3.11/lib/python3.11/site-packages/vcr/stubs/__init__.py:264: CannotOverwriteExistingCassetteException</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_account_id" time="0.017" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_no_argument" time="0.006" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_wrong_acc_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__prev_online_id" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_not_found" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_acct_id_not_found" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__get_profile" time="0.025" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__get_presence" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+../../../.cache/pypoetry/virtualenvs/psnawp-L3gCkbBl-py3.11/lib/python3.11/site-packages/vcr/stubs/__init__.py:264: CannotOverwriteExistingCassetteException</failure></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_account_id" time="0.017" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_no_argument" time="0.006" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_wrong_acc_id" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__prev_online_id" time="0.015" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_not_found" time="0.017" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__user_acct_id_not_found" time="0.014" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__get_profile" time="0.025" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__get_presence" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def friend_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
@@ -606,7 +606,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -678,7 +678,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -750,7 +750,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -822,7 +822,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -894,7 +894,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -966,7 +966,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1038,7 +1038,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1110,7 +1110,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1182,7 +1182,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1239,7 +1239,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_summary" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_summary_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_summary" time="0.027" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_summary_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -1254,7 +1254,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1311,7 +1311,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles" time="0.035" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles" time="0.037" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -1326,7 +1326,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1383,7 +1383,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_pagination_test" time="0.331" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_for_title" time="0.024" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_for_title_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_pagination_test" time="0.343" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_for_title" time="0.026" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_titles_for_title_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -1398,7 +1398,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1455,7 +1455,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies" time="0.043" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies_with_progress_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies" time="0.044" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies_with_progress_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -1470,7 +1470,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1527,7 +1527,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies_pagination_test" time="0.045" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_groups_summary" time="0.058" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_groups_summary_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophies_pagination_test" time="0.049" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_groups_summary" time="0.062" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__trophy_groups_summary_forbidden" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def blocked_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=BLOCKED_USER_NAME)
@@ -1542,7 +1542,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e7ac5e10&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f5687db5050&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1614,7 +1614,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
@@ -1671,7 +1671,7 @@ self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&
                 )
 E               psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!
 
-src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__title_stats_with_limit" time="0.219" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__title_stats_with_jump" time="0.046" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__repr_and_str" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
+src/psnawp_api/core/authenticator.py:277: PSNAWPAuthenticationError</error></testcase><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__title_stats_with_limit" time="0.226" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__title_stats_with_jump" time="0.051" /><testcase classname="tests.integration_tests.integration_test_psnawp_api.models.test_user" name="test_user__repr_and_str" time="0.000"><error message="failed on setup with &quot;psnawp_api.core.psnawp_exceptions.PSNAWPAuthenticationError: Your npsso code has expired or is incorrect. Please generate a new code!&quot;">@pytest.fixture(scope="session")
     def friend_user() -&gt; User:
         psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 &gt;       return psnawp.user(online_id=FRIEND_USER_NAME)
@@ -1686,7 +1686,7 @@ src/psnawp_api/core/authenticator.py:43: in _impl
     authorization_code = authenticator_obj.get_authorization_code()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f36e76823d0&gt;
+self = &lt;psnawp_api.core.authenticator.Authenticator object at 0x7f56879e57d0&gt;
 
     def get_authorization_code(self) -&gt; str:
         """Obtains the authorization code for PSN authentication.
