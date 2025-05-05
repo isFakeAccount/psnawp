@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import hashlib
+import hmac
 from typing import TYPE_CHECKING, Any
 
+from psnawp_api.core.psnawp_exceptions import PSNAWPClientError
 from psnawp_api.models.listing import PaginationArguments
-from psnawp_api.models.trophies import TrophyIterator
+from psnawp_api.models.trophies import PlatformType, TrophyIterator
 from psnawp_api.models.trophies.trophy_group import (
     TrophyGroupsSummary,
     TrophyGroupsSummaryBuilder,
@@ -16,11 +19,13 @@ from psnawp_api.utils import API_PATH, BASE_PATH
 if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
     from psnawp_api.models.trophies import (
-        PlatformType,
         TrophyGroupsSummary,
         TrophyGroupSummary,
     )
 
+HMAC_SHA1_KEY = bytes.fromhex(
+    "F5DE66D2680E255B2DF79E74F890EBF349262F618BCAE2A9ACCDEE5156CE8DF2CDF2D48C71173CDC2594465B87405D197CF1AED3B7E9671EEB56CA6753C2E6B0"
+    )
 
 class GameTitle:
     """The GameTitle class provides the information and methods for retrieving Game details and trophies.
@@ -165,3 +170,26 @@ class GameTitle:
             authenticator=self.authenticator,
             np_communication_id=self.np_communication_id,
         ).game_title_trophy_groups_summary(platform=platform)
+
+
+    def get_title_icon_url(self, platform: PlatformType) -> str:
+        """Generate/retrieve the title icon URL for a PlayStation 3/4 title.
+
+        :param platform: The platform this title belongs to.
+
+        :returns: the title icon URL
+
+        :raises PSNAWPClientError: If the platform is not supported.
+
+        """
+        digest = hmac.new(HMAC_SHA1_KEY, self.title_id.encode(), hashlib.sha1).hexdigest().upper()
+
+        if platform is PlatformType.PS3:
+            return f"https://tmdb.np.dl.playstation.net/tmdb/{self.title_id}_{digest}/ICON0.PNG"
+
+        if platform is PlatformType.PS4:
+            json_url = f"https://tmdb.np.dl.playstation.net/tmdb2/{self.title_id}_{digest}/{self.title_id}.json"
+            info = self.authenticator.get(url=json_url).json()
+            return info["icons"][0]["icon"]
+
+        raise PSNAWPClientError(f"Unsupported or unknown platform: {platform}")
