@@ -29,7 +29,7 @@ pip install PSNAWP
 ## Important Links
 > PyPI: https://pypi.org/project/PSNAWP/
 >
-> Read the Docs: https://psnawp.readthedocs.io/en/latest/
+> Read the Docs: https://psnawp.readthedocs.io
 
 ## Getting Started
 
