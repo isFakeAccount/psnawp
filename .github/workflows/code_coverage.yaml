@@ -15,7 +15,7 @@ permissions:
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
-    environment: testing
+    environment: trusted-ci
     steps:
       - uses: actions/checkout@v4
         with:
