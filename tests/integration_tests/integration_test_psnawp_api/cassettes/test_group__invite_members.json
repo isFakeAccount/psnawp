@@ -33,43 +33,43 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Content-Length": [
+                        "192"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
                     "Date": [
-                        "Sun, 12 Jan 2025 03:23:29 GMT"
+                        "Mon, 05 May 2025 05:16:58 GMT"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Set-Cookie": "REDACTED",
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Content-Length": [
-                        "192"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Cache-Control": [
+                        "private"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"34e99b8734b0283a0f7e3a291d5d84f35e1bb522-372\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
@@ -111,39 +111,39 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Content-Length": [
+                        "139"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
                     "Date": [
-                        "Sun, 12 Jan 2025 03:23:29 GMT"
+                        "Mon, 05 May 2025 05:16:58 GMT"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Set-Cookie": "REDACTED",
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Content-Length": [
-                        "139"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Cache-Control": [
+                        "private"
                     ]
                 },
                 "body": {

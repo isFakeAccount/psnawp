@@ -36,35 +36,35 @@
                     "message": "No Content"
                 },
                 "headers": {
-                    "Cache-Control": [
-                        "private"
-                    ],
-                    "Date": [
-                        "Sun, 12 Jan 2025 03:18:41 GMT"
-                    ],
                     "Server": [
                         "Apache"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:17:04 GMT"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0987964359739685470"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0772320178847275269"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

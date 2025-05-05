@@ -33,31 +33,31 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Server": [
                         "Apache"
                     ],
                     "Content-Length": [
                         "110"
                     ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Date": [
-                        "Sun, 12 Jan 2025 00:15:56 GMT"
+                        "Mon, 05 May 2025 05:16:52 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
+                    "Set-Cookie": "REDACTED",
+                    "Connection": [
+                        "keep-alive"
+                    ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED"
+                    ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"64beadf0-d07a-11ef-a509-7509b9324c80\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"2779444c-2970-11f0-9d9c-570f3fac537e\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
                 }
             }
         }

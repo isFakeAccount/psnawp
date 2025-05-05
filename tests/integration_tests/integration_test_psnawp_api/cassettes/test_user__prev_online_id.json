@@ -33,20 +33,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Cache-Control": [
-                        "no-store"
-                    ],
-                    "Date": [
-                        "Sun, 12 Jan 2025 03:18:38 GMT"
-                    ],
                     "Server": [
                         "Apache"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, OPTIONS"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
@@ -54,14 +42,26 @@
                     "Content-Length": [
                         "105"
                     ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:17:01 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, OPTIONS"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

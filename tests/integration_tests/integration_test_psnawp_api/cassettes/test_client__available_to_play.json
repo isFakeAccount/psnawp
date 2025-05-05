@@ -33,42 +33,42 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Server": [
                         "Apache"
                     ],
                     "Content-Length": [
                         "15"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0657437201593330881"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
                     "Date": [
-                        "Sat, 11 Jan 2025 22:44:28 GMT"
+                        "Mon, 05 May 2025 05:16:45 GMT"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0826850374421877426"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Cache-Control": [
+                        "private"
                     ]
                 },
                 "body": {

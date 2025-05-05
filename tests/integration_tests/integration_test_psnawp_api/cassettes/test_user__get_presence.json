@@ -33,8 +33,14 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-Psn-Track-Id": [
-                        "0806237292797446458"
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Content-Length": [
+                        "212"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ],
                     "Content-Type": [
                         "application/json"
@@ -42,37 +48,31 @@
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:17:03 GMT"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0632550043276829168"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "212"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Mon, 07 Apr 2025 04:20:20 GMT"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
                     ]
                 },
                 "body": {
-                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-01-12T06:07:33.538Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-01-12T06:07:33.538Z\"}}}"
+                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-05T05:16:47.576Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-05-05T05:16:47.576Z\"}}}"
                 }
             }
         }

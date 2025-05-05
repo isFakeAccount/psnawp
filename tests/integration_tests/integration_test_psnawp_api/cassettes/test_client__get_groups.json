@@ -33,46 +33,46 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "content-length": [
+                        "6606"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:16:45 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
+                    "Set-Cookie": "REDACTED",
                     "Vary": [
                         "accept-encoding"
                     ],
-                    "content-length": [
-                        "2693"
-                    ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
-                    ],
-                    "Date": [
-                        "Sat, 11 Jan 2025 22:44:27 GMT"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"2856b38831fdd4cba3ff343760d1a701f360f86f-70\", \"groupType\": 1, \"members\": [{\"accountId\": \"6297799822129715546\", \"onlineId\": \"MUKlMUKI_OYAZI\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"7b43a1ea61e913261fd78449d5eab93ec101d7f3-279\", \"groupType\": 1, \"members\": [{\"accountId\": \"6297799822129715546\", \"onlineId\": \"MUKlMUKI_OYAZI\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"9e3258536950c027f32d3b20dc10b3eca244d88d-284\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"4428016206697155847\", \"onlineId\": \"Yakzu101\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"f232f1be21a31541977ef736c4e76711679de591-759\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"4b219867f1ef2a5480b7f9d1c468569232377b73-86\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"0435454d4adfd49680f23af60319c8aef6f09004-267\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"f90b0e7dece84992e30f735ef7921dad380fa91b-828\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"bf6402381cf4937e3d215744f1904506bb5b2072-442\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"470517f0a2086540a235fc0e227efcc4d65819b3-796\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"92c805688cee7b10b4882c01aaf8c28c2b2b5944-529\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}], \"previousOffset\": 0, \"nextOffset\": 10}"
+                    "string": "{\"groups\": [{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}, {\"groupId\": \"12ade541626d3759b1e7967f978389313bdf4020-69\", \"groupType\": 1, \"members\": [{\"accountId\": \"1168876402699820619\", \"onlineId\": \"Alexk_1989\"}, {\"accountId\": \"4066175013642633880\", \"onlineId\": \"Awlorah\"}, {\"accountId\": \"8475621525889651880\", \"onlineId\": \"CosmicHoIIows\"}, {\"accountId\": \"8809701245163146376\", \"onlineId\": \"CrucifixMelts\"}, {\"accountId\": \"6472080636555270713\", \"onlineId\": \"Exuz-iBIezZ\"}, {\"accountId\": \"6608820144476360058\", \"onlineId\": \"FLINZTONEZ\"}, {\"accountId\": \"8058325436040911892\", \"onlineId\": \"GoDvLiGHTzz\"}, {\"accountId\": \"332452904881305559\", \"onlineId\": \"Hgsweedda\"}, {\"accountId\": \"474971080155871589\", \"onlineId\": \"IkillUDealWithlt\"}, {\"accountId\": \"7533660310878603284\", \"onlineId\": \"ItzMayel\"}, {\"accountId\": \"944262145866450120\", \"onlineId\": \"JEWISIFER\"}, {\"accountId\": \"1712095771905669666\", \"onlineId\": \"JuliusMM\"}, {\"accountId\": \"4450959987773633641\", \"onlineId\": \"Lokivirii\"}, {\"accountId\": \"2099114753657908544\", \"onlineId\": \"LonelyGrxxnz\"}, {\"accountId\": \"4809668376320777004\", \"onlineId\": \"OhHarmless\"}, {\"accountId\": \"2426204979716043804\", \"onlineId\": \"TheOgBUTCH\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"6079351096151146713\", \"onlineId\": \"WHATSxGUCCI\"}, {\"accountId\": \"5704972795909582518\", \"onlineId\": \"Yfnliljay214\"}, {\"accountId\": \"4794055667013223678\", \"onlineId\": \"Zhogun_\"}, {\"accountId\": \"6978437444829809622\", \"onlineId\": \"astral_news3\"}, {\"accountId\": \"3738764720196039331\", \"onlineId\": \"djasap87\"}, {\"accountId\": \"490758413051925572\", \"onlineId\": \"doughnutbutts\"}, {\"accountId\": \"8890769414816123392\", \"onlineId\": \"funfish84\"}, {\"accountId\": \"3013244169692336447\", \"onlineId\": \"grshob2-Abdullah\"}, {\"accountId\": \"5929263847102749834\", \"onlineId\": \"hannahehe420\"}, {\"accountId\": \"7140771869337721065\", \"onlineId\": \"iiDaCracker\"}, {\"accountId\": \"2815855061468524469\", \"onlineId\": \"jgeish\"}, {\"accountId\": \"7388000221333654172\", \"onlineId\": \"killurswag\"}, {\"accountId\": \"6981777311150345150\", \"onlineId\": \"mychalscott\"}, {\"accountId\": \"4447766204869609109\", \"onlineId\": \"ohmydogo99\"}, {\"accountId\": \"1901443100228965000\", \"onlineId\": \"ohshizzel\"}, {\"accountId\": \"5089718657626023795\", \"onlineId\": \"poohshia11\"}, {\"accountId\": \"3028738106084682096\", \"onlineId\": \"rpajWhIptKMU\"}, {\"accountId\": \"6325889322672699676\", \"onlineId\": \"seiglerh694\"}]}, {\"groupId\": \"f34bca54bc3c024b9eb79d234196b03d888a1290-706\", \"groupType\": 1, \"members\": [{\"accountId\": \"4818739853132200426\", \"onlineId\": \"DeathEaters66613\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"a8f56bb0988e8f8ac1fc82bde50602bd42792b86-377\", \"groupType\": 1, \"members\": [{\"accountId\": \"4818739853132200426\", \"onlineId\": \"DeathEaters66613\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"63bcfe57b41ece0c4a49541cc46f77e6a17e1928-514\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}, {\"accountId\": \"2611537420669198208\", \"onlineId\": \"thinkingzhu_hk\"}]}, {\"groupId\": \"e9ddd54cd1e5a63237f8369db563ce9ffce1f848-394\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"3618050550693696334\", \"onlineId\": \"mrjzombie\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"cec81c1f070531214e7cb15d56442bc7b6246ae9-414\", \"groupType\": 1, \"members\": [{\"accountId\": \"2149836856101283624\", \"onlineId\": \"AvalibiIty\"}, {\"accountId\": \"8070774695828164758\", \"onlineId\": \"Brewgeek69\"}, {\"accountId\": \"1755197080980160113\", \"onlineId\": \"DarkMilkeh\"}, {\"accountId\": \"143086750249427842\", \"onlineId\": \"FaZeSark\"}, {\"accountId\": \"8018540113464372423\", \"onlineId\": \"FazeEXD31\"}, {\"accountId\": \"2601445266655965950\", \"onlineId\": \"Gminetto\"}, {\"accountId\": \"6744089807772521824\", \"onlineId\": \"HeadShotMF321\"}, {\"accountId\": \"3154145319033108207\", \"onlineId\": \"HellaGMO\"}, {\"accountId\": \"1080275599683178646\", \"onlineId\": \"HullkkSmaashh\"}, {\"accountId\": \"7061322537400179264\", \"onlineId\": \"INeptic\"}, {\"accountId\": \"885749494345026526\", \"onlineId\": \"ImBrawny_\"}, {\"accountId\": \"7440294215478760794\", \"onlineId\": \"JulieJStanley\"}, {\"accountId\": \"6843286868111310629\", \"onlineId\": \"KidScrapz-\"}, {\"accountId\": \"3904176819210749121\", \"onlineId\": \"Lay1ngP1p3\"}, {\"accountId\": \"7598116695118939125\", \"onlineId\": \"RipDaHoodLengend\"}, {\"accountId\": \"1665885451187952591\", \"onlineId\": \"SlimeballYodski\"}, {\"accountId\": \"4780878055083801402\", \"onlineId\": \"SnagGodVC--\"}, {\"accountId\": \"7818263167023349969\", \"onlineId\": \"Thathipeboydav\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8265169534189273224\", \"onlineId\": \"anasdj003\"}, {\"accountId\": \"2849225424377247101\", \"onlineId\": \"bridgettdu268\"}, {\"accountId\": \"7673889973914065292\", \"onlineId\": \"bvvfgyffgfc\"}, {\"accountId\": \"9034775753937397642\", \"onlineId\": \"conic_bend7\"}, {\"accountId\": \"4351578840763497857\", \"onlineId\": \"fRiFoRiDe2\"}, {\"accountId\": \"8687610427258428453\", \"onlineId\": \"gugor455\"}, {\"accountId\": \"8599573907657770248\", \"onlineId\": \"imFrikinWhite\"}, {\"accountId\": \"879326490747439357\", \"onlineId\": \"iwantoplaymgs4\"}, {\"accountId\": \"2617574414875937691\", \"onlineId\": \"jimibaba\"}, {\"accountId\": \"1503266304293027062\", \"onlineId\": \"khildy11\"}, {\"accountId\": \"5059697283806190082\", \"onlineId\": \"kouquex\"}, {\"accountId\": \"8268798678167744997\", \"onlineId\": \"maeblackice\"}, {\"accountId\": \"5079206565469758301\", \"onlineId\": \"ojeripassa\"}, {\"accountId\": \"5317005330774012272\", \"onlineId\": \"perigaux1\"}, {\"accountId\": \"764556391315735579\", \"onlineId\": \"promisewood\"}, {\"accountId\": \"4708544684528043130\", \"onlineId\": \"realconoco11\"}, {\"accountId\": \"638342989899045128\", \"onlineId\": \"tomynico\"}, {\"accountId\": \"563469448073993817\", \"onlineId\": \"wilniah9\"}]}, {\"groupId\": \"2856b38831fdd4cba3ff343760d1a701f360f86f-70\", \"groupType\": 1, \"members\": [{\"accountId\": \"6297799822129715546\", \"onlineId\": \"MUKlMUKI_OYAZI\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"7b43a1ea61e913261fd78449d5eab93ec101d7f3-279\", \"groupType\": 1, \"members\": [{\"accountId\": \"6297799822129715546\", \"onlineId\": \"MUKlMUKI_OYAZI\"}, {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}, {\"groupId\": \"f232f1be21a31541977ef736c4e76711679de591-759\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"7360896784312806858\", \"onlineId\": \"joaopauloaramuni\"}, {\"accountId\": \"8859462586603699392\", \"onlineId\": \"test\"}]}], \"previousOffset\": 0, \"nextOffset\": 10}"
                 }
             }
         }

@@ -33,33 +33,33 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Server": [
                         "Apache"
                     ],
                     "Content-Length": [
                         "14154"
                     ],
-                    "Vary": [
-                        "Accept-Language"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Cache-Control": [
-                        "max-age=300"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Content-Type": [
                         "application/json"
                     ],
                     "Date": [
-                        "Sat, 11 Jan 2025 22:44:29 GMT"
+                        "Mon, 05 May 2025 05:16:46 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Vary": [
+                        "Accept-Language"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
                     ]
                 },
                 "body": {

@@ -33,20 +33,17 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Server": [
                         "Apache"
                     ],
                     "Content-Length": [
                         "59"
                     ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "Date": [
-                        "Sun, 12 Jan 2025 00:15:56 GMT"
+                        "Mon, 05 May 2025 05:16:51 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
@@ -54,10 +51,13 @@
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
+                    "Set-Cookie": "REDACTED",
+                    "Connection": [
+                        "keep-alive"
+                    ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Set-Cookie": "REDACTED"
+                    ]
                 },
                 "body": {
                     "string": "{\"titles\": [{\"npTitleId\": \"PPSA01325_00\", \"trophyTitles\": []}]}"

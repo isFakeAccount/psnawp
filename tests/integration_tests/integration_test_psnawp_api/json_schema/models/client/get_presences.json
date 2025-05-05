@@ -93,20 +93,6 @@
                                 "lastAvailableDate"
                             ]
                         }
-                    },
-                    {
-                        "if": {
-                            "properties": {
-                                "availability": {
-                                    "const": "availableToPlay"
-                                }
-                            }
-                        },
-                        "then": {
-                            "required": [
-                                "gameTitleInfoList"
-                            ]
-                        }
                     }
                 ]
             }

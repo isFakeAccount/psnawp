@@ -51,51 +51,51 @@
                     "message": "Moved Temporarily"
                 },
                 "headers": {
-                    "Content-Length": [
+                    "Expires": [
                         "0"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "61a372a19ffd7679a9700be586da24fc"
                     ],
                     "Cache-Control": [
                         "no-cache, no-store, max-age=0, must-revalidate"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "X-XSS-Protection": [
-                        "1; mode=block"
-                    ],
-                    "X-RequestId": [
-                        "4724923bbfada17474d596a8fc91ca04"
-                    ],
-                    "Location": [
-                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.KDOoCx&cid=00000000-0000-0000-0000-b025aa3b2674"
-                    ],
-                    "X-Frame-Options": [
-                        "DENY"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "4724923bbfada17474d596a8fc91ca04"
-                    ],
-                    "Expires": [
-                        "0"
-                    ],
-                    "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:18:15 GMT"
+                    ],
+                    "Content-Length": [
+                        "0"
+                    ],
+                    "Location": [
+                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.otAxk9&cid=00000000-0000-0000-0000-f59f93374f2f"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "X-Frame-Options": [
+                        "DENY"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=31536000 ; includeSubDomains"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-f59f93374f2f"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-f59f93374f2f"
+                    ],
+                    "X-RequestId": [
+                        "61a372a19ffd7679a9700be586da24fc"
                     ]
                 },
                 "body": {
@@ -107,7 +107,7 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
-                "body": "cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
+                "body": "cid=00000000-0000-0000-0000-f59f93374f2f&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
                 "headers": {
                     "User-Agent": [
                         "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
@@ -131,7 +131,7 @@
                         "application/x-www-form-urlencoded"
                     ],
                     "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                        "00000000-0000-0000-0000-f59f93374f2f"
                     ],
                     "Content-Length": [
                         "207"
@@ -144,38 +144,38 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "4010"
+                    "X-Psn-Request-Id": [
+                        "ac9ad2a2154fc8c92abee2da20a86b03"
                     ],
                     "Cache-Control": [
                         "no-store"
                     ],
-                    "Content-Type": [
-                        "application/json;charset=UTF-8"
-                    ],
-                    "X-RequestId": [
-                        "f80edba9978ab362859bc8bb2877eb66"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "f80edba9978ab362859bc8bb2877eb66"
-                    ],
-                    "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
+                    "Date": [
+                        "Mon, 05 May 2025 05:18:15 GMT"
+                    ],
+                    "Content-Length": [
+                        "3973"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=UTF-8"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-b025aa3b2674"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-f59f93374f2f"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-f59f93374f2f"
+                    ],
+                    "X-RequestId": [
+                        "ac9ad2a2154fc8c92abee2da20a86b03"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -216,33 +216,33 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "X-Psn-Request-Id": [
+                        "2ddd23cc-360d-42c2-97d9-789d73e0cfdf"
+                    ],
+                    "Date": [
+                        "Mon, 05 May 2025 05:18:15 GMT"
+                    ],
                     "Content-Length": [
                         "35"
                     ],
                     "Set-Cookie": "REDACTED",
-                    "X-RequestId": [
-                        "aa8693cf-ad8a-4d40-be5f-22f94b7a79cf"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "aa8693cf-ad8a-4d40-be5f-22f94b7a79cf"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "aa8693cf-ad8a-4d40-be5f-22f94b7a79cf"
-                    ],
-                    "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
-                    ],
-                    "X-CorrelationId": [
-                        "aa8693cf-ad8a-4d40-be5f-22f94b7a79cf"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "2ddd23cc-360d-42c2-97d9-789d73e0cfdf"
+                    ],
+                    "X-CorrelationId": [
+                        "2ddd23cc-360d-42c2-97d9-789d73e0cfdf"
+                    ],
+                    "X-RequestId": [
+                        "2ddd23cc-360d-42c2-97d9-789d73e0cfdf"
                     ]
                 },
                 "body": {
@@ -282,42 +282,42 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "1619"
-                    ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-Psn-Track-Id": [
-                        "0547992944457511517"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
+                        "Mon, 05 May 2025 05:18:16 GMT"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
+                    "Content-Length": [
+                        "1619"
                     ],
-                    "Server": [
-                        "Apache"
+                    "Set-Cookie": "REDACTED",
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0506289304985751064"
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ]
                 },
                 "body": {
@@ -363,43 +363,43 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "4010"
+                    "X-Psn-Request-Id": [
+                        "b7036be6651f3c66399a50f7cc7488f7"
                     ],
                     "Cache-Control": [
                         "no-store"
                     ],
-                    "Content-Type": [
-                        "application/json;charset=UTF-8"
-                    ],
-                    "X-RequestId": [
-                        "6a0eb8ddf2d32b17cffbacc09015996f"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "6a0eb8ddf2d32b17cffbacc09015996f"
-                    ],
-                    "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "X-CorrelationId": [
-                        "70e955fd-9a55-4759-a0d5-2b502150c2fd"
+                    "Date": [
+                        "Mon, 05 May 2025 05:18:16 GMT"
+                    ],
+                    "Content-Length": [
+                        "3973"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=UTF-8"
                     ],
                     "Server": [
                         "nginx"
                     ],
-                    "X-Psn-Correlation-Id": [
-                        "70e955fd-9a55-4759-a0d5-2b502150c2fd"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "5561f314-3dd5-4ab6-bcc1-c43c927afb24"
+                    ],
+                    "X-CorrelationId": [
+                        "5561f314-3dd5-4ab6-bcc1-c43c927afb24"
+                    ],
+                    "X-RequestId": [
+                        "b7036be6651f3c66399a50f7cc7488f7"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:mobile.v2.core psn:clientapp\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
+                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:clientapp psn:mobile.v2.core\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
                 }
             }
         },
@@ -435,32 +435,32 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "35"
-                    ],
-                    "X-RequestId": [
-                        "1573f26f-0c80-4302-99df-8e7af62012da"
-                    ],
                     "X-Psn-Request-Id": [
-                        "1573f26f-0c80-4302-99df-8e7af62012da"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "1573f26f-0c80-4302-99df-8e7af62012da"
+                        "1f3cb79b-1baa-4400-8090-1dcbb1ba61cf"
                     ],
                     "Date": [
-                        "Sat, 11 Jan 2025 22:11:31 GMT"
+                        "Mon, 05 May 2025 05:18:16 GMT"
                     ],
-                    "X-CorrelationId": [
-                        "1573f26f-0c80-4302-99df-8e7af62012da"
-                    ],
-                    "Server": [
-                        "nginx"
+                    "Content-Length": [
+                        "35"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Server": [
+                        "nginx"
+                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "1f3cb79b-1baa-4400-8090-1dcbb1ba61cf"
+                    ],
+                    "X-CorrelationId": [
+                        "1f3cb79b-1baa-4400-8090-1dcbb1ba61cf"
+                    ],
+                    "X-RequestId": [
+                        "1f3cb79b-1baa-4400-8090-1dcbb1ba61cf"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -501,42 +501,42 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "1619"
-                    ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-Psn-Track-Id": [
-                        "0270342875014849874"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Date": [
-                        "Sat, 11 Jan 2025 22:11:32 GMT"
+                        "Mon, 05 May 2025 05:18:16 GMT"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
+                    "Content-Length": [
+                        "1619"
                     ],
-                    "Server": [
-                        "Apache"
+                    "Set-Cookie": "REDACTED",
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0076587160989508459"
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
                     ]
                 },
                 "body": {
