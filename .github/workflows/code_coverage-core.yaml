@@ -17,7 +17,7 @@ permissions:
 jobs:
   code-coverage-core:
     runs-on: ubuntu-latest
-    environment: trusted-ci
+    environment: ${{ inputs.environment }}
     steps:
       - uses: actions/checkout@v4
         with:
