@@ -24,11 +24,6 @@ jobs:
     uses: ./.github/workflows/pytest-core.yaml
     with:
       environment: sandbox-ci
-      USER_NAME: ${{ vars.USER_NAME }}
-      FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
-      BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}
-    secrets:
-      NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
 
   call-trusted:
     if: needs.detect-fork.outputs.is_fork == 'false'
@@ -36,8 +31,3 @@ jobs:
     uses: ./.github/workflows/pytest-core.yaml
     with:
       environment: trusted-ci
-      USER_NAME: ${{ vars.USER_NAME }}
-      FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
-      BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}
-    secrets:
-      NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
