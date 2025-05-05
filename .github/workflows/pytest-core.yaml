@@ -6,6 +6,9 @@ on:
       environment:
         required: true
         type: string
+    secrets:
+      NPSSO_CODE:
+        required: true
 
 jobs:
   pytest-core:

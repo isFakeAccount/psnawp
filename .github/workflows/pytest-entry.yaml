@@ -24,6 +24,8 @@ jobs:
     uses: ./.github/workflows/pytest-core.yaml
     with:
       environment: sandbox-ci
+    secrets:
+      NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
 
   call-trusted:
     if: needs.detect-fork.outputs.is_fork == 'false'
@@ -31,3 +33,5 @@ jobs:
     uses: ./.github/workflows/pytest-core.yaml
     with:
       environment: trusted-ci
+    secrets:
+      NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
