@@ -18,7 +18,7 @@ on:
         required: true
 
 jobs:
-  pytest:
+  pytest-core:
     runs-on: ${{ matrix.os }}-latest
     environment: ${{ inputs.environment }}
     strategy:
