@@ -1,9 +1,9 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
-rootdir: /mnt/secondary-ssd/Kira_GitProjects/PythonProjects/psnawp
+platform linux -- Python 3.11.12, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
-plugins: cov-6.1.1, vcr-1.0.2
+plugins: vcr-1.0.2, cov-6.1.1
 collected 91 items
 
 tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py . [  1%]
@@ -21,10 +21,9 @@ tests/integration_tests/integration_test_psnawp_api/models/test_user.py . [ 57%]
 tests/integration_tests/integration_test_psnawp_api/utils/test_utils_misc.py . [ 94%]
 .....                                                                    [100%]
 
-- generated xml file: /mnt/secondary-ssd/Kira_GitProjects/PythonProjects/psnawp/pytest.xml -
+-------- generated xml file: /home/runner/work/psnawp/psnawp/pytest.xml --------
 ================================ tests coverage ================================
-_______________ coverage: platform linux, python 3.13.2-final-0 ________________
-
+_______________ coverage: platform linux, python 3.11.12-final-0 _______________
 Name                                                   Stmts   Miss  Cover
 --------------------------------------------------------------------------
 src/psnawp_api/__init__.py                                 2      0   100%
@@ -60,7 +59,4 @@ src/psnawp_api/utils/misc.py                              33      0   100%
 TOTAL                                                   1173    111    91%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-============================== 91 passed in 4.82s ==============================
-Running: poetry run pytest --cov-config=pyproject.toml
-
-pre_push.py: Success!
+============================== 91 passed in 4.58s ==============================
