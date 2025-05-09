@@ -59,4 +59,4 @@ src/psnawp_api/utils/misc.py                              42      0   100%
 TOTAL                                                   1193    113    91%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-======================== 91 passed in 141.49s (0:02:21) ========================
+======================== 91 passed in 144.54s (0:02:24) ========================
