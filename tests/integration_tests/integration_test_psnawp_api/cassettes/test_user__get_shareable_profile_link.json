@@ -33,55 +33,55 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "620"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Pragma": [
-                        "no-cache"
-                    ],
-                    "Date": [
-                        "Mon, 05 May 2025 05:17:05 GMT"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "0518f495-9d8d-1031-a31d-f4d197fbc905"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "3600"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
                     "Expires": [
-                        "Mon, 05 May 2025 05:17:05 GMT"
+                        "Thu, 08 May 2025 21:01:02 GMT"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Max-Age": [
+                        "3600"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "X-Psn-Correlation-Id": [
-                        "0518f495-9d8d-1031-a31c-f4d197fbc905"
+                        "710e967d-9df0-1031-8c4c-33b56864622e"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Date": [
+                        "Thu, 08 May 2025 21:01:02 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD"
                     ],
-                    "Cache-Control": [
-                        "max-age=0, no-cache, no-store"
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "710e967d-9df0-1031-8c4d-33b56864622e"
+                    ],
+                    "Content-Length": [
+                        "620"
                     ]
                 },
                 "body": {
-                    "string": "{\"shareUrl\": \"https://profile.playstation.com/isFakeAccount\", \"shareImageUrl\": \"https://d18lxmvkmz0olj.cloudfront.net/profile-isFakeAccount?Expires=1747027025&Signature=fuiTJRjhGQ05dh--WXNkPNfYRXUT68-PWOOLE8GD1J6hBwa2PWMTwTeov1O8hXpPm2fVgj3fsqkJ6gIGxqeVd4anPED8HX~J~CPPGYKRJRQwKX5AnYsNIhZUpjtG4UdBt6DPK-K99P1MRmDb1JyJ5kfVfwp1VcnWDAg8YYKPTkiYTTTvQhb~qB31OHrORN2AmgtqAegu4RokfsgVek4cOcmAItZdp3-~~kHceJa4uP7oc9AxFJ8QgKnip719hSqOLRH1fdOa2-kVJ4CT8gGpkcpGbAolRj4XyvmC4SICKqNC4a9WYhr~ml5ohRl5EdcQgj6LN0-YmOLAyrH4G8EwUg__&Key-Pair-Id=K2SHBT8E7OQNQU\", \"shareImageUrlDestination\": \"https://profile.playstation.com/share/isFakeAccount\"}"
+                    "string": "{\"shareUrl\": \"https://profile.playstation.com/isFakeAccount\", \"shareImageUrl\": \"https://d18lxmvkmz0olj.cloudfront.net/profile-isFakeAccount?Expires=1747342862&Signature=h1exr3CWDF9TxMw1~DAmTcxGx~4WgWNNl7ZZS7qG1km314hRZ7jetXocF-VQuUnIESr8QSbss77xb-urd97TQe-nlapqLQ~0PmQ9Su6KrWiQ3Ts4zPWkRQ5nmWIh2v8EuLQvu9HAIus5m1U39cPudJRVqQ1xz8unialpMOmNOvxWZ-zq7PAv7qvg52uGgj4G0Sc374hTcNU1q6XnspS71vwEKFXcDAbpIkR~na9YImUyVkOuWsm9CLWtn-ABSm9OlicTMy8rpjME08955rr0uKkN-Fa0agSAFNawgL9tg-DWBTDUm29tS-fDPF~C5KQzd9ri7E5LDAfS5oBB0oqvtw__&Key-Pair-Id=K2SHBT8E7OQNQU\", \"shareImageUrlDestination\": \"https://profile.playstation.com/share/isFakeAccount\"}"
                 }
             }
         }

@@ -33,31 +33,31 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "123"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:06 GMT"
+                        "Thu, 08 May 2025 21:01:11 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Content-Length": [
+                        "123"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"2f940148-2970-11f0-a232-f326b9d1d765\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"922c98da-2c4f-11f0-9354-8fc2b06fb48d\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
                 }
             }
         }

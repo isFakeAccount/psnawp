@@ -39,40 +39,40 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "140"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "close"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:56 GMT"
+                        "Thu, 08 May 2025 20:59:24 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Connection": [
-                        "close"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Content-Length": [
+                        "140"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"29fb5b4b-2970-11f0-90e5-97ce2b79c13a\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"528658b8-2c4f-11f0-90f5-4d9e837481e0\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
                 }
             }
         }

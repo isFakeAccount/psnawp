@@ -36,35 +36,35 @@
                     "message": "No Content"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Mon, 05 May 2025 05:17:04 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0301161408964416451"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Date": [
+                        "Thu, 08 May 2025 21:00:50 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "X-Psn-Track-Id": [
+                        "0456797409135160364"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

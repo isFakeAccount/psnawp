@@ -33,39 +33,39 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "245"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:54 GMT"
+                        "Thu, 08 May 2025 20:59:00 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "245"
                     ]
                 },
                 "body": {
@@ -105,43 +105,43 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "769"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:54 GMT"
+                        "Thu, 08 May 2025 20:59:03 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "769"
                     ]
                 },
                 "body": {
-                    "string": "{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"modifiedTimestamp\": \"1746422214416\", \"groupName\": {\"value\": \"\", \"status\": 0}, \"groupIcon\": {\"status\": 0}, \"joinedTimestamp\": \"1717991006000\", \"isFavorite\": false, \"existsNewArrival\": false, \"mainThread\": {\"threadId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"modifiedTimestamp\": \"1746422214416\", \"latestMessage\": {\"messageUid\": \"1#447084086890599\", \"messageType\": 1, \"alternativeMessageType\": 1, \"body\": \"Hello World!\", \"createdTimestamp\": \"1746422214416\", \"sender\": {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}}, \"readMessageUid\": \"1#447084086890599\"}, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}], \"notificationSetting\": {\"isMute\": false}}"
+                    "string": "{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"modifiedTimestamp\": \"1746737937198\", \"groupName\": {\"value\": \"\", \"status\": 0}, \"groupIcon\": {\"status\": 0}, \"joinedTimestamp\": \"1717991006000\", \"isFavorite\": false, \"existsNewArrival\": false, \"mainThread\": {\"threadId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"modifiedTimestamp\": \"1746737937198\", \"latestMessage\": {\"messageUid\": \"1#447164911922704\", \"messageType\": 1, \"alternativeMessageType\": 1, \"body\": \"Hello World!\", \"createdTimestamp\": \"1746737937198\", \"sender\": {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}}, \"readMessageUid\": \"1#447164911922704\"}, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}], \"notificationSetting\": {\"isMute\": false}}"
                 }
             }
         }
