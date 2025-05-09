@@ -16,8 +16,8 @@ dependencies = [
     "attrs (>=25.1.0,<26.0.0)",
     "pycountry (>=24.6.1,<25.0.0)",
     "requests (>=2.32.3,<3.0.0)",
-    "requests-ratelimiter (>=0.7.0,<0.8.0)",
     "typing-extensions (>=4.12.2,<5.0.0)",
+    "pyrate-limiter (>=3.7.0,<4.0.0)",
 ]
 description = "Python API Wrapper for PlayStation Network API."
 keywords = ["PSN", "PlayStation"]

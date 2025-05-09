@@ -33,42 +33,42 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
-                    ],
-                    "content-length": [
-                        "6606"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
-                    "Date": [
-                        "Mon, 05 May 2025 05:16:45 GMT"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "content-length": [
+                        "6606"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Vary": [
                         "accept-encoding"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Date": [
+                        "Thu, 08 May 2025 20:56:49 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
                     ]
                 },
                 "body": {

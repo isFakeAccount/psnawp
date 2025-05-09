@@ -33,34 +33,34 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "912"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:50 GMT"
+                        "Thu, 08 May 2025 20:58:08 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "912"
                     ]
                 },
                 "body": {
-                    "string": "{\"titles\": [{\"npTitleId\": \"PPSA03420_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR21647_00\", \"trophyTitleName\": \"Grand Theft Auto V\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/26efdb55-9e6d-4de9-943f-6b95768ae607.png\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 4, \"rarestTrophies\": [{\"trophyId\": 49, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"American Dream\", \"trophyDetail\": \"GTA Online: Own an Apartment, Garage and an Insured Vehicle\", \"trophyIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png\", \"trophyRare\": 3, \"trophyEarnedRate\": \"66.2\", \"earned\": true, \"earnedDateTime\": \"2022-03-15T13:34:38Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 2, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 59, \"silver\": 15, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2022-03-15T13:34:39Z\"}]}]}"
+                    "string": "{\"titles\": [{\"npTitleId\": \"PPSA03420_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR21647_00\", \"trophyTitleName\": \"Grand Theft Auto V\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/26efdb55-9e6d-4de9-943f-6b95768ae607.png\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 4, \"rarestTrophies\": [{\"trophyId\": 49, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"American Dream\", \"trophyDetail\": \"GTA Online: Own an Apartment, Garage and an Insured Vehicle\", \"trophyIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png\", \"trophyRare\": 3, \"trophyEarnedRate\": \"66.1\", \"earned\": true, \"earnedDateTime\": \"2022-03-15T13:34:38Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 2, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 59, \"silver\": 15, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2022-03-15T13:34:39Z\"}]}]}"
                 }
             }
         },
@@ -96,33 +96,33 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "23860"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Vary": [
+                        "Accept-Language"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:50 GMT"
+                        "Thu, 08 May 2025 20:58:11 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Vary": [
-                        "Accept-Language"
-                    ],
-                    "Cache-Control": [
-                        "max-age=300"
+                    "Content-Length": [
+                        "23860"
                     ]
                 },
                 "body": {

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, overload
 
+from pyrate_limiter import Duration, Rate
+
 from psnawp_api.core import (
     Authenticator,
     PSNAWPIllegalArgumentError,
@@ -30,12 +32,16 @@ class PSNAWP:
 
     Instances of this class are the gateway to interacting with PSN API through PSNAWP.
 
+    :var Authenticator authenticator: Instance of Authenticator class. Used to make authenticated HTTPs request to
+        playstation server.
+
     """
 
     def __init__(
         self,
         npsso_cookie: str,
         headers: RequestBuilderHeaders | None = None,
+        rate_limit: Rate | None = None,
     ) -> None:
         """Initializes the authentication handler with the provided NPSSO cookie.
 
@@ -46,6 +52,10 @@ class PSNAWP:
             - ``User-Agent``: Generic mobile browser user agent
             - ``Accept-Language``: ``en-US,en;q=0.9`` (English)
             - ``Country``: ``US`` (United States)
+        :param rate_limit: Controls the request rate to the PSN API. By default, PSNAWP enforces a default rate limit of
+            one request every three seconds—equivalent to up to 300 requests in a 15-minute window—to comply with
+            PlayStation Network guidelines. Users may override this rate limit by providing a custom ``Rate`` instance,
+            but doing so can lead to request throttling or temporary bans if set too aggressively.
 
         :raises PSNAWPAuthenticationError: If the NPSSO cookie is expired or invalid.
 
@@ -57,10 +67,14 @@ class PSNAWP:
             "Country": "US",
         }
 
+        if rate_limit is None:
+            rate_limit = Rate(1, Duration.SECOND * 3)
+
         _header = default_headers | headers if headers is not None else default_headers
         self.authenticator = Authenticator(
             npsso_cookie=npsso_cookie,
             common_headers=_header,
+            rate_limit=rate_limit,
         )
 
     def me(self) -> Client:

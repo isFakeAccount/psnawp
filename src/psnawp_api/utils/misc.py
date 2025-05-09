@@ -5,8 +5,11 @@ from __future__ import annotations
 import base64
 import binascii
 import json
+import os
 import re
 from datetime import datetime
+from pathlib import Path
+from tempfile import gettempdir
 from typing import TYPE_CHECKING, cast
 
 from pycountry import countries
@@ -82,3 +85,20 @@ def parse_npsso_token(npsso_input: str) -> str:
         except KeyError as exp:
             raise PSNAWPInvalidTokenError('Input JSON is missing the "npsso" key') from exp
     return npsso_input
+
+
+def get_temp_db_path(filename: str = "psnawp_limiter.sqlite") -> Path:
+    """Create a writable temporary directory and database file.
+
+    :param filename: Name of the SQLite database file.
+
+    :returns: Path to the writable SQLite database.
+
+    """
+    temp_dir = Path(gettempdir()) / f"psnawp-{os.getpid()}"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+
+    db_path = temp_dir / filename
+    db_path.touch(exist_ok=True)
+
+    return db_path

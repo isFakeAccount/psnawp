@@ -6,8 +6,9 @@ from http import HTTPStatus
 from logging import getLogger
 from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
 
-from pyrate_limiter import Duration, Limiter, RequestRate, SQLiteBucket
-from requests_ratelimiter import LimiterSession
+from pyrate_limiter import Duration, Limiter, LimiterDelayException
+from pyrate_limiter.buckets.sqlite_bucket import SQLiteBucket
+from requests import Session
 from typing_extensions import NotRequired, Unpack
 
 from psnawp_api.core.psnawp_exceptions import (
@@ -20,8 +21,10 @@ from psnawp_api.core.psnawp_exceptions import (
     PSNAWPTooManyRequestsError,
     PSNAWPUnauthorizedError,
 )
+from psnawp_api.utils import get_temp_db_path
 
 if TYPE_CHECKING:
+    from pyrate_limiter import Rate
     from requests import Response
     from requests.sessions import (
         RequestsCookieJar,
@@ -121,22 +124,22 @@ class RequestBuilder:
 
     """
 
-    def __init__(self, common_headers: RequestBuilderHeaders) -> None:
+    def __init__(self, common_headers: RequestBuilderHeaders, rate_limit: Rate) -> None:
         """Initialize Request Handler with default headers.
 
         :param common_headers: Default headers for the requests.
+        :param rate_limit: Controls pacing of HTTP requests to avoid service throttling.
 
         """
         self.common_headers = cast("dict[str, str]", common_headers)
+        psn_api_rates = [rate_limit]
 
-        psn_api_rate = RequestRate(limit=300, interval=Duration.MINUTE * 15)
-        limiter = Limiter(psn_api_rate, bucket_class=SQLiteBucket)
-        self.session = LimiterSession(
-            limiter=limiter,
-            per_host=False,
-            limit_statuses=[],
-            burst=0,
-        )
+        db_path = get_temp_db_path()
+
+        sqlite_bucket = SQLiteBucket.init_from_file(psn_api_rates, db_path=str(db_path))
+        self.limiter = Limiter(sqlite_bucket, raise_when_fail=False, max_delay=Duration.SECOND * 3)
+
+        self.session = Session()
         self.session.headers.update(self.common_headers)
 
     def request(
@@ -168,6 +171,11 @@ class RequestBuilder:
             kwargs.get("headers"),
             kwargs.get("data"),
         )
+        try:
+            self.limiter.try_acquire("psnawp-limiter")
+        except LimiterDelayException as err:
+            raise PSNAWPTooManyRequestsError("Rate limit exceeded: too many requests. Please retry again shortly.") from err
+
         response = self.session.request(method=method, **kwargs)
         request_builder_logger.debug(
             "Received response: status_code=%d, headers=%s, body=%s",

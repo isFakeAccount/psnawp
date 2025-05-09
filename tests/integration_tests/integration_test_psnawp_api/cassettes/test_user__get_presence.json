@@ -33,46 +33,46 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "212"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:03 GMT"
+                        "Thu, 08 May 2025 21:00:37 GMT"
                     ],
                     "X-Psn-Track-Id": [
-                        "0632550043276829168"
+                        "0872731848535111374"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "212"
                     ]
                 },
                 "body": {
-                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-05T05:16:47.576Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-05-05T05:16:47.576Z\"}}}"
+                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-08T20:50:25.817Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-05-08T20:50:25.817Z\"}}}"
                 }
             }
         }

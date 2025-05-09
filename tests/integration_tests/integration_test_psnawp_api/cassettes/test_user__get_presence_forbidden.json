@@ -33,46 +33,46 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "123"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:03 GMT"
+                        "Thu, 08 May 2025 21:00:40 GMT"
                     ],
                     "X-Psn-Track-Id": [
-                        "0721885302212133879"
+                        "0125251110046753785"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "123"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"2e071f67-2970-11f0-b91f-1bd65ccd3430\", \"code\": 2281486, \"message\": \"Not permitted by access control\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"7fef8ed0-2c4f-11f0-a0d2-d7431a47d4a5\", \"code\": 2281486, \"message\": \"Not permitted by access control\"}}"
                 }
             }
         }

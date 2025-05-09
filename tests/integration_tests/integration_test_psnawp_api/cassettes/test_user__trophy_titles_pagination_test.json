@@ -33,35 +33,35 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
-                    ],
-                    "Content-Length": [
-                        "72"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Content-Length": [
+                        "72"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:10 GMT"
+                        "Thu, 08 May 2025 21:01:27 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "no-store"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -102,30 +102,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29048"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:10 GMT"
+                        "Thu, 08 May 2025 21:01:32 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29048"
                     ]
                 },
                 "body": {
@@ -165,30 +165,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29319"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:10 GMT"
+                        "Thu, 08 May 2025 21:01:34 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29319"
                     ]
                 },
                 "body": {
@@ -228,30 +228,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29262"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:11 GMT"
+                        "Thu, 08 May 2025 21:01:37 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29262"
                     ]
                 },
                 "body": {
@@ -291,30 +291,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29361"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:11 GMT"
+                        "Thu, 08 May 2025 21:01:40 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29361"
                     ]
                 },
                 "body": {
@@ -354,30 +354,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29335"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:12 GMT"
+                        "Thu, 08 May 2025 21:01:43 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29335"
                     ]
                 },
                 "body": {
@@ -417,30 +417,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28844"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:12 GMT"
+                        "Thu, 08 May 2025 21:01:47 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28844"
                     ]
                 },
                 "body": {
@@ -480,30 +480,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29069"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:13 GMT"
+                        "Thu, 08 May 2025 21:01:49 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29069"
                     ]
                 },
                 "body": {
@@ -543,30 +543,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29405"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:13 GMT"
+                        "Thu, 08 May 2025 21:01:52 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29405"
                     ]
                 },
                 "body": {
@@ -606,30 +606,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29606"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:13 GMT"
+                        "Thu, 08 May 2025 21:01:55 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29606"
                     ]
                 },
                 "body": {
@@ -669,34 +669,34 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29764"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:14 GMT"
+                        "Thu, 08 May 2025 21:02:00 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29556"
                     ]
                 },
                 "body": {
-                    "string": "{\"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35226_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35226_00/213adef6-ba16-4536-9363-751070d1555f.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:09:11Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35224_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35224_00_00A9408069E3721559AF6A7B1BDC172027E7A45C9D/94B9BF1BE863BED98475DC793D3A72ECB3EA704F.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:08:02Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35228_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35228_00/e804c385-6c6a-4714-98cf-25e423898cca.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:05:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35230_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35230_00_00E9CA58DA3B35532B186207B4E89C86A1DDF5D309/DD4405A1E181B4F99792EB04245EE18CBCF50DA5.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:04:27Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35234_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35234_00/a76dd597-e720-4f39-b900-e43250cfa7f4.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:02:46Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35229_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35229_00_007CFEEFFE56C47D489A23E9E01181770CB8ED8134/A4077FB1A7DD4AB83F99D436701B6837F67271FD.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:01:30Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35233_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35233_00/008304c1-7461-46bc-bc04-4f16d8438984.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:59:56Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35232_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35232_00_00EB6ADDCB3FE5A856602743777C2322DF232A950A/CA0B092E6A8D150FCEB9AB366F68853BCD63F301.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:56:33Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35236_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35236_00/fe780880-3920-4f51-a33f-e9ac19784983.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:55:18Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35231_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35231_00_007F5E3D0A2E16AB96085CDFB219DBC29600A81243/01E39F9A81F1DA6A3A76E9441CA68C17DCE32EF5.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:54:10Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35235_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35235_00/1d349941-e984-402d-a57d-b6128c7711ba.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:52:50Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35216_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35216_00_003BB445BE7AED9ECC846E1C1958D55A720842C3BF/8291F123C3F30C6C49D1266797568413E6A5E623.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:50:50Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35220_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35220_00/dfce4f3a-f75a-4df2-982a-ce02391fa837.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:48:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35207_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35207_00_004F0B5321FCF7C409455447388D5AF0294A2FB254/FE60EF4C13CE62D355B9D87F71D86E6AC2CCE452.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:47:34Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35211_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35211_00/46149703-aad6-4201-abff-902770d06938.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:46:22Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35108_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz France\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz France\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35108_00_00E3E0BC3420AD423999A9112DC684908531B4D6EE/9CACE75426FFEE3024B381D1168D0AC841B782ED.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:44:38Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35112_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz France\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35112_00/1831cc28-0bcb-41a7-ae32-c46c1b0feeba.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:43:22Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR31464_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Llama L\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR31464_00/1ce2ecba-cd1b-4c79-a9ea-6cf46c4daae5.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:30:41Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR31434_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Llama L\", \"trophyTitleDetail\": \"The Llama L\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR31434_00_00ECAE923659695CB78E9F2231102E572F9EE1F8D2/F4C8E23E681DCB668471D85CA846BDD635EFC202.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:27:12Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR38692_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Boat Trip\", \"trophyTitleDetail\": \"Boat Trip\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR38692_00_003D001A4CD04936B44F0D76F0DAD99A4812F3C515/30770372AF6E9BF5BC7B84B32FDB4FB2AF133D22.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:20:09Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34011_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Repentless 2\", \"trophyTitleDetail\": \"Dictator's life is so much fun!\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34011_00_00D29898619FA47D0533756C8723B5691FB7382D6F/D20D63224BCFACFEEC365D967EBE319EB944ABD2.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 16, \"silver\": 12, \"gold\": 5, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 16, \"silver\": 12, \"gold\": 5, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T11:48:00Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR39524_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Item Tower\", \"trophyTitleDetail\": \"Trophy set for Item Tower\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR39524_00_004A9E107176F8217ADACC6D07C776D69CB3DA7EC3/A4CC33EB2B06D909D9D832817C01FD39136F6C0A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 14, \"gold\": 7, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 14, \"gold\": 7, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T10:33:34Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR32714_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Taco: TURBO\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR32714_00/1db04b1e-6db2-462f-b09c-40660e23388a.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:15:49Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR32708_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Taco: TURBO\", \"trophyTitleDetail\": \"The trophy set of The Jumping Taco: TURBO\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR32708_00_00175A90ABEBD2876C0CC2E723648B79F28E65D8C0/A3B3314010B7A64ADABB30A398926B5D6E4A9A31.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:14:32Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR30703_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Czech Run\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR30703_00/b94d277a-7838-450e-a911-6fd14bfb7c31.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:12:41Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR30702_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Czech Run\", \"trophyTitleDetail\": \"The Czech Run\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR30702_00_00A9E013F6A6901B5C3FAB179F632F2C97A640D64A/D89DA597B1B3BC5B7BCD4A6AB8722392410AA65A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:03:42Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34058_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34058_00/e8117715-3570-49f3-a71a-e82dbf5ee270.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:49:23Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34054_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34054_00_00B7876156AB1E985B0297E5BDCA9FCBF9B0067F8E/861B36F10FCA1C0DDB0F3793624F3C7D14DEFFB9.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:48:05Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34056_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34056_00/7b221c02-e5b0-4b8c-b4c3-c9f92e875f0a.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:44:09Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34052_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34052_00_00FC334FD638784B361E957685B41A12B674CD6F36/6DBE05D437AF182861AC259A6C549C426724CC62.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:41:33Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR29495_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Voices Stories Trophies\", \"trophyTitleDetail\": \"Trophies for The Voices Stories\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR29495_00_0057CBEFB1023C2372789B0C7D86B2BDCE86CAE023/F498CFED0446D8A2C65A425B6310E91B54893D83.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:17:07Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35573_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35573_00/936a8f66-96fb-428a-bb77-4556ef4886eb.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:15:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35569_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35569_00_00F4183B9D0B50CF246A41625B5C340D1470E7111B/E579C99E0107763A9BF58926CE81D3FC14C0E04A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:14:52Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35571_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35571_00/00880cac-ad51-4589-b89d-e539763955df.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:13:34Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35567_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35567_00_00FA3420BD6756B6AB757A47F96A90798D21A034E6/3FF43FEB2D6C1CB98F2AE5093D6C159CD5E241FA.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:12:40Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34563_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Monster Truck Journey: Nitro\", \"trophyTitleDetail\": \"Monster Truck Journey: Nitro\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34563_00_004FBD2E5C95A1535E879A3F2CCC2E8B6064797127/C5BE346A6BC1F216E216C142A36E4F14F9242CD1.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:10:42Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34562_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Monster Truck Journey: Nitro\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34562_00/69b15f9d-7b0f-4400-befc-e3fab3ba6b8c.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:07:04Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35977_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Beveron\", \"trophyTitleDetail\": \"Beveron\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35977_00_00C52A0033C5C33B57E0CCCC3C736DD66BDF16EDD7/95E3B23BE1F0FBD704C75C444A5E29FB69C21ACC.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 5, \"gold\": 10, \"platinum\": 1}, \"progress\": 11, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 4, \"gold\": 0, \"platinum\": 0}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:47:53Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR45968_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Ice Cube\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR45968_00/511086e4-4a67-42c2-896a-08b7d629e3e8.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:41:32Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR45964_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Ice Cube\", \"trophyTitleDetail\": \"The trophy set of The Jumping Ice Cube\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR45964_00_007799BECC2D1B5039CA080F8FA8F2BB48D8255360/1892A1931218C8AE410A5F11DF68D6362FA21E48.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:40:25Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34149_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Choco Santa\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34149_00/e442bae7-d30c-4ff4-8bc0-4fd1e400b9ae.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:27:14Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34144_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Choco Santa\", \"trophyTitleDetail\": \"The trophy set of The Jumping Choco Santa\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34144_00_00A27422EEB65EEB036964D995A4DF8CE1FCB12D6F/CAA4F96D613EE59112FB46B9EADF41DAC2809E7B.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:23:45Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34780_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Muffin\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34780_00/857c6106-cb5e-4a79-b784-b931ff352035.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:18:49Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34776_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Muffin\", \"trophyTitleDetail\": \"The trophy set of The Jumping Muffin\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34776_00_0024249527B083B14ED07B113C82C914D0D3812305/6801375C099D4FC53408F7A6DC8269306C370614.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:15:22Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34074_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34074_00/3b7519e9-f56b-4409-b3b4-712e27d33acc.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:11:37Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34070_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34070_00_00585FA919738C38969A7C2AF6C114A0A975B9EAB0/D9D41462357B4981DCC860D9ECA3FECC9648C9A7.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:10:26Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34072_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34072_00/04b61e9c-57d6-4e7c-b5ba-25ee67c68c42.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:09:04Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34068_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34068_00_00E16D2BD3A980C7012ACE0DB29EE4E4B03906157F/F2E75E893F3AAAF20F361B75A79D0720CEDADC52.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:08:19Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34057_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34057_00/536858a0-af81-4fdc-9e6a-4c3fb9d82fdd.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:06:05Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34053_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34053_00_009F7068E898519137DF438817DFE90EA268F44574/00630A4FC1EB2882CAA5F32EDC4AAC6ABA692904.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:05:08Z\"}], \"nextOffset\": 500, \"previousOffset\": 449, \"totalItemCount\": 2052}"
+                    "string": "{\"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35226_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35226_00/213adef6-ba16-4536-9363-751070d1555f.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:09:11Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35224_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35224_00_00A9408069E3721559AF6A7B1BDC172027E7A45C9D/94B9BF1BE863BED98475DC793D3A72ECB3EA704F.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:08:02Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35228_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Silver Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35228_00/e804c385-6c6a-4714-98cf-25e423898cca.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 35, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:05:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35230_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35230_00_00E9CA58DA3B35532B186207B4E89C86A1DDF5D309/DD4405A1E181B4F99792EB04245EE18CBCF50DA5.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:04:27Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35234_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35234_00/a76dd597-e720-4f39-b900-e43250cfa7f4.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:02:46Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35229_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35229_00_007CFEEFFE56C47D489A23E9E01181770CB8ED8134/A4077FB1A7DD4AB83F99D436701B6837F67271FD.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T17:01:30Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35233_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35233_00/008304c1-7461-46bc-bc04-4f16d8438984.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:59:56Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35232_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35232_00_00EB6ADDCB3FE5A856602743777C2322DF232A950A/CA0B092E6A8D150FCEB9AB366F68853BCD63F301.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:56:33Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35236_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35236_00/fe780880-3920-4f51-a33f-e9ac19784983.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:55:18Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35231_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35231_00_007F5E3D0A2E16AB96085CDFB219DBC29600A81243/01E39F9A81F1DA6A3A76E9441CA68C17DCE32EF5.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:54:10Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35235_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35235_00/1d349941-e984-402d-a57d-b6128c7711ba.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:52:50Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35216_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35216_00_003BB445BE7AED9ECC846E1C1958D55A720842C3BF/8291F123C3F30C6C49D1266797568413E6A5E623.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:50:50Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35220_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35220_00/dfce4f3a-f75a-4df2-982a-ce02391fa837.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:48:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35207_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Italy\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35207_00_004F0B5321FCF7C409455447388D5AF0294A2FB254/FE60EF4C13CE62D355B9D87F71D86E6AC2CCE452.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:47:34Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35211_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Italy\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35211_00/46149703-aad6-4201-abff-902770d06938.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:46:22Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35108_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz France\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz France\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35108_00_00E3E0BC3420AD423999A9112DC684908531B4D6EE/9CACE75426FFEE3024B381D1168D0AC841B782ED.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:44:38Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35112_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz France\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35112_00/1831cc28-0bcb-41a7-ae32-c46c1b0feeba.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T16:43:22Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR31464_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Llama L\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR31464_00/1ce2ecba-cd1b-4c79-a9ea-6cf46c4daae5.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:30:41Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR31434_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Llama L\", \"trophyTitleDetail\": \"The Llama L\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR31434_00_00ECAE923659695CB78E9F2231102E572F9EE1F8D2/F4C8E23E681DCB668471D85CA846BDD635EFC202.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:27:12Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR38692_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Boat Trip\", \"trophyTitleDetail\": \"Boat Trip\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR38692_00_003D001A4CD04936B44F0D76F0DAD99A4812F3C515/30770372AF6E9BF5BC7B84B32FDB4FB2AF133D22.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T12:20:09Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34011_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Repentless 2\", \"trophyTitleDetail\": \"Dictator's life is so much fun!\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34011_00_00D29898619FA47D0533756C8723B5691FB7382D6F/D20D63224BCFACFEEC365D967EBE319EB944ABD2.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 16, \"silver\": 12, \"gold\": 5, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 16, \"silver\": 12, \"gold\": 5, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T11:48:00Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR39524_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Item Tower\", \"trophyTitleDetail\": \"Trophy set for Item Tower\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR39524_00_004A9E107176F8217ADACC6D07C776D69CB3DA7EC3/A4CC33EB2B06D909D9D832817C01FD39136F6C0A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 14, \"gold\": 7, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 14, \"gold\": 7, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-05T10:33:34Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR32714_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Taco: TURBO\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR32714_00/1db04b1e-6db2-462f-b09c-40660e23388a.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:15:49Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR32708_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Taco: TURBO\", \"trophyTitleDetail\": \"The trophy set of The Jumping Taco: TURBO\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR32708_00_00175A90ABEBD2876C0CC2E723648B79F28E65D8C0/A3B3314010B7A64ADABB30A398926B5D6E4A9A31.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:14:32Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR30703_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Czech Run\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR30703_00/b94d277a-7838-450e-a911-6fd14bfb7c31.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:12:41Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR30702_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Czech Run\", \"trophyTitleDetail\": \"The Czech Run\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR30702_00_00A9E013F6A6901B5C3FAB179F632F2C97A640D64A/D89DA597B1B3BC5B7BCD4A6AB8722392410AA65A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 4, \"silver\": 3, \"gold\": 10, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T23:03:42Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34058_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34058_00/e8117715-3570-49f3-a71a-e82dbf5ee270.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:49:23Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34054_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34054_00_00B7876156AB1E985B0297E5BDCA9FCBF9B0067F8E/861B36F10FCA1C0DDB0F3793624F3C7D14DEFFB9.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:48:05Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34056_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34056_00/7b221c02-e5b0-4b8c-b4c3-c9f92e875f0a.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:44:09Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34052_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34052_00_00FC334FD638784B361E957685B41A12B674CD6F36/6DBE05D437AF182861AC259A6C549C426724CC62.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:41:33Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR29495_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Voices Stories Trophies\", \"trophyTitleDetail\": \"Trophies for The Voices Stories\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR29495_00_0057CBEFB1023C2372789B0C7D86B2BDCE86CAE023/F498CFED0446D8A2C65A425B6310E91B54893D83.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T22:17:07Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35573_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35573_00/936a8f66-96fb-428a-bb77-4556ef4886eb.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:15:55Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35569_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35569_00_00F4183B9D0B50CF246A41625B5C340D1470E7111B/E579C99E0107763A9BF58926CE81D3FC14C0E04A.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:14:52Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR35571_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR35571_00/00880cac-ad51-4589-b89d-e539763955df.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:13:34Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35567_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Croatia\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Croatia\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35567_00_00FA3420BD6756B6AB757A47F96A90798D21A034E6/3FF43FEB2D6C1CB98F2AE5093D6C159CD5E241FA.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:12:40Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34563_00\", \"trophySetVersion\": \"\", \"trophyTitleName\": \"\", \"trophyTitleDetail\": \"\", \"trophyTitleIconUrl\": \"\", \"trophyTitlePlatform\": \"PS3\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"progress\": 0, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:10:42Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34562_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Monster Truck Journey: Nitro\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34562_00/69b15f9d-7b0f-4400-befc-e3fab3ba6b8c.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T18:07:04Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR35977_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Beveron\", \"trophyTitleDetail\": \"Beveron\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR35977_00_00C52A0033C5C33B57E0CCCC3C736DD66BDF16EDD7/95E3B23BE1F0FBD704C75C444A5E29FB69C21ACC.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 5, \"gold\": 10, \"platinum\": 1}, \"progress\": 11, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 4, \"gold\": 0, \"platinum\": 0}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:47:53Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR45968_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Ice Cube\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR45968_00/511086e4-4a67-42c2-896a-08b7d629e3e8.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:41:32Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR45964_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Ice Cube\", \"trophyTitleDetail\": \"The trophy set of The Jumping Ice Cube\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR45964_00_007799BECC2D1B5039CA080F8FA8F2BB48D8255360/1892A1931218C8AE410A5F11DF68D6362FA21E48.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:40:25Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34149_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Choco Santa\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34149_00/e442bae7-d30c-4ff4-8bc0-4fd1e400b9ae.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:27:14Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34144_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Choco Santa\", \"trophyTitleDetail\": \"The trophy set of The Jumping Choco Santa\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34144_00_00A27422EEB65EEB036964D995A4DF8CE1FCB12D6F/CAA4F96D613EE59112FB46B9EADF41DAC2809E7B.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:23:45Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34780_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Muffin\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34780_00/857c6106-cb5e-4a79-b784-b931ff352035.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:18:49Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34776_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"The Jumping Muffin\", \"trophyTitleDetail\": \"The trophy set of The Jumping Muffin\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34776_00_0024249527B083B14ED07B113C82C914D0D3812305/6801375C099D4FC53408F7A6DC8269306C370614.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 6, \"silver\": 5, \"gold\": 9, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:15:22Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34074_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34074_00/3b7519e9-f56b-4409-b3b4-712e27d33acc.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:11:37Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34070_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34070_00_00585FA919738C38969A7C2AF6C114A0A975B9EAB0/D9D41462357B4981DCC860D9ECA3FECC9648C9A7.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:10:26Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34072_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34072_00/04b61e9c-57d6-4e7c-b5ba-25ee67c68c42.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:09:04Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34068_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Gold Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Gold Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34068_00_00E16D2BD3A980C7012ACE0DB29EE4E4B03906157F/F2E75E893F3AAAF20F361B75A79D0720CEDADC52.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 0, \"silver\": 0, \"gold\": 11, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:08:19Z\"}, {\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR34057_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR34057_00/536858a0-af81-4fdc-9e6a-4c3fb9d82fdd.png\", \"trophyTitlePlatform\": \"PS5\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:06:05Z\"}, {\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR34053_00\", \"trophySetVersion\": \"01.00\", \"trophyTitleName\": \"Quiz Thiz Germany: Bronze Edition\", \"trophyTitleDetail\": \"The trophy set of Quiz Thiz Germany: Bronze Edition\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR34053_00_009F7068E898519137DF438817DFE90EA268F44574/00630A4FC1EB2882CAA5F32EDC4AAC6ABA692904.PNG\", \"trophyTitlePlatform\": \"PS4\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"definedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"progress\": 100, \"earnedTrophies\": {\"bronze\": 70, \"silver\": 0, \"gold\": 0, \"platinum\": 1}, \"hiddenFlag\": false, \"lastUpdatedDateTime\": \"2025-04-04T17:05:08Z\"}], \"nextOffset\": 500, \"previousOffset\": 449, \"totalItemCount\": 2052}"
                 }
             }
         },
@@ -732,30 +732,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29883"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:14 GMT"
+                        "Thu, 08 May 2025 21:02:02 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29883"
                     ]
                 },
                 "body": {
@@ -795,30 +795,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29263"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:15 GMT"
+                        "Thu, 08 May 2025 21:02:05 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29263"
                     ]
                 },
                 "body": {
@@ -858,30 +858,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30254"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:15 GMT"
+                        "Thu, 08 May 2025 21:02:07 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30254"
                     ]
                 },
                 "body": {
@@ -921,30 +921,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30076"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:16 GMT"
+                        "Thu, 08 May 2025 21:02:11 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30076"
                     ]
                 },
                 "body": {
@@ -984,30 +984,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29526"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:16 GMT"
+                        "Thu, 08 May 2025 21:02:14 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29526"
                     ]
                 },
                 "body": {
@@ -1047,30 +1047,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28557"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:17 GMT"
+                        "Thu, 08 May 2025 21:02:17 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28557"
                     ]
                 },
                 "body": {
@@ -1110,30 +1110,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28823"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:17 GMT"
+                        "Thu, 08 May 2025 21:02:20 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28823"
                     ]
                 },
                 "body": {
@@ -1173,30 +1173,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28604"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:18 GMT"
+                        "Thu, 08 May 2025 21:02:23 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28604"
                     ]
                 },
                 "body": {
@@ -1236,30 +1236,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28988"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:18 GMT"
+                        "Thu, 08 May 2025 21:02:26 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28988"
                     ]
                 },
                 "body": {
@@ -1299,30 +1299,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29278"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:18 GMT"
+                        "Thu, 08 May 2025 21:02:29 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29278"
                     ]
                 },
                 "body": {
@@ -1362,30 +1362,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29123"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:19 GMT"
+                        "Thu, 08 May 2025 21:02:32 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29123"
                     ]
                 },
                 "body": {
@@ -1425,30 +1425,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29381"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:19 GMT"
+                        "Thu, 08 May 2025 21:02:35 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29381"
                     ]
                 },
                 "body": {
@@ -1488,30 +1488,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29326"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:20 GMT"
+                        "Thu, 08 May 2025 21:02:38 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29326"
                     ]
                 },
                 "body": {
@@ -1551,30 +1551,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29364"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:20 GMT"
+                        "Thu, 08 May 2025 21:02:42 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29364"
                     ]
                 },
                 "body": {
@@ -1614,30 +1614,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29805"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:21 GMT"
+                        "Thu, 08 May 2025 21:02:44 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29805"
                     ]
                 },
                 "body": {
@@ -1677,30 +1677,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30229"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:21 GMT"
+                        "Thu, 08 May 2025 21:02:47 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30229"
                     ]
                 },
                 "body": {
@@ -1740,30 +1740,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "28643"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:22 GMT"
+                        "Thu, 08 May 2025 21:02:51 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "28643"
                     ]
                 },
                 "body": {
@@ -1803,30 +1803,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29054"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:22 GMT"
+                        "Thu, 08 May 2025 21:02:53 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29054"
                     ]
                 },
                 "body": {
@@ -1866,30 +1866,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29940"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:23 GMT"
+                        "Thu, 08 May 2025 21:02:56 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29940"
                     ]
                 },
                 "body": {
@@ -1929,30 +1929,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29294"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:23 GMT"
+                        "Thu, 08 May 2025 21:02:59 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29294"
                     ]
                 },
                 "body": {
@@ -1992,30 +1992,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30579"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:24 GMT"
+                        "Thu, 08 May 2025 21:03:02 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30579"
                     ]
                 },
                 "body": {
@@ -2055,30 +2055,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "29517"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:24 GMT"
+                        "Thu, 08 May 2025 21:03:05 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "29517"
                     ]
                 },
                 "body": {
@@ -2118,30 +2118,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30666"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:24 GMT"
+                        "Thu, 08 May 2025 21:03:09 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30666"
                     ]
                 },
                 "body": {
@@ -2181,30 +2181,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31105"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:25 GMT"
+                        "Thu, 08 May 2025 21:03:12 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31105"
                     ]
                 },
                 "body": {
@@ -2244,30 +2244,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "33244"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:25 GMT"
+                        "Thu, 08 May 2025 21:03:15 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "33244"
                     ]
                 },
                 "body": {
@@ -2307,30 +2307,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31548"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:26 GMT"
+                        "Thu, 08 May 2025 21:03:18 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31548"
                     ]
                 },
                 "body": {
@@ -2370,30 +2370,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31421"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:26 GMT"
+                        "Thu, 08 May 2025 21:03:21 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31421"
                     ]
                 },
                 "body": {
@@ -2433,30 +2433,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "30662"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:27 GMT"
+                        "Thu, 08 May 2025 21:03:24 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "30662"
                     ]
                 },
                 "body": {
@@ -2496,30 +2496,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31231"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:27 GMT"
+                        "Thu, 08 May 2025 21:03:27 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31231"
                     ]
                 },
                 "body": {
@@ -2559,30 +2559,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31026"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:27 GMT"
+                        "Thu, 08 May 2025 21:03:30 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31026"
                     ]
                 },
                 "body": {
@@ -2622,30 +2622,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "31175"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:28 GMT"
+                        "Thu, 08 May 2025 21:03:33 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "31175"
                     ]
                 },
                 "body": {
@@ -2685,30 +2685,30 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "1341"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:17:28 GMT"
+                        "Thu, 08 May 2025 21:03:36 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "1341"
                     ]
                 },
                 "body": {

@@ -33,50 +33,50 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "192"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:57 GMT"
+                        "Thu, 08 May 2025 20:59:40 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "191"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"fedf1c4197597d965253ec78de9d76fd983c4188-98\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
                 "method": "DELETE",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624/members/5007681186655854753",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/fedf1c4197597d965253ec78de9d76fd983c4188-98/members/5007681186655854753",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -108,40 +108,40 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "167"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:58 GMT"
+                        "Thu, 08 May 2025 20:59:42 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Content-Length": [
+                        "166"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"2acd9fae-2970-11f0-96b8-79c136fea1ce\", \"code\": 2285581, \"message\": \"Resource not found (groupId='20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624')\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"5d6565ff-2c4f-11f0-bb59-cd0b3b93d358\", \"code\": 2285581, \"message\": \"Resource not found (groupId='fedf1c4197597d965253ec78de9d76fd983c4188-98')\"}}"
                 }
             }
         }

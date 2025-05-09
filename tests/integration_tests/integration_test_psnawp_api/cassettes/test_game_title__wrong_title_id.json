@@ -33,31 +33,31 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "137"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:49 GMT"
+                        "Thu, 08 May 2025 20:57:53 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Content-Length": [
+                        "137"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"25d0766b-2970-11f0-a777-7fa5b8ced845\", \"code\": 2240525, \"message\": \"Resource not found (npTitleId='SSSA01325_00')\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"1bf27bbb-2c4f-11f0-8335-1f59f9ec29e4\", \"code\": 2240525, \"message\": \"Resource not found (npTitleId='SSSA01325_00')\"}}"
                 }
             }
         }

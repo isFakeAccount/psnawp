@@ -33,40 +33,40 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "157"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:52 GMT"
+                        "Thu, 08 May 2025 20:58:32 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Content-Length": [
+                        "157"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"27a201bf-2970-11f0-81d7-952a7e63d565\", \"code\": 2285581, \"message\": \"Resource not found (groupId='~25C4C5406FD6D50E.763F9A1EB6AB5791')\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"33a4eb40-2c4f-11f0-a2ba-cba9657fec4f\", \"code\": 2285581, \"message\": \"Resource not found (groupId='~25C4C5406FD6D50E.763F9A1EB6AB5791')\"}}"
                 }
             }
         }

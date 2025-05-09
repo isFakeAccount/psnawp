@@ -33,50 +33,50 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Content-Length": [
-                        "192"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Date": [
-                        "Mon, 05 May 2025 05:16:59 GMT"
+                        "Thu, 08 May 2025 20:59:58 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Content-Length": [
+                        "191"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"fedf1c4197597d965253ec78de9d76fd983c4188-98\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
                 "method": "DELETE",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/20863da1bb65fefd8084fe4bb3b0ce6d2bb51314-624/members/me",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/fedf1c4197597d965253ec78de9d76fd983c4188-98/members/me",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -108,32 +108,32 @@
                     "message": "No Content"
                 },
                 "headers": {
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Content-Type"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Mon, 05 May 2025 05:16:59 GMT"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Date": [
+                        "Thu, 08 May 2025 21:00:01 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Content-Type"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

@@ -83,14 +83,10 @@ myst_enable_extensions = [
 html_theme = "sphinx_book_theme"
 pygments_style = "stata-dark"
 html_logo = "_static/psn_logo.png"
-html_theme_options = {
-    "repository_url": "https://github.com/isFakeAccount/psnawp",
-    "use_repository_button": True,
-    "show_toc_level": 2
-}
+html_theme_options = {"repository_url": "https://github.com/isFakeAccount/psnawp", "use_repository_button": True, "show_toc_level": 2}
 intersphinx_mapping = {
     "python": ("https://docs.python.org", None),
     "requests": ("https://requests.readthedocs.io/en/latest/", None),
-    "requests_ratelimiter": ("https://requests-ratelimiter.readthedocs.io/en/stable/", None),
+    "pyrate-limiter": ("https://pyratelimiter.readthedocs.io/en/stable/", None),
 }
 html_title = "PSNAWP"

@@ -17,6 +17,7 @@ from psnawp_api.utils import API_PATH, BASE_PATH
 if TYPE_CHECKING:
     from collections.abc import Callable
 
+    from pyrate_limiter import Rate
     from requests import Response
 
     from psnawp_api.core.request_builder import RequestBuilderHeaders, RequestOptions
@@ -99,17 +100,19 @@ class Authenticator:
         self,
         npsso_cookie: str,
         common_headers: RequestBuilderHeaders,
+        rate_limit: Rate,
     ) -> None:
         """Represents a single authentication to PSN API.
 
         :param npsso_cookie: The Network Platform Single Sign-On (NPSSO) cookie, obtained after signing into PlayStation
             Network.
         :param common_headers: Common headers that will be added to all HTTP request.
+        :param rate_limit: Controls pacing of HTTP requests to avoid service throttling.
 
         """
         self.npsso_cookie = npsso_cookie
         self.common_headers = common_headers
-        self.request_builder = RequestBuilder(common_headers)
+        self.request_builder = RequestBuilder(common_headers, rate_limit)
         self.token_response: TokenResponse | None = None
         self.cid = str(uuid.UUID(int=uuid.getnode()))
 
