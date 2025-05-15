@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING, Any, ClassVar
 
 from typing_extensions import Self
 
-from psnawp_api.core.psnawp_exceptions import PSNAWPClientError
+from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.trophies import PlatformType, TrophyIterator, TrophyTitleIterator
 from psnawp_api.models.trophies.trophy_group import (
@@ -202,7 +202,7 @@ class GameTitle:
 
         :returns: the title icon URL
 
-        :raises PSNAWPClientError: If the platform is not supported.
+        :raises PSNAWPIllegalArgumentError: If the platform is not supported.
 
         """
         digest = hmac.new(type(self).HMAC_SHA1_KEY, self.title_id.encode(), hashlib.sha1).hexdigest().upper()
@@ -216,4 +216,4 @@ class GameTitle:
             icon_url: str = info["icons"][0]["icon"]
             return icon_url
 
-        raise PSNAWPClientError(f"Unsupported or unknown platform: {self.platform}")
+        raise PSNAWPIllegalArgumentError(f"Unsupported or unknown platform: {self.platform}")

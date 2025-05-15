@@ -1,0 +1,317 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "X-Requested-With": [
+                        "com.scee.psxandroid"
+                    ],
+                    "Sec-Fetch-Dest": [
+                        "document"
+                    ],
+                    "Sec-Fetch-Mode": [
+                        "navigate"
+                    ],
+                    "Sec-Fetch-Site": [
+                        "same-site"
+                    ],
+                    "Sec-Fetch-User": [
+                        "?1"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 302,
+                    "message": "Moved Temporarily"
+                },
+                "headers": {
+                    "Location": [
+                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.b8aUBX&cid=00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Date": [
+                        "Thu, 15 May 2025 04:25:55 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "0"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "bd38457f0c0228ea97b316b524925116"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31536000 ; includeSubDomains"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "X-RequestId": [
+                        "bd38457f0c0228ea97b316b524925116"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ]
+                },
+                "body": {
+                    "string": ""
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
+                "body": "cid=00000000-0000-0000-0000-5b55307226dc&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
+                "headers": {
+                    "User-Agent": [
+                        "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "Content-Length": [
+                        "207"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Thu, 15 May 2025 04:25:58 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "3972"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=UTF-8"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "e895cdf0012e404666cdb056dbf6adce"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-5b55307226dc"
+                    ],
+                    "X-RequestId": [
+                        "e895cdf0012e404666cdb056dbf6adce"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Set-Cookie": "REDACTED"
+                },
+                "body": {
+                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:mobile.v2.core psn:clientapp\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=CUSA03041_00%2C",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Thu, 15 May 2025 04:26:01 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "1025"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ]
+                },
+                "body": {
+                    "string": "{\"titles\": [{\"npTitleId\": \"CUSA03041_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR09412_00\", \"trophyTitleName\": \"Red Dead Redemption 2\", \"trophyTitleDetail\": \"Red Dead Redemption 2\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/E1C7515ADB58B892CCC0BB0D0F94512963E11203.PNG\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"rarestTrophies\": [{\"trophyId\": 2, \"trophyHidden\": true, \"trophyType\": \"bronze\", \"trophyName\": \"Just a Scratch\", \"trophyDetail\": \"Complete 'Enter, Pursued by a Memory'.\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/17BA1A60D9354F58068032916F3B59BE7591B4F6.PNG\", \"trophyRare\": 3, \"trophyEarnedRate\": \"77.1\", \"earned\": true, \"earnedDateTime\": \"2018-12-02T05:27:17Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 1, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 44, \"silver\": 4, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2018-12-02T05:27:19Z\"}]}]}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://tmdb.np.dl.playstation.net/tmdb2/CUSA03041_00_35D1E631175ECA6FBC7027DD73B4C09A886DE8D2/CUSA03041_00.json",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Thu, 15 May 2025 04:26:04 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Ranges": [
+                        "bytes"
+                    ],
+                    "content-length": [
+                        "1532"
+                    ],
+                    "ETag": [
+                        "\"e0cc1d32cd4f2b3c8d4f2ed35e1aa528:1543328653\""
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Last-Modified": [
+                        "Tue, 27 Nov 2018 12:19:04 GMT"
+                    ],
+                    "Server": [
+                        "AkamaiNetStorage"
+                    ],
+                    "Vary": [
+                        "Accept-Encoding"
+                    ],
+                    "Set-Cookie": "REDACTED"
+                },
+                "body": {
+                    "string": "{\"revision\": 15, \"patchRevision\": 8, \"formatVersion\": 4, \"npTitleId\": \"CUSA03041_00\", \"console\": \"PS4\", \"names\": [{\"name\": \"Red Dead Redemption 2\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"en\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"fr\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"es\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"de\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"it\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"ru\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"ko\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"zh-TW\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"zh-CN\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"pl\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"pt-BR\"}, {\"name\": \"Red Dead Redemption 2\", \"lang\": \"es-MX\"}], \"icons\": [{\"icon\": \"http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/icon0.png\", \"type\": \"512x512\"}], \"parentalLevel\": 9, \"pronunciation\": \"http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/pronunciation.xml\", \"contentId\": \"UP1004-CUSA03041_00-REDEMPTION000002\", \"backgroundImage\": \"http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/pic0.png\", \"bgm\": \"http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/snd0.at9\", \"category\": \"gd\", \"playTogether\": 8, \"psVr\": 0, \"neoEnable\": 1}"
+                }
+            }
+        }
+    ]
+}

@@ -3,8 +3,7 @@ import inspect
 import pytest
 
 from psnawp_api import PSNAWP
-from psnawp_api.core import PSNAWPNotFoundError
-from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
+from psnawp_api.core import PSNAWPClientError, PSNAWPIllegalArgumentError, PSNAWPNotFoundError
 from psnawp_api.models.trophies import PlatformType
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
@@ -128,3 +127,24 @@ def test_game_title__trophy_groups_summary_invalid_np_communication_id(
             trophy_groups_summary = game_title.trophy_groups_summary()
             for trophy_group_summary in trophy_groups_summary.trophy_groups:
                 print(trophy_group_summary)
+
+
+@pytest.mark.vcr
+def test_game_title__title_icon_url(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        title = psnawp_fixture.game_title("NPEB00571_00", PlatformType.PS3, np_communication_id="NPWR00845_00")
+        assert title.get_title_icon_url() == "https://tmdb.np.dl.playstation.net/tmdb/NPEB00571_00_1EB03AE017B54F8797D8D96BBBA3F5DACFEF3584/ICON0.PNG"
+
+        title = psnawp_fixture.game_title("CUSA03041_00", PlatformType.PS4)
+        assert (
+            title.get_title_icon_url()
+            == "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/icon0.png"
+        )
+
+
+@pytest.mark.vcr
+def test_game_title__title_icon_url_invalid_platform(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        game_title = psnawp_fixture.game_title(title_id="PPSA03420_00", platform=PlatformType.PS5)
+        with pytest.raises(PSNAWPIllegalArgumentError):
+            game_title.get_title_icon_url()
