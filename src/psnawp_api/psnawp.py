@@ -19,6 +19,7 @@ from psnawp_api.models import (
     User,
 )
 from psnawp_api.models.listing import PaginationArguments
+from psnawp_api.models.trophies import PlatformType
 
 if TYPE_CHECKING:
     from collections.abc import Generator, Iterable
@@ -78,11 +79,19 @@ class PSNAWP:
         )
 
     def me(self) -> Client:
-        """Creates a new client object (your account).
+        """Retrieve a Client instance for the authenticated user.
 
-        :returns: Client Object
+        The returned Client object represents the currently logged-in user and provides methods to perform user-centric
+        operations, including (but not limited to):
 
-        .. code-block:: Python
+        - Fetching the user's trophies.
+        - Accepting or rejecting incoming friend requests.
+        - Sending and receiving messages.
+        - And more—see the Client class documentation for the full list of available methods.
+
+        :returns: A Client object bound to your account, ready to manage the authenticated user's data and interactions.
+
+        .. code-block:: python
 
             from psnawp_api import PSNAWP
 
@@ -99,7 +108,18 @@ class PSNAWP:
     def user(self, *, account_id: str) -> User: ...
 
     def user(self, **kwargs: Any) -> User:
-        """Creates a new user object using Online ID (GamerTag) or Account ID (PSN ID).
+        """Retrieve a User instance by Online ID or Account ID.
+
+        The returned User object represents the specified PlayStation Network user and provides methods to inspect and
+        interact with their account, including (but not limited to):
+
+        - Fetching the user's trophies and trophy summaries.
+        - Checking friendship status.
+        - Determining whether the user has blocked you.
+        - Retrieving basic profile information (avatar, bio, locale, etc.).
+        - Querying presence data (online/offline status, current activity).
+        - Sending friend requests or messages (subject to privacy settings).
+        - And more—see the User class documentation for the complete list of available methods.
 
         .. note::
 
@@ -134,42 +154,71 @@ class PSNAWP:
     def game_title(
         self,
         title_id: str,
+        platform: PlatformType,
         account_id: str = "6515971742264256071",
         np_communication_id: str | None = None,
     ) -> GameTitle:
         """Creates a GameTitle class object from title_id which represents a PlayStation video game title.
 
+        .. important::
+
+            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/,
+            https://serialstation.com/trophies/ or from
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`.
+
+            PlayStation3 and PS Vita cannot be searched using
+            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`. Also their np communication id can't
+            be fetched using
+            :py:meth:`~psnawp_api.models.trophies.trophy_titles.TrophyTitleIterator.get_np_communication_id`. The user
+            must provide the np communication id for PS3/PS VITA title themselves.
+
+        .. tip::
+
+            GameTitle lets you fetch trophies for the game you don't own. If you are trying to fetch your own trophies
+            see the :py:class:`psnawp_api.models.client.Client` class. Use the :py:meth:`me` to create instance of the
+            Client class.
+
         .. note::
 
-            The GameTitle class is only useful if the user has played that video game. To allow users to retrieve
-            information without having to play that video game I picked a default user who has played the most number of
-            games based on this website (https://www.truetrophies.com/leaderboard/gamer/gamesplayed). It is possible
-            that the there are games this user has not played and in that case it is better to provide your own account
-            id (``'me'``) or someone who has played that game.
+            The PlayStation API requires NP Communication ID to fetch trophies for a title. The only way you can get NP
+            Communication ID (``np_communication_id``) endpoint is through Trophy Titles endpoint that takes in NP Title
+            ID (``title_id``) and fetches the corresponding NP Communication ID for it. However, that catch is that the
+            endpoint only returns NP Communication ID if you own that game.
+
+            To allow users to retrieve information without having to own that video game I picked a default user who has
+            played the most number of games based on this website
+            (https://www.truetrophies.com/leaderboard/gamer/gamesplayed). It is possible that the there are games this
+            user has not played and in that case it is better to provide your own account id (``'me'``) or someone who
+            has played that game.
 
         .. note::
 
-            ``title_id`` can be obtained from https://andshrew.github.io/PlayStation-Titles/ or from
-            :py:class:`~psnawp_api.models.search.universal_search.UniversalSearch`
-
-        .. note::
-
-            During the construction of the object, an additional call is made to get the np_communication_id. This ID is
-            important for getting trophy data. This call can be skipped by providing np_communication_id in as argument.
+            During the construction of the object, an additional call is made to get the ``np_communication_id``. This
+            ID is important for getting trophy data. This call can be skipped by providing ``np_communication_id`` in as
+            argument.
 
         :param title_id: unique ID of game title.
+        :param platform: The platform this title belongs to.
         :param: account_id: The account whose trophy list is being accessed
         :param np_communication_id: Unique ID of a game title used to request trophy information.
 
         :returns: Title Object
 
         :raises PSNAWPNotFoundError: If the user does not have any trophies for that game or the game doesn't exist.
+        :raises PSNAWPIllegalArgumentError: If ``np_communication_id`` is not provided for the following platforms:
+            PlatformType.PS3, PlatformType.PS_VITA, PlatformType.PSPC.
 
         """
-        return GameTitle(
-            self.authenticator,
+        if platform in (PlatformType.PS3, PlatformType.PS_VITA, PlatformType.PSPC) and np_communication_id is None:
+            raise PSNAWPIllegalArgumentError(f"np_communication_id is required for the platform {platform}.")
+
+        if np_communication_id is None:
+            return GameTitle.from_title_id(authenticator=self.authenticator, title_id=title_id, platform=platform, account_id=account_id)
+
+        return GameTitle.with_np_communication_id(
+            authenticator=self.authenticator,
             title_id=title_id,
-            account_id=account_id,
+            platform=platform,
             np_communication_id=np_communication_id,
         )
 

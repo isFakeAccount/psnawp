@@ -51,52 +51,52 @@
                     "message": "Moved Temporarily"
                 },
                 "headers": {
-                    "X-RequestId": [
-                        "5f7c8fd210f64f8c5968c757ca5e4ab8"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=31536000 ; includeSubDomains"
-                    ],
                     "Connection": [
                         "keep-alive"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "Date": [
-                        "Thu, 15 May 2025 03:52:59 GMT"
-                    ],
-                    "Cache-Control": [
-                        "no-cache, no-store, max-age=0, must-revalidate"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-21dca9090663"
                     ],
                     "X-XSS-Protection": [
                         "1; mode=block"
                     ],
-                    "Location": [
-                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.usZRRQ&cid=00000000-0000-0000-0000-21dca9090663"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "5f7c8fd210f64f8c5968c757ca5e4ab8"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
+                    ],
+                    "Date": [
+                        "Thu, 15 May 2025 04:26:10 GMT"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31536000 ; includeSubDomains"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-3fee432ff044"
+                    ],
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Location": [
+                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.yVuPaI&cid=00000000-0000-0000-0000-3fee432ff044"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-3fee432ff044"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "f91b6c0f7faf092a161d070071d98f4b"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
                     ],
                     "Expires": [
                         "0"
                     ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-21dca9090663"
+                    "X-RequestId": [
+                        "f91b6c0f7faf092a161d070071d98f4b"
                     ],
                     "Content-Length": [
                         "0"
                     ],
-                    "X-Frame-Options": [
-                        "DENY"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": ""
@@ -107,7 +107,7 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
-                "body": "cid=00000000-0000-0000-0000-21dca9090663&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
+                "body": "cid=00000000-0000-0000-0000-3fee432ff044&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
                 "headers": {
                     "User-Agent": [
                         "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
@@ -131,7 +131,7 @@
                         "application/x-www-form-urlencoded"
                     ],
                     "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-21dca9090663"
+                        "00000000-0000-0000-0000-3fee432ff044"
                     ],
                     "Content-Length": [
                         "207"
@@ -144,26 +144,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-RequestId": [
-                        "75eb41e92594c92292d3a8441eb3e23f"
-                    ],
                     "Connection": [
                         "keep-alive"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "Date": [
-                        "Thu, 15 May 2025 03:53:02 GMT"
-                    ],
-                    "Cache-Control": [
-                        "no-store"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-21dca9090663"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "75eb41e92594c92292d3a8441eb3e23f"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
@@ -171,8 +153,26 @@
                     "Content-Type": [
                         "application/json;charset=UTF-8"
                     ],
+                    "Date": [
+                        "Thu, 15 May 2025 04:26:13 GMT"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-3fee432ff044"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
                     "X-CorrelationId": [
-                        "00000000-0000-0000-0000-21dca9090663"
+                        "00000000-0000-0000-0000-3fee432ff044"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "8cb3512ebfa4921aa67dc1e6aae2d4ef"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "X-RequestId": [
+                        "8cb3512ebfa4921aa67dc1e6aae2d4ef"
                     ],
                     "Content-Length": [
                         "3972"
@@ -187,7 +187,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/SSSA01325_00/trophyGroups?npServiceName=trophy2",
+                "uri": "https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=PPSA03420_00%2C",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -212,12 +212,21 @@
             },
             "response": {
                 "status": {
-                    "code": 404,
-                    "message": "Not Found"
+                    "code": 200,
+                    "message": "OK"
                 },
                 "headers": {
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 15 May 2025 04:26:16 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -225,22 +234,16 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Thu, 15 May 2025 03:53:05 GMT"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Content-Type": [
-                        "application/json"
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Content-Length": [
-                        "110"
-                    ]
+                        "912"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"1b5b46ae-3140-11f0-854c-cf103b27cb3d\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
+                    "string": "{\"titles\": [{\"npTitleId\": \"PPSA03420_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy2\", \"npCommunicationId\": \"NPWR21647_00\", \"trophyTitleName\": \"Grand Theft Auto V\", \"trophyTitleIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/26efdb55-9e6d-4de9-943f-6b95768ae607.png\", \"hasTrophyGroups\": true, \"trophyGroupCount\": 4, \"rarestTrophies\": [{\"trophyId\": 49, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"American Dream\", \"trophyDetail\": \"GTA Online: Own an Apartment, Garage and an Insured Vehicle\", \"trophyIconUrl\": \"https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png\", \"trophyRare\": 3, \"trophyEarnedRate\": \"66.1\", \"earned\": true, \"earnedDateTime\": \"2022-03-15T13:34:38Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 2, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 59, \"silver\": 15, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2022-03-15T13:34:39Z\"}]}]}"
                 }
             }
         }
