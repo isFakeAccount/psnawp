@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, Generic, TypeVar
 
-from attrs import define, field
 from typing_extensions import Self
 
 from psnawp_api.core import PSNAWPNotFoundError
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class TrophyGroupSummary:
     """TrophyGroupSummary contains trophy count data for one trophy group of a game title.
 
@@ -66,7 +66,7 @@ class TrophyGroupSummary:
         )
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class TrophyGroupSummaryWithProgress(TrophyGroupSummary):
     """TrophyGroupSummaryWithProgress contains trophy count data for one trophy group of a game title and user progress for each trophy group.
 
@@ -82,7 +82,7 @@ class TrophyGroupSummaryWithProgress(TrophyGroupSummary):
 
     progress: int | None
     earned_trophies: TrophySet
-    last_updated_datetime: datetime | None = field(converter=iso_format_to_datetime)
+    last_updated_datetime: datetime | None
 
     @classmethod
     def from_dict(cls, trophy_group_dict: dict[str, Any]) -> Self:
@@ -114,7 +114,7 @@ class TrophyGroupSummaryWithProgress(TrophyGroupSummary):
                     {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                 ),
             ),
-            last_updated_datetime=trophy_group_dict.get("lastUpdatedDateTime"),
+            last_updated_datetime=iso_format_to_datetime(trophy_group_dict.get("lastUpdatedDateTime")),
         )
 
 
@@ -140,7 +140,7 @@ class TrophyGroupsSummary(Generic[T]):
         only).
     :var int | None progress: Percentage of trophies earned for the title.
     :var TrophySet earned_trophies: Number of trophies for the title which have been earned by type.
-    :var datetime.datetime | None last_updated_date_time: Date most recent trophy earned for the title (UTC+00:00
+    :var datetime.datetime | None last_updated_datetime: Date most recent trophy earned for the title (UTC+00:00
         TimeZone).
 
     .. note::
@@ -162,7 +162,7 @@ class TrophyGroupsSummary(Generic[T]):
         hidden_flag: bool | None,
         progress: int | None,
         earned_trophies: TrophySet,
-        last_updated_date_time: str | None,
+        last_updated_datetime: datetime | None,
     ) -> None:
         """Initialize a TrophyGroupsSummary instance with PlayStation trophy data."""
         self.trophy_set_version = trophy_set_version
@@ -175,7 +175,7 @@ class TrophyGroupsSummary(Generic[T]):
         self.hidden_flag = hidden_flag
         self.progress = progress
         self.earned_trophies = earned_trophies
-        self.last_updated_date_time = iso_format_to_datetime(last_updated_date_time)
+        self.last_updated_datetime = last_updated_datetime
 
     def __str__(self) -> str:
         """Returns a human-readable summary of the trophy group."""
@@ -196,7 +196,7 @@ class TrophyGroupsSummary(Generic[T]):
             f"hidden_flag={self.hidden_flag}, "
             f"progress={self.progress}, "
             f"earned_trophies={self.earned_trophies}, "
-            f"last_updated_date_time={self.last_updated_date_time})"
+            f"last_updated_datetime={self.last_updated_datetime})"
         )
 
 
@@ -268,7 +268,7 @@ class TrophyGroupsSummaryBuilder:
                     {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},
                 ),
             ),
-            last_updated_date_time=trophy_groups_dict.get("lastUpdatedDateTime"),
+            last_updated_datetime=iso_format_to_datetime(trophy_groups_dict.get("lastUpdatedDateTime")),
         )
 
     def game_title_trophy_groups_summary(

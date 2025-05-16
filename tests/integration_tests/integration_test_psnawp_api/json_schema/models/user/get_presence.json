@@ -10,7 +10,8 @@
                     "type": "string",
                     "enum": [
                         "availableToPlay",
-                        "unavailable"
+                        "unavailable",
+                        "availableToCommunicate"
                     ]
                 },
                 "lastAvailableDate": {

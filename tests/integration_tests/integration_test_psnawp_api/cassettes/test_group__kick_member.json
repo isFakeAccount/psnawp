@@ -33,20 +33,11 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -55,28 +46,37 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:59:33 GMT"
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:44:40 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Content-Length": [
+                        "255"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
-                    "Content-Length": [
-                        "254"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"fedf1c4197597d965253ec78de9d76fd983c4188-98\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"fa78d4ccb00acce34b750ba034c0db8b47feaa86-196\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
                 "method": "DELETE",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/fedf1c4197597d965253ec78de9d76fd983c4188-98/members/2066273503397112667",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/fa78d4ccb00acce34b750ba034c0db8b47feaa86-196/members/2066273503397112667",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -108,29 +108,29 @@
                     "message": "No Content"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:59:36 GMT"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:44:43 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"

@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any
 
-from attrs import define, field
 from typing_extensions import Self
 
 from psnawp_api.core import PSNAWPBadRequestError, PSNAWPNotFoundError
@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from psnawp_api.models.listing import PaginationArguments
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class TrophyTitle:
     """A class containing summary of trophy data for a user for a game title.
 
@@ -37,7 +37,7 @@ class TrophyTitle:
     :var bool | None hidden_flag: Title has been hidden on the accounts trophy list (Only for Client).
     :var TrophySet earned_trophies: Number of trophies for the title which have been earned by type.
     :var TrophySet defined_trophies: Number of trophies for the title by type.
-    :var datetime.datetime | None last_updated_date_time: Date most recent trophy earned for the title (UTC+00:00
+    :var datetime.datetime | None last_updated_datetime: Date most recent trophy earned for the title (UTC+00:00
         TimeZone).
     :var str | None np_title_id: Title ID of the title if passed.
 
@@ -55,7 +55,7 @@ class TrophyTitle:
     hidden_flag: bool | None
     earned_trophies: TrophySet
     defined_trophies: TrophySet
-    last_updated_date_time: datetime | None = field(converter=iso_format_to_datetime)
+    last_updated_datetime: datetime | None
     np_title_id: str | None  # when title_id is passed
 
 
@@ -158,7 +158,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
                 has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                 progress=trophy_title.get("progress"),
                 hidden_flag=trophy_title.get("hiddenFlag"),
-                last_updated_date_time=trophy_title.get("lastUpdatedDateTime"),
+                last_updated_datetime=iso_format_to_datetime(trophy_title.get("lastUpdatedDateTime")),
                 defined_trophies=TrophySet(
                     **trophy_title.get(
                         "definedTrophies",
@@ -221,7 +221,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
                     has_trophy_groups=trophy_title.get("hasTrophyGroups"),
                     progress=trophy_title.get("progress"),
                     hidden_flag=trophy_title.get("hiddenFlag"),
-                    last_updated_date_time=trophy_title.get("lastUpdatedDateTime"),
+                    last_updated_datetime=iso_format_to_datetime(trophy_title.get("lastUpdatedDateTime")),
                     defined_trophies=trophy_title.get(
                         "definedTrophies",
                         {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0},

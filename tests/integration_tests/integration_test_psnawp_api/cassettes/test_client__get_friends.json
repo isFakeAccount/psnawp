@@ -33,11 +33,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0273362818695738331"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "97"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:26:32 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -45,30 +58,17 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:15 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0540988147386271133"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "97"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
@@ -108,11 +108,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0483586725265327907"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "528"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:26:35 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -120,30 +133,17 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:18 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0224701052141094619"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "528"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
@@ -183,11 +183,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0132267828635977194"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "693"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:26:38 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -195,34 +208,21 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:21 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0702669716120595803"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "696"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
-                    "string": "{\"onlineId\": \"Lucidityzen_v2\", \"aboutMe\": \"u butt\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_s.png\"}, {\"size\": \"xl\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_xl.png\"}, {\"size\": \"l\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_l.png\"}, {\"size\": \"m\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_m.png\"}], \"languages\": [\"ru-RU\"], \"isPlus\": true, \"isOfficiallyVerified\": false, \"isMe\": false}"
+                    "string": "{\"onlineId\": \"SLUMP-lucid\", \"aboutMe\": \"u butt\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_s.png\"}, {\"size\": \"xl\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_xl.png\"}, {\"size\": \"l\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_l.png\"}, {\"size\": \"m\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_m.png\"}], \"languages\": [\"ru-RU\"], \"isPlus\": true, \"isOfficiallyVerified\": false, \"isMe\": false}"
                 }
             }
         },
@@ -258,11 +258,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0761561107035666053"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "792"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:26:41 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -270,30 +283,17 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:24 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0177545887467012172"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "792"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {

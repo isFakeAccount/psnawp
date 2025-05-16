@@ -33,11 +33,24 @@
                     "message": "Forbidden"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0984306807331376619"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "123"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:29:14 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -45,34 +58,21 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 21:00:56 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0087184348937396482"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "123"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"891293e3-2c4f-11f0-a1af-5f0c8595de02\", \"code\": 2281486, \"message\": \"Not permitted by access control\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"f09b4bf1-3205-11f0-8eb9-a3d33bf9e319\", \"code\": 2281486, \"message\": \"Not permitted by access control\"}}"
                 }
             }
         }

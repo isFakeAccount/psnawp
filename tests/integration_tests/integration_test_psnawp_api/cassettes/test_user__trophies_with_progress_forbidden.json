@@ -33,11 +33,18 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Vary": [
+                        "Accept-Language"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Content-Length": [
+                        "3355"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:32:17 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -45,21 +52,14 @@
                     "Cache-Control": [
                         "max-age=300"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Vary": [
-                        "Accept-Language"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 21:04:00 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Content-Length": [
-                        "3355"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
@@ -99,31 +99,31 @@
                     "message": "Forbidden"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Content-Length": [
+                        "123"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:32:20 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 21:04:03 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
-                    "Content-Length": [
-                        "123"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"f8b6988a-2c4f-11f0-97c4-d39d86d91fb9\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"5f7ceb54-3206-11f0-aaf9-efaaa0325d7a\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
                 }
             }
         }

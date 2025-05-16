@@ -33,11 +33,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0758846884342368325"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "16"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:27:12 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -45,30 +58,17 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:55 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0951281235001978758"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "16"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {

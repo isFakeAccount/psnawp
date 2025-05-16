@@ -13,8 +13,9 @@
                     "availability": {
                         "type": "string",
                         "enum": [
+                            "availableToPlay",
                             "unavailable",
-                            "availableToPlay"
+                            "availableToCommunicate"
                         ]
                     },
                     "lastAvailableDate": {
@@ -66,8 +67,7 @@
                                 "npTitleId",
                                 "titleName",
                                 "format",
-                                "launchPlatform",
-                                "gameStatus"
+                                "launchPlatform"
                             ],
                             "additionalProperties": false
                         }

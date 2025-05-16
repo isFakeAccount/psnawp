@@ -33,11 +33,24 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0969871019545834181"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Content-Length": [
+                        "131"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:28:55 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -45,34 +58,21 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 21:00:37 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0872731848535111374"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH"
                     ],
-                    "Content-Length": [
-                        "212"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "Apache"
                     ]
                 },
                 "body": {
-                    "string": "{\"basicPresence\": {\"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-08T20:50:25.817Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"MOBILE_APP\", \"lastOnlineDate\": \"2025-05-08T20:50:25.817Z\"}}}"
+                    "string": "{\"basicPresence\": {\"availability\": \"availableToCommunicate\", \"primaryPlatformInfo\": {\"onlineStatus\": \"online\", \"platform\": \"MOBILE_APP\"}}}"
                 }
             }
         }

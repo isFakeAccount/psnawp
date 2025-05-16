@@ -33,20 +33,11 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -55,17 +46,26 @@
                     "Server": [
                         "Apache"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Date": [
-                        "Thu, 08 May 2025 20:59:00 GMT"
+                        "Fri, 16 May 2025 03:44:07 GMT"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Content-Length": [
                         "245"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ]
                 },
                 "body": {
@@ -105,20 +105,11 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -127,21 +118,30 @@
                     "Server": [
                         "Apache"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Date": [
-                        "Thu, 08 May 2025 20:59:03 GMT"
+                        "Fri, 16 May 2025 03:44:10 GMT"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Content-Length": [
                         "769"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ]
                 },
                 "body": {
-                    "string": "{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"modifiedTimestamp\": \"1746737937198\", \"groupName\": {\"value\": \"\", \"status\": 0}, \"groupIcon\": {\"status\": 0}, \"joinedTimestamp\": \"1717991006000\", \"isFavorite\": false, \"existsNewArrival\": false, \"mainThread\": {\"threadId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"modifiedTimestamp\": \"1746737937198\", \"latestMessage\": {\"messageUid\": \"1#447164911922704\", \"messageType\": 1, \"alternativeMessageType\": 1, \"body\": \"Hello World!\", \"createdTimestamp\": \"1746737937198\", \"sender\": {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}}, \"readMessageUid\": \"1#447164911922704\"}, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}], \"notificationSetting\": {\"isMute\": false}}"
+                    "string": "{\"groupId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"groupType\": 0, \"modifiedTimestamp\": \"1747367044076\", \"groupName\": {\"value\": \"\", \"status\": 0}, \"groupIcon\": {\"status\": 0}, \"joinedTimestamp\": \"1717991006000\", \"isFavorite\": false, \"existsNewArrival\": false, \"mainThread\": {\"threadId\": \"~1CACE0CDC2C96B5B.25C4C5406FD6D50E\", \"modifiedTimestamp\": \"1747367044076\", \"latestMessage\": {\"messageUid\": \"1#447325963283640\", \"messageType\": 1, \"alternativeMessageType\": 1, \"body\": \"Hello World!\", \"createdTimestamp\": \"1747367044076\", \"sender\": {\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}}, \"readMessageUid\": \"1#447325963283640\"}, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}, {\"accountId\": \"2066273503397112667\", \"onlineId\": \"isFakeAccount\"}], \"notificationSetting\": {\"isMute\": false}}"
                 }
             }
         }
