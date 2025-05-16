@@ -112,6 +112,7 @@ ignore = [
     "D401",   # Allow docstring summaries that are not in imperative mood.
     "EM",     # Allow exception messages that do not follow specific formatting rules.
     "FBT",    # Allow functions to take boolean positional arguments.
+    "S311", # Allow use of Standard pseudo-random generators.
     "S603",   # Allow `subprocess` calls without enforcing `shell=False` (potential security risk).
     "T201",   # Allow usage of `print()` instead of enforcing logging.
     "TRY003", # Allow specifying long error messages inside the exception class instead of outside.
