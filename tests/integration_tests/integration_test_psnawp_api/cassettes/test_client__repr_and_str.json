@@ -33,32 +33,32 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-CorrelationId": [
-                        "e321c3aa-2173-4f9c-9303-1e18aa2e7576"
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-RequestId": [
+                        "b7966b13-dce1-414c-a97f-653d0d10d5b3"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "b7966b13-dce1-414c-a97f-653d0d10d5b3"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:25:42 GMT"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "X-RequestId": [
-                        "e321c3aa-2173-4f9c-9303-1e18aa2e7576"
+                    "Content-Length": [
+                        "35"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "X-Psn-Correlation-Id": [
-                        "e321c3aa-2173-4f9c-9303-1e18aa2e7576"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:57:34 GMT"
+                    "X-CorrelationId": [
+                        "b7966b13-dce1-414c-a97f-653d0d10d5b3"
                     ],
                     "X-Psn-Request-Id": [
-                        "e321c3aa-2173-4f9c-9303-1e18aa2e7576"
-                    ],
-                    "Content-Length": [
-                        "35"
+                        "b7966b13-dce1-414c-a97f-653d0d10d5b3"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -99,42 +99,42 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
+                    "Server": [
+                        "Apache"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "X-Psn-Track-Id": [
+                        "0360593451709538418"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
                     ],
-                    "Cache-Control": [
-                        "private"
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:25:45 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
                     "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:57:38 GMT"
-                    ],
-                    "X-Psn-Track-Id": [
-                        "0607681003042114018"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Content-Length": [
                         "1619"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ]
                 },
                 "body": {

@@ -33,20 +33,11 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -55,21 +46,30 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:59:52 GMT"
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:44:58 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Content-Length": [
+                        "192"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ],
-                    "Content-Length": [
-                        "191"
                     ]
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"fedf1c4197597d965253ec78de9d76fd983c4188-98\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"fa78d4ccb00acce34b750ba034c0db8b47feaa86-196\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
@@ -111,17 +111,8 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Connection": [
-                        "close"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -130,21 +121,30 @@
                     "Server": [
                         "Apache"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Date": [
-                        "Thu, 08 May 2025 20:59:55 GMT"
+                        "Fri, 16 May 2025 03:45:02 GMT"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Content-Length": [
                         "140"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ]
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"64b8da7f-2c4f-11f0-8791-3ffd91180d2f\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"25853856-3208-11f0-90f5-4d9e837481e0\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
                 }
             }
         }

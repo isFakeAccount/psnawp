@@ -33,20 +33,11 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
@@ -55,17 +46,26 @@
                     "Server": [
                         "Apache"
                     ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Date": [
-                        "Thu, 08 May 2025 20:59:06 GMT"
+                        "Fri, 16 May 2025 03:44:13 GMT"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Content-Length": [
                         "245"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ]
                 },
                 "body": {

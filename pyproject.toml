@@ -13,7 +13,6 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "attrs (>=25.1.0,<26.0.0)",
     "pycountry (>=24.6.1,<25.0.0)",
     "requests (>=2.32.3,<3.0.0)",
     "typing-extensions (>=4.12.2,<5.0.0)",
@@ -113,6 +112,7 @@ ignore = [
     "D401",   # Allow docstring summaries that are not in imperative mood.
     "EM",     # Allow exception messages that do not follow specific formatting rules.
     "FBT",    # Allow functions to take boolean positional arguments.
+    "S311", # Allow use of Standard pseudo-random generators.
     "S603",   # Allow `subprocess` calls without enforcing `shell=False` (potential security risk).
     "T201",   # Allow usage of `print()` instead of enforcing logging.
     "TRY003", # Allow specifying long error messages inside the exception class instead of outside.

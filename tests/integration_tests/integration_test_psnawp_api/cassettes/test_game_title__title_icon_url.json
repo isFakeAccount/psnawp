@@ -4,189 +4,6 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr",
-                "body": null,
-                "headers": {
-                    "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Accept-Language": [
-                        "en-US,en;q=0.9"
-                    ],
-                    "Country": [
-                        "US"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ],
-                    "X-Requested-With": [
-                        "com.scee.psxandroid"
-                    ],
-                    "Sec-Fetch-Dest": [
-                        "document"
-                    ],
-                    "Sec-Fetch-Mode": [
-                        "navigate"
-                    ],
-                    "Sec-Fetch-Site": [
-                        "same-site"
-                    ],
-                    "Sec-Fetch-User": [
-                        "?1"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 302,
-                    "message": "Moved Temporarily"
-                },
-                "headers": {
-                    "Location": [
-                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.b8aUBX&cid=00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "Expires": [
-                        "0"
-                    ],
-                    "X-Frame-Options": [
-                        "DENY"
-                    ],
-                    "Date": [
-                        "Thu, 15 May 2025 04:25:55 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "0"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "X-XSS-Protection": [
-                        "1; mode=block"
-                    ],
-                    "Cache-Control": [
-                        "no-cache, no-store, max-age=0, must-revalidate"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "bd38457f0c0228ea97b316b524925116"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=31536000 ; includeSubDomains"
-                    ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-RequestId": [
-                        "bd38457f0c0228ea97b316b524925116"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ]
-                },
-                "body": {
-                    "string": ""
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "POST",
-                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
-                "body": "cid=00000000-0000-0000-0000-5b55307226dc&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
-                "headers": {
-                    "User-Agent": [
-                        "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Accept-Language": [
-                        "en-US,en;q=0.9"
-                    ],
-                    "Country": [
-                        "US"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "Content-Length": [
-                        "207"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
-                },
-                "headers": {
-                    "Date": [
-                        "Thu, 15 May 2025 04:25:58 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "3972"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "Content-Type": [
-                        "application/json;charset=UTF-8"
-                    ],
-                    "Cache-Control": [
-                        "no-store"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "e895cdf0012e404666cdb056dbf6adce"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-5b55307226dc"
-                    ],
-                    "X-RequestId": [
-                        "e895cdf0012e404666cdb056dbf6adce"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED"
-                },
-                "body": {
-                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:mobile.v2.core psn:clientapp\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "GET",
                 "uri": "https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=CUSA03041_00%2C",
                 "body": null,
                 "headers": {
@@ -216,11 +33,21 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Date": [
-                        "Thu, 15 May 2025 04:26:01 GMT"
+                        "Fri, 16 May 2025 03:26:40 GMT"
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Cache-Control": [
+                        "private"
                     ],
                     "Content-Length": [
                         "1025"
@@ -228,16 +55,6 @@
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Cache-Control": [
-                        "private"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "X-Content-Type-Options": [
                         "nosniff"
                     ]
@@ -279,29 +96,29 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Date": [
-                        "Thu, 15 May 2025 04:26:04 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
+                    "Server": [
+                        "AkamaiNetStorage"
                     ],
                     "Accept-Ranges": [
                         "bytes"
                     ],
-                    "content-length": [
-                        "1532"
+                    "Date": [
+                        "Fri, 16 May 2025 03:26:43 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "ETag": [
                         "\"e0cc1d32cd4f2b3c8d4f2ed35e1aa528:1543328653\""
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "content-length": [
+                        "1532"
                     ],
                     "Last-Modified": [
                         "Tue, 27 Nov 2018 12:19:04 GMT"
                     ],
-                    "Server": [
-                        "AkamaiNetStorage"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Vary": [
                         "Accept-Encoding"

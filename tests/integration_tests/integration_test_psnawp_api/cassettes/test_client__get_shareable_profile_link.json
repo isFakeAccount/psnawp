@@ -33,32 +33,32 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-CorrelationId": [
-                        "50e5a79e-ebf6-45b4-b274-fa7261322026"
+                    "X-Psn-Request-Id": [
+                        "bf07296a-cdf1-454b-af20-b27dd99a0186"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "bf07296a-cdf1-454b-af20-b27dd99a0186"
+                    ],
+                    "X-RequestId": [
+                        "bf07296a-cdf1-454b-af20-b27dd99a0186"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "X-RequestId": [
-                        "50e5a79e-ebf6-45b4-b274-fa7261322026"
+                    "Content-Length": [
+                        "35"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:27:15 GMT"
+                    ],
+                    "X-CorrelationId": [
+                        "bf07296a-cdf1-454b-af20-b27dd99a0186"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "X-Psn-Correlation-Id": [
-                        "50e5a79e-ebf6-45b4-b274-fa7261322026"
-                    ],
                     "Server": [
                         "nginx"
-                    ],
-                    "Date": [
-                        "Thu, 08 May 2025 20:56:58 GMT"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "50e5a79e-ebf6-45b4-b274-fa7261322026"
-                    ],
-                    "Content-Length": [
-                        "35"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -99,17 +99,36 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Expires": [
-                        "Thu, 08 May 2025 20:57:01 GMT"
+                    "X-Psn-Request-Id": [
+                        "c910cad8-9e64-1031-bf38-127ff83f5a78"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Set-Cookie": "REDACTED",
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "c910cad8-9e64-1031-bf37-127ff83f5a78"
                     ],
                     "Access-Control-Max-Age": [
                         "3600"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
+                    ],
+                    "Content-Length": [
+                        "614"
+                    ],
+                    "Expires": [
+                        "Fri, 16 May 2025 03:27:18 GMT"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Date": [
+                        "Fri, 16 May 2025 03:27:18 GMT"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -117,37 +136,18 @@
                     "Cache-Control": [
                         "max-age=0, no-cache, no-store"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "73892f80-9df0-1031-925a-43136d84c188"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization,Accept-Language,Accept-Encoding,Accept-Charset,Cache-Control,Content-Type,X-Psn-Np-Service-Label,X-Psn-Np-Title-Token,User-Agent,X-Psn-Origin-Client-Ip,X-Psn-Np-Title-Id,X-Psn-Sdk-Ver,X-Psn-App-Ver,X-Psn-Trace-Id,X-Psn-Span-Id,X-Psn-Sampled,X-Psn-Correlation-Id,X-Psn-Request-Id,X-Psn-Console-Token,X-Np-Title-Token,X-Np-Console-Token,Origin,X-Psn-Platform"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Thu, 08 May 2025 20:57:01 GMT"
-                    ],
                     "X-Content-Type-Options": [
                         "nosniff"
                     ],
                     "Access-Control-Allow-Methods": [
                         "OPTIONS,GET,PUT,POST,PATCH,DELETE,HEAD"
                     ],
-                    "Pragma": [
-                        "no-cache"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "73892f80-9df0-1031-925b-43136d84c188"
-                    ],
-                    "Content-Length": [
-                        "614"
+                    "Content-Type": [
+                        "application/json"
                     ]
                 },
                 "body": {
-                    "string": "{\"shareUrl\": \"https://profile.playstation.com/VaultTec-Co\", \"shareImageUrl\": \"https://d18lxmvkmz0olj.cloudfront.net/profile-VaultTec-Co?Expires=1747342621&Signature=TjBrQkuTz275TzwbqnpExDybwXePfWL9U-0NN2NapIoqhHeUN-1Woy~V1AejUyvhhxf6hwNm4Pa5WgnGZ2p4miu1GSASDAV36krErIKKoQ91EXIcp~TYHQLuAAobIXuKS57-AYFhpPeEaVpZEWJ2afETxEaDHzAYl~FjOvSOT31AJTvV6TtO8x7ezNyZGpEp5SIvpumpcHNZVL6QM4klXjSLoHwS-vI7E5aIaxlsVzMJUbbTlMquDjgXwKttpsQn8UKhTVqXoNtdQThXRunaTdRu0eXLY3b5jRidsmhl-87nNJ2WlNls3lkB1b0vXG11bIrK5ziwREl-5nqicEmhdQ__&Key-Pair-Id=K2SHBT8E7OQNQU\", \"shareImageUrlDestination\": \"https://profile.playstation.com/share/VaultTec-Co\"}"
+                    "string": "{\"shareUrl\": \"https://profile.playstation.com/VaultTec-Co\", \"shareImageUrl\": \"https://d18lxmvkmz0olj.cloudfront.net/profile-VaultTec-Co?Expires=1747970838&Signature=BXHqMQtipdTozIsHzrc0t6-Gns363fOAPo7smiRmdDlD0tjKw67i98jzJeb9zVtxWXSr-zO1grozCrs0OVFXURhoCQEcNYanW1GsHB5lDVfiPssQzP2y4frRWphAyk7Zfs9hxGADR0Jz5iYjWVKNK61tOb3WHwtQ4B1dQ4e6DD8AU-MJXU0zVosabasBOHTeQWOz8385YtCC2~tjRIf7gMhroWfRWFclyA-XaXH-qIf2lqTknx4ngAoTE1lKmu80OhaevHo0AiCw5WYm3Bwi63nItwVVTEhUdDuPiRnLODbAFDqzoaTzzokrS9q6SGNQnlnduQ9Ua9DonLoyU36nfw__&Key-Pair-Id=K2SHBT8E7OQNQU\", \"shareImageUrlDestination\": \"https://profile.playstation.com/share/VaultTec-Co\"}"
                 }
             }
         }
