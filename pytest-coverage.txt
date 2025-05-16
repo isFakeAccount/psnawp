@@ -1,5 +1,5 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.12, pytest-8.3.5, pluggy-1.5.0
+platform linux -- Python 3.11.12, pytest-8.3.5, pluggy-1.6.0
 rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
@@ -51,12 +51,12 @@ src/psnawp_api/models/trophies/trophy_summary.py          20      0   100%
 src/psnawp_api/models/trophies/trophy_titles.py           70      0   100%
 src/psnawp_api/models/trophies/trophy_utils.py             6      0   100%
 src/psnawp_api/models/user.py                             87      0   100%
-src/psnawp_api/psnawp.py                                  41      0   100%
+src/psnawp_api/psnawp.py                                  43      0   100%
 src/psnawp_api/utils/__init__.py                           3      0   100%
 src/psnawp_api/utils/endpoints.py                          3      0   100%
 src/psnawp_api/utils/misc.py                              42      0   100%
 --------------------------------------------------------------------------
-TOTAL                                                   1204    104    91%
+TOTAL                                                   1206    104    91%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-======================== 95 passed in 147.68s (0:02:27) ========================
+======================== 95 passed in 144.55s (0:02:24) ========================
