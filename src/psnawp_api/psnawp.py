@@ -26,7 +26,8 @@ if TYPE_CHECKING:
     from collections.abc import Generator, Iterable
 
     from psnawp_api.core import RequestBuilderHeaders
-    from psnawp_api.models.search.search_datatypes import SearchResult
+    from psnawp_api.models.search.games_search_datatypes import SearchResult
+    from psnawp_api.models.search.users_search import UniversalUsersSearchIterator
 
 
 class PSNAWP:
@@ -274,11 +275,11 @@ class PSNAWP:
         limit: int | None = None,
         offset: int = 0,
         page_size: int = 20,
-    ) -> Generator[SearchResult, None, None]:
-        """Creates a new search object based on search_domain that can be used to search for games, games-addons, and players.
+    ) -> Generator[SearchResult, None, None] | UniversalUsersSearchIterator:
+        """Creates a new search object based on search_domain that can be used to search for games, games-addons, and users.
 
         :param search_query: The search query string, used to specify the terms or keywords to search for.
-        :param search_domain: Specifies the domain to search within, such as games, add-ons, or players.
+        :param search_domain: Specifies the domain to search within, such as games, add-ons, or users.
         :param limit: Total numbers of items to receive, None means no limit.
         :param page_size: The number of items to receive per api request.
         :param offset: Specifies the offset for paginator.
@@ -291,6 +292,15 @@ class PSNAWP:
             offset=offset,
             page_size=page_size,
         )
+
+        if search_domain == SearchDomain.USERS:
+            pg_args.page_size = min(pg_args.page_size, 15)
+            return UniversalSearch(
+                authenticator=self.authenticator,
+                pagination_args=pg_args,
+                search_query=search_query,
+            ).search_user()
+
         return UniversalSearch(
             authenticator=self.authenticator,
             pagination_args=pg_args,

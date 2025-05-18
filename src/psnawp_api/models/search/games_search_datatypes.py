@@ -2,9 +2,18 @@
 
 from __future__ import annotations
 
+from enum import IntEnum
 from typing import Any
 
 from typing_extensions import NotRequired, TypedDict
+
+
+class SearchDomain(IntEnum):
+    """Enum representing the different domains for search results."""
+
+    FULL_GAMES = 0
+    ADD_ONS = 1
+    USERS = 2
 
 
 class Highlight(TypedDict):

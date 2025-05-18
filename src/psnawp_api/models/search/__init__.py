@@ -11,7 +11,8 @@ Modules in this package include:
 
 """
 
-from psnawp_api.models.search.universal_search import SearchDomain, UniversalSearch
+from psnawp_api.models.search.games_search_datatypes import SearchDomain
+from psnawp_api.models.search.universal_search import UniversalSearch
 
 __all__ = [
     "SearchDomain",
