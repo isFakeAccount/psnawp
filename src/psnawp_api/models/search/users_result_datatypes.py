@@ -1,29 +1,79 @@
 """Contains datatypes for users search result endpoint."""
 
+from __future__ import annotations
+
 from typing import Literal, TypedDict
 
 
-class QueryFrequencyDict(TypedDict):
-    """Represents debounce timing for query filtering and searching."""
+class UserRootResponse(TypedDict):
+    """Top-level wrapper for a user search GraphQL response."""
+
+    data: UserContextContainer
+
+
+class UserContextContainer(TypedDict):
+    """Holds the universal context search portion of the response."""
+
+    universalContextSearch: UserUniversalContextSearchResponse
+
+
+class UserDomainContainer(TypedDict):
+    """Wraps the `universalDomainSearch` payload, which may either carry only cursors or full result lists."""
+
+    universalDomainSearch: UserUniversalDomainSearchResponse
+
+
+class UserUniversalContextSearchResponse(TypedDict):
+    """Aggregated search results across user-related domains."""
+
+    __typename: Literal["UniversalContextSearchResponse"]
+    queryFrequency: UserQueryFrequency
+    results: list[UserUniversalDomainSearchResponse]
+
+
+class UserQueryFrequency(TypedDict):
+    """Debounce timing settings for search queries."""
 
     __typename: Literal["QueryFrequency"]
     filterDebounceMs: int
     searchDebounceMs: int
 
 
-class PlayerHighlightDict(TypedDict):
-    """Highlight snippets for various player name fields."""
+class UserUniversalDomainSearchResponse(TypedDict):
+    """Search results scoped to a single user-related domain."""
+
+    __typename: Literal["UniversalDomainSearchResponse"]
+    domain: str
+    domainTitle: str
+    next: str
+    searchResults: list[UserSearchResultItem]
+    totalResultCount: int
+    zeroState: bool
+
+
+class UserSearchResultItem(TypedDict):
+    """An individual search result entry for a user query."""
+
+    __typename: Literal["SearchResultItem"]
+    highlight: PlayerHighlight
+    id: str
+    result: Player
+    resultOriginFlag: list[str] | None
+
+
+class PlayerHighlight(TypedDict):
+    """Highlighting metadata for player name and ID fields."""
 
     __typename: Literal["PlayerHighlight"]
-    firstName: list[str | None]
-    lastName: list[str | None]
+    firstName: list[str]
+    lastName: list[str]
     middleName: str | None
     onlineId: list[str]
     verifiedUserName: str | None
 
 
-class PlayerDict(TypedDict):
-    """Detailed player information returned in a search result."""
+class Player(TypedDict):
+    """Represents a player's public profile information."""
 
     __typename: Literal["Player"]
     accountId: str
@@ -42,37 +92,42 @@ class PlayerDict(TypedDict):
     relationshipState: str | None
 
 
-class SearchResultItemDict(TypedDict):
-    """One item in the array of search results."""
+def default_user_root_response() -> UserRootResponse:
+    """Returns a fresh UserRootResponse dict.
 
-    __typename: Literal["SearchResultItem"]
-    highlight: PlayerHighlightDict
-    id: str
-    result: PlayerDict
-    resultOriginFlag: str | None
+    - all Literal __typename fields are set to their exact value
+    - all str fields == ""
+    - all int fields == 0 (for queryFrequency)
+    - all bool fields == False
+    - all list fields == []
+    - contains two placeholder UserUniversalDomainSearchResponse entries
 
+    """
 
-class UniversalDomainSearchResponseDict(TypedDict):
-    """Response for a single search domain (e.g. users, games)."""
+    def _default_domain() -> UserUniversalDomainSearchResponse:
+        """Helper: empty placeholder for a single user-domain search response."""
+        return {
+            "__typename": "UniversalDomainSearchResponse",
+            "domain": "",
+            "domainTitle": "",
+            "next": "",
+            "searchResults": [],
+            "totalResultCount": 0,
+            "zeroState": False,
+        }
 
-    __typename: Literal["UniversalDomainSearchResponse"]
-    domain: str
-    domainTitle: str
-    next: str
-    searchResults: list[SearchResultItemDict]
-    totalResultCount: int
-    zeroState: bool
-
-
-class UniversalContextSearchDict(TypedDict):
-    """Top-level search response container."""
-
-    __typename: Literal["UniversalContextSearchResponse"]
-    queryFrequency: QueryFrequencyDict
-    results: list[UniversalDomainSearchResponseDict]
-
-
-class UsersSearchResults(TypedDict):
-    """Holds the `universalContextSearch` field."""
-
-    universalContextSearch: UniversalContextSearchDict
+    return {
+        "data": {
+            "universalContextSearch": {
+                "__typename": "UniversalContextSearchResponse",
+                "queryFrequency": {
+                    "__typename": "QueryFrequency",
+                    "filterDebounceMs": 0,
+                    "searchDebounceMs": 0,
+                },
+                "results": [
+                    _default_domain(),
+                ],
+            },
+        }
+    }

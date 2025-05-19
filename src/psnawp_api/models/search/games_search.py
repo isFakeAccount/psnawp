@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Any
 from typing_extensions import Self
 
 from psnawp_api.models.listing import PaginationIterator
-from psnawp_api.models.search.games_search_datatypes import SearchDomain, SearchResult
+from psnawp_api.models.search.games_search_datatypes import GameSearchResultItem, SearchDomain, default_game_root_response
 from psnawp_api.utils import BASE_PATH
 
 if TYPE_CHECKING:
@@ -17,7 +17,12 @@ if TYPE_CHECKING:
 
     from psnawp_api.core import Authenticator
     from psnawp_api.models.listing import PaginationArguments
-    from psnawp_api.models.search.games_search_datatypes import GameSearchResult, UniversalContextSearch, UniversalDomainSearch
+    from psnawp_api.models.search.games_search_datatypes import (
+        GameContextContainer,
+        GameDomainContainer,
+        GameRootResponse,
+        GameUniversalContextSearchResponse,
+    )
 
 SEARCH_COMMON_HEADER: dict[str, str] = {
     "accept": "application/json",
@@ -27,7 +32,7 @@ SEARCH_COMMON_HEADER: dict[str, str] = {
 }
 
 
-class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
+class UniversalDomainSearchIterator(PaginationIterator[GameSearchResultItem]):
     """Iterator for paginating over universal search results within a specific domain.
 
     This iterator handles the pagination logic for querying the PlayStation Network's universal search API, which can be
@@ -82,7 +87,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
         pagination_args: PaginationArguments,
         search_query: str,
         search_domain: SearchDomain,
-    ) -> Generator[SearchResult, None, None]:
+    ) -> Generator[GameSearchResultItem, None, None]:
         """Initiates a game search and yields results based on the specified search domain.
 
         This method uses two endpoints: - The first retrieves a mix of full games and add-ons. - The second iterates
@@ -93,7 +98,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
         :param search_query: The query string to search for content.
         :param search_domain: The content domain to search within (e.g., full games or add-ons).
 
-        :yield: Yields individual :class:`SearchResult` objects until the limit is reached. If more results are
+        :yield: Yields individual :class:`GameSearchResultItem` objects until the limit is reached. If more results are
             available, continues yielding from the appropriate paginated endpoint.
 
         """
@@ -122,14 +127,21 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
             params=params,
         ).json()
 
-        data: GameSearchResult = response.get("data", {"universalDomainSearch": {"results": []}})
-        universal_search: UniversalContextSearch | dict[str, list[Any]] = data.get(
-            "universalContextSearch",
-            {"results": []},
-        )
+        default_value: GameRootResponse = default_game_root_response()
 
-        search_results_container = universal_search.get("results", [])[search_domain]
-        search_results = search_results_container.get("searchResults", [])
+        data: GameContextContainer = response.get("data", default_value["data"])
+        universal_search: GameUniversalContextSearchResponse = data.get(
+            "universalContextSearch",
+            default_value["data"]["universalContextSearch"],
+        )
+        search_results_container = universal_search.get(
+            "results",
+            default_value["data"]["universalContextSearch"]["results"],
+        )[search_domain]
+        search_results = search_results_container.get(
+            "searchResults",
+            default_value["data"]["universalContextSearch"]["results"][search_domain]["searchResults"],
+        )
 
         for search_result in search_results:
             if pagination_args.is_limit_reached():
@@ -168,7 +180,7 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
             next_cursor=next_cursor,
         )
 
-    def fetch_next_page(self) -> Generator[SearchResult, None, None]:
+    def fetch_next_page(self) -> Generator[GameSearchResultItem, None, None]:
         """Fetches the next page of Search Result objects from the API.
 
         :yield: A generator yielding Result objects.
@@ -201,22 +213,23 @@ class UniversalDomainSearchIterator(PaginationIterator[SearchResult]):
             params=params,
         ).json()
 
-        default_instance: UniversalDomainSearch = {
-            "__typename": "",
-            "domain": "",
-            "domainTitle": "",
-            "next": "",
-            "searchResults": [],
-            "totalResultCount": 0,
-            "zeroState": False,
+        default_value: GameRootResponse = default_game_root_response()
+        default_game_domain_container: GameDomainContainer = {
+            "universalDomainSearch": default_value["data"]["universalContextSearch"]["results"][self.search_domain],
         }
 
-        data: GameSearchResult = response.get("data", {"universalDomainSearch": default_instance})
-        universal_search = data.get("universalDomainSearch", default_instance)
+        game_domain_container: GameDomainContainer = response.get("data", default_game_domain_container)
+        game_universal_search_domain = game_domain_container.get(
+            "universalDomainSearch", default_value["data"]["universalContextSearch"]["results"][self.search_domain]
+        )
 
-        search_results = universal_search["searchResults"]
-        self._total_item_count = universal_search.get("totalResultCount", 0)
-        self.next_cursor = universal_search.get("next", "")
+        search_results = game_universal_search_domain.get(
+            "searchResults",
+            default_value["data"]["universalContextSearch"]["results"][self.search_domain]["searchResults"],
+        )
+
+        self._total_item_count = game_universal_search_domain.get("totalResultCount", 0)
+        self.next_cursor = game_universal_search_domain.get("next", "")
 
         for search_result in search_results:
             if self._pagination_args.is_limit_reached():

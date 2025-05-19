@@ -12,7 +12,8 @@ if TYPE_CHECKING:
 
     from psnawp_api.core import Authenticator
     from psnawp_api.models.listing import PaginationArguments
-    from psnawp_api.models.search.games_search_datatypes import SearchDomain, SearchResult
+    from psnawp_api.models.search.games_search_datatypes import GameSearchResultItem, SearchDomain
+    from psnawp_api.models.search.users_result_datatypes import UserSearchResultItem
 
 
 class UniversalSearch:
@@ -50,7 +51,7 @@ class UniversalSearch:
         self.pagination_args = pagination_args
         self.search_query = search_query
 
-    def search_game(self, search_domain: SearchDomain) -> Generator[SearchResult, None, None]:
+    def search_game(self, search_domain: SearchDomain) -> Generator[GameSearchResultItem, None, None]:
         """Searches games/game-addons on the Playstation Network.
 
         :param search_domain: The specific domain within which the search is performed (e.g., games, add-ons, users).
@@ -63,9 +64,9 @@ class UniversalSearch:
             search_domain=search_domain,
         )
 
-    def search_user(self) -> UniversalUsersSearchIterator:
+    def search_user(self) -> Generator[UserSearchResultItem, None, None]:
         """Searches users on the Playstation Network."""
-        return UniversalUsersSearchIterator.from_endpoint(
+        return UniversalUsersSearchIterator.fetch_results(
             authenticator=self.authenticator,
             pagination_args=self.pagination_args,
             search_query=self.search_query,

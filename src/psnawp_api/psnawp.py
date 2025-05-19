@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from random import choice
-from typing import TYPE_CHECKING, Any, overload
+from typing import TYPE_CHECKING, Any, Literal, overload
 
 from pyrate_limiter import Duration, Rate
 
@@ -14,20 +14,18 @@ from psnawp_api.core import (
 from psnawp_api.models import (
     Client,
     GameTitle,
-    Group,
-    SearchDomain,
-    UniversalSearch,
     User,
 )
+from psnawp_api.models.group import Group
 from psnawp_api.models.listing import PaginationArguments
+from psnawp_api.models.search import SearchDomain, UniversalSearch
 from psnawp_api.models.trophies import PlatformType
 
 if TYPE_CHECKING:
     from collections.abc import Generator, Iterable
 
     from psnawp_api.core import RequestBuilderHeaders
-    from psnawp_api.models.search.games_search_datatypes import SearchResult
-    from psnawp_api.models.search.users_search import UniversalUsersSearchIterator
+    from psnawp_api.models.search import GameSearchResultItem, UserSearchResultItem
 
 
 class PSNAWP:
@@ -268,6 +266,33 @@ class PSNAWP:
             return Group.create_from_users(self.authenticator, users=users)
         raise PSNAWPIllegalArgumentError("You provide at least Group Id or Users")
 
+    @overload
+    def search(
+        self,
+        search_query: str,
+        search_domain: Literal[SearchDomain.USERS],
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 20,
+    ) -> Generator[UserSearchResultItem, None, None]: ...
+    @overload
+    def search(
+        self,
+        search_query: str,
+        search_domain: Literal[SearchDomain.FULL_GAMES],
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 20,
+    ) -> Generator[GameSearchResultItem, None, None]: ...
+    @overload
+    def search(
+        self,
+        search_query: str,
+        search_domain: Literal[SearchDomain.ADD_ONS],
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 20,
+    ) -> Generator[GameSearchResultItem, None, None]: ...
     def search(
         self,
         search_query: str,
@@ -275,7 +300,7 @@ class PSNAWP:
         limit: int | None = None,
         offset: int = 0,
         page_size: int = 20,
-    ) -> Generator[SearchResult, None, None] | UniversalUsersSearchIterator:
+    ) -> Generator[GameSearchResultItem, None, None] | Generator[UserSearchResultItem, None, None]:
         """Creates a new search object based on search_domain that can be used to search for games, games-addons, and users.
 
         :param search_query: The search query string, used to specify the terms or keywords to search for.
@@ -294,7 +319,6 @@ class PSNAWP:
         )
 
         if search_domain == SearchDomain.USERS:
-            pg_args.page_size = min(pg_args.page_size, 15)
             return UniversalSearch(
                 authenticator=self.authenticator,
                 pagination_args=pg_args,

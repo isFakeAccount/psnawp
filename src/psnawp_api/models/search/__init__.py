@@ -11,10 +11,13 @@ Modules in this package include:
 
 """
 
-from psnawp_api.models.search.games_search_datatypes import SearchDomain
+from psnawp_api.models.search.games_search_datatypes import GameSearchResultItem, SearchDomain
 from psnawp_api.models.search.universal_search import UniversalSearch
+from psnawp_api.models.search.users_result_datatypes import UserSearchResultItem
 
 __all__ = [
+    "GameSearchResultItem",
     "SearchDomain",
     "UniversalSearch",
+    "UserSearchResultItem",
 ]
