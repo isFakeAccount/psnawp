@@ -49,7 +49,7 @@ class PlatformType(Enum):
 class TrophyRarity(Enum):
     """Represents the rarity of a PlayStation trophy.
 
-    The rarity of a trophy is determined by how many players have earned it. Lower values indicate rarer trophies.
+    The rarity of a trophy is determined by how many users have earned it. Lower values indicate rarer trophies.
 
     """
 

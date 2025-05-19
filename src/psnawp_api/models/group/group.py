@@ -89,7 +89,7 @@ class Group:
             return cls(authenticator, response["groupId"])
         except PSNAWPForbiddenError as forbidden:
             raise PSNAWPForbiddenError(
-                "Can't create group because of the players' privacy settings.",
+                "Can't create group because of the users' privacy settings.",
             ) from forbidden
 
     def change_name(self, group_name: str) -> None:
@@ -242,7 +242,7 @@ class Group:
             ).json()
         except PSNAWPForbiddenError as forbidden:
             raise PSNAWPForbiddenError(
-                "Can't add users to group because of the players' privacy settings.",
+                "Can't add users to group because of the users' privacy settings.",
             ) from forbidden
 
     def kick_member(self, user: User) -> None:

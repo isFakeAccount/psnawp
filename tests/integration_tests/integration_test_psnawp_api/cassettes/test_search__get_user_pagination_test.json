@@ -1,0 +1,867 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "X-Requested-With": [
+                        "com.scee.psxandroid"
+                    ],
+                    "Sec-Fetch-Dest": [
+                        "document"
+                    ],
+                    "Sec-Fetch-Mode": [
+                        "navigate"
+                    ],
+                    "Sec-Fetch-Site": [
+                        "same-site"
+                    ],
+                    "Sec-Fetch-User": [
+                        "?1"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 302,
+                    "message": "Moved Temporarily"
+                },
+                "headers": {
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-RequestId": [
+                        "dc849534ab3c4021f2e74c1f82a3c124"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31536000 ; includeSubDomains"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:16 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "Location": [
+                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.Icq1iF&cid=00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "dc849534ab3c4021f2e74c1f82a3c124"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "Content-Length": [
+                        "0"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "X-Frame-Options": [
+                        "DENY"
+                    ]
+                },
+                "body": {
+                    "string": ""
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
+                "body": "cid=00000000-0000-0000-0000-87192c27e99a&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
+                "headers": {
+                    "User-Agent": [
+                        "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "Content-Length": [
+                        "207"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "X-Psn-Correlation-Id": [
+                        "00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "X-RequestId": [
+                        "638dcba886e7e274ee63b07e28839b95"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:19 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Cache-Control": [
+                        "no-store"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Psn-Request-Id": [
+                        "638dcba886e7e274ee63b07e28839b95"
+                    ],
+                    "Content-Length": [
+                        "3972"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=UTF-8"
+                    ],
+                    "X-CorrelationId": [
+                        "00000000-0000-0000-0000-87192c27e99a"
+                    ],
+                    "Set-Cookie": "REDACTED"
+                },
+                "body": {
+                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:mobile.v2.core psn:clientapp\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%22ac5fb2b82c4d086ca0d272fba34418ab327a7762dd2cd620e63f175bbc5aff10%22%7D%7D&operationName=metGetContextSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchContext%22%3A+%22MobileUniversalSearchSocial%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:23 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:23 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "12274"
+                    ],
+                    "ETag": [
+                        "W/\"2ff3-+4pV9MC9XvaTLDRELnbXImK+/vk\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalContextSearch\": {\"__typename\": \"UniversalContextSearchResponse\", \"queryFrequency\": {\"__typename\": \"QueryFrequency\", \"filterDebounceMs\": 1000, \"searchDebounceMs\": 1000}, \"results\": [{\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6MTV9\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"ps\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkdTAyamxKWFd6Uk1GSWdaTnljdm84MQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7645284189554078108\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J2085_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkdTAyamxKWFd6Uk1GSWdaTnljdm84MQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestps\", \"onlineIdHighlighted\": [\"\", \"testest\", \"ps\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"t1\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkdWxTbkFFNmQwMXRYSTllOEhKRmc2Lw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3185113784490645431\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkdWxTbkFFNmQwMXRYSTllOEhKRmc2Lw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestt1\", \"onlineIdHighlighted\": [\"\", \"testest\", \"t1\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"__\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkWkZIQlA3anZLVW9rQ0pQRk5wVlp0MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"303346091440502073\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkWkZIQlA3anZLVW9rQ0pQRk5wVlp0MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest__\", \"onlineIdHighlighted\": [\"\", \"testest\", \"__\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"28\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZGNTVGRuWFVNaVVqWGdnR3Jnb2lvMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1985172375061806510\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZGNTVGRuWFVNaVVqWGdnR3Jnb2lvMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest28\", \"onlineIdHighlighted\": [\"\", \"testest\", \"28\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Testest\", \"09\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRS9TNmVLblhvUHl2RmE0VU5hRlBJMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6694253728595025141\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304004_6D1192F0D43D0A6AF405_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRS9TNmVLblhvUHl2RmE0VU5hRlBJMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testest09\", \"onlineIdHighlighted\": [\"\", \"Testest\", \"09\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"4\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRzFpdkxaRUgyVHhYelNpcTBhejFwLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7356067540413726800\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRzFpdkxaRUgyVHhYelNpcTBhejFwLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest4\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"4\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestestest\", \"12\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMjdvWWdTOE0yUnNhTnVvVFF4elpmLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1226009529994958444\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP40731301003_CFDD3A1104FCB4D40915_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMjdvWWdTOE0yUnNhTnVvVFF4elpmLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"testestestest12\", \"onlineIdHighlighted\": [\"\", \"testestestest\", \"12\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TestTestTest\", \"t\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkejNyY2hMTjZOLjM5VWpLaGs5dWRZMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2922172863219065293\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkejNyY2hMTjZOLjM5VWpLaGs5dWRZMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TestTestTestt\", \"onlineIdHighlighted\": [\"\", \"TestTestTest\", \"t\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"3\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkbHVheDlMcDMuajZGTjZyNTFBYlp1Lg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1349361379108291238\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_E/E0040.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkbHVheDlMcDMuajZGTjZyNTFBYlp1Lg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest3test\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"3\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestest\", \"999\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkb0sudXZ5aDBPOGhtWU5paTFPanhFLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3511106386416925845\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkb0sudXZ5aDBPOGhtWU5paTFPanhFLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestest999\", \"onlineIdHighlighted\": [\"\", \"testestest\", \"999\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testTESTtest\", \"_\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZy9sUDIxTS9oR2QxSDJ3SEVVVi9uMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7694466488333764654\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZy9sUDIxTS9oR2QxSDJ3SEVVVi9uMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testTESTtest_\", \"onlineIdHighlighted\": [\"\", \"testTESTtest\", \"_\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"82\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVFI2N3VhVllSTkg4Y1RxbU1ZbHRNMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3029556024355975098\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVFI2N3VhVllSTkg4Y1RxbU1ZbHRNMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest82\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"82\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"187\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZDFFZlRBa1BSdXN1c2cvSmsyLjBNMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7918748595031841360\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZDFFZlRBa1BSdXN1c2cvSmsyLjBNMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest187\", \"onlineIdHighlighted\": [\"\", \"testest\", \"187\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"91\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRlZwRnF3TkFPNEwuTEdyQmJzTG1SLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5612426741572423483\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J2045_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRlZwRnF3TkFPNEwuTEdyQmJzTG1SLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test91test\", \"onlineIdHighlighted\": [\"\", \"test\", \"91\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"033\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZWhnaTVLN0lkNjAzdDdnMHUuTnN0MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7100904717142557539\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZWhnaTVLN0lkNjAzdDdnMHUuTnN0MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest033\", \"onlineIdHighlighted\": [\"\", \"testest\", \"033\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}]}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+15%2C+%22nextCursor%22%3A+%22eyJTTyI6MTV9%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:26 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:26 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "16345"
+                    ],
+                    "ETag": [
+                        "W/\"3fda-QIYKhfKfEcdaFZ/bO1kzdR8a/6o\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6MzV9\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestestest\", \"ess\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSmVyUWFVOGhtMWZHYTNmR1N2cUF0Lw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6386058880260431135\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSmVyUWFVOGhtMWZHYTNmR1N2cUF0Lw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestestestess\", \"onlineIdHighlighted\": [\"\", \"testestestest\", \"ess\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"TEST\", \"by\", \"TEST\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZllFb0J4bjJRQmxiS0dHcjBVc29DMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4124188513700620135\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0019.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZllFb0J4bjJRQmxiS0dHcjBVc29DMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"TESTbyTEST\", \"onlineIdHighlighted\": [\"\", \"TEST\", \"by\", \"TEST\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"-\", \"test\", \"7\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNGllakwyYWMvY0QyT3FWT0t5MU9DLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1622556944522141326\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP40731301010_2E050586F7A7ABB33274_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNGllakwyYWMvY0QyT3FWT0t5MU9DLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test-test7\", \"onlineIdHighlighted\": [\"\", \"test\", \"-\", \"test\", \"7\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"ov\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkM3hja0pJRkpJcno2STRVcVg2aW1WLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6798742239850125999\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP43611208W02_2DE126102C006D2096DC_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkM3hja0pJRkpJcno2STRVcVg2aW1WLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtestov\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"ov\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"2\", \"test\", \"1\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSkRWSXpwQXBSM21TdW9aZExsNGFQMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6646944007219633558\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSkRWSXpwQXBSM21TdW9aZExsNGFQMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test2test1\", \"onlineIdHighlighted\": [\"\", \"test\", \"2\", \"test\", \"1\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"ert\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMVRhMnU0VkRqQkROWG9sUFBsL0hzMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1046075551520039118\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2114_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMVRhMnU0VkRqQkROWG9sUFBsL0hzMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestert\", \"onlineIdHighlighted\": [\"\", \"testest\", \"ert\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\", \" \", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"091\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVWFyak5PdHFYRVRPeFBueGpTOHFsMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4304592036800949397\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png\", \"displayName\": \"test test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVWFyak5PdHFYRVRPeFBueGpTOHFsMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test test\", \"middleName\": null, \"onlineId\": \"testtest091\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"091\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"t2\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkUlMwRm1qNDR2U3NFL2FPbTFrZ1I5Lw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7284027929824221690\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkUlMwRm1qNDR2U3NFL2FPbTFrZ1I5Lw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtestt2\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"t2\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"uk\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkam1sZ2NZaFZadUZuZGc2WDEwQ3FlLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1906265007414906985\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkam1sZ2NZaFZadUZuZGc2WDEwQ3FlLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testuktest\", \"onlineIdHighlighted\": [\"\", \"test\", \"uk\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\", \"i\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"i\", \"testtest\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkV3U1ajNSZVdzaWloTm9ZdmNOQ0RVLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6953196359991950902\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Testi Test\", \"displayNameHighlighted\": [\"\", \"Test\", \"i\", \" \", \"\", \"Test\"], \"firstName\": \"Testi\", \"id\": \"JGFwcjEkYXNka2ZqYWwkV3U1ajNSZVdzaWloTm9ZdmNOQ0RVLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testitesttest\", \"onlineIdHighlighted\": [\"\", \"Test\", \"i\", \"testtest\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\", \"y\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"T\", \"testTest\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVnlJUXRpMFpTYmFIalZNMnMxZThELg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1941551530568916809\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test testy\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\", \"y\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVnlJUXRpMFpTYmFIalZNMnMxZThELg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"testy\", \"middleName\": null, \"onlineId\": \"testTtestTest\", \"onlineIdHighlighted\": [\"\", \"test\", \"T\", \"testTest\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtesttest\", \"94\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkWm04MjIzZVJtVDh1Ulc5Vm9qdVRjMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2241639582330841074\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkWm04MjIzZVJtVDh1Ulc5Vm9qdVRjMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtesttest94\", \"onlineIdHighlighted\": [\"\", \"testtesttest\", \"94\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\", \"i\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"-\", \"Test\", \"i\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZVRLczBVbExTUVVlUlFTWjlrcWdZMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3889954594653485492\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/EP43321110007_5FEED32BFD118575442A_L.png\", \"displayName\": \"Test Testi\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\", \"i\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZVRLczBVbExTUVVlUlFTWjlrcWdZMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Testi\", \"middleName\": null, \"onlineId\": \"Test-Testi\", \"onlineIdHighlighted\": [\"\", \"Test\", \"-\", \"Test\", \"i\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Testtesttest\", \"23\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSVBsdzNsR04uc0E5Q0VUdHVBT2NtMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1845554260071808286\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSVBsdzNsR04uc0E5Q0VUdHVBT2NtMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testtesttest23\", \"onlineIdHighlighted\": [\"\", \"Testtesttest\", \"23\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"ov_\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQ1U0cFM3a1hRUWEueUpRdDVBdHYuLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8799645453922609375\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304009_9EEB5D072AAA95302926_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQ1U0cFM3a1hRUWEueUpRdDVBdHYuLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testov_test\", \"onlineIdHighlighted\": [\"\", \"test\", \"ov_\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Testtest\", \"006\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkdzV3dC9VU3ZOclBIdmllanc5RTZJLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4432452603895806478\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0001.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkdzV3dC9VU3ZOclBIdmllanc5RTZJLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testtest006\", \"onlineIdHighlighted\": [\"\", \"Testtest\", \"006\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"182\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTkRnVkR3Ui96dG1UcDd6TGZzek0uMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2004679382206281847\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/30009.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTkRnVkR3Ui96dG1UcDd6TGZzek0uMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest182\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"182\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"359\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQU9MZVVBbU5xT1lBT09rSWJBUUJXLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2580062599510417097\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQU9MZVVBbU5xT1lBT09rSWJBUUJXLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest359\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"359\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"338\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkc0I0amh3QnRzdjVFMlN4Z3lsQTQxMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"506899827005193130\", \"avatarUrl\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/JP9000/CUSA00601_00-AVATAR1510SAC000_E81C996AE660271A8D76_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkc0I0amh3QnRzdjVFMlN4Z3lsQTQxMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest338\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"338\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"526\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkUk9JLkJodTFFV3Via0d4M1MxblpjLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"230604316974453162\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304004_6D1192F0D43D0A6AF405_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkUk9JLkJodTFFV3Via0d4M1MxblpjLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest526\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"526\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+35%2C+%22nextCursor%22%3A+%22eyJTTyI6MzV9%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:29 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:29 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "16071"
+                    ],
+                    "ETag": [
+                        "W/\"3ec8-d1gX0HbVubULwwDzfmCO0EEs0DM\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6NTV9\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"8082\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMmkuZEUxeEdvdHZnWDlPdm0vb0RvMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6146422517588401230\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_E/E2106_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMmkuZEUxeEdvdHZnWDlPdm0vb0RvMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest8082\", \"onlineIdHighlighted\": [\"\", \"testest\", \"8082\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"83\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkamJaaUcxdFd0OUZ5ZlFWQmNySzVYMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3431109249536764431\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/I0018.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkamJaaUcxdFd0OUZ5ZlFWQmNySzVYMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test83\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"83\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"570\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwka0ZnYXlKcXJMQUc1WTE2RTRpcUNQMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4123666020573451575\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304004_6D1192F0D43D0A6AF405_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwka0ZnYXlKcXJMQUc1WTE2RTRpcUNQMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest570\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"570\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"880\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSGRlZS4wL0ZnQ0J1TUUuLkxuQVBFLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4738659816165192953\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSGRlZS4wL0ZnQ0J1TUUuLkxuQVBFLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest880\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"880\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"760\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkcXdHYkc2b3lyaGV4dk8uNXRyaGVwLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5980729719706321201\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_E/E0024.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkcXdHYkc2b3lyaGV4dk8uNXRyaGVwLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"Test760test\", \"onlineIdHighlighted\": [\"\", \"Test\", \"760\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"034\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkcDc1VHFLTlRySk1CTzVGWElHWTZPLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"390035140369278494\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkcDc1VHFLTlRySk1CTzVGWElHWTZPLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test034test\", \"onlineIdHighlighted\": [\"\", \"test\", \"034\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"460\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkb3RBcG90SU9ZcnpuUC9jOHp3cXBZMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5200226667655495409\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkb3RBcG90SU9ZcnpuUC9jOHp3cXBZMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest460\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"460\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"234\", \"Test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkOUxJak0uVHF1MWRlV3RLaWRvNjdVLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4490763441895203211\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/I0046.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkOUxJak0uVHF1MWRlV3RLaWRvNjdVLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test234Test\", \"onlineIdHighlighted\": [\"\", \"Test\", \"234\", \"Test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TestTest\", \"964\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkbHAyQmhGMmZ1V2I1VTBBVDBoSlZ3MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1867347468823759833\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkbHAyQmhGMmZ1V2I1VTBBVDBoSlZ3MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TestTest964\", \"onlineIdHighlighted\": [\"\", \"TestTest\", \"964\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"230\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkN1guWU9QV1VqdUYxWi5lS3RYNFliLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6082076298704940472\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkN1guWU9QV1VqdUYxWi5lS3RYNFliLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test230test\", \"onlineIdHighlighted\": [\"\", \"test\", \"230\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"_\", \"test\", \"17\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkd0lNa1BaLmRQN3hibG5JbGdxZEJVLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8626792556805794983\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_E/E2110_l.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkd0lNa1BaLmRQN3hibG5JbGdxZEJVLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test_test17\", \"onlineIdHighlighted\": [\"\", \"Test\", \"_\", \"test\", \"17\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"120\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkc1pIcE5heWJOenMzVDkyejR1b0hyLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"809163195595992996\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkc1pIcE5heWJOenMzVDkyejR1b0hyLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest120\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"120\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"1001\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNFRCNnN3OWJQaXY4LzR2a1V5MjN2MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8804876876114850502\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNFRCNnN3OWJQaXY4LzR2a1V5MjN2MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest1001\", \"onlineIdHighlighted\": [\"\", \"testest\", \"1001\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"119\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkb0xRY283WDI0YWRna01JUVZQcjNvMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4063648585441781232\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkb0xRY283WDI0YWRna01JUVZQcjNvMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest119\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"119\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"0v0\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkLjN4Ylo3T2xrcjh2elAyTjRNV3lCLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"414369025182997978\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0004.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkLjN4Ylo3T2xrcjh2elAyTjRNV3lCLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test0v0test\", \"onlineIdHighlighted\": [\"\", \"test\", \"0v0\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"875\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7565112249998981851\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest875\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"875\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testTest\", \"2-0\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkLkguQ05XU1Ywb1FEelZoeW11S1RuLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2781717631376314429\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/30000.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkLkguQ05XU1Ywb1FEelZoeW11S1RuLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testTest2-0\", \"onlineIdHighlighted\": [\"\", \"testTest\", \"2-0\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"932\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZnhsSmxhNnU1V1NmQmlQL3NYZ0x6Lg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"110364836204142516\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_E/E0021.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZnhsSmxhNnU1V1NmQmlQL3NYZ0x6Lg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest932\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"932\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"641\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkU000amJkN3RUYTgyL1NRTkJ4QTZTLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"278990644525409567\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkU000amJkN3RUYTgyL1NRTkJ4QTZTLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest641\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"641\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"215\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTEw2Z0xEaFplWEhQdS9UTndEWi9tLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"9199327459609338557\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/30000.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTEw2Z0xEaFplWEhQdS9UTndEWi9tLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest215\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"215\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+55%2C+%22nextCursor%22%3A+%22eyJTTyI6NTV9%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:32 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:32 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "16258"
+                    ],
+                    "ETag": [
+                        "W/\"3f83-QAFN6br+bCVcKrZjNQ2yrSChyeU\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6NzV9\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"030\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwka1pPVmJJNzZYL2lUcDJwZ29aZWVFLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5983689649491612600\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP40731301007_70B15EF373A3A72D83F9_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwka1pPVmJJNzZYL2lUcDJwZ29aZWVFLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest030\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"030\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"305\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkaXJ2Lk9MN2lFUFA5ZHUvSE1VMEMuMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1769986683778265182\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkaXJ2Lk9MN2lFUFA5ZHUvSE1VMEMuMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test305test\", \"onlineIdHighlighted\": [\"\", \"test\", \"305\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"004\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkOHV5eFNJc1NRMjJDWE5LTi5GQ3l2MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7077848575602883283\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkOHV5eFNJc1NRMjJDWE5LTi5GQ3l2MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest004\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"004\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"801\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRFRjeUd2bGVwVUlKTm41RlhML3QvMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2407193887630886926\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRFRjeUd2bGVwVUlKTm41RlhML3QvMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest801\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"801\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"0v0\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkLjN4Ylo3T2xrcjh2elAyTjRNV3lCLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"414369025182997978\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0004.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkLjN4Ylo3T2xrcjh2elAyTjRNV3lCLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test0v0test\", \"onlineIdHighlighted\": [\"\", \"test\", \"0v0\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"875\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7565112249998981851\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest875\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"875\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"211\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwka3Raay9FaERSSjVoWDQ1Q1hnc2EuLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"172885758667842605\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A0030.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwka3Raay9FaERSSjVoWDQ1Q1hnc2EuLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest211\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"211\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"309\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkeHZHVjd0UFYubEpEOUVxd2U4YVNIMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3338959407730149192\", \"avatarUrl\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP4122/CUSA02133_00-AV00000000000014_D3F84D1FED4DA3EF25C1_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkeHZHVjd0UFYubEpEOUVxd2U4YVNIMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest309\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"309\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"505\", \"Test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSWdGUFRRWlpIZy80T1NUd0cvS0ZmMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2553949752405667941\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSWdGUFRRWlpIZy80T1NUd0cvS0ZmMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test505Test\", \"onlineIdHighlighted\": [\"\", \"Test\", \"505\", \"Test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"-\", \"test\", \"11\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkWjd5VGRWb2Y5TnVjekhFRmFCT2JkMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1499531391638550070\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkWjd5VGRWb2Y5TnVjekhFRmFCT2JkMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test-test11\", \"onlineIdHighlighted\": [\"\", \"test\", \"-\", \"test\", \"11\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TestTest\", \"258\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMjVjb2hIQjhHTmEzWDJqOUZtLlZJLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5114714149920875742\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMjVjb2hIQjhHTmEzWDJqOUZtLlZJLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TestTest258\", \"onlineIdHighlighted\": [\"\", \"TestTest\", \"258\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"5555\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVzBCN0d3TGt1S1dGbmk2ckJsYUouLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1564609599146699234\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVzBCN0d3TGt1S1dGbmk2ckJsYUouLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest5555\", \"onlineIdHighlighted\": [\"\", \"testest\", \"5555\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"073\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkbnB1NzlpUHhIR2RiZGFPcVFMcnJBLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8263311116151398881\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkbnB1NzlpUHhIR2RiZGFPcVFMcnJBLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest073\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"073\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"758\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVWZjaFhTdzUzL0cwc3RPclBKaktXLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5171435827880575493\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVWZjaFhTdzUzL0cwc3RPclBKaktXLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest758\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"758\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"748\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQ1I5SnNmQTRXUmw1dkFiNzI1bGJtMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5897082295613375394\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQ1I5SnNmQTRXUmw1dkFiNzI1bGJtMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest748\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"748\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"317\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTFgucHhEejBwUHZJQUtsVnRWVzJHMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4449605210320322899\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTFgucHhEejBwUHZJQUtsVnRWVzJHMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest317\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"317\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"22\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRU1ZbGozbWtneEdKU3U3Y1lMeGgyMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7443114695321982442\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRU1ZbGozbWtneEdKU3U3Y1lMeGgyMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test22\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"22\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"-\", \"test\", \"59\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkeHdUU05mYy82RGJxS2EuM2R1Vi5FMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1518619212872590695\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkeHdUU05mYy82RGJxS2EuM2R1Vi5FMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test-test59\", \"onlineIdHighlighted\": [\"\", \"test\", \"-\", \"test\", \"59\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"136\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkU2hNamVmZ3RlRlZZSlNDV1UzbkFMLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"260019364602767136\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkU2hNamVmZ3RlRlZZSlNDV1UzbkFMLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest136\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"136\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"523\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZ3FsVXNEZXNjZE9Td2lWU1NKNFBXLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1986173476631547757\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZ3FsVXNEZXNjZE9Td2lWU1NKNFBXLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest523\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"523\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+75%2C+%22nextCursor%22%3A+%22eyJTTyI6NzV9%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:35 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:35 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "16181"
+                    ],
+                    "ETag": [
+                        "W/\"3f36-mT/mvVbW+hSpmV3KniYsqRUkm4Q\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6OTV9\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"398\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkYnM2RkVLMTJadWZVZTJLRkN4VE0wLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7646147704053948085\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkYnM2RkVLMTJadWZVZTJLRkN4VE0wLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest398\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"398\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"TEST\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TESTTest\", \"194\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRVg1YWYuOGlYSUpIV1NTNjF6Lm9RMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"921983194008202566\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"TEST Test\", \"displayNameHighlighted\": [\"\", \"TEST\", \" \", \"Test\"], \"firstName\": \"TEST\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRVg1YWYuOGlYSUpIV1NTNjF6Lm9RMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TESTTest194\", \"onlineIdHighlighted\": [\"\", \"TESTTest\", \"194\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testTest\", \"845\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkU3FwNDdLamJrbFRueXpCN1QzSzNwMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5053368677829526668\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/EP43321110002_B29C1B5660154586A378_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkU3FwNDdLamJrbFRueXpCN1QzSzNwMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testTest845\", \"onlineIdHighlighted\": [\"\", \"testTest\", \"845\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TestTest\", \"665\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNVo3Mi4yZHlOSzk4UEplRjA4Mi5GMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7610482030595873738\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNVo3Mi4yZHlOSzk4UEplRjA4Mi5GMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TestTest665\", \"onlineIdHighlighted\": [\"\", \"TestTest\", \"665\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"wz\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVFkvUkc2MUtQaUVUTVhMclh0c3hTLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3359756016098164300\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVFkvUkc2MUtQaUVUTVhMclh0c3hTLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testwz\", \"onlineIdHighlighted\": [\"\", \"test\", \"wz\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"f\", \"test\", \"f\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNE9Vc2prRDNHTnJQVVFsbzcuQlpjLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"9153475347414292453\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNE9Vc2prRDNHTnJQVVFsbzcuQlpjLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"ftestf\", \"onlineIdHighlighted\": [\"f\", \"test\", \"f\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"hy\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkek10c3NwdlRzd0Q4TVpZZEc4STBMMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1860052290715831038\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkek10c3NwdlRzd0Q4TVpZZEc4STBMMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testhy\", \"onlineIdHighlighted\": [\"\", \"test\", \"hy\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\", \"er\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestest\", \"000\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQldDVDVWdGNZdlE2ZVMxNHVnbXpmLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6934660098046642469\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"tester test\", \"displayNameHighlighted\": [\"\", \"test\", \"er\", \" \", \"\", \"test\"], \"firstName\": \"tester\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQldDVDVWdGNZdlE2ZVMxNHVnbXpmLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestest000\", \"onlineIdHighlighted\": [\"\", \"testestest\", \"000\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1f\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZkV6bnRJemJPUDY3ZUozalZDaFA3Lg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8198445957542360394\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZkV6bnRJemJPUDY3ZUozalZDaFA3Lg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1f\", \"onlineIdHighlighted\": [\"\", \"test\", \"1f\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": null, \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtestest\", \"1\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZVBUa0xJWnFuZTdvcnphdFBhbzFFLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5992874278318154836\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test\", \"displayNameHighlighted\": [\"\", \"test\"], \"firstName\": null, \"id\": \"JGFwcjEkYXNka2ZqYWwkZVBUa0xJWnFuZTdvcnphdFBhbzFFLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtestest1\", \"onlineIdHighlighted\": [\"\", \"testtestest\", \"1\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"TEST\", \"I\"], \"lastName\": [\"\", \"TEST\", \"I\"], \"middleName\": null, \"onlineId\": [\"\", \"TEST\", \"I\", \"TEST\", \"I\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkM3pRb096REduMUxWTFAxVVpTd0puLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3084849027209935103\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/I0072.png\", \"displayName\": \"TESTI TESTI\", \"displayNameHighlighted\": [\"\", \"TEST\", \"I\", \" \", \"\", \"TEST\", \"I\"], \"firstName\": \"TESTI\", \"id\": \"JGFwcjEkYXNka2ZqYWwkM3pRb096REduMUxWTFAxVVpTd0puLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"TESTI\", \"middleName\": null, \"onlineId\": \"TESTITESTI\", \"onlineIdHighlighted\": [\"\", \"TEST\", \"I\", \"TEST\", \"I\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\", \"er\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestestest\", \"000\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkdVBLV1l2UlE4THJSVTZ5VkcuTzhCLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5198879524064156933\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"tester test\", \"displayNameHighlighted\": [\"\", \"test\", \"er\", \" \", \"\", \"test\"], \"firstName\": \"tester\", \"id\": \"JGFwcjEkYXNka2ZqYWwkdVBLV1l2UlE4THJSVTZ5VkcuTzhCLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestestest000\", \"onlineIdHighlighted\": [\"\", \"testestestest\", \"000\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtesttest\", \"518\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRW13NFJjQ2ZKRmlLcWlOL0Y0NHF0MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"638491369875656416\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRW13NFJjQ2ZKRmlLcWlOL0Y0NHF0MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtesttest518\", \"onlineIdHighlighted\": [\"\", \"testtesttest\", \"518\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testesttest\", \"1235\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMW1OUkI4eWl4dnJJWXFzQ3dzRWwwLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"566364269743001441\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMW1OUkI4eWl4dnJJWXFzQ3dzRWwwLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testesttest1235\", \"onlineIdHighlighted\": [\"\", \"testesttest\", \"1235\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\", \"i\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"242\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTHNmTjcubUJZWG9KWW8wVnhKMVE4MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2054221716175592244\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test testi\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\", \"i\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTHNmTjcubUJZWG9KWW8wVnhKMVE4MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"testi\", \"middleName\": null, \"onlineId\": \"testtest242\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"242\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\", \"a\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"a12\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRk9pSlVpeFJrN2JIT3c3bUhVMlN1MQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1358899921389957014\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"test testa\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\", \"a\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRk9pSlVpeFJrN2JIT3c3bUhVMlN1MQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"testa\", \"middleName\": null, \"onlineId\": \"testtesta12\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"a12\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testestest\", \"00058\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkM3JkNjRpVC5aZFRhZXVoN0hBN2VQLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7930179027541327050\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkM3JkNjRpVC5aZFRhZXVoN0hBN2VQLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testestest00058\", \"onlineIdHighlighted\": [\"\", \"testestest\", \"00058\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\", \"o\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"o_1\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVHRkNExseW9PRHVoTkNEYktBL2dxMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6207864446831766677\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Testo\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\", \"o\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVHRkNExseW9PRHVoTkNEYktBL2dxMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Testo\", \"middleName\": null, \"onlineId\": \"testtesto_1\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"o_1\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"5\", \"Test\", \"5\", \"Test\", \"5\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNUU0c0ZiNU9xdE9tSkdGNkVSeDZyLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4588703750466424537\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/I0012.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNUU0c0ZiNU9xdE9tSkdGNkVSeDZyLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test5Test5Test5\", \"onlineIdHighlighted\": [\"\", \"Test\", \"5\", \"Test\", \"5\", \"Test\", \"5\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\", \"o\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"o\", \"test\", \"69\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkaG5FVjBmVGp0aWg1MDhvdmdBVVU2MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4443755494720752415\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/EP40931302169_08B019253867AC526CC7_L.png\", \"displayName\": \"test testo\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\", \"o\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkaG5FVjBmVGp0aWg1MDhvdmdBVVU2MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"testo\", \"middleName\": null, \"onlineId\": \"testotest69\", \"onlineIdHighlighted\": [\"\", \"test\", \"o\", \"test\", \"69\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+95%2C+%22nextCursor%22%3A+%22eyJTTyI6OTV9%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:38 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:38 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "16194"
+                    ],
+                    "ETag": [
+                        "W/\"3f43-g0V1YSQ1frPFkSXVu6DVpUG9Ajk\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"eyJTTyI6MTE1fQ\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtesttest\", \"232\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkbnN4TnFMWkg5R1Z4a2lhbEtTMk82Lw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1043451348088855976\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2119_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkbnN4TnFMWkg5R1Z4a2lhbEtTMk82Lw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtesttest232\", \"onlineIdHighlighted\": [\"\", \"testtesttest\", \"232\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"456\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVy5mNmpZNTlOWndLSmt4NEVMVXhpMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2884725456608330219\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2074_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVy5mNmpZNTlOWndLSmt4NEVMVXhpMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test456\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"456\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"eiku\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkT2pFZlByVTV5R2F4NTZsZmpNSlkvLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4370434645199117148\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkT2pFZlByVTV5R2F4NTZsZmpNSlkvLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtesteiku\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"eiku\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"_\", \"Test\", \"t22\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkYXp6cVE2dWxmYXN5RHl0Mm9NdHdyLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5139913009048748169\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkYXp6cVE2dWxmYXN5RHl0Mm9NdHdyLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test_Testt22\", \"onlineIdHighlighted\": [\"\", \"Test\", \"_\", \"Test\", \"t22\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1991\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRi9WWmlWUG9YVWxZOWNTdkZxYWZkMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2508908144727019501\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRi9WWmlWUG9YVWxZOWNTdkZxYWZkMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"test1991test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1991\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Testtest\", \"1006\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZmNZSy5kc1U0OFBwZy5ZSERodzlhMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2081492911765545665\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZmNZSy5kc1U0OFBwZy5ZSERodzlhMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testtest1006\", \"onlineIdHighlighted\": [\"\", \"Testtest\", \"1006\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"lang\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkWHM2SUJQbVdrOUo5cy80cEh6RExSMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6227155493428245499\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkWHM2SUJQbVdrOUo5cy80cEh6RExSMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtestlang\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"lang\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"TeStTest\", \"555_\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZWpMSFBoWEVieU1PeGN0eC5vOHQzMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8076587414377702246\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZWpMSFBoWEVieU1PeGN0eC5vOHQzMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"TeStTest555_\", \"onlineIdHighlighted\": [\"\", \"TeStTest\", \"555_\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"47\", \"test\", \"47\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZWN4N2dRRUs3eXNlaTNCWTVlZWJpMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7955564675498176285\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZWN4N2dRRUs3eXNlaTNCWTVlZWJpMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"test47test47\", \"onlineIdHighlighted\": [\"\", \"test\", \"47\", \"test\", \"47\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"498_\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRmJjWXh3Vy5ZcjYzd1N4V2dxejc4MA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3508625767774624611\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRmJjWXh3Vy5ZcjYzd1N4V2dxejc4MA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test498_test\", \"onlineIdHighlighted\": [\"\", \"test\", \"498_\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"TesTTesT\", \"0212\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkUmZtSkQ1a1VqQ0h6eGZCMy5PMlZKMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5428201634431921568\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2119_l.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkUmZtSkQ1a1VqQ0h6eGZCMy5PMlZKMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"TesTTesT0212\", \"onlineIdHighlighted\": [\"\", \"TesTTesT\", \"0212\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"7771\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkb051UWRBV21aczZWQTJ4dlZxdU9pMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2737206117839708763\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/EP43321110006_40B634854AEE24C041D9_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkb051UWRBV21aczZWQTJ4dlZxdU9pMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest7771\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"7771\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"owy\", \"test\", \"1\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQ0xESURvLzBrbnlhRS9wUjV5RDlMMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3322656888797818113\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0033.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQ0xESURvLzBrbnlhRS9wUjV5RDlMMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Testowytest1\", \"onlineIdHighlighted\": [\"\", \"Test\", \"owy\", \"test\", \"1\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"0_0\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTjh2ajZmZDhBOG56N2tkYlRLd1lpLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6369046015550384754\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTjh2ajZmZDhBOG56N2tkYlRLd1lpLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"test_test0_0\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"0_0\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"etst\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRkpnMVVZY2loRFlDV0FIdlV0OWdrMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5069566418676349134\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRkpnMVVZY2loRFlDV0FIdlV0OWdrMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testetsttest\", \"onlineIdHighlighted\": [\"\", \"test\", \"etst\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"this\", \"testtest\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZEhOMzA0RGo0ZGdDNmFSL1FyZVNyMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7812017560568940186\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP43611208W04_6AA6CD4121EF7538EF13_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZEhOMzA0RGo0ZGdDNmFSL1FyZVNyMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"thistesttest\", \"onlineIdHighlighted\": [\"this\", \"testtest\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testTest\", \"__01\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkZVhSNGg5L3QvZEhIT00vQUw0eS5rMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7007469069591359965\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkZVhSNGg5L3QvZEhIT00vQUw0eS5rMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testTest__01\", \"onlineIdHighlighted\": [\"\", \"testTest\", \"__01\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"_\", \"test\", \"269\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkaG1DcElmQi9hbDdoTlQzSzNzVE1jMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5804122045331757467\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2118_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkaG1DcElmQi9hbDdoTlQzSzNzVE1jMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"Test_test269\", \"onlineIdHighlighted\": [\"\", \"Test\", \"_\", \"test\", \"269\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"400\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkS21rWTF0R0dMSm9yd0RnTVZUL2s3Lg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1439834908067008000\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkS21rWTF0R0dMSm9yd0RnTVZUL2s3Lg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test400\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"400\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"2256\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkVVRqQTM3ZlhSNWJ6OVpwSUhTdXFzMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3539822130160014707\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkVVRqQTM3ZlhSNWJ6OVpwSUhTdXFzMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testtest2256\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"2256\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%2223ece284bf8bdc50bfa30a4d97fd4d733e723beb7a42dff8c1ee883f8461a2e1%22%7D%7D&operationName=metGetDomainSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchDomain%22%3A+%22SocialAllAccounts%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%2C+%22pageSize%22%3A+20%2C+%22pageOffset%22%3A+115%2C+%22nextCursor%22%3A+%22eyJTTyI6MTE1fQ%22%7D",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "application/json"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Accept-Language": [
+                        "en-US,en;q=0.9"
+                    ],
+                    "Country": [
+                        "US"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "apollographql-client-name": [
+                        "PlayStationApp-Android"
+                    ],
+                    "apollographql-client-version": [
+                        "25.4.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "x-frame-options": [
+                        "SAMEORIGIN"
+                    ],
+                    "Set-Cookie": "REDACTED",
+                    "x-xss-protection": [
+                        "1; mode=block"
+                    ],
+                    "strict-transport-security": [
+                        "max-age=15552000; includeSubDomains"
+                    ],
+                    "x-download-options": [
+                        "noopen"
+                    ],
+                    "Date": [
+                        "Mon, 19 May 2025 00:02:41 GMT"
+                    ],
+                    "x-dns-prefetch-control": [
+                        "off"
+                    ],
+                    "Cache-Control": [
+                        "max-age=0, no-cache, no-store"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Expires": [
+                        "Mon, 19 May 2025 00:02:41 GMT"
+                    ],
+                    "Vary": [
+                        "Origin",
+                        "Accept-Encoding"
+                    ],
+                    "x-content-type-options": [
+                        "nosniff"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "10604"
+                    ],
+                    "ETag": [
+                        "W/\"296d-FssXzeKubYPKTgXvxYK6kXs6nMU\""
+                    ],
+                    "Access-Control-Allow-Credentials": [
+                        "true"
+                    ]
+                },
+                "body": {
+                    "string": "{\"data\": {\"universalDomainSearch\": {\"__typename\": \"UniversalDomainSearchResponse\", \"domain\": \"SocialAllAccounts\", \"domainTitle\": \"Players\", \"next\": \"\", \"searchResults\": [{\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1337\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRVRpSkdMSVBPQmdlRWR3Q1V4NHhtLg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6847289731365438493\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/30006.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRVRpSkdMSVBPQmdlRWR3Q1V4NHhtLg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1337test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1337\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1__1\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkTE84U1l5NmNReGZaWFZ5WHNvUDF0Lg==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1588792381839690686\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkTE84U1l5NmNReGZaWFZ5WHNvUDF0Lg==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1__1test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1__1\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"_Rl_\", \"Test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQ2ZPalBJcE5LTG4wdTJNSDRabGoyLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"4479249455264199509\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0006.png\", \"displayName\": \"test Test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"Test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQ2ZPalBJcE5LTG4wdTJNSDRabGoyLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"Test_Rl_Test\", \"onlineIdHighlighted\": [\"\", \"Test\", \"_Rl_\", \"Test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1789\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkNDVkWDNHMHJMMTNUV2ZnaXU5TUFqMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"8507348347167430403\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkNDVkWDNHMHJMMTNUV2ZnaXU5TUFqMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1789test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1789\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1704\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkMkMzWWt3dnhHbW5oQ0ZrQ2tTd0xELw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"2509051943609902038\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/WWS_J/J0003.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkMkMzWWt3dnhHbW5oQ0ZrQ2tTd0xELw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1704test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1704\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"Test\", \"1515\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkQWpVVzAyRy8uUUd1Sy9MLy44ZzdLMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"755998448819134149\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkQWpVVzAyRy8uUUd1Sy9MLy44ZzdLMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"Test1515test\", \"onlineIdHighlighted\": [\"\", \"Test\", \"1515\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"602\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkOE55RGVEOHBiLmdFYkNNWTBMRVBMLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3729646036253919774\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkOE55RGVEOHBiLmdFYkNNWTBMRVBMLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test602\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"602\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"22r4\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkM1ZZRm5YZWdrSThWQ3BtYTQ3VTRCMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"7138569963499047553\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkM1ZZRm5YZWdrSThWQ3BtYTQ3VTRCMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"testtest22r4\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"22r4\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"Test\"], \"lastName\": [\"\", \"Test\"], \"middleName\": null, \"onlineId\": [\"\", \"testtest\", \"1675\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkSVNtdXYxb3NBN2hsdEpEaGVNdE9uMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6389846124762074398\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304004_6D1192F0D43D0A6AF405_L.png\", \"displayName\": \"Test Test\", \"displayNameHighlighted\": [\"\", \"Test\", \" \", \"Test\"], \"firstName\": \"Test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkSVNtdXYxb3NBN2hsdEpEaGVNdE9uMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"Test\", \"middleName\": null, \"onlineId\": \"testtest1675\", \"onlineIdHighlighted\": [\"\", \"testtest\", \"1675\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"testest\", \"12544\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkaVFyS1BKVHVWM2JJT2xOY1FNSXdHMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"1606092786949092127\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkaVFyS1BKVHVWM2JJT2xOY1FNSXdHMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testest12544\", \"onlineIdHighlighted\": [\"\", \"testest\", \"12544\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"_\", \"test\", \"022\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkRktPTHRGcXZhbHU5b29OT2VyZjlHLw==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"3330045860384262020\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkRktPTHRGcXZhbHU5b29OT2VyZjlHLw==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test_test022\", \"onlineIdHighlighted\": [\"\", \"test\", \"_\", \"test\", \"022\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"1982\", \"test\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkbzU2L3ZZRmY1T1ZlbWUzcmlkRjZnMQ==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"6452200143008887048\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/3RD/30006.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkbzU2L3ZZRmY1T1ZlbWUzcmlkRjZnMQ==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"test1982test\", \"onlineIdHighlighted\": [\"\", \"test\", \"1982\", \"test\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}, {\"__typename\": \"SearchResultItem\", \"highlight\": {\"__typename\": \"PlayerHighlight\", \"firstName\": [\"\", \"test\"], \"lastName\": [\"\", \"test\"], \"middleName\": null, \"onlineId\": [\"\", \"test\", \"x2\", \"test\", \"x2\"], \"verifiedUserName\": null}, \"id\": \"JGFwcjEkYXNka2ZqYWwkdThiWk41dFV5NXBrV1dQWDFXSU0vMA==\", \"result\": {\"__typename\": \"Player\", \"accountId\": \"5071643237378068026\", \"avatarUrl\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png\", \"displayName\": \"test test\", \"displayNameHighlighted\": [\"\", \"test\", \" \", \"test\"], \"firstName\": \"test\", \"id\": \"JGFwcjEkYXNka2ZqYWwkdThiWk41dFV5NXBrV1dQWDFXSU0vMA==\", \"isPsPlus\": false, \"itemType\": \"SOCIAL\", \"lastName\": \"test\", \"middleName\": null, \"onlineId\": \"testx2testx2\", \"onlineIdHighlighted\": [\"\", \"test\", \"x2\", \"test\", \"x2\"], \"profilePicUrl\": \"\", \"relationshipState\": null}, \"resultOriginFlag\": null}], \"totalResultCount\": 128, \"zeroState\": false}}}"
+                }
+            }
+        }
+    ]
+}
