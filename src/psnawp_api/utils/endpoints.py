@@ -17,6 +17,11 @@ BASE_PATH: Final[dict[str, str]] = {
     "games_list": "https://m.np.playstation.com/api/gamelist/v2",
     "graph_ql": "https://m.np.playstation.com/api/graphql/v1/op",
     "cpss": "https://m.np.playstation.com/api/cpss",
+    # Future use
+    "sony_account_ca_base_url": "https://ca.account.sony.com",
+    "psn_np_mobile_base_url": "https://m.np.playstation.com",
+    "psn_dms_api_base_url": "https://dms.api.playstation.com",
+    "psn_us_profile_community_base_url": "https://us-prof.np.community.playstation.net",
 }
 
 #: API_PATH contains the relative paths for various PlayStation API endpoints, organized by categories
@@ -60,4 +65,6 @@ API_PATH: Final[dict[str, str]] = {
     "trophy_titles_for_title": "/users/{account_id}/titles/trophyTitles",
     # User Title Data
     "user_game_data": "/users/{account_id}/titles",
+    # Entitlements
+    "entitlements": "/api/entitlement/v2/users/me/internal/entitlements",
 }
