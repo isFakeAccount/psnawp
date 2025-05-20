@@ -32,8 +32,8 @@ src/psnawp_api/core/authenticator.py                       131     17    87%
 src/psnawp_api/core/psnawp_exceptions.py                    12      0   100%
 src/psnawp_api/core/request_builder.py                      80      9    89%
 src/psnawp_api/models/__init__.py                            5      0   100%
-src/psnawp_api/models/client.py                             80      0   100%
-src/psnawp_api/models/game_entitlements.py                  24     24     0%
+src/psnawp_api/models/client.py                             85      3    96%
+src/psnawp_api/models/game_entitlements.py                  25     15    40%
 src/psnawp_api/models/game_title.py                         45      0   100%
 src/psnawp_api/models/group/__init__.py                      2      0   100%
 src/psnawp_api/models/group/group.py                        56      0   100%
@@ -60,7 +60,7 @@ src/psnawp_api/utils/__init__.py                             3      0   100%
 src/psnawp_api/utils/endpoints.py                            3      0   100%
 src/psnawp_api/utils/misc.py                                42      0   100%
 ----------------------------------------------------------------------------
-TOTAL                                                     1381    105    92%
+TOTAL                                                     1387     99    93%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-======================= 100 passed in 156.96s (0:02:36) ========================
+======================= 100 passed in 156.95s (0:02:36) ========================
