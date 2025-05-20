@@ -25,6 +25,8 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
 
     :var Authenticator authenticator: An instance of :py:class:`~psnawp_api.core.authenticator.Authenticator` used to
         authenticate and make HTTPS requests.
+    :var str title_ids: Comma-separated string of title IDs to filter and check if the client owns any of the specified
+        titles.
 
     """
 
@@ -33,6 +35,7 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
         authenticator: Authenticator,
         url: str,
         pagination_args: PaginationArguments,
+        title_ids: str,
     ) -> None:
         """Init for GameEntitlementsIterator."""
         super().__init__(
@@ -40,6 +43,8 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
             url=url,
             pagination_args=pagination_args,
         )
+
+        self.title_ids = title_ids
 
     def fetch_next_page(self) -> Generator[dict[str, Any], None, None]:
         """Fetches the next page of Entitlements objects from the API.
@@ -51,7 +56,7 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
             "entitlementType": "1,2,3,4,5",
             "fields": "titleMeta,gameMeta,conceptMeta,rewardMeta,rewardMeta.retentionPolicy,rewardMeta.rewardMembershipType",
             "gameMetaPackageType": "PSGD,PS4GD",
-            "titleId": "",
+            "titleId": self.title_ids,
         } | self._pagination_args.get_params_dict()
 
         response = self.authenticator.get(
@@ -72,15 +77,13 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
             self._has_next = False
 
     @classmethod
-    def from_endpoint(
-        cls,
-        authenticator: Authenticator,
-        pagination_args: PaginationArguments,
-    ) -> Self:
+    def from_endpoint(cls, authenticator: Authenticator, pagination_args: PaginationArguments, title_ids: str) -> Self:
         """Creates an instance of GameEntitlementsIterator from the given endpoint.
 
         :param authenticator: The Authenticator instance used for making authenticated requests to the API.
         :param pagination_args: Arguments for handling pagination, including limit, offset, and page size.
+        :param title_ids: Comma-separated string of title IDs to filter and check if the client owns any of the
+            specified titles.
 
         :returns: An instance of GameEntitlementsIterator.
 
@@ -90,4 +93,5 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
             authenticator=authenticator,
             url=url,
             pagination_args=pagination_args,
+            title_ids=title_ids,
         )

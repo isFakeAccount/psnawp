@@ -5,6 +5,7 @@ from __future__ import annotations
 from functools import cached_property
 from typing import TYPE_CHECKING, Any, Literal, overload
 
+from psnawp_api.models.game_entitlements import GameEntitlementsIterator
 from psnawp_api.models.group.group import Group
 from psnawp_api.models.listing import PaginationArguments
 from psnawp_api.models.title_stats import TitleStatsIterator
@@ -597,6 +598,32 @@ class Client:
             account_id="me",
             pagination_args=pg_args,
         )
+
+    def game_entitlements(
+        self,
+        limit: int | None = None,
+        offset: int = 0,
+        page_size: int = 200,
+        title_ids: list[str] | None = None,
+    ) -> GameEntitlementsIterator:
+        """Returns an iterator for retrieving game entitlements (owned titles) associated with the authenticated client.
+
+        :param limit: Limit of titles returned.
+        :param page_size: The number of items to receive per api request.
+        :param offset: Specifies the offset for paginator.
+        :param title_ids: Filter by a specific game title IDs to check if the client owns it.
+
+        :returns: Iterator class GameEntitlementsIterator
+
+        """
+        pg_args = PaginationArguments(
+            total_limit=limit,
+            offset=offset,
+            page_size=page_size,
+        )
+
+        title_ids_str = "" if title_ids is None else ",".join(title_ids)
+        return GameEntitlementsIterator.from_endpoint(authenticator=self.authenticator, pagination_args=pg_args, title_ids=title_ids_str)
 
     def __repr__(self) -> str:
         """Returns a detailed string representation of the object for debugging."""
