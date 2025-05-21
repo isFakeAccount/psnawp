@@ -70,8 +70,9 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
             self._pagination_args.increment_offset()
             yield entitlement
 
-        offset = response.get("nextOffset") or 0
-        if offset > 0:
+        if (self._pagination_args.total_limit is not None and (self._pagination_args.total_limit > self._pagination_args.offset)) or (
+            self._total_item_count > self._pagination_args.offset
+        ):
             self._has_next = True
         else:
             self._has_next = False

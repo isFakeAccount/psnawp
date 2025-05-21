@@ -185,6 +185,26 @@ def test_client__title_stats(psnawp_fixture: PSNAWP) -> None:
 
 
 @pytest.mark.vcr
+def test_client__game_entitlements_with_limit(psnawp_fixture: PSNAWP) -> None:
+    limit = 25
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        count = 0
+        for _ in psnawp_fixture.me().game_entitlements(limit=limit, page_size=5):
+            count += 1
+        assert limit == count
+
+
+@pytest.mark.vcr
+def test_client__game_entitlements(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+        count = 0
+        entitlement_iter = psnawp_fixture.me().game_entitlements(page_size=5)
+        for game_entitlement in entitlement_iter:
+            count += 1
+        assert entitlement_iter._total_item_count == count
+
+
+@pytest.mark.vcr
 def test_client__repr_and_str(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         client = psnawp_fixture.me()
