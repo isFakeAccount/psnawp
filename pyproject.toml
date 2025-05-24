@@ -14,9 +14,9 @@ classifiers = [
 ]
 dependencies = [
     "pycountry (>=24.6.1,<25.0.0)",
+    "pyrate-limiter (>=3.7.0,<4.0.0)",
     "requests (>=2.32.3,<3.0.0)",
     "typing-extensions (>=4.12.2,<5.0.0)",
-    "pyrate-limiter (>=3.7.0,<4.0.0)",
 ]
 description = "Python API Wrapper for PlayStation Network API."
 keywords = ["PSN", "PlayStation"]
@@ -24,7 +24,7 @@ license = { file = "LICENSE.md" }
 name = "psnawp"
 readme = "README.md"
 requires-python = ">=3.10, <4.0"
-version = "2.2.0"
+version = "3.0.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy           = { version = "^1.15.0", python = ">=3.11,<4.0.0" }
@@ -112,7 +112,7 @@ ignore = [
     "D401",   # Allow docstring summaries that are not in imperative mood.
     "EM",     # Allow exception messages that do not follow specific formatting rules.
     "FBT",    # Allow functions to take boolean positional arguments.
-    "S311", # Allow use of Standard pseudo-random generators.
+    "S311",   # Allow use of Standard pseudo-random generators.
     "S603",   # Allow `subprocess` calls without enforcing `shell=False` (potential security risk).
     "T201",   # Allow usage of `print()` instead of enforcing logging.
     "TRY003", # Allow specifying long error messages inside the exception class instead of outside.
