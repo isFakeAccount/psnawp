@@ -603,7 +603,7 @@ class Client:
         self,
         limit: int | None = None,
         offset: int = 0,
-        page_size: int = 200,
+        page_size: int = 20,
         title_ids: list[str] | None = None,
     ) -> GameEntitlementsIterator:
         """Returns an iterator for retrieving game entitlements (owned titles) associated with the authenticated client.
