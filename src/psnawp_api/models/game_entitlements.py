@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, TypedDict
 
-from typing_extensions import Self
+from typing_extensions import NotRequired, Self
 
 from psnawp_api.models.listing import PaginationArguments, PaginationIterator
 from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
@@ -15,7 +15,75 @@ if TYPE_CHECKING:
     from psnawp_api.core import Authenticator
 
 
-class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
+class EntitlementAttribute(TypedDict):
+    """Represents an entitlement attribute for a game entitlement."""
+
+    entitlementKeyFlag: bool
+    platformId: str
+    placeholderFlag: bool
+
+
+class GameMeta(TypedDict):
+    """Metadata about the game."""
+
+    name: str
+    type: str
+    iconUrl: str
+    packageType: str
+
+
+class TitleMeta(TypedDict):
+    """Metadata about the game title."""
+
+    titleId: str
+    name: str
+    imageUrl: str
+
+
+class ConceptMeta(TypedDict):
+    """Metadata about the game concept."""
+
+    conceptId: str
+    name: str
+    iconUrl: str
+    minimumAge: int
+
+
+class RewardMeta(TypedDict):
+    """Metadata about rewards for the entitlement."""
+
+    rewardServiceType: int
+    retentionPolicy: int
+
+
+class GameEntitlement(TypedDict):
+    """Represents a single game entitlement entry."""
+
+    id: str
+    activeDate: str
+    entitlementType: int
+    skuId: str
+    productId: str
+    activeFlag: bool
+    revisionId: int
+    featureType: int
+    preorderFlag: bool
+    remainingCount: int
+    consumedCount: int
+    isConsumable: bool
+    isSubscription: bool
+    entitlementAttributes: list[EntitlementAttribute]
+    gameMeta: GameMeta
+    titleMeta: TitleMeta
+    conceptMeta: ConceptMeta
+    rewardMeta: RewardMeta
+    preorderPlaceholderFlag: bool
+    isBeta: NotRequired[bool]
+    isGame: NotRequired[bool]
+    serviceType: NotRequired[int]
+
+
+class GameEntitlementsIterator(PaginationIterator[GameEntitlement]):
     """An iterator for retrieving the authenticated user's game entitlements (owned games) from the PlayStation Network.
 
     .. note::
@@ -46,7 +114,7 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
 
         self.title_ids = title_ids
 
-    def fetch_next_page(self) -> Generator[dict[str, Any], None, None]:
+    def fetch_next_page(self) -> Generator[GameEntitlement, None, None]:
         """Fetches the next page of Entitlements objects from the API.
 
         :yield: A generator yielding Entitlements objects.
@@ -65,7 +133,7 @@ class GameEntitlementsIterator(PaginationIterator[dict[str, Any]]):
         ).json()
         self._total_item_count = response.get("totalResults", 0)
 
-        entitlements: list[dict[str, Any]] = response.get("entitlements")
+        entitlements: list[GameEntitlement] = response.get("entitlements")
         for entitlement in entitlements:
             self._pagination_args.increment_offset()
             yield entitlement
