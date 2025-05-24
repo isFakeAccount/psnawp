@@ -608,6 +608,11 @@ class Client:
     ) -> GameEntitlementsIterator:
         """Returns an iterator for retrieving game entitlements (owned titles) associated with the authenticated client.
 
+        .. note::
+
+            This class retrieves only PS4 and PS5 game entitlements, as the underlying API endpoints accessed via the
+            PlayStation Android app are limited to these platforms.
+
         :param limit: Limit of titles returned.
         :param page_size: The number of items to receive per api request.
         :param offset: Specifies the offset for paginator.
