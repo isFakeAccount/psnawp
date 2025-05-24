@@ -4,15 +4,15 @@ rootdir: /home/runner/work/psnawp/psnawp
 configfile: pyproject.toml
 testpaths: tests
 plugins: cov-6.1.1, vcr-1.0.2
-collected 100 items
+collected 102 items
 
-tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py . [  1%]
-..                                                                       [  3%]
-tests/integration_tests/integration_test_psnawp_api/models/test_client.py . [  4%]
-....................                                                     [ 24%]
-tests/integration_tests/integration_test_psnawp_api/models/test_game_title.py . [ 25%]
-.............                                                            [ 38%]
-tests/integration_tests/integration_test_psnawp_api/models/test_group.py . [ 39%]
+tests/integration_tests/integration_test_psnawp_api/core/test_authenticator.py . [  0%]
+..                                                                       [  2%]
+tests/integration_tests/integration_test_psnawp_api/models/test_client.py . [  3%]
+......................                                                   [ 25%]
+tests/integration_tests/integration_test_psnawp_api/models/test_game_title.py . [ 26%]
+.............                                                            [ 39%]
+tests/integration_tests/integration_test_psnawp_api/models/test_group.py . [ 40%]
 .............                                                            [ 52%]
 tests/integration_tests/integration_test_psnawp_api/models/test_search.py . [ 53%]
 .......                                                                  [ 60%]
@@ -32,7 +32,8 @@ src/psnawp_api/core/authenticator.py                       131     17    87%
 src/psnawp_api/core/psnawp_exceptions.py                    12      0   100%
 src/psnawp_api/core/request_builder.py                      80      9    89%
 src/psnawp_api/models/__init__.py                            5      0   100%
-src/psnawp_api/models/client.py                             80      0   100%
+src/psnawp_api/models/client.py                             85      0   100%
+src/psnawp_api/models/game_entitlements.py                  68      0   100%
 src/psnawp_api/models/game_title.py                         45      0   100%
 src/psnawp_api/models/group/__init__.py                      2      0   100%
 src/psnawp_api/models/group/group.py                        56      0   100%
@@ -40,18 +41,18 @@ src/psnawp_api/models/group/group_datatypes.py              42     42     0%
 src/psnawp_api/models/listing/__init__.py                    2      0   100%
 src/psnawp_api/models/listing/pagination_iterator.py        52      2    96%
 src/psnawp_api/models/search/__init__.py                     4      0   100%
-src/psnawp_api/models/search/games_search.py                57      1    98%
+src/psnawp_api/models/search/games_search.py                58      1    98%
 src/psnawp_api/models/search/games_search_datatypes.py      95      0   100%
 src/psnawp_api/models/search/universal_search.py            13      0   100%
 src/psnawp_api/models/search/users_result_datatypes.py      57      0   100%
-src/psnawp_api/models/search/users_search.py                55      2    96%
-src/psnawp_api/models/title_stats.py                        71      1    99%
+src/psnawp_api/models/search/users_search.py                56      2    96%
+src/psnawp_api/models/title_stats.py                        72      1    99%
 src/psnawp_api/models/trophies/__init__.py                   6      0   100%
-src/psnawp_api/models/trophies/trophy.py                   104      7    93%
+src/psnawp_api/models/trophies/trophy.py                   106      7    93%
 src/psnawp_api/models/trophies/trophy_constants.py          33      0   100%
 src/psnawp_api/models/trophies/trophy_group.py              65      0   100%
 src/psnawp_api/models/trophies/trophy_summary.py            20      0   100%
-src/psnawp_api/models/trophies/trophy_titles.py             70      0   100%
+src/psnawp_api/models/trophies/trophy_titles.py             71      0   100%
 src/psnawp_api/models/trophies/trophy_utils.py               6      0   100%
 src/psnawp_api/models/user.py                               87      0   100%
 src/psnawp_api/psnawp.py                                    47      0   100%
@@ -59,7 +60,7 @@ src/psnawp_api/utils/__init__.py                             3      0   100%
 src/psnawp_api/utils/endpoints.py                            3      0   100%
 src/psnawp_api/utils/misc.py                                42      0   100%
 ----------------------------------------------------------------------------
-TOTAL                                                     1351     81    94%
+TOTAL                                                     1430     81    94%
 Coverage HTML written to dir htmlcov
 Coverage XML written to file coverage.xml
-======================= 100 passed in 153.91s (0:02:33) ========================
+======================= 102 passed in 162.99s (0:02:42) ========================

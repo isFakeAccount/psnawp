@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, TypedDict
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.models.trophies.trophy_utils import (
@@ -194,6 +194,7 @@ class TrophyIterator(PaginationIterator[Trophy]):
         url = f"{BASE_PATH['trophies']}{API_PATH['trophies_for_title'].format(np_communication_id=np_communication_id, trophy_group_id=trophy_group_id)}"
         return cls(authenticator, url, pagination_args, platform)
 
+    @override
     def fetch_next_page(self) -> Generator[Trophy, None, None]:
         """Fetches the next page in endpoint with pagination."""
         service_name = self.platform.get_trophy_service_name()
@@ -288,6 +289,7 @@ class TrophyWithProgressIterator(PaginationIterator[TrophyWithProgress]):
         )
         return cls(authenticator, url, pagination_args, platform, progress_url)
 
+    @override
     def fetch_next_page(self) -> Generator[TrophyWithProgress, None, None]:
         """Fetches the next page in endpoint with pagination."""
         service_name = self.platform.get_trophy_service_name()

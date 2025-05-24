@@ -19,6 +19,7 @@ Submodules
    :maxdepth: 1
 
    psnawp_api.models.client
+   psnawp_api.models.game_entitlements
    psnawp_api.models.game_title
    psnawp_api.models.title_stats
    psnawp_api.models.user

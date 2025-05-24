@@ -6,7 +6,7 @@ import json
 from collections.abc import Generator
 from typing import TYPE_CHECKING, Any
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.models.search.games_search_datatypes import GameSearchResultItem, SearchDomain, default_game_root_response
@@ -180,6 +180,7 @@ class UniversalDomainSearchIterator(PaginationIterator[GameSearchResultItem]):
             next_cursor=next_cursor,
         )
 
+    @override
     def fetch_next_page(self) -> Generator[GameSearchResultItem, None, None]:
         """Fetches the next page of Search Result objects from the API.
 

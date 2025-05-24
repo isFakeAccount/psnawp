@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from enum import Enum
 from typing import TYPE_CHECKING, Any, Final, Literal
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.utils.endpoints import API_PATH, BASE_PATH
@@ -139,6 +139,7 @@ class TitleStatsIterator(PaginationIterator[TitleStats]):
             pagination_args=pagination_args,
         )
 
+    @override
     def fetch_next_page(self) -> Generator[TitleStats, None, None]:
         """Fetches the next page of TitleStats objects from the API.
 

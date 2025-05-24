@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 from psnawp_api.core import PSNAWPBadRequestError, PSNAWPNotFoundError
 from psnawp_api.models.listing import PaginationIterator
@@ -115,6 +115,7 @@ class TrophyTitleIterator(PaginationIterator[TrophyTitle]):
             title_ids,
         )
 
+    @override
     def fetch_next_page(self) -> Generator[TrophyTitle, None, None]:
         """Fetches the next page in endpoint with pagination."""
         if self.title_ids is None:
