@@ -28,18 +28,26 @@ def do_process(args: list[str], cwd: str = ".") -> bool:
     return True
 
 
-def run_static() -> bool:
-    """Runs the static tests.
+def run_pre_commit() -> bool:
+    """Runs pre-commit.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
-    statuscode 1
-
+    :return: False if everything ran correctly. Otherwise, it will return True
     """
     success = True
     success &= do_process(["poetry", "run", "pre-commit", "run", "--all-files"])
+    return success
+
+
+def run_static_and_lint() -> bool:
+    """Runs the static analysis and linting.
+
+    :return: False if everything ran correctly. Otherwise, it will return True
+
+    """
+    success = True
 
     success &= do_process(["poetry", "run", "mypy", "src/psnawp_api/"])
-    success &= do_process(["pyright", "src/psnawp_api/"])
+    success &= do_process(["poetry", "run", "pyright", "src/psnawp_api/"])
 
     success &= do_process(["poetry", "run", "docstrfmt", "src/psnawp_api/"])
 
@@ -49,7 +57,15 @@ def run_static() -> bool:
     success &= do_process(
         ["poetry", "run", "ruff", "check", "src/psnawp_api/", "--fix"],
     )
+    return success
 
+
+def run_docs() -> bool:
+    """Runs the sphinx api docs generation and check cmds.
+
+    :return: False if everything ran correctly. Otherwise, it will return True
+    """
+    success = True
     success &= do_process(["make", "apidoc"], cwd="docs/")
     success &= do_process(["make", "clean"], cwd="docs/")
     success &= do_process(["make", "html"], cwd="docs/")
@@ -63,6 +79,7 @@ def run_unit() -> bool:
     Follows the behavior of the static tests, where any failed tests cause pre_push.py
     to fail.
 
+    :return: False if everything ran correctly. Otherwise, it will return True
     """
     return do_process(
         ["poetry", "run", "pytest", "--cov-config=pyproject.toml"],
@@ -86,9 +103,24 @@ def main() -> int:
         default=False,
     )
     parser.add_argument(
+        "-d",
+        "--docs",
+        action="store_true",
+        default=False,
+        help="Run the docs",
+    )
+    parser.add_argument(
         "-u",
         "--unit-tests",
         "--unit",
+        action="store_true",
+        default=False,
+        help="Run the unit tests",
+    )
+    parser.add_argument(
+        "-p",
+        "--pre-commit",
+        "--pre",
         action="store_true",
         default=False,
         help="Run the unit tests",
@@ -103,11 +135,17 @@ def main() -> int:
     args = parser.parse_args()
     success = True
     try:
-        if success:
-            if not args.unstatic or args.all:
-                success &= run_static()
-            if args.all or args.unit_tests:
-                success &= run_unit()
+        if args.all or args.pre_commit:
+            success &= run_pre_commit()
+
+        if args.all or not args.unstatic:
+            success &= run_static_and_lint()
+
+        if args.all or args.docs:
+            success &= run_docs()
+
+        if args.all or args.unit_tests:
+            success &= run_unit()
     except KeyboardInterrupt:
         return int(not False)
     return int(not success)

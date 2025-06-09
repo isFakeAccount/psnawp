@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  ci:
+    runs-on: codeberg-tiny
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install poetry
+        run: |
+          pipx install poetry
+          echo "/root/.local/bin" >> $GITHUB_PATH
+
+      - name: Create poetry env and install dependencies
+        run: poetry install --with typing,linting
+
+      - name: Run CI
+        run: poetry run python3 pre_push.py

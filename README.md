@@ -14,6 +14,9 @@ Retrieve User Information, Trophies, Game and Store data from the PlayStation Ne
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
 
+> [!IMPORTANT]
+> This project has moved to [Codeberg](https://codeberg.org/YoshikageKira/psnawp). GitHub is now maintained as a **read-only mirror**. Please submit issues, pull requests, and other contributions via the Codeberg repository.
+
 ## How to install
 
 ### From PyPI
@@ -23,9 +26,10 @@ pip install PSNAWP
 ```
 
 ## Important Links
-> PyPI: https://pypi.org/project/PSNAWP/
 >
-> Read the Docs: https://psnawp.readthedocs.io
+> PyPI: <https://pypi.org/project/PSNAWP/>
+>
+> Read the Docs: <https://psnawp.readthedocs.io>
 
 ## Getting Started
 
@@ -43,16 +47,24 @@ To get started you need to obtain npsso <64 character code>. You need to follow 
 ```json
 {"npsso":"<64 character npsso code>"}
 ```
+
 This npsso code will be used in the api for authentication purposes. The refresh token that is generated from npsso lasts about 2 months. After that you have to get a new npsso token. The bot will print a warning if there are less than 3 days left in refresh token expiration.
 
 Following is the quick example on how to use this library
 
 ```py
+from os import getenv
+
+from dotenv import load_dotenv
+
 from psnawp_api import PSNAWP
-from psnawp_api.models import SearchDomain
+from psnawp_api.models.search import SearchDomain
 from psnawp_api.models.trophies import PlatformType
 
-psnawp = PSNAWP("<64 character npsso code>")
+load_dotenv()
+
+
+psnawp = PSNAWP(getenv("NPSSO_CODE", "NPSSO_CODE"))
 
 # Your Personal Account Info
 client = psnawp.me()
@@ -127,9 +139,9 @@ print(f"User Account ID: {user_account_id.online_id}")
 group = psnawp.group(group_id=first_group_id)  # This is the first group ID we got earlier - i.e. the first group in your groups list
 print(group.get_group_information())
 print(group.get_conversation(10))  # Get the last 10 messages in the group
-print(group.send_message("Hello World"))
-print(group.change_name("API Testing 3"))
-# print(group.leave_group()) # Uncomment to leave the group
+group.send_message("Hello World")
+group.change_name("API Testing 3")
+group.leave_group()
 
 # Create a new group with other users - i.e. 'VaultTec-Co' and 'test'
 example_user_2 = psnawp.user(online_id="test")
@@ -142,7 +154,7 @@ search = psnawp.search(search_query="GTA 5", search_domain=SearchDomain.FULL_GAM
 for search_result in search:
     print(search_result["result"]["invariantName"])
 
- ```
+```
 
 **Note: If you want to create multiple instances of psnawp you need to get npsso code from separate PSN accounts. If you generate a new npsso with same account your previous npsso will expire immediately.**
 
