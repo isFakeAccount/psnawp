@@ -1,9 +1,30 @@
 """Provide exception classes for the psnawp package."""
 
+import json
+from typing import Any
+
 
 class PSNAWPError(Exception):
     """Base Exception for all PSNAWP Exceptions."""
 
+    def __init__(
+        self, response: str
+    ) -> None:
+        """Initialize the exception."""
+        self.code: int | None = None
+        self.message: str | None = None
+        self.reference_id: str | None = None
+        try:
+            error: dict[str, dict[str, Any]] = json.loads(response)
+        except json.JSONDecodeError:
+            pass
+        else:
+            err = error.get("error", {})
+            self.reference_id = err.get("referenceId")
+            self.code = err.get("code")
+            self.message = err.get("message")
+
+        super().__init__(self.message or response)
 
 class PSNAWPServerError(PSNAWPError):
     """Exception raised if there is a problem at the server."""
