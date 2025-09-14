@@ -6,7 +6,7 @@ from http import HTTPStatus
 from logging import getLogger
 from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
 
-from pyrate_limiter import Duration, Limiter, LimiterDelayException
+from pyrate_limiter import Limiter, LimiterDelayException
 from pyrate_limiter.buckets.sqlite_bucket import SQLiteBucket
 from requests import Session
 from typing_extensions import NotRequired, Unpack
@@ -137,7 +137,7 @@ class RequestBuilder:
         db_path = get_temp_db_path()
 
         sqlite_bucket = SQLiteBucket.init_from_file(psn_api_rates, db_path=str(db_path))
-        self.limiter = Limiter(sqlite_bucket, raise_when_fail=False, max_delay=Duration.SECOND * 3)
+        self.limiter = Limiter(sqlite_bucket, raise_when_fail=False, max_delay=rate_limit.interval)
 
         self.session = Session()
         self.session.headers.update(self.common_headers)
