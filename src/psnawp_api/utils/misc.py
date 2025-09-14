@@ -10,6 +10,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 from tempfile import gettempdir
+from time import time
 from typing import TYPE_CHECKING, cast
 
 from pycountry import countries
@@ -86,8 +87,7 @@ def parse_npsso_token(npsso_input: str) -> str:
             raise PSNAWPInvalidTokenError('Input JSON is missing the "npsso" key') from exp
     return npsso_input
 
-
-def get_temp_db_path(filename: str = "psnawp_limiter.sqlite") -> Path:
+def get_temp_db_path(filename: str | None = None) -> Path:
     """Create a writable temporary directory and database file.
 
     :param filename: Name of the SQLite database file.
@@ -95,6 +95,9 @@ def get_temp_db_path(filename: str = "psnawp_limiter.sqlite") -> Path:
     :returns: Path to the writable SQLite database.
 
     """
+    if filename is None:
+        filename = f"psnawp_limiter_{time()}.sqlite"
+
     temp_dir = Path(gettempdir()) / f"psnawp-{os.getpid()}"
     temp_dir.mkdir(parents=True, exist_ok=True)
 
