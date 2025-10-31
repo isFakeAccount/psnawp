@@ -27,9 +27,9 @@ requires-python = ">=3.10, <4.0"
 version = "3.0.0"
 
 [tool.poetry.group.typing.dependencies]
-mypy           = { version = "^1.15.0", python = ">=3.11,<4.0.0" }
-pyright        = { version = "^1.1.398", python = ">=3.11,<4.0.0" }
-types-requests = { version = "^2.31.0", python = ">=3.11,<4.0.0" }
+mypy           = { version = "^1.18.2", python = ">=3.11,<4.0.0" }
+pyright        = { version = "^1.1.407", python = ">=3.11,<4.0.0" }
+types-requests = { version = "==2.31.0.6", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.docs.dependencies]
 myst-parser       = { extras = ["linkify"], version = "^4.0.1", python = ">=3.11,<4.0.0" }
@@ -38,16 +38,16 @@ sphinx-book-theme = { version = "^1.1.4", python = ">=3.11,<4.0.0" }
 sphinx-copybutton = { version = "^0.5.2", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.linting.dependencies]
-docstrfmt  = { version = "^1.10.0", python = ">=3.11,<4.0.0" }
-pre-commit = { version = "^4.2.0", python = ">=3.11,<4.0.0" }
-ruff       = { version = "^0.11.2", python = ">=3.11,<4.0.0" }
+docstrfmt  = { version = "^1.11.1", python = ">=3.11,<4.0.0" }
+pre-commit = { version = "^4.3.0", python = ">=3.11,<4.0.0" }
+ruff       = { version = "^0.14.3", python = ">=3.11,<4.0.0" }
 
 [tool.poetry.group.tests.dependencies]
-jsonschema    = { version = "^4.23.0", python = ">=3.10,<4.0.0" }
-pytest        = { version = "^8.3.5", python = ">=3.10,<4.0.0" }
-pytest-cov    = { version = "^6.0.0", python = ">=3.10,<4.0.0" }
+jsonschema    = { version = "^4.25.1", python = ">=3.10,<4.0.0" }
+pytest        = { version = "^8.4.2", python = ">=3.10,<4.0.0" }
+pytest-cov    = { version = "^6.3.0", python = ">=3.10,<4.0.0" }
 pytest-vcr    = { version = "^1.0.2", python = ">=3.10,<4.0.0" }
-python-dotenv = { version = "^1.1.0", python = ">=3.10,<4.0.0" }
+python-dotenv = { version = "^1.2.1", python = ">=3.10,<4.0.0" }
 vcrpy         = { version = "^7.0.0", python = ">=3.10,<4.0.0" }
 
 [project.urls]
