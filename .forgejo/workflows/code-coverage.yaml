@@ -1,4 +1,4 @@
-name: Pytest
+name: code coverage
 
 on:
   pull_request_target:
@@ -6,19 +6,11 @@ on:
       - master
 
 jobs:
-  pytest:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [codeberg-small-lazy]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+  code-coverage:
+    runs-on: codeberg-small-lazy
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python ${{ matrix.python-version }} ${{ matrix.os }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
+      - uses: actions/setup-python@v5
 
       - name: Install poetry
         run: |
@@ -26,12 +18,19 @@ jobs:
           echo "/root/.local/bin" >> $GITHUB_PATH
 
       - name: Install dependencies and build package
-        run: poetry install --with tests
+        run: |
+          poetry install --with tests
 
-      - name: Test with pytest
-        run: poetry run python pre_push.py -nu
+      - name: Build coverage file
+        run: |
+          poetry run pytest --cov-config=pyproject.toml | tee pytest-coverage.txt
         env:
           NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
           USER_NAME: ${{ vars.USER_NAME }}
           FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
           BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}
+
+      - name: Upload coverage reports to Codecov
+        uses: https://github.com/codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

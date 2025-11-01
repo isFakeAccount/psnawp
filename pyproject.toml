@@ -24,7 +24,7 @@ license = { file = "LICENSE.md" }
 name = "psnawp"
 readme = "README.md"
 requires-python = ">=3.10, <4.0"
-version = "3.0.0"
+version = "3.0.1"
 
 [tool.poetry.group.typing.dependencies]
 mypy           = { version = "^1.18.2", python = ">=3.11,<4.0.0" }
