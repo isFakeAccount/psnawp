@@ -6,7 +6,7 @@ from http import HTTPStatus
 from logging import getLogger
 from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
 
-from pyrate_limiter import Limiter, LimiterDelayException
+from pyrate_limiter import Limiter
 from pyrate_limiter.buckets.sqlite_bucket import SQLiteBucket
 from requests import Session
 from typing_extensions import NotRequired, Unpack
@@ -24,7 +24,7 @@ from psnawp_api.core.psnawp_exceptions import (
 from psnawp_api.utils import get_temp_db_path
 
 if TYPE_CHECKING:
-    from pyrate_limiter import Rate
+    from pyrate_limiter.abstracts.rate import Rate
     from requests import Response
     from requests.sessions import (
         RequestsCookieJar,
@@ -132,12 +132,12 @@ class RequestBuilder:
 
         """
         self.common_headers = cast("dict[str, str]", common_headers)
-        psn_api_rates = [rate_limit]
+        self.rate_limit = rate_limit
 
         db_path = get_temp_db_path()
 
-        sqlite_bucket = SQLiteBucket.init_from_file(psn_api_rates, db_path=str(db_path))
-        self.limiter = Limiter(sqlite_bucket, raise_when_fail=False, max_delay=rate_limit.interval)
+        sqlite_bucket = SQLiteBucket.init_from_file([rate_limit], db_path=str(db_path))
+        self.limiter = Limiter(sqlite_bucket)
 
         self.session = Session()
         self.session.headers.update(self.common_headers)
@@ -171,10 +171,9 @@ class RequestBuilder:
             kwargs.get("headers"),
             kwargs.get("data"),
         )
-        try:
-            self.limiter.try_acquire("psnawp-limiter")
-        except LimiterDelayException as err:
-            raise PSNAWPTooManyRequestsError("Rate limit exceeded: too many requests. Please retry again shortly.") from err
+
+        if self.limiter.try_acquire("psnawp-limiter", blocking=False, timeout=self.rate_limit.interval):
+            raise PSNAWPTooManyRequestsError("Rate limit exceeded: too many requests. Please retry again shortly.")
 
         response = self.session.request(method=method, **kwargs)
         request_builder_logger.debug(
