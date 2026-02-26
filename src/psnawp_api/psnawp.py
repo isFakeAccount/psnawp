@@ -5,7 +5,7 @@ from __future__ import annotations
 from random import choice
 from typing import TYPE_CHECKING, Any, Literal, overload
 
-from pyrate_limiter import Duration, Rate
+from pyrate_limiter.abstracts.rate import Duration, Rate
 
 from psnawp_api.core import (
     Authenticator,

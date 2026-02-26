@@ -17,7 +17,7 @@ from psnawp_api.utils import API_PATH, BASE_PATH
 if TYPE_CHECKING:
     from collections.abc import Callable
 
-    from pyrate_limiter import Rate
+    from pyrate_limiter.abstracts.rate import Rate
     from requests import Response
 
     from psnawp_api.core.request_builder import RequestBuilderHeaders, RequestOptions
