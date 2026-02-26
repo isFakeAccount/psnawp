@@ -6,7 +6,7 @@ on:
 
 jobs:
   ci:
-    runs-on: codeberg-tiny
+    runs-on: codeberg-medium-lazy
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
