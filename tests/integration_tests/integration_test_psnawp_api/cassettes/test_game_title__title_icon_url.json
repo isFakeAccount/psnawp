@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -36,31 +36,31 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
                     "Date": [
-                        "Fri, 16 May 2025 03:26:40 GMT"
+                        "Sat, 07 Mar 2026 05:19:14 GMT"
                     ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Cache-Control": [
                         "private"
-                    ],
-                    "Content-Length": [
-                        "1025"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
-                    ]
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "1025"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"titles\": [{\"npTitleId\": \"CUSA03041_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR09412_00\", \"trophyTitleName\": \"Red Dead Redemption 2\", \"trophyTitleDetail\": \"Red Dead Redemption 2\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/E1C7515ADB58B892CCC0BB0D0F94512963E11203.PNG\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"rarestTrophies\": [{\"trophyId\": 2, \"trophyHidden\": true, \"trophyType\": \"bronze\", \"trophyName\": \"Just a Scratch\", \"trophyDetail\": \"Complete 'Enter, Pursued by a Memory'.\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/17BA1A60D9354F58068032916F3B59BE7591B4F6.PNG\", \"trophyRare\": 3, \"trophyEarnedRate\": \"77.1\", \"earned\": true, \"earnedDateTime\": \"2018-12-02T05:27:17Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 1, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 44, \"silver\": 4, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2018-12-02T05:27:19Z\"}]}]}"
+                    "string": "{\"titles\": [{\"npTitleId\": \"CUSA03041_00\", \"trophyTitles\": [{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR09412_00\", \"trophyTitleName\": \"Red Dead Redemption 2\", \"trophyTitleDetail\": \"Red Dead Redemption 2\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/E1C7515ADB58B892CCC0BB0D0F94512963E11203.PNG\", \"hasTrophyGroups\": false, \"trophyGroupCount\": 1, \"rarestTrophies\": [{\"trophyId\": 2, \"trophyHidden\": true, \"trophyType\": \"bronze\", \"trophyName\": \"Just a Scratch\", \"trophyDetail\": \"Complete 'Enter, Pursued by a Memory'.\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/17BA1A60D9354F58068032916F3B59BE7591B4F6.PNG\", \"trophyRare\": 3, \"trophyEarnedRate\": \"76.9\", \"earned\": true, \"earnedDateTime\": \"2018-12-02T05:27:17Z\"}], \"progress\": 1, \"earnedTrophies\": {\"bronze\": 1, \"silver\": 0, \"gold\": 0, \"platinum\": 0}, \"definedTrophies\": {\"bronze\": 44, \"silver\": 4, \"gold\": 3, \"platinum\": 1}, \"lastUpdatedDateTime\": \"2018-12-02T05:27:19Z\"}]}]}"
                 }
             }
         },
@@ -71,7 +71,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -102,26 +102,26 @@
                     "Accept-Ranges": [
                         "bytes"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:26:43 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
+                    "Vary": [
+                        "Accept-Encoding"
                     ],
                     "ETag": [
                         "\"e0cc1d32cd4f2b3c8d4f2ed35e1aa528:1543328653\""
                     ],
-                    "content-length": [
-                        "1532"
-                    ],
-                    "Last-Modified": [
-                        "Tue, 27 Nov 2018 12:19:04 GMT"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:19:17 GMT"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Vary": [
-                        "Accept-Encoding"
+                    "Last-Modified": [
+                        "Tue, 27 Nov 2018 12:19:04 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "content-length": [
+                        "1532"
                     ],
                     "Set-Cookie": "REDACTED"
                 },

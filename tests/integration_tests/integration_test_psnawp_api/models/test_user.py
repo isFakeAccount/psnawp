@@ -53,7 +53,7 @@ def test_user__user_wrong_acc_id(psnawp_fixture: PSNAWP) -> None:
 def test_user__prev_online_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
         user_example = psnawp_fixture.user(online_id="EvangelionKills")
-        assert user_example.online_id == "kerksten"
+        assert user_example.online_id == "smokekitty2002"
 
 
 @pytest.mark.vcr

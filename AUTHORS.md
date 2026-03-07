@@ -10,6 +10,7 @@
 - R @Dev-R
 - Jack Powell @jackjpowell
 - Manu @tr4nt0r
+- misiektoja @misiektoja
 
 # Documentation Contributors
 - andshrew @andshrew
