@@ -7,7 +7,7 @@ on:
 
 jobs:
   code-coverage:
-    runs-on: codeberg-medium-lazy
+    runs-on: codeberg-medium
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
