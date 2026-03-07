@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,18 +33,29 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
                     ],
                     "Cache-Control": [
                         "private"
                     ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:20:31 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -52,24 +63,13 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:44:58 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "192"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"fa78d4ccb00acce34b750ba034c0db8b47feaa86-196\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"7a7e6d4c8ff6c791d4f4b259573c6ace5b790f16-431\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
@@ -80,7 +80,7 @@
                 "body": "{\"invitees\": [{\"accountId\": \"5007681186655854753\"}]}",
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -111,15 +111,26 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:20:34 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -127,24 +138,13 @@
                     "Connection": [
                         "close"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:45:02 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "140"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"25853856-3208-11f0-90f5-4d9e837481e0\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"5e67290f-19e5-11f1-9782-c360d5a699d7\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
                 }
             }
         }

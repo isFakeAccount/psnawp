@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,31 +33,31 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:24:46 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Content-Length": [
                         "123"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:32:01 GMT"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"54941a79-3206-11f0-b6e1-7d408de9a42d\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"f4796eb4-19e5-11f1-84b9-a5ea073af5fe\", \"code\": 2240526, \"message\": \"Not permitted by access control\"}}"
                 }
             }
         }

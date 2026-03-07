@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -36,31 +36,31 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
+                    "Vary": [
+                        "Accept-Language"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:25:33 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
                     "Cache-Control": [
                         "max-age=300"
-                    ],
-                    "Content-Length": [
-                        "1446"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Vary": [
-                        "Accept-Language"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:17:33 GMT"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
-                    ]
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "1446"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"npServiceName\": \"trophy\", \"npCommunicationId\": \"NPWR15179_00\", \"trophySetVersion\": \"01.04\", \"trophyTitleName\": \"RESIDENT EVIL 2\", \"trophyTitleDetail\": \"RESIDENT EVIL 2\", \"trophyTitleIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG\", \"trophyTitlePlatform\": \"PS4\", \"definedTrophies\": {\"bronze\": 30, \"silver\": 10, \"gold\": 4, \"platinum\": 1}, \"trophyGroups\": [{\"trophyGroupId\": \"default\", \"trophyGroupName\": \"RESIDENT EVIL 2\", \"trophyGroupDetail\": \"RESIDENT EVIL 2\", \"trophyGroupIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/BAFEDE2151A73E1FAFE59B8575EC1CF99F6A75F6.PNG\", \"definedTrophies\": {\"bronze\": 28, \"silver\": 9, \"gold\": 4, \"platinum\": 1}}, {\"trophyGroupId\": \"001\", \"trophyGroupName\": \"The Ghost Survivors\", \"trophyGroupDetail\": \"The Ghost Survivors\", \"trophyGroupIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/FB76E0DCB21411CED6788A7102640D817E8AE9BC.PNG\", \"definedTrophies\": {\"bronze\": 1, \"silver\": 1, \"gold\": 0, \"platinum\": 0}}, {\"trophyGroupId\": \"002\", \"trophyGroupName\": \"Another Survivor\", \"trophyGroupDetail\": \"Another Survivor\", \"trophyGroupIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15179_00_004E1F39C12A2C6264BA2A0546D9234F56889DCC5F/1A3F3ECC12830FA7CDCC88F8DADD69EC396DCE3A.PNG\", \"definedTrophies\": {\"bronze\": 1, \"silver\": 0, \"gold\": 0, \"platinum\": 0}}]}"
@@ -74,7 +74,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -102,28 +102,28 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
                     "Date": [
-                        "Fri, 16 May 2025 03:25:36 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Content-Length": [
-                        "110"
+                        "Sat, 07 Mar 2026 05:17:36 GMT"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
-                    ]
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "110"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"6efe9a58-3205-11f0-b6e1-7d408de9a42d\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"f436dc84-19e4-11f1-ab81-6b4a6d5825fa\", \"code\": 2240525, \"message\": \"Resource not found\"}}"
                 }
             }
         }

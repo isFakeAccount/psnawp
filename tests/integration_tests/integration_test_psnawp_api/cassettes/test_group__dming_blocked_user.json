@@ -8,7 +8,7 @@
                 "body": "{\"invitees\": [{\"accountId\": \"5007681186655854753\"}]}",
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -39,15 +39,26 @@
                     "message": "Forbidden"
                 },
                 "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:20:04 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -55,24 +66,13 @@
                     "Connection": [
                         "close"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:44:31 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "140"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"135e4e33-3208-11f0-bc8a-0104c57d0080\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"4c4680df-19e5-11f1-8ec5-41df1f9d5a53\", \"code\": 2286592, \"message\": \"Request is rejected due to all targets' settings\"}}"
                 }
             }
         }

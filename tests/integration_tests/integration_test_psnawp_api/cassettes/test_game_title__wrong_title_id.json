@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -36,28 +36,28 @@
                     "Server": [
                         "Apache"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
                     "Date": [
-                        "Fri, 16 May 2025 03:26:01 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Content-Length": [
-                        "137"
+                        "Sat, 07 Mar 2026 05:18:34 GMT"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
                     "X-Content-Type-Options": [
                         "nosniff"
-                    ]
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "137"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"7d81a945-3205-11f0-bba6-57e1c9251d04\", \"code\": 2240525, \"message\": \"Resource not found (npTitleId='SSSA01325_00')\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"16c3ed1e-19e5-11f1-afd2-57e4bc1d548a\", \"code\": 2240525, \"message\": \"Resource not found (npTitleId='SSSA01325_00')\"}}"
                 }
             }
         }

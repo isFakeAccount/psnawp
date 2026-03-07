@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,18 +33,29 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
                     ],
                     "Cache-Control": [
                         "private"
                     ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+                    ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:20:19 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -52,35 +63,24 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:44:46 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "192"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"groups\": [{\"groupId\": \"fa78d4ccb00acce34b750ba034c0db8b47feaa86-196\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
+                    "string": "{\"groups\": [{\"groupId\": \"7a7e6d4c8ff6c791d4f4b259573c6ace5b790f16-431\", \"groupType\": 1, \"members\": [{\"accountId\": \"2721516955383551246\", \"onlineId\": \"VaultTec-Co\"}]}], \"previousOffset\": 0, \"nextOffset\": 1}"
                 }
             }
         },
         {
             "request": {
                 "method": "DELETE",
-                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/fa78d4ccb00acce34b750ba034c0db8b47feaa86-196/members/5007681186655854753",
+                "uri": "https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/7a7e6d4c8ff6c791d4f4b259573c6ace5b790f16-431/members/5007681186655854753",
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -108,15 +108,26 @@
                     "message": "Not Found"
                 },
                 "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
                     ],
                     "Access-Control-Allow-Headers": [
                         "Authorization, Content-Type"
                     ],
-                    "Set-Cookie": "REDACTED",
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:20:22 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
@@ -124,24 +135,13 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:44:49 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Content-Length": [
                         "167"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH, OPTIONS"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"error\": {\"referenceId\": \"1e3f0977-3208-11f0-b5d0-57d62a18d46c\", \"code\": 2285581, \"message\": \"Resource not found (groupId='fa78d4ccb00acce34b750ba034c0db8b47feaa86-196')\"}}"
+                    "string": "{\"error\": {\"referenceId\": \"5729fa6c-19e5-11f1-a0e4-afc8b6dab29c\", \"code\": 2285581, \"message\": \"Resource not found (groupId='7a7e6d4c8ff6c791d4f4b259573c6ace5b790f16-431')\"}}"
                 }
             }
         }

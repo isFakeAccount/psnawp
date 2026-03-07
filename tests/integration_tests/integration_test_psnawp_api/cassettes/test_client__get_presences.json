@@ -4,194 +4,11 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr",
-                "body": null,
-                "headers": {
-                    "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Accept-Language": [
-                        "en-US,en;q=0.9"
-                    ],
-                    "Country": [
-                        "US"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ],
-                    "X-Requested-With": [
-                        "com.scee.psxandroid"
-                    ],
-                    "Sec-Fetch-Dest": [
-                        "document"
-                    ],
-                    "Sec-Fetch-Mode": [
-                        "navigate"
-                    ],
-                    "Sec-Fetch-Site": [
-                        "same-site"
-                    ],
-                    "Sec-Fetch-User": [
-                        "?1"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 302,
-                    "message": "Moved Temporarily"
-                },
-                "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:38:50 GMT"
-                    ],
-                    "X-XSS-Protection": [
-                        "1; mode=block"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "0ed0d51909feac03acd8c15bde90f3db"
-                    ],
-                    "Location": [
-                        "com.scee.psxandroid.scecompcall://redirect/?code=v3.p25vjB&cid=00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Cache-Control": [
-                        "no-cache, no-store, max-age=0, must-revalidate"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "0"
-                    ],
-                    "X-RequestId": [
-                        "0ed0d51909feac03acd8c15bde90f3db"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=31536000 ; includeSubDomains"
-                    ],
-                    "Expires": [
-                        "0"
-                    ],
-                    "X-Frame-Options": [
-                        "DENY"
-                    ]
-                },
-                "body": {
-                    "string": ""
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "POST",
-                "uri": "https://ca.account.sony.com/api/authz/v3/oauth/token",
-                "body": "cid=00000000-0000-0000-0000-a7387d1ecd9b&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt",
-                "headers": {
-                    "User-Agent": [
-                        "com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Accept-Language": [
-                        "en-US,en;q=0.9"
-                    ],
-                    "Country": [
-                        "US"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Content-Length": [
-                        "207"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
-                },
-                "headers": {
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "X-Psn-Correlation-Id": [
-                        "00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:38:53 GMT"
-                    ],
-                    "Server": [
-                        "nginx"
-                    ],
-                    "X-CorrelationId": [
-                        "00000000-0000-0000-0000-a7387d1ecd9b"
-                    ],
-                    "Cache-Control": [
-                        "no-store"
-                    ],
-                    "Content-Length": [
-                        "3972"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json;charset=UTF-8"
-                    ],
-                    "X-Psn-Request-Id": [
-                        "d9c2398c9d46d10be517271149c5db54"
-                    ],
-                    "X-RequestId": [
-                        "d9c2398c9d46d10be517271149c5db54"
-                    ],
-                    "Set-Cookie": "REDACTED"
-                },
-                "body": {
-                    "string": "{\"access_token\": \"REDACTED\", \"token_type\": \"bearer\", \"expires_in\": 3599, \"scope\": \"psn:mobile.v2.core psn:clientapp\", \"id_token\": \"REDACTED\", \"refresh_token\": \"REDACTED\", \"refresh_token_expires_in\": 5183999}"
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "GET",
                 "uri": "https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000",
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -216,22 +33,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Fri, 16 May 2025 03:38:56 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
                     "Server": [
                         "Apache"
                     ],
@@ -241,18 +42,34 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0231961767270268914"
-                    ],
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:16:41 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0495898503386513785"
                     ],
                     "Content-Length": [
                         "97"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"friends\": [\"5361973517281706660\", \"940512162723934331\", \"4273405838384737823\"], \"totalItemCount\": 3}"
@@ -266,7 +83,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -291,22 +108,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Fri, 16 May 2025 03:38:59 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
                     "Server": [
                         "Apache"
                     ],
@@ -316,18 +117,34 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0607514513830205624"
-                    ],
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:16:44 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0937191122793221571"
                     ],
                     "Content-Length": [
                         "528"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"onlineId\": \"Rodders1013\", \"aboutMe\": \"F83C\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0057_s.png\"}, {\"size\": \"xl\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_xl/SCEI/I0057_XL.png\"}, {\"size\": \"l\", \"url\": \"http://static-resource.np.community.playstation.net/avatar/SCEI/I0057.png\"}, {\"size\": \"m\", \"url\": \"http://static-resource.np.community.playstation.net/avatar_m/SCEI/I0057_m.png\"}], \"languages\": [\"en-US\"], \"isPlus\": true, \"isOfficiallyVerified\": false, \"isMe\": false}"
@@ -341,7 +158,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -366,22 +183,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Fri, 16 May 2025 03:39:02 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
                     "Server": [
                         "Apache"
                     ],
@@ -391,18 +192,34 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0510415706116862216"
-                    ],
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:16:47 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0942994893574842399"
                     ],
                     "Content-Length": [
                         "693"
                     ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"onlineId\": \"SLUMP-lucid\", \"aboutMe\": \"u butt\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_s.png\"}, {\"size\": \"xl\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_xl.png\"}, {\"size\": \"l\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_l.png\"}, {\"size\": \"m\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_m.png\"}], \"languages\": [\"ru-RU\"], \"isPlus\": true, \"isOfficiallyVerified\": false, \"isMe\": false}"
@@ -416,7 +233,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -441,22 +258,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Fri, 16 May 2025 03:39:05 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
                     "Server": [
                         "Apache"
                     ],
@@ -466,21 +267,37 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0408502887363916381"
-                    ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Content-Length": [
-                        "792"
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:16:50 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
-                    ]
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0040860810464522742"
+                    ],
+                    "Content-Length": [
+                        "791"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"onlineId\": \"DaUglyDucklin\", \"aboutMe\": \"Go get bent. Ya'll are planks. Casablumkin. G.G. Switching to PC, Join me friends, No one left behind.\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_s.png\"}, {\"size\": \"xl\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_xl.png\"}, {\"size\": \"l\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_l.png\"}, {\"size\": \"m\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_m.png\"}], \"languages\": [\"en-US\"], \"isPlus\": false, \"isOfficiallyVerified\": false, \"isMe\": false}"
+                    "string": "{\"onlineId\": \"DaUglyDucklin\", \"aboutMe\": \"Go get bent. Ya'll are planks. Casablumkin. G.G. Switching to PC, Join me friends, No one left behind.\", \"avatars\": [{\"size\": \"s\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_s.png\"}, {\"size\": \"xl\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_xl.png\"}, {\"size\": \"l\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_l.png\"}, {\"size\": \"m\", \"url\": \"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_m.png\"}], \"languages\": [\"en-US\"], \"isPlus\": true, \"isOfficiallyVerified\": false, \"isMe\": false}"
                 }
             }
         },
@@ -491,7 +308,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -516,22 +333,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Set-Cookie": "REDACTED",
-                    "Date": [
-                        "Fri, 16 May 2025 03:39:08 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "GET, PUT, POST, DELETE, PATCH"
-                    ],
                     "Server": [
                         "Apache"
                     ],
@@ -541,21 +342,37 @@
                     "Cache-Control": [
                         "private"
                     ],
-                    "X-Psn-Track-Id": [
-                        "0263661810504793682"
-                    ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Content-Length": [
-                        "715"
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "GET, PUT, POST, DELETE, PATCH"
+                    ],
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled, X-Psn-Span-Id, X-Psn-Trace-Id"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:16:54 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=63072000; includeSubDomains"
-                    ]
+                    ],
+                    "X-Psn-Track-Id": [
+                        "0995241837162600629"
+                    ],
+                    "Content-Length": [
+                        "597"
+                    ],
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"basicPresences\": [{\"accountId\": \"5361973517281706660\", \"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-04T18:19:05.288Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"PS5\", \"lastOnlineDate\": \"2025-05-04T18:19:05.288Z\"}}, {\"accountId\": \"940512162723934331\", \"availability\": \"availableToPlay\", \"primaryPlatformInfo\": {\"onlineStatus\": \"online\", \"platform\": \"PS5\"}, \"gameTitleInfoList\": [{\"npTitleId\": \"PPSA01649_00\", \"titleName\": \"Call of Duty\\u00ae\", \"format\": \"PS5\", \"launchPlatform\": \"PS5\"}]}, {\"accountId\": \"4273405838384737823\", \"availability\": \"unavailable\", \"lastAvailableDate\": \"2025-05-07T11:16:15.707Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"PS4\", \"lastOnlineDate\": \"2025-05-07T11:16:15.707Z\"}}]}"
+                    "string": "{\"basicPresences\": [{\"accountId\": \"5361973517281706660\", \"availability\": \"unavailable\", \"lastAvailableDate\": \"2026-03-01T10:37:29.040Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"PS5\", \"lastOnlineDate\": \"2026-03-01T10:37:29.040Z\"}}, {\"accountId\": \"940512162723934331\", \"availability\": \"availableToPlay\", \"primaryPlatformInfo\": {\"onlineStatus\": \"online\", \"platform\": \"PS5\"}}, {\"accountId\": \"4273405838384737823\", \"availability\": \"unavailable\", \"lastAvailableDate\": \"2026-02-04T08:17:22.856Z\", \"primaryPlatformInfo\": {\"onlineStatus\": \"offline\", \"platform\": \"PS4\", \"lastOnlineDate\": \"2026-02-04T08:17:22.856Z\"}}]}"
                 }
             }
         }

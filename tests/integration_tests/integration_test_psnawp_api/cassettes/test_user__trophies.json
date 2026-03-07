@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,35 +33,35 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
-                    ],
-                    "Content-Length": [
-                        "70"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:32:04 GMT"
+                    "Server": [
+                        "Apache"
                     ],
                     "Cache-Control": [
                         "no-store"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:24:48 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "70"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
@@ -77,7 +77,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -102,9 +102,26 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Vary": [
                         "Accept-Language"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:24:52 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -112,24 +129,7 @@
                     "Content-Length": [
                         "3355"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:32:08 GMT"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Cache-Control": [
-                        "max-age=300"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"trophySetVersion\": \"01.07\", \"hasTrophyGroups\": true, \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Platinum Trophy\", \"trophyDetail\": \"Collect all other 50 Trophies for this Trophy\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Reclamation Day!\", \"trophyDetail\": \"Leave Vault 76\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/E357837D8A934CCAD921E371EF66F39445CED7F8.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"First Contact\", \"trophyDetail\": \"Complete \\\"First Contact\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/9CABD84E5198764E806C83244289B344BD1A98AB.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Final Departure\", \"trophyDetail\": \"Complete \\\"Final Departure\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/5760B2670724FE99DD3E0D6B2E6381A1011365B5.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Second Helpings\", \"trophyDetail\": \"Complete \\\"Second Helpings\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/DC1AE39C97314E70706F38C4CB0F57E31088F474.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Into the Fire \", \"trophyDetail\": \"Complete \\\"Into the Fire\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F10B8375ED1C0F41F825D5BF2E653390A324CE9E.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Recruitment Blues\", \"trophyDetail\": \"Complete \\\"Recruitment Blues\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/8BE786B0CA19E566DBA66EB923499A81AA77D881.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Heart of the Enemy\", \"trophyDetail\": \"Complete \\\"Heart of the Enemy\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/3D11BECC455D7C459405FE1C9A663AC66AA61742.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Key to the Past\", \"trophyDetail\": \"Complete \\\"Key to the Past\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F7363A51DCD6499A0B261B458C695E032DE050FD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Coming to Fruition\", \"trophyDetail\": \"Complete \\\"Coming to Fruition\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/0435C1FDD94507311D846E7A3498C70F8EA9FC60.PNG\", \"trophyGroupId\": \"default\"}], \"nextOffset\": 10, \"totalItemCount\": 51}"
@@ -143,7 +143,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -168,9 +168,26 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
                     "Vary": [
                         "Accept-Language"
+                    ],
+                    "Cache-Control": [
+                        "max-age=300"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:24:55 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -178,24 +195,7 @@
                     "Content-Length": [
                         "3355"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:32:11 GMT"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Cache-Control": [
-                        "max-age=300"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
                     "string": "{\"trophySetVersion\": \"01.07\", \"hasTrophyGroups\": true, \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"trophyType\": \"platinum\", \"trophyName\": \"Platinum Trophy\", \"trophyDetail\": \"Collect all other 50 Trophies for this Trophy\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/FDEA5B4032CA08AAF3C305EDFEBAA7CA11B8FA72.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Reclamation Day!\", \"trophyDetail\": \"Leave Vault 76\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/E357837D8A934CCAD921E371EF66F39445CED7F8.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"First Contact\", \"trophyDetail\": \"Complete \\\"First Contact\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/9CABD84E5198764E806C83244289B344BD1A98AB.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Final Departure\", \"trophyDetail\": \"Complete \\\"Final Departure\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/5760B2670724FE99DD3E0D6B2E6381A1011365B5.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Second Helpings\", \"trophyDetail\": \"Complete \\\"Second Helpings\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/DC1AE39C97314E70706F38C4CB0F57E31088F474.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Into the Fire \", \"trophyDetail\": \"Complete \\\"Into the Fire\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F10B8375ED1C0F41F825D5BF2E653390A324CE9E.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Recruitment Blues\", \"trophyDetail\": \"Complete \\\"Recruitment Blues\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/8BE786B0CA19E566DBA66EB923499A81AA77D881.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Heart of the Enemy\", \"trophyDetail\": \"Complete \\\"Heart of the Enemy\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/3D11BECC455D7C459405FE1C9A663AC66AA61742.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"trophyType\": \"silver\", \"trophyName\": \"Key to the Past\", \"trophyDetail\": \"Complete \\\"Key to the Past\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/F7363A51DCD6499A0B261B458C695E032DE050FD.PNG\", \"trophyGroupId\": \"default\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"trophyType\": \"bronze\", \"trophyName\": \"Coming to Fruition\", \"trophyDetail\": \"Complete \\\"Coming to Fruition\\\"\", \"trophyIconUrl\": \"https://image.api.playstation.com/trophy/np/NPWR15509_00_00FEDEFDF75690C37D4051FC8F80462BB7C362282B/0435C1FDD94507311D846E7A3498C70F8EA9FC60.PNG\", \"trophyGroupId\": \"default\"}], \"nextOffset\": 10, \"totalItemCount\": 51}"
@@ -209,7 +209,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -234,34 +234,34 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Set-Cookie": "REDACTED",
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:24:58 GMT"
+                    ],
+                    "Cache-Control": [
+                        "private"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=63072000; includeSubDomains"
+                    ],
                     "Connection": [
                         "keep-alive"
                     ],
                     "Content-Length": [
                         "1848"
                     ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:32:14 GMT"
-                    ],
-                    "Strict-Transport-Security": [
-                        "max-age=63072000; includeSubDomains"
-                    ],
-                    "Cache-Control": [
-                        "private"
-                    ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Server": [
-                        "Apache"
-                    ]
+                    "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"trophySetVersion\": \"01.07\", \"hasTrophyGroups\": true, \"lastUpdatedDateTime\": \"2020-11-28T22:55:19Z\", \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-14T06:13:04Z\", \"trophyType\": \"bronze\", \"trophyRare\": 3, \"trophyEarnedRate\": \"83.3\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-14T06:44:08Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"47.1\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-15T11:12:08Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"33.9\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-15T02:30:34Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"41.4\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-12-17T17:18:13Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"22.1\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-05-28T22:46:16Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"10.7\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-06-02T13:05:58Z\", \"trophyType\": \"silver\", \"trophyRare\": 0, \"trophyEarnedRate\": \"4.6\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-02-16T16:05:42Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"13.4\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-05-19T18:01:53Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"11.0\"}], \"rarestTrophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\"}], \"nextOffset\": 10, \"totalItemCount\": 51}"
+                    "string": "{\"trophySetVersion\": \"01.07\", \"hasTrophyGroups\": true, \"lastUpdatedDateTime\": \"2020-11-28T22:55:19Z\", \"trophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\"}, {\"trophyId\": 1, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-14T06:13:04Z\", \"trophyType\": \"bronze\", \"trophyRare\": 3, \"trophyEarnedRate\": \"83.0\"}, {\"trophyId\": 2, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-14T06:44:08Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"45.8\"}, {\"trophyId\": 3, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-15T11:12:08Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"32.9\"}, {\"trophyId\": 4, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-11-15T02:30:34Z\", \"trophyType\": \"bronze\", \"trophyRare\": 2, \"trophyEarnedRate\": \"40.3\"}, {\"trophyId\": 5, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2018-12-17T17:18:13Z\", \"trophyType\": \"silver\", \"trophyRare\": 2, \"trophyEarnedRate\": \"21.6\"}, {\"trophyId\": 6, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-05-28T22:46:16Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"10.6\"}, {\"trophyId\": 7, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-06-02T13:05:58Z\", \"trophyType\": \"silver\", \"trophyRare\": 0, \"trophyEarnedRate\": \"4.5\"}, {\"trophyId\": 8, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-02-16T16:05:42Z\", \"trophyType\": \"silver\", \"trophyRare\": 1, \"trophyEarnedRate\": \"13.3\"}, {\"trophyId\": 9, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2019-05-19T18:01:53Z\", \"trophyType\": \"bronze\", \"trophyRare\": 1, \"trophyEarnedRate\": \"10.9\"}], \"rarestTrophies\": [{\"trophyId\": 0, \"trophyHidden\": false, \"earned\": true, \"earnedDateTime\": \"2020-11-22T17:51:30Z\", \"trophyType\": \"platinum\", \"trophyRare\": 0, \"trophyEarnedRate\": \"1.0\"}], \"nextOffset\": 10, \"totalItemCount\": 51}"
                 }
             }
         }

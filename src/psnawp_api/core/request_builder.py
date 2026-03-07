@@ -172,9 +172,7 @@ class RequestBuilder:
             kwargs.get("data"),
         )
 
-        if not self.limiter.try_acquire("psnawp-limiter"):
-            raise PSNAWPTooManyRequestsError("Rate limit exceeded: too many requests. Please retry again shortly.")
-
+        self.limiter.try_acquire("psnawp-limiter")
         response = self.session.request(method=method, **kwargs)
         request_builder_logger.debug(
             "Received response: status_code=%d, headers=%s, body=%s",

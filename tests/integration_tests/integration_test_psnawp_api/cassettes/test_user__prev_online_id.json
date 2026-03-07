@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86 Build/RSR1.201013.001; wv)             AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+                        "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,40 +33,40 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
-                    ],
-                    "Content-Length": [
-                        "105"
-                    ],
-                    "Date": [
-                        "Fri, 16 May 2025 03:28:40 GMT"
+                    "Server": [
+                        "Apache"
                     ],
                     "Cache-Control": [
                         "no-store"
                     ],
-                    "X-Content-Type-Options": [
-                        "nosniff"
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Access-Control-Allow-Methods": [
                         "GET, PUT, POST, DELETE, OPTIONS"
                     ],
-                    "Content-Type": [
-                        "application/json"
+                    "Access-Control-Allow-Headers": [
+                        "Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language, If-None-Match"
                     ],
-                    "Server": [
-                        "Apache"
+                    "Date": [
+                        "Sat, 07 Mar 2026 05:21:44 GMT"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "111"
                     ],
                     "Set-Cookie": "REDACTED"
                 },
                 "body": {
-                    "string": "{\"profile\": {\"onlineId\": \"EvangelionKills\", \"accountId\": \"6074310610488045645\", \"currentOnlineId\": \"kerksten\"}}"
+                    "string": "{\"profile\": {\"onlineId\": \"EvangelionKills\", \"accountId\": \"6074310610488045645\", \"currentOnlineId\": \"smokekitty2002\"}}"
                 }
             }
         }
