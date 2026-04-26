@@ -1,6 +1,25 @@
 """Contains datatypes for group messaging endpoint."""
 
+from __future__ import annotations
+
+from enum import Enum
 from typing import TypedDict
+
+
+class MessageType(Enum):
+    """Enumeration of possible message types in a PSN group."""
+
+    AUDIO = 1011
+    IMAGE = 3
+    STICKER = 1013
+    TEXT = 1
+    VIDEO = 210
+    UNKNOWN = -1
+
+    @classmethod
+    def _missing_(cls, value: object) -> MessageType:
+        _ = value
+        return cls.UNKNOWN
 
 
 class MessageResponse(TypedDict):
@@ -56,7 +75,7 @@ class LatestMessage(TypedDict):
     alternativeMessageType: int
     body: str
     createdTimestamp: str
-    messageType: int
+    messageType: MessageType
     messageUid: str
     sender: Sender
 

@@ -181,6 +181,9 @@ class Group:
 
         :returns: A dict containing info similar to what is shown below:
 
+        :raises PSNAWPMediaTypeError: If there is an IO error or the media type does not meet the requirements (e.g.
+            file size, file type).
+
         .. code-block:: json
 
             {

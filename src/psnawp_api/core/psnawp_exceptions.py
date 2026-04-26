@@ -72,5 +72,5 @@ class PSNAWPTooManyRequestsError(PSNAWPClientError):
     """Exception raised if client sends too many requests."""
 
 
-class PSNAWPMediaTypeError(PSNAWPError):
+class PSNAWPMediaTypeError(PSNAWPClientError):
     """Exception raised when wrong or invalid media type is provided."""
