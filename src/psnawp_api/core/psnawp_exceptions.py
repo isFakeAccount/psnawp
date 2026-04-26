@@ -70,3 +70,7 @@ class PSNAWPNotAllowedError(PSNAWPClientError):
 
 class PSNAWPTooManyRequestsError(PSNAWPClientError):
     """Exception raised if client sends too many requests."""
+
+
+class PSNAWPMediaTypeError(PSNAWPError):
+    """Exception raised when wrong or invalid media type is provided."""

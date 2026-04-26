@@ -51,6 +51,7 @@ API_PATH: Final[dict[str, str]] = {
     "invite_members": "/groups/{group_id}/invitees",
     "kick_member": "/groups/{group_id}/members/{account_id}",
     "send_group_message": "/groups/{group_id}/threads/{group_id}/messages",
+    "resources": "/groups/{group_id}/resources",
     "conversation": "/members/me/groups/{group_id}/threads/{group_id}/messages",
     "leave_group": "/groups/{group_id}/members/me",
     # Game Title Details

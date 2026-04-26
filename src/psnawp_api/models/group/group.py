@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 from typing_extensions import Self
@@ -9,6 +10,7 @@ from typing_extensions import Self
 from psnawp_api.core import (
     PSNAWPBadRequestError,
     PSNAWPForbiddenError,
+    PSNAWPMediaTypeError,
     PSNAWPNotFoundError,
 )
 from psnawp_api.utils import API_PATH, BASE_PATH
@@ -17,7 +19,7 @@ if TYPE_CHECKING:
     from collections.abc import Iterable
 
     from psnawp_api.core import Authenticator
-    from psnawp_api.models.group.group_datatypes import GroupDetails, MessageResponse
+    from psnawp_api.models.group.group_datatypes import GroupDetails, MessageResponse, ResourceResponse
     from psnawp_api.models.user import User
 
 
@@ -171,6 +173,86 @@ class Group:
         ).json()
 
         return response
+
+    def send_image(self, media: str | Path | bytes) -> MessageResponse:
+        """Sends an image in the group.
+
+        :param media: A path, a Path object or bytes of the media to post
+
+        :returns: A dict containing info similar to what is shown below:
+
+        .. code-block:: json
+
+            {
+                "messageUid": "1#425961448584099",
+                "createdTimestamp": "1663911908531"
+            }
+
+        """
+        if isinstance(media, (str, Path)):
+            media = Path(media)
+            if not media.is_file():
+                raise PSNAWPMediaTypeError(f"Media file not found at: {media}")
+            data = media.read_bytes()
+        else:
+            data = media
+
+        if len(data) > (1024 * 1024):
+            raise PSNAWPMediaTypeError("Maximum allowed upload filesize is 1 MiB")
+
+        if (content_type := self.get_content_type_from_magic_number(data)) is None:
+            raise PSNAWPMediaTypeError("Unsupported media type")
+
+        resource = self._upload_resource(data, content_type)
+
+        response: MessageResponse = self.authenticator.post(
+            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['send_group_message'].format(group_id=self.group_id)}",
+            json={"messageType": 3, "messageDetail": {"imageMessageDetail": {"resourceId": resource["resourceId"]}}},
+        ).json()
+        return response
+
+    def _upload_resource(self, data: bytes, content_type: str) -> ResourceResponse:
+        """Upload a media resource to be used in a group message.
+
+        :param data: bytes of the resource to upload
+        :param content_type: the content type, e.g. image/jpeg
+
+        :returns: A dict containing the assigned resource ID
+
+        .. code-block:: json
+
+            {
+                "resourceId": "9967c0cb60ae27d15ab433517e967264500e7d78-802_message_454967187044506_1777215576345"
+            }
+
+        """
+        response: ResourceResponse = self.authenticator.post(
+            url=f"{BASE_PATH['gaming_lounge']}{API_PATH['resources'].format(group_id=self.group_id)}",
+            data=data,
+            headers={
+                "Content-Type": content_type,
+            },
+        ).json()
+        return response
+
+    def get_resource(self, resource_id: str) -> tuple[bytes, str]:
+        """Get a media resource from it's resource ID."""
+        response = self.authenticator.get(url=f"{BASE_PATH['gaming_lounge']}{API_PATH['resources'].format(group_id=self.group_id)}/{resource_id}")
+
+        return response.content, response.headers["Content-Type"]
+
+    @staticmethod
+    def get_content_type_from_magic_number(data: bytes) -> str | None:
+        """Maps the magic number to content type."""
+        return {
+            b"\x89PNG": "image/png",
+            b"\xff\xd8\xff\xdb": "image/jpeg",
+            b"\xff\xd8\xff\xe0": "image/jpeg",
+            b"\xff\xd8\xff\xed": "image/jpeg",
+            b"\xff\xd8\xff\xee": "image/jpeg",
+            b"\xff\xd8\xff\xe1": "image/jpeg",
+            b"\xff\xd8\xff\xe2": "image/jpeg",
+        }.get(data[:4])
 
     def get_conversation(self, limit: int = 20) -> dict[str, Any]:
         """Gets the conversations in a group.

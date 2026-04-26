@@ -10,6 +10,12 @@ class MessageResponse(TypedDict):
     createdTimestamp: str
 
 
+class ResourceResponse(TypedDict):
+    """Represents the response metadata for a sent resource."""
+
+    resourceId: str
+
+
 class NotificationSetting(TypedDict):
     """User-specific notification settings for a group."""
 
