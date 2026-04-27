@@ -1,0 +1,290 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000
+  response:
+    body:
+      string: '{"friends": ["5361973517281706660", "940512162723934331", "4273405838384737823"],
+        "totalItemCount": 3}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '97'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:30 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0659615561964047468
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5361973517281706660/profiles
+  response:
+    body:
+      string: '{"onlineId": "Rodders1013", "aboutMe": "F83C", "avatars": [{"size":
+        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0057_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/SCEI/I0057_XL.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/SCEI/I0057.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/SCEI/I0057_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '528'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:33 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0709278115105095032
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/940512162723934331/profiles
+  response:
+    body:
+      string: '{"onlineId": "SLUMP-lucid", "aboutMe": "u butt", "avatars": [{"size":
+        "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_m.png"}],
+        "languages": ["ru-RU"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '693'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:36 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0402510168830987707
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4273405838384737823/profiles
+  response:
+    body:
+      string: '{"onlineId": "DaUglyDucklin", "aboutMe": "Go get bent. Ya''ll are planks.
+        Casablumkin. G.G. Switching to PC, Join me friends, No one left behind.",
+        "avatars": [{"size": "s", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_s.png"},
+        {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_xl.png"},
+        {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_l.png"},
+        {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_m.png"}],
+        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '791'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:39 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0990707544340281289
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v2/internal/users//basicPresences?accountIds=5361973517281706660%2C940512162723934331%2C4273405838384737823&platforms=PS4%2CPS5%2CMOBILE_APP%2CPSPC&type=primary&withOwnGameTitleInfo=true
+  response:
+    body:
+      string: '{"basicPresences": [{"accountId": "5361973517281706660", "availability":
+        "unavailable", "lastAvailableDate": "2026-04-26T18:32:13.322Z", "primaryPlatformInfo":
+        {"onlineStatus": "offline", "platform": "PS5", "lastOnlineDate": "2026-04-26T18:32:13.322Z"}},
+        {"accountId": "940512162723934331", "availability": "unavailable", "lastAvailableDate":
+        "2026-04-24T09:29:16.993Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "PS5", "lastOnlineDate": "2026-04-24T09:29:16.993Z"}}, {"accountId":
+        "4273405838384737823", "availability": "unavailable", "lastAvailableDate":
+        "2026-02-04T08:17:22.856Z", "primaryPlatformInfo": {"onlineStatus": "offline",
+        "platform": "PS4", "lastOnlineDate": "2026-02-04T08:17:22.856Z"}}]}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '685'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:42 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0898289902320627573
+    status:
+      code: 200
+      message: OK
+version: 1

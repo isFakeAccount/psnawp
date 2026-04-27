@@ -1,0 +1,104 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:23:54 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-CorrelationId:
+      - afba19a9-2094-4ac1-98df-0778ed05e74f
+      X-Psn-Correlation-Id:
+      - afba19a9-2094-4ac1-98df-0778ed05e74f
+      X-Psn-Request-Id:
+      - afba19a9-2094-4ac1-98df-0778ed05e74f
+      X-RequestId:
+      - afba19a9-2094-4ac1-98df-0778ed05e74f
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/cpss/v1/share/profile/2721516955383551246
+  response:
+    body:
+      string: '{"shareUrl": "https://profile.playstation.com/VaultTec-Co", "shareImageUrl":
+        "https://d18lxmvkmz0olj.cloudfront.net/profile-VaultTec-Co?Expires=1777865039&Signature=DBXkgeFwbBPGVyjlUY1V9FpNQ8k5GsGmigSgYMqkylPKI7C3Vbt8YkoO2XElBIUhVHaGXWGuKNtbDVj5XdiDZ3Ie3980XMnpJhb5WsFXahQZ1Gfgq8mpxe~y-vcW3B-ROO4KkRUlnGziFWOJMw6IXM0LmpHqpCyI11gZnKBJGIPSMS-tcYhDbzMwAB1Dlbsam0MbbOWsjY-HtaRAc1vx4vTTduD33uME5UgRJuvbQle~f6WASZG0y8417xtWC0KUgmI4BA08pgxrxm8rsuSZpMHxWI7XMK-wD-1Xm0G3UNebziZsDA8pZ8KlR4L4LzZ4IUUW0CBAF1QI2amUv~rukA__&Key-Pair-Id=K2SHBT8E7OQNQU",
+        "shareImageUrlDestination": "https://profile.playstation.com/share/VaultTec-Co"}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '614'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Apr 2026 03:23:59 GMT
+      Expires:
+      - Mon, 27 Apr 2026 03:23:59 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 78a2d7d9-b796-1031-9565-025c2ca9c4d6
+      X-Psn-Request-Id:
+      - 78a2d7d9-b796-1031-9566-025c2ca9c4d6
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

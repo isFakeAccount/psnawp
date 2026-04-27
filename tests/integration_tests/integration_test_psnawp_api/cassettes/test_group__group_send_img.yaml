@@ -1,0 +1,349 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      Sec-Fetch-Dest:
+      - document
+      Sec-Fetch-Mode:
+      - navigate
+      Sec-Fetch-Site:
+      - same-site
+      Sec-Fetch-User:
+      - ?1
+      User-Agent:
+      - Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0
+      X-Requested-With:
+      - com.scee.psxandroid
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 27 Apr 2026 03:16:47 GMT
+      Expires:
+      - '0'
+      Location:
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.Cm6lSx&cid=00000000-0000-0000-0000-b025aa3b2674
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - 091bfd904a24624f2169e39ae9163386
+      X-RequestId:
+      - 091bfd904a24624f2169e39ae9163386
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
+- request:
+    body: cid=00000000-0000-0000-0000-b025aa3b2674&code=v3.Cm6lSx&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '207'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      User-Agent:
+      - com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v2.core psn:clientapp", "id_token": "REDACTED",
+        "refresh_token": "REDACTED", "refresh_token_expires_in": 863999}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4080'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Apr 2026 03:16:47 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - 637ba2b2fc0be691f295ff6ebfa69752
+      X-RequestId:
+      - 637ba2b2fc0be691f295ff6ebfa69752
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0
+    method: GET
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
+  response:
+    body:
+      string: '{"groups": [{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType":
+        0, "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
+        {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}], "previousOffset":
+        0, "nextOffset": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '245'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:16:47 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!binary |
+      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
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4101'
+      Content-Type:
+      - image/png
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0
+    method: POST
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/resources
+  response:
+    body:
+      string: '{"resourceId": "a2e1CACE0CDC2C96B5B.25C4C5406FD6D50E_message_454978515040828_1777259824378"}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '91'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:17:04 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messageType": 3, "messageDetail": {"imageMessageDetail": {"resourceId":
+      "a2e1CACE0CDC2C96B5B.25C4C5406FD6D50E_message_454978515040828_1777259824378"}}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '153'
+      Content-Type:
+      - application/json
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0
+    method: POST
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/threads/~1CACE0CDC2C96B5B.25C4C5406FD6D50E/messages
+  response:
+    body:
+      string: '{"messageUid": "1#454978515952952", "createdTimestamp": "1777259827941"}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '69'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:17:08 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+version: 1

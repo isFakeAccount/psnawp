@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=CUSA03041_00%2C
+  response:
+    body:
+      string: '{"titles": [{"npTitleId": "CUSA03041_00", "trophyTitles": [{"npServiceName":
+        "trophy", "npCommunicationId": "NPWR09412_00", "trophyTitleName": "Red Dead
+        Redemption 2", "trophyTitleDetail": "Red Dead Redemption 2", "trophyTitleIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/E1C7515ADB58B892CCC0BB0D0F94512963E11203.PNG",
+        "hasTrophyGroups": false, "trophyGroupCount": 1, "rarestTrophies": [{"trophyId":
+        2, "trophyHidden": true, "trophyType": "bronze", "trophyName": "Just a Scratch",
+        "trophyDetail": "Complete ''Enter, Pursued by a Memory''.", "trophyIconUrl":
+        "https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/17BA1A60D9354F58068032916F3B59BE7591B4F6.PNG",
+        "trophyRare": 3, "trophyEarnedRate": "76.9", "earned": true, "earnedDateTime":
+        "2018-12-02T05:27:17Z"}], "progress": 1, "earnedTrophies": {"bronze": 1, "silver":
+        0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 44, "silver":
+        4, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2018-12-02T05:27:19Z"}]}]}'
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:26:03 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Content-Type-Options:
+      - nosniff
+      content-length:
+      - '1025'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://tmdb.np.dl.playstation.net/tmdb2/CUSA03041_00_35D1E631175ECA6FBC7027DD73B4C09A886DE8D2/CUSA03041_00.json
+  response:
+    body:
+      string: '{"revision": 15, "patchRevision": 8, "formatVersion": 4, "npTitleId":
+        "CUSA03041_00", "console": "PS4", "names": [{"name": "Red Dead Redemption
+        2"}, {"name": "Red Dead Redemption 2", "lang": "en"}, {"name": "Red Dead Redemption
+        2", "lang": "fr"}, {"name": "Red Dead Redemption 2", "lang": "es"}, {"name":
+        "Red Dead Redemption 2", "lang": "de"}, {"name": "Red Dead Redemption 2",
+        "lang": "it"}, {"name": "Red Dead Redemption 2", "lang": "ru"}, {"name": "Red
+        Dead Redemption 2", "lang": "ko"}, {"name": "Red Dead Redemption 2", "lang":
+        "zh-TW"}, {"name": "Red Dead Redemption 2", "lang": "zh-CN"}, {"name": "Red
+        Dead Redemption 2", "lang": "pl"}, {"name": "Red Dead Redemption 2", "lang":
+        "pt-BR"}, {"name": "Red Dead Redemption 2", "lang": "es-MX"}], "icons": [{"icon":
+        "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/icon0.png",
+        "type": "512x512"}], "parentalLevel": 9, "pronunciation": "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/pronunciation.xml",
+        "contentId": "UP1004-CUSA03041_00-REDEMPTION000002", "backgroundImage": "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/pic0.png",
+        "bgm": "http://gs2-sec.ww.prod.dl.playstation.net/gs2-sec/appkgo/prod/CUSA03041_00/15/i_2efe1b71a037233f60cec3b41a18d69c02bcff5fd0c895c212d44f37883dbaf8/i/snd0.at9",
+        "category": "gd", "playTogether": 8, "psVr": 0, "neoEnable": 1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:26:06 GMT
+      ETag:
+      - '"e0cc1d32cd4f2b3c8d4f2ed35e1aa528:1543328653"'
+      Last-Modified:
+      - Tue, 27 Nov 2018 12:19:04 GMT
+      Server:
+      - AkamaiNetStorage
+      Set-Cookie: REDACTED
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '1532'
+    status:
+      code: 200
+      message: OK
+version: 1

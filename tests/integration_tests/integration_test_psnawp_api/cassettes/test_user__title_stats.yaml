@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/2066273503397112667/titles?limit=200&offset=0
+  response:
+    body:
+      string: '{"titles": [], "nextOffset": null, "previousOffset": 0, "totalItemCount":
+        0}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '69'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Apr 2026 03:32:11 GMT
+      Expires:
+      - Mon, 27 Apr 2026 03:32:11 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 257590f0-8db6-438f-b7ec-f9a496c1a61a
+      X-Psn-Request-Id:
+      - 257590f0-8db6-438f-b7ec-f9a496c1a61a
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1
