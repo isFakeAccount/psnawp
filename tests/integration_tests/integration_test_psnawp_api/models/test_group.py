@@ -1,4 +1,5 @@
 import inspect
+from pathlib import Path
 
 import pytest
 
@@ -15,14 +16,14 @@ from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 @pytest.mark.vcr
 def test_group__group_incorrect_args_None(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPIllegalArgumentError):
             psnawp_fixture.group(group_id=None, users_list=None)
 
 
 @pytest.mark.vcr
 def test_group__group_with_wrong_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPNotFoundError):
             group = psnawp_fixture.group(group_id="~25C4C5406FD6D50E.763F9A1EB6AB5791")
             group.get_group_information()
@@ -30,7 +31,7 @@ def test_group__group_with_wrong_id(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr
 def test_group__group_with_users(psnawp_fixture: PSNAWP, friend_user: User):
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         group = psnawp_fixture.group(users_list=[friend_user])
         message_info = group.send_message("Hello World")
 
@@ -40,7 +41,7 @@ def test_group__group_with_users(psnawp_fixture: PSNAWP, friend_user: User):
 
 @pytest.mark.vcr
 def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         last_group = next(psnawp_fixture.me().get_groups(limit=1))
         assert last_group.group_id is not None
         group = psnawp_fixture.group(group_id=last_group.group_id)
@@ -48,8 +49,17 @@ def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
 
 
 @pytest.mark.vcr
+def test_group__group_send_img(psnawp_fixture: PSNAWP) -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        last_group = next(psnawp_fixture.me().get_groups(limit=1))
+        assert last_group.group_id is not None
+        group = psnawp_fixture.group(group_id=last_group.group_id)
+        group.send_image(Path("docs/_static/psn_logo.png"))
+
+
+@pytest.mark.vcr
 def test_group__get_group_information(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         last_group = next(psnawp_fixture.me().get_groups(limit=1))
         assert last_group.group_id is not None
         group = psnawp_fixture.group(group_id=last_group.group_id)
@@ -58,7 +68,7 @@ def test_group__get_group_information(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr
 def test_group__repr_and_str(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         last_group = next(psnawp_fixture.me().get_groups(limit=1))
         repr(last_group)
         str(last_group)
@@ -66,7 +76,7 @@ def test_group__repr_and_str(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr
 def test_group__change_name_dm(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPBadRequestError):
             last_group = next(psnawp_fixture.me().get_groups(limit=1))
             assert last_group.group_id is not None
@@ -76,7 +86,7 @@ def test_group__change_name_dm(psnawp_fixture: PSNAWP) -> None:
 
 @pytest.mark.vcr
 def test_group__dming_blocked_user(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbiddenError):
             group = psnawp_fixture.group(users_list=[blocked_user])
             group.send_message("Hello!")
@@ -84,21 +94,21 @@ def test_group__dming_blocked_user(psnawp_fixture: PSNAWP, blocked_user: User) -
 
 @pytest.mark.vcr
 def test_group__change_name(psnawp_fixture: PSNAWP, friend_user: User, blocked_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         group = psnawp_fixture.group(users_list=[friend_user, blocked_user])
         group.change_name("Testing API")
 
 
 @pytest.mark.vcr
 def test_group__kick_member(psnawp_fixture: PSNAWP, friend_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         group = next(psnawp_fixture.me().get_groups(limit=1))
         group.kick_member(friend_user)
 
 
 @pytest.mark.vcr
 def test_group__kick_member_not_found(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPNotFoundError):
             group = next(psnawp_fixture.me().get_groups(limit=1))
             group.kick_member(blocked_user)
@@ -106,14 +116,14 @@ def test_group__kick_member_not_found(psnawp_fixture: PSNAWP, blocked_user: User
 
 @pytest.mark.vcr
 def test_group__invite_members(psnawp_fixture: PSNAWP, friend_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         group = next(psnawp_fixture.me().get_groups(limit=1))
         group.invite_members([friend_user])
 
 
 @pytest.mark.vcr
 def test_group__invite_members_blocked(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPForbiddenError):
             group = next(psnawp_fixture.me().get_groups(limit=1))
             group.invite_members([blocked_user])
@@ -121,6 +131,6 @@ def test_group__invite_members_blocked(psnawp_fixture: PSNAWP, blocked_user: Use
 
 @pytest.mark.vcr
 def test_group__leave_group(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         group = next(psnawp_fixture.me().get_groups(limit=1))
         group.leave_group()

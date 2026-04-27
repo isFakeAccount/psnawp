@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/5007681186655854753/titles/trophyTitles?npTitleIds=CUSA12057_00
+  response:
+    body:
+      string: '{"error": {"referenceId": "95479dad-41e9-11f1-9578-b3bd37727e45", "code":
+        2240526, "message": "Not permitted by access control"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '123'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:31:31 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - User-Agent
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 403
+      message: Forbidden
+version: 1

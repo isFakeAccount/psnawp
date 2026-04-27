@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from os import PathLike
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
@@ -13,6 +14,7 @@ from psnawp_api.core import (
     PSNAWPMediaTypeError,
     PSNAWPNotFoundError,
 )
+from psnawp_api.models.group.group_datatypes import MessageType
 from psnawp_api.utils import API_PATH, BASE_PATH
 
 if TYPE_CHECKING:
@@ -174,7 +176,7 @@ class Group:
 
         return response
 
-    def send_image(self, media: str | Path | bytes) -> MessageResponse:
+    def send_image(self, media: str | bytes | PathLike[str]) -> MessageResponse:
         """Sends an image in the group.
 
         :param media: A path, a Path object or bytes of the media to post
@@ -192,7 +194,7 @@ class Group:
             }
 
         """
-        if isinstance(media, (str, Path)):
+        if isinstance(media, (str, PathLike)):
             media = Path(media)
             if not media.is_file():
                 raise PSNAWPMediaTypeError(f"Media file not found at: {media}")
@@ -210,7 +212,7 @@ class Group:
 
         response: MessageResponse = self.authenticator.post(
             url=f"{BASE_PATH['gaming_lounge']}{API_PATH['send_group_message'].format(group_id=self.group_id)}",
-            json={"messageType": 3, "messageDetail": {"imageMessageDetail": {"resourceId": resource["resourceId"]}}},
+            json={"messageType": MessageType.IMAGE.value, "messageDetail": {"imageMessageDetail": {"resourceId": resource["resourceId"]}}},
         ).json()
         return response
 

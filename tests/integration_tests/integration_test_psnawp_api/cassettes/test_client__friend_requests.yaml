@@ -1,0 +1,243 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      Sec-Fetch-Dest:
+      - document
+      Sec-Fetch-Mode:
+      - navigate
+      Sec-Fetch-Site:
+      - same-site
+      Sec-Fetch-User:
+      - ?1
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+      X-Requested-With:
+      - com.scee.psxandroid
+    method: GET
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?PlatformPrivacyWs1=minimal&access_type=offline&client_id=09515159-7237-4370-9b40-3806e67c0891&device_base_font_size=10&device_profile=mobile&elements_visibility=no_aclink&enable_scheme_error_code=true&no_captcha=true&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&service_entity=urn%3Aservice-entity%3Apsn&service_logo=ps&smcid=psapp%3Asignin&support_scheme=sneiprls&turnOnTrustedBrowser=true&ui=pr
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 27 Apr 2026 03:37:54 GMT
+      Expires:
+      - '0'
+      Location:
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.DaAf4z&cid=00000000-0000-0000-0000-b025aa3b2674
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - 8867b983cfc7655d8d05096cc969d491
+      X-RequestId:
+      - 8867b983cfc7655d8d05096cc969d491
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 302
+      message: Moved Temporarily
+- request:
+    body: cid=00000000-0000-0000-0000-b025aa3b2674&code=v3.DaAf4z&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '207'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Country:
+      - US
+      User-Agent:
+      - com.sony.snei.np.android.sso.share.oauth.versa.USER_AGENT
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+    method: POST
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+  response:
+    body:
+      string: '{"access_token": "REDACTED", "token_type": "bearer", "expires_in":
+        3599, "scope": "psn:mobile.v2.core psn:clientapp", "id_token": "REDACTED",
+        "refresh_token": "REDACTED", "refresh_token_expires_in": 863999}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4080'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 27 Apr 2026 03:37:57 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-Content-Type-Options:
+      - nosniff
+      X-CorrelationId:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Correlation-Id:
+      - 00000000-0000-0000-0000-b025aa3b2674
+      X-Psn-Request-Id:
+      - a4a086fb5a81287470f156bf45215cbe
+      X-RequestId:
+      - a4a086fb5a81287470f156bf45215cbe
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends/receivedRequests
+  response:
+    body:
+      string: '{"receivedRequests": [{"accountId": "2066273503397112667", "relation":
+        "requested", "personalDetailSharing": "none", "acceptSharingPersonalDetailFlag":
+        false, "requestedDate": "2026-04-27T03:36:11.788Z"}], "totalItemCount": 1}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '214'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:38:00 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0390800954765016766
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2066273503397112667/profiles
+  response:
+    body:
+      string: '{"onlineId": "isFakeAccount", "aboutMe": "", "avatars": [{"size": "s",
+        "url": "http://static-resource.np.community.playstation.net/avatar_s/WWS_J/J2085_s.png"},
+        {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/WWS_J/J2085_xl.png"},
+        {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/WWS_J/J2085_l.png"},
+        {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/WWS_J/J2085_m.png"}],
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
+        false}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        Date, X-Psn-Np-Title-Id, X-Psn-Platform, X-Psn-Request-Id, X-Psn-Sampled,
+        X-Psn-Span-Id, X-Psn-Trace-Id
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, PATCH
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '533'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:38:03 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Psn-Track-Id:
+      - 0704379796549505155
+    status:
+      code: 200
+      message: OK
+version: 1

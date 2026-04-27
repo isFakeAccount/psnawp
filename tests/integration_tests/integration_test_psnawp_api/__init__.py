@@ -37,7 +37,7 @@ def filter_response_information(response: Response) -> Response:
 
 
 my_vcr = vcr.VCR(
-    serializer="json",
+    serializer="yaml",
     cassette_library_dir="tests/integration_tests/integration_test_psnawp_api/cassettes",
     record_mode=RecordMode.ONCE,
     match_on=["uri", "method"],

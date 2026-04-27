@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/trophy/v1/users/me/trophySummary
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246", "trophyLevel": 1, "trophyPoint":
+        0, "trophyLevelBasePoint": 0, "trophyLevelNextPoint": 60, "progress": 0, "tier":
+        1, "earnedTrophies": {"bronze": 0, "silver": 0, "gold": 0, "platinum": 0}}'
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 27 Apr 2026 03:24:01 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Content-Type-Options:
+      - nosniff
+      content-length:
+      - '203'
+    status:
+      code: 200
+      message: OK
+version: 1
