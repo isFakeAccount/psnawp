@@ -43,12 +43,13 @@ pre-commit = {version = "^4.6.0", python = ">=3.12,<4.0.0"}
 ruff       = {version = "^0.15.12", python = ">=3.12,<4.0.0"}
 
 [tool.poetry.group.tests.dependencies]
-jsonschema    = {version = "^4.26.0", python = ">=3.12,<4.0.0"}
-pytest        = {version = "^9.0.3", python = ">=3.12,<4.0.0"}
-pytest-cov    = {version = "^7.1.0", python = ">=3.12,<4.0.0"}
-pytest-vcr    = {version = "^1.0.2", python = ">=3.12,<4.0.0"}
-python-dotenv = {version = "^1.2.2", python = ">=3.12,<4.0.0"}
-vcrpy         = {version = "^8.1.1", python = ">=3.12,<4.0.0"}
+# Needs to be sameas requires-python
+jsonschema    = {version = "^4.26.0", python = ">=3.10,<4.0.0"}
+pytest        = {version = "^9.0.3", python = ">=3.10,<4.0.0"}
+pytest-cov    = {version = "^7.1.0", python = ">=3.10,<4.0.0"}
+pytest-vcr    = {version = "^1.0.2", python = ">=3.10,<4.0.0"}
+python-dotenv = {version = "^1.2.2", python = ">=3.10,<4.0.0"}
+vcrpy         = {version = "^8.1.1", python = ">=3.10,<4.0.0"}
 
 [project.urls]
 changelog     = "https://github.com/isFakeAccount/psnawp/commits/master/"
