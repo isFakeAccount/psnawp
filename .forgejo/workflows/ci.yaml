@@ -20,7 +20,7 @@ jobs:
           echo "/root/.local/bin" >> $GITHUB_PATH
 
       - name: Create poetry env and install dependencies
-        run: poetry install --with typing,linting
+        run: poetry install --only main,typing,linting
 
       - name: Run CI
         run: poetry run python3 pre_push.py

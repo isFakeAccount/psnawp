@@ -26,7 +26,7 @@ jobs:
           echo "/root/.local/bin" >> $GITHUB_PATH
 
       - name: Install dependencies and build package
-        run: poetry install --with tests
+        run: poetry install --only main,tests
 
       - name: Test with pytest
         run: poetry run python pre_push.py -nu
