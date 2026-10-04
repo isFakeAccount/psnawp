@@ -25,6 +25,7 @@ if TYPE_CHECKING:
     from collections.abc import Generator, Iterable
 
     from psnawp_api.core import RequestBuilderHeaders
+    from psnawp_api.core.authenticator import TokenResponse
     from psnawp_api.models.search import GameSearchResultItem, UserSearchResultItem
 
 
@@ -43,6 +44,8 @@ class PSNAWP:
         npsso_cookie: str,
         headers: RequestBuilderHeaders | None = None,
         rate_limit: Rate | None = None,
+        *,
+        token_response: TokenResponse | None = None,
     ) -> None:
         """Initializes the authentication handler with the provided NPSSO cookie.
 
@@ -57,6 +60,11 @@ class PSNAWP:
             one request every three seconds—equivalent to up to 300 requests in a 15-minute window—to comply with
             PlayStation Network guidelines. Users may override this rate limit by providing a custom ``Rate`` instance,
             but doing so can lead to request throttling or temporary bans if set too aggressively.
+        :param token_response: A previously saved :py:attr:`Authenticator.token_response`. Copied on initialization,
+            including its original absolute expiration timestamps. A valid access token is reused; an expired access
+            token is refreshed on the first request. If omitted, authentication starts with the NPSSO cookie as usual.
+            Store this response securely and persist subsequent token rotations. Restoring it does not extend the
+            server-side validity of the session.
 
         :raises PSNAWPAuthenticationError: If the NPSSO cookie is expired or invalid.
 
@@ -88,6 +96,7 @@ class PSNAWP:
             npsso_cookie=npsso_cookie,
             common_headers=_header,
             rate_limit=rate_limit,
+            token_response=token_response,
         )
 
     def me(self) -> Client:
