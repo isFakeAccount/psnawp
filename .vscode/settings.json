@@ -14,5 +14,5 @@
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "evenBetterToml.taplo.configFile.path": "taplo.toml",
+    "evenBetterToml.taplo.configFile.path": "taplo.toml"
 }

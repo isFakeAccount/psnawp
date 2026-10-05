@@ -1,0 +1,37 @@
+name: Integration Tests
+
+on:
+  pull_request_target:
+    branches:
+      - master
+
+jobs:
+  integration:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [codeberg-medium]
+        python-version: ["3.11", "3.12", "3.13", "3.14", "3.15"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }} ${{ matrix.os }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install poetry
+        run: |
+          pipx install poetry
+          echo "/root/.local/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies and build package
+        run: poetry install --only main,tests
+
+      - name: Integration test with pytest
+        run: poetry run pytest --cov-config=pyproject.toml -m integration
+        env:
+          NPSSO_CODE: ${{ secrets.NPSSO_CODE }}
+          USER_NAME: ${{ vars.USER_NAME }}
+          FRIEND_USER_NAME: ${{ vars.FRIEND_USER_NAME }}
+          BLOCKED_USER_NAME: ${{ vars.BLOCKED_USER_NAME }}

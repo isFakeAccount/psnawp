@@ -20,6 +20,8 @@ fmt:
     poetry run docstrfmt tests
     poetry run ruff format tests
 
+    poetry run pre-commit run --all-files
+
 # Run pre-commit hooks
 pre-commit:
     poetry run pre-commit run --all-files
