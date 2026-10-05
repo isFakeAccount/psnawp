@@ -7,6 +7,7 @@ from psnawp_api.models.search import SearchDomain
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__universal_search(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -17,6 +18,7 @@ def test_search__universal_search(psnawp_fixture: PSNAWP) -> None:
         assert actual_count == 1
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -27,6 +29,7 @@ def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
             break
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_game_content_pagination_test(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -38,6 +41,7 @@ def test_search__get_game_content_pagination_test(psnawp_fixture: PSNAWP) -> Non
         assert count == item_limit
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_addon_content_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -46,6 +50,7 @@ def test_search__get_addon_content_id(psnawp_fixture: PSNAWP) -> None:
             assert "GTA" in result["result"]["invariantName"]
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_get_addon_pagination_test(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -57,6 +62,7 @@ def test_search__get_get_addon_pagination_test(psnawp_fixture: PSNAWP) -> None:
         assert count == item_limit
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -67,6 +73,7 @@ def test_search__get_user_id(psnawp_fixture: PSNAWP) -> None:
             break
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_pagination_test(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -77,6 +84,7 @@ def test_search__get_user_pagination_test(psnawp_fixture: PSNAWP) -> None:
         assert count > 0
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_pagination__limit_test(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):

@@ -4,9 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import hmac
-from typing import TYPE_CHECKING, Any, ClassVar
-
-from typing_extensions import Self
+from typing import TYPE_CHECKING, Any, ClassVar, Self
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPIllegalArgumentError
 from psnawp_api.models.listing import PaginationArguments

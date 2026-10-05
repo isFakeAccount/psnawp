@@ -5,10 +5,10 @@ from __future__ import annotations
 import time
 import uuid
 from functools import wraps
-from typing import TYPE_CHECKING, ClassVar, TypedDict, TypeVar, cast
+from typing import TYPE_CHECKING, ClassVar, NotRequired, TypedDict, TypeVar, cast
 from urllib.parse import parse_qs, urlparse
 
-from typing_extensions import NotRequired, ParamSpec, Unpack
+from typing_extensions import ParamSpec, Unpack
 
 from psnawp_api.core.psnawp_exceptions import PSNAWPAuthenticationError
 from psnawp_api.core.request_builder import RequestBuilder

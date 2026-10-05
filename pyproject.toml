@@ -5,11 +5,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Programming Language :: Python",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -24,33 +24,33 @@ keywords = ["PSN", "PlayStation"]
 license = { file = "LICENSE.md" }
 name = "psnawp"
 readme = "README.md"
-requires-python = ">=3.10, <4.0"
-version = "3.0.3"
+requires-python = ">=3.11, <4.0"
+version = "3.1.0"
 
 [tool.poetry.group.typing.dependencies]
-mypy           = {version = "^1.20.2", python = ">=3.12,<4.0.0"}
-pyright        = {version = "^1.1.409", python = ">=3.12,<4.0.0"}
-types-requests = {version = "^2.33.0.20260408", python = ">=3.12,<4.0.0"}
+mypy           = { version = "^1.20.2", python = ">=3.12,<4.0.0" }
+pyright        = { version = "^1.1.409", python = ">=3.12,<4.0.0" }
+types-requests = { version = "^2.33.0.20260408", python = ">=3.12,<4.0.0" }
 
 [tool.poetry.group.docs.dependencies]
-myst-parser       = {version = "^5.0.0", extras = ["linkify"], python = ">=3.12,<4.0.0"}
-sphinx            = {version = "^9.1.0", python = ">=3.12,<4.0.0"}
-sphinx-book-theme = {version = "^1.2.0", python = ">=3.12,<4.0.0"}
-sphinx-copybutton = {version = "^0.5.2", python = ">=3.12,<4.0.0"}
+myst-parser       = { version = "^5.0.0", extras = ["linkify"], python = ">=3.12,<4.0.0" }
+sphinx            = { version = "^9.1.0", python = ">=3.12,<4.0.0" }
+sphinx-book-theme = { version = "^1.2.0", python = ">=3.12,<4.0.0" }
+sphinx-copybutton = { version = "^0.5.2", python = ">=3.12,<4.0.0" }
 
 [tool.poetry.group.linting.dependencies]
-docstrfmt  = {version = "^2.0.2", python = ">=3.12,<4.0.0"}
-pre-commit = {version = "^4.6.0", python = ">=3.12,<4.0.0"}
-ruff       = {version = "^0.15.12", python = ">=3.12,<4.0.0"}
+docstrfmt  = { version = "^2.0.2", python = ">=3.12,<4.0.0" }
+pre-commit = { version = "^4.6.0", python = ">=3.12,<4.0.0" }
+ruff       = { version = "^0.15.12", python = ">=3.12,<4.0.0" }
 
 [tool.poetry.group.tests.dependencies]
 # Needs to be sameas requires-python
-jsonschema    = {version = "^4.26.0", python = ">=3.10,<4.0.0"}
-pytest        = {version = "^9.0.3", python = ">=3.10,<4.0.0"}
-pytest-cov    = {version = "^7.1.0", python = ">=3.10,<4.0.0"}
-pytest-vcr    = {version = "^1.0.2", python = ">=3.10,<4.0.0"}
-python-dotenv = {version = "^1.2.2", python = ">=3.10,<4.0.0"}
-vcrpy         = {version = "^8.1.1", python = ">=3.10,<4.0.0"}
+jsonschema    = { version = "^4.26.0", python = ">=3.11,<4.0.0" }
+pytest        = { version = "^9.0.3", python = ">=3.11,<4.0.0" }
+pytest-cov    = { version = "^7.1.0", python = ">=3.11,<4.0.0" }
+pytest-vcr    = { version = "^1.0.2", python = ">=3.11,<4.0.0" }
+python-dotenv = { version = "^1.2.2", python = ">=3.11,<4.0.0" }
+vcrpy         = { version = "^8.1.1", python = ">=3.11,<4.0.0" }
 
 [project.urls]
 changelog     = "https://github.com/isFakeAccount/psnawp/commits/master/"
@@ -66,8 +66,11 @@ requires      = ["poetry-core>=2.0.0,<3.0.0"]
 packages = [{ include = "psnawp_api", from = "src" }]
 
 [tool.pytest.ini_options]
-addopts   = "--cov=psnawp_api --cov-report html --cov-report term --cov-report xml --junitxml=pytest.xml"
+addopts   = "-rA --cov --cov-branch --cov-report html --cov-report term --cov-report xml --junitxml=pytest.xml"
+markers   = ["integration: integration tests", "unit: unit tests"]
 testpaths = ["tests"]
+
+strict_markers = true
 
 [tool.coverage.report]
 exclude_also = [
@@ -107,7 +110,7 @@ exclude = '(venv|\.venv)/'
 
 [tool.pyright]
 exclude            = [".venv", "venv"]
-pythonVersion      = "3.10"
+pythonVersion      = "3.11"
 reportPrivateUsage = false
 typeCheckingMode   = "strict"
 
@@ -121,6 +124,7 @@ docstring-code-line-length = 88
 [tool.ruff.lint]
 ignore = [
     "COM812", # Allow missing trailing comma. (handled by ruff format)
+    "CPY001", # Allow missing copyright notice on top of each file.
     "D203",   # Allow class doc strings without requiring a blank line before them (conflicts with D211).
     "D213",   # Allow multi-line docstring summaries to end on the first line (conflicts with D212).
     "D401",   # Allow docstring summaries that are not in imperative mood.

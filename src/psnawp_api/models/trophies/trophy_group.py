@@ -3,9 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import TYPE_CHECKING, Any, Generic, TypeVar
-
-from typing_extensions import Self
+from typing import TYPE_CHECKING, Any, Generic, Self, TypeVar
 
 from psnawp_api.core import PSNAWPNotFoundError
 from psnawp_api.models.trophies import PlatformType, TrophySet

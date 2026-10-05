@@ -16,6 +16,7 @@ from psnawp_api.models.trophies import PlatformType
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__online_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -23,6 +24,7 @@ def test_client__online_id(psnawp_fixture: PSNAWP) -> None:
         assert client.online_id == os.getenv("USER_NAME")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__account_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -30,6 +32,7 @@ def test_client__account_id(psnawp_fixture: PSNAWP) -> None:
         assert re.match(r"\d+", client.account_id)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_profile_legacy(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -37,6 +40,7 @@ def test_client__get_profile_legacy(psnawp_fixture: PSNAWP) -> None:
         client.get_profile_legacy()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__account_devices(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -44,6 +48,7 @@ def test_client__account_devices(psnawp_fixture: PSNAWP) -> None:
         client.get_account_devices()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_friends(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -51,6 +56,7 @@ def test_client__get_friends(psnawp_fixture: PSNAWP) -> None:
         list(client.friends_list())
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__friend_requests(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -58,6 +64,7 @@ def test_client__friend_requests(psnawp_fixture: PSNAWP) -> None:
         assert len(list(client.friend_requests())) > 0
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_presences(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -74,6 +81,7 @@ def test_client__get_presences(psnawp_fixture: PSNAWP) -> None:
             pytest.fail(f"Validation failed: {e.message}")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_groups(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -81,6 +89,7 @@ def test_client__get_groups(psnawp_fixture: PSNAWP) -> None:
         list(client.get_groups(limit=10))
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__available_to_play(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -88,6 +97,7 @@ def test_client__available_to_play(psnawp_fixture: PSNAWP) -> None:
         list(client.available_to_play())
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__blocked_list(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -95,6 +105,7 @@ def test_client__blocked_list(psnawp_fixture: PSNAWP) -> None:
         client.blocked_list()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_shareable_profile_link(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -102,6 +113,7 @@ def test_client__get_shareable_profile_link(psnawp_fixture: PSNAWP) -> None:
         client.get_shareable_profile_link()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophy_summary(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -116,6 +128,7 @@ def test_client__trophy_summary(psnawp_fixture: PSNAWP) -> None:
         assert summary.trophy_level == 1
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophy_titles(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -123,6 +136,7 @@ def test_client__trophy_titles(psnawp_fixture: PSNAWP) -> None:
             print(trophy_title)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophy_titles_for_title(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -130,6 +144,7 @@ def test_client__trophy_titles_for_title(psnawp_fixture: PSNAWP) -> None:
             print(trophy_title)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophies(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -137,6 +152,7 @@ def test_client__trophies(psnawp_fixture: PSNAWP) -> None:
             print(trophy)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophies_with_progress(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -149,6 +165,7 @@ def test_client__trophies_with_progress(psnawp_fixture: PSNAWP) -> None:
                 print(trophy)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophy_groups_summary(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -159,6 +176,7 @@ def test_client__trophy_groups_summary(psnawp_fixture: PSNAWP) -> None:
         )
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__trophy_groups_summary_with_progress(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -170,6 +188,7 @@ def test_client__trophy_groups_summary_with_progress(psnawp_fixture: PSNAWP) -> 
             )
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__title_stats(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -177,6 +196,7 @@ def test_client__title_stats(psnawp_fixture: PSNAWP) -> None:
             print(title)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__game_entitlements_with_limit(psnawp_fixture: PSNAWP) -> None:
     limit = 25
@@ -187,6 +207,7 @@ def test_client__game_entitlements_with_limit(psnawp_fixture: PSNAWP) -> None:
         assert limit == count
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__game_entitlements(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -197,6 +218,7 @@ def test_client__game_entitlements(psnawp_fixture: PSNAWP) -> None:
         assert entitlement_iter._total_item_count == count
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__repr_and_str(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -205,6 +227,7 @@ def test_client__repr_and_str(psnawp_fixture: PSNAWP) -> None:
         str(client)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_client__get_region(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):

@@ -9,6 +9,7 @@ from psnawp_api.core import (
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_exception__exception_parsing(psnawp_fixture: PSNAWP) -> None:
     BAD_REQUEST_ERR_CODE = 2281473

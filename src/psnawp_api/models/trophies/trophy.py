@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import TYPE_CHECKING, Any, TypedDict
+from typing import TYPE_CHECKING, Any, Self, TypedDict
 
-from typing_extensions import Self, override
+from typing_extensions import override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.models.trophies.trophy_utils import (

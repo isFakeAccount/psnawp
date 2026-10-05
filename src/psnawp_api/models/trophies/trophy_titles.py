@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Self
 
-from typing_extensions import Self, override
+from typing_extensions import override
 
 from psnawp_api.core import PSNAWPBadRequestError, PSNAWPNotFoundError
 from psnawp_api.models.listing import PaginationIterator

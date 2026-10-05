@@ -42,6 +42,7 @@ def request_builder() -> Iterator[MagicMock]:
             yield builder.return_value
 
 
+@pytest.mark.unit
 def test_constructor_copies_tokens_and_preserves_expiration(request_builder: MagicMock) -> None:
     saved = TOKEN.copy()
     client = PSNAWP("unused-npsso", token_response=saved)
@@ -56,12 +57,14 @@ def test_constructor_copies_tokens_and_preserves_expiration(request_builder: Mag
     assert request_builder.mock_calls == []
 
 
+@pytest.mark.unit
 def test_authenticator_accepts_tokens_directly() -> None:
     auth = Authenticator("unused-npsso", HEADERS, Rate(1, Duration.SECOND), token_response=TOKEN)
     assert auth.token_response == TOKEN
     assert auth.token_response is not TOKEN
 
 
+@pytest.mark.unit
 def test_existing_positional_arguments_remain_supported(request_builder: MagicMock) -> None:
     rate = Rate(1, Duration.SECOND)
     client = PSNAWP("npsso", HEADERS, rate)
@@ -71,6 +74,7 @@ def test_existing_positional_arguments_remain_supported(request_builder: MagicMo
     assert request_builder.mock_calls == []
 
 
+@pytest.mark.unit
 @pytest.mark.parametrize("method", ["get", "post", "patch", "delete", "put"])
 def test_valid_token_skips_npsso_and_refresh(request_builder: MagicMock, method: str) -> None:
     auth = PSNAWP("expired-npsso", token_response=TOKEN).authenticator
@@ -80,6 +84,7 @@ def test_valid_token_skips_npsso_and_refresh(request_builder: MagicMock, method:
     request.assert_called_once_with(url=URL, headers={"Authorization": "Bearer test-access"})
 
 
+@pytest.mark.unit
 @pytest.mark.parametrize("expiry", [NOW - 1, NOW])
 def test_expired_access_token_refreshes_without_npsso(request_builder: MagicMock, expiry: float) -> None:
     saved = TOKEN.copy()
@@ -105,6 +110,7 @@ def test_expired_access_token_refreshes_without_npsso(request_builder: MagicMock
     assert saved["refresh_token"] == "test-refresh"
 
 
+@pytest.mark.unit
 def test_missing_access_expiration_refreshes_instead_of_extending_it(request_builder: MagicMock) -> None:
     saved = TOKEN.copy()
     del saved["access_token_expires_at"]
@@ -115,6 +121,7 @@ def test_missing_access_expiration_refreshes_instead_of_extending_it(request_bui
     assert "access_token_expires_at" not in saved
 
 
+@pytest.mark.unit
 def test_rejected_refresh_propagates_without_retrying_npsso(request_builder: MagicMock) -> None:
     saved = TOKEN.copy()
     saved["access_token_expires_at"] = NOW - 1
@@ -127,6 +134,7 @@ def test_rejected_refresh_propagates_without_retrying_npsso(request_builder: Mag
     assert auth.token_response == saved
 
 
+@pytest.mark.unit
 def test_no_tokens_retains_npsso_bootstrap(request_builder: MagicMock) -> None:
     request_builder.get.return_value.headers = {"location": "https://example.invalid/callback?code=test-code"}
     request_builder.post.return_value.json.return_value = TOKEN.copy()

@@ -1,7 +1,14 @@
 # Justfile for project tasks
 
+@default:
+    just --choose
+
+# List available recipes
+ls:
+    just --list
+
 # Format the Justfile
-just-fmt:
+jst-fmt:
     just --fmt --unstable
 
 # Run code and docstring formatting and linter
@@ -32,11 +39,16 @@ docs:
 # Run integration test
 integration clean="FALSE":
     #!/usr/bin/env bash
-    if [[ {{clean}} = "clean=TRUE" ]]; then
+    if [[ {{ clean }} = "clean=TRUE" ]]; then
         echo 'Removing Old cassettes files.'
         rm tests/integration_tests/integration_test_psnawp_api/cassettes/*.yaml;
     fi
-    poetry run pytest --cov-config=pyproject.toml
+    poetry run pytest --cov-config=pyproject.toml -m integration
+
+
+# Run unit test
+unit:
+    poetry run pytest --cov-config=pyproject.toml -m unit
 
 # Runs all tasks
 all: pre-commit static fmt docs integration

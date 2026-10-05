@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import json
 from collections.abc import Generator
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Self
 
-from typing_extensions import Self, override
+from typing_extensions import override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.models.search.games_search_datatypes import GameSearchResultItem, SearchDomain, default_game_root_response

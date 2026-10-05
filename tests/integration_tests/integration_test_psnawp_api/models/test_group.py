@@ -14,6 +14,7 @@ from psnawp_api.models import User
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_incorrect_args_None(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -21,6 +22,7 @@ def test_group__group_incorrect_args_None(psnawp_fixture: PSNAWP) -> None:
             psnawp_fixture.group(group_id=None, users_list=None)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_with_wrong_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -29,6 +31,7 @@ def test_group__group_with_wrong_id(psnawp_fixture: PSNAWP) -> None:
             group.get_group_information()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_with_users(psnawp_fixture: PSNAWP, friend_user: User):
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -39,6 +42,7 @@ def test_group__group_with_users(psnawp_fixture: PSNAWP, friend_user: User):
         assert message_info.get("messageUid") == messages[0].get("messageUid")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -48,6 +52,7 @@ def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
         group.send_message("Hello World!")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_send_img(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -57,6 +62,7 @@ def test_group__group_send_img(psnawp_fixture: PSNAWP) -> None:
         group.send_image(Path("docs/_static/psn_logo.png"))
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__get_group_information(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -66,6 +72,7 @@ def test_group__get_group_information(psnawp_fixture: PSNAWP) -> None:
         group.get_group_information()
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__repr_and_str(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -74,6 +81,7 @@ def test_group__repr_and_str(psnawp_fixture: PSNAWP) -> None:
         str(last_group)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__change_name_dm(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -84,6 +92,7 @@ def test_group__change_name_dm(psnawp_fixture: PSNAWP) -> None:
             group.change_name("Testing API")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__dming_blocked_user(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -92,6 +101,7 @@ def test_group__dming_blocked_user(psnawp_fixture: PSNAWP, blocked_user: User) -
             group.send_message("Hello!")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__change_name(psnawp_fixture: PSNAWP, friend_user: User, blocked_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -99,6 +109,7 @@ def test_group__change_name(psnawp_fixture: PSNAWP, friend_user: User, blocked_u
         group.change_name("Testing API")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__kick_member(psnawp_fixture: PSNAWP, friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -106,6 +117,7 @@ def test_group__kick_member(psnawp_fixture: PSNAWP, friend_user: User) -> None:
         group.kick_member(friend_user)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__kick_member_not_found(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -114,6 +126,7 @@ def test_group__kick_member_not_found(psnawp_fixture: PSNAWP, blocked_user: User
             group.kick_member(blocked_user)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__invite_members(psnawp_fixture: PSNAWP, friend_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -121,6 +134,7 @@ def test_group__invite_members(psnawp_fixture: PSNAWP, friend_user: User) -> Non
         group.invite_members([friend_user])
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__invite_members_blocked(psnawp_fixture: PSNAWP, blocked_user: User) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
@@ -129,6 +143,7 @@ def test_group__invite_members_blocked(psnawp_fixture: PSNAWP, blocked_user: Use
             group.invite_members([blocked_user])
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_group__leave_group(psnawp_fixture: PSNAWP) -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):

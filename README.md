@@ -3,16 +3,13 @@
 Retrieve User Information, Trophies, Game and Store data from the PlayStation Network.
 
 [![PyPI version](https://badge.fury.io/py/PSNAWP.svg)](https://badge.fury.io/py/PSNAWP)
-[![Downloads](https://static.pepy.tech/badge/psnawp)](https://www.pepy.tech/projects/psnawp)
-[![python-logo](https://img.shields.io/badge/python-3.10_|_3.11_|_3.12_|_3.13-blue.svg)](https://www.python.org/)
+[![python-logo](https://img.shields.io/badge/python-3.11_|_3.12_|_3.13_|_3.14_|_3.15-blue.svg)](https://www.python.org/)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
 [![Documentation Status](https://readthedocs.org/projects/psnawp/badge/?version=latest)](https://psnawp.readthedocs.io/en/latest/?badge=latest)
-[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
-[![pre-commit](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pre-commit.yaml)
-[![Pytest](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest-entry.yaml/badge.svg)](https://github.com/isFakeAccount/psnawp/actions/workflows/pytest-entry.yaml)
-[![codecov](https://codecov.io/gh/isFakeAccount/psnawp/graph/badge.svg?token=W8755O8BQ9)](https://codecov.io/gh/isFakeAccount/psnawp)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Downloads](https://static.pepy.tech/badge/psnawp)](https://www.pepy.tech/projects/psnawp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/MIT)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 > [!IMPORTANT]
 > This project has moved to [Codeberg](https://codeberg.org/YoshikageKira/psnawp). GitHub is now maintained as a **read-only mirror**. Please submit issues, pull requests, and other contributions via the Codeberg repository.

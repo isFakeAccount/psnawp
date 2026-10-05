@@ -31,7 +31,7 @@ def iso_format_to_datetime(iso_format: str | None) -> datetime | None:
     :returns: The corresponding :py:class:`~datetime.datetime` object, or ``None`` if input is ``None``.
 
     """
-    return datetime.fromisoformat(iso_format.replace("Z", "+00:00")) if iso_format is not None else None
+    return datetime.fromisoformat(iso_format) if iso_format is not None else None
 
 
 def extract_region_from_npid(npid: str) -> Country | None:

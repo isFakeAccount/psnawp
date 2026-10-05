@@ -2,9 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, Literal, overload
-
-from typing_extensions import Self
+from typing import TYPE_CHECKING, Any, Literal, Self, overload
 
 from psnawp_api.core import (
     PSNAWPBadRequestError,
