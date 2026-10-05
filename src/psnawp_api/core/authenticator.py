@@ -101,6 +101,8 @@ class Authenticator:
         npsso_cookie: str,
         common_headers: RequestBuilderHeaders,
         rate_limit: Rate,
+        *,
+        token_response: TokenResponse | None = None,
     ) -> None:
         """Represents a single authentication to PSN API.
 
@@ -108,12 +110,14 @@ class Authenticator:
             Network.
         :param common_headers: Common headers that will be added to all HTTP request.
         :param rate_limit: Controls pacing of HTTP requests to avoid service throttling.
+        :param token_response: Previously saved token response. Copied without changing expiration timestamps. When
+            omitted, the first request authenticates using the NPSSO cookie.
 
         """
         self.npsso_cookie = npsso_cookie
         self.common_headers = common_headers
         self.request_builder = RequestBuilder(common_headers, rate_limit)
-        self.token_response: TokenResponse | None = None
+        self.token_response = token_response.copy() if token_response is not None else None
         self.cid = str(uuid.UUID(int=uuid.getnode()))
 
     @property
