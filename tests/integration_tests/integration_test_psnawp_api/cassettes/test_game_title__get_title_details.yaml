@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=PPSA03420_00%2C
   response:
@@ -26,7 +28,7 @@ interactions:
         49, "trophyHidden": false, "trophyType": "bronze", "trophyName": "American
         Dream", "trophyDetail": "GTA Online: Own an Apartment, Garage and an Insured
         Vehicle", "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21647_00/53dfd2f4-20b0-4474-8c11-be1cc87c3ec8.png",
-        "trophyRare": 3, "trophyEarnedRate": "65.4", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "64.7", "earned": true, "earnedDateTime":
         "2022-03-15T13:34:38Z"}], "progress": 1, "earnedTrophies": {"bronze": 2, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2022-03-15T13:34:39Z"}]}]}'
@@ -38,7 +40,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:26 GMT
+      - Sun, 25 Oct 2026 00:28:58 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -67,8 +69,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/catalog/v2/titles/PPSA03420_00/concepts?age=99&country=US&language=en-US%2Cen%3Bq%3D0.9
   response:
@@ -138,11 +142,10 @@ interactions:
         "UP1004-CUSA00419_00-STARTERPACKOG001", "UP1004-CUSA00419_00-GTAVCASHPACK000B",
         "UP1004-CUSA00419_00-GTAVCASHPACK000C", "UP1004-CUSA00419_00-GTAVCASHPACK000D",
         "UP1004-CUSA00419_00-GTAVCASHPACK000E", "UP1004-CUSA00419_00-GTAVCASHPACK000F"]},
-        {"topCategory": "GAME", "ids": ["UP1004-CUSA00419_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAVCROSSGENBUND",
-        "UP1004-PPSA03420_00-GTAOANDSPUPGRADE", "UP1004-PPSA03420_00-GTAOSTANDALONE01",
-        "UP1004-CUSA00419_00-PREMIUMPACKOG001", "UP1004-CUSA00419_00-PREMIUMPACKOGGW1",
-        "UP1004-CUSA00419_00-GTAVDIGITALDOWNL"]}, {"topCategory": "PVU_GAME", "ids":
-        ["UP1004-CUSA00419_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAVCROSSGENBUND",
+        {"topCategory": "GAME", "ids": ["UP1004-PPSA03420_00-GTAVANDGWSBUNDLE", "UP1004-CUSA00419_00-GTAVCROSSGENBUND",
+        "UP1004-PPSA03420_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAOSTANDALONE01"]},
+        {"topCategory": "PVU_GAME", "ids": ["UP1004-PPSA03420_00-GTAVANDGWSBUNDLE",
+        "UP1004-CUSA00419_00-GTAVCROSSGENBUND", "UP1004-PPSA03420_00-GTAVCROSSGENBUND",
         "UP1004-PPSA03420_00-GTAOSTANDALONE01"]}], "titleIds": ["CUSA01436_00", "CUSA00880_00",
         "PPSA03421_00", "CUSA00419_00", "CUSA29862_00", "PPSA04263_00", "PPSA03420_00",
         "CUSA00411_00", "PPSA04265_00", "PPSA04264_00", "PPSA01721_00"], "country":
@@ -201,7 +204,7 @@ interactions:
         "storeDisplayClassification": "GAME_BUNDLE", "localizedStoreDisplayClassification":
         "Game Bundle", "topCategory": "GAME", "localizedTopCategory": "Game", "edition":
         {"name": "", "nameEn": "", "phoneticPronunciation": "", "spokenName": "",
-        "ordering": 2, "type": "STANDARD", "features": ["Grand Theft Auto Online (PS5\u2122)"]},
+        "ordering": 3, "type": "STANDARD", "features": ["Grand Theft Auto Online (PS5\u2122)"]},
         "isDefaultProduct": true, "isBestSelling": false, "descriptions": [{"type":
         "LONG", "desc": "Includes Grand Theft Auto Online. GTAV: Story Mode can be
         purchased separately. <br/><br/>Continue your journey on PS5\u2122 and transfer
@@ -250,8 +253,8 @@ interactions:
         players with PS Plus<br/>In-game purchases optional<br/>Online play required<br/>Vibration
         function and trigger effect supported (DualSense wireless controller)<br/>Remote
         Play supported"}, {"type": "LEGAL", "desc": "<br><br>Online features require
-        an account and are subject to terms of service and applicable privacy policy
-        (playstationnetwork.com/terms-of-service & playstationnetwork.com/privacy-policy).
+        an account for PlayStation and are subject to terms of service and applicable
+        privacy policy (playstation.com/Terms and playstation.com/legal/privacy-policy).
         <br><br>Software subject to license (us.playstation.com/softwarelicense).
         <br>", "metadata": {"downloadCloudFlag": "BOTH", "subType": "SCEA_TOS"}},
         {"type": "LEGAL", "desc": "<br>You can download and play this content on the
@@ -306,65 +309,71 @@ interactions:
         "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "PS5_TRIGGER_EFFECT",
         "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "ONLINE_PLAY_MODE",
         "value": "REQUIRED"}, {"type": "IN_GAME_PURCHASES", "value": "OPTIONAL"},
-        {"type": "STREAMING_SUPPORTED", "value": "ENABLED", "targetPlatforms": ["PS5"]}],
-        "storeFronts": ["PS5", "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"],
-        "revisionIds": {}, "targetPlatforms": ["PS5"], "skus": [{"id": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003",
-        "displayPrice": "$19.99", "price": 1999, "eligibilities": [], "type": "STANDARD",
-        "name": "Game", "entitlements": [{"id": "UP1004-PPSA03420_00-GTAONLINEDIGITAL",
-        "name": "Grand Theft Auto V", "applicationType": "UPGRADABLE", "packageType":
-        "PSGD", "preorderPlaceholderFlag": false, "type": "UNIFIED", "subType": "REGULAR",
-        "spokenLanguages": ["en"], "screenLanguages": ["es", "zh", "fr", "ru", "de",
-        "pl", "it", "pt_BR", "en", "es_MX", "ko", "ch"], "packages": [{"playablePlatform":
-        "PS5", "size": 102361923584}], "streamingSupported": true, "streamingSupportedPlatforms":
-        ["PS5", "DWC"], "featureType": "FULL_GAME"}, {"id": "UP1004-PPSA03420_00-PSTRACK000000000",
+        {"type": "STREAMING_SUPPORTED", "value": "ENABLED", "targetPlatforms": ["PS5",
+        "DWC"]}], "storeFronts": ["PS5", "WEB_STORE"], "supportedStoreFronts": ["PS5",
+        "WEB_STORE"], "revisionIds": {}, "targetPlatforms": ["PS5"], "skus": [{"id":
+        "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003", "displayPrice": "$19.99", "price":
+        1999, "eligibilities": [], "type": "STANDARD", "name": "Game", "entitlements":
+        [{"id": "UP1004-PPSA03420_00-GTAONLINEDIGITAL", "name": "Grand Theft Auto
+        V", "applicationType": "UPGRADABLE", "packageType": "PSGD", "preorderPlaceholderFlag":
+        false, "type": "UNIFIED", "subType": "REGULAR", "spokenLanguages": ["en"],
+        "screenLanguages": ["es", "zh", "fr", "ru", "de", "pl", "it", "pt_BR", "en",
+        "es_MX", "ko", "ch"], "packages": [{"playablePlatform": "PS5", "size": 103288602624}],
+        "streamingSupported": true, "featureType": "FULL_GAME"}, {"id": "UP1004-PPSA03420_00-PSTRACK000000000",
         "name": "Grand Theft Auto Online (PS5\u2122) Tracker", "packageType": "PSTRACK",
         "preorderPlaceholderFlag": false, "type": "UNIFIED", "subType": "REGULAR",
         "packages": [], "featureType": "NOT_APPLICABLE"}], "chargeImmediatelyFlag":
         false, "storeFronts": ["PS5", "WEB_STORE"], "supportedStoreFronts": ["PS5",
         "WEB_STORE"], "contentCollections": [{"id": "UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU",
         "branding": "GTA_PLUS_DISCOUNT", "isStreamable": false, "isDownloadable":
-        true, "startDate": "2025-11-06T14:00:00Z"}, {"id": "UP1004-PPSA16755_00-QVKK80MYTJISAU0L",
-        "branding": "GTA_PLUS_DOWNLOAD", "isStreamable": false, "isDownloadable":
-        true, "startDate": "2025-11-06T14:00:00Z"}], "lowestRecentPrice": {"numberOfDays":
-        30, "price": 1999}}], "offers": {"osls": ["{\"metadata\":{\"id\":\"OFFER-LCP-PROD-15434_D-2221263\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-02-02T11:27:14Z\",\"financeKeyId\":\"17259327\",\"campaignId\":\"PROMO-PROD-00015434\",\"promoId\":15434,\"start\":\"2026-02-02T11:27:08Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"BASE_PRICE\"}},\"qualification\":{\"criteria\":{\"not\":{\"or\":[{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.1\"}},{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.2\"}}]}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":1799,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
-        "{\"metadata\":{\"id\":\"OFFER-LCP-PROD-15434_D-2221266\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-02-02T11:27:14Z\",\"financeKeyId\":\"17259199\",\"campaignId\":\"PROMO-PROD-00015434\",\"promoId\":15434,\"start\":\"2026-02-02T11:27:07Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"BASE_PRICE\"}},\"qualification\":{\"criteria\":{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.1\"}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":1999,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
-        "{\"metadata\":{\"id\":\"OFFER-LCP-PROD-15434_D-2221268\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-02-02T11:27:14Z\",\"financeKeyId\":\"17259263\",\"campaignId\":\"PROMO-PROD-00015434\",\"promoId\":15434,\"start\":\"2026-02-02T11:27:08Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"BASE_PRICE\"}},\"qualification\":{\"criteria\":{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.2\"}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":1799,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
-        "{\"metadata\":{\"id\":\"UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU\",\"schemaVersion\":\"1.0.19\",\"modified\":\"2026-03-09T17:43:25Z\",\"financeKeyId\":\"13631039\",\"version\":1773078205,\"exclusive\":false,\"display\":{\"branding\":\"GTA_PLUS_DISCOUNT\"}},\"qualification\":{\"anyOfPlatforms\":[\"PS5\",\"CHIHIRO\"],\"criteria\":{\"entitledTo\":\"UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU\"}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":20,\"wholesale\":null}}},\"bias\":50,\"publisherFunded\":null}}",
-        "{\"metadata\":{\"id\":\"UP1004-PPSA16755_00-QVKK80MYTJISAU0L\",\"schemaVersion\":\"1.0.21\",\"modified\":\"2026-03-09T17:41:57.367Z\",\"financeKeyId\":\"13546943\",\"start\":\"2021-11-11T15:00:00Z\",\"exclusive\":false,\"durationOverrideType\":5,\"display\":{\"branding\":\"GTA_PLUS_DOWNLOAD\"}},\"qualification\":{\"anyOfPlatforms\":[\"PS5\",\"CHIHIRO\"],\"criteria\":{\"entitledTo\":\"UP1004-PPSA16755_00-QVKK80MYTJISAU0L\"}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":100,\"wholesale\":null}}},\"bias\":10,\"publisherFunded\":null}}"],
+        true, "startDate": "2025-11-06T14:00:00Z", "benefitAccess": [{"benefitPlanId":
+        "UP1004-PPSA16755_00-0000000000000000", "componentId": "296D8C07-3B12-473A-B34A-9052CD6D7CA5"}]},
+        {"id": "UP1004-PPSA16755_00-QVKK80MYTJISAU0L", "branding": "GTA_PLUS_DOWNLOAD",
+        "isStreamable": false, "isDownloadable": true, "startDate": "2025-11-06T14:00:00Z",
+        "benefitAccess": [{"benefitPlanId": "UP1004-PPSA16755_00-0000000000000000",
+        "componentId": "296D8C07-3B12-473A-B34A-9052CD6D7CA5"}]}], "lowestRecentPrice":
+        {"numberOfDays": 30, "price": 1999}}], "offers": {"osls": ["{\"metadata\":{\"id\":\"OFFER-PROD-19781_D-2783511\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-10-19T15:35:17Z\",\"financeKeyId\":\"19404991\",\"campaignId\":\"PROMO-PROD-00019781\",\"promoId\":19781,\"start\":\"2026-10-21T07:00:00Z\",\"end\":\"2026-11-05T07:59:00Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{\"criteria\":{\"not\":{\"or\":[{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.1\"}},{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.2\"}}]}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":999,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
+        "{\"metadata\":{\"id\":\"OFFER-PROD-19781_D-2783514\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-10-19T15:35:23Z\",\"financeKeyId\":\"19406399\",\"campaignId\":\"PROMO-PROD-00019781\",\"promoId\":19781,\"start\":\"2026-10-21T07:00:00Z\",\"end\":\"2026-11-05T07:59:00Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{\"criteria\":{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.1\"}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":999,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
+        "{\"metadata\":{\"id\":\"OFFER-PROD-19781_D-2783515\",\"schemaVersion\":\"1.6.3\",\"modified\":\"2026-10-19T15:35:21Z\",\"financeKeyId\":\"19405823\",\"campaignId\":\"PROMO-PROD-00019781\",\"promoId\":19781,\"start\":\"2026-10-21T07:00:00Z\",\"end\":\"2026-11-05T07:59:00Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{\"criteria\":{\"userInExperiment\":{\"feature\":\"IPT_LTM\",\"variantId\":\"CrossChannel.IPT_LTM._.1.2\"}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"pricepoints\":[{\"retail\":999,\"currency\":\"USD\",\"wholesale\":null}]}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
+        "{\"metadata\":{\"id\":\"UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU\",\"schemaVersion\":\"1.0.19\",\"modified\":\"2026-06-10T15:48:10Z\",\"financeKeyId\":\"13631039\",\"version\":1781106490,\"exclusive\":false,\"display\":{\"branding\":\"GTA_PLUS_DISCOUNT\"}},\"qualification\":{\"anyOfPlatforms\":[\"PS5\",\"CHIHIRO\"],\"criteria\":{\"entitledTo\":\"UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU\"}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":20,\"wholesale\":null}}},\"bias\":50,\"publisherFunded\":null}}",
+        "{\"metadata\":{\"id\":\"UP1004-PPSA16755_00-QVKK80MYTJISAU0L\",\"schemaVersion\":\"1.0.21\",\"modified\":\"2026-06-10T15:46:07.238Z\",\"financeKeyId\":\"13546943\",\"start\":\"2021-11-11T15:00:00Z\",\"exclusive\":false,\"durationOverrideType\":5,\"display\":{\"branding\":\"GTA_PLUS_DOWNLOAD\"}},\"qualification\":{\"anyOfPlatforms\":[\"PS5\",\"CHIHIRO\"],\"criteria\":{\"entitledTo\":\"UP1004-PPSA16755_00-QVKK80MYTJISAU0L\"}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":100,\"wholesale\":null}}},\"bias\":10,\"publisherFunded\":null}}"],
         "skuRelevancy": [{"skuId": "UP1004-PPSA03420_00-GTAOSTANDALONE01-U003", "offerAvailability":
-        [{"offerId": "OFFER-LCP-PROD-15434_D-2221263", "startDate": "2026-02-02T11:27:08Z"},
-        {"offerId": "OFFER-LCP-PROD-15434_D-2221266", "startDate": "2026-02-02T11:27:07Z"},
-        {"offerId": "OFFER-LCP-PROD-15434_D-2221268", "startDate": "2026-02-02T11:27:08Z"},
-        {"offerId": "UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU", "startDate": "2025-11-06T14:00:00Z"},
-        {"offerId": "UP1004-PPSA16755_00-QVKK80MYTJISAU0L", "startDate": "2025-11-06T14:00:00Z"}]}]},
-        "starRating": {"total": "941754", "score": "4.46", "count": [{"score": 1,
-        "count": 76003}, {"score": 2, "count": 10496}, {"score": 3, "count": 49572},
-        {"score": 4, "count": 72159}, {"score": 5, "count": 733524}]}, "isTrending":
-        false, "contentTypeId": 1, "firstPrice": {"startDate": "2022-03-15T04:00:00Z",
-        "endDate": "2022-06-15T17:00:00Z", "price": 0}}, "genres": ["ACTION", "ADVENTURE"],
-        "localizedGenres": [{"value": "Action", "type": "ACTION"}, {"value": "Adventure",
-        "type": "ADVENTURE"}], "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres":
-        [{"value": "Shoot ''Em Up", "type": "SHOOT_EM_UP"}, {"value": "NA", "type":
-        "N/A"}], "minimumAge": 17, "releaseDate": {"date": "2014-11-18T00:00:00Z",
-        "localizedDate": "11/17/2014", "type": "DAY_MONTH_YEAR"}, "isRecommendableOnStore":
-        true, "isSearchableOnStore": true, "storeFronts": ["PS5", "WEB_STORE", "PS4"],
-        "supportedStoreFronts": ["PS5", "WEB_STORE", "PS4"], "marketingStories": [],
-        "compatibilityNotices": [{"type": "NO_OF_NETWORK_PLAYERS", "value": 30}, {"type":
-        "NO_OF_NETWORK_PLAYERS_PS_PLUS", "value": 30}, {"type": "DUALSHOCK4_VIBRATION",
-        "value": true, "targetPlatforms": ["PS4"]}, {"type": "REMOTE_PLAY_SUPPORTED",
-        "value": true}, {"type": "PS5_VIBRATION", "value": "OPTIONAL", "targetPlatforms":
-        ["PS5"]}, {"type": "PS5_TRIGGER_EFFECT", "value": "OPTIONAL", "targetPlatforms":
-        ["PS5"]}, {"type": "ONLINE_PLAY_MODE", "value": "REQUIRED"}, {"type": "IN_GAME_PURCHASES",
-        "value": "OPTIONAL"}], "localizedMedia": {"defaultLanguage": "en-US", "metadata":
-        {"en-US": {"videos": [{"id": "3", "url": "https://vulcan.dl.playstation.net/img/rnd/202312/1411/5fa8f17c4c81cf21a277e64f8a4031eabd7a119700ae45db.mp4",
+        [{"offerId": "OFFER-PROD-19781_D-2783511", "startDate": "2026-10-21T07:00:00Z",
+        "endDate": "2026-11-05T07:59:00Z"}, {"offerId": "OFFER-PROD-19781_D-2783514",
+        "startDate": "2026-10-21T07:00:00Z", "endDate": "2026-11-05T07:59:00Z"}, {"offerId":
+        "OFFER-PROD-19781_D-2783515", "startDate": "2026-10-21T07:00:00Z", "endDate":
+        "2026-11-05T07:59:00Z"}, {"offerId": "UP1004-PPSA16755_00-LILYDM2Y4MBQVTZU",
+        "startDate": "2025-11-06T14:00:00Z"}, {"offerId": "UP1004-PPSA16755_00-QVKK80MYTJISAU0L",
+        "startDate": "2025-11-06T14:00:00Z"}]}]}, "starRating": {"total": "1021292",
+        "score": "4.46", "count": [{"score": 1, "count": 83034}, {"score": 2, "count":
+        11295}, {"score": 3, "count": 54210}, {"score": 4, "count": 76768}, {"score":
+        5, "count": 795985}]}, "isTrending": false, "contentTypeId": 1, "firstPrice":
+        {"startDate": "2022-03-15T04:00:00Z", "endDate": "2022-06-15T17:00:00Z", "price":
+        0, "currency": "USD"}}, "genres": ["ACTION", "ADVENTURE"], "localizedGenres":
+        [{"value": "Action", "type": "ACTION"}, {"value": "Adventure", "type": "ADVENTURE"}],
+        "subGenres": ["SHOOT_EM_UP", "N/A"], "localizedSubGenres": [{"value": "Shoot
+        ''Em Up", "type": "SHOOT_EM_UP"}, {"value": "NA", "type": "N/A"}], "minimumAge":
+        17, "releaseDate": {"date": "2014-11-18T00:00:00Z", "localizedDate": "11/17/2014",
+        "type": "DAY_MONTH_YEAR"}, "isRecommendableOnStore": true, "isSearchableOnStore":
+        true, "storeFronts": ["WEB_STORE", "PS5", "PS4"], "supportedStoreFronts":
+        ["WEB_STORE", "PS5", "PS4"], "marketingStories": [], "compatibilityNotices":
+        [{"type": "NO_OF_NETWORK_PLAYERS", "value": 30}, {"type": "NO_OF_NETWORK_PLAYERS_PS_PLUS",
+        "value": 30}, {"type": "DUALSHOCK4_VIBRATION", "value": true, "targetPlatforms":
+        ["PS4"]}, {"type": "REMOTE_PLAY_SUPPORTED", "value": true}, {"type": "PS5_VIBRATION",
+        "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "PS5_TRIGGER_EFFECT",
+        "value": "OPTIONAL", "targetPlatforms": ["PS5"]}, {"type": "ONLINE_PLAY_MODE",
+        "value": "REQUIRED"}, {"type": "IN_GAME_PURCHASES", "value": "OPTIONAL"},
+        {"type": "STREAMING_SUPPORTED", "value": "ENABLED", "targetPlatforms": ["PS5",
+        "DWC"]}], "localizedMedia": {"defaultLanguage": "en-US", "metadata": {"en-US":
+        {"videos": [{"id": "3", "url": "https://vulcan.dl.playstation.net/img/rnd/202312/1411/5fa8f17c4c81cf21a277e64f8a4031eabd7a119700ae45db.mp4",
         "hlsUrl": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_avc.m3u8",
         "hlsUrl4k": "https://vulcan.dl.playstation.net/ap/bm/b9afc2a2-c88d-480b-b03c-44703b76337e-lq53hgw2/master_hevc.m3u8",
         "posters": ["https://image.api.playstation.com/vulcan/img/rnd/202312/1411/d0464983961065b9777f63354c675f21cd1f58bab031b481.png"],
         "type": "PREVIEW"}], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0302/bZ1JTRXzoyl3hkcsloKcCgdB.jpg",
         "type": "GAMEHUB_COVER_ART", "metadata": {}}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202011/2419/XFDZtpMiMpFaJLuo9azJK6Gl.png",
         "type": "LOGO", "metadata": {}}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/K6mmm89oNII1iI1aqaClO0wh.png",
-        "type": "MASTER", "metadata": {}}]}}}, "revisionIds": {"all": 1769508154976,
-        "self": 1750150992079}, "contentRating": {"authority": "ESRB", "description":
+        "type": "MASTER", "metadata": {}}]}}}, "revisionIds": {"all": 1792791282821,
+        "self": 1791576283646}, "contentRating": {"authority": "ESRB", "description":
         "ESRB Mature", "name": "ESRB_MATURE", "url": "https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/esrb/m.png",
         "descriptors": [{"description": "Blood and Gore", "name": "ESRB_BLOOD_AND_GORE"},
         {"description": "Intense Violence", "name": "ESRB_INTENSE_VIOLENCE"}, {"description":
@@ -372,9 +381,9 @@ interactions:
         "ESRB_NUDITY"}, {"description": "Strong Language", "name": "ESRB_STRONG_LANGUAGE"},
         {"description": "Strong Sexual Content", "name": "ESRB_STRONG_SEXUAL_CONTENT"},
         {"description": "Use of Drugs and Alcohol", "name": "ESRB_USE_OF_DRUGS_AND_ALCOHOL"}],
-        "interactiveElements": []}, "starRating": {"total": "941754", "score": "4.46",
-        "count": [{"score": 1, "count": 76003}, {"score": 2, "count": 10496}, {"score":
-        3, "count": 49572}, {"score": 4, "count": 72159}, {"score": 5, "count": 733524}]}}]'
+        "interactiveElements": []}, "starRating": {"total": "1021292", "score": "4.46",
+        "count": [{"score": 1, "count": 83034}, {"score": 2, "count": 11295}, {"score":
+        3, "count": 54210}, {"score": 4, "count": 76768}, {"score": 5, "count": 795985}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -383,7 +392,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Apr 2026 03:25:29 GMT
+      - Sun, 25 Oct 2026 00:29:01 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
@@ -392,7 +401,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       content-length:
-      - '27642'
+      - '28052'
     status:
       code: 200
       message: OK

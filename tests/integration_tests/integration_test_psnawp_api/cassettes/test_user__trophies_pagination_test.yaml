@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/ikemenzi/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
@@ -37,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:46 GMT
+      - Sun, 25 Oct 2026 00:35:40 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -60,8 +62,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0
   response:
@@ -175,7 +179,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:49 GMT
+      - Sun, 25 Oct 2026 00:35:43 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -204,8 +208,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0
   response:
@@ -319,7 +325,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:52 GMT
+      - Sun, 25 Oct 2026 00:35:46 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -348,8 +354,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/npCommunicationIds/NPWR08964_00/trophyGroups/default/trophies?limit=200&npServiceName=trophy&offset=0
   response:
@@ -363,29 +371,29 @@ interactions:
         false, "earned": true, "earnedDateTime": "2017-12-03T01:36:40Z", "trophyType":
         "gold", "trophyRare": 1, "trophyEarnedRate": "7.1"}, {"trophyId": 3, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T16:55:04Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "68.9"}, {"trophyId": 4, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "68.8"}, {"trophyId": 4, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:11:48Z", "trophyType":
-        "bronze", "trophyRare": 3, "trophyEarnedRate": "62.0"}, {"trophyId": 5, "trophyHidden":
+        "bronze", "trophyRare": 3, "trophyEarnedRate": "61.9"}, {"trophyId": 5, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:37:41Z", "trophyType":
-        "silver", "trophyRare": 3, "trophyEarnedRate": "55.1"}, {"trophyId": 6, "trophyHidden":
+        "silver", "trophyRare": 3, "trophyEarnedRate": "55.0"}, {"trophyId": 6, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T17:48:48Z", "trophyType":
-        "silver", "trophyRare": 3, "trophyEarnedRate": "53.0"}, {"trophyId": 7, "trophyHidden":
+        "silver", "trophyRare": 3, "trophyEarnedRate": "52.9"}, {"trophyId": 7, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-02T18:03:13Z", "trophyType":
         "silver", "trophyRare": 2, "trophyEarnedRate": "45.7"}, {"trophyId": 8, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T11:51:43Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "23.3"}, {"trophyId": 9, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "23.4"}, {"trophyId": 9, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T13:19:28Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "12.7"}, {"trophyId": 10, "trophyHidden":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "12.8"}, {"trophyId": 10, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T12:28:20Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "14.6"}, {"trophyId": 11, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T13:37:15Z", "trophyType":
         "silver", "trophyRare": 2, "trophyEarnedRate": "20.7"}, {"trophyId": 12, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T13:43:06Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "20.4"}, {"trophyId": 13, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "20.5"}, {"trophyId": 13, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T13:54:45Z", "trophyType":
         "gold", "trophyRare": 2, "trophyEarnedRate": "19.7"}, {"trophyId": 14, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T14:19:12Z", "trophyType":
-        "bronze", "trophyRare": 2, "trophyEarnedRate": "19.0"}, {"trophyId": 15, "trophyHidden":
+        "bronze", "trophyRare": 2, "trophyEarnedRate": "19.1"}, {"trophyId": 15, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-05T14:28:29Z", "trophyType":
         "bronze", "trophyRare": 2, "trophyEarnedRate": "18.7"}, {"trophyId": 16, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-06T10:19:43Z", "trophyType":
@@ -393,9 +401,9 @@ interactions:
         false, "earned": true, "earnedDateTime": "2017-12-06T10:39:33Z", "trophyType":
         "silver", "trophyRare": 2, "trophyEarnedRate": "17.0"}, {"trophyId": 18, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-06T10:56:53Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "16.6"}, {"trophyId": 19, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "16.7"}, {"trophyId": 19, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-06T11:11:17Z", "trophyType":
-        "silver", "trophyRare": 2, "trophyEarnedRate": "16.2"}, {"trophyId": 20, "trophyHidden":
+        "silver", "trophyRare": 2, "trophyEarnedRate": "16.3"}, {"trophyId": 20, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-06T11:18:04Z", "trophyType":
         "gold", "trophyRare": 0, "trophyEarnedRate": "1.8"}, {"trophyId": 21, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-07T14:16:58Z", "trophyType":
@@ -413,7 +421,7 @@ interactions:
         false, "earned": true, "earnedDateTime": "2017-12-08T13:50:40Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "12.9"}, {"trophyId": 28, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-08T14:10:14Z", "trophyType":
-        "bronze", "trophyRare": 1, "trophyEarnedRate": "12.4"}, {"trophyId": 29, "trophyHidden":
+        "bronze", "trophyRare": 1, "trophyEarnedRate": "12.5"}, {"trophyId": 29, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-08T14:35:18Z", "trophyType":
         "bronze", "trophyRare": 1, "trophyEarnedRate": "12.1"}, {"trophyId": 30, "trophyHidden":
         false, "earned": true, "earnedDateTime": "2017-12-08T14:44:26Z", "trophyType":
@@ -433,7 +441,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:56 GMT
+      - Sun, 25 Oct 2026 00:35:49 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

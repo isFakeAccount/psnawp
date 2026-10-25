@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
@@ -37,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:27 GMT
+      - Sun, 25 Oct 2026 00:35:21 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -60,8 +62,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/1802043923080044300/titles/trophyTitles?npTitleIds=PPSA01506_00%2CCUSA12057_00%2CCUSA00419_00
   response:
@@ -84,7 +88,7 @@ interactions:
         32, "trophyHidden": false, "trophyType": "gold", "trophyName": "Armed and
         Dangerous", "trophyDetail": "Fully upgrade everything at the Forge of Hephaistos.",
         "trophyIconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR21237_00/4684baab-bcb8-49fc-9224-deeac059ac35.png",
-        "trophyRare": 1, "trophyEarnedRate": "7.2", "earned": true, "earnedDateTime":
+        "trophyRare": 1, "trophyEarnedRate": "7.1", "earned": true, "earnedDateTime":
         "2021-03-07T19:18:41Z"}], "progress": 26, "earnedTrophies": {"bronze": 13,
         "silver": 5, "gold": 1, "platinum": 0}, "definedTrophies": {"bronze": 47,
         "silver": 16, "gold": 5, "platinum": 1}, "lastUpdatedDateTime": "2022-11-25T19:43:25Z"}]},
@@ -92,11 +96,11 @@ interactions:
         "npCommunicationId": "NPWR06221_00", "trophyTitleName": "Grand Theft Auto
         V", "trophyTitleDetail": "Grand Theft Auto V", "trophyTitleIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/A3E52C438318CCEC6346EB2A31DBF31164A95A25.PNG",
         "hasTrophyGroups": true, "trophyGroupCount": 4, "rarestTrophies": [{"trophyId":
-        2, "trophyHidden": true, "trophyType": "bronze", "trophyName": "A Friendship
-        Resurrected", "trophyDetail": "With friends like this who needs enemies?",
-        "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/EDD221A259C9C6F4C72109C133C1D0E239A22DAD.PNG",
-        "trophyRare": 2, "trophyEarnedRate": "32.8", "earned": true, "earnedDateTime":
-        "2020-02-02T00:34:22Z"}], "progress": 4, "earnedTrophies": {"bronze": 5, "silver":
+        49, "trophyHidden": false, "trophyType": "bronze", "trophyName": "American
+        Dream", "trophyDetail": "GTA Online: Own an Apartment, Garage and an Insured
+        Vehicle", "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06221_00_00943B71B23B3A5D98EB6CA419684E0F0A07FA8707/4EE2D4E99AB5352FB5C7C8D735887578FA193855.PNG",
+        "trophyRare": 2, "trophyEarnedRate": "32.6", "earned": true, "earnedDateTime":
+        "2020-02-09T17:24:48Z"}], "progress": 4, "earnedTrophies": {"bronze": 5, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 59, "silver":
         15, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2020-02-09T17:24:52Z"}]}]}'
     headers:
@@ -107,7 +111,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:31:31 GMT
+      - Sun, 25 Oct 2026 00:35:24 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -118,7 +122,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       content-length:
-      - '2941'
+      - '2951'
     status:
       code: 200
       message: OK

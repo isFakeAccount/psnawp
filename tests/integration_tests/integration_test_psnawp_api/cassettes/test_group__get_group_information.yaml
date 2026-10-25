@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=1&offset=0
   response:
@@ -39,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:26:43 GMT
+      - Sun, 25 Oct 2026 00:30:12 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -64,20 +66,22 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~1CACE0CDC2C96B5B.25C4C5406FD6D50E?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CnotificationSetting
   response:
     body:
       string: '{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType": 0, "modifiedTimestamp":
-        "1777260390950", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
+        "1792888202927", "groupName": {"value": "", "status": 0}, "groupIcon": {"status":
         0}, "joinedTimestamp": "1717991006000", "isFavorite": false, "existsNewArrival":
         false, "mainThread": {"threadId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "modifiedTimestamp":
-        "1777260390950", "latestMessage": {"messageUid": "1#454978660083246", "messageType":
+        "1792888202927", "latestMessage": {"messageUid": "1#458979379949503", "messageType":
         1, "alternativeMessageType": 1, "body": "Hello World!", "createdTimestamp":
-        "1777260390950", "sender": {"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}}, "readMessageUid": "1#454978660083246"}, "members": [{"accountId":
+        "1792888202927", "sender": {"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}}, "readMessageUid": "1#458979379949503"}, "members": [{"accountId":
         "2721516955383551246", "onlineId": "VaultTec-Co"}, {"accountId": "2066273503397112667",
         "onlineId": "isFakeAccount"}], "notificationSetting": {"isMute": false}}'
     headers:
@@ -96,7 +100,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:26:46 GMT
+      - Sun, 25 Oct 2026 00:30:15 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

@@ -13,13 +13,15 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5007681186655854753/friends?limit=1000
   response:
     body:
-      string: '{"error": {"referenceId": "2f3c43a6-41e9-11f1-bf9d-211d65df37cc", "code":
+      string: '{"error": {"referenceId": "8a969ca8-d00b-11f1-a2a3-778bd3712765", "code":
         2281486, "message": "Not permitted by access control"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -39,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:28:40 GMT
+      - Sun, 25 Oct 2026 00:32:21 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -48,7 +50,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0173015171172811836
+      - 0823737109432183823
     status:
       code: 403
       message: Forbidden

@@ -13,20 +13,27 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups?includeFields=members&limit=10&offset=0
   response:
     body:
-      string: '{"groups": [{"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E", "groupType":
-        0, "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
-        {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]}, {"groupId":
-        "deca800ec035903581d558f5da3725369f35e582-700", "groupType": 1, "members":
-        [{"accountId": "4888595468191851897", "onlineId": "Assaultrons"}, {"accountId":
-        "7802466472162788108", "onlineId": "BOBROV"}, {"accountId": "1737894070521504034",
-        "onlineId": "BobbiNoNose"}, {"accountId": "4728157271238781131", "onlineId":
-        "Boston"}, {"accountId": "1509036500387339577", "onlineId": "BrianVirgil"},
+      string: '{"groups": [{"groupId": "63bcfe57b41ece0c4a49541cc46f77e6a17e1928-514",
+        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}, {"accountId": "8859462586603699392", "onlineId": "test"}]},
+        {"groupId": "~1E2C37A3E0A162FE.25C4C5406FD6D50E", "groupType": 0, "members":
+        [{"accountId": "2174173897100976894", "onlineId": "GTAVItester"}, {"accountId":
+        "2721516955383551246", "onlineId": "VaultTec-Co"}]}, {"groupId": "~1CACE0CDC2C96B5B.25C4C5406FD6D50E",
+        "groupType": 0, "members": [{"accountId": "2721516955383551246", "onlineId":
+        "VaultTec-Co"}, {"accountId": "2066273503397112667", "onlineId": "isFakeAccount"}]},
+        {"groupId": "deca800ec035903581d558f5da3725369f35e582-700", "groupType": 1,
+        "members": [{"accountId": "4888595468191851897", "onlineId": "Assaultrons"},
+        {"accountId": "7802466472162788108", "onlineId": "BOBROV"}, {"accountId":
+        "1737894070521504034", "onlineId": "BobbiNoNose"}, {"accountId": "4728157271238781131",
+        "onlineId": "Boston"}, {"accountId": "1509036500387339577", "onlineId": "BrianVirgil"},
         {"accountId": "8277995168142404228", "onlineId": "CaptainKell"}, {"accountId":
         "1611614263868145015", "onlineId": "Childrenofatom"}, {"accountId": "8783759943822242298",
         "onlineId": "Covenant"}, {"accountId": "8726167847296726865", "onlineId":
@@ -57,10 +64,10 @@ interactions:
         "onlineId": "SanctuaryHills"}, {"accountId": "3147431628163337152", "onlineId":
         "Sturges01"}, {"accountId": "8863329282131238306", "onlineId": "Synth"}, {"accountId":
         "6282967998613790920", "onlineId": "T-51"}, {"accountId": "3154214896068061240",
-        "onlineId": "TEKTUS-"}, {"accountId": "4392705883286944663", "onlineId": "TheEnclave1"},
-        {"accountId": "2656972529118748534", "onlineId": "ThePack"}, {"accountId":
-        "2485855607161239787", "onlineId": "ToddHoward"}, {"accountId": "594016774128485168",
-        "onlineId": "V_MP1RE_"}, {"accountId": "8138271301010399734", "onlineId":
+        "onlineId": "TEKTUS-"}, {"accountId": "594016774128485168", "onlineId": "TehVampyre"},
+        {"accountId": "4392705883286944663", "onlineId": "TheEnclave1"}, {"accountId":
+        "2656972529118748534", "onlineId": "ThePack"}, {"accountId": "2485855607161239787",
+        "onlineId": "ToddHoward"}, {"accountId": "8138271301010399734", "onlineId":
         "VaultGirl"}, {"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
         {"accountId": "871894705766159678", "onlineId": "VaultTecRep"}, {"accountId":
         "4483072369608842187", "onlineId": "X6-88R"}, {"accountId": "2606783445200975798",
@@ -102,9 +109,6 @@ interactions:
         "VaultTec-Co"}, {"accountId": "8859462586603699392", "onlineId": "test"}]},
         {"groupId": "8ce5bb002735872969a30c1a69bd12c6a6693b39-303", "groupType": 1,
         "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
-        {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "8f4c03b8613c28b549ad6f8227a3aaa9db21e8c7-812",
-        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, {"accountId": "7362049085979936383", "onlineId": "curryrice1985"},
         {"accountId": "8859462586603699392", "onlineId": "test"}]}, {"groupId": "cec81c1f070531214e7cb15d56442bc7b6246ae9-414",
         "groupType": 1, "members": [{"accountId": "2149836856101283624", "onlineId":
         "AvalibiIty"}, {"accountId": "8070774695828164758", "onlineId": "Brewgeek69"},
@@ -145,11 +149,7 @@ interactions:
         {"groupId": "e7ee3bb9087d2c858468d220e954e8de36a7e075-532", "groupType": 1,
         "members": [{"accountId": "2721516955383551246", "onlineId": "VaultTec-Co"},
         {"accountId": "8859462586603699392", "onlineId": "test"}, {"accountId": "8114850132334777801",
-        "onlineId": "xH34RTST0PP3R-_-"}]}, {"groupId": "0bf1f568d80ae806203e798d0fed56f54cafd147-800",
-        "groupType": 1, "members": [{"accountId": "2721516955383551246", "onlineId":
-        "VaultTec-Co"}, {"accountId": "8859462586603699392", "onlineId": "test"},
-        {"accountId": "8114850132334777801", "onlineId": "xH34RTST0PP3R-_-"}]}], "previousOffset":
-        0, "nextOffset": 10}'
+        "onlineId": "xH34RTST0PP3R-_-"}]}], "previousOffset": 0, "nextOffset": 10}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Content-Type
@@ -164,7 +164,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:45 GMT
+      - Sun, 25 Oct 2026 00:27:17 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -175,7 +175,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       content-length:
-      - '9985'
+      - '9855'
     status:
       code: 200
       message: OK

@@ -23,8 +23,8 @@ interactions:
       Sec-Fetch-User:
       - ?1
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36
       X-Requested-With:
       - com.scee.psxandroid
     method: GET
@@ -40,11 +40,11 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 27 Apr 2026 03:22:07 GMT
+      - Sun, 25 Oct 2026 00:25:41 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.2Tb8CQ&cid=00000000-0000-0000-0000-b025aa3b2674
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.2exopf&cid=00000000-0000-0000-0000-b025aa3b2674
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -59,16 +59,16 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - cff0c00b3b1580fb9f2dd7a0cd1855a2
+      - 6594ba82f222e19e40e6d6684776ac70
       X-RequestId:
-      - cff0c00b3b1580fb9f2dd7a0cd1855a2
+      - 6594ba82f222e19e40e6d6684776ac70
       X-XSS-Protection:
       - 1; mode=block
     status:
       code: 302
       message: Moved Temporarily
 - request:
-    body: cid=00000000-0000-0000-0000-b025aa3b2674&code=v3.2Tb8CQ&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
+    body: cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
     headers:
       Accept:
       - '*/*'
@@ -101,11 +101,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4080'
+      - '4137'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Apr 2026 03:22:10 GMT
+      - Sun, 25 Oct 2026 00:25:44 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -116,9 +116,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - 76deea67fb90728bbc12529bc899a53f
+      - d131771a53d7edf1eaa1c3925a5d47ef
       X-RequestId:
-      - 76deea67fb90728bbc12529bc899a53f
+      - d131771a53d7edf1eaa1c3925a5d47ef
     status:
       code: 200
       message: OK
@@ -136,8 +136,8 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36
     method: GET
     uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
   response:
@@ -151,18 +151,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:22:13 GMT
+      - Sun, 25 Oct 2026 00:25:47 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-CorrelationId:
-      - 1f0f69d6-5f6c-4f76-ba02-9f30e37e7bfc
+      - 0b2faab1-3d25-45f6-8750-e9ae704667ae
       X-Psn-Correlation-Id:
-      - 1f0f69d6-5f6c-4f76-ba02-9f30e37e7bfc
+      - 0b2faab1-3d25-45f6-8750-e9ae704667ae
       X-Psn-Request-Id:
-      - 1f0f69d6-5f6c-4f76-ba02-9f30e37e7bfc
+      - 0b2faab1-3d25-45f6-8750-e9ae704667ae
       X-RequestId:
-      - 1f0f69d6-5f6c-4f76-ba02-9f30e37e7bfc
+      - 0b2faab1-3d25-45f6-8750-e9ae704667ae
     status:
       code: 200
       message: OK
@@ -180,8 +180,8 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles
   response:
@@ -216,7 +216,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:22:16 GMT
+      - Sun, 25 Oct 2026 00:25:50 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -225,7 +225,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0903571618360286352
+      - 0336222836685391464
     status:
       code: 200
       message: OK

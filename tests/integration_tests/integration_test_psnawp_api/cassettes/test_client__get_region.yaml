@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
   response:
@@ -28,18 +30,18 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:11 GMT
+      - Sun, 25 Oct 2026 00:28:42 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
       X-CorrelationId:
-      - 37dab78b-773e-420e-b73a-e0529d8661c3
+      - 59046e03-4d3a-4d5a-b7c6-ed67b2f5e97c
       X-Psn-Correlation-Id:
-      - 37dab78b-773e-420e-b73a-e0529d8661c3
+      - 59046e03-4d3a-4d5a-b7c6-ed67b2f5e97c
       X-Psn-Request-Id:
-      - 37dab78b-773e-420e-b73a-e0529d8661c3
+      - 59046e03-4d3a-4d5a-b7c6-ed67b2f5e97c
       X-RequestId:
-      - 37dab78b-773e-420e-b73a-e0529d8661c3
+      - 59046e03-4d3a-4d5a-b7c6-ed67b2f5e97c
     status:
       code: 200
       message: OK
@@ -57,8 +59,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/2721516955383551246/profiles
   response:
@@ -93,7 +97,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:14 GMT
+      - Sun, 25 Oct 2026 00:28:45 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -102,7 +106,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0289522819324101788
+      - 0975459869866039542
     status:
       code: 200
       message: OK
@@ -120,8 +124,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec-Co/profile2?fields=npId%2ConlineId%2CaccountId%2CavatarUrls%2Cplus%2CaboutMe%2ClanguagesUsed%2CtrophySummary%28%40default%2Clevel%2Cprogress%2CearnedTrophies%29%2CisOfficiallyVerified%2CpersonalDetail%28%40default%2CprofilePictureUrls%29%2CpersonalDetailSharing%2CpersonalDetailSharingRequestMessageFlag%2CprimaryOnlineStatus%2Cpresences%28%40default%2C%40titleInfo%2Cplatform%2ClastOnlineDate%2ChasBroadcastData%29%2CrequestMessageFlag%2Cblocking%2CfriendRelation%2Cfollowing%2CconsoleAvailability
   response:
@@ -156,7 +162,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:17 GMT
+      - Sun, 25 Oct 2026 00:28:49 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

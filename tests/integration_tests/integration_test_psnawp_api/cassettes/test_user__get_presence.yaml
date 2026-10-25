@@ -19,9 +19,8 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v2/internal/users/2066273503397112667/basicPresences?platforms=PS4%2CPS5%2CMOBILE_APP%2CPSPC&type=primary&withOwnGameTitleInfo=true
   response:
     body:
-      string: '{"basicPresence": {"availability": "unavailable", "lastAvailableDate":
-        "2026-04-26T18:37:49.606Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "MOBILE_APP", "lastOnlineDate": "2026-04-26T18:37:49.606Z"}}}'
+      string: '{"basicPresence": {"availability": "availableToCommunicate", "primaryPlatformInfo":
+        {"onlineStatus": "online", "platform": "MOBILE_APP"}}}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -36,11 +35,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '212'
+      - '131'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:28:27 GMT
+      - Sun, 25 Oct 2026 00:32:09 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -49,7 +48,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0762092182873217246
+      - 0793622064981920476
     status:
       code: 200
       message: OK

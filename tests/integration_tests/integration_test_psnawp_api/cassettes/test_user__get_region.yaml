@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
@@ -37,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:32:45 GMT
+      - Sun, 25 Oct 2026 00:36:39 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -60,8 +62,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/VaultTec_Trading/profile2?fields=npId%2ConlineId%2CaccountId%2CavatarUrls%2Cplus%2CaboutMe%2ClanguagesUsed%2CtrophySummary%28%40default%2Clevel%2Cprogress%2CearnedTrophies%29%2CisOfficiallyVerified%2CpersonalDetail%28%40default%2CprofilePictureUrls%29%2CpersonalDetailSharing%2CpersonalDetailSharingRequestMessageFlag%2CprimaryOnlineStatus%2Cpresences%28%40default%2C%40titleInfo%2Cplatform%2ClastOnlineDate%2ChasBroadcastData%29%2CrequestMessageFlag%2Cblocking%2CfriendRelation%2Cfollowing%2CconsoleAvailability
   response:
@@ -91,7 +95,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:32:48 GMT
+      - Sun, 25 Oct 2026 00:36:42 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/entitlement/v2/users/me/internal/entitlements?entitlementType=1%2C2%2C3%2C4%2C5&fields=titleMeta%2CgameMeta%2CconceptMeta%2CrewardMeta%2CrewardMeta.retentionPolicy%2CrewardMeta.rewardMembershipType&gameMetaPackageType=PSGD%2CPS4GD&limit=5&offset=0
   response:
@@ -37,10 +39,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "FragPunk", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA26492_00/app/info/60/fi_a2ccc28abe4cb49c3e268f8eaeea6a2588efd142638fb51d9a67894e494f8a2b/icon0.png",
+        "gameMeta": {"name": "FragPunk", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA26492_00/app/info/79/fi_f7d9859d3c90456cccb6798293ea9b75158ac8295b3274921a7234955c85960a/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA26492_00", "name": "FragPunk",
         "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202501/1011/4c3e6e21ae023b67d1c66b06f778a4f59ae1516705398873.png"},
-        "conceptMeta": {"conceptId": "10012871", "name": "FragPunk", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202601/2210/f46bcf4bcb4f77945a6f7e17c9f631a378690b1db6214ed0.png",
+        "conceptMeta": {"conceptId": "10012871", "name": "FragPunk", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2108/23654b0032f1abe416eb0413ace2af95ea725425c5160137.png",
         "minimumAge": 12}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UB0335-PPSA21669_00-0320312678245089", "activeDate": "2025-05-19T02:19:20Z",
@@ -49,11 +51,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Marvel Rivals", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA21669_00/app/info/124/fi_d94ced6b87f020c75bfd7ae1554cb87f14a00aa1f93e6ad29668be7f4509fbd4/icon0.png",
+        "gameMeta": {"name": "Marvel Rivals", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA21669_00/app/info/160/fi_22d4b14792ba50119bec01c551cfb946b473762696879e6006cc5de25c1d5e31/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA21669_00", "name": "Marvel
-        Rivals", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202603/1902/abb4dd3c6d8c44910137ebf1a6e64cc8ab5d94d9733a6008.png"},
+        Rivals", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202607/1008/aeb816655b966f6e96a0fc4929afba02da754badf872f10f.png"},
         "conceptMeta": {"conceptId": "10010451", "name": "Marvel Rivals", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202603/1902/abb4dd3c6d8c44910137ebf1a6e64cc8ab5d94d9733a6008.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202609/1008/3d85937370ce5d1fe39c9541e7cdc14455798fed56dc2390.png",
         "minimumAge": 12}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP0006-PPSA04873_00-APEXLEGENDRSPWN1", "activeDate": "2025-05-19T02:19:43Z",
@@ -62,11 +64,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Apex Legends", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA04873_00/app/info/423/fi_c68858d8c4e375e1aba6cddc58bc9e005e9076b7cbd8add385af613870fecb29/icon0.png",
+        "gameMeta": {"name": "Apex Legends", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA04873_00/app/info/496/fi_2e92a4c011e4247ea55cf637585221bb23b48499e8c1c4492fa60ec9e823fa99/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA04873_00", "name": "Apex
         Legends\u2122", "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202104/2215/6lYpNdq4ISPq4P7WvNtFrbjd.png"},
         "conceptMeta": {"conceptId": "232352", "name": "Apex Legends\u2122", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202601/1921/28311abf49814fe60ed64dd21cedf7c701e6268bd19c9950.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/6a6c898139c7550f3f5cd26135675bd3f3651be30bb17b74.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP0949-CUSA04195_00-BRAWLHALLA111315", "activeDate": "2025-05-19T02:44:47Z",
@@ -91,9 +93,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:24:31 GMT
+      - Sun, 25 Oct 2026 00:28:03 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:24:31 GMT
+      - Sun, 25 Oct 2026 00:28:03 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -108,11 +110,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-XSS-Protection:
-      - 1; mode=block
+      - '0'
       charset:
       - UTF-8
       clTh:
-      - 4fe7ef02-c36a-41dc-8fbf-dd18a51168f2
+      - aaf8be7d-0bac-4e19-b209-64ac6005e3e2
     status:
       code: 200
       message: OK
@@ -130,8 +132,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/entitlement/v2/users/me/internal/entitlements?entitlementType=1%2C2%2C3%2C4%2C5&fields=titleMeta%2CgameMeta%2CconceptMeta%2CrewardMeta%2CrewardMeta.retentionPolicy%2CrewardMeta.rewardMembershipType&gameMetaPackageType=PSGD%2CPS4GD&limit=5&offset=5
   response:
@@ -146,7 +150,7 @@ interactions:
         "gameMeta": {"name": "Destiny 2", "type": "PS4GD", "iconUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA05042_00/2/i_48d0fdd49edd253553e6dc637370e44480ace5ea21056e1ec2501265b9e99933/i/icon0.png",
         "packageType": "PS4GD"}, "titleMeta": {"titleId": "CUSA05042_00", "name":
         "Destiny 2", "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"},
-        "conceptMeta": {"conceptId": "221852", "name": "Destiny 2", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202511/2617/fffb9df0056b522df6a1f35a8aadaa8e2456627ebef64849.png",
+        "conceptMeta": {"conceptId": "221852", "name": "Destiny 2", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2700/67e26ca577583cd8189696baa2181bfc51820ecab1709869.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "serviceType": 0}, {"id": "UP0002-PPSA02409_00-DESTINYTHEGAME02",
         "activeDate": "2025-05-19T02:45:00Z", "entitlementType": 5, "skuId": "UP0002-PPSA02409_00-DESTINYTHEGAME02-U003",
@@ -154,10 +158,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Destiny 2", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA02409_00/app/info/337/fi_daf103b9c6d7da9442da46dc6bfaeec2efbde7d888e75aabd01ac469685dcc9d/icon0.png",
+        "gameMeta": {"name": "Destiny 2", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA02409_00/app/info/345/fi_1c20ce896739955815aca2fd07bcb6ec7c74596d5d62fd2d34c68b6d0beee04a/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA02409_00", "name": "Destiny
         2", "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"},
-        "conceptMeta": {"conceptId": "221852", "name": "Destiny 2", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202511/2617/fffb9df0056b522df6a1f35a8aadaa8e2456627ebef64849.png",
+        "conceptMeta": {"conceptId": "221852", "name": "Destiny 2", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2700/67e26ca577583cd8189696baa2181bfc51820ecab1709869.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP3993-PPSA20676_00-VALORANT00000000", "activeDate": "2025-05-19T02:45:34Z",
@@ -166,10 +170,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "VALORANT", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA20676_00/app/info/103/fi_9b9ce509a9e0831a0d0247282d19424d8a90882021119ba16e13b92936af840f/icon0.png",
+        "gameMeta": {"name": "VALORANT", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA20676_00/app/info/127/fi_b5f7f44e8e3a145ff514a81292d43fc2e8784a5d8442b8b3712e0ef7f7d8e282/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA20676_00", "name": "VALORANT",
-        "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202603/0517/926f25683a42d5595b2dea1f114fc79796181770712979fd.png"},
-        "conceptMeta": {"conceptId": "10010048", "name": "VALORANT", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202603/0517/926f25683a42d5595b2dea1f114fc79796181770712979fd.png",
+        "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png"},
+        "conceptMeta": {"conceptId": "10010048", "name": "VALORANT", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP7157-PPSA18090_00-OFFTHEGRIDCLIENT", "activeDate": "2025-05-19T02:45:58Z",
@@ -178,7 +182,7 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Off The Grid", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA18090_00/app/info/145/fi_7f2919fb48120938b56805587260e29e820788d9e923207ad45d75f342f62e9f/icon0.png",
+        "gameMeta": {"name": "Off The Grid", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA18090_00/app/info/172/fi_3f29432779ece87ef5289d7c2876b04c4213d61a7b100b39ae41564325cb20bb/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA18090_00", "name": "Off
         The Grid", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202307/1720/202e86f677c6ef1ee790703600576090a703ed8f829c467d.png"},
         "conceptMeta": {"conceptId": "10008971", "name": "Off The Grid - Early Access",
@@ -191,11 +195,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "THE FINALS", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA17310_00/app/info/297/fi_1be76ff69884dc8b8b3ca854085e4a3a0c46ece2c37e2f419bd831a07a3dc75c/icon0.png",
+        "gameMeta": {"name": "THE FINALS", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA17310_00/app/info/351/fi_dda1761f8cac59e24281f06683573c28f6c980bcfd70f7291d166454ce6db38d/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA17310_00", "name": "THE
         FINALS - VOLPE Immersion Bundle", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202310/1614/790d2ffda2e65eb5546f0bb36bb2b7a40e56e4274d0df694.png"},
         "conceptMeta": {"conceptId": "10006873", "name": "THE FINALS", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202603/2412/752a84ea2823169ed9e3cfd1a492061ab9aa2f8a3bc816cc.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202610/1612/321c715c18980aac97cbfeecf83f5be8696779c09413f096.png",
         "minimumAge": 12}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}]}'
@@ -209,9 +213,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:24:34 GMT
+      - Sun, 25 Oct 2026 00:28:06 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:24:34 GMT
+      - Sun, 25 Oct 2026 00:28:06 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -226,11 +230,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-XSS-Protection:
-      - 1; mode=block
+      - '0'
       charset:
       - UTF-8
       clTh:
-      - 3fd22252-c3cd-4d59-99d0-6fd6816fcd6c
+      - e1cafb19-c2eb-4ecd-8e20-c693a07f114c
     status:
       code: 200
       message: OK
@@ -248,8 +252,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/entitlement/v2/users/me/internal/entitlements?entitlementType=1%2C2%2C3%2C4%2C5&fields=titleMeta%2CgameMeta%2CconceptMeta%2CrewardMeta%2CrewardMeta.retentionPolicy%2CrewardMeta.rewardMembershipType&gameMetaPackageType=PSGD%2CPS4GD&limit=5&offset=10
   response:
@@ -273,10 +279,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "War Thunder", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA01950_00/app/info/472/fi_ed0026d3765aed1aa0f55c8cea70bd99d33f809f70ede7c059ead96eced1d68e/icon0.png",
+        "gameMeta": {"name": "War Thunder", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA01950_00/app/info/512/fi_84958682fd88afdcbc9b1756fd6f3cc2ecc8f34b57a0c2d6335be5bc20111097/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA01950_00", "name": "War
         Thunder", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202009/1807/or4S09ji9uDiV83aHjJHd951.png"},
-        "conceptMeta": {"conceptId": "205366", "name": "War Thunder", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202603/1810/cade56bde5bd355d453cc5b103fabed6f9da45dc2ad6c89d.png",
+        "conceptMeta": {"conceptId": "205366", "name": "War Thunder", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/1610/5d9820b5dd3584eadc9bc106d36042dad45e4c6ab5915cd0.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "EP2006-PPSA17296_00-0012294286473526", "activeDate": "2025-05-19T02:46:53Z",
@@ -285,7 +291,7 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Asphalt Legends", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA17296_00/app/info/42/fi_29daccac389ab900931fe701e2a6e9db5b88a510826c5b5cdacf0fa3b9bfa230/icon0.png",
+        "gameMeta": {"name": "Asphalt Legends", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA17296_00/app/info/48/fi_f5f4c4f2bbcc8a910e5190aed2c3d7e46b79970e6da600bc74269d70ccaad90a/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA17296_00", "name": "Asphalt
         Legends ", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202507/2410/428d3f7c53fc2ddc21b03745b7d061523e29d47537527b30.png"},
         "conceptMeta": {"conceptId": "10008740", "name": "Asphalt Legends", "iconUrl":
@@ -298,11 +304,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Overwatch", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA07805_00/app/info/95/fi_528169777a59300b279e34d28ebd130c60694c2c2f17e1d4186403ca0969f86a/icon0.png",
+        "gameMeta": {"name": "Overwatch", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA07805_00/app/info/110/fi_ae0d9317ecbc9f0d791bc6f6034067ab0cfff248683c33f4d44d3793b08a7c72/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA07805_00", "name": "Overwatch\u00ae",
         "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202602/1018/e4266f141f6a4b3821c0e429b047e2763c02bc7d95bfca23.png"},
         "conceptMeta": {"conceptId": "216627", "name": "Overwatch\u00ae", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202603/3021/68d27ed219886a4b69867a7b512de262fbf86074fa37b0d6.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202609/2119/654f0b61e6ed9137704ba4679152d2749f676a62f6af1f42.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP6262-CUSA23681_00-0000000000000000", "activeDate": "2025-05-19T02:47:23Z",
@@ -314,8 +320,8 @@ interactions:
         "gameMeta": {"name": "Genshin Impact", "type": "PS4GD", "iconUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA23681_00/3/i_774384db9497b148b3df9f6b99383411f638d0d56b26d15cd439df7a1a5f3855/i/icon0.png",
         "packageType": "PS4GD"}, "titleMeta": {"titleId": "CUSA23681_00", "name":
         "Genshin Impact", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202007/2916/vpogc2PoFSvuwHC51fkRp6u6.png"},
-        "conceptMeta": {"conceptId": "10000896", "name": "Genshin Impact", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202508/2602/30935168a0f21b6710dc2bd7bb37c23ed937fb9fa747d84c.png",
+        "conceptMeta": {"conceptId": "10000896", "name": "Genshin Impact 6th Anniversary",
+        "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0109/4d4f67a277b41db5d4f78d7827784e80188086ee6c526161.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "serviceType": 0}]}'
     headers:
@@ -324,13 +330,13 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6047'
+      - '6064'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:24:37 GMT
+      - Sun, 25 Oct 2026 00:28:09 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:24:37 GMT
+      - Sun, 25 Oct 2026 00:28:09 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -345,11 +351,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-XSS-Protection:
-      - 1; mode=block
+      - '0'
       charset:
       - UTF-8
       clTh:
-      - 899b33b5-c8c7-4b06-9185-9c73a696314f
+      - a375b818-1e9b-41e7-85eb-36d89a7fa7b7
     status:
       code: 200
       message: OK
@@ -367,8 +373,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/entitlement/v2/users/me/internal/entitlements?entitlementType=1%2C2%2C3%2C4%2C5&fields=titleMeta%2CgameMeta%2CconceptMeta%2CrewardMeta%2CrewardMeta.retentionPolicy%2CrewardMeta.rewardMembershipType&gameMetaPackageType=PSGD%2CPS4GD&limit=5&offset=15
   response:
@@ -380,11 +388,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Genshin Impact", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA02562_00/app/info/91/fi_94b81dc893245a9523be972aac038953da00ea62f20863d8a03b8fe5f75206fe/icon0.png",
+        "gameMeta": {"name": "Genshin Impact", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA02562_00/app/info/96/fi_a83265d9c390d378c22ea87e080b414d787fc6df3cc39e8d7d66da5f8c3a1491/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA02562_00", "name": "Genshin
         Impact", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202102/2206/zDgNUho0rGAiDZsxnvoCDq89.png"},
-        "conceptMeta": {"conceptId": "10000896", "name": "Genshin Impact", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202508/2602/30935168a0f21b6710dc2bd7bb37c23ed937fb9fa747d84c.png",
+        "conceptMeta": {"conceptId": "10000896", "name": "Genshin Impact 6th Anniversary",
+        "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0109/4d4f67a277b41db5d4f78d7827784e80188086ee6c526161.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP1477-CUSA29236_00-FALLGUYS00000000", "activeDate": "2025-05-19T02:47:36Z",
@@ -405,7 +413,7 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Fall Guys", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA04476_00/app/info/92/fi_c195fbffa1570aef04d217b11fb1a740714c28bd33bcff8963fc9f0c44dbc1d1/icon0.png",
+        "gameMeta": {"name": "Fall Guys", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA04476_00/app/info/94/fi_aa87dbfe7cac5795f85f9d5dbd3d6bcc8b09e1bf615635e3446a4353e0c5e18b/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA04476_00", "name": "Fall
         Guys", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202309/2603/55757303c2d99bb14cddca61c21680ae1df5ee936d8ffd6e.png"},
         "conceptMeta": {"conceptId": "10003354", "name": "Fall Guys", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202408/0721/00dd43384a1ed60cd7453428dd5c6897b35b013d4b98965d.png",
@@ -417,11 +425,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Wuthering Waves", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA24686_00/app/info/53/fi_71e4af9fc141ccb393c7e423c7580d97d0d4e3c5a78897d428ca1f9ce6801621/icon0.png",
+        "gameMeta": {"name": "Wuthering Waves", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA24686_00/app/info/75/fi_99530cb35f3bfde8a3ccdc32e3129d7b038f942051896ec2abbd632d20596b00/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA24686_00", "name": "Wuthering
         Waves", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202407/0407/ce541c7c085211526e270c3a82afff29abae42265d573515.png"},
         "conceptMeta": {"conceptId": "10010764", "name": "Wuthering Waves", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202603/1009/8741552e3d22994187ad06a549cde149239c9d52ad40fc89.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202609/2010/4fcc2e476c898dad6f461846d4a55a1670b4b71365a072bf.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "EP7449-PPSA21422_00-0178621419327299", "activeDate": "2025-05-19T02:49:32Z",
@@ -430,10 +438,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "UFL", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA21422_00/app/info/131/fi_d3b187a8852cb53de2472f30fdea515b174a84446a12a74f6db13200c349837c/icon0.png",
+        "gameMeta": {"name": "UFL", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA21422_00/app/info/173/fi_2aa48b4fb3836f7c87c148894ced2e625afb155740f57f3f7ae4c1536d5eed25/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA21422_00", "name": "UFL",
         "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202509/1105/b27409ef8a311d2f180969fefb73e27026ad685058a95436.png"},
-        "conceptMeta": {"conceptId": "10004289", "name": "UFL", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202509/1105/b27409ef8a311d2f180969fefb73e27026ad685058a95436.png",
+        "conceptMeta": {"conceptId": "10004289", "name": "UFL", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202608/2707/22d0d665d39c421f20df397272ec075ab437f851a1904990.png",
         "minimumAge": 6}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}]}'
@@ -443,13 +451,13 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6108'
+      - '6124'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:24:40 GMT
+      - Sun, 25 Oct 2026 00:28:12 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:24:40 GMT
+      - Sun, 25 Oct 2026 00:28:12 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -464,11 +472,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-XSS-Protection:
-      - 1; mode=block
+      - '0'
       charset:
       - UTF-8
       clTh:
-      - 8bd0e226-e418-419c-8fa3-39b8b23580e2
+      - ff608aa2-85a3-40e8-b141-32c77edb6eb5
     status:
       code: 200
       message: OK
@@ -486,8 +494,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/entitlement/v2/users/me/internal/entitlements?entitlementType=1%2C2%2C3%2C4%2C5&fields=titleMeta%2CgameMeta%2CconceptMeta%2CrewardMeta%2CrewardMeta.retentionPolicy%2CrewardMeta.rewardMembershipType&gameMetaPackageType=PSGD%2CPS4GD&limit=5&offset=20
   response:
@@ -499,11 +509,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "3on3 FreeStyle", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA20914_00/app/info/155/fi_5628038410a34c1c9ab4a5e2ad6a5c94892a60a06e99f060d3f114dbbc44789b/icon0.png",
+        "gameMeta": {"name": "3on3 FreeStyle", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA20914_00/app/info/207/fi_abea870f8db4871b0a7602bb1655cc4fd9c71b8c904c52a51398c680fb4bd06f/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA20914_00", "name": "3on3
         Freestyle", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202408/2105/fc464eb1e69f533e6f90dfd45293dc21b94c63fb568a58ab.png"},
         "conceptMeta": {"conceptId": "217611", "name": "3on3 Freestyle", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202604/0108/79a04e41114eba82a8d71edc39899967ea317e10d8e3d64c.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202607/1506/bd9e3d1f616ec33d4bc34b7a0258d4155d7270a0b0ae934f.png",
         "minimumAge": 6}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP3685-CUSA34301_00-3249375123280245", "activeDate": "2025-05-19T02:50:12Z",
@@ -516,7 +526,7 @@ interactions:
         "packageType": "PS4GD"}, "titleMeta": {"titleId": "CUSA34301_00", "name":
         "The First Descendant", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202312/0802/b6fcfd97546f4b8ccb8f87f84a01d77a473a16664692ddde.png"},
         "conceptMeta": {"conceptId": "10005318", "name": "The First Descendant", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202602/0505/eef78db07c4f65d39449e29e7eb58a886716d321edc4bfd8.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202608/2007/e1261f08c8722cadb4f52177b1de3ad1b558d1a47ca54ee7.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "serviceType": 0}, {"id": "UP3685-PPSA13465_00-0404969663258693",
         "activeDate": "2025-05-19T02:50:12Z", "entitlementType": 5, "skuId": "UP3685-PPSA13465_00-0404969663258693-U001",
@@ -524,11 +534,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "The First Descendant", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA13465_00/app/info/149/fi_1802b1bdd410b609dd42f5a316a2219148324d77a46c5bae4f2ab9299d506ad4/icon0.png",
+        "gameMeta": {"name": "The First Descendant", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA13465_00/app/info/181/fi_6b7b411321fde4e0ebfade19b58db5584ab76363ed9bb59ef756e6876adf5154/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA13465_00", "name": "The
         First Descendant", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202312/0802/b6fcfd97546f4b8ccb8f87f84a01d77a473a16664692ddde.png"},
         "conceptMeta": {"conceptId": "10005318", "name": "The First Descendant", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202602/0505/eef78db07c4f65d39449e29e7eb58a886716d321edc4bfd8.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202608/2007/e1261f08c8722cadb4f52177b1de3ad1b558d1a47ca54ee7.png",
         "minimumAge": 13}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP7377-PPSA15178_00-STUMBLE0GUYSXXXX", "activeDate": "2025-05-19T02:50:24Z",
@@ -537,11 +547,11 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Stumble Guys", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA15178_00/app/info/34/fi_53abb87c2cc5599b934c3dd2b20ca15d565bd5eb58c40bc4f00edb2191ff8b56/icon0.png",
+        "gameMeta": {"name": "Stumble Guys", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA15178_00/app/info/36/fi_b765a03d1f84be4c46e033df98ee9a9c8f5fdab1ef90d962a28dbcfa42d29205/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA15178_00", "name": "Stumble
         Guys", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202308/1718/307b12c2d0c8c9e5b47d915f6d8de6e52518d46b1e0eea98.png"},
         "conceptMeta": {"conceptId": "10007588", "name": "Stumble Guys", "iconUrl":
-        "https://image.api.playstation.com/vulcan/ap/rnd/202601/2908/fdb41f7a935110807bff7bd99ec0f36ce885f6b6b4637e25.png",
+        "https://image.api.playstation.com/vulcan/ap/rnd/202606/0309/0e85b56c0f3cc3c1c14038d7ac4732ae04341b3848000dc3.png",
         "minimumAge": 6}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}, {"id": "UP4432-PPSA03052_00-8303139416716827", "activeDate": "2025-05-19T02:50:40Z",
@@ -550,10 +560,10 @@ interactions:
         1776972236213, "featureType": 3, "preorderFlag": false, "remainingCount":
         0, "consumedCount": 0, "isConsumable": false, "isSubscription": false, "entitlementAttributes":
         [{"entitlementKeyFlag": true, "platformId": "ps5", "placeholderFlag": false}],
-        "gameMeta": {"name": "Enlisted", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA03052_00/app/info/366/fi_9d9211c41a88eca28ab15964d872083893b414d34322b0f2ef8b543538c3e497/icon0.png",
+        "gameMeta": {"name": "Enlisted", "type": "PSGD", "iconUrl": "https://image.api.playstation.com/sgst/prod/00/PPSA03052_00/app/info/389/fi_78ced4cdb5e3633ab4ca7a13bb81413a03c9b2877de2e1c079105580264e98d5/icon0.png",
         "packageType": "PSGD"}, "titleMeta": {"titleId": "PPSA03052_00", "name": "Enlisted",
         "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202109/2311/IrjWR2xarkg7Npa8Nj5EgBJZ.png"},
-        "conceptMeta": {"conceptId": "10002474", "name": "Enlisted", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202603/2512/e7853db5c19cd5d7fb05b8f6cfaafbbe6e392f282832fb6c.png",
+        "conceptMeta": {"conceptId": "10002474", "name": "Enlisted", "iconUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/2910/bef511a4f150f4ab1286b3d76819a192c3ef3750f2b3192a.png",
         "minimumAge": 18}, "rewardMeta": {"rewardServiceType": 0, "retentionPolicy":
         0}, "preorderPlaceholderFlag": false, "isBeta": false, "isGame": true, "serviceType":
         0}]}'
@@ -567,9 +577,9 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:24:43 GMT
+      - Sun, 25 Oct 2026 00:28:15 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:24:43 GMT
+      - Sun, 25 Oct 2026 00:28:15 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -584,11 +594,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-XSS-Protection:
-      - 1; mode=block
+      - '0'
       charset:
       - UTF-8
       clTh:
-      - 211c9d50-b10e-44d1-b9ae-189d7b0e2f28
+      - 89ee96e2-80ba-4d70-918f-aaed422c31a8
     status:
       code: 200
       message: OK

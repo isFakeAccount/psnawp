@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends?limit=1000
   response:
@@ -39,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:30 GMT
+      - Sun, 25 Oct 2026 00:27:02 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -48,7 +50,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0659615561964047468
+      - 0313978843443525197
     status:
       code: 200
       message: OK
@@ -66,14 +68,16 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/5361973517281706660/profiles
   response:
     body:
-      string: '{"onlineId": "Rodders1013", "aboutMe": "F83C", "avatars": [{"size":
-        "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0057_s.png"},
+      string: '{"onlineId": "Rodders1013", "aboutMe": "cardify-games-BBNH-QLBD-X23RC",
+        "avatars": [{"size": "s", "url": "http://static-resource.np.community.playstation.net/avatar_s/SCEI/I0057_s.png"},
         {"size": "xl", "url": "http://static-resource.np.community.playstation.net/avatar_xl/SCEI/I0057_XL.png"},
         {"size": "l", "url": "http://static-resource.np.community.playstation.net/avatar/SCEI/I0057.png"},
         {"size": "m", "url": "http://static-resource.np.community.playstation.net/avatar_m/SCEI/I0057_m.png"}],
@@ -93,11 +97,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '528'
+      - '553'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:33 GMT
+      - Sun, 25 Oct 2026 00:27:05 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -106,7 +110,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0709278115105095032
+      - 0605596520873221675
     status:
       code: 200
       message: OK
@@ -124,8 +128,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/940512162723934331/profiles
   response:
@@ -135,7 +141,7 @@ interactions:
         {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_xl.png"},
         {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_l.png"},
         {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP3749/CUSA10307_00-AV00000000000090_AF79DF51A4486E7C8BB3_m.png"}],
-        "languages": ["ru-RU"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        "languages": ["ru-RU"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
         false}'
     headers:
       Access-Control-Allow-Headers:
@@ -151,11 +157,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '693'
+      - '694'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:36 GMT
+      - Sun, 25 Oct 2026 00:27:08 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -164,7 +170,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0402510168830987707
+      - 0373288198916571812
     status:
       code: 200
       message: OK
@@ -182,8 +188,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/4273405838384737823/profiles
   response:
@@ -194,7 +202,7 @@ interactions:
         {"size": "xl", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_xl.png"},
         {"size": "l", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_l.png"},
         {"size": "m", "url": "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1291/CUSA04676_00-AV00000000000002_39FEDE608B9AC60C1235_m.png"}],
-        "languages": ["en-US"], "isPlus": true, "isOfficiallyVerified": false, "isMe":
+        "languages": ["en-US"], "isPlus": false, "isOfficiallyVerified": false, "isMe":
         false}'
     headers:
       Access-Control-Allow-Headers:
@@ -210,11 +218,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '791'
+      - '792'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:39 GMT
+      - Sun, 25 Oct 2026 00:27:11 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -223,7 +231,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0990707544340281289
+      - 0741630744363852087
     status:
       code: 200
       message: OK
@@ -241,21 +249,22 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v2/internal/users//basicPresences?accountIds=5361973517281706660%2C940512162723934331%2C4273405838384737823&platforms=PS4%2CPS5%2CMOBILE_APP%2CPSPC&type=primary&withOwnGameTitleInfo=true
   response:
     body:
       string: '{"basicPresences": [{"accountId": "5361973517281706660", "availability":
-        "unavailable", "lastAvailableDate": "2026-04-26T18:32:13.322Z", "primaryPlatformInfo":
-        {"onlineStatus": "offline", "platform": "PS5", "lastOnlineDate": "2026-04-26T18:32:13.322Z"}},
-        {"accountId": "940512162723934331", "availability": "unavailable", "lastAvailableDate":
-        "2026-04-24T09:29:16.993Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "PS5", "lastOnlineDate": "2026-04-24T09:29:16.993Z"}}, {"accountId":
-        "4273405838384737823", "availability": "unavailable", "lastAvailableDate":
-        "2026-02-04T08:17:22.856Z", "primaryPlatformInfo": {"onlineStatus": "offline",
-        "platform": "PS4", "lastOnlineDate": "2026-02-04T08:17:22.856Z"}}]}'
+        "unavailable", "lastAvailableDate": "2026-10-18T09:24:26.673Z", "primaryPlatformInfo":
+        {"onlineStatus": "offline", "platform": "PS5", "lastOnlineDate": "2026-10-18T09:24:26.673Z"}},
+        {"accountId": "940512162723934331", "availability": "availableToPlay", "primaryPlatformInfo":
+        {"onlineStatus": "online", "platform": "PS5"}}, {"accountId": "4273405838384737823",
+        "availability": "unavailable", "lastAvailableDate": "2026-04-30T04:05:09.390Z",
+        "primaryPlatformInfo": {"onlineStatus": "offline", "platform": "PS4", "lastOnlineDate":
+        "2026-04-30T04:05:09.390Z"}}]}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
@@ -270,11 +279,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '685'
+      - '597'
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:23:42 GMT
+      - Sun, 25 Oct 2026 00:27:14 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -283,7 +292,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0898289902320627573
+      - 0258743839586749600
     status:
       code: 200
       message: OK

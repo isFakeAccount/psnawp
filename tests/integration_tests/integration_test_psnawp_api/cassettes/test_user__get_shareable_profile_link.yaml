@@ -20,7 +20,7 @@ interactions:
   response:
     body:
       string: '{"shareUrl": "https://profile.playstation.com/isFakeAccount", "shareImageUrl":
-        "https://d18lxmvkmz0olj.cloudfront.net/profile-isFakeAccount?Expires=1777865325&Signature=dSpb2hq6zgEmoUhDQ09NetCnagECKfv7qJ-2lpVGMIysJbqpY8M~FG5kdXrHNObtcfZ3xrKAM8Vrlus6fV50s5iipJXk1gDY1zth9K1IFHnHxiJwKH2v59bakgFmNscJ~D-WCJkd~3j3FT9d1Xa33teEJYbbN7T3CUvelX1PmexSRjcGITvTcfe6XGgl4NDzMjoRCvso-Pc-YX6LwqSySrvkWn2Ksda9QuD8VYeLJ~pciye6KEwPPty0KPRBw5RtcX-RqLZARl0TGvwoGrDqOOxaRADHJiY-FvO~~xkoVkKcKuRWSmxxJeRpkZIzExtolGaMC-L~4H~nNtJptMliog__&Key-Pair-Id=K2SHBT8E7OQNQU",
+        "https://d18lxmvkmz0olj.cloudfront.net/profile-isFakeAccount?Expires=1793493147&Signature=ojnQ3gEXY~Jy0W0RKj5hIAeL6TqEugER3gfiR98iskrRCJo6EQ1AZXuPkSsw2LZ66pKL4-MLtE7Yv6FV4sXEYJqSr~6x4DNiJK7Bq6LLX0QpJ74yqnwyccuVKhvqHC~deI5b81OpKXNXD3s2GpvLD2k6TZngay0ZW0l1N8qoAyZsfUZgGUxeH7eLh8d2JKpQwsNxO~F5Qm-xlbHWomQ4T~uXPyF6xgOlxTgTCAzl5i~Rc4GzQmC~NJvLDoBnijVabbwewOZ2lzldqecn9gwY79mY015BrpMmHsd7zVmXunnd8P6kzYwqlKA0W5V0Uhc5NU1IED7Hy~2EaMWEwgcjZw__&Key-Pair-Id=K2SHBT8E7OQNQU",
         "shareImageUrlDestination": "https://profile.playstation.com/share/isFakeAccount"}'
     headers:
       Cache-Control:
@@ -32,9 +32,9 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Apr 2026 03:28:45 GMT
+      - Sun, 25 Oct 2026 00:32:27 GMT
       Expires:
-      - Mon, 27 Apr 2026 03:28:45 GMT
+      - Sun, 25 Oct 2026 00:32:27 GMT
       Pragma:
       - no-cache
       Set-Cookie: REDACTED
@@ -49,9 +49,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Psn-Correlation-Id:
-      - d90f37a7-b785-1031-b6e7-d8507302cc6e
+      - e8134c5f-dbe0-4ae7-bbd2-5e63d066caa6
       X-Psn-Request-Id:
-      - d90f37a7-b785-1031-b6e8-d8507302cc6e
+      - e8134c5f-dbe0-4ae7-bbd2-5e63d066caa6
       X-XSS-Protection:
       - '0'
     status:

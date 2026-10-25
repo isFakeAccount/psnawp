@@ -17,14 +17,16 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: POST
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups
   response:
     body:
-      string: '{"groupId": "44f4d118fec0bb8e61ad4f985431d2097b72a239-177", "mainThread":
-        {"threadId": "44f4d118fec0bb8e61ad4f985431d2097b72a239-177"}, "hasAllAccountInvited":
+      string: '{"groupId": "8d66c1d6442a6cc4fe594a8608713de12a6e8e96-762", "mainThread":
+        {"threadId": "8d66c1d6442a6cc4fe594a8608713de12a6e8e96-762"}, "hasAllAccountInvited":
         false}'
     headers:
       Access-Control-Allow-Headers:
@@ -42,7 +44,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:27:05 GMT
+      - Sun, 25 Oct 2026 00:30:34 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -71,10 +73,12 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: PATCH
-    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/44f4d118fec0bb8e61ad4f985431d2097b72a239-177
+    uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/groups/8d66c1d6442a6cc4fe594a8608713de12a6e8e96-762
   response:
     body:
       string: ''
@@ -90,7 +94,7 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 27 Apr 2026 03:27:08 GMT
+      - Sun, 25 Oct 2026 00:30:37 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

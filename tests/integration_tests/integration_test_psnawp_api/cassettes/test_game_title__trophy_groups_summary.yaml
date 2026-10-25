@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=PPSA01325_00%2C
   response:
@@ -26,7 +28,7 @@ interactions:
         44, "trophyHidden": true, "trophyType": "gold", "trophyName": "Run Astro Run!",
         "trophyDetail": "Got a total Speed Run time of 7 minutes or under.", "trophyIconUrl":
         "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20188_00/77cba17d-c338-41c6-a3e5-4a6687d8730d.png",
-        "trophyRare": 0, "trophyEarnedRate": "3.5", "earned": true, "earnedDateTime":
+        "trophyRare": 0, "trophyEarnedRate": "3.4", "earned": true, "earnedDateTime":
         "2020-12-20T08:06:44Z"}], "progress": 93, "earnedTrophies": {"bronze": 27,
         "silver": 13, "gold": 5, "platinum": 1}, "definedTrophies": {"bronze": 31,
         "silver": 14, "gold": 5, "platinum": 1}, "lastUpdatedDateTime": "2020-12-20T08:06:45Z"}]}]}'
@@ -38,7 +40,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:44 GMT
+      - Sun, 25 Oct 2026 00:29:16 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -67,8 +69,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/npCommunicationIds/NPWR20188_00/trophyGroups?npServiceName=trophy2
   response:
@@ -94,7 +98,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:47 GMT
+      - Sun, 25 Oct 2026 00:29:19 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

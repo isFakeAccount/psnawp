@@ -13,13 +13,15 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/gamingLoungeGroups/v1/members/me/groups/~25C4C5406FD6D50E.763F9A1EB6AB5791?includeFields=groupName%2CgroupIcon%2Cmembers%2CmainThread%2CjoinedTimestamp%2CmodifiedTimestamp%2CisFavorite%2CexistsNewArrival%2CnotificationSetting
   response:
     body:
-      string: '{"error": {"referenceId": "d70eb754-41e8-11f1-8715-453f8044f5cf", "code":
+      string: '{"error": {"referenceId": "2cc2afdb-d00b-11f1-b5d8-c54c4c525935", "code":
         2285581, "message": "Resource not found (groupId=''~25C4C5406FD6D50E.763F9A1EB6AB5791'')"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -35,7 +37,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:26:12 GMT
+      - Sun, 25 Oct 2026 00:29:44 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED

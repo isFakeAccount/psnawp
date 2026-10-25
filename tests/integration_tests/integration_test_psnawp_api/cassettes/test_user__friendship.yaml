@@ -19,7 +19,7 @@ interactions:
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/me/friends/2066273503397112667/summary
   response:
     body:
-      string: '{"friendRelation": "no-friend", "personalDetailSharing": "none", "friendsCount":
+      string: '{"friendRelation": "requested", "personalDetailSharing": "none", "friendsCount":
         0, "mutualFriendsCount": 0}'
     headers:
       Access-Control-Allow-Headers:
@@ -39,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:28:30 GMT
+      - Sun, 25 Oct 2026 00:32:12 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -48,7 +48,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0208355473095880894
+      - 0987688779981439182
     status:
       code: 200
       message: OK

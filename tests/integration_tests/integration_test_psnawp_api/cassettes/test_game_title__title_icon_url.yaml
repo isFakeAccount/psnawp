@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=CUSA03041_00%2C
   response:
@@ -27,7 +29,7 @@ interactions:
         2, "trophyHidden": true, "trophyType": "bronze", "trophyName": "Just a Scratch",
         "trophyDetail": "Complete ''Enter, Pursued by a Memory''.", "trophyIconUrl":
         "https://image.api.playstation.com/trophy/np/NPWR09412_00_005BE1C07B44C5D5137CFF609DF9C1BD125CE56787/17BA1A60D9354F58068032916F3B59BE7591B4F6.PNG",
-        "trophyRare": 3, "trophyEarnedRate": "76.9", "earned": true, "earnedDateTime":
+        "trophyRare": 3, "trophyEarnedRate": "76.1", "earned": true, "earnedDateTime":
         "2018-12-02T05:27:17Z"}], "progress": 1, "earnedTrophies": {"bronze": 1, "silver":
         0, "gold": 0, "platinum": 0}, "definedTrophies": {"bronze": 44, "silver":
         4, "gold": 3, "platinum": 1}, "lastUpdatedDateTime": "2018-12-02T05:27:19Z"}]}]}'
@@ -39,7 +41,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:26:03 GMT
+      - Sun, 25 Oct 2026 00:29:35 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -68,8 +70,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://tmdb.np.dl.playstation.net/tmdb2/CUSA03041_00_35D1E631175ECA6FBC7027DD73B4C09A886DE8D2/CUSA03041_00.json
   response:
@@ -97,7 +101,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:26:06 GMT
+      - Sun, 25 Oct 2026 00:29:39 GMT
       ETag:
       - '"e0cc1d32cd4f2b3c8d4f2ed35e1aa528:1543328653"'
       Last-Modified:

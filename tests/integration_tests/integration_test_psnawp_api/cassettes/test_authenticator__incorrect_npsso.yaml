@@ -23,8 +23,8 @@ interactions:
       Sec-Fetch-User:
       - ?1
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36
+      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1
       X-Requested-With:
       - com.scee.psxandroid
     method: GET
@@ -40,7 +40,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 27 Apr 2026 03:22:35 GMT
+      - Sun, 25 Oct 2026 00:26:10 GMT
       Expires:
       - '0'
       Location:
@@ -59,9 +59,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - a116615ac1055c889e10232996e6641a
+      - 9bb203d7e06bae88fca8dab9d04837a3
       X-RequestId:
-      - a116615ac1055c889e10232996e6641a
+      - 9bb203d7e06bae88fca8dab9d04837a3
       X-XSS-Protection:
       - 1; mode=block
     status:

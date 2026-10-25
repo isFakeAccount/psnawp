@@ -23,8 +23,10 @@ interactions:
       Sec-Fetch-User:
       - ?1
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
       X-Requested-With:
       - com.scee.psxandroid
     method: GET
@@ -40,11 +42,11 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 27 Apr 2026 03:22:35 GMT
+      - Sun, 25 Oct 2026 00:26:10 GMT
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v3.UYD85V&cid=00000000-0000-0000-0000-b025aa3b2674
+      - com.scee.psxandroid.scecompcall://redirect/?code=v3.wVd6Oy&cid=00000000-0000-0000-0000-b025aa3b2674
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -59,16 +61,16 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - d864b6fce14db085db13d0827131771b
+      - 77442c7e1d566fe2ae09ce40f7f98750
       X-RequestId:
-      - d864b6fce14db085db13d0827131771b
+      - 77442c7e1d566fe2ae09ce40f7f98750
       X-XSS-Protection:
       - 1; mode=block
     status:
       code: 302
       message: Moved Temporarily
 - request:
-    body: cid=00000000-0000-0000-0000-b025aa3b2674&code=v3.UYD85V&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
+    body: cid=00000000-0000-0000-0000-b025aa3b2674&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&scope=psn%3Amobile.v2.core+psn%3Aclientapp&token_format=jwt
     headers:
       Accept:
       - '*/*'
@@ -101,11 +103,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4080'
+      - '4137'
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Apr 2026 03:22:38 GMT
+      - Sun, 25 Oct 2026 00:26:13 GMT
       Server:
       - nginx
       Set-Cookie: REDACTED
@@ -116,9 +118,9 @@ interactions:
       X-Psn-Correlation-Id:
       - 00000000-0000-0000-0000-b025aa3b2674
       X-Psn-Request-Id:
-      - c2f717f3ca308899ccfb40a25adf4a19
+      - 326dc0da0155a8c564358d399b178744
       X-RequestId:
-      - c2f717f3ca308899ccfb40a25adf4a19
+      - 326dc0da0155a8c564358d399b178744
     status:
       code: 200
       message: OK
@@ -136,8 +138,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/jeranther/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
   response:
@@ -160,7 +164,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:22:41 GMT
+      - Sun, 25 Oct 2026 00:26:16 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -183,13 +187,15 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/userProfile/v1/internal/users/1802043923080044300/friends?limit=-1
   response:
     body:
-      string: '{"error": {"referenceId": "5b66d54c-41e8-11f1-944a-bf4ee231e60e", "code":
+      string: '{"error": {"referenceId": "b2f5f5b5-d00a-11f1-8bcf-ad84d13e51b1", "code":
         2281473, "message": "Bad Request (query: limit)"}}'
     headers:
       Access-Control-Allow-Headers:
@@ -209,7 +215,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:22:44 GMT
+      - Sun, 25 Oct 2026 00:26:19 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -218,7 +224,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - 0927949458296856220
+      - 0544542995600410188
     status:
       code: 400
       message: Bad Request

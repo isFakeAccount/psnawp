@@ -13,8 +13,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/trophy/v1/users/6515971742264256071/titles/trophyTitles?npTitleIds=PPSA02432_00%2C
   response:
@@ -37,7 +39,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:25:32 GMT
+      - Sun, 25 Oct 2026 00:29:04 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -66,8 +68,10 @@ interactions:
       Country:
       - US
       User-Agent:
-      - Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15
-        (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
     method: GET
     uri: https://m.np.playstation.com/api/catalog/v2/titles/PPSA02432_00/concepts?age=99&country=FR&language=fr
   response:
@@ -173,7 +177,7 @@ interactions:
         {"type": "COMPATIBILITY_NOTICE", "desc": "Jeu hors ligne uniquement<br/>Fonction
         de vibration prise en charge (manette sans fil DualSense)<br/>4 joueurs"},
         {"type": "LEGAL", "desc": "<br><br>Le t\u00e9l\u00e9chargement de ce produit
-        est soumis aux Conditions d''utilisation de PlayStation Network, ainsi qu''\u00e0
+        est soumis aux Conditions d''utilisation de PlayStation, ainsi qu''\u00e0
         toute autre condition sp\u00e9cifique \u00e0 ce produit. Si vous n''acceptez
         pas ces conditions, ne t\u00e9l\u00e9chargez pas ce produit. Consultez les
         Conditions d''utilisation pour obtenir d''autres informations importantes.<br>",
@@ -251,7 +255,7 @@ interactions:
         "supportedStoreFronts": ["PS5", "WEB_STORE"], "revisionIds": {}, "targetPlatforms":
         ["PS5", "PS4"], "skus": [{"id": "EP0002-PPSA02433_00-CB4THEGAME000001-E002",
         "displayPrice": "Gratuit", "price": 0, "eligibilities": [], "type": "STANDARD",
-        "name": "D\u00e9mo", "entitlements": [{"id": "EP0002-PPSA02433_00-CB4THEGAME000001",
+        "name": "Jeu", "entitlements": [{"id": "EP0002-PPSA02433_00-CB4THEGAME000001",
         "name": "Crash Bandicoot 4: It''s About Time", "applicationType": "UPGRADABLE",
         "packageType": "PSGD", "preorderPlaceholderFlag": false, "type": "UNIFIED",
         "subType": "REGULAR", "spokenLanguages": ["en", "fr", "it", "de", "es"], "screenLanguages":
@@ -288,24 +292,24 @@ interactions:
         Bandicoot\u2122 4: It\u2019s About Time", "packageType": "PSTRACK", "preorderPlaceholderFlag":
         false, "type": "UNIFIED", "subType": "REGULAR", "packages": [], "featureType":
         "NOT_APPLICABLE"}], "chargeImmediatelyFlag": false, "storeFronts": ["PS5",
-        "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"], "contentCollections":
-        [], "lowestRecentPrice": {"numberOfDays": 30, "price": 6999}}], "offers":
-        {"osls": ["{\"metadata\":{\"id\":\"OFFER-PROD-17253_67\",\"schemaVersion\":\"1.3.2\",\"modified\":\"2026-04-20T08:47:58Z\",\"financeKeyId\":\"17910591\",\"campaignId\":\"PROMO-PROD-00017253\",\"promoId\":17253,\"start\":\"2026-04-21T23:00:00Z\",\"end\":\"2026-05-06T22:59:00Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":67,\"wholesale\":null}}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
+        "WEB_STORE"], "supportedStoreFronts": ["PS5", "WEB_STORE"], "lowestRecentPrice":
+        {"numberOfDays": 30, "price": 6999}}], "offers": {"osls": ["{\"metadata\":{\"id\":\"OFFER-PROD-19784_67\",\"schemaVersion\":\"1.3.2\",\"modified\":\"2026-10-20T10:06:54Z\",\"financeKeyId\":\"19459071\",\"campaignId\":\"PROMO-PROD-00019784\",\"promoId\":19784,\"start\":\"2026-10-20T23:00:00Z\",\"end\":\"2026-11-04T23:59:00Z\",\"version\":0,\"exclusive\":false,\"suggestSkuInCart\":false,\"display\":{\"formatting\":\"PERCENTAGE\"}},\"qualification\":{},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":67,\"wholesale\":null}}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}",
         "{\"metadata\":{\"id\":\"OFFER-UPGRADE-CUSA23470_00-SIEE-FREE\",\"schemaVersion\":\"1.1.1\",\"modified\":\"2021-03-15T18:18:23.367548Z\",\"financeKeyId\":\"12151619\",\"campaignId\":\"CAMP-SCEE-00973059\",\"start\":\"2020-10-01T00:00:00Z\",\"display\":{\"branding\":\"UPGRADE\"}},\"qualification\":{\"criteria\":{\"ownsEntitlement\":{\"id\":\"EP0002-CUSA23470_00-CB4THEGAME000001\",\"retentionPolicy\":\"NONE\",\"featureType\":\"FULL\",\"infiniteDuration\":true}}},\"content\":{\"excludes\":[],\"includes\":[]},\"reward\":{\"itemReward\":{\"discount\":{\"percent\":{\"retail\":100,\"wholesale\":null}}},\"priority\":10,\"bias\":10,\"publisherFunded\":null}}"],
-        "skuRelevancy": [{"skuId": "EP0002-PPSA02433_00-CB4THEGAME000001-E003", "offerAvailability":
-        [{"offerId": "OFFER-PROD-17253_67", "startDate": "2026-04-21T23:00:00Z", "endDate":
-        "2026-05-06T22:59:00Z"}, {"offerId": "OFFER-UPGRADE-CUSA23470_00-SIEE-FREE",
-        "startDate": "2020-10-01T00:00:00Z"}]}, {"skuId": "EP0002-PPSA02433_00-CB4THEGAME000001-E002",
-        "offerAvailability": []}]}, "starRating": {"total": "28880", "score": "4.29",
-        "count": [{"score": 1, "count": 2580}, {"score": 2, "count": 608}, {"score":
-        3, "count": 2364}, {"score": 4, "count": 3725}, {"score": 5, "count": 19603}]},
-        "isTrending": false, "contentTypeId": 1, "firstPrice": {"startDate": "2021-03-12T00:00:00Z",
-        "price": 6999}}, "genres": ["ACTION"], "localizedGenres": [{"value": "Action",
-        "type": "ACTION"}], "subGenres": ["PLATFORMER"], "localizedSubGenres": [{"value":
-        "Plate-forme", "type": "PLATFORMER"}], "minimumAge": 12, "releaseDate": {"localizedDate":
+        "skuRelevancy": [{"skuId": "EP0002-PPSA02433_00-CB4THEGAME000001-E002", "offerAvailability":
+        []}, {"skuId": "EP0002-PPSA02433_00-CB4THEGAME000001-E003", "offerAvailability":
+        [{"offerId": "OFFER-PROD-19784_67", "startDate": "2026-10-20T23:00:00Z", "endDate":
+        "2026-11-04T23:59:00Z"}, {"offerId": "OFFER-UPGRADE-CUSA23470_00-SIEE-FREE",
+        "startDate": "2020-10-01T00:00:00Z"}]}]}, "starRating": {"total": "30659",
+        "score": "4.28", "count": [{"score": 1, "count": 2770}, {"score": 2, "count":
+        641}, {"score": 3, "count": 2500}, {"score": 4, "count": 3965}, {"score":
+        5, "count": 20783}]}, "isTrending": false, "contentTypeId": 1, "firstPrice":
+        {"startDate": "2021-03-12T00:00:00Z", "price": 6999, "currency": "EUR"}},
+        "genres": ["ACTION"], "localizedGenres": [{"value": "Action", "type": "ACTION"}],
+        "subGenres": ["PLATFORMER"], "localizedSubGenres": [{"value": "Plate-forme",
+        "type": "PLATFORMER"}], "minimumAge": 12, "releaseDate": {"localizedDate":
         "Prochainement", "type": "COMING_SOON"}, "isRecommendableOnStore": true, "isSearchableOnStore":
-        true, "storeFronts": ["WEB_STORE", "PS5", "PS4"], "supportedStoreFronts":
-        ["WEB_STORE", "PS5", "PS4"], "marketingStories": [], "compatibilityNotices":
+        true, "storeFronts": ["PS4", "WEB_STORE", "PS5"], "supportedStoreFronts":
+        ["PS4", "WEB_STORE", "PS5"], "marketingStories": [], "compatibilityNotices":
         [{"type": "NO_OF_PLAYERS", "value": 1}, {"type": "GAME_HELP_SUPPORTED", "value":
         true, "targetPlatforms": ["PS5"]}], "localizedMedia": {"defaultLanguage":
         "en-US", "metadata": {"en-US": {"videos": [{"id": "10078187", "url": "https://vulcan.dl.playstation.net/img/rnd/202009/2807/7fMNVQ1y1r759qUk2cFb5mO6.mp4",
@@ -318,13 +322,13 @@ interactions:
         "type": "SCREENSHOT", "metadata": {}}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/1603/vjVsJQWVc7cFkmMATRE1ErqW.jpg",
         "type": "SCREENSHOT", "metadata": {}}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/1603/h9KGllMyEJHv6QT3fLvmrMm2.jpg",
         "type": "SCREENSHOT", "metadata": {}}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/1602/TYk0GalUXvrSG0J6aAyfd1h6.png",
-        "type": "MASTER", "metadata": {}}]}}}, "revisionIds": {"all": 1761094432411,
-        "self": 1752187723997}, "contentRating": {"authority": "PEGI", "description":
+        "type": "MASTER", "metadata": {}}]}}}, "revisionIds": {"all": 1792540110883,
+        "self": 1791249010168}, "contentRating": {"authority": "PEGI", "description":
         "PEGI 12", "name": "PEGI_12", "url": "https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/pegi/12.png",
         "descriptors": [{"description": "Mild Swearing", "name": "PEGI_MILD_SWEARING"}],
-        "interactiveElements": []}, "starRating": {"total": "28880", "score": "4.29",
-        "count": [{"score": 1, "count": 2580}, {"score": 2, "count": 608}, {"score":
-        3, "count": 2364}, {"score": 4, "count": 3725}, {"score": 5, "count": 19603}]}}]'
+        "interactiveElements": []}, "starRating": {"total": "30659", "score": "4.28",
+        "count": [{"score": 1, "count": 2770}, {"score": 2, "count": 641}, {"score":
+        3, "count": 2500}, {"score": 4, "count": 3965}, {"score": 5, "count": 20783}]}}]'
     headers:
       Cache-Control:
       - max-age=300
@@ -333,7 +337,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 27 Apr 2026 03:25:35 GMT
+      - Sun, 25 Oct 2026 00:29:07 GMT
       Set-Cookie: REDACTED
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
@@ -342,7 +346,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       content-length:
-      - '21982'
+      - '21965'
     status:
       code: 200
       message: OK

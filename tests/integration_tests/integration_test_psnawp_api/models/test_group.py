@@ -55,11 +55,10 @@ def test_group__group_with_id(psnawp_fixture: PSNAWP) -> None:
 @pytest.mark.integration
 @pytest.mark.vcr
 def test_group__group_send_img(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
-        last_group = next(psnawp_fixture.me().get_groups(limit=1))
-        assert last_group.group_id is not None
-        group = psnawp_fixture.group(group_id=last_group.group_id)
-        group.send_image(Path("docs/_static/psn_logo.png"))
+    last_group = next(psnawp_fixture.me().get_groups(limit=1))
+    assert last_group.group_id is not None
+    group = psnawp_fixture.group(group_id=last_group.group_id)
+    group.send_image(Path("docs/_static/psn_logo.png"))
 
 
 @pytest.mark.integration

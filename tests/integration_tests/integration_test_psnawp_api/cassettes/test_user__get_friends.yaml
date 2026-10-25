@@ -38,7 +38,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Apr 2026 03:28:39 GMT
+      - Sun, 25 Oct 2026 00:32:21 GMT
       Server:
       - Apache
       Set-Cookie: REDACTED
@@ -47,7 +47,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Psn-Track-Id:
-      - '0612656575624345215'
+      - 0603444877723067839
     status:
       code: 200
       message: OK
