@@ -41,7 +41,7 @@ class PSNAWP:
 
     def __init__(
         self,
-        npsso_cookie: str,
+        npsso_cookie: str | None = None,
         headers: RequestBuilderHeaders | None = None,
         rate_limit: Rate | None = None,
         *,
@@ -49,7 +49,8 @@ class PSNAWP:
     ) -> None:
         """Initializes the authentication handler with the provided NPSSO cookie.
 
-        :param npsso_cookie: The NPSSO cookie obtained from the PlayStation Network website.
+        :param npsso_cookie: The NPSSO cookie obtained from the PlayStation Network website. Can be set to None if
+            token_response is provided. If both are provided, token_response takes precedence.
         :param dict[str, str] headers: Optional HTTP headers to include in all requests. Can be used to modify the API
             response language by setting ``Accept-Language`` or specify a region using ``Country``. Defaults to:
 
@@ -74,8 +75,7 @@ class PSNAWP:
             "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
             "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.5707.1741 Mobile Safari/537.36",
             "Mozilla/5.0 (Android 14; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0",
-            "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36"
+            "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2469.1901 Mobile Safari/537.36",
@@ -90,6 +90,11 @@ class PSNAWP:
 
         if rate_limit is None:
             rate_limit = Rate(1, Duration.SECOND * 3)
+
+        if npsso_cookie is None and token_response is None:
+            raise PSNAWPIllegalArgumentError(
+                "You must provide either npsso_cookie or token_response.",
+            )
 
         _header = default_headers | headers if headers is not None else default_headers
         self.authenticator = Authenticator(

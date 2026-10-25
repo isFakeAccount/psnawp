@@ -1,5 +1,7 @@
 import inspect
+import json
 import os
+from pathlib import Path
 from time import time
 
 import pytest
@@ -8,13 +10,18 @@ from psnawp_api import PSNAWP
 from psnawp_api.core import PSNAWPAuthenticationError
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
+token_response_path = Path(__file__).parent / "token_response.json"
+
 
 @pytest.mark.integration
 @pytest.mark.vcr
 def test_authenticator__authentication() -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml", record_mode="all"):
         psnawp = PSNAWP(os.getenv("NPSSO_CODE", "NPSSO_CODE"))
-        psnawp.me().online_id
+        assert psnawp.me().online_id == os.getenv("USER_NAME")
+
+        with token_response_path.open("w") as f:
+            json.dump(psnawp.authenticator.token_response, f, indent=4)
 
 
 @pytest.mark.integration
@@ -35,8 +42,19 @@ def test_authenticator__access_token_from_refresh_token():
 
 @pytest.mark.integration
 @pytest.mark.vcr
+def test_authenticator__token_response() -> None:
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        with token_response_path.open("r") as f:
+            token_response = json.load(f)
+
+        psnawp = PSNAWP(npsso_cookie=None, token_response=token_response)
+        assert psnawp.me().online_id == os.getenv("USER_NAME")
+
+
+@pytest.mark.integration
+@pytest.mark.vcr
 def test_authenticator__incorrect_npsso() -> None:
     with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        psnawp = PSNAWP("dsjfhsdkjfhskjdhlf")
         with pytest.raises(PSNAWPAuthenticationError):
-            psnawp = PSNAWP("dsjfhsdkjfhskjdhlf")
-            psnawp.me().online_id
+            assert psnawp.me().online_id == os.getenv("USER_NAME")

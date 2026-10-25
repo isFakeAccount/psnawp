@@ -73,7 +73,7 @@ class TokenResponse(TypedDict):
 class Authenticator:
     """Provides an interface for PSN Authentication and API.
 
-    :var str npsso_cookie: The NPSSO cookie, which is required for obtaining an access token from the PSN API.
+    :var str | None npsso_cookie: The NPSSO cookie, which is required for obtaining an access token from the PSN API.
     :var RequestBuilderHeaders common_headers: Headers that will be passed in each HTTPs request.
     :var RequestBuilder request_builder: A :py:class:`~psnawp_api.core.request_builder.RequestBuilder` object that helps
         in constructing and sending HTTP requests.
@@ -98,7 +98,7 @@ class Authenticator:
 
     def __init__(
         self,
-        npsso_cookie: str,
+        npsso_cookie: str | None,
         common_headers: RequestBuilderHeaders,
         rate_limit: Rate,
         *,

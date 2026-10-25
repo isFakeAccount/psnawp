@@ -1,5 +1,6 @@
 # My Files
 /test*.py
+token_response.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
