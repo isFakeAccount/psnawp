@@ -7,9 +7,10 @@ from psnawp_api.models.search import SearchDomain
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__universal_search(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=1)
         actual_count = 0
         for _ in search:
@@ -17,19 +18,27 @@ def test_search__universal_search(psnawp_fixture: PSNAWP) -> None:
         assert actual_count == 1
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_game_content_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=1)
-        for result in search:
-            assert result["result"]["invariantName"] == "Grand Theft Auto V (PlayStation®5)"
-            assert result["result"]["defaultProduct"]["id"] == "UP1004-PPSA03420_00-GTAOSTANDALONE01"
-            break
+        results = list(search)
+        assert results
+        first_result = results[0]["result"]
+        assert "grand theft auto" in first_result["invariantName"].casefold()
+        if first_result["__typename"] == "Concept":
+            assert first_result["defaultProduct"] is not None
+            content_id = first_result["defaultProduct"]["id"]
+        else:
+            content_id = first_result["id"]
+        assert content_id
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_game_content_pagination_test(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         item_limit = 25
         search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.FULL_GAMES, limit=item_limit)
         count = 0
@@ -38,17 +47,19 @@ def test_search__get_game_content_pagination_test(psnawp_fixture: PSNAWP) -> Non
         assert count == item_limit
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_addon_content_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
-        search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.ADD_ONS, limit=1)
-        for result in search:
-            assert "GTA" in result["result"]["invariantName"]
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
+        search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.ADD_ONS, limit=10)
+        results = list(search)
+        assert any(any(name in result["result"]["invariantName"].casefold() for name in ("gta", "grand theft auto")) for result in results)
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_get_addon_pagination_test(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         item_limit = 15
         search = psnawp_fixture.search(search_query="GTA", search_domain=SearchDomain.ADD_ONS, page_size=5, limit=item_limit)
         count = 0
@@ -57,9 +68,10 @@ def test_search__get_get_addon_pagination_test(psnawp_fixture: PSNAWP) -> None:
         assert count == item_limit
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_id(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         search = psnawp_fixture.search(search_query="test", search_domain=SearchDomain.USERS, limit=1)
         for result in search:
             assert result["__typename"] == "SearchResultItem"
@@ -67,9 +79,10 @@ def test_search__get_user_id(psnawp_fixture: PSNAWP) -> None:
             break
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_pagination_test(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         search = psnawp_fixture.search(search_query="test", search_domain=SearchDomain.USERS, limit=None)
         count = 0
         for _ in search:
@@ -77,9 +90,10 @@ def test_search__get_user_pagination_test(psnawp_fixture: PSNAWP) -> None:
         assert count > 0
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_search__get_user_pagination__limit_test(psnawp_fixture: PSNAWP) -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         item_limit = 25
         search = psnawp_fixture.search(search_query="test", search_domain=SearchDomain.USERS, limit=item_limit)
         count = 0

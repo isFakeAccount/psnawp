@@ -15,6 +15,5 @@ repos:
         language_version: python3
       - id: check-yaml
       - id: check-json
-        exclude: ".vscode"
       - id: detect-private-key
       - id: check-merge-conflict

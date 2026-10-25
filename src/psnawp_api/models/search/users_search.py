@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Self
 
-from typing_extensions import Self, override
+from typing_extensions import override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.models.search.users_result_datatypes import UserSearchResultItem, default_user_root_response

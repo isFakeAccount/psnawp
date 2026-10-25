@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://dms.api.playstation.com/api/v1/devices/accounts/me
+  response:
+    body:
+      string: '{"accountId": "2721516955383551246"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 25 Oct 2026 00:27:26 GMT
+      Server:
+      - nginx
+      Set-Cookie: REDACTED
+      X-CorrelationId:
+      - 305e107b-3af9-4a6b-99ca-9c955a4e5d2e
+      X-Psn-Correlation-Id:
+      - 305e107b-3af9-4a6b-99ca-9c955a4e5d2e
+      X-Psn-Request-Id:
+      - 305e107b-3af9-4a6b-99ca-9c955a4e5d2e
+      X-RequestId:
+      - 305e107b-3af9-4a6b-99ca-9c955a4e5d2e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/cpss/v1/share/profile/2721516955383551246
+  response:
+    body:
+      string: '{"shareUrl": "https://profile.playstation.com/VaultTec-Co", "shareImageUrl":
+        "https://d18lxmvkmz0olj.cloudfront.net/profile-VaultTec-Co?Expires=1793492849&Signature=T8WSFdpZZDQrDLwtCBg98FvxMbIRlW-RPE~fLZTi94kb7mJVhNyLE5Tu43jddit6z94oXudfAG3Kr624g6IhC2AlGcsV1y7sbJP1C0a-67Bj2U04-O0gbnQhWXb5JmkjmjyPG1zZMrLboURkIXajnojGx~nI-DEWlFK8XmC0cVnFN7i5t2XVKh3YZeKgM2jdrMnE1zvs7Q1XHrJKvFW1QBeQimZaNKoSFOnz429k0KVvRSYQn6YyxDGGtWoBgtssCvGw1CP6nVHK1lsN6945ytSonwbBs7C6QrKF-wbyTIUwxqUcc7gIq-iK1T8dg2WlbQDZcGfnMI1QZIKVD7fRwQ__&Key-Pair-Id=K2SHBT8E7OQNQU",
+        "shareImageUrlDestination": "https://profile.playstation.com/share/VaultTec-Co"}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '614'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 25 Oct 2026 00:27:29 GMT
+      Expires:
+      - Sun, 25 Oct 2026 00:27:29 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - aa379dce-08b9-4c6a-b2a4-1d0a820c108c
+      X-Psn-Request-Id:
+      - aa379dce-08b9-4c6a-b2a4-1d0a820c108c
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

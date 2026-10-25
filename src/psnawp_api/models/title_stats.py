@@ -6,9 +6,9 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from enum import Enum
-from typing import TYPE_CHECKING, Any, Final, Literal
+from typing import TYPE_CHECKING, Any, Final, Literal, Self
 
-from typing_extensions import Self, override
+from typing_extensions import override
 
 from psnawp_api.models.listing import PaginationIterator
 from psnawp_api.utils.endpoints import API_PATH, BASE_PATH

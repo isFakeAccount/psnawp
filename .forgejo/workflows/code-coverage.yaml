@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies and build package
         run: |
-          poetry install --with tests
+          poetry install --only main,tests
 
       - name: Build coverage file
         run: |

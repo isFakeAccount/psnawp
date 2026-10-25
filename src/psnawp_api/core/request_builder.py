@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from http import HTTPStatus
 from logging import getLogger
-from typing import TYPE_CHECKING, Any, TypeAlias, TypedDict, cast
+from typing import TYPE_CHECKING, Any, NotRequired, TypeAlias, TypedDict, cast
 
 from pyrate_limiter import Limiter
 from pyrate_limiter.buckets.sqlite_bucket import SQLiteBucket
 from requests import Session
-from typing_extensions import NotRequired, Unpack
+from typing_extensions import Unpack
 
 from psnawp_api.core.psnawp_exceptions import (
     PSNAWPBadRequestError,

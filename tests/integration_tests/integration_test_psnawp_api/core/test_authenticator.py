@@ -9,16 +9,18 @@ from psnawp_api.core import PSNAWPAuthenticationError
 from tests.integration_tests.integration_test_psnawp_api import my_vcr
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_authenticator__authentication() -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         psnawp = PSNAWP(os.getenv("NPSSO_CODE", "NPSSO_CODE"))
         psnawp.me().online_id
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_authenticator__access_token_from_refresh_token():
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         psnawp = PSNAWP(os.getenv("NPSSO_CODE", "NPSSO_CODE"))
         client = psnawp.me()
         assert client.online_id == os.getenv("USER_NAME")
@@ -31,9 +33,10 @@ def test_authenticator__access_token_from_refresh_token():
         assert client.online_id == os.getenv("USER_NAME")
 
 
+@pytest.mark.integration
 @pytest.mark.vcr
 def test_authenticator__incorrect_npsso() -> None:
-    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.json"):
+    with my_vcr.use_cassette(f"{inspect.currentframe().f_code.co_name}.yaml"):
         with pytest.raises(PSNAWPAuthenticationError):
             psnawp = PSNAWP("dsjfhsdkjfhskjdhlf")
             psnawp.me().online_id

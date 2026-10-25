@@ -2,9 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, TypedDict
-
-from typing_extensions import NotRequired, Self
+from typing import TYPE_CHECKING, NotRequired, Self, TypedDict
 
 from psnawp_api.models.listing import PaginationArguments, PaginationIterator
 from psnawp_api.utils.endpoints import API_PATH, BASE_PATH

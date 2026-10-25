@@ -1,0 +1,553 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+      accept:
+      - application/json
+      apollographql-client-name:
+      - PlayStationApp-Android
+      apollographql-client-version:
+      - 25.4.0
+      content-type:
+      - application/json
+    method: GET
+    uri: https://m.np.playstation.com/api/graphql/v1/op?extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%22ac5fb2b82c4d086ca0d272fba34418ab327a7762dd2cd620e63f175bbc5aff10%22%7D%7D&operationName=metGetContextSearchResults&variables=%7B%22searchTerm%22%3A+%22test%22%2C+%22searchContext%22%3A+%22MobileUniversalSearchSocial%22%2C+%22displayTitleLocale%22%3A+%22en-US%22%7D
+  response:
+    body:
+      string: '{"data": {"universalContextSearch": {"__typename": "UniversalContextSearchResponse",
+        "queryFrequency": {"__typename": "QueryFrequency", "filterDebounceMs": 1000,
+        "searchDebounceMs": 1000}, "results": [{"__typename": "UniversalDomainSearchResponse",
+        "domain": "SocialAllAccounts", "domainTitle": "Players", "next": "eyJTTyI6NDh9",
+        "searchResults": [{"__typename": "SearchResultItem", "highlight": {"__typename":
+        "PlayerHighlight", "firstName": ["", "test"], "lastName": ["", "test"], "middleName":
+        null, "onlineId": ["", "testest", "ps"], "verifiedUserName": null}, "id":
+        "JGFwcjEkYXNka2ZqYWwkdTAyamxKWFd6Uk1GSWdaTnljdm84MQ==", "result": {"__typename":
+        "Player", "accountId": "7645284189554078108", "avatarUrl": "http://static-resource.np.community.playstation.net/avatar/WWS_J/J2085_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkdTAyamxKWFd6Uk1GSWdaTnljdm84MQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testestps", "onlineIdHighlighted": ["", "testest", "ps"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "__"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkWkZIQlA3anZLVW9rQ0pQRk5wVlp0MA==",
+        "result": {"__typename": "Player", "accountId": "303346091440502073", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkWkZIQlA3anZLVW9rQ0pQRk5wVlp0MA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testest__", "onlineIdHighlighted": ["", "testest", "__"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "28"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZGNTVGRuWFVNaVVqWGdnR3Jnb2lvMA==",
+        "result": {"__typename": "Player", "accountId": "1985172375061806510", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZGNTVGRuWFVNaVVqWGdnR3Jnb2lvMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testest28", "onlineIdHighlighted": ["", "testest", "28"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "Testest", "09"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkRS9TNmVLblhvUHl2RmE0VU5hRlBJMA==",
+        "result": {"__typename": "Player", "accountId": "6694253728595025141", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/UP10631304004_6D1192F0D43D0A6AF405_L.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkRS9TNmVLblhvUHl2RmE0VU5hRlBJMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "Testest09", "onlineIdHighlighted": ["", "Testest", "09"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "4"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkRzFpdkxaRUgyVHhYelNpcTBhejFwLg==",
+        "result": {"__typename": "Player", "accountId": "7356067540413726800", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkRzFpdkxaRUgyVHhYelNpcTBhejFwLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest4", "onlineIdHighlighted": ["", "testtest", "4"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "t1"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkdWxTbkFFNmQwMXRYSTllOEhKRmc2Lw==",
+        "result": {"__typename": "Player", "accountId": "3185113784490645431", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkdWxTbkFFNmQwMXRYSTllOEhKRmc2Lw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testestt1", "onlineIdHighlighted": ["", "testest", "t1"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "testestestest", "12"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkMjdvWWdTOE0yUnNhTnVvVFF4elpmLw==",
+        "result": {"__typename": "Player", "accountId": "1226009529994958444", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/UP40731301003_CFDD3A1104FCB4D40915_L.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkMjdvWWdTOE0yUnNhTnVvVFF4elpmLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "testestestest12", "onlineIdHighlighted": ["", "testestestest",
+        "12"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "3", "test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkbHVheDlMcDMuajZGTjZyNTFBYlp1Lg==",
+        "result": {"__typename": "Player", "accountId": "1349361379108291238", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_E/E0040.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkbHVheDlMcDMuajZGTjZyNTFBYlp1Lg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest3test", "onlineIdHighlighted": ["", "testtest",
+        "3", "test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testestest", "999"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkb0sudXZ5aDBPOGhtWU5paTFPanhFLg==",
+        "result": {"__typename": "Player", "accountId": "3511106386416925845", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkb0sudXZ5aDBPOGhtWU5paTFPanhFLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testestest999", "onlineIdHighlighted": ["", "testestest",
+        "999"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testTESTtest", "_"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZy9sUDIxTS9oR2QxSDJ3SEVVVi9uMA==",
+        "result": {"__typename": "Player", "accountId": "7694466488333764654", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZy9sUDIxTS9oR2QxSDJ3SEVVVi9uMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testTESTtest_", "onlineIdHighlighted": ["", "testTESTtest",
+        "_"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "TestTestTest", "t"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkejNyY2hMTjZOLjM5VWpLaGs5dWRZMA==",
+        "result": {"__typename": "Player", "accountId": "2922172863219065293", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkejNyY2hMTjZOLjM5VWpLaGs5dWRZMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "TestTestTestt", "onlineIdHighlighted": ["", "TestTestTest",
+        "t"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "82"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkVFI2N3VhVllSTkg4Y1RxbU1ZbHRNMQ==",
+        "result": {"__typename": "Player", "accountId": "3029556024355975098", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkVFI2N3VhVllSTkg4Y1RxbU1ZbHRNMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest82", "onlineIdHighlighted": ["", "testtest", "82"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "033"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZWhnaTVLN0lkNjAzdDdnMHUuTnN0MA==",
+        "result": {"__typename": "Player", "accountId": "7100904717142557539", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZWhnaTVLN0lkNjAzdDdnMHUuTnN0MA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testest033", "onlineIdHighlighted": ["", "testest", "033"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "ert"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkMVRhMnU0VkRqQkROWG9sUFBsL0hzMA==",
+        "result": {"__typename": "Player", "accountId": "1046075551520039118", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2114_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkMVRhMnU0VkRqQkROWG9sUFBsL0hzMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testestert", "onlineIdHighlighted": ["", "testest", "ert"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "t2"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkUlMwRm1qNDR2U3NFL2FPbTFrZ1I5Lw==",
+        "result": {"__typename": "Player", "accountId": "7284027929824221690", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkUlMwRm1qNDR2U3NFL2FPbTFrZ1I5Lw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtestt2", "onlineIdHighlighted": ["", "testtest", "t2"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "ov"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkM3hja0pJRkpJcno2STRVcVg2aW1WLw==",
+        "result": {"__typename": "Player", "accountId": "6798742239850125999", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/UP43611208W02_2DE126102C006D2096DC_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkM3hja0pJRkpJcno2STRVcVg2aW1WLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtestov", "onlineIdHighlighted": ["", "testtest", "ov"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "uk", "test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkam1sZ2NZaFZadUZuZGc2WDEwQ3FlLw==",
+        "result": {"__typename": "Player", "accountId": "1906265007414906985", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkam1sZ2NZaFZadUZuZGc2WDEwQ3FlLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testuktest", "onlineIdHighlighted": ["", "test", "uk",
+        "test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "91", "test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkRlZwRnF3TkFPNEwuTEdyQmJzTG1SLw==",
+        "result": {"__typename": "Player", "accountId": "5612426741572423483", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_J/J2045_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkRlZwRnF3TkFPNEwuTEdyQmJzTG1SLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test91test", "onlineIdHighlighted": ["", "test", "91",
+        "test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "TEST", "by", "TEST"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZllFb0J4bjJRQmxiS0dHcjBVc29DMQ==",
+        "result": {"__typename": "Player", "accountId": "4124188513700620135", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_J/J0019.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZllFb0J4bjJRQmxiS0dHcjBVc29DMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "TESTbyTEST", "onlineIdHighlighted": ["", "TEST", "by",
+        "TEST"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "187"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZDFFZlRBa1BSdXN1c2cvSmsyLjBNMQ==",
+        "result": {"__typename": "Player", "accountId": "7918748595031841360", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZDFFZlRBa1BSdXN1c2cvSmsyLjBNMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testest187", "onlineIdHighlighted": ["", "testest", "187"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testestestest", "ess"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkSmVyUWFVOGhtMWZHYTNmR1N2cUF0Lw==",
+        "result": {"__typename": "Player", "accountId": "6386058880260431135", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2117_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkSmVyUWFVOGhtMWZHYTNmR1N2cUF0Lw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testestestestess", "onlineIdHighlighted": ["", "testestestest",
+        "ess"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test", " ", "test"], "middleName":
+        null, "onlineId": ["", "testtest", "091"], "verifiedUserName": null}, "id":
+        "JGFwcjEkYXNka2ZqYWwkVWFyak5PdHFYRVRPeFBueGpTOHFsMA==", "result": {"__typename":
+        "Player", "accountId": "4304592036800949397", "avatarUrl": "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png",
+        "displayName": "test test test", "displayNameHighlighted": ["", "test", "
+        ", "test", " ", "test"], "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkVWFyak5PdHFYRVRPeFBueGpTOHFsMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test test", "middleName":
+        null, "onlineId": "testtest091", "onlineIdHighlighted": ["", "testtest", "091"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "2", "test", "1"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkSkRWSXpwQXBSM21TdW9aZExsNGFQMQ==",
+        "result": {"__typename": "Player", "accountId": "6646944007219633558", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkSkRWSXpwQXBSM21TdW9aZExsNGFQMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test2test1", "onlineIdHighlighted": ["", "test", "2", "test",
+        "1"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "-", "test", "7"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkNGllakwyYWMvY0QyT3FWT0t5MU9DLg==",
+        "result": {"__typename": "Player", "accountId": "1622556944522141326", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/UP40731301010_2E050586F7A7ABB33274_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkNGllakwyYWMvY0QyT3FWT0t5MU9DLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test-test7", "onlineIdHighlighted": ["", "test", "-", "test",
+        "7"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test", "i"], "lastName": ["", "Test"], "middleName": null,
+        "onlineId": ["", "Test", "i", "testtest"], "verifiedUserName": null}, "id":
+        "JGFwcjEkYXNka2ZqYWwkV3U1ajNSZVdzaWloTm9ZdmNOQ0RVLw==", "result": {"__typename":
+        "Player", "accountId": "6953196359991950902", "avatarUrl": "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "Testi Test", "displayNameHighlighted": ["", "Test", "i", "
+        ", "", "Test"], "firstName": "Testi", "id": "JGFwcjEkYXNka2ZqYWwkV3U1ajNSZVdzaWloTm9ZdmNOQ0RVLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "Testitesttest", "onlineIdHighlighted": ["", "Test", "i",
+        "testtest"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test", "y"], "middleName": null,
+        "onlineId": ["", "test", "T", "testTest"], "verifiedUserName": null}, "id":
+        "JGFwcjEkYXNka2ZqYWwkVnlJUXRpMFpTYmFIalZNMnMxZThELg==", "result": {"__typename":
+        "Player", "accountId": "1941551530568916809", "avatarUrl": "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test testy", "displayNameHighlighted": ["", "test", " ", "test",
+        "y"], "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkVnlJUXRpMFpTYmFIalZNMnMxZThELg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "testy", "middleName":
+        null, "onlineId": "testTtestTest", "onlineIdHighlighted": ["", "test", "T",
+        "testTest"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtesttest", "94"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkWm04MjIzZVJtVDh1Ulc5Vm9qdVRjMQ==",
+        "result": {"__typename": "Player", "accountId": "2241639582330841074", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkWm04MjIzZVJtVDh1Ulc5Vm9qdVRjMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtesttest94", "onlineIdHighlighted": ["", "testtesttest",
+        "94"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test", "i"], "middleName": null,
+        "onlineId": ["", "Test", "-", "Test", "i"], "verifiedUserName": null}, "id":
+        "JGFwcjEkYXNka2ZqYWwkZVRLczBVbExTUVVlUlFTWjlrcWdZMA==", "result": {"__typename":
+        "Player", "accountId": "3889954594653485492", "avatarUrl": "http://static-resource.np.community.playstation.net/avatar/3RD/EP43321110007_5FEED32BFD118575442A_L.png",
+        "displayName": "Test Testi", "displayNameHighlighted": ["", "Test", " ", "Test",
+        "i"], "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkZVRLczBVbExTUVVlUlFTWjlrcWdZMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Testi", "middleName":
+        null, "onlineId": "Test-Testi", "onlineIdHighlighted": ["", "Test", "-", "Test",
+        "i"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "Testtesttest", "23"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkSVBsdzNsR04uc0E5Q0VUdHVBT2NtMQ==",
+        "result": {"__typename": "Player", "accountId": "1845554260071808286", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkSVBsdzNsR04uc0E5Q0VUdHVBT2NtMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "Testtesttest23", "onlineIdHighlighted": ["", "Testtesttest",
+        "23"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "230", "test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkN1guWU9QV1VqdUYxWi5lS3RYNFliLg==",
+        "result": {"__typename": "Player", "accountId": "6082076298704940472", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkN1guWU9QV1VqdUYxWi5lS3RYNFliLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test230test", "onlineIdHighlighted": ["", "test", "230",
+        "test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "testest", "1of3"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkazJ4Wm9FRVFRdjRGbWhvRXhndTFMLw==",
+        "result": {"__typename": "Player", "accountId": "2515473527634024704", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkazJ4Wm9FRVFRdjRGbWhvRXhndTFMLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "testest1of3", "onlineIdHighlighted": ["", "testest", "1of3"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "TestTest", "_13"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkelphZTYzTVFRdi9VQWtQc0pVYTZjMQ==",
+        "result": {"__typename": "Player", "accountId": "8611993307656751538", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_A/A2104_l.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkelphZTYzTVFRdi9VQWtQc0pVYTZjMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "TestTest_13", "onlineIdHighlighted": ["", "TestTest", "_13"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testest", "8082"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkMmkuZEUxeEdvdHZnWDlPdm0vb0RvMA==",
+        "result": {"__typename": "Player", "accountId": "6146422517588401230", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/WWS_E/E2106_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkMmkuZEUxeEdvdHZnWDlPdm0vb0RvMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testest8082", "onlineIdHighlighted": ["", "testest", "8082"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "Test", "505", "Test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkSWdGUFRRWlpIZy80T1NUd0cvS0ZmMA==",
+        "result": {"__typename": "Player", "accountId": "2553949752405667941", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkSWdGUFRRWlpIZy80T1NUd0cvS0ZmMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "Test505Test", "onlineIdHighlighted": ["", "Test", "505",
+        "Test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "338"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkc0I0amh3QnRzdjVFMlN4Z3lsQTQxMA==",
+        "result": {"__typename": "Player", "accountId": "506899827005193130", "avatarUrl":
+        "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/JP9000/CUSA00601_00-AVATAR1510SAC000_E81C996AE660271A8D76_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkc0I0amh3QnRzdjVFMlN4Z3lsQTQxMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest338", "onlineIdHighlighted": ["", "testtest", "338"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "215"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkTEw2Z0xEaFplWEhQdS9UTndEWi9tLg==",
+        "result": {"__typename": "Player", "accountId": "9199327459609338557", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/30000.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkTEw2Z0xEaFplWEhQdS9UTndEWi9tLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest215", "onlineIdHighlighted": ["", "testtest", "215"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "_", "test", "83"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkamJaaUcxdFd0OUZ5ZlFWQmNySzVYMA==",
+        "result": {"__typename": "Player", "accountId": "3431109249536764431", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/I0018.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkamJaaUcxdFd0OUZ5ZlFWQmNySzVYMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test_test83", "onlineIdHighlighted": ["", "test", "_",
+        "test", "83"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "TestTest", "258"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkMjVjb2hIQjhHTmEzWDJqOUZtLlZJLg==",
+        "result": {"__typename": "Player", "accountId": "5114714149920875742", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkMjVjb2hIQjhHTmEzWDJqOUZtLlZJLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "TestTest258", "onlineIdHighlighted": ["", "TestTest", "258"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "460"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkb3RBcG90SU9ZcnpuUC9jOHp3cXBZMA==",
+        "result": {"__typename": "Player", "accountId": "5200226667655495409", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkb3RBcG90SU9ZcnpuUC9jOHp3cXBZMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest460", "onlineIdHighlighted": ["", "testtest", "460"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "034", "test"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkcDc1VHFLTlRySk1CTzVGWElHWTZPLw==",
+        "result": {"__typename": "Player", "accountId": "390035140369278494", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkcDc1VHFLTlRySk1CTzVGWElHWTZPLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test034test", "onlineIdHighlighted": ["", "test", "034",
+        "test"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "Test"], "lastName": ["", "Test"], "middleName": null, "onlineId":
+        ["", "TestTest", "964"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkbHAyQmhGMmZ1V2I1VTBBVDBoSlZ3MA==",
+        "result": {"__typename": "Player", "accountId": "1867347468823759833", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR3_107F831A6F6EB8F42F0C_L.png",
+        "displayName": "Test Test", "displayNameHighlighted": ["", "Test", " ", "Test"],
+        "firstName": "Test", "id": "JGFwcjEkYXNka2ZqYWwkbHAyQmhGMmZ1V2I1VTBBVDBoSlZ3MA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "Test", "middleName":
+        null, "onlineId": "TestTest964", "onlineIdHighlighted": ["", "TestTest", "964"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "523"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkZ3FsVXNEZXNjZE9Td2lWU1NKNFBXLg==",
+        "result": {"__typename": "Player", "accountId": "1986173476631547757", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkZ3FsVXNEZXNjZE9Td2lWU1NKNFBXLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest523", "onlineIdHighlighted": ["", "testtest", "523"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "309"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkeHZHVjd0UFYubEpEOUVxd2U4YVNIMA==",
+        "result": {"__typename": "Player", "accountId": "3338959407730149192", "avatarUrl":
+        "http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP4122/CUSA02133_00-AV00000000000014_D3F84D1FED4DA3EF25C1_l.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkeHZHVjd0UFYubEpEOUVxd2U4YVNIMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest309", "onlineIdHighlighted": ["", "testtest", "309"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "-", "test", "59"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkeHdUU05mYy82RGJxS2EuM2R1Vi5FMQ==",
+        "result": {"__typename": "Player", "accountId": "1518619212872590695", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkeHdUU05mYy82RGJxS2EuM2R1Vi5FMQ==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test-test59", "onlineIdHighlighted": ["", "test", "-",
+        "test", "59"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}, {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testTest", "2-0"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkLkguQ05XU1Ywb1FEelZoeW11S1RuLg==",
+        "result": {"__typename": "Player", "accountId": "2781717631376314429", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/3RD/30000.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkLkguQ05XU1Ywb1FEelZoeW11S1RuLg==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testTest2-0", "onlineIdHighlighted": ["", "testTest", "2-0"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "758"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkVWZjaFhTdzUzL0cwc3RPclBKaktXLw==",
+        "result": {"__typename": "Player", "accountId": "5171435827880575493", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/SCEI/IP91001401PR2_BFFC2B8AD0E21BC6CE29_L.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkVWZjaFhTdzUzL0cwc3RPclBKaktXLw==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest758", "onlineIdHighlighted": ["", "testtest", "758"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "testtest", "875"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==",
+        "result": {"__typename": "Player", "accountId": "7565112249998981851", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkNmlVV2loZnJLU2tabzNiL1hNYWZZMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "testtest875", "onlineIdHighlighted": ["", "testtest", "875"],
+        "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag": null},
+        {"__typename": "SearchResultItem", "highlight": {"__typename": "PlayerHighlight",
+        "firstName": ["", "test"], "lastName": ["", "test"], "middleName": null, "onlineId":
+        ["", "test", "_", "test", "22"], "verifiedUserName": null}, "id": "JGFwcjEkYXNka2ZqYWwkRU1ZbGozbWtneEdKU3U3Y1lMeGgyMA==",
+        "result": {"__typename": "Player", "accountId": "7443114695321982442", "avatarUrl":
+        "http://static-resource.np.community.playstation.net/avatar/default/DefaultAvatar.png",
+        "displayName": "test test", "displayNameHighlighted": ["", "test", " ", "test"],
+        "firstName": "test", "id": "JGFwcjEkYXNka2ZqYWwkRU1ZbGozbWtneEdKU3U3Y1lMeGgyMA==",
+        "isPsPlus": false, "itemType": "SOCIAL", "lastName": "test", "middleName":
+        null, "onlineId": "test_test22", "onlineIdHighlighted": ["", "test", "_",
+        "test", "22"], "profilePicUrl": "", "relationshipState": null}, "resultOriginFlag":
+        null}], "totalResultCount": 128, "zeroState": false}]}}}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 25 Oct 2026 00:31:44 GMT
+      ETag:
+      - W/"9785-VuAApddPnctlmV3WDwqvGV6EOQE"
+      Expires:
+      - Sun, 25 Oct 2026 00:31:44 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Vary:
+      - Origin
+      - Accept-Encoding
+      content-length:
+      - '38788'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-dns-prefetch-control:
+      - 'off'
+      x-download-options:
+      - noopen
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

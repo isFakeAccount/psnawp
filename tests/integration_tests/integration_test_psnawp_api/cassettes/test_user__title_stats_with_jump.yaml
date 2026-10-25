@@ -1,0 +1,689 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/ikemenzi/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+  response:
+    body:
+      string: '{"profile": {"onlineId": "ikemenzi", "accountId": "6515971742264256071"}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        If-None-Match
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '69'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 25 Oct 2026 00:36:27 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/6515971742264256071/titles?limit=10&offset=0
+  response:
+    body:
+      string: '{"titles": [{"titleId": "PPSA35590_00", "name": "Dragon Quest Heroes:
+        Torneko\u2018s Mystery Dungeon -Classic HD-", "localizedName": "Dragon Quest
+        Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e1e6fe5ed1f4438dcc3edb15b4264a1aa19ab0177df4287a.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e1e6fe5ed1f4438dcc3edb15b4264a1aa19ab0177df4287a.png",
+        "category": "ps5_native_game", "service": "none(purchased)", "sortableName":
+        "dragon quest heroes: torneko\u2018s mystery dungeon -classic hd-", "playCount":
+        3, "concept": {"id": 10018333, "titleIds": ["PPSA35590_00"], "name": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "media": {"audios":
+        [], "videos": [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/5ef2395a1b671c486e7d87a0c914c8c72a1e3e3c4deaf795.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/106de8a317790019c2e2ef93c8146ee3a818cb14d9ac3b67.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/a3f55e6e26bb3ac94dfe384f4b58930886260f1e54c7c66a.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/b3d2ddcfa7a9599baca1c3c5140726e07bc8a6790800edc4.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e89a2946030cc0e1cc37406669ce40bc6c643eebf785b2ce.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/6bdabf865da1d27a41649e3f3dc1e879024bb003f29ecad2.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/2ee561719d456aedba526bd8b4c4e699ef71b84658a6ff86.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/b95711a6e874e070220eb96ff61c6303ed1f5264239aa6ac.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/75626f04ed6f1c8c8621f093fd93ba755278e22bc899d88a.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/d2ca20da4442fe0d70bd1973d7f06c7aeb8bc79e21e30925.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/7e4b9375e07a457eddf60870507f4e9dd56dc5b3cd1435ab.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/664f96188c6581d6d2c9b2a6466a4789abdbcbf17bf2792c.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0710/16501068d1fdf789ce85915f48a63a8a568efaffee3837b8.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e1e6fe5ed1f4438dcc3edb15b4264a1aa19ab0177df4287a.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ROLE_PLAYING_GAMES"],
+        "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "uk-UA": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "de-DE": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "en-US": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "ko-KR": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "pt-BR": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "es-ES": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "ar-AE": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "no-NO": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "fr-CA": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "it-IT": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "pl-PL": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "ru-RU": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "zh-Hans": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "nl-NL": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "pt-PT": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "zh-Hant": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "sv-SE": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "da-DK": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "tr-TR": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "fr-FR": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "en-GB": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "es-419": "Dragon
+        Quest Heroes: Torneko\u2018s Mystery Dungeon -Classic HD-", "ja-JP": "\u30c8\u30eb\u30cd\u30b3\u306e\u5927\u5192\u967a
+        \u4e0d\u601d\u8b70\u306e\u30c0\u30f3\u30b8\u30e7\u30f3\u3000\u3061\u3087\u3063\u3068\u30b9\u30c6\u30ad\u306a\u30ea\u30de\u30b9\u30bf\u30fc"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/5ef2395a1b671c486e7d87a0c914c8c72a1e3e3c4deaf795.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/106de8a317790019c2e2ef93c8146ee3a818cb14d9ac3b67.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/a3f55e6e26bb3ac94dfe384f4b58930886260f1e54c7c66a.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/b3d2ddcfa7a9599baca1c3c5140726e07bc8a6790800edc4.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e89a2946030cc0e1cc37406669ce40bc6c643eebf785b2ce.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/6bdabf865da1d27a41649e3f3dc1e879024bb003f29ecad2.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/2ee561719d456aedba526bd8b4c4e699ef71b84658a6ff86.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/b95711a6e874e070220eb96ff61c6303ed1f5264239aa6ac.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/75626f04ed6f1c8c8621f093fd93ba755278e22bc899d88a.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/d2ca20da4442fe0d70bd1973d7f06c7aeb8bc79e21e30925.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/7e4b9375e07a457eddf60870507f4e9dd56dc5b3cd1435ab.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/664f96188c6581d6d2c9b2a6466a4789abdbcbf17bf2792c.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0710/16501068d1fdf789ce85915f48a63a8a568efaffee3837b8.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0708/e1e6fe5ed1f4438dcc3edb15b4264a1aa19ab0177df4287a.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2026-09-13T03:57:07.870000Z",
+        "lastPlayedDateTime": "2026-09-13T11:55:52.680000Z", "playDuration": "PT2H10M42S"},
+        {"titleId": "PPSA04873_00", "name": "Apex Legends\u2122", "localizedName":
+        "Apex Legends\u2122", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/6a6c898139c7550f3f5cd26135675bd3f3651be30bb17b74.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/6a6c898139c7550f3f5cd26135675bd3f3651be30bb17b74.png",
+        "category": "ps5_native_game", "service": "none(purchased)", "sortableName":
+        "apex legends\u2122", "playCount": 121, "concept": {"id": 232352, "titleIds":
+        ["CUSA23296_00", "CUSA17256_00", "CUSA19626_00", "CUSA23295_00", "PPSA04873_00",
+        "PPSA04874_00", "CUSA12540_00", "CUSA12552_00"], "name": "Apex Legends\u2122",
+        "media": {"audios": [], "videos": [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d7c845d08b5e0d4882a57e99cc1122490d3298d4fd43a53e.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d3b38ef3dd9325345b34c8f6e9e7b15bfbd669e526977dee.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/0fa9c806e86a5cc429feca1a1a3e3e857c48aff3bfe24af1.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/4372e19e7b4921342291eb11a99abd4a98be78e6aa0c9dae.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/892c5c476009de0bc5eddfcdd2c78e3124f78c767e49a71c.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/5085c2cdd5b21dbd348b59af863b24123bac32750f178f3a.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/b2133db7dd8e618021675517254a176d9b7fecfe6d3ab9c0.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/2c63f8ee30124aaa20d53e7c6dba2c1a627aba9c796d6183.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/1b59dfb15b5202cc7bf75e3a5d8cf38b4d3a8cc087165ee2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d5f6091ad1ada9dbaa1a965a7fc5d2da5a6aef89d68c87e1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/c5db4616bc62d333ee90b7d8e04eb12b165a717ced154b5a.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/82b23a12b827dcd225a8efd7bffea394fc9dd81ae542d002.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/462d843a8ffebf74d2348df1e71e3b0e0859617b90160cda.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/6a6c898139c7550f3f5cd26135675bd3f3651be30bb17b74.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["SHOOTER", "ACTION"],
+        "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Apex
+        Legends\u2122", "uk-UA": "Apex Legends\u2122", "de-DE": "Apex Legends\u2122",
+        "en-US": "Apex Legends\u2122", "ko-KR": "Apex \ub808\uc804\ub4dc\u2122", "pt-BR":
+        "Apex Legends\u2122", "es-ES": "Apex Legends\u2122", "ar-AE": "Apex Legends\u2122\u200e",
+        "no-NO": "Apex Legends\u2122", "fr-CA": "Apex Legends\u2122", "it-IT": "Apex
+        Legends\u2122", "pl-PL": "Apex Legends\u2122", "ru-RU": "Apex Legends\u2122",
+        "zh-Hans": "Apex Legends\u2122", "nl-NL": "Apex Legends\u2122", "pt-PT": "Apex
+        Legends\u2122", "zh-Hant": "\u300aApex \u82f1\u96c4\u300b", "sv-SE": "Apex
+        Legends\u2122", "da-DK": "Apex Legends\u2122", "tr-TR": "Apex Legends\u2122",
+        "fr-FR": "Apex Legends\u2122", "en-GB": "Apex Legends\u2122", "es-419": "Apex
+        Legends\u2122", "ja-JP": "\u30a8\u30fc\u30da\u30c3\u30af\u30b9\u30ec\u30b8\u30a7\u30f3\u30ba"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d7c845d08b5e0d4882a57e99cc1122490d3298d4fd43a53e.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d3b38ef3dd9325345b34c8f6e9e7b15bfbd669e526977dee.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/0fa9c806e86a5cc429feca1a1a3e3e857c48aff3bfe24af1.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/4372e19e7b4921342291eb11a99abd4a98be78e6aa0c9dae.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/892c5c476009de0bc5eddfcdd2c78e3124f78c767e49a71c.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/5085c2cdd5b21dbd348b59af863b24123bac32750f178f3a.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/b2133db7dd8e618021675517254a176d9b7fecfe6d3ab9c0.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/2c63f8ee30124aaa20d53e7c6dba2c1a627aba9c796d6183.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/1b59dfb15b5202cc7bf75e3a5d8cf38b4d3a8cc087165ee2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/d5f6091ad1ada9dbaa1a965a7fc5d2da5a6aef89d68c87e1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/c5db4616bc62d333ee90b7d8e04eb12b165a717ced154b5a.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/82b23a12b827dcd225a8efd7bffea394fc9dd81ae542d002.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/462d843a8ffebf74d2348df1e71e3b0e0859617b90160cda.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3013/6a6c898139c7550f3f5cd26135675bd3f3651be30bb17b74.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-03-29T13:21:34.000000Z",
+        "lastPlayedDateTime": "2025-12-31T12:17:59.330000Z", "playDuration": "PT226H55M18S"},
+        {"titleId": "PPSA24699_00", "name": "Digimon Story Time Stranger", "localizedName":
+        "Digimon Story Time Stranger", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/c72815460a7f8c7e10903cb77bdc5e8b15891db727a78e96.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/c72815460a7f8c7e10903cb77bdc5e8b15891db727a78e96.png",
+        "category": "ps5_native_game", "service": "other", "sortableName": "digimon
+        story time stranger", "playCount": 22, "concept": {"id": 10011861, "titleIds":
+        ["PPSA25917_00", "PPSA25915_00", "PPSA25916_00", "PPSA25914_00", "PPSA24699_00",
+        "PPSA24701_00", "PPSA24702_00", "PPSA24700_00"], "name": "Digimon Story Time
+        Stranger", "media": {"audios": [], "videos": [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/3838735b8a9c276b7095450045e64fddaef7d756a1828693.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/e980e9c779d33b0330fc8bee47774776085c50eebfde53ee.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/739c6ecb03d64bac001000cdca0ece5f0016788694104488.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/10a53efd9c09ff1e0183d470289a2b468ecb4c9208f16c69.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/4b7994e18a27cf87e3ca8c79ed3fc5f5fa32bece7032c8c0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/9a50a064bc4760b6e26ae98925dfe70c2d597cfa87a03483.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/36487a514249ecd66e02846b9997b5054ee94644dc99f616.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/0ce9303789f891d6d1442b206a7a167f1c3af1b9855160ac.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/0ac921664effe02f545c7fd4b88a1dafe643583889cc8708.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/844fdfc11659b6ca23568ff1411fbb78c6ca3e1bbc369524.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/4a51799f697b595527b888a1808ab92c6e11068c6d43a3bb.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/153457c0d9434c638ca43a375b42e24c2d9693e261c91035.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/a0e15858327fc580f291cafbea9205995be63e177947fbce.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/e7c521c82ad768f3b9c644ec600d6782bf62c57feaa9cc18.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/c72815460a7f8c7e10903cb77bdc5e8b15891db727a78e96.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ROLE_PLAYING_GAMES",
+        "ADVENTURE"], "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI":
+        "Digimon Story Time Stranger", "uk-UA": "Digimon Story Time Stranger", "de-DE":
+        "Digimon Story Time Stranger", "en-US": "Digimon Story Time Stranger", "ko-KR":
+        "\ub514\uc9c0\ubaac \uc2a4\ud1a0\ub9ac \ud0c0\uc784 \uc2a4\ud2b8\ub808\uc778\uc800",
+        "pt-BR": "Digimon Story Time Stranger", "es-ES": "Digimon Story Time Stranger",
+        "ar-AE": "Digimon Story Time Stranger", "no-NO": "Digimon Story Time Stranger",
+        "fr-CA": "Digimon Story Time Stranger", "it-IT": "Digimon Story Time Stranger",
+        "pl-PL": "Digimon Story Time Stranger", "ru-RU": "Digimon Story Time Stranger",
+        "zh-Hans": "\u6570\u7801\u5b9d\u8d1d\u7269\u8bed \u65f6\u7a7a\u5f02\u5ba2",
+        "nl-NL": "Digimon Story Time Stranger", "pt-PT": "Digimon Story Time Stranger",
+        "zh-Hant": "\u6578\u78bc\u5bf6\u8c9d\u7269\u8a9e \u6642\u7a7a\u7570\u5ba2",
+        "sv-SE": "Digimon Story Time Stranger", "da-DK": "Digimon Story Time Stranger",
+        "tr-TR": "Digimon Story Time Stranger", "fr-FR": "Digimon Story Time Stranger",
+        "en-GB": "Digimon Story Time Stranger", "es-419": "Digimon Story Time Stranger",
+        "ja-JP": "\u30c7\u30b8\u30e2\u30f3\u30b9\u30c8\u30fc\u30ea\u30fc \u30bf\u30a4\u30e0\u30b9\u30c8\u30ec\u30f3\u30b8\u30e3\u30fc"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/3838735b8a9c276b7095450045e64fddaef7d756a1828693.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/e980e9c779d33b0330fc8bee47774776085c50eebfde53ee.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/739c6ecb03d64bac001000cdca0ece5f0016788694104488.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/10a53efd9c09ff1e0183d470289a2b468ecb4c9208f16c69.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/4b7994e18a27cf87e3ca8c79ed3fc5f5fa32bece7032c8c0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/9a50a064bc4760b6e26ae98925dfe70c2d597cfa87a03483.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/36487a514249ecd66e02846b9997b5054ee94644dc99f616.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/0ce9303789f891d6d1442b206a7a167f1c3af1b9855160ac.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/0ac921664effe02f545c7fd4b88a1dafe643583889cc8708.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/844fdfc11659b6ca23568ff1411fbb78c6ca3e1bbc369524.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/4a51799f697b595527b888a1808ab92c6e11068c6d43a3bb.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/153457c0d9434c638ca43a375b42e24c2d9693e261c91035.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/a0e15858327fc580f291cafbea9205995be63e177947fbce.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/e7c521c82ad768f3b9c644ec600d6782bf62c57feaa9cc18.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202506/1318/c72815460a7f8c7e10903cb77bdc5e8b15891db727a78e96.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2025-10-02T09:58:00.800000Z",
+        "lastPlayedDateTime": "2025-10-14T03:24:29.910000Z", "playDuration": "PT51H40M51S"},
+        {"titleId": "PPSA07862_00", "name": "Monster Hunter Wilds", "localizedName":
+        "Monster Hunter Wilds", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "category": "ps5_native_game", "service": "other", "sortableName": "monster
+        hunter wilds", "playCount": 28, "concept": {"id": 10005176, "titleIds": ["PPSA24191_00",
+        "PPSA24189_00", "PPSA24190_00", "PPSA35672_00", "PPSA24306_00", "PPSA07862_00",
+        "PPSA35673_00"], "name": "Monster Hunter Wilds", "media": {"audios": [], "videos":
+        [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/1c544b6dc3cc8cf567db3313351e860c66e3023189a8c274.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/22b81c7c1b280be4d2586529fc086646fd5d3912c95f74f8.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/cc9d420763276453868b16b2fee542a992905dc3948dc4ab.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/ad5fa6b96324ad533229a4efa620e84b5c9935a35e8ee3f0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/6eca11bf1cbeda40d7fbff267f42565b2030b6ca10a4f4c2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f653040b97ae0e2203bcc6291c2c904f72f08768d01ca125.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/e67705e75851d1423236257076fb113e9b278df1d7ee9235.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f273cf7c1c38bcbfd334fb3abaaec6eb645f414a027f5d5e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/a0f54ab37ba91b505c4edb98d42d7852bf92b3f03b0c2a80.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/aff652e15d91796b46e9edc36dd468c24db35bb1b4d45be1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/c1480589e13dccb9ff6892163430802ee0258f8f64c78950.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/9a6f0baddda2f4c96b5b1b009d33f2ce31d1cd599589c684.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/34b372ac3c15e5b922ca506774f1f6d0e2371a1903190333.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/efc2dc682a520974836ac6ec8e39b2f7235f0da4b72f2ded.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ACTION"], "localizedName":
+        {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Monster Hunter Wilds",
+        "uk-UA": "Monster Hunter Wilds", "de-DE": "Monster Hunter Wilds", "en-US":
+        "Monster Hunter Wilds", "ko-KR": "Monster Hunter Wilds", "pt-BR": "Monster
+        Hunter Wilds", "es-ES": "Monster Hunter Wilds", "ar-AE": "Monster Hunter Wilds",
+        "no-NO": "Monster Hunter Wilds", "fr-CA": "Monster Hunter Wilds", "it-IT":
+        "Monster Hunter Wilds", "pl-PL": "Monster Hunter Wilds", "ru-RU": "Monster
+        Hunter Wilds", "zh-Hans": "Monster Hunter Wilds", "nl-NL": "Monster Hunter
+        Wilds", "pt-PT": "Monster Hunter Wilds", "zh-Hant": "Monster Hunter Wilds",
+        "sv-SE": "Monster Hunter Wilds", "da-DK": "Monster Hunter Wilds", "tr-TR":
+        "Monster Hunter Wilds", "fr-FR": "Monster Hunter Wilds", "en-GB": "Monster
+        Hunter Wilds", "es-419": "Monster Hunter Wilds", "ja-JP": "\u30e2\u30f3\u30b9\u30bf\u30fc\u30cf\u30f3\u30bf\u30fc\u30ef\u30a4\u30eb\u30ba"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/1c544b6dc3cc8cf567db3313351e860c66e3023189a8c274.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/22b81c7c1b280be4d2586529fc086646fd5d3912c95f74f8.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/cc9d420763276453868b16b2fee542a992905dc3948dc4ab.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/ad5fa6b96324ad533229a4efa620e84b5c9935a35e8ee3f0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/6eca11bf1cbeda40d7fbff267f42565b2030b6ca10a4f4c2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f653040b97ae0e2203bcc6291c2c904f72f08768d01ca125.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/e67705e75851d1423236257076fb113e9b278df1d7ee9235.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f273cf7c1c38bcbfd334fb3abaaec6eb645f414a027f5d5e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/a0f54ab37ba91b505c4edb98d42d7852bf92b3f03b0c2a80.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/aff652e15d91796b46e9edc36dd468c24db35bb1b4d45be1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/c1480589e13dccb9ff6892163430802ee0258f8f64c78950.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/9a6f0baddda2f4c96b5b1b009d33f2ce31d1cd599589c684.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/34b372ac3c15e5b922ca506774f1f6d0e2371a1903190333.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/efc2dc682a520974836ac6ec8e39b2f7235f0da4b72f2ded.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2025-02-28T03:21:09.800000Z",
+        "lastPlayedDateTime": "2025-04-09T12:23:01.130000Z", "playDuration": "PT92H42M16S"},
+        {"titleId": "PPSA24189_00", "name": "Monster Hunter Wilds", "localizedName":
+        "Monster Hunter Wilds", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "category": "ps5_native_game", "service": "none(purchased)", "sortableName":
+        "monster hunter wilds", "playCount": 5, "concept": {"id": 10005176, "titleIds":
+        ["PPSA24191_00", "PPSA24189_00", "PPSA24190_00", "PPSA35672_00", "PPSA24306_00",
+        "PPSA07862_00", "PPSA35673_00"], "name": "Monster Hunter Wilds", "media":
+        {"audios": [], "videos": [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/1c544b6dc3cc8cf567db3313351e860c66e3023189a8c274.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/22b81c7c1b280be4d2586529fc086646fd5d3912c95f74f8.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/cc9d420763276453868b16b2fee542a992905dc3948dc4ab.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/ad5fa6b96324ad533229a4efa620e84b5c9935a35e8ee3f0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/6eca11bf1cbeda40d7fbff267f42565b2030b6ca10a4f4c2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f653040b97ae0e2203bcc6291c2c904f72f08768d01ca125.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/e67705e75851d1423236257076fb113e9b278df1d7ee9235.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f273cf7c1c38bcbfd334fb3abaaec6eb645f414a027f5d5e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/a0f54ab37ba91b505c4edb98d42d7852bf92b3f03b0c2a80.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/aff652e15d91796b46e9edc36dd468c24db35bb1b4d45be1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/c1480589e13dccb9ff6892163430802ee0258f8f64c78950.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/9a6f0baddda2f4c96b5b1b009d33f2ce31d1cd599589c684.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/34b372ac3c15e5b922ca506774f1f6d0e2371a1903190333.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/efc2dc682a520974836ac6ec8e39b2f7235f0da4b72f2ded.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ACTION"], "localizedName":
+        {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Monster Hunter Wilds",
+        "uk-UA": "Monster Hunter Wilds", "de-DE": "Monster Hunter Wilds", "en-US":
+        "Monster Hunter Wilds", "ko-KR": "Monster Hunter Wilds", "pt-BR": "Monster
+        Hunter Wilds", "es-ES": "Monster Hunter Wilds", "ar-AE": "Monster Hunter Wilds",
+        "no-NO": "Monster Hunter Wilds", "fr-CA": "Monster Hunter Wilds", "it-IT":
+        "Monster Hunter Wilds", "pl-PL": "Monster Hunter Wilds", "ru-RU": "Monster
+        Hunter Wilds", "zh-Hans": "Monster Hunter Wilds", "nl-NL": "Monster Hunter
+        Wilds", "pt-PT": "Monster Hunter Wilds", "zh-Hant": "Monster Hunter Wilds",
+        "sv-SE": "Monster Hunter Wilds", "da-DK": "Monster Hunter Wilds", "tr-TR":
+        "Monster Hunter Wilds", "fr-FR": "Monster Hunter Wilds", "en-GB": "Monster
+        Hunter Wilds", "es-419": "Monster Hunter Wilds", "ja-JP": "\u30e2\u30f3\u30b9\u30bf\u30fc\u30cf\u30f3\u30bf\u30fc\u30ef\u30a4\u30eb\u30ba"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/1c544b6dc3cc8cf567db3313351e860c66e3023189a8c274.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/22b81c7c1b280be4d2586529fc086646fd5d3912c95f74f8.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/cc9d420763276453868b16b2fee542a992905dc3948dc4ab.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/ad5fa6b96324ad533229a4efa620e84b5c9935a35e8ee3f0.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/6eca11bf1cbeda40d7fbff267f42565b2030b6ca10a4f4c2.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f653040b97ae0e2203bcc6291c2c904f72f08768d01ca125.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/e67705e75851d1423236257076fb113e9b278df1d7ee9235.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/f273cf7c1c38bcbfd334fb3abaaec6eb645f414a027f5d5e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/a0f54ab37ba91b505c4edb98d42d7852bf92b3f03b0c2a80.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/aff652e15d91796b46e9edc36dd468c24db35bb1b4d45be1.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/c1480589e13dccb9ff6892163430802ee0258f8f64c78950.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/9a6f0baddda2f4c96b5b1b009d33f2ce31d1cd599589c684.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/34b372ac3c15e5b922ca506774f1f6d0e2371a1903190333.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/1107/efc2dc682a520974836ac6ec8e39b2f7235f0da4b72f2ded.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202409/0506/aa5c40ba185302dfcc88edc276a876fdc6c516c4db07ec9d.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2025-02-07T10:32:09.460000Z",
+        "lastPlayedDateTime": "2025-02-15T15:30:43.490000Z", "playDuration": "PT7H15M41S"},
+        {"titleId": "CUSA03105_00", "name": "GOD EATER RESURRECTION", "localizedName":
+        "GOD EATER RESURRECTION", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/icon0.png",
+        "localizedImageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/icon0.png",
+        "category": "ps4_game", "service": "none(purchased)", "sortableName": "god
+        eater resurrection", "playCount": 5, "concept": {"id": 201731, "titleIds":
+        ["CUSA03105_00", "CUSA03369_00", "CUSA03703_00", "CUSA03525_00", "CUSA03409_00",
+        "CUSA03592_00", "PCSB00875_00"], "name": "GOD EATER RESURRECTION", "media":
+        {"audios": [], "videos": [], "images": [{"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/pic0.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ACTION", "ROLE_PLAYING_GAMES"],
+        "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI": "GOD EATER
+        RESURRECTION", "uk-UA": "GOD EATER RESURRECTION", "de-DE": "GOD EATER RESURRECTION",
+        "en-US": "GOD EATER RESURRECTION", "ko-KR": "GOD EATER RESURRECTION", "pt-BR":
+        "GOD EATER RESURRECTION", "es-ES": "GOD EATER RESURRECTION", "ar-AE": "GOD
+        EATER RESURRECTION", "no-NO": "GOD EATER RESURRECTION", "fr-CA": "GOD EATER
+        RESURRECTION", "it-IT": "GOD EATER RESURRECTION", "pl-PL": "GOD EATER RESURRECTION",
+        "ru-RU": "GOD EATER RESURRECTION", "zh-Hans": "GOD EATER RESURRECTION", "nl-NL":
+        "GOD EATER RESURRECTION", "pt-PT": "GOD EATER RESURRECTION", "zh-Hant": "GOD
+        EATER RESURRECTION", "sv-SE": "GOD EATER RESURRECTION", "da-DK": "GOD EATER
+        RESURRECTION", "tr-TR": "GOD EATER RESURRECTION", "fr-FR": "GOD EATER RESURRECTION",
+        "en-GB": "GOD EATER RESURRECTION", "es-419": "GOD EATER RESURRECTION", "ja-JP":
+        "GOD EATER RESURRECTION"}}, "country": "US", "language": "en"}, "media": {"audios":
+        [], "videos": [], "images": [{"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/pic0.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA03369_00/3/i_ce68432f48f6bd462dbe9c89b336ffb598d299f2f1606a0ae2d5b1b1e4bc3c9d/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2016-06-23T12:56:47.000000Z",
+        "lastPlayedDateTime": "2024-10-15T12:27:25.460000Z", "playDuration": "PT6H27M47S"},
+        {"titleId": "PPSA20676_00", "name": "VALORANT", "localizedName": "VALORANT",
+        "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png",
+        "category": "ps5_native_game", "service": "none(purchased)", "sortableName":
+        "valorant", "playCount": 1, "concept": {"id": 10010048, "titleIds": ["PPSA20676_00",
+        "PPSA20711_00"], "name": "VALORANT", "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0922/bf0e7b89ba24ac8ae424a60b239cea4f8a1e75d93d4ef532.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/7ca70f70156fc5ee73f2a7c82ee14835f69d84b16e0768a3.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0922/29984ebac8fa6cc86b083503d42659198e72e30451838157.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/9a198f5b7a3f4a39b16bc70cf242d562809640e0cb4a0eb1.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/0281b6e941b2b34e1ca2bda4fbb79d42151647382c0cb950.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/57ba040780f841303f990276a1163357db7ddd4fc73e891e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/2c1e9886a14f934916259b5dc12e95e5d3857aa789cf07b5.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/31ecfb2e24d112b6a4cd318470b2b1ce80bd340885feac97.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/8ca49a8478ab4f4b1093fb6ebca67e0ca5a3adb7d1c037be.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/f06839e828c9e03354cd64cf286bae52e88249e3eb2c925b.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/e7bdcbe9bb7967dfe64d263d46b7b00f587c0f5ca079455f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/9c98fba4828d6739e4c35635f251fb18d81568657a65587f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202406/1120/78a5f78514c754601c3b8a5a8b62350c27fa47c19ce04646.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["SHOOTER", "SHOOTER",
+        "ACTION"], "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI":
+        "VALORANT", "uk-UA": "VALORANT", "de-DE": "VALORANT", "en-US": "VALORANT",
+        "ko-KR": "\ubc1c\ub85c\ub780\ud2b8", "pt-BR": "VALORANT", "es-ES": "VALORANT",
+        "ar-AE": "VALORANT", "no-NO": "VALORANT", "fr-CA": "VALORANT", "it-IT": "VALORANT",
+        "pl-PL": "VALORANT", "ru-RU": "VALORANT", "zh-Hans": "VALORANT", "nl-NL":
+        "VALORANT", "pt-PT": "VALORANT", "zh-Hant": "\u300a\u7279\u6230\u82f1\u8c6a\u300b",
+        "sv-SE": "VALORANT", "da-DK": "VALORANT", "tr-TR": "VALORANT", "fr-FR": "VALORANT",
+        "en-GB": "VALORANT", "es-419": "VALORANT", "ja-JP": "VALORANT"}}, "country":
+        "US", "language": "en"}, "media": {"audios": [], "videos": [], "images": [{"url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202609/0922/bf0e7b89ba24ac8ae424a60b239cea4f8a1e75d93d4ef532.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/7ca70f70156fc5ee73f2a7c82ee14835f69d84b16e0768a3.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0922/29984ebac8fa6cc86b083503d42659198e72e30451838157.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/9a198f5b7a3f4a39b16bc70cf242d562809640e0cb4a0eb1.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/0281b6e941b2b34e1ca2bda4fbb79d42151647382c0cb950.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/57ba040780f841303f990276a1163357db7ddd4fc73e891e.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/2c1e9886a14f934916259b5dc12e95e5d3857aa789cf07b5.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/31ecfb2e24d112b6a4cd318470b2b1ce80bd340885feac97.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/8ca49a8478ab4f4b1093fb6ebca67e0ca5a3adb7d1c037be.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/f06839e828c9e03354cd64cf286bae52e88249e3eb2c925b.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/e7bdcbe9bb7967dfe64d263d46b7b00f587c0f5ca079455f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2400/9c98fba4828d6739e4c35635f251fb18d81568657a65587f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202406/1120/78a5f78514c754601c3b8a5a8b62350c27fa47c19ce04646.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202609/0921/8b9042708110602ee93c3a28f4efee0aba91c4b9419fa128.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2024-09-10T10:01:08.080000Z",
+        "lastPlayedDateTime": "2024-09-10T10:27:07.390000Z", "playDuration": "PT25M34S"},
+        {"titleId": "PPSA07952_00", "name": "Call of Duty\u00ae", "localizedName":
+        "Call of Duty\u00ae", "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/e7c940f1c3b9c2725e08b10979926ed6b71482f6f42a65ba.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/e7c940f1c3b9c2725e08b10979926ed6b71482f6f42a65ba.png",
+        "category": "ps5_native_game", "service": "none(purchased)", "sortableName":
+        "call of duty\u00ae", "playCount": 21, "concept": {"id": 10001130, "titleIds":
+        ["CUSA34084_00", "PPSA07950_00", "CUSA54523_00", "PPSA01649_00", "PPSA09262_00",
+        "CUSA23826_00", "CUSA35564_00", "CUSA43691_00", "CUSA48767_00", "CUSA54527_00",
+        "CUSA34032_00", "PPSA07953_00", "PPSA37414_00", "CUSA23827_00", "CUSA34087_00",
+        "CUSA34083_00", "CUSA43690_00", "CUSA34029_00", "CUSA54526_00", "PPSA09265_00",
+        "CUSA48768_00", "PPSA37417_00", "CUSA35561_00", "CUSA43694_00", "CUSA34031_00",
+        "PPSA37413_00", "CUSA34086_00", "CUSA48765_00", "CUSA54525_00", "PPSA09264_00",
+        "CUSA48769_00", "CUSA35562_00", "CUSA43693_00", "PPSA07951_00", "PPSA37416_00",
+        "CUSA34030_00", "CUSA34085_00", "CUSA35563_00", "CUSA48766_00", "CUSA54524_00",
+        "PPSA09263_00", "CUSA43692_00", "PPSA07952_00", "PPSA37415_00"], "name": "Call
+        of Duty\u00ae", "media": {"audios": [], "videos": [], "images": [{"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/acb8cbd2c5632370cd7670747c8b97a4f0cd73c9843e16d2.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2718/95bb62536d827f18d0103a680bd2cd479a8e8e53247d8d81.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/6f1ca3201f2a60cc143666404ad48af8649d95f2bf7ff2cb.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/29a54cb76a7aec11b30ba337399ac966beebf5bfccbaebc5.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/e3ee1281587ff0812a6da52358f4ff96c7f2feb2735ed2ef.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/382c839a238912da7f436a8ba9b5f25a874fcea621b6d77d.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/79bb53358879d21b16e785756d33897f5aa6c8a91c4de12d.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/1a282c48846299510f5cfd669177130050bf8b143192bf08.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/dd98e703143b0f697c43e3d94e7f30b737fac9ff3242cedf.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/7df3b52ea85620fa025b2cf61f55130432a4a23c706e56bf.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/b16d5fd0e92c4ec595422521204871792c60404e27acd7d3.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/7c87bcf2c92257c9429445e1efbbaf952a97f32d90eab38f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/3bf9a91aaea36a52cb13228ce9d915a88c74935b93088592.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/fee04536a72f21f88b25299a4dba15f15e9c4cc21ca5f52f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/4b86c33669cbb96543db5c4f71b625c5da622e6c10dd7126.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/e7c940f1c3b9c2725e08b10979926ed6b71482f6f42a65ba.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["ACTION"], "localizedName":
+        {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Call of Duty\u00ae", "uk-UA":
+        "Call of Duty\u00ae", "de-DE": "Call of Duty\u00ae", "en-US": "Call of Duty\u00ae",
+        "ko-KR": "\ucf5c \uc624\ube0c \ub4c0\ud2f0\u00ae", "pt-BR": "Call of Duty\u00ae",
+        "es-ES": "Call of Duty\u00ae", "ar-AE": "Call of Duty\u00ae", "no-NO": "Call
+        of Duty\u00ae", "fr-CA": "Call of Duty\u00ae", "it-IT": "Call of Duty\u00ae",
+        "pl-PL": "Call of Duty\u00ae", "ru-RU": "Call of Duty\u00ae", "zh-Hans": "\u300a\u4f7f\u547d\u53ec\u5524\u00ae\u300b",
+        "nl-NL": "Call of Duty\u00ae", "pt-PT": "Call of Duty\u00ae", "zh-Hant": "\u300a\u6c7a\u52dd\u6642\u523b\u00ae\u300b",
+        "sv-SE": "Call of Duty\u00ae", "da-DK": "Call of Duty\u00ae", "tr-TR": "Call
+        of Duty\u00ae", "fr-FR": "Call of Duty\u00ae", "en-GB": "Call of Duty\u00ae",
+        "es-419": "Call of Duty\u00ae", "ja-JP": "Call of Duty\u00ae"}}, "country":
+        "US", "language": "en"}, "media": {"audios": [], "videos": [], "images": [{"url":
+        "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/acb8cbd2c5632370cd7670747c8b97a4f0cd73c9843e16d2.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2718/95bb62536d827f18d0103a680bd2cd479a8e8e53247d8d81.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/6f1ca3201f2a60cc143666404ad48af8649d95f2bf7ff2cb.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/29a54cb76a7aec11b30ba337399ac966beebf5bfccbaebc5.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/e3ee1281587ff0812a6da52358f4ff96c7f2feb2735ed2ef.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/382c839a238912da7f436a8ba9b5f25a874fcea621b6d77d.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/79bb53358879d21b16e785756d33897f5aa6c8a91c4de12d.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/1a282c48846299510f5cfd669177130050bf8b143192bf08.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/dd98e703143b0f697c43e3d94e7f30b737fac9ff3242cedf.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/7df3b52ea85620fa025b2cf61f55130432a4a23c706e56bf.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/b16d5fd0e92c4ec595422521204871792c60404e27acd7d3.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/7c87bcf2c92257c9429445e1efbbaf952a97f32d90eab38f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/3bf9a91aaea36a52cb13228ce9d915a88c74935b93088592.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202610/2220/fee04536a72f21f88b25299a4dba15f15e9c4cc21ca5f52f.jpg",
+        "format": "UNKNOWN", "type": "SCREENSHOT"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/4b86c33669cbb96543db5c4f71b625c5da622e6c10dd7126.jpg",
+        "format": "UNKNOWN", "type": "SIXTEEN_BY_NINE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/e7c940f1c3b9c2725e08b10979926ed6b71482f6f42a65ba.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-10-28T02:30:13.000000Z",
+        "lastPlayedDateTime": "2024-09-08T14:01:17.230000Z", "playDuration": "PT14H51M10S"},
+        {"titleId": "CUSA08374_00", "name": "Detroit: Become Human\u2122", "localizedName":
+        "Detroit: Become Human\u2122", "imageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
+        "localizedImageUrl": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
+        "category": "ps4_game", "service": "ps_plus", "sortableName": "detroit: become
+        human\u2122", "playCount": 9, "concept": {"id": 222727, "titleIds": ["CUSA12237_00",
+        "CUSA11704_00", "CUSA00717_00", "CUSA12182_00", "CUSA08374_00", "CUSA12299_00",
+        "CUSA10341_00", "CUSA10345_00", "CUSA12197_00", "CUSA12602_00", "CUSA12302_00",
+        "CUSA12195_00", "CUSA12238_00", "CUSA12395_00", "CUSA12513_00", "CUSA10347_00",
+        "CUSA09417_00", "CUSA12183_00", "CUSA08392_00", "CUSA10340_00", "CUSA08308_00",
+        "CUSA12328_00", "CUSA12198_00", "CUSA08344_00", "CUSA12196_00"], "name": "Detroit:
+        Become Human\u2122", "media": {"audios": [], "videos": [], "images": [{"url":
+        "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/VLuds4glrCOPtTnGv8Ht0MLg.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/FbLeiDPBLfdbiL6LwFMH3DxC.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/VljHbt4vhc3Bmn8s83kFAPVg.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/oBE5hGEbFbRO2hbahNyoM8hR.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/L8goQzMgY7Y0mbRVs4zOfYPj.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/W83G1nGF7wGs2J7Cq3LhpwwI.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["MUSIC/RHYTHM", "ADVENTURE"],
+        "localizedName": {"defaultLanguage": "en-US", "metadata": {"fi-FI": "Detroit:
+        Become Human\u2122", "uk-UA": "Detroit: Become Human\u2122", "de-DE": "Detroit:
+        Become Human\u2122", "en-US": "Detroit: Become Human\u2122", "ko-KR": "Detroit:
+        Become Human\u2122", "pt-BR": "Detroit: Become Human\u2122", "es-ES": "Detroit:
+        Become Human\u2122", "ar-AE": "Detroit: Become Human\u2122", "no-NO": "Detroit:
+        Become Human\u2122", "fr-CA": "Detroit: Become Human\u2122", "it-IT": "Detroit:
+        Become Human\u2122", "pl-PL": "Detroit: Become Human\u2122", "ru-RU": "Detroit:
+        Become Human\u2122", "zh-Hans": "Detroit: Become Human\u2122", "nl-NL": "Detroit:
+        Become Human\u2122", "pt-PT": "Detroit: Become Human\u2122", "zh-Hant": "Detroit:
+        Become Human\u2122", "sv-SE": "Detroit: Become Human\u2122", "da-DK": "Detroit:
+        Become Human\u2122", "tr-TR": "Detroit: Become Human\u2122", "fr-FR": "Detroit:
+        Become Human\u2122", "en-GB": "Detroit: Become Human\u2122", "es-419": "Detroit:
+        Become Human\u2122", "ja-JP": "Detroit: Become Human\u2122"}}, "country":
+        "JP", "language": "ja"}, "media": {"audios": [], "videos": [], "images": [{"url":
+        "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/VLuds4glrCOPtTnGv8Ht0MLg.png",
+        "format": "UNKNOWN", "type": "BACKGROUND_LAYER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/FbLeiDPBLfdbiL6LwFMH3DxC.png",
+        "format": "UNKNOWN", "type": "FOUR_BY_THREE_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/VljHbt4vhc3Bmn8s83kFAPVg.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/oBE5hGEbFbRO2hbahNyoM8hR.png",
+        "format": "UNKNOWN", "type": "HERO_CHARACTER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/L8goQzMgY7Y0mbRVs4zOfYPj.png",
+        "format": "UNKNOWN", "type": "LOGO"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/W83G1nGF7wGs2J7Cq3LhpwwI.png",
+        "format": "UNKNOWN", "type": "PORTRAIT_BANNER"}, {"url": "https://image.api.playstation.com/vulcan/img/rnd/202010/2119/wl4DB5QGzlEHAXy1KLUVgOAu.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2018-06-02T12:27:03.740000Z",
+        "lastPlayedDateTime": "2024-04-06T23:37:01.780000Z", "playDuration": "PT17H3M16S"},
+        {"titleId": "CUSA01040_00", "name": "Joysound.TV Plus", "localizedName": "Joysound.TV
+        Plus", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "localizedImageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "category": "ps4_game", "service": "none(purchased)", "sortableName": "joysound.tv
+        plus", "playCount": 9, "concept": {"id": 202220, "titleIds": ["CUSA01039_00",
+        "CUSA01040_00"], "name": "Joysound.TV Plus", "media": {"audios": [], "videos":
+        [], "images": [{"url": "https://image.api.playstation.com/vulcan/img/rnd/202009/2923/bv6zyNvtrXGYyIgb7q4sVDtO.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["UNIQUE"], "localizedName":
+        {"defaultLanguage": "en-US", "metadata": {"en-US": "Joysound.TV Plus", "en-GB":
+        "Joysound.TV Plus", "ja-JP": "JOYSOUND.TV Plus \u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u7248"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/img/rnd/202009/2923/bv6zyNvtrXGYyIgb7q4sVDtO.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-08-20T10:32:18.290000Z",
+        "lastPlayedDateTime": "2023-11-22T14:24:33.660000Z", "playDuration": "PT3H17M41S"}],
+        "nextOffset": 10, "previousOffset": 0, "totalItemCount": 13194}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '55566'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 25 Oct 2026 00:36:30 GMT
+      Expires:
+      - Sun, 25 Oct 2026 00:36:30 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - b5ee3cca-7e6f-4e94-bfd1-fd6c3e8fbf7a
+      X-Psn-Request-Id:
+      - b5ee3cca-7e6f-4e94-bfd1-fd6c3e8fbf7a
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://us-prof.np.community.playstation.net/userProfile/v1/users/ikemenzi/profile2?fields=accountId%2ConlineId%2CcurrentOnlineId
+  response:
+    body:
+      string: '{"profile": {"onlineId": "ikemenzi", "accountId": "6515971742264256071"}}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization, Cache-Control, Content-Type, X-Requested-With, Accept-Language,
+        If-None-Match
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '69'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 25 Oct 2026 00:36:33 GMT
+      Server:
+      - Apache
+      Set-Cookie: REDACTED
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en-US,en;q=0.9
+      Connection:
+      - keep-alive
+      Country:
+      - US
+      User-Agent:
+      - Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/55.0.9318.1385 Mobile Safari/537.36Mozilla/5.0
+        (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1
+    method: GET
+    uri: https://m.np.playstation.com/api/gamelist/v2/users/6515971742264256071/titles?limit=1&offset=9
+  response:
+    body:
+      string: '{"titles": [{"titleId": "CUSA01040_00", "name": "Joysound.TV Plus",
+        "localizedName": "Joysound.TV Plus", "imageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "localizedImageUrl": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "category": "ps4_game", "service": "none(purchased)", "sortableName": "joysound.tv
+        plus", "playCount": 9, "concept": {"id": 202220, "titleIds": ["CUSA01039_00",
+        "CUSA01040_00"], "name": "Joysound.TV Plus", "media": {"audios": [], "videos":
+        [], "images": [{"url": "https://image.api.playstation.com/vulcan/img/rnd/202009/2923/bv6zyNvtrXGYyIgb7q4sVDtO.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "genres": ["UNIQUE"], "localizedName":
+        {"defaultLanguage": "en-US", "metadata": {"en-US": "Joysound.TV Plus", "en-GB":
+        "Joysound.TV Plus", "ja-JP": "JOYSOUND.TV Plus \u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u7248"}},
+        "country": "US", "language": "en"}, "media": {"audios": [], "videos": [],
+        "images": [{"url": "https://image.api.playstation.com/vulcan/img/rnd/202009/2923/bv6zyNvtrXGYyIgb7q4sVDtO.png",
+        "format": "UNKNOWN", "type": "GAMEHUB_COVER_ART"}, {"url": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01040_00/2/i_f2370ad62b627088986e66c4c1a10655065afda4ee9bb1154a31c2f1229bc299/i/icon0.png",
+        "format": "UNKNOWN", "type": "MASTER"}]}, "firstPlayedDateTime": "2022-08-20T10:32:18.290000Z",
+        "lastPlayedDateTime": "2023-11-22T14:24:33.660000Z", "playDuration": "PT3H17M41S"}],
+        "nextOffset": 10, "previousOffset": 8, "totalItemCount": 13194}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1790'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 25 Oct 2026 00:36:38 GMT
+      Expires:
+      - Sun, 25 Oct 2026 00:36:38 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie: REDACTED
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Psn-Correlation-Id:
+      - 43f3c5d9-95eb-4b59-bb85-168c666c74ba
+      X-Psn-Request-Id:
+      - 43f3c5d9-95eb-4b59-bb85-168c666c74ba
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1
